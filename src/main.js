@@ -18,12 +18,19 @@ const vuetify = createVuetify({
       light: {
         dark: false,
         colors: {
-          darkBrick: '#BC4A3C',
-          lightBrick: '#E76C63',
-          white: '#FFFEFC',
+          white: '#f8f8f8',
           black: '#040406',
-          darkSilver: '#C0C0C0',
-          lightSilver: '#D9D9D9'
+          radioactive: '#373ae6',
+          blueSky: '#0cb9f1',
+          lightBlueSky: '#0cb9f180',
+          midnight: '#120d40',
+          black: '#040406',
+          thinGray: '#7a7a7a1a',
+          lightGray: '#7a7a7a33',
+          darkGray: '#00000099',
+          lightSilver: '#D9D9D9',
+          red: '#e1261c',
+          gray: '#6e7191'
         }
       },
     },

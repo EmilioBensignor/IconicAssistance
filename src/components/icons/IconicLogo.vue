@@ -3,10 +3,11 @@
     version="1.0"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 3000.000000 1000.000000"
+    height="10vh"
     preserveAspectRatio="xMidYMid meet">
     <g
       transform="translate(0.000000,1000.000000) scale(0.100000,-0.100000)"
-      fill="black"
+      fill="currentColor"
       stroke="none"> 
       <path
         d="M2355 8948 c-160 -30 -308 -161 -366 -324 -28 -76 -30 -215 -6 -294
