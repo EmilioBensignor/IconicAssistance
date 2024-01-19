@@ -3,7 +3,7 @@
     <v-app-bar
       elevation="3"
       app
-      class="d-flex align-center pb-3 pt-5 bg-radioactive">
+      class="d-flex align-center pb-1 pt-2 bg-radioactive">
       <v-app-bar-nav-icon
         icon="mdi-menu"
         size="x-large"
@@ -14,15 +14,15 @@
         </router-link>
       </v-toolbar-title>
     </v-app-bar>
-    <v-navigation-drawer v-model="showMenu" app class="mt-6">
+    <v-navigation-drawer v-model="showMenu" app class="mt-2">
       <v-list tag="ul">
-        <p class="navTitles pt-2 pl-4">About</p>
+        <p class="navTitles pt-1 pl-4">About</p>
         <li v-for="item in aboutMenu" :key="item.title">
           <v-list-item :to="item.path">
             <v-list-item-title class="pl-4">{{ item.title }}</v-list-item-title>
           </v-list-item>
         </li>
-        <p class="navTitles pt-2 pl-4">Learn</p>
+        <p class="navTitles pt-1 pl-4">Learn</p>
         <li v-for="item in learnMenu" :key="item.title">
           <v-list-item :to="item.path">
             <v-list-item-title class="pl-4">{{ item.title }}</v-list-item-title>
