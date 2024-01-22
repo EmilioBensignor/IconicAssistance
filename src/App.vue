@@ -24,20 +24,20 @@ h1, h2, h3, h4, h5, h6, p{
   font-family: 'Poppins', sans-serif;
 }
 h1{
-  font-size: 2.4rem;
   font-weight: 700;
   line-height: 1.2em;
+  font-size: 2.4rem;
 }
 h2{
   width: 95%;
-  font-size: 1.7rem;
   font-weight: 700;
+  font-size: 1.7rem;
 }
 .subtitle{
   font-size: 1.1rem;
 }
 p{
-  width: 95%;
+  width: 85%;
   line-height: 1.5em;
   font-size: 1rem;
 }
@@ -48,8 +48,19 @@ p{
   background-color: white;
   border: 1px solid white;
   border-radius: 20vw;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
   color: #373ae6;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.3rem;
+  text-decoration: none;
+  padding: 4vw 7vw;
+}
+
+.secondaryButton{
+  background-color: #373ae6;
+  border: 1px solid #373ae6;
+  border-radius: 20vw;
+  color: white;
   font-size: 1.1rem;
   font-weight: 600;
   line-height: 1.3rem;
