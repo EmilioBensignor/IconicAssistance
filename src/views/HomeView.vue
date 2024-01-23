@@ -14,7 +14,9 @@
           <span class="font-weight-bold">Starting at $9.55/Hr.</span>
         </p>
         <div>
-          <button class="navbarCall bg-radioactive elevation-6" @click="calendly">
+          <button
+            class="navbarCall bg-radioactive elevation-5"
+            @click="calendly">
             Hire ICONIC
           </button>
         </div>
@@ -66,36 +68,43 @@
         </div>
       </div>
     </div>
-    <router-link class="primaryButton elevation-6" :to="'/services'"
+    <router-link class="primaryButton elevation-5" :to="'/services'"
       >What We Do</router-link
     >
   </section>
   <section>
     <p class="subtitle">Why us?</p>
     <h2>What Makes Us Different</h2>
-    <div class="columnAlignCenter text-center ga-5 my-5">
-      <div v-for="(item, index) in different" :key="index" class="columnAlignCenter text-center rounded-xl elevation-5 w-75 ga-2 pa-3 pb-5">
+    <div class="columnAlignCenter text-center ga-10 my-5">
+      <div
+        v-for="(item, index) in different"
+        :key="index"
+        class="columnAlignCenter text-center rounded-xl elevation-5 w-75 pa-4 pb-6">
         <p class="differentTitle">{{ item.title }}</p>
-        <img :src="`@/assets/different/${item.img}`" alt="item.alt" />
-        <div class="columnAlignCenter text-center ga-2">
-          <p class="differentSubtitle text-radioactive">{{item.subtitle}}</p>
-          <p>{{item.body}}</p>
+        <v-img :src="getImgUrl(item.img)" :alt="item.alt" width="70%"></v-img>
+        <div class="columnAlignCenter text-center ga-3">
+          <p class="differentSubtitle text-radioactive">{{ item.subtitle }}</p>
+          <p>{{ item.body }}</p>
         </div>
       </div>
     </div>
   </section>
   <section class="radioactiveSky">
     <p class="subtitle text-white">Our Service</p>
-    <h2 class="text-white">Tailored For Yout Success</h2>
+    <h2 class="text-white">Tailored For Your Success</h2>
     <div class="columnAlignCenter py-3 px-2 ga-5">
-      <div class="columnAlignCenter text-center text-white w-75 ga-2" v-for="(item, index) in tailoredServices" :key="index">
-        <v-img src="" alt=""></v-img>
-        <p class="tailoredTitle">{{item.title}}</p>
-        <p>{{item.body}}</p>
+      <div
+        class="columnAlignCenter text-center text-white w-75 ga-2 mt-10"
+        v-for="(item, index) in tailoredServices"
+        :key="index">
+        <v-img :src="getImgUrl(item.img)" :alt="item.alt" width="75%"></v-img>
+        <p class="tailoredTitle">{{ item.title }}</p>
+        <p>{{ item.body }}</p>
+        <div class="w-100 bg-white mt-10 whiteLine"></div>
       </div>
-      <div class="my-3 columnAlignCenter ga-2 w-100">
+      <div class="my-5 columnAlignCenter ga-2 w-100">
         <p class="text-white tellUs">Tell us what you need!</p>
-        <router-link class="primaryButton" :to="'/contact-us'"
+        <router-link class="primaryButton elevation-5" :to="'/contact-us'"
           >Contact Us</router-link
         >
       </div>
@@ -104,15 +113,15 @@
   <section class="skyRadioactive">
     <p class="subtitle text-white">How It Works</p>
     <h2 class="text-white">How Our Virtual Assistant Service Works</h2>
-    <div class="columnAlignCenter ga-5 mt-5">
+    <div class="columnAlignCenter ga-10 mt-5">
       <div
         v-for="(item, index) in steps"
         :key="index"
-        class="bg-white w-75 rounded-xl pa-3 elevation-5 columnAlignCenter ga-3">
-        <p class="text-radioactive stepNumbers">{{item.number}}</p>
-        <v-img src="" alt=""></v-img>
-        <p class="stepTitle">{{item.title}}</p>
-        <p class="stepBody">{{item.body}}</p>
+        class="bg-white w-75 rounded-xl pa-3 pb-6 elevation-5 columnAlignCenter ga-3">
+        <p class="text-radioactive stepNumbers">{{ item.number }}</p>
+        <v-img :src="getImgUrl(item.img)" :alt="item.alt" width="45%"></v-img>
+        <p class="stepTitle">{{ item.title }}</p>
+        <p class="stepBody">{{ item.body }}</p>
       </div>
     </div>
   </section>
@@ -132,112 +141,139 @@
       <sup>3</sup>Overhead Rate (30%) includes, but is not limited to, Office
       space and supplies, equipment, UI insurance, Worker's compensation.
     </p>
-    <router-link :to="'/before-you-start'" class="secondaryButton"
+    <router-link :to="'/before-you-start'" class="secondaryButton elevation-5"
       >Before you Start</router-link
     >
   </section>
   <section class="radioactiveSky">
-    <p class="subtitle text-white">Cost Comparison</p>
-    <h2 class="text-white">Delegate Task At A Fraction Of The Cost</h2>
-    <div class="listedWrapper">
-      <div class="listedItem">
-        <v-img></v-img>
-        <p>Entrepeneurs</p>
+    <p class="subtitle text-white">Industries</p>
+    <h2 class="text-white">Who We Serve</h2>
+    <div class="d-flex flex-column w-100 ga-5 mt-5">
+      <div
+        class="d-flex align-center w-75 ml-15"
+        v-for="(item, index) in industries"
+        :key="index">
+        <v-img
+          :src="getImgUrl(item.logo)"
+          :alt="item.logoAlt"
+          width="25%"></v-img>
+        <p class="text-white text-start ml-3 w-100">
+          {{ item.name.toLowerCase().replace(/\b\w/g, (c) => c.toUpperCase()) }}
+        </p>
       </div>
+      <v-carousel :show-arrows="false" class="d-flex align-self-center w-75 whiteBorder">
+        <v-carousel-item
+          v-for="(item, index) in industries"
+          :key="index"
+          cover
+        >
+          <router-link :to="'/services'" class="columnAlignCenter">
+            <v-img :src="getImgUrl(item.logo)" :alt="item.logoAlt" width="40%"></v-img>
+            <p>{{item.name}}</p>
+            <p>{{item.description}}</p>
+            <router-link :to="'/services'">Learn More</router-link>
+          </router-link>
+        </v-carousel-item>
+      </v-carousel>
     </div>
   </section>
 </template>
 
 <script>
-export default {
-  data(){
-    return{
-      different: [
-        {
-          title: 'Top Talent',
-          img: 'Top-Talent-Remote-Talent.png',
-          alt: 'Top Talent Remote Talent',
-          subtitle: 'Boost Productivity',
-          body: 'Access diverse services, from admin tasks to specialized projects, with reliable, experienced virtual assistants.'
-        },
-        {
-          title: 'Transparent Fees',
-          img: 'Transparent-Fees-Remote-Talent.png',
-          alt: 'Transparent Fees Remote Talent',
-          subtitle: 'Transparent Pricing',
-          body: 'Our clear pricing outlines costs, no hidden fees. Budget with confidence, no unexpected charges.'
-        },
-        {
-          title: 'Customized Packages',
-          img: 'Customized-Solutions-Remote-Talent.png',
-          alt: 'Customized Solutions Remote Talent',
-          subtitle: 'Customized Solutions',
-          body: 'Tailor services to your needs. Scale as requirements change. Optimize spending, paying only for essential assistance.'
-        },
-      ],
-      tailoredServices: [
-        {
-          img: '',
-          alt: '',
-          title: 'Recruitment',
-          body: 'We source the finest remote talent from our extensive, pre-vetted candidate pool. Our thorough process ensures a perfect match for your needs within 10 to 20 business days.'
-        },
-        {
-          img: '',
-          alt: '',
-          title: 'Payroll',
-          body: 'Regardless of your country, we handle payroll seamlessly, eliminating taxes, overhead, and fringe costs for a hassle-free experience.'
-        },
-        {
-          img: '',
-          alt: '',
-          title: 'Analytics & Compliance',
-          body: 'Benefit from continuous support with our dedicated Client Success Agents. We guide you through onboarding, providing you with metrics and reports ensuring both satisfaction and compliance.'
-        },
-      ],
-      steps: [
-        {
-          number: '1.',
-          img: '',
-          alt: '',
-          title: 'Book an Appointment',
-          body: "Share all the essential details about your business and specify the tasks you'd like to assign."
-        },
-        {
-          number: '2.',
-          img: '',
-          alt: '',
-          title: 'Recruitment',
-          body: "We'll identify the top VAs for you and our HR Manager will handle your VA interviews."
-        },
-        {
-          number: '3.',
-          img: '',
-          alt: '',
-          title: 'Onboarding',
-          body: "Share all the essential details about your business and specify the tasks you'd like to assign."
-        },
-        {
-          number: '4.',
-          img: '',
-          alt: '',
-          title: 'Ongoing Support',
-          body: "We'll guide you through the onboarding process to ensure your VA integrates smoothly into your business."
-        },
-      ],
-    }
-  },
-  methods: {
-    calendly() {
-      console.log("Calendly Popup");
+  import { industries } from "@/cms.js";
+  export default {
+    data() {
+      return {
+        different: [
+          {
+            title: "Top Talent",
+            img: "different/Top-Talent-Remote-Talent.png",
+            alt: "Top Talent Remote Talent",
+            subtitle: "Boost Productivity",
+            body: "Access diverse services, from admin tasks to specialized projects, with reliable, experienced virtual assistants.",
+          },
+          {
+            title: "Transparent Fees",
+            img: "different/Transparent-Fees-Remote-Talent.png",
+            alt: "Transparent Fees Remote Talent",
+            subtitle: "Transparent Pricing",
+            body: "Our clear pricing outlines costs, no hidden fees. Budget with confidence, no unexpected charges.",
+          },
+          {
+            title: "Customized Packages",
+            img: "different/Customized-Solutions-Remote-Talent.png",
+            alt: "Customized Solutions Remote Talent",
+            subtitle: "Customized Solutions",
+            body: "Tailor services to your needs. Scale as requirements change. Optimize spending, paying only for essential assistance.",
+          },
+        ],
+        tailoredServices: [
+          {
+            img: "tailoredServices/Recruitment-Expertise-Pre-Vetted Proffesionals.png",
+            alt: "Recruitment Expertise Pre-Vetted Proffesionals",
+            title: "Recruitment",
+            body: "We source the finest remote talent from our extensive, pre-vetted candidate pool. Our thorough process ensures a perfect match for your needs within 10 to 20 business days.",
+          },
+          {
+            img: "tailoredServices/Payroll-Experience-Remote-Talent.png",
+            alt: "Payroll Experience Remote Talent",
+            title: "Payroll",
+            body: "Regardless of your country, we handle payroll seamlessly, eliminating taxes, overhead, and fringe costs for a hassle-free experience.",
+          },
+          {
+            img: "tailoredServices/Compliance-Outsource-Remote-Talent.png",
+            alt: "Compliance Outsource Remote Talent",
+            title: "Analytics & Compliance",
+            body: "Benefit from continuous support with our dedicated Client Success Agents. We guide you through onboarding, providing you with metrics and reports ensuring both satisfaction and compliance.",
+          },
+        ],
+        steps: [
+          {
+            number: "1.",
+            img: "icons/Book-Appointment.png",
+            alt: "Book an Appointment",
+            title: "Book an Appointment",
+            body: "Share all the essential details about your business and specify the tasks you'd like to assign.",
+          },
+          {
+            number: "2.",
+            img: "icons/Pre-vetted-Recruitment.png",
+            alt: "Pre-vetted Recruitment",
+            title: "Recruitment",
+            body: "We'll identify the top VAs for you and our HR Manager will handle your VA interviews.",
+          },
+          {
+            number: "3.",
+            img: "icons/Onboarding-Expertise.png",
+            alt: "Onboarding Expertise",
+            title: "Onboarding",
+            body: "We'll guide you through the onboarding process to ensure your VA integrates smoothly into your business.",
+          },
+          {
+            number: "4.",
+            img: "icons/Ongoing-Support.png",
+            alt: "Ongoing Support",
+            title: "Ongoing Support",
+            body: "After selecting your VA, we'll take care of all HR-related matters, including payroll and performance reviews.",
+          },
+        ],
+        industries: industries,
+      };
     },
-  },
-};
+    methods: {
+      calendly() {
+        console.log("Calendly Popup");
+      },
+      getImgUrl(imgName) {
+        return new URL(`../assets/images/${imgName}`, import.meta.url).href;
+      },
+    },
+  };
 </script>
 
 <style scoped>
   /* Home */
-  section{
+  section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -287,6 +323,10 @@ export default {
     font-weight: 600;
   }
 
+  .whiteLine {
+    height: 1px;
+  }
+
   /* Steps */
 
   .stepNumbers {
@@ -302,5 +342,11 @@ export default {
 
   .stepBody {
     font-size: 1rem;
+  }
+
+  /* Industries */
+  .whiteBorder{
+    border: 5px solid white;
+    border-radius: 20px;
   }
 </style>
