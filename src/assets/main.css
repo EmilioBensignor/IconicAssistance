@@ -5,6 +5,15 @@
   margin: 0 auto;
 }
 
+.v-carousel__controls__item.v-btn.v-btn--icon{
+  width: 3vw;
+  height: 3vw;
+}
+
+.v-carousel__controls__item.v-btn.v-btn--icon.v-btn--active{
+  background-color: white;
+}
+
 @media (min-width: 1024px) {
   body {
     display: flex;

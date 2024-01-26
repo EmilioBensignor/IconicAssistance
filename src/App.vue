@@ -20,7 +20,7 @@ export default {
 
 <style>
 /* Fonts */
-h1, h2, h3, h4, h5, h6, p{
+h1, h2, h3, h4, h5, h6, p, button, a{
   font-family: 'Poppins', sans-serif;
 }
 h1{
@@ -29,7 +29,7 @@ h1{
   font-size: 2.4rem;
 }
 h2{
-  width: 95%;
+  width: 85%;
   font-weight: 700;
   font-size: 1.7rem;
 }

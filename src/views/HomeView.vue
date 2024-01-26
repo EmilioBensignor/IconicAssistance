@@ -35,7 +35,7 @@
       and payroll.
     </p>
     <div class="d-flex justify-space-between ga-5">
-      <div>
+      <div class="d-flex flex-column ga-3">
         <div class="d-flex align-center">
           <v-icon
             icon="mdi-chevron-double-right"
@@ -51,7 +51,7 @@
           <p class="text-white font-weight-bold text-start">24/7 Support</p>
         </div>
       </div>
-      <div>
+      <div class="d-flex flex-column ga-3">
         <div class="d-flex align-center">
           <v-icon
             icon="mdi-chevron-double-right"
@@ -68,13 +68,13 @@
         </div>
       </div>
     </div>
-    <router-link class="primaryButton elevation-5" :to="'/services'"
+    <router-link class="primaryButton elevation-5 mt-5 mb-3" :to="'/services'"
       >What We Do</router-link
     >
   </section>
   <section>
-    <p class="subtitle">Why us?</p>
-    <h2>What Makes Us Different</h2>
+    <p class="subtitle text-radioactive">Why us?</p>
+    <h2 class="mb-3">What Makes Us Different</h2>
     <div class="columnAlignCenter text-center ga-10 my-5">
       <div
         v-for="(item, index) in different"
@@ -103,7 +103,7 @@
         <div class="w-100 bg-white mt-10 whiteLine"></div>
       </div>
       <div class="my-5 columnAlignCenter ga-2 w-100">
-        <p class="text-white tellUs">Tell us what you need!</p>
+        <p class="text-white homeH4">Tell us what you need!</p>
         <router-link class="primaryButton elevation-5" :to="'/contact-us'"
           >Contact Us</router-link
         >
@@ -129,18 +129,22 @@
     <p class="subtitle">Cost Comparison</p>
     <h2>Delegate Task At A Fraction Of The Cost</h2>
     <div>TABLA COST COMPARISON</div>
-    <p>
-      <sup>1</sup>Average hourly-rate for 25-34 years old US employee according
-      to Forbes.com
-    </p>
-    <p>
-      <sup>2</sup>Fringe Benefits (20%) include, but are not limited to, Dental,
-      Health and Life Insurance, Retirement Plans.
-    </p>
-    <p>
-      <sup>3</sup>Overhead Rate (30%) includes, but is not limited to, Office
-      space and supplies, equipment, UI insurance, Worker's compensation.
-    </p>
+    <div
+      class="columnAlignCenter ga-3 text-lightGray CostComparisonAclaration my-5">
+      <p>
+        <sup class="mr-1">1</sup>Average hourly-rate for 25-34 years old US
+        employee according to Forbes.com
+      </p>
+      <p>
+        <sup class="mr-1">2</sup>Fringe Benefits (20%) include, but are not
+        limited to, Dental, Health and Life Insurance, Retirement Plans.
+      </p>
+      <p>
+        <sup class="mr-1">3</sup>Overhead Rate (30%) includes, but is not
+        limited to, Office space and supplies, equipment, UI insurance, Worker's
+        compensation.
+      </p>
+    </div>
     <router-link :to="'/before-you-start'" class="secondaryButton elevation-5"
       >Before you Start</router-link
     >
@@ -161,21 +165,146 @@
           {{ item.name.toLowerCase().replace(/\b\w/g, (c) => c.toUpperCase()) }}
         </p>
       </div>
-      <v-carousel :show-arrows="false" class="d-flex align-self-center w-75 whiteBorder">
-        <v-carousel-item
-          v-for="(item, index) in industries"
-          :key="index"
-          cover
-        >
-          <router-link :to="'/services'" class="columnAlignCenter">
-            <v-img :src="getImgUrl(item.logo)" :alt="item.logoAlt" width="40%"></v-img>
-            <p>{{item.name}}</p>
-            <p>{{item.description}}</p>
-            <router-link :to="'/services'">Learn More</router-link>
+      <v-carousel
+        :show-arrows="false"
+        class="d-flex align-self-center h-75 pt-5 pb-15 w-75 whiteBorder"
+        cycle
+        :interval="100000000">
+        <v-carousel-item v-for="(item, index) in industries" :key="index" cover>
+          <router-link
+            :to="'/services'"
+            class="columnAlignCenter ga-3 text-decoration-none">
+            <v-img
+              :src="getImgUrl(item.logo)"
+              :alt="item.logoAlt"
+              width="40%"></v-img>
+            <p class="text-white titleIndustries">{{ item.name }}</p>
+            <p class="text-white">{{ item.description }}</p>
+            <router-link
+              :to="'/services'"
+              class="text-decoration-none primaryButton mt-3 mb-5"
+              >Learn More</router-link
+            >
           </router-link>
         </v-carousel-item>
       </v-carousel>
+      <div class="my-5 columnAlignCenter ga-4 w-100">
+        <p class="text-white homeH4">And Many More!</p>
+        <p class="text-white">
+          Want to know if our Virtual Assistants are suitable for you?
+        </p>
+        <router-link
+          class="primaryButton elevation-5 mt-3 mb-5"
+          :to="'/contact-us'"
+          >Request a free consultation</router-link
+        >
+      </div>
     </div>
+  </section>
+  <section>
+    <p class="subtitle text-radioactive">Pricing</p>
+    <h2 class="text-black">Select A Plan Now To Get More Done</h2>
+    <div class="columnAlignCenter my-5 rounded-lg pricingContainer">
+      <v-tabs class="rounded-t-lg pricingTabs elevation-2" v-model="tab" fixed-tabs bg-color="radioactive">
+        <v-tab value="full-time">Full Time</v-tab>
+        <v-tab value="part-time">Part Time</v-tab>
+        <v-tab value="build-team">Build your team</v-tab>
+      </v-tabs>
+      <div class="elevation-5 w-75 mt-6 rounded-xl">
+        <v-window v-model="tab" class="pb-5">
+          <v-window-item value="full-time">
+            <div class="px-4 columnAlignCenter text-center ga-1">
+              <img class="mt-6" width="20%" src="@/assets/images/pricing/full-time-remote-talent.png" alt="Full Time Remote Talent" />
+              <p>Full-Time</p>
+              <p class="planPrice">From $9.55/Hr</p>
+              <p>Billed monthly.</p>
+              <ul class="d-flex flex-column align-start ga-2 mt-2">
+                <li class="d-flex">
+                  <v-icon
+                    icon="mdi-check"
+                    color="radioactive"
+                    size="x-large">
+                  </v-icon>
+                  <p class="text-start text-radioactive ml-2">160 Hours per Month of Virtual Assistance</p>
+                </li>
+                <li class="d-flex align-center" v-for="(item, index) in plans" :key="index">
+                  <v-icon
+                    icon="mdi-check"
+                    color="radioactive"
+                    size="x-large">
+                  </v-icon>
+                  <p class="text-start text-radioactive ml-2">{{item}}</p>
+                </li>
+              </ul>
+            </div>
+          </v-window-item>
+          <v-window-item value="part-time">
+            <div class="px-4 columnAlignCenter text-center ga-1">
+              <img class="mt-6" width="20%" src="@/assets/images/pricing/part-time-remote-talent.png" alt="Part Time Remote Talent" />
+              <p>Part-Time</p>
+              <p class="planPrice">From $10.85/Hr</p>
+              <p>Billed monthly.</p>
+              <ul class="d-flex flex-column align-start ga-2 mt-2">
+                <li class="d-flex">
+                  <v-icon
+                    icon="mdi-check"
+                    color="radioactive"
+                    size="x-large">
+                  </v-icon>
+                  <p class="text-start text-radioactive ml-2">80 Hours per Month of Virtual Assistance</p>
+                </li>
+                <li class="d-flex align-center" v-for="(item, index) in plans" :key="index">
+                  <v-icon
+                    icon="mdi-check"
+                    color="radioactive"
+                    size="x-large">
+                  </v-icon>
+                  <p class="text-start text-radioactive ml-2">{{item}}</p>
+                </li>
+              </ul>
+            </div>
+          </v-window-item>
+          <v-window-item value="build-team">
+            <div class="px-4 columnAlignCenter text-center ga-1">
+              <img class="mt-6" width="20%" src="@/assets/images/pricing/build-your-iconic-team.png" alt="Build Your Iconic Team" />
+              <p>Build Your Team</p>
+              <p class="planPrice">Get a Quote</p>
+              <p>Billed monthly.</p>
+              <ul class="d-flex flex-column align-start ga-2 mt-2">
+                <li class="d-flex">
+                  <v-icon
+                    icon="mdi-check"
+                    color="radioactive"
+                    size="x-large">
+                  </v-icon>
+                  <p class="text-start text-radioactive ml-2">Custom Team Tailored to your Needs</p>
+                </li>
+                <li class="d-flex align-center" v-for="(item, index) in plans" :key="index">
+                  <v-icon
+                    icon="mdi-check"
+                    color="radioactive"
+                    size="x-large">
+                  </v-icon>
+                  <p class="text-start text-radioactive ml-2">{{item}}</p>
+                </li>
+              </ul>
+            </div>
+          </v-window-item>
+        </v-window>
+      </div>
+      <router-link :to="'/contact-us'" class="secondaryButton mt-8 elevation-5">Get a Free Consultation</router-link>
+    </div>
+  </section>
+  <section class="skyRadioactive">
+    <h2 class="text-white mb-5">Frequently Asked Questions</h2>
+    <v-expansion-panels class="px-7 d-flex ga-5" variant="accordion">
+      <v-expansion-panel
+        v-for="(item, index) in faqs"
+        :key="index"
+        :title="item.title"
+        :text="item.text"
+        ></v-expansion-panel>
+    </v-expansion-panels>
   </section>
 </template>
 
@@ -258,6 +387,30 @@
           },
         ],
         industries: industries,
+        tab: null,
+        plans: [
+          "Email and Chat Support",
+          "Customer Success Agent",
+          "No Lock In Contract",
+          "No Replacement and Recriotment Fees",
+          "Performance Reviews",
+          "Optional Time-Tracking Software",
+          "Optional Secure Remote Worker Software"
+        ],
+        faqs: [
+          {
+            title: "FAQ1",
+            text: "text",
+          },
+          {
+            title: "FAQ2",
+            text: "text",
+          },
+          {
+            title: "FAQ3",
+            text: "text",
+          },
+        ],
       };
     },
     methods: {
@@ -299,6 +452,10 @@
     padding: 3.5vw 10vw;
     border-radius: 50px;
   }
+  .homeH4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
 
   /* Different */
 
@@ -315,11 +472,6 @@
 
   .tailoredTitle {
     font-size: 1.4rem;
-    font-weight: 600;
-  }
-
-  .tellUs {
-    font-size: 1.2rem;
     font-weight: 600;
   }
 
@@ -344,9 +496,27 @@
     font-size: 1rem;
   }
 
+  /* Cost Comparison */
+  .CostComparisonAclaration p {
+    font-size: 0.75rem;
+  }
+
   /* Industries */
-  .whiteBorder{
+  .whiteBorder {
     border: 5px solid white;
     border-radius: 20px;
+  }
+  .titleIndustries {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+
+  /* Pricing */
+  .pricingTabs{
+    font-family: 'Poppins', sans-serif;
+  }
+  .planPrice{
+    font-weight: 700;
+    font-size: 1.2rem;
   }
 </style>
