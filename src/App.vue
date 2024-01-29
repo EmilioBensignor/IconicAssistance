@@ -4,17 +4,20 @@
     <div class="pt-4">
       <router-view />
     </div>
+    <FooterComponent />
   </v-app>
 </template>
 
 <script>
 import HeaderComponent from '@/components/HeaderComponent.vue'
+import FooterComponent from '@/components/FooterComponent.vue'
 
 export default {
   name: 'App',
   components: {
     HeaderComponent,
-  }
+    FooterComponent,
+  },
 }
 </script>
 
@@ -29,7 +32,7 @@ h1{
   font-size: 2.4rem;
 }
 h2{
-  width: 85%;
+  width: 75%;
   font-weight: 700;
   font-size: 1.7rem;
 }
@@ -37,7 +40,7 @@ h2{
   font-size: 1.1rem;
 }
 p{
-  width: 85%;
+  width: 75%;
   line-height: 1.5em;
   font-size: 1rem;
 }
@@ -81,5 +84,10 @@ p{
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
 }
 </style>
