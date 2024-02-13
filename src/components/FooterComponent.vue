@@ -2,8 +2,8 @@
   <div class="bg-radioactive columnAlignCenter">
     <IconicLogo class="text-white" />
     <div class="columnAlignCenter w-75 text-center mt-3 ga-3">
-      <p class="font-weight-bold w-100">Ready to supercharge your business?</p>
-      <p class="w-100">Address any questions or concerns you might have</p>
+      <p class="text-white font-weight-bold w-100">Ready to supercharge your business?</p>
+      <p class="text-white w-100">Address any questions or concerns you might have</p>
       <router-link :to="'/contact-us'" class="primaryButton elevation-5 my-3"
         >Contact Us!</router-link
       >
@@ -35,7 +35,7 @@
         <router-link class="footerTitle" :to="'/pricing'">Pricing</router-link>
       </div>
     </div>
-    <p class="my-3 text-center rightsReserved">© Iconic Assistants. All Rights Reserved 2023</p>
+    <p class="my-3 text-center text-white rightsReserved">© Iconic Assistance. All Rights Reserved 2023</p>
   </div>
 </template>
 
@@ -65,6 +65,7 @@
 .footerTitle{
   font-size: 1.35rem;
   font-weight: 600;
+  color: white;
 }
 .rightsReserved{
   font-size: 0.8rem;

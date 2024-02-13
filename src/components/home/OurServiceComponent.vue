@@ -8,8 +8,8 @@
         v-for="(item, index) in tailoredServices"
         :key="index">
         <v-img :src="getImgUrl(item.img)" :alt="item.alt" width="75%"></v-img>
-        <p class="tailoredTitle">{{ item.title }}</p>
-        <p>{{ item.body }}</p>
+        <p class="tailoredTitle text-white">{{ item.title }}</p>
+        <p class="text-white">{{ item.body }}</p>
         <div class="w-75 bg-white mt-10 whiteLine"></div>
       </div>
       <div class="my-5 columnAlignCenter ga-2 w-100">
@@ -63,8 +63,11 @@
     font-size: 1.4rem;
     font-weight: 600;
   }
-
   .whiteLine {
     height: 1px;
+  }
+    .homeH4 {
+    font-size: 1.2rem;
+    font-weight: 600;
   }
 </style>

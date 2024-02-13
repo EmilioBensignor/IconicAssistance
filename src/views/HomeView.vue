@@ -8,7 +8,7 @@
           Outsource Anything with
           <span class="text-blueSky">ICONIC ASSISTANCE</span>
         </h1>
-        <p class="text-landing text-center">
+        <p class="text-landing text-center text-white">
           Leading the way in remote staffing solutions, the top choice for your
           outsourcing needs.
           <span class="font-weight-bold">Starting at $9.55/Hr.</span>
@@ -69,7 +69,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 5vw 0;
+    padding: 5vw 3vw;
   }
 
   .landing {
@@ -89,9 +89,5 @@
     font-weight: 600;
     padding: 3.5vw 10vw;
     border-radius: 50px;
-  }
-  .homeH4 {
-    font-size: 1.2rem;
-    font-weight: 600;
   }
 </style>

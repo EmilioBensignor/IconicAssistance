@@ -19,13 +19,13 @@
         <p class="navTitles pt-1 pl-4">About</p>
         <li v-for="item in aboutMenu" :key="item.title">
           <v-list-item :to="item.path">
-            <v-list-item-title class="pl-4">{{ item.title }}</v-list-item-title>
+            <v-list-item-title class="pl-4 text-midnight">{{ item.title }}</v-list-item-title>
           </v-list-item>
         </li>
         <p class="navTitles pt-1 pl-4">Learn</p>
         <li v-for="item in learnMenu" :key="item.title">
           <v-list-item :to="item.path">
-            <v-list-item-title class="pl-4">{{ item.title }}</v-list-item-title>
+            <v-list-item-title class="pl-4 text-midnight">{{ item.title }}</v-list-item-title>
           </v-list-item>
         </li>
         <li>
@@ -108,6 +108,7 @@
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-size: 1.2rem;
+    color: #120d40;
   }
   .v-list-item-title {
     font-size: 1.1rem;

@@ -3,8 +3,8 @@
     <p class="subtitle text-white">Who we are</p>
     <h2 class="text-white">Outsourcing made simple and cost-effective</h2>
     <p class="text-white">
-      Welcome to Iconic Assistants where outsourcing meets excellence! At Iconic
-      Assistants, we take pride in being a premier outsourcing company dedicated
+      Welcome to Iconic Assistance where outsourcing meets excellence! At Iconic
+      Assistance, we take pride in being a premier outsourcing company dedicated
       to bridging the gap between North American companies and top-tier global
       talent. Our mission is clear: simplify and streamline the hiring process
       for businesses by managing all administrative tasks related to recruitment

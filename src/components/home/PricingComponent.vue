@@ -1,7 +1,7 @@
 <template>
   <section>
     <p class="subtitle text-radioactive">Pricing</p>
-    <h2 class="text-black">Select A Plan Now To Get More Done</h2>
+    <h2 class="text-midnight">Select A Plan Now To Get More Done</h2>
     <div class="columnAlignCenter my-5 rounded-lg pricingContainer">
       <v-tabs
         class="rounded-t-lg pricingTabs elevation-2"

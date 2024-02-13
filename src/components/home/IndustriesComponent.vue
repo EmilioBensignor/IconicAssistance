@@ -42,7 +42,7 @@
       <div class="my-5 columnAlignCenter ga-4 w-100">
         <p class="text-white homeH4">And Many More!</p>
         <p class="text-white">
-          Want to know if our Virtual Assistants are suitable for you?
+          Want to know if our Remote Talent Experts are suitable for you?
         </p>
         <router-link
           class="primaryButton elevation-5 mt-3 mb-5"

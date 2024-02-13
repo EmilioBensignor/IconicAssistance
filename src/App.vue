@@ -4,7 +4,7 @@
     <div class="pt-4">
       <router-view />
     </div>
-    <FooterComponent />
+    <FooterComponent class="pt-10" />
   </v-app>
 </template>
 
@@ -32,17 +32,25 @@ h1{
   font-size: 2.4rem;
 }
 h2{
-  width: 75%;
+  width: 90%;
   font-weight: 700;
   font-size: 1.7rem;
+}
+h3{
+  font-size: 1.4rem;
 }
 .subtitle{
   font-size: 1.1rem;
 }
 p{
-  width: 75%;
+  width: 85%;
   line-height: 1.5em;
   font-size: 1rem;
+  color: #120d40;
+}
+
+ul{
+  list-style: none;
 }
 
 /* Buttons */
@@ -80,6 +88,10 @@ p{
 }
 
 /* Alignments */
+section{
+  padding: 0 3vw;
+}
+
 .columnAlignCenter{
   display: flex;
   flex-direction: column;
@@ -89,5 +101,11 @@ p{
 .column{
   display: flex;
   flex-direction: column;
+}
+
+/* Pages */
+.heroPages{
+  width: 85%;
+  padding: 15vw 0;
 }
 </style>

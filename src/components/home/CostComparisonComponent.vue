@@ -1,7 +1,7 @@
 <template>
     <section>
     <p class="subtitle">Cost Comparison</p>
-    <h2>Delegate Task At A Fraction Of The Cost</h2>
+    <h2 class="text-midnight">Delegate Task At A Fraction Of The Cost</h2>
     <div>TABLA COST COMPARISON</div>
     <div
       class="columnAlignCenter ga-3 text-lightGray CostComparisonAclaration my-5">

@@ -1,7 +1,7 @@
 <template>
   <section class="skyRadioactive">
     <p class="subtitle text-white">How It Works</p>
-    <h2 class="text-white">How Our Virtual Assistant Service Works</h2>
+    <h2 class="text-white">How Our Remote Talent Service Works</h2>
     <div class="columnAlignCenter ga-10 mt-5">
       <div
         v-for="(item, index) in steps"
