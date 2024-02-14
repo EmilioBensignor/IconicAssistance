@@ -1,5 +1,3 @@
-<script setup></script>
-
 <template>
   <section class="columnAlignCenter">
     <div class="heroPages columnAlignCenter text-center">
