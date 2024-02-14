@@ -6,7 +6,7 @@
       <div class="hero columnAlignCenter text-center">
         <h1>
           Outsource Anything with
-          <span class="text-blueSky">ICONIC ASSISTANCE</span>
+          <span class="text-blueSky">ICONIC ASSISTANTS</span>
         </h1>
         <p class="text-landing text-center text-white">
           Leading the way in remote staffing solutions, the top choice for your
@@ -64,13 +64,6 @@
 
 <style scoped>
   /* Home */
-  section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 5vw 3vw;
-  }
 
   .landing {
     display: flex;

@@ -2,7 +2,7 @@
   <section class="radioactiveSky">
     <p class="subtitle text-white">Industries</p>
     <h2 class="text-white">Who We Serve</h2>
-    <div class="d-flex flex-column w-100 ga-5 mt-5">
+    <div class="column ga-5 mt-5">
       <!-- <div
         class="d-flex align-center w-75 ml-15"
         v-for="(item, index) in industries"

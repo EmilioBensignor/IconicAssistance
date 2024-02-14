@@ -1,22 +1,20 @@
-<script setup></script>
-
 <template>
   <section class="columnAlignCenter">
-    <div class="heroPages columnAlignCenter text-center">
+    <div class="heroPages flexCenter">
       <h1 class="text-midnight">
         Grow Your Business With
-        <span class="text-radioactive">Iconic Assistance</span>
+        <span class="text-radioactive">Iconic Assistants</span>
       </h1>
     </div>
   </section>
   <!-- Step 1 -->
-  <section class="columnAlignCenter text-center text-white skyRadioactive">
+  <section class="skyRadioactive">
     <p class="subtitle text-white">Step 1</p>
-    <h2>Share Your Needs</h2>
+    <h2 class="text-white">Share Your Needs</h2>
     <p class="text-white my-3">
       Schedule a 15-minute call with our sales reps to tailor our services to
       your business needs. Free yourself to focus on growth. Book your
-      consultation with Iconic Assistance today.
+      consultation with Iconic Assistants today.
     </p>
     <img
       src="@/assets/images/howItWorks/Remote-Talent-Call.png"
@@ -28,7 +26,7 @@
     >
   </section>
   <!-- Step 2 -->
-  <section class="columnAlignCenter text-center">
+  <section>
     <p class="subtitle">Step 2</p>
     <h2 class="text-midnight">Pick The Right Candidate</h2>
     <p class="my-3">
@@ -46,7 +44,7 @@
     >
   </section>
   <!-- Step 3 -->
-  <section class="columnAlignCenter text-center radioactiveSky">
+  <section class="radioactiveSky">
     <p class="subtitle text-white">Step 3</p>
     <h2 class="text-white">Set Up Your VA</h2>
     <p class="text-white my-3">
@@ -64,11 +62,11 @@
     >
   </section>
   <!-- Step 4 -->
-  <section class="columnAlignCenter text-center">
+  <section>
     <p class="subtitle">Step 4</p>
     <h2 class="text-midnight">Experience continual support</h2>
     <p class="my-3">
-      Iconic Assistance offers unwavering support, addressing inquiries and
+      Iconic Assistants offers unwavering support, addressing inquiries and
       providing guidance whenever needed. You're never alone on your path to
       success.
     </p>
@@ -82,5 +80,3 @@
     >
   </section>
 </template>
-
-<style scoped></style>

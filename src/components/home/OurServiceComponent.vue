@@ -4,7 +4,7 @@
     <h2 class="text-white">Tailored For Your Success</h2>
     <div class="columnAlignCenter py-3 px-2 ga-5">
       <div
-        class="columnAlignCenter text-center text-white w-75 ga-2 mt-10"
+        class="flexCenter text-white w-75 ga-2 mt-10"
         v-for="(item, index) in tailoredServices"
         :key="index">
         <v-img :src="getImgUrl(item.img)" :alt="item.alt" width="75%"></v-img>
@@ -66,7 +66,7 @@
   .whiteLine {
     height: 1px;
   }
-    .homeH4 {
+  .homeH4 {
     font-size: 1.2rem;
     font-weight: 600;
   }

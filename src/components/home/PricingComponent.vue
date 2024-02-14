@@ -15,7 +15,7 @@
       <div class="elevation-5 w-75 mt-6 rounded-xl">
         <v-window v-model="tab" class="pb-5">
           <v-window-item value="full-time">
-            <div class="px-4 columnAlignCenter text-center ga-1">
+            <div class="flexCenter px-4 ga-1">
               <img
                 class="mt-6"
                 width="20%"
@@ -24,12 +24,12 @@
               <p>Full-Time</p>
               <p class="planPrice">From $9.55/Hr</p>
               <p>Billed monthly.</p>
-              <ul class="d-flex flex-column align-start ga-2 mt-2">
+              <ul class="column align-start ga-2 mt-2">
                 <li class="d-flex">
                   <v-icon icon="mdi-check" color="radioactive" size="x-large">
                   </v-icon>
                   <p class="text-start w-100 text-radioactive ml-2">
-                    160 Hours per Month of Virtual Assistance
+                    160 Hours per Month of Virtual Assistants
                   </p>
                 </li>
                 <li
@@ -46,7 +46,7 @@
             </div>
           </v-window-item>
           <v-window-item value="part-time">
-            <div class="px-4 columnAlignCenter text-center ga-1">
+            <div class="px-4 flexCenter ga-1">
               <img
                 class="mt-6"
                 width="20%"
@@ -60,7 +60,7 @@
                   <v-icon icon="mdi-check" color="radioactive" size="x-large">
                   </v-icon>
                   <p class="text-start w-100 text-radioactive ml-2">
-                    80 Hours per Month of Virtual Assistance
+                    80 Hours per Month of Virtual Assistants
                   </p>
                 </li>
                 <li
@@ -77,7 +77,7 @@
             </div>
           </v-window-item>
           <v-window-item value="build-team">
-            <div class="px-4 columnAlignCenter text-center ga-1">
+            <div class="px-4 flexCenter ga-1">
               <img
                 class="mt-6"
                 width="20%"

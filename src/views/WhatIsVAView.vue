@@ -1,17 +1,15 @@
-<script setup></script>
-
 <template>
   <section class="columnAlignCenter">
-    <div class="heroPages columnAlignCenter text-center">
+    <div class="heroPages flexCenter">
       <h1 class="text-midnight">
         Unlock your business' potencial with
         <span class="text-radioactive">Iconic Assistants</span>
       </h1>
     </div>
   </section>
-  <section class="columnAlignCenter text-center skyRadioactive">
+  <section class="skyRadioactive">
     <p class="subtitle text-white">What are Virtual Assistants</p>
-    <h2 class="text-white">Introduction To Virtual Assistance</h2>
+    <h2 class="text-white">Introduction To Virtual Assistants</h2>
     <p class="text-white my-3">
       A virtual assistant remotely provides administrative, technical, or
       specialized support to businesses or individuals. Using technology and
@@ -27,7 +25,7 @@
       >Learn About How We Hire</router-link
     >
   </section>
-  <section class="w-100 columnAlignCenter text-center">
+  <section>
     <p class="subtitle">How It Works</p>
     <h2>
       Key Benefits Of Hiring
@@ -38,12 +36,12 @@
       alt="Iconic Assistants Key Benefits" 
       class="my-5"
       width="75%"/>
-      <div class="w-75 columnAlignCenter text-center bg-radioactive rounded-xl px-3 py-5 my-5">
+      <div class="w-75 flexCenter bg-radioactive rounded-xl px-3 py-5 my-5">
         <p class="text-white">Explore the vast potential of Virtual Assistants (VAs) in seamlessly managing administrative tasks, from email and calendar to precise data entry and thorough research.</p>
         <router-link class="primaryButton mt-5" :to="'/services'">Explore Our Services</router-link>
       </div>
   </section>
-  <section class="columnAlignCenter skyRadioactive text-center">
+  <section class="skyRadioactive">
     <h2 class="text-white">Benefits</h2>
     <p class="text-white mt-3">Companies are increasingly mutating towards predominantly virtual assistants instead of in-house employees due to several compelling reasons:</p>
   </section>

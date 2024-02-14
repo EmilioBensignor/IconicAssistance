@@ -35,7 +35,7 @@
         <router-link class="footerTitle" :to="'/pricing'">Pricing</router-link>
       </div>
     </div>
-    <p class="my-3 text-center text-white rightsReserved">© Iconic Assistance. All Rights Reserved 2023</p>
+    <p class="my-3 text-center text-white rightsReserved">© Iconic Assistants. All Rights Reserved 2023</p>
   </div>
 </template>
 

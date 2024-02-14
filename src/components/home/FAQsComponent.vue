@@ -1,7 +1,7 @@
 <template>
   <section class="skyRadioactive">
     <h2 class="text-white mb-5">Frequently Asked Questions</h2>
-    <v-expansion-panels class="px-7 ga-5 faqWrapper" variant="accordion">
+    <v-expansion-panels class="faqWrapper px-7">
       <v-expansion-panel title="How do I get started?">
         <v-expansion-panel-text>
           <ol class="pl-3 columnAlignCenter ga-3">
