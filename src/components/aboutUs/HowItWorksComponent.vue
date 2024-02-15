@@ -10,7 +10,7 @@
       <div
         v-for="item in fourSteps"
         :key="item.number"
-        class="columnAlignCenter text-center">
+        class="flexCenter">
         <div class="circleNumber bg-white mb-3">
           <p class="text-radioactive">{{ item.number }}</p>
         </div>

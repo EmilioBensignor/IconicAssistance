@@ -13,7 +13,7 @@
       <div
         v-for="item in comparisonChart"
         :key="item.number"
-        class="cardComparison columnAlignCenter text-center rounded-xl elevation-6 my-5">
+        class="cardComparison flexCenter rounded-xl elevation-6 my-5">
         <div
           class="w-100 cardComparisonHeader columnAlignCenter rounded-t-xl pa-5">
           <div class="circleNumber bg-blueSky">
@@ -66,12 +66,122 @@
 </template>
 
 <script>
-import IconicLogo from "@/components/icons/IconicLogo.vue";
+  import IconicLogo from "@/components/icons/IconicLogo.vue";
   export default {
     components: {
       IconicLogo,
     },
-  }
+    data() {
+      return {
+        comparisonChart: [
+          {
+            number: 1,
+            title: "Time to hire",
+            iconic: "7-15 Days",
+            inHouseUS: "1-4 months",
+            vaUS: "2-3 weeks",
+            vaPhilippines: "1-2 months",
+          },
+          {
+            number: 2,
+            title: "Recruitment fee",
+            iconic: "$0",
+            inHouseUS: "$500-5k",
+            vaUS: "$0",
+            vaPhilippines: "$0",
+          },
+          {
+            number: 3,
+            title: "Payroll, taxes & benefits",
+            iconic: "NO",
+            inHouseUS: "YES",
+            vaUS: "May vary",
+            vaPhilippines: "NO",
+          },
+          {
+            number: 4,
+            title: "Pre-vetted talent",
+            iconic: "YES",
+            inHouseUS: "NO",
+            vaUS: "May vary but usually No",
+            vaPhilippines: "May vary",
+          },
+          {
+            number: 5,
+            title: "Avg lowest price/hr",
+            iconic: "$9.5/hr",
+            inHouseUS: "$25/hr",
+            vaUS: "$20/hr",
+            vaPhilippines: "$3-5/hr",
+          },
+          {
+            number: 6,
+            title: "Office space",
+            iconic: "NO",
+            inHouseUS: "YES",
+            vaUS: "NO",
+            vaPhilippines: "NO",
+          },
+          {
+            number: 7,
+            title: "Quality guarantee",
+            iconic: "YES",
+            inHouseUS: "NO",
+            vaUS: "May vary",
+            vaPhilippines: "YES",
+          },
+          {
+            number: 8,
+            title: "Flexible schedule",
+            iconic: "YES",
+            inHouseUS: "NO",
+            vaUS: "May vary",
+            vaPhilippines: "YES",
+          },
+          {
+            number: 9,
+            title: "Certified professionals",
+            iconic: "YES",
+            inHouseUS: "YES",
+            vaUS: "YES",
+            vaPhilippines: "NO",
+          },
+          {
+            number: 10,
+            title: "Turnover",
+            iconic: "Very low",
+            inHouseUS: "Low",
+            vaUS: "Varies",
+            vaPhilippines: "Med-high",
+          },
+          {
+            number: 11,
+            title: "Available in your time zone",
+            iconic: "YES",
+            inHouseUS: "YES",
+            vaUS: "YES",
+            vaPhilippines: "NO",
+          },
+          {
+            number: 12,
+            title: "Success rate",
+            iconic: "Very high",
+            inHouseUS: "High",
+            vaUS: "Medium",
+            vaPhilippines: "Low medium",
+          },
+          {
+            number: 13,
+            title: "Cancel any time",
+            iconic: "YES *",
+            inHouseUS: "NO",
+            vaUS: "May vary",
+            vaPhilippines: "YES",
+          },
+        ],
+      };
+    },
+  };
 </script>
 
 <style scoped>

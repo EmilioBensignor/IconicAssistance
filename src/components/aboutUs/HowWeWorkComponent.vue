@@ -25,10 +25,15 @@
     <router-link class="secondaryButton mb-5" :to="'/how-we-hire'">
       Learn About How We Hire
     </router-link>
-    <p class="my-5">Some of the tools we use</p>
+    <p class="tools my-5">Some of the tools we use</p>
     <!-- ARREGLAR LAS TOOLS -->
-    <div v-for="(item, index) in tools" :key="index">
-      <v-img width="45%" :src="getImgUrl(item.img)" :alt="item.alt"></v-img>
+    <div class="d-flex justify-center flex-wrap ga-5">
+      <div 
+      v-for="(item, index) in tools" 
+      :key="index"
+      class="w-25">
+      <img width="100%" :src="getImgUrl(item.img)" :alt="item.alt" />
+    </div>
     </div>
   </section>
 </template>
@@ -43,15 +48,47 @@
             alt: "Google Suit Logo",
           },
           {
+            img: "tools/Intuit-Quickbooks-Logo.png",
+            alt: "Intuit Quickbooks Logo",
+          },
+          {
+            img: "tools/Microsoft-Office-Logo.png",
+            alt: "Microsoft Office Logo",
+          },
+          {
+            img: "tools/Microsoft-Teams-Logo.png",
+            alt: "Microsoft Teams Logo",
+          },
+          {
             img: "tools/Monday-Logo.png",
             alt: "Monday Logo",
+          },
+          {
+            img: "tools/Panda-Doc-Logo.png",
+            alt: "Panda Doc Logo",
+          },
+          {
+            img: "tools/Shopify-Logo.png",
+            alt: "Shopify Logo",
+          },
+          {
+            img: "tools/Slack-Logo.png",
+            alt: "Slack Logo",
+          },
+          {
+            img: "tools/Team-Viewer-Logo.png",
+            alt: "Team Viewer Logo",
+          },
+          {
+            img: "tools/WhatsApp-Telegram-Logos.png",
+            alt: "WhatsApp Telegram Logos",
           },
         ],
       };
     },
     methods: {
       getImgUrl(imgName) {
-        return `${import.meta.env.BASE_URL}assets/images/${imgName}`;
+        return new URL(`../../assets/images/${imgName}`, import.meta.url).href;
       },
     },
   };
@@ -67,5 +104,9 @@
     width: 85%;
     border: 1px solid #373ae6;
     margin-top: -5vw;
+  }
+  .tools{
+    font-size: 1.3rem;
+    font-weight: 550;
   }
 </style>

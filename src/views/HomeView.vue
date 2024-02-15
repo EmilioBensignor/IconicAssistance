@@ -3,7 +3,7 @@
 <template>
   <section class="landing bg-gray pt-5">
     <div class="columnAlignCenter">
-      <div class="hero columnAlignCenter text-center">
+      <div class="hero flexCenter">
         <h1>
           Outsource Anything with
           <span class="text-blueSky">ICONIC ASSISTANTS</span>
@@ -29,22 +29,29 @@
   <HowItWorksComponent />
   <CostComparisonComponent />
   <IndustriesComponent />
-  <PricingComponent />
+  <section>
+    <p class="subtitle text-radioactive">Pricing</p>
+    <h2 class="text-midnight">Select A Plan Now To Get More Done</h2>
+    <PricingComponent />
+    <router-link :to="'/contact-us'" class="secondaryButton mt-6 elevation-5"
+      >Get a Free Consultation</router-link
+    >
+  </section>
   <FAQsComponent />
 </template>
 
 <script>
-  import WhoWeAreComponent from "@/components/home/WhoWeAreComponent.vue"
-  import WhyUsComponent from "@/components/home/WhyUsComponent.vue"
-  import OurServiceComponent from "@/components/home/OurServiceComponent.vue"
-  import HowItWorksComponent from "@/components/home/HowItWorksComponent.vue"
-  import CostComparisonComponent from "@/components/home/CostComparisonComponent.vue"
-  import IndustriesComponent from "@/components/home/IndustriesComponent.vue"
-  import PricingComponent from "@/components/home/PricingComponent.vue"
-  import FAQsComponent from "@/components/home/FAQsComponent.vue"
+  import WhoWeAreComponent from "@/components/home/WhoWeAreComponent.vue";
+  import WhyUsComponent from "@/components/home/WhyUsComponent.vue";
+  import OurServiceComponent from "@/components/home/OurServiceComponent.vue";
+  import HowItWorksComponent from "@/components/home/HowItWorksComponent.vue";
+  import CostComparisonComponent from "@/components/home/CostComparisonComponent.vue";
+  import IndustriesComponent from "@/components/home/IndustriesComponent.vue";
+  import PricingComponent from "@/components/home/PricingComponent.vue";
+  import FAQsComponent from "@/components/home/FAQsComponent.vue";
 
   export default {
-    components:{
+    components: {
       WhoWeAreComponent,
       WhyUsComponent,
       OurServiceComponent,

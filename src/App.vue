@@ -64,6 +64,12 @@
     list-style: none;
   }
 
+  .faqWrapper {
+    text-align: start;
+    font-size: 0.9rem;
+    font-family: "Poppins", sans-serif;
+  }
+
   /* Buttons */
 
   .primaryButton {

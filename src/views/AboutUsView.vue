@@ -2,7 +2,7 @@
 
 <template>
   <section class="columnAlignCenter">
-    <div class="heroPages columnAlignCenter text-center">
+    <div class="heroPages flexCenter">
       <h1 class="text-midnight">
         Outsource to
         <span class="text-radioactive">Iconic Virtual Assistants</span>
