@@ -17,40 +17,38 @@
       </div> -->
       <div class="columnAlignCenter">
         <v-carousel
-        :show-arrows="false"
-        class="w-75 columnAlignCenter justify-space-between whiteBorder elevation-5"
-        cycle
-        :interval="3000">
-        <v-carousel-item 
-          v-for="(item, index) in industries" 
-          :key="index" 
-          cover>
-          <router-link
-            :to="'/services'"
-            class="carouselCard columnAlignCenter ga-3 text-decoration-none pa-3 pb-15">
-            <v-img
-              :src="getImgUrl(item.logo)"
-              :alt="item.logoAlt"
-              width="40%"></v-img>
-            <p class="text-white titleIndustries">{{ item.name }}</p>
-            <p class="text-white">{{ item.description }}</p>
+          :show-arrows="false"
+          class="w-75 columnAlignCenter justify-space-between whiteBorder elevation-5"
+          cycle
+          :interval="3000">
+          <v-carousel-item
+            v-for="(item, index) in industries"
+            :key="index"
+            cover>
             <router-link
               :to="'/services'"
-              class="text-decoration-none primaryButton mt-3 mb-10 elevation-5"
-              >Learn More</router-link
-            >
-          </router-link>
-        </v-carousel-item>
-      </v-carousel>
+              class="carouselCard columnAlignCenter ga-3 text-decoration-none pa-3 pb-15">
+              <v-img
+                :src="getImgUrl(item.logo)"
+                :alt="item.logoAlt"
+                width="40%"></v-img>
+              <p class="text-white titleIndustries">{{ item.name }}</p>
+              <p class="text-white">{{ item.description }}</p>
+              <router-link
+                :to="'/services'"
+                class="text-decoration-none primaryButton mt-3 mb-10 elevation-5"
+                >Learn More</router-link
+              >
+            </router-link>
+          </v-carousel-item>
+        </v-carousel>
       </div>
       <div class="my-5 columnAlignCenter w-100">
         <p class="text-white homeH4">And Many More!</p>
         <p class="text-white">
           Want to know if our Remote Talent Experts are suitable for you?
         </p>
-        <router-link
-          class="primaryButton elevation-5 my-5"
-          :to="'/contact-us'"
+        <router-link class="primaryButton elevation-5 my-5" :to="'/contact-us'"
           >Request a free consultation</router-link
         >
       </div>
@@ -59,7 +57,7 @@
 </template>
 
 <script>
-  import { industries } from "@/cms.service.js";
+  import { industries } from "@/cms/industries.service.js";
 
   export default {
     data() {
@@ -80,7 +78,7 @@
     border: 5px solid white;
     border-radius: 20px;
   }
-  .carouselCard{
+  .carouselCard {
     height: 100%;
   }
   .titleIndustries {

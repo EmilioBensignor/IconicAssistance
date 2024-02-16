@@ -26,14 +26,14 @@
       Learn About How We Hire
     </router-link>
     <p class="tools my-5">Some of the tools we use</p>
-    <!-- ARREGLAR LAS TOOLS -->
-    <div class="d-flex justify-center flex-wrap ga-5">
-      <div 
-      v-for="(item, index) in tools" 
-      :key="index"
-      class="w-25">
-      <img width="100%" :src="getImgUrl(item.img)" :alt="item.alt" />
-    </div>
+    <div class="w-75 d-flex justify-center flex-wrap ga-5">
+      <div v-for="(item, index) in tools" :key="index" class="tool">
+        <v-img
+          eager
+          width="100%"
+          :src="getImgUrl(item.img)"
+          :alt="item.alt"></v-img>
+      </div>
     </div>
   </section>
 </template>
@@ -44,12 +44,28 @@
       return {
         tools: [
           {
+            img: "tools/Asana-Logo.png",
+            alt: "Asana Logo",
+          },
+          {
+            img: "tools/Calendly-Logo.png",
+            alt: "Calendly Logo",
+          },
+          {
+            img: "tools/Dropbox-Logo.png",
+            alt: "Dropbox Logo",
+          },
+          {
             img: "tools/Google-Suit-Logo.png",
             alt: "Google Suit Logo",
           },
           {
             img: "tools/Intuit-Quickbooks-Logo.png",
             alt: "Intuit Quickbooks Logo",
+          },
+          {
+            img: "tools/Mailchimp-Logo.png",
+            alt: "Mailchimp Logo",
           },
           {
             img: "tools/Microsoft-Office-Logo.png",
@@ -80,6 +96,10 @@
             alt: "Team Viewer Logo",
           },
           {
+            img: "tools/Trello-Logo.png",
+            alt: "Trello Logo",
+          },
+          {
             img: "tools/WhatsApp-Telegram-Logos.png",
             alt: "WhatsApp Telegram Logos",
           },
@@ -105,8 +125,11 @@
     border: 1px solid #373ae6;
     margin-top: -5vw;
   }
-  .tools{
+  .tools {
     font-size: 1.3rem;
     font-weight: 550;
+  }
+  .tool {
+    width: 45%;
   }
 </style>

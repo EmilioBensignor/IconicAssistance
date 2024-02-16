@@ -43,7 +43,13 @@ const router = createRouter({
     {
       path: '/what-is-a-va',
       name: 'WhatIsVA',
-      component: WhatIsVAView
+      component: WhatIsVAView,
+      children: [
+        {
+          path: ':id(\\d+)',
+          component: () => import('../views/VirtualAssistantView.vue')
+        }
+      ]
     },
     {
       path: '/types-of-vas',

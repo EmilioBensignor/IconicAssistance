@@ -8,7 +8,7 @@
         :key="index"
         class="bg-white w-75 rounded-xl pa-3 pb-6 elevation-5 columnAlignCenter ga-3">
         <p class="text-radioactive w-100 ml-3 stepNumbers">{{ item.number }}</p>
-        <v-img :src="getImgUrl(item.img)" :alt="item.alt" width="45%"></v-img>
+        <v-img eager :src="getImgUrl(item.img)" :alt="item.alt" width="45%"></v-img>
         <p class="stepTitle">{{ item.title }}</p>
         <p class="stepBody">{{ item.body }}</p>
       </div>

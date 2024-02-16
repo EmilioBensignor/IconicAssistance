@@ -90,5 +90,3 @@ export const industries = [
     description: "VAs lead onboardings, offer customer support, manage client success, etc.",
   },
 ];
-
-export const services = [];
