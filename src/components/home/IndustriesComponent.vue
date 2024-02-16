@@ -15,16 +15,19 @@
           {{ item.name.toLowerCase().replace(/\b\w/g, (c) => c.toUpperCase()) }}
         </p>
       </div> -->
-      <v-carousel
+      <div class="columnAlignCenter">
+        <v-carousel
         :show-arrows="false"
-        class="d-flex align-self-center h-75 pt-5 pb-15 w-75 whiteBorder"
+        class="w-75 columnAlignCenter justify-space-between whiteBorder elevation-5"
         cycle
-        :interval="100000000">
-        <!-- CAMBIAR EL INTERVALO -->
-        <v-carousel-item v-for="(item, index) in industries" :key="index" cover>
+        :interval="3000">
+        <v-carousel-item 
+          v-for="(item, index) in industries" 
+          :key="index" 
+          cover>
           <router-link
             :to="'/services'"
-            class="columnAlignCenter ga-3 text-decoration-none">
+            class="carouselCard columnAlignCenter ga-3 text-decoration-none pa-3 pb-15">
             <v-img
               :src="getImgUrl(item.logo)"
               :alt="item.logoAlt"
@@ -33,19 +36,20 @@
             <p class="text-white">{{ item.description }}</p>
             <router-link
               :to="'/services'"
-              class="text-decoration-none primaryButton mt-3 mb-5"
+              class="text-decoration-none primaryButton mt-3 mb-10 elevation-5"
               >Learn More</router-link
             >
           </router-link>
         </v-carousel-item>
       </v-carousel>
-      <div class="my-5 columnAlignCenter ga-4 w-100">
+      </div>
+      <div class="my-5 columnAlignCenter w-100">
         <p class="text-white homeH4">And Many More!</p>
         <p class="text-white">
           Want to know if our Remote Talent Experts are suitable for you?
         </p>
         <router-link
-          class="primaryButton elevation-5 mt-3 mb-5"
+          class="primaryButton elevation-5 my-5"
           :to="'/contact-us'"
           >Request a free consultation</router-link
         >
@@ -71,10 +75,13 @@
   };
 </script>
 
-<style scoped>
+<style>
   .whiteBorder {
     border: 5px solid white;
     border-radius: 20px;
+  }
+  .carouselCard{
+    height: 100%;
   }
   .titleIndustries {
     font-size: 1.4rem;
