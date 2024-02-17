@@ -1,0 +1,3 @@
+<template>
+  Virtual Assistant
+</template>

@@ -25,7 +25,7 @@
 </template>
 
 <script>
-  import { services } from "@/cms/services.service.js";
+  import { services } from "@/cms/typesva.service.js";
 
   export default {
     data() {
