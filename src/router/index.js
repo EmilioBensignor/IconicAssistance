@@ -6,8 +6,10 @@ import HowWeHireView from '../views/HowWeHireView.vue'
 import FaqView from '../views/FaqView.vue'
 import WhatIsVAView from '../views/WhatIsVAView.vue'
 import TypesOfVAsView from '../views/TypesOfVAsView.vue'
+import VirtualAssistantView from '../views/VirtualAssistantView.vue'
 import BeforeYouStartView from '../views/BeforeYouStartView.vue'
 import BlogView from '../views/BlogView.vue'
+import BlogPostView from '../views/BlogPostView.vue'
 import ServicesView from '../views/ServicesView.vue'
 import PricingView from '../views/PricingView.vue'
 import ContactUsView from '../views/ContactUsView.vue'
@@ -44,17 +46,16 @@ const router = createRouter({
       path: '/what-is-a-va',
       name: 'WhatIsVA',
       component: WhatIsVAView,
-      children: [
-        {
-          path: ':id(\\d+)',
-          component: () => import('../views/VirtualAssistantView.vue')
-        }
-      ]
     },
     {
       path: '/types-of-vas',
       name: 'TypesOfVAs',
-      component: TypesOfVAsView
+      component: TypesOfVAsView,
+    },
+    {
+      path: '/virtual-assistant/:id',
+      name: 'VirtualAssistant',
+      component: VirtualAssistantView,
     },
     {
       path: '/before-you-start',
@@ -65,6 +66,11 @@ const router = createRouter({
       path: '/blog',
       name: 'Blog',
       component: BlogView
+    },
+    {
+      path: '/blog-post/:slug',
+      name: 'BlogPost',
+      component: BlogPostView,
     },
     {
       path: '/services',

@@ -13,7 +13,7 @@
       alt="Remote Talent Iconic Assistants"
       class="rounded-circle elevation-5 my-5"
       width="75%" />
-    <router-link class="primaryButton mt-3 mb-5" :to="'/how-we-hire'"
+    <router-link class="primaryButton elevation-5 mt-3 mb-5" :to="'/how-we-hire'"
       >Learn About How We Hire</router-link
     >
   </section>

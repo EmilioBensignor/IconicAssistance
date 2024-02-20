@@ -1,12 +1,13 @@
-export const services = [
+export const vaTypes = [
   {
+    id: 1,
     name: 'Administration',
     slug: 'administration',
     blueIcon: 'blueIcons/Administration-VA-Blue-Icon.png',
     blueIconAlt: 'Administration VA Blue Icon',
     whiteIcon: 'whiteIcons/Administration-VA-White-Icon.png',
     whiteIconAlt: 'Administration VA White Icon',
-    img: 'typesOfVa/Administration-Virtual-Assistant.png',
+    img: 'main/Administration-Virtual-Assistant.png',
     alt: 'Administration Virtual Assistant',
     description: [
       "Communication",
@@ -58,13 +59,14 @@ export const services = [
     ],
   },
   {
+    id: 2,
     name: 'Appointment Setting',
     slug: 'appointment-setting',
     blueIcon: 'blueIcons/Appointment-Setting-VA-Blue-Icon.png',
     blueIconAlt: 'Appointment Setting VA Blue Icon',
     whiteIcon: 'whiteIcons/Appointment-Setting-VA-White-Icon.png',
     whiteIconAlt: 'Appointment Setting VA White Icon',
-    img: 'typesOfVa/Appointment-Setting-Virtual-Assistant.png',
+    img: 'main/Appointment-Setting-Virtual-Assistant.png',
     alt: 'Appointment Setting Virtual Assistant',
     description: [
       "Task Coordination",
@@ -116,13 +118,14 @@ export const services = [
     ],
   },
   {
+    id: 3,
     name: 'Bookkeeping',
     slug: 'bookkeeping',
     blueIcon: 'blueIcons/Bookkeeping-VA-Blue-Icon.png',
     blueIconAlt: 'Bookkeeping VA Blue Icon',
     whiteIcon: 'whiteIcons/Bookkeeping-VA-White-Icon.png',
     whiteIconAlt: 'Bookkeeping VA White Icon',
-    img: 'typesOfVa/Bookkeeping-Virtual-Assistant.png',
+    img: 'main/Bookkeeping-Virtual-Assistant.png',
     alt: 'Bookkeeping Virtual Assistant',
     description: [
       "Financial Data Entry",
@@ -174,13 +177,14 @@ export const services = [
     ],
   },
   {
+    id: 4,
     name: 'Customer Service',
     slug: 'customer-service',
     blueIcon: 'blueIcons/Customer-Service-VA-Blue-Icon.png',
     blueIconAlt: 'Customer Service VA Blue Icon',
     whiteIcon: 'whiteIcons/Customer-Service-VA-White-Icon.png',
     whiteIconAlt: 'Customer Service VA White Icon',
-    img: 'typesOfVa/Customer-Service-Virtual-Assistant.png',
+    img: 'main/Customer-Service-Virtual-Assistant.png',
     alt: 'Customer Service Virtual Assistant',
     description: [
       "Inquiry Handling",
@@ -232,13 +236,14 @@ export const services = [
     ],
   },
   {
+    id: 5,
     name: 'Data Entry',
     slug: 'data-entry',
     blueIcon: 'blueIcons/Data-Entry-VA-Blue-Icon.png',
     blueIconAlt: 'Data Entry VA Blue Icon',
     whiteIcon: 'whiteIcons/Data-Entry-VA-White-Icon.png',
     whiteIconAlt: 'Data Entry VA White Icon',
-    img: 'typesOfVa/Data-Entry-Virtual-Assistant.png',
+    img: 'main/Data-Entry-Virtual-Assistant.png',
     alt: 'Data Entry Virtual Assistant',
     description: [
       "Database Management",
@@ -290,13 +295,14 @@ export const services = [
     ],
   },
   {
+    id: 6,
     name: 'Digital Marketing',
     slug: 'digital-marketing',
     blueIcon: 'blueIcons/Digital-Marketing-VA-Blue-Icon.png',
     blueIconAlt: 'Digital Marketing VA Blue Icon',
     whiteIcon: 'whiteIcons/Digital-Marketing-VA-White-Icon.png',
     whiteIconAlt: 'Digital Marketing VA White Icon',
-    img: 'typesOfVa/Digital-Marketing-Virtual-Assistant.png',
+    img: 'main/Digital-Marketing-Virtual-Assistant.png',
     alt: 'Digital Marketing Virtual Assistant',
     description: [
       "Social Media Management",
@@ -348,13 +354,14 @@ export const services = [
     ],
   },
   {
+    id: 7,
     name: 'Executive Admin',
     slug: 'executive-admin',
     blueIcon: 'blueIcons/Executive-Admin-VA-Blue-Icon.png',
     blueIconAlt: 'Executive Admin VA Blue Icon',
     whiteIcon: 'whiteIcons/Executive-Admin-VA-White-Icon.png',
     whiteIconAlt: 'Executive Admin VA White Icon',
-    img: 'typesOfVa/Executive-Admin-Virtual-Assistant.png',
+    img: 'main/Executive-Admin-Virtual-Assistant.png',
     alt: 'Executive Admin Virtual Assistant',
     description: [
       "Calendar Management",
@@ -406,13 +413,14 @@ export const services = [
     ],
   },
   {
+    id: 8,
     name: 'Project Management',
     slug: 'project-management',
     blueIcon: 'blueIcons/Project-Management-VA-Blue-Icon.png',
     blueIconAlt: 'Project Management VA Blue Icon',
     whiteIcon: 'whiteIcons/Project-Management-VA-White-Icon.png',
     whiteIconAlt: 'Project Management VA White Icon',
-    img: 'typesOfVa/Project-Management-Virtual-Assistant.png',
+    img: 'main/Project-Management-Virtual-Assistant.png',
     alt: 'Project Management Virtual Assistant',
     description: [
       "Task Coordination",
@@ -464,13 +472,14 @@ export const services = [
     ],
   },
   {
+    id: 9,
     name: 'Sales',
     slug: 'sales',
     blueIcon: 'blueIcons/Sales-VA-Blue-Icon.png',
     blueIconAlt: 'Sales VA Blue Icon',
     whiteIcon: 'whiteIcons/Sales-VA-White-Icon.png',
     whiteIconAlt: 'Sales VA White Icon',
-    img: 'typesOfVa/Sales-Virtual-Assistant.png',
+    img: 'main/Sales-Virtual-Assistant.png',
     alt: 'Sales Virtual Assistant',
     description: [
       "Lead Generation",
@@ -522,13 +531,14 @@ export const services = [
     ],
   },
   {
+    id: 10,
     name: 'Social Media',
     slug: 'social-media',
     blueIcon: 'blueIcons/Social-Media-VA-Blue-Icon.png',
     blueIconAlt: 'Social Media VA Blue Icon',
     whiteIcon: 'whiteIcons/Social-Media-VA-White-Icon.png',
     whiteIconAlt: 'Social Media VA White Icon',
-    img: 'typesOfVa/Social-Media-Strategy-Virtual-Assistant.png',
+    img: 'main/Social-Media-Strategy-Virtual-Assistant.png',
     alt: 'Social Media Virtual Assistant',
     description: [
       "Content Creation",

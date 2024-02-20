@@ -1,11 +1,77 @@
-<script setup>
-</script>
-
 <template>
-  <section>
-    Blog
+  <section class="columnAlignCenter">
+    <div class="heroPages flexCenter">
+      <h1 class="text-midnight">Explore Our Virtual Assistant Blog</h1>
+    </div>
+  </section>
+  <section class="skyRadioactive">
+    <h2 class="text-white font-weight-bold">Search</h2>
+    <v-form class="w-75 buscador my-5 rounded-xl">
+      <input
+        type="search"
+        name="blogSearch"
+        v-model="blogSearch"
+        class="w-100 bg-white rounded-xl py-3 px-5"
+        placeholder="???"
+        hide-details />
+    </v-form>
+    <div class="w-75 columnAlignCenter ga-13 mt-5">
+      <article
+        v-for="(item, index) in filteredBlogs"
+        :key="index"
+        class="columnAlignCenter bg-white rounded-lg elevation-7">
+        <router-link :to="`/blog-post/${item.slug}`">
+          <img
+            src="@/assets/images/aboutUs/Remote-Talent-Iconic-Assistants.png"
+            alt=""
+            class="rounded-t-lg"
+            width="100%" />
+        </router-link>
+        <div class="column ga-4 pa-5">
+          <h3 class="text-midnight text-start">{{ item.title }}</h3>
+          <p class="w-100 text-midnight text-start">{{ item.summary }}</p>
+          <router-link
+            class="w-75 secondaryButton elevation-5"
+            :to="`/blog-post/${item.slug}`"
+            >Read full post</router-link
+          >
+        </div>
+      </article>
+    </div>
   </section>
 </template>
 
-<style scoped>
-</style>
+<script>
+  import { blogs } from "@/cms/blogs.service.js";
+  export default {
+    data() {
+      return {
+        blogSearch: "",
+        blogs: blogs,
+      };
+    },
+    computed: {
+      filteredBlogs() {
+        return this.blogs.filter((blog) => this.checkFields(blog));
+      },
+    },
+    methods: {
+      checkFields(blog) {
+        const search = this.blogSearch.toLowerCase();
+        return (
+          blog.title.toLowerCase().includes(search) ||
+          // blog.intro.toLowerCase().includes(search) ||
+          blog.h2.toLowerCase().includes(search) ||
+          // blog.closer.toLowerCase().includes(search) ||
+          blog.keywords.some((keyword) =>
+            keyword.toLowerCase().includes(search)
+          ) ||
+          // blog.bullet.some((bulletPoint) =>
+          //   bulletPoint.toLowerCase().includes(search)
+          // )
+          blog.summary.toLowerCase().includes(search)
+        );
+      },
+    },
+  };
+</script>
