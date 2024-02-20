@@ -12,7 +12,7 @@
         name="blogSearch"
         v-model="blogSearch"
         class="w-100 bg-white rounded-xl py-3 px-5"
-        placeholder="???"
+        placeholder="What do you want to learn?"
         hide-details />
     </v-form>
     <div class="w-75 columnAlignCenter ga-13 mt-5">

@@ -22,19 +22,22 @@
       </ul>
       <p class="w-100">{{ blog.closer }}</p>
     </div>
-    <div class="w-75 elevation-5 rounded-lg mt-5">
+    <div class="columnAlignCenter mt-5">
       <h2 class="text-midnight">Recent Posts</h2>
       <div class="columnAlignCenter ga-5 py-5">
         <article
-          v-for="(recentBlog, index) in recentBlogs" 
+          v-for="(recentBlog, index) in recentBlogs"
           :key="index"
-          class="recentBlog text-start">
-          <img 
-            :src="getImgUrl(recentBlog.img)" 
+          class="recentBlog text-start w-75 elevation-5 rounded-lg">
+          <img
+            :src="getImgUrl(recentBlog.img)"
             :alt="recentBlog.alt"
-            width="100%">
-          <p class="text-midnight">{{ recentBlog.title }}</p>
-          <p class="text-lightGray">{{ formatDate(recentBlog.date) }}</p>
+            class="rounded-t-lg"
+            width="100%" />
+          <div class="pa-3">
+            <p class="text-midnight mb-2">{{ recentBlog.title }}</p>
+            <p class="text-lightGray">{{ formatDate(recentBlog.date) }}</p>
+          </div>
         </article>
       </div>
     </div>
@@ -108,7 +111,7 @@
     background-color: rgba(0, 0, 0, 0.7);
   }
 
-  .recentBlog{
+  .recentBlog {
     width: 85%;
   }
 </style>

@@ -70,6 +70,10 @@
     list-style: none;
   }
 
+  li{
+    font-size: 1rem;
+  }
+
   .faqWrapper {
     text-align: start;
     font-size: 0.9rem;
