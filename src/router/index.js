@@ -10,6 +10,7 @@ import VirtualAssistantView from '../views/VirtualAssistantView.vue'
 import BeforeYouStartView from '../views/BeforeYouStartView.vue'
 import BlogView from '../views/BlogView.vue'
 import BlogPostView from '../views/BlogPostView.vue'
+import IndustriesView from '../views/IndustriesView.vue'
 import ServicesView from '../views/ServicesView.vue'
 import PricingView from '../views/PricingView.vue'
 import ContactUsView from '../views/ContactUsView.vue'
@@ -71,6 +72,11 @@ const router = createRouter({
       path: '/blog-post/:slug',
       name: 'BlogPost',
       component: BlogPostView,
+    },
+    {
+      path: '/industries/:slug',
+      name: 'Industries',
+      component: IndustriesView,
     },
     {
       path: '/services',

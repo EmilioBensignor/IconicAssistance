@@ -26,7 +26,7 @@
             :key="index"
             cover>
             <router-link
-              :to="'/services'"
+              :to="`/industries/${item.slug}`"
               class="carouselCard columnAlignCenter ga-3 text-decoration-none pa-3 pb-15">
               <v-img
                 :src="getImgUrl(item.logo)"

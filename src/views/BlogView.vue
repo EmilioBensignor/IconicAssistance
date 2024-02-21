@@ -22,12 +22,12 @@
         class="columnAlignCenter bg-white rounded-lg elevation-7">
         <router-link :to="`/blog-post/${item.slug}`">
           <img
-            src="@/assets/images/aboutUs/Remote-Talent-Iconic-Assistants.png"
-            alt=""
+            :src="getImgUrl(item.img)"
+            :alt="item.alt"
             class="rounded-t-lg"
             width="100%" />
         </router-link>
-        <div class="column ga-4 pa-5">
+        <div class="column ga-4 pa-5 pt-3">
           <h3 class="text-midnight text-start">{{ item.title }}</h3>
           <p class="w-100 text-midnight text-start">{{ item.summary }}</p>
           <router-link
@@ -71,6 +71,9 @@
           // )
           blog.summary.toLowerCase().includes(search)
         );
+      },
+      getImgUrl(imgName) {
+        return new URL(`/src/assets/images/blogs/${imgName}`, import.meta.url).href;
       },
     },
   };

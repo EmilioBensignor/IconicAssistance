@@ -75,9 +75,6 @@
       fetchBlogDetails() {
         this.blogSlug = this.$route.params.slug;
         this.blog = blogs.find((blog) => blog.slug === this.blogSlug);
-        if (!this.blog) {
-          console.error(`Blog with slug ${this.blogSlug} not found.`);
-        }
       },
       getImgUrl(imgName) {
         return new URL(`../assets/images/blogs/${imgName}`, import.meta.url)

@@ -18,11 +18,11 @@
       HeaderComponent,
       FooterComponent,
     },
-    watch:{
-      '$route'(){
-        window.scrollTo(0,0);
-      }
-    }
+    watch: {
+      $route() {
+        window.scrollTo(0, 0);
+      },
+    },
   };
 </script>
 
@@ -37,7 +37,8 @@
   p,
   button,
   a,
-  li {
+  li,
+  label {
     font-family: "Poppins", sans-serif;
   }
   h1 {
@@ -70,7 +71,7 @@
     list-style: none;
   }
 
-  li{
+  li {
     font-size: 1rem;
   }
 
