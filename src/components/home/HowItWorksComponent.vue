@@ -23,28 +23,28 @@
         steps: [
           {
             number: "1.",
-            img: "icons/Book-Appointment.png",
+            img: "misc/Book-Appointment.png",
             alt: "Book an Appointment",
             title: "Book an Appointment",
             body: "Share all the essential details about your business and specify the tasks you'd like to assign.",
           },
           {
             number: "2.",
-            img: "icons/Pre-vetted-Recruitment.png",
+            img: "misc/Pre-vetted-Recruitment.png",
             alt: "Pre-vetted Recruitment",
             title: "Recruitment",
             body: "We'll identify the top VAs for you and our HR Manager will handle your VA interviews.",
           },
           {
             number: "3.",
-            img: "icons/Onboarding-Expertise.png",
+            img: "misc/Onboarding-Expertise.png",
             alt: "Onboarding Expertise",
             title: "Onboarding",
             body: "We'll guide you through the onboarding process to ensure your VA integrates smoothly into your business.",
           },
           {
             number: "4.",
-            img: "icons/Ongoing-Support.png",
+            img: "misc/Ongoing-Support.png",
             alt: "Ongoing Support",
             title: "Ongoing Support",
             body: "After selecting your VA, we'll take care of all HR-related matters, including payroll and performance reviews.",

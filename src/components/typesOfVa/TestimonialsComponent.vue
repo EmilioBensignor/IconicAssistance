@@ -8,7 +8,7 @@
         :key="index"
         class="w-75 column skyRadioactive rounded-xl elevation-5 py-3 pl-4">
         <div class="d-flex justify-self-start mb-3">
-          <img src="@/assets/images/icons/Five-Stars.png" alt="Five Stars" />
+          <img src="@/assets/images/misc/Five-Stars.png" alt="Five Stars" />
         </div>
         <p class="text-start text-white">
           {{ item.text }}

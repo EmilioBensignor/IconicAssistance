@@ -20,7 +20,7 @@
       </p>
     </div>
     <img
-      src="@/assets/images/icons/Blue-Arrow-Down.png"
+      src="@/assets/images/misc/Blue-Arrow-Down.png"
       alt="Blue Arrow Down"
       class="my-3"
       width="20%" />
@@ -37,7 +37,7 @@
       </p>
     </div>
     <img
-      src="@/assets/images/icons/Blue-Arrow-Down.png"
+      src="@/assets/images/misc/Blue-Arrow-Down.png"
       alt="Blue Arrow Down"
       class="my-3"
       width="20%" />
@@ -55,7 +55,7 @@
       </p>
     </div>
     <img
-      src="@/assets/images/icons/Blue-Arrow-Down.png"
+      src="@/assets/images/misc/Blue-Arrow-Down.png"
       alt="Blue Arrow Down"
       class="my-3"
       width="20%" />
@@ -73,7 +73,7 @@
       </p>
     </div>
     <img
-      src="@/assets/images/icons/Blue-Arrow-Down.png"
+      src="@/assets/images/misc/Blue-Arrow-Down.png"
       alt="Blue Arrow Down"
       class="my-3"
       width="20%" />
@@ -91,7 +91,7 @@
       </p>
     </div>
     <img
-      src="@/assets/images/icons/Blue-Arrow-Down.png"
+      src="@/assets/images/misc/Blue-Arrow-Down.png"
       alt="Blue Arrow Down"
       class="my-3"
       width="20%" />
