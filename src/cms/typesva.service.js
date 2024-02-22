@@ -57,12 +57,6 @@ export const vaTypes = [
         text: 'Assist in managing social media accounts and online events.'
       },
     ],
-    industriesTasks: [
-      "Manage emails, phone calls, and other communications.",
-      "Organize and maintain medical files, documents, and records.",
-      "Coordinate appointments and meetings.",
-      "Perform general office tasks and assist with day-to-day operations."
-    ]
   },
   {
     id: 2,
@@ -121,12 +115,6 @@ export const vaTypes = [
         title: "Meeting Coordination:",
         text: "Schedule, record minutes, and follow up on action items."
       },
-    ],
-    industriesTasks: [
-      "Schedule and confirm appointments for patients or team members.",
-      "Manage calendars, ensuring optimal time utilization.",
-      "Coordinate meetings and events, sending reminders as needed.",
-      "Adjust schedules based on priorities and last-minute changes."
     ],
   },
   {
@@ -247,12 +235,6 @@ export const vaTypes = [
         text: "Offer technical assistance and multilingual support as needed."
       },
     ],
-    industriesTasks: [
-      "Respond to donor inquiries via email, chat, or phone.",
-      "Address and resolve donor concerns or issues.",
-      "Provide progress information to donors.",
-      "Manage donor feedback and reviews."
-    ]
   },
   {
     id: 5,
@@ -311,12 +293,6 @@ export const vaTypes = [
         title: "CRM and E-commerce:",
         text: "Update customer information and manage e-commerce product data."
       },
-    ],
-    industriesTasks: [
-      "Input and update data into databases or CRM systems.",
-      "Maintain accurate records of clients, products, or any relevant information.",
-      "Organize and categorize data for easy retrieval and analysis.",
-      "Conduct regular data quality checks and corrections."
     ],
   },
   {
@@ -377,12 +353,6 @@ export const vaTypes = [
         text: ""
       },
     ],
-    industriesTasks: [
-      "Create and manage online advertising campaigns.",
-      "Develop and execute social media marketing plans.",
-      "Conduct market research and analyze marketing agencies data.",
-      "Optimize website content for search engines."
-    ],
   },
   {
     id: 7,
@@ -441,12 +411,6 @@ export const vaTypes = [
         title: "Expense and Event Management:",
         text: "Manage expenses, plan events, and handle logistics."
       },
-    ],
-    industriesTasks: [
-      "Manage and organize executive calendars and appointments.",
-      "Handle and filter emails, responding on behalf of the executive when necessary.",
-      "Prepare reports, presentations, and other executive documents.",
-      "Coordinate and schedule meetings, travel arrangements, and events."
     ],
   },
   {
@@ -507,12 +471,6 @@ export const vaTypes = [
         text: "Schedule, record minutes, and follow up on action items."
       },
     ],
-    industriesTasks: [
-      "Assist in project planning and development of project timelines.",
-      "Coordinate tasks and activities among team members.",
-      "Track project progress and report updates to stakeholders.",
-      "Organize and document project-related information for reference."
-    ],
   },
   {
     id: 9,
@@ -572,12 +530,6 @@ export const vaTypes = [
         text: "Analyze sales data and create performance reports."
       },
     ],
-    industriesTasks: [
-      "Research and identify potential clients or leads.",
-      "Conduct outreach and follow-up calls or emails.",
-      "Assist in preparing sales presentations and proposals.",
-      "Maintain and update customer relationship management (CRM) systems."
-    ],
   },
   {
     id: 10,
@@ -636,12 +588,6 @@ export const vaTypes = [
         title: "Community Building:",
         text: "Interact with relevant accounts, join discussions, and collaborate with partners."
       },
-    ],
-    industriesTasks: [
-      "Create and curate content for social media platforms.",
-      "Engage with followers, respond to comments, and foster a sense of community.",
-      "Schedule and manage posts across various platforms.",
-      "Analyze social media metrics to refine content strategy."
     ],
   },
 ];

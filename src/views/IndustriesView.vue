@@ -1,7 +1,9 @@
 <template>
   <section
     class="heroSection flexCenter"
-    :style="{ backgroundImage: `url(${getImgUrl(industry.img)})` }">
+    :style="{
+      backgroundImage: `url(${getBackgroundUrl(industry.img)})`,
+    }">
     <div class="heroOverlay flexCenter justify-center">
       <div class="heroPages flexCenter ga-4">
         <h1 class="text-white">{{ industry.name }}</h1>
@@ -13,38 +15,35 @@
   <section class="skyRadioactive">
     <h2 class="text-white">VAs That Suit Your Industry</h2>
     <div v-if="industry" class="columnAlignCenter ga-10 my-5">
-      <div 
-        v-for="(vaType, index) in industry.vaTypes" 
+      <div
+        v-for="(vaType, index) in industry.vaTypes"
         :key="index"
-        class="w-75 columnAlignCenter bg-white rounded-xl pa-5 elevation-5">
-        <img 
-          :src="getVaTypesImgUrl(vaType.img)" 
-          :alt="vaType.alt" 
-          width="100%"/>
-        <h3>{{ vaType }}</h3>
-        <p>Tasks to outsource:</p>
-        <ul class="column ga-3 px-3">
-          <li
-            v-for="(task, taskIndex) in getTasksForVaType(vaType)"
-            :key="taskIndex">
-            {{ task }}
-          </li>
-        </ul>
+        class="w-75 columnAlignCenter bg-white rounded-xl elevation-5 pb-5">
+        <v-img
+          :src="getVaTypeUrl(vaType.img)"
+          :alt="vaType.alt"
+          class="d-flex justify-center align-end rounded-t-xl"
+          width="100%">
+          <h3 class="w-100 columnAlignCenter text-white mb-3">{{ vaType.va }}</h3>
+        </v-img>
+        <p class="mt-3 font-weight-bold">Tasks to outsource:</p>
+        <p class="mt-3">{{ vaType.summary }}</p>
       </div>
     </div>
-    <router-link class="primaryButton my-5 elevation-5" :to="'/types-of-vas'">Look at our Types of VAs</router-link>
+    <router-link class="primaryButton my-5 elevation-5" :to="'/types-of-vas'"
+      >Look at our Types of VAs</router-link
+    >
   </section>
   <GuaranteeComponent />
 </template>
 
 <script>
   import { industries } from "@/cms/industries.service.js";
-  import { vaTypes } from "@/cms/typesva.service.js";
-  import DifferencesComponent from '@/components/industries/DifferencesComponent.vue';
-  import GuaranteeComponent from '@/components/industries/GuaranteeComponent.vue';
+  import DifferencesComponent from "@/components/industries/DifferencesComponent.vue";
+  import GuaranteeComponent from "@/components/industries/GuaranteeComponent.vue";
 
   export default {
-    components:{
+    components: {
       DifferencesComponent,
       GuaranteeComponent,
     },
@@ -53,7 +52,6 @@
         industries: industries,
         industry: null,
         industrySlug: null,
-        vaTypes: vaTypes,
       };
     },
     created() {
@@ -71,26 +69,16 @@
           (industry) => industry.slug === this.industrySlug
         );
       },
-      getImgUrl(imgName) {
+      getBackgroundUrl(imgName) {
         return new URL(
           `../assets/images/industries/${imgName}`,
           import.meta.url
         ).href;
       },
-      getVaTypesImgUrl(imgName){
-        return new URL(
-          `../assets/images/typesOfVa/${imgName}`,
-          import.meta.url
-        ).href;
+      getVaTypeUrl(imgName) {
+        return new URL(`../assets/images/typesOfVa/${imgName}`, import.meta.url)
+          .href;
       },
-      getTasksForVaType(vaType){
-        const va = vaTypes.find(va => va.name === vaType);
-        if (va) {
-          return va.industriesTasks;
-        } else{
-          return [];
-        }
-      }
     },
   };
 </script>
