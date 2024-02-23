@@ -12,7 +12,7 @@
         <span class="text-blueSky">ICONIC ASSISTANTS</span>
       </h1>
       <p class="text-landing text-center text-white">
-        Leading the way in remote staffing solutions, the top choice for your
+        Leading TEST the way in remote staffing solutions, the top choice for your
         outsourcing needs.
         <span class="font-weight-bold">Starting at $9.55/Hr.</span>
       </p>
