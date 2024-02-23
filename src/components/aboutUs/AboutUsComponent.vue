@@ -13,8 +13,8 @@
         width="75%" />
     </div>
     <p class="text-white my-3">
-      Iconic Assistants, based in the U.S., partners with highly skilled foreign
-      professionals to streamline your tasks. We free up your time for strategic
+      Iconic Assistants, based in the U.S., partners with highly <span class="font-weight-bold">skilled foreign
+      professionals</span> to streamline your tasks. We free up your time for strategic <span class="font-weight-bold">growth</span>, leveraging their expertise for efficient, quality-driven <span class="font-weight-bold">support</span>.
     </p>
     <router-link class="primaryButton elevation-7 mt-3 mb-5" :to="'/contact-us'"
       >Request a Consultation</router-link

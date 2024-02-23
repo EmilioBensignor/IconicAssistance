@@ -59,11 +59,13 @@
   }
   .subtitle {
     font-size: 1.1rem;
+    font-weight: 500;
   }
   p {
     width: 85%;
     line-height: 1.5em;
     font-size: 1rem;
+    font-weight: 400;
     color: #120d40;
   }
 
@@ -88,6 +90,7 @@
     border: 1px solid white;
     border-radius: 20vw;
     color: #373ae6;
+    font-family: "Poppins", sans-serif;
     font-size: 1.1rem;
     font-weight: 600;
     line-height: 1.3rem;
@@ -100,6 +103,7 @@
     border: 1px solid #373ae6;
     border-radius: 20vw;
     color: white;
+    font-family: "Poppins", sans-serif;
     font-size: 1.1rem;
     font-weight: 600;
     line-height: 1.3rem;

@@ -13,14 +13,14 @@
       time-consuming and repetitive duties ripe for delegation, such as:
     </p>
     <div class="d-flex ga-3 my-5">
-      <ul class="column ga-3 text-white">
+      <ul class="column ga-3 text-white font-weight-bold">
         <li>Appointment Setting</li>
         <li>Bookkeeping</li>
         <li>Cold Calling</li>
         <li>CRM Management</li>
         <li>Customer Satisfaction</li>
       </ul>
-      <ul class="column ga-3 text-white">
+      <ul class="column ga-3 text-white font-weight-bold">
         <li>Data Analysis</li>
         <li>Data Entry</li>
         <li>Document Transcription</li>

@@ -102,9 +102,11 @@
 
   .text-landing {
     font-size: 1.3rem;
+    font-weight: 500;
   }
 
   .navbarCall {
+    font-family: "Poppins", sans-serif;
     font-size: 1.3rem;
     font-weight: 600;
     padding: 3.5vw 10vw;

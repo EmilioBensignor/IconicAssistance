@@ -26,7 +26,7 @@
             <IconicLogo class="text-white" />
           </div>
           <div class="w-50 columnAlignCenter">
-            <p class="text-white text-center">{{ item.iconic }}</p>
+            <p class="text-white font-weight-bold text-center">{{ item.iconic }}</p>
           </div>
         </div>
         <div class="cardComparisonRow text-midnight bg-grey-lighten-3">

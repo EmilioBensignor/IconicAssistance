@@ -9,7 +9,7 @@
   </section>
   <section class="skyRadioactive">
     <h2 class="text-white">Frequently Asked Questions</h2>
-    <p class="subtitle text-white mt-5 mb-3">How can we help?</p>
+    <p class="subtitle text-white font-weight-bold mt-5 mb-3">How can we help?</p>
     <v-form class="w-75 buscador rounded-xl">
       <input
         type="search"

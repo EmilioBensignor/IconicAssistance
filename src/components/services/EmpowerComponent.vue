@@ -11,7 +11,7 @@
           class="bg-radioactive flexCenter rounded-te-xl rounded-bs-xl elevation-5 mt-n3 pt-15 pa-5">
           <h3 class="text-white mt-2">Payroll:</h3>
           <p class="subtitle font-weight-bold text-white">Seamlessly Global</p>
-          <ul class="mt-5 column ga-3">
+          <ul class="mx-3 my-5 column ga-5">
             <li>
               <span class="font-weight-bold">Global Reach:</span> Payroll
               services for remote talent worldwide.

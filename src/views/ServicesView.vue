@@ -10,17 +10,29 @@
   <section class="skyRadioactive">
     <p class="text-white">Unlock Efficiency</p>
     <h2 class="text-white">Ensuring Success</h2>
-    <div class="w-75 ensuringSuccess columnAlignCenter rounded-xl py-3 my-5 elevation-5">
+    <div
+      class="w-75 ensuringSuccess columnAlignCenter rounded-xl py-3 my-5 elevation-5">
       <p class="text-white">
-        At Iconic, we redefine outsourcing beyond cost-cutting, offering
-        comprehensive employment solutions like offshore staffing, remote work,
-        call centers, and virtual assistants. Our Business Process Outsourcing
-        (BPO) services streamline operations, enhance efficiency, and cut costs,
-        providing financial advantages through global collaboration. Choosing
-        ICONIC means accessing external expertise, ensuring high-quality
-        services and freeing internal resources for core competencies and
-        strategic growth. Our services position your business for success in a
-        constantly evolving market.
+        At Iconic, we redefine outsourcing beyond
+        <span class="font-weight-bold">cost-cutting</span>, offering
+        comprehensive employment
+        <span class="font-weight-bold">solutions</span> like
+        <span class="font-weight-bold">offshore staffing</span>,
+        <span class="font-weight-bold">remote work</span>,
+        <span class="font-weight-bold">call centers</span>, and
+        <span class="font-weight-bold">virtual assistants</span>. Our Business
+        Process Outsourcing (BPO) services streamline operations, enhance
+        <span class="font-weight-bold">efficiency</span>, and cut costs,
+        providing
+        <span class="font-weight-bold">financial advantages</span> through
+        global collaboration. Choosing ICONIC means accessing external
+        expertise, ensuring
+        <span class="font-weight-bold">high-quality services</span> and freeing
+        internal resources for core competencies and
+        <span class="font-weight-bold">strategic growth</span>. Our services
+        position your business for
+        <span class="font-weight-bold">success</span> in a constantly evolving
+        market.
       </p>
     </div>
   </section>
@@ -28,13 +40,13 @@
 </template>
 
 <script>
-import EmpowerComponent from "@/components/services/EmpowerComponent.vue";
+  import EmpowerComponent from "@/components/services/EmpowerComponent.vue";
 
-export default {
-  components: {
-    EmpowerComponent,
-  }
-}
+  export default {
+    components: {
+      EmpowerComponent,
+    },
+  };
 </script>
 
 <style scoped>
