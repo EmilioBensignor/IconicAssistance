@@ -1,25 +1,25 @@
-<script setup></script>
-
 <template>
-  <section class="landing bg-gray pt-5">
-    <div class="columnAlignCenter">
-      <div class="hero flexCenter">
-        <h1>
-          Outsource Anything with
-          <span class="text-blueSky">ICONIC ASSISTANTS</span>
-        </h1>
-        <p class="text-landing text-center text-white">
-          Leading the way in remote staffing solutions, the top choice for your
-          outsourcing needs.
-          <span class="font-weight-bold">Starting at $9.55/Hr.</span>
-        </p>
-        <div>
-          <button
-            class="navbarCall bg-radioactive elevation-5"
-            @click="calendly">
-            Hire ICONIC
-          </button>
-        </div>
+  <section class="landing pa-0">
+    <video autoplay muted loop class="backgroundVideo">
+      <source
+        src="@/assets/videos/Outsource-Anything-with-Iconic-Assistants.mp4"
+        type="video/mp4" />
+    </video>
+    <div class="overlay"></div>
+    <div class="hero flexCenter ga-5 mt-12">
+      <h1 class="text-white">
+        Outsource Anything with
+        <span class="text-blueSky">ICONIC ASSISTANTS</span>
+      </h1>
+      <p class="text-landing text-center text-white">
+        Leading the way in remote staffing solutions, the top choice for your
+        outsourcing needs.
+        <span class="font-weight-bold">Starting at $9.55/Hr.</span>
+      </p>
+      <div>
+        <button class="navbarCall bg-radioactive elevation-5" @click="calendly">
+          Hire ICONIC
+        </button>
       </div>
     </div>
   </section>
@@ -70,20 +70,40 @@
 </script>
 
 <style scoped>
-  /* Home */
-
   .landing {
-    display: flex;
-    justify-content: center;
+    position: relative;
+    width: 100vw;
+    height: 85vh;
+    overflow: hidden;
   }
+
+  .backgroundVideo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+  }
+
   .hero {
     width: 90vw;
-    gap: 1.5rem;
-    margin: 7vh 0;
+    z-index: 3;
   }
+
   .text-landing {
     font-size: 1.3rem;
   }
+
   .navbarCall {
     font-size: 1.3rem;
     font-weight: 600;

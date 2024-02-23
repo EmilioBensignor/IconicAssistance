@@ -3,40 +3,53 @@
     <p class="subtitle">Cost Comparison</p>
     <h2 class="text-midnight">Delegate Task At A Fraction Of The Cost</h2>
     <div class="w-75 costComparison d-flex ga-2 my-5">
-      <div class="w-50 columnAlignCenter bg-thinGray rounded-xl elevation-10 py-3">
-        <div 
-          v-for="(item, index) in inHouse" 
+      <div class="w-50 columnAlignCenter bg-thinGray rounded-xl elevation-10">
+        <div
+          v-for="(item, index) in inHouse"
           :key="index"
           class="w-100 comparisonItem flexCenter justify-center pa-3">
           <p class="text-midnight text-center">{{ item }}</p>
         </div>
       </div>
-      <div class="w-50 columnAlignCenter bg-radioactive rounded-te-xl rounded-bs-xl elevation-10 py-3">
-        <div 
-          v-for="(item, index) in iconicVa" 
+      <div
+        class="w-50 columnAlignCenter bg-radioactive rounded-te-xl rounded-bs-xl elevation-10">
+        <div
+          v-for="(item, index) in iconicVa"
           :key="index"
           class="w-100 comparisonItem flexCenter justify-center pa-3">
-          <p class="text-white text-center font-weight-bold">{{item}}</p>
-          
+          <p class="text-white text-center font-weight-bold">{{ item }}</p>
+        </div>
+        <div class="saveIcon pl-3 mb-n6">
+          <img
+            src="@/assets/images/misc/Save-75-Percentage.png"
+            alt="Save 75%"
+            class=""
+            width="95%" />
         </div>
       </div>
       <!-- Comparison Categories -->
-      <div class="w-100 flexCenter category category1 bg-white elevation-5 rounded-pill py-1">
+      <div
+        class="flexCenter category category1 bg-white elevation-5 rounded-pill py-1">
         <p class="text-midnight">HOURLY RATE OF PAY</p>
       </div>
-      <div class="w-100 flexCenter category category2 bg-white elevation-5 rounded-pill py-1">
+      <div
+        class="flexCenter category category2 bg-white elevation-5 rounded-pill py-1">
         <p class="text-midnight">FRINGE BENEFITS</p>
       </div>
-      <div class="w-100 flexCenter category category3 bg-white elevation-5 rounded-pill py-1">
+      <div
+        class="flexCenter category category3 bg-white elevation-5 rounded-pill py-1">
         <p class="text-midnight">OVERHEAD RATE</p>
       </div>
-      <div class="w-100 flexCenter category category4 bg-white elevation-5 rounded-pill py-1">
+      <div
+        class="flexCenter category category4 bg-white elevation-5 rounded-pill py-1">
         <p class="text-midnight">TOTAL PAY RATE</p>
       </div>
-      <div class="w-100 flexCenter category category5 bg-white elevation-5 rounded-pill py-1">
+      <div
+        class="flexCenter category category5 bg-white elevation-5 rounded-pill py-1">
         <p class="text-midnight">WORK Hs / MONTH</p>
       </div>
-      <div class="w-100 flexCenter category category6 bg-white elevation-5 rounded-pill py-1">
+      <div
+        class="flexCenter category category6 bg-white elevation-5 rounded-pill py-1">
         <p class="text-midnight">TOTAL MONTHLY</p>
       </div>
     </div>
@@ -82,7 +95,7 @@
           "$0.00",
           "$9.55",
           "160 Hrs",
-          "$1,528.00"
+          "$1,528.00",
         ],
       };
     },
@@ -90,32 +103,45 @@
 </script>
 
 <style scoped>
-  .costComparison{
+  .costComparison {
     position: relative;
   }
-  .comparisonItem{
+  .comparisonItem {
     height: 15vh;
   }
-  .category{
+  .category {
+    width: 90%;
     position: absolute;
+    left: 0%;
+    right: 0%;
+    margin: 0 auto;
   }
-  .category1{
-    top: 14%;
+  .category1 {
+    top: 12.5%;
   }
-  .category2{
-    top: 27%;
+  .category2 {
+    top: 26%;
   }
-  .category3{
-    top: 41%;
+  .category3 {
+    top: 40.5%;
   }
-  .category4{
-    top: 55%;
+  .category4 {
+    top: 54.5%;
   }
-  .category5{
-    top: 68%;
+  .category5 {
+    top: 69%;
   }
-  .category6{
-    top: 82%;
+  .category6 {
+    top: 83%;
+  }
+  .saveIcon {
+    position: absolute;
+    margin: 0 auto;
+    bottom: 0;
+  }
+  .saveIcon img {
+    -webkit-filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.25));
   }
   .CostComparisonAclaration p {
     font-size: 0.75rem;
