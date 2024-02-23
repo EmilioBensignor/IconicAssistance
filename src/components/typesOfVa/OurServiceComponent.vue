@@ -11,6 +11,7 @@
         :key="index">
         <img
           width="25%"
+          class="shadow-25"
           :src="getImgUrl(item.whiteIcon)"
           :alt="item.whiteIconAlt" />
         <p class="text-white text-start ml-3 w-100">

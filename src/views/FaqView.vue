@@ -9,7 +9,7 @@
   </section>
   <section class="skyRadioactive">
     <h2 class="text-white">Frequently Asked Questions</h2>
-    <p class="subtitle text-white font-weight-bold mt-5 mb-3">How can we help?</p>
+    <p class="searchLabel text-white font-weight-bold mt-5 mb-3">How can we help?</p>
     <v-form class="w-75 buscador rounded-xl">
       <input
         type="search"
@@ -21,7 +21,7 @@
     </v-form>
     <div class="w-75 columnAlignCenter ga-5 mt-5">
       <div
-        class="column align-self-start text-start font-weight-bold text-white ga-3 filterCategories mt-1 mb-3">
+        class="column align-self-start text-start font-weight-bold text-white ga-3 filterCategories mt-2 mb-4">
         <label class="d-flex align-center ga-3" for="Communication">
           <input
             id="Communication"
@@ -115,6 +115,9 @@
 </script>
 
 <style scoped>
+.searchLabel{
+  font-size: 1.2rem;
+}
 input[type="checkbox"]{
   width: 7vw;
   height: 7vw;

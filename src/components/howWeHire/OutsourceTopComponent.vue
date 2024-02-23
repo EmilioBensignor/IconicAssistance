@@ -1,14 +1,14 @@
 <template>
     <section>
     <p class="my-3">Outsource to the top 1%</p>
-    <p>
+    <p class="w-75">
       Access the Top 1% of our VA candidates. Pre-vetted, pre-interviewed, and
       ready to work for you.
     </p>
     <h2 class="text-midnight my-3">Remote Talent Application Process</h2>
     <p class="funnelNumber text-radioactive">100%</p>
     <div
-      class="w-75 flexCenter my-3 elevation-5 rounded-xl py-4">
+      class="w-75 flexCenter my-3 elevation-5 rounded-xl py-5">
       <img
         src="@/assets/images/howWeHire/Remote-Talent-Applicants.png"
         alt="Remote Talent Applicants"
@@ -26,7 +26,7 @@
       width="20%" />
     <p class="funnelNumber text-radioactive">50%</p>
     <div
-      class="w-75 flexCenter my-3 elevation-5 rounded-xl py-4">
+      class="w-75 flexCenter my-3 elevation-5 rounded-xl py-5">
       <img
         src="@/assets/images/howWeHire/Remote-Talent-Qualification.png"
         alt="Remote Talent Qualification"
@@ -43,7 +43,7 @@
       width="20%" />
     <p class="funnelNumber text-radioactive">20%</p>
     <div
-      class="w-75 flexCenter my-3 elevation-5 rounded-xl py-4">
+      class="w-75 flexCenter my-3 elevation-5 rounded-xl py-5">
       <img
         src="@/assets/images/howWeHire/Remote-Talent-Review.png"
         alt="Remote Talent Review"
@@ -61,7 +61,7 @@
       width="20%" />
     <p class="funnelNumber text-radioactive">10%</p>
     <div
-      class="w-75 flexCenter my-3 elevation-5 rounded-xl py-4">
+      class="w-75 flexCenter my-3 elevation-5 rounded-xl py-5">
       <img
         src="@/assets/images/howWeHire/Remote-Talent-Acceptance.png"
         alt="Remote Talent Acceptance"
@@ -79,7 +79,7 @@
       width="20%" />
     <p class="funnelNumber text-radioactive">5%</p>
     <div
-      class="w-75 flexCenter my-3 elevation-5 rounded-xl py-4">
+      class="w-75 flexCenter my-3 elevation-5 rounded-xl py-5">
       <img
         src="@/assets/images/howWeHire/Remote-Talent-Assessment.png"
         alt="Remote Talent Assessment"
@@ -97,7 +97,7 @@
       width="20%" />
     <p class="funnelNumber text-radioactive">1%</p>
     <div
-      class="w-75 flexCenter my-3 elevation-5 rounded-xl py-4">
+      class="w-75 flexCenter my-3 elevation-5 rounded-xl py-5">
       <img
         src="@/assets/images/howWeHire/Top-Remote-Talent.png"
         alt="Top Remote Talent"

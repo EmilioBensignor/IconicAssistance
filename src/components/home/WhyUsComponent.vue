@@ -8,7 +8,12 @@
         :key="index"
         class="flexCenter rounded-xl elevation-5 w-75 pa-4 pb-6">
         <p class="differentTitle text-midnight">{{ item.title }}</p>
-        <v-img eager :src="getImgUrl(item.img)" :alt="item.alt" width="70%"></v-img>
+        <v-img 
+          eager 
+          :src="getImgUrl(item.img)" 
+          :alt="item.alt" 
+          class="shadow-2"
+          width="70%"></v-img>
         <div class="flexCenter ga-3">
           <p class="differentSubtitle text-radioactive">{{ item.subtitle }}</p>
           <p>{{ item.body }}</p>

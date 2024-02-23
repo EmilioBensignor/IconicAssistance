@@ -23,7 +23,7 @@
           <img
             src="@/assets/images/misc/Save-75-Percentage.png"
             alt="Save 75%"
-            class=""
+            class="shadow-25"
             width="95%" />
         </div>
       </div>
@@ -139,11 +139,8 @@
     margin: 0 auto;
     bottom: 0;
   }
-  .saveIcon img {
-    -webkit-filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.25));
-    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.25));
-  }
   .CostComparisonAclaration p {
     font-size: 0.75rem;
+    color: #656875;
   }
 </style>

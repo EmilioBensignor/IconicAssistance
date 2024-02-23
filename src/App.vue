@@ -41,26 +41,38 @@
   label {
     font-family: "Poppins", sans-serif;
   }
-  h1 {
+
+  h1,
+  h2,
+  h3,
+  h4 {
     width: 90%;
     font-weight: 700;
+  }
+
+  h1 {
     line-height: 1.2em;
     font-size: 2.4rem;
   }
+
   h2 {
-    width: 90%;
-    font-weight: 700;
     font-size: 1.7rem;
   }
+
   h3 {
-    width: 90%;
     font-size: 1.4rem;
     color: #120d40;
   }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
   .subtitle {
     font-size: 1.1rem;
     font-weight: 500;
   }
+
   p {
     width: 85%;
     line-height: 1.5em;
@@ -131,6 +143,28 @@
       #00a0fa,
       #0cb8f1
     );
+  }
+
+  /* Drop Shadows */
+  .shadow-5{
+    -webkit-filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
+  }
+  .shadow-3{
+    -webkit-filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.3));
+  }
+  .shadow-25{
+    -webkit-filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.25));
+  }
+  .shadow-2{
+    -webkit-filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.20));
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.20));
+  }
+  .shadow-15{
+    -webkit-filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.15));
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.15));
   }
 
   /* Alignments */

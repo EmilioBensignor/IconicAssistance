@@ -7,6 +7,7 @@
     <div>
       <img
         width="75%"
+        class="shadow-5"
         src="@/assets/images/aboutUs/100-Guarantee-Remote-Talent.png"
         alt="100% Guarantee Remote Talent" />
     </div>

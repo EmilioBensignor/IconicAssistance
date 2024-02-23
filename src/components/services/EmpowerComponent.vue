@@ -5,7 +5,7 @@
         <img
           src="@/assets/images/services/Recruitment-Expertise-Pre-Vetted-Proffesionals.png"
           alt="Recruitment Expertise Pre-Vetted Proffesionals"
-          class="mb-n15"
+          class="shadow-3 mb-n15"
           width="60%" />
         <div
           class="bg-radioactive flexCenter rounded-te-xl rounded-bs-xl elevation-5 mt-n3 pt-15 pa-5">
@@ -38,7 +38,7 @@
         <img
           src="@/assets/images/services/Global-Payroll-Remote-Talent.png"
           alt="Global Payroll Remote Talent"
-          class="mb-n15"
+          class="shadow-3 mb-n15"
           width="60%" />
         <div
           class="bg-radioactive flexCenter rounded-te-xl rounded-bs-xl elevation-5 mt-n3 pt-15 pa-5">
@@ -73,7 +73,7 @@
         <img
           src="@/assets/images/services/Compliance-Outsource-Remote-Talent.png"
           alt="Compliance Outsource Remote Talent"
-          class="mb-n15"
+          class="shadow-3 mb-n15"
           width="60%" />
         <div
           class="bg-radioactive flexCenter rounded-te-xl rounded-bs-xl elevation-5 mt-n3 pt-15 pa-5">

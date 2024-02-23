@@ -22,7 +22,7 @@
         </p>
       </div>
     </div>
-    <router-link class="secondaryButton mb-5" :to="'/how-we-hire'">
+    <router-link class="secondaryButton elevation-5 mb-5" :to="'/how-we-hire'">
       Learn About How We Hire
     </router-link>
     <p class="tools my-5">Some of the tools we use</p>
@@ -31,6 +31,7 @@
         <v-img
           eager
           width="100%"
+          class="shadow-15"
           :src="getImgUrl(item.img)"
           :alt="item.alt"></v-img>
       </div>

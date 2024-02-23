@@ -2,23 +2,23 @@
   <section class="skyRadioactive">
     <p class="subtitle text-white">How It Works</p>
     <h2 class="text-white">Unlocking efficiency in four simple steps</h2>
-    <p class="text-white mt-3">
+    <p class="w-75 text-white mt-3">
       Your business deserves tailored solutions, and we're here to deliver
       exactly that.
     </p>
-    <div class="columnAlignCenter ga-16 my-5 py-5">
+    <div class="w-75 columnAlignCenter ga-16 my-5 py-5">
       <div
         v-for="item in fourSteps"
         :key="item.number"
         class="flexCenter">
-        <div class="circleNumber bg-white mb-3">
+        <div class="circleNumber bg-white elevation-5 mb-3">
           <p class="text-radioactive">{{ item.number }}</p>
         </div>
         <p class="fourStepsTitle text-white">{{ item.title }}</p>
-        <p class="text-white">{{ item.description }}</p>
+        <p class="text-white mt-1">{{ item.description }}</p>
       </div>
     </div>
-    <router-link class="primaryButton mt-3 mb-5" :to="'/how-it-works'"
+    <router-link class="primaryButton elevation-5 mt-3 mb-5" :to="'/how-it-works'"
       >Learn How It Works</router-link
     >
   </section>

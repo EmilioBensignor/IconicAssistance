@@ -11,7 +11,7 @@
   <section class="skyRadioactive">
     <p class="subtitle text-white">Step 1</p>
     <h2 class="text-white">Share Your Needs</h2>
-    <p class="text-white my-3">
+    <p class="w-75 text-white my-3">
       Schedule a 15-minute call with our sales reps to tailor our services to
       your business needs. Free yourself to focus on growth. Book your
       consultation with Iconic Assistants today.
@@ -29,7 +29,7 @@
   <section>
     <p class="subtitle">Step 2</p>
     <h2 class="text-midnight">Pick The Right Candidate</h2>
-    <p class="my-3">
+    <p class="w-75 my-3">
       Our HR team selects top candidates from our database, presenting you with
       a shortlist. Meet them with our representative for a perfect business
       match.
@@ -47,7 +47,7 @@
   <section class="radioactiveSky">
     <p class="subtitle text-white">Step 3</p>
     <h2 class="text-white">Set Up Your VA</h2>
-    <p class="text-white my-3">
+    <p class="w-75 text-white my-3">
       A smooth transition for your remote talent: introduce tasks, ensure
       responsibilities alignment, and receive ongoing support for seamless
       onboarding.
@@ -65,7 +65,7 @@
   <section>
     <p class="subtitle">Step 4</p>
     <h2 class="text-midnight">Experience continual support</h2>
-    <p class="my-3">
+    <p class="w-75 my-3">
       Iconic Assistants offers unwavering support, addressing inquiries and
       providing guidance whenever needed. You're never alone on your path to
       success.

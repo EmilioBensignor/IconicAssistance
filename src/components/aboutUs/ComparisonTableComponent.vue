@@ -4,7 +4,7 @@
     <h2 class="text-midnight">
       <span class="text-radioactive">ICONIC</span> VAs Comparison Chart
     </h2>
-    <p class="text-midnight mt-2 mb-5">
+    <p class="w-75 text-midnight mt-2 mb-5">
       As an entrepreneur or business, finding top talent without overspending
       can be challenging. Our mission is to connect you with cost-effective
       remote talent who save you time and money.
@@ -16,17 +16,19 @@
         class="cardComparison flexCenter rounded-xl elevation-6 my-5">
         <div
           class="w-100 cardComparisonHeader columnAlignCenter rounded-t-xl pa-5">
-          <div class="circleNumber bg-blueSky">
+          <div class="circleNumber bg-blueSky elevation-3">
             <p class="text-white">{{ item.number }}</p>
           </div>
           <p class="cardComparisonTitle text-white mt-3">{{ item.title }}</p>
         </div>
         <div class="cardComparisonRow bg-blueSky">
           <div class="w-50">
-            <IconicLogo class="text-white" />
+            <IconicLogo class="text-white shadow-25" />
           </div>
           <div class="w-50 columnAlignCenter">
-            <p class="text-white font-weight-bold text-center">{{ item.iconic }}</p>
+            <p class="text-white font-weight-bold text-center">
+              {{ item.iconic }}
+            </p>
           </div>
         </div>
         <div class="cardComparisonRow text-midnight bg-grey-lighten-3">
@@ -186,7 +188,7 @@
 
 <style scoped>
   .cardComparison {
-    width: 85%;
+    width: 80%;
   }
   .cardComparisonHeader {
     background: rgb(55, 58, 230);

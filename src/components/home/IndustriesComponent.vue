@@ -31,8 +31,9 @@
               <v-img
                 :src="getImgUrl(item.logo)"
                 :alt="item.logoAlt"
+                class="shadow-5"
                 width="40%"></v-img>
-              <p class="text-white titleIndustries">{{ item.name }}</p>
+              <h3 class="text-white">{{ item.name }}</h3>
               <p class="text-white">{{ item.description }}</p>
               <router-link
                 :to="'/services'"
@@ -42,15 +43,15 @@
             </router-link>
           </v-carousel-item>
         </v-carousel>
-      </div>
-      <div class="my-5 columnAlignCenter w-100">
-        <p class="text-white homeH4">And Many More!</p>
+      <div class="mt-10 columnAlignCenter w-75">
+        <h4 class="text-white font-weight-bold">And Many More!</h4>
         <p class="text-white">
           Want to know if our Remote Talent Experts are suitable for you?
         </p>
         <router-link class="primaryButton elevation-5 my-5" :to="'/contact-us'"
           >Request a free consultation</router-link
         >
+      </div>
       </div>
     </div>
   </section>
@@ -80,9 +81,5 @@
   }
   .carouselCard {
     height: 100%;
-  }
-  .titleIndustries {
-    font-size: 1.4rem;
-    font-weight: 600;
   }
 </style>

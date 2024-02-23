@@ -7,7 +7,12 @@
         class="flexCenter text-white w-75 ga-2 mt-10"
         v-for="(item, index) in tailoredServices"
         :key="index">
-        <v-img eager :src="getImgUrl(item.img)" :alt="item.alt" width="75%"></v-img>
+        <v-img 
+          eager 
+          :src="getImgUrl(item.img)" 
+          :alt="item.alt" 
+          class="shadow-5"
+          width="75%"></v-img>
         <p class="tailoredTitle text-white">{{ item.title }}</p>
         <!-- <div v-html="item.body"></div> -->
         <p v-html="item.body" class="text-white"></p>

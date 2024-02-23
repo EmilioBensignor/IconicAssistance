@@ -11,7 +11,7 @@
         type="search"
         name="blogSearch"
         v-model="blogSearch"
-        class="w-100 bg-white rounded-xl py-3 px-5"
+        class="w-100 bg-white rounded-xl elevation-5 py-3 px-5"
         placeholder="What do you want to learn?"
         hide-details />
     </v-form>
@@ -31,7 +31,7 @@
           <h3 class="text-midnight text-start">{{ item.title }}</h3>
           <p class="w-100 text-midnight text-start">{{ item.summary }}</p>
           <router-link
-            class="w-75 secondaryButton elevation-5"
+            class="secondaryButton elevation-5 mt-2"
             :to="`/blog-post/${item.slug}`"
             >Read full post</router-link
           >

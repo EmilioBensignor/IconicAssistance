@@ -1,23 +1,19 @@
 <template>
-    <section class="skyRadioactive">
-    <div class="candidateCriteria columnAlignCenter rounded-lg my-5 pa-3 pb-6 bg-white elevation-5">
-      <h2 class="text-midnight">Candidate Interview Criteria</h2>
-      <p class="mt-3 mb-7">
-        All candidates will be screened on the following criteria:
-      </p>
-      <ul class="column text-center ga-3">
-        <div 
-          v-for="item in candidateCriteria" 
-          :key="item"
-          class="d-flex ga-2">
-          <v-icon
-            icon="mdi-chevron-double-right"
-            color="radioactive"
-            size="x-large"></v-icon>
-          <li class="text-start text-midnight">{{ item }}</li>
-        </div>
-      </ul>
-    </div>
+  <section class="skyRadioactive">
+    <h2 class="text-white">Candidate Interview Criteria</h2>
+    <p class="subtitle text-white  mt-3 mb-7">
+      All candidates will be screened on the following criteria:
+    </p>
+    <ul class="w-75 column text-center ga-3">
+      <div v-for="item in candidateCriteria" :key="item" class="d-flex ga-2">
+        <v-icon
+          icon="mdi-chevron-double-right"
+          color="white"
+          size="x-large"></v-icon>
+        <li class="text-start text-white">{{ item }}</li>
+      </div>
+    </ul>
+    <div class="w-50 bg-white mt-10 whiteLine"></div>
   </section>
 </template>
 
@@ -41,7 +37,7 @@
 </script>
 
 <style scoped>
-  .candidateCriteria{
-    width: 85%;
+  .whiteLine{
+    height: 1px;
   }
 </style>

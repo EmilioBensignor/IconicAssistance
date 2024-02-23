@@ -8,7 +8,10 @@
         :key="index"
         class="w-75 column bg-white rounded-xl elevation-5 py-3 pl-4">
         <div class="d-flex justify-self-start mb-3">
-          <img src="@/assets/images/misc/Five-Stars.png" alt="Five Stars" />
+          <img 
+            src="@/assets/images/misc/Five-Stars.png" 
+            alt="Five Stars" 
+            class="shadow-15"/>
         </div>
         <p class="text-start">
           {{ item.text }}

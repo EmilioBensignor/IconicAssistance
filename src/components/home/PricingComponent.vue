@@ -1,7 +1,7 @@
 <template>
   <div class="columnAlignCenter my-3 rounded-lg pricingContainer">
     <v-tabs
-      class="rounded-t-lg pricingTabs elevation-2"
+      class="rounded-t-lg pricingTabs elevation-3"
       v-model="tab"
       fixed-tabs
       bg-color="radioactive">
@@ -14,7 +14,7 @@
         <v-window-item value="full-time">
           <div class="flexCenter px-4 ga-1">
             <img
-              class="mt-6"
+              class="shadow-15 mt-6"
               width="20%"
               src="@/assets/images/pricing/full-time-remote-talent.png"
               alt="Full Time Remote Talent" />
@@ -45,7 +45,7 @@
         <v-window-item value="part-time">
           <div class="px-4 flexCenter ga-1">
             <img
-              class="mt-6"
+              class="shadow-15 mt-6"
               width="20%"
               src="@/assets/images/pricing/part-time-remote-talent.png"
               alt="Part Time Remote Talent" />
@@ -76,7 +76,7 @@
         <v-window-item value="build-team">
           <div class="px-4 flexCenter ga-1">
             <img
-              class="mt-6"
+              class="shadow-15 mt-6"
               width="20%"
               src="@/assets/images/pricing/build-your-iconic-team.png"
               alt="Build Your Iconic Team" />

@@ -8,7 +8,7 @@
     </div>
   </section>
   <section class="skyRadioactive">
-    <p class="text-white">Unlock Efficiency</p>
+    <p class="subtitle text-white">Unlock Efficiency</p>
     <h2 class="text-white">Ensuring Success</h2>
     <div
       class="w-75 ensuringSuccess columnAlignCenter rounded-xl py-3 my-5 elevation-5">
