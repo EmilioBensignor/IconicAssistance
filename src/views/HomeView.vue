@@ -11,7 +11,7 @@
       />
     </video>
     <div class="overlay"></div>
-    <div class="hero flexCenter ga-5 mt-12">
+    <div class="hero flexCenter ga-5 mt-15">
       <h1 class="text-white">
         Outsource Anything with
         <span class="text-blueSky">ICONIC ASSISTANTS</span>

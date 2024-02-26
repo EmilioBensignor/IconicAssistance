@@ -10,6 +10,12 @@
         <p class="text-white">{{ industry.subtitle }}</p>
       </div>
     </div>
+    <img 
+      src="@/assets/images/misc/White-Bottom-Wave.png"
+      alt="White Bottom Wave"
+      class="heroPagesWhiteWave"
+      width="100%"
+    />
   </section>
   <DifferencesComponent />
   <section class="skyRadioactive">
@@ -87,7 +93,7 @@
   .heroIndustries {
     position: relative;
     width: 100%;
-    height: 450px;
+    height: 525px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -101,4 +107,5 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
   }
+
 </style>

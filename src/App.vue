@@ -195,6 +195,12 @@
     background-position: bottom;
   }
 
+  .heroPagesWhiteWave{
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+  }
+
   /* Drop Shadows */
   .shadow-5 {
     -webkit-filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));

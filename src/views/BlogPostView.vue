@@ -10,8 +10,14 @@
         </p>
       </div>
     </div>
+    <img 
+      src="@/assets/images/misc/White-Bottom-Wave.png"
+      alt="White Bottom Wave"
+      class="heroPagesWhiteWave"
+      width="100%"
+    />
   </section>
-  <section class="radioactiveWave pt-5">
+  <section class="radioactiveWave">
     <h2 class="text-midnight">{{ blog.h2 }}</h2>
     <div class="text-start text-midnight px-5 my-5">
       <p class="w-100">{{ blog.intro }}</p>
@@ -93,7 +99,7 @@
   .heroSection {
     position: relative;
     width: 100%;
-    height: 450px;
+    height: 525px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
