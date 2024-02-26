@@ -1,7 +1,7 @@
 <template>
-  <section>
+  <section class="radioactiveWaves">
     <div
-      class="w-75 bg-radioactive columnAlignCenter rounded-xl py-4 elevation-5">
+      class="w-75 bg-radioactive columnAlignCenter rounded-xl pb-4 my-5 elevation-5">
       <img
         src="@/assets/images/aboutUs/100-Guarantee-Remote-Talent.png"
         alt="100% Guarantee Remote Talent"

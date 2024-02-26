@@ -13,7 +13,7 @@
         class="remoteModel rounded-circle elevation-5"
         width="75%" />
     </div>
-    <router-link class="primaryButton elevation-5 mt-3 mb-5" :to="'/contact-us'"
+    <router-link class="primaryButton elevation-5 mt-3" :to="'/contact-us'"
       >Contact Us</router-link
     >
   </section>

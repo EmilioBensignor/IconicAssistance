@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="radioactiveWaves">
     <p class="subtitle text-midnight">Testimonials</p>
     <h2 class="text-midnight">Positive Reviews From Our Clients</h2>
     <div class="columnAlignCenter ga-8 my-5">

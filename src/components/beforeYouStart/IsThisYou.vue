@@ -1,10 +1,10 @@
 <template>
-  <section>
+  <section class="radioactiveSkyWaves">
     <p class="subtitle">Is this you?</p>
     <h2 class="text-midnight">
       Do You Identify Yourself With The Following Aspects?
     </h2>
-    <div class="columnAlignCenter ga-8 my-5">
+    <div class="columnAlignCenter ga-8 mt-7 mb-5">
       <div 
         v-for="(item, index) in aspects" 
         :key="index"
@@ -19,7 +19,7 @@
     </div>
     <p class="mt-3">Do you identify yourself with the following aspects?</p>
     <p class="my-1">Then it's time to hire a virtual assistant.</p>
-    <router-link class="secondaryButton elevation-5 mt-3 mb-5" :to="'/contact-us'"
+    <router-link class="secondaryButton elevation-5 mt-3" :to="'/contact-us'"
       >Contact Us!</router-link
     >
   </section>

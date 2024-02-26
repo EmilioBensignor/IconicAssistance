@@ -1,13 +1,13 @@
 <template>
-  <div class="columnAlignCenter my-3 rounded-lg pricingContainer">
+  <div class="columnAlignCenter my-5 rounded-lg pricingContainer">
     <v-tabs
       class="rounded-t-lg pricingTabs elevation-3"
       v-model="tab"
       fixed-tabs
       bg-color="radioactive">
-      <v-tab value="full-time">Full Time</v-tab>
-      <v-tab value="part-time">Part Time</v-tab>
-      <v-tab value="build-team">Build your team</v-tab>
+      <v-tab value="full-time">Full</v-tab>
+      <v-tab value="part-time">Part</v-tab>
+      <v-tab value="build-team">Team</v-tab>
     </v-tabs>
     <div class="elevation-5 w-75 mt-6 bg-white rounded-xl">
       <v-window v-model="tab" class="pb-5">

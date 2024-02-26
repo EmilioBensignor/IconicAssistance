@@ -11,7 +11,7 @@
       </div>
     </div>
   </section>
-  <section>
+  <section class="radioactiveWave pt-5">
     <h2 class="text-midnight">{{ blog.h2 }}</h2>
     <div class="text-start text-midnight px-5 my-5">
       <p class="w-100">{{ blog.intro }}</p>
@@ -24,7 +24,7 @@
     </div>
     <div class="columnAlignCenter mt-5">
       <h2 class="text-midnight">Recent Posts</h2>
-      <div class="columnAlignCenter ga-5 py-5">
+      <div class="columnAlignCenter ga-7 py-5">
         <article
           v-for="(recentBlog, index) in recentBlogs"
           :key="index"
@@ -106,6 +106,14 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .radioactiveWave{
+    background-image: url("@/assets/images/misc/Radioactive-Bottom-Wave.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    padding-bottom: 20vw;
   }
 
   .recentBlog {

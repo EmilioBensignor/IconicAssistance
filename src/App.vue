@@ -4,7 +4,7 @@
     <div class="pt-4">
       <router-view />
     </div>
-    <FooterComponent class="pt-10" />
+    <FooterComponent class="pt-15" />
   </v-app>
 </template>
 
@@ -70,6 +70,11 @@
 
   .subtitle {
     font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  .pMedium{
+    font-size: 1.15rem;
     font-weight: 500;
   }
 
@@ -145,24 +150,69 @@
     );
   }
 
+  /* Waves */
+  .radioactiveWaves,
+  .skyBlueWaves,
+  .skyRadioactiveWaves,
+  .radioactiveSkyWaves {
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain, contain;
+    background-position: top left, bottom left;
+    padding-top: 20vw;
+    padding-bottom: 20vw;
+  }
+  .radioactiveWaves {
+    background-image: url("@/assets/images/misc/Radioactive-Top-Wave.png"),
+      url("@/assets/images/misc/Radioactive-Bottom-Wave.png");
+  }
+
+  .skyBlueWaves {
+    background-image: url("@/assets/images/misc/Sky-Blue-Top-Wave.png"),
+      url("@/assets/images/misc/Sky-Blue-Bottom-Wave.png");
+  }
+
+  .skyRadioactiveWaves {
+    background-image: url("@/assets/images/misc/Sky-Blue-Top-Wave.png"),
+      url("@/assets/images/misc/Radioactive-Bottom-Wave.png");
+  }
+
+  .radioactiveSkyWaves {
+    background-image: url("@/assets/images/misc/Radioactive-Top-Wave.png"),
+      url("@/assets/images/misc/Sky-Blue-Bottom-Wave.png");
+  }
+
+  .heroPagesWave {
+    background-image: url("@/assets/images/misc/Sky-Blue-Bottom-Wave.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+  }
+
+  .heroPagesRadioactiveWave {
+    background-image: url("@/assets/images/misc/Radioactive-Bottom-Wave.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+  }
+
   /* Drop Shadows */
-  .shadow-5{
+  .shadow-5 {
     -webkit-filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
     filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
   }
-  .shadow-3{
+  .shadow-3 {
     -webkit-filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.3));
     filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.3));
   }
-  .shadow-25{
+  .shadow-25 {
     -webkit-filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.25));
     filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.25));
   }
-  .shadow-2{
-    -webkit-filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.20));
-    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.20));
+  .shadow-2 {
+    -webkit-filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.2));
   }
-  .shadow-15{
+  .shadow-15 {
     -webkit-filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.15));
     filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.15));
   }
@@ -173,7 +223,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 5vw 3vw;
+    padding: 0 3vw;
   }
 
   .column {
@@ -197,6 +247,6 @@
   /* Pages */
   .heroPages {
     width: 85%;
-    padding: 15vw 0;
+    padding: 10vw 0 22vw 0;
   }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="skyBlueWaves">
     <p class="subtitle text-radioactive">Comparison Table</p>
     <h2 class="text-midnight">
       <span class="text-radioactive">ICONIC</span> VAs Comparison Chart
@@ -23,7 +23,7 @@
         </div>
         <div class="cardComparisonRow bg-blueSky">
           <div class="w-50">
-            <IconicLogo class="text-white shadow-25" />
+            <IconicLogo class="iconicLogo text-white shadow-25" />
           </div>
           <div class="w-50 columnAlignCenter">
             <p class="text-white font-weight-bold text-center">
@@ -209,6 +209,9 @@
     align-items: center;
     border-bottom: 1px solid #e0e0e0;
     padding: 3vw 1vw;
+  }
+  .iconicLogo{
+    width: 85%;
   }
   .cancelText {
     font-size: 0.8rem;

@@ -1,5 +1,5 @@
 <template>
-  <section class="columnAlignCenter">
+  <section class="heroPagesWave columnAlignCenter">
     <div class="heroPages flexCenter">
       <h1 class="text-midnight">
         {{ assistant.name }}
@@ -24,10 +24,10 @@
       with integrated solutions, ensuring seamless operations and heightened
       performance.
     </p>
-    <p class="text-white font-weight-bold my-5">
+    <p class="text-white pMedium font-weight-bold my-5">
       Here's a detailed description of the Virtual Assistant role:
     </p>
-    <div class="columnAlignCenter ga-5 mb-5">
+    <div class="columnAlignCenter ga-7 mb-5">
       <div
         v-for="(task, index) in assistant.tasks"
         :key="index"
@@ -36,10 +36,10 @@
         <p>{{ task.text }}</p>
       </div>
     </div>
-    <p class="w-75 text-white font-weight-bold mt-10">
+    <p class="w-75 text-white pMedium font-weight-bold mt-10">
       Other types of VAs that might interest you:
     </p>
-    <div class="w-75 columnAlignCenter ga-5 mt-5">
+    <div class="w-75 columnAlignCenter ga-7 mt-7">
       <router-link
         v-for="(item, index) in vaTypes"
         :to="`/virtual-assistant/${item.id}`"

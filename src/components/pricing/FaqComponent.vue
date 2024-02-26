@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="radioactiveSkyWaves">
     <h2 class="text-midnight">Questions That We Are Asked Most Often</h2>
     <div class="w-75 columnAlignCenter ga-2 my-5">
       <v-expansion-panels
@@ -10,7 +10,7 @@
         </v-expansion-panel>
       </v-expansion-panels>
     </div>
-    <router-link class="w-75 secondaryButton my-5 elevation-5" :to="'/faq'"
+    <router-link class="w-75 secondaryButton mt-5 elevation-5" :to="'/faq'"
       >View more Frequently Asked Questions</router-link
     >
   </section>

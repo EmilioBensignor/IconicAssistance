@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="radioactiveSkyWaves">
     <p class="subtitle">How It Works</p>
     <h2>
       Key Benefits Of Hiring
@@ -10,7 +10,7 @@
       alt="Iconic Assistants Key Benefits"
       class="my-5"
       width="75%" />
-    <div class="w-75 flexCenter bg-radioactive rounded-xl elevation-5 px-3 py-5 my-5">
+    <div class="w-75 flexCenter bg-radioactive rounded-xl elevation-5 px-3 py-5 mt-3 mb-5">
       <p class="text-white">
         Explore the vast potential of Virtual Assistants (VAs) in seamlessly
         managing administrative tasks, from email and calendar to precise data

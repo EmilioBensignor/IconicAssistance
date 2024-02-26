@@ -1,8 +1,8 @@
 <template>
-  <section class="skyRadioactive">
+  <section class="skyRadioactive pt-10">
     <p class="subtitle text-white">How It Works</p>
     <h2 class="text-white">How Our Remote Talent Service Works</h2>
-    <div class="columnAlignCenter ga-10 mt-5">
+    <div class="columnAlignCenter ga-10 my-5">
       <div
         v-for="(item, index) in steps"
         :key="index"

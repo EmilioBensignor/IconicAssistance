@@ -1,29 +1,29 @@
 <template>
-  <section class="columnAlignCenter">
+  <section class="heroPagesWave columnAlignCenter">
     <div class="heroPages flexCenter">
       <h1 class="text-midnight">Contact Us For a Free Demo</h1>
     </div>
   </section>
   <section class="skyRadioactive">
-    <div>
+    <div class="columnAlignCenter">
       <h2 class="text-white">Book a Free Call</h2>
       <!-- <div
         class="calendly-inline-widget"
         data-url="https://calendly.com/iconicassistants/iconic-assistants-discovery-meeting?hide_event_type_details=1"
         style="min-width: 320px; height: 700px"></div> -->
     </div>
-    <div>
+    <div class="columnAlignCenter">
       <h2 class="text-white">Get in Touch</h2>
       <!-- Formulario -->
     </div>
   </section>
-  <section>
+  <section class="radioactiveWaves">
     <img
       src="@/assets/images/contactUs/Contact-Us-Remote-Talent.png"
       alt="Contact Us Remote Talent"
-      class="rounded-circle elevation-5 mb-5"
+      class="rounded-circle elevation-5 my-5"
       width="75%" />
-    <div class="w-75 columnAlignCenter ga-5 mt-5">
+    <div class="w-75 columnAlignCenter ga-5 my-5">
       <v-expansion-panels class="faqWrapper">
         <v-expansion-panel class="elevation-4" title="How do I get started?">
           <v-expansion-panel-text>

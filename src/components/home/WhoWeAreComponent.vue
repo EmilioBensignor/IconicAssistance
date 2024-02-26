@@ -1,15 +1,15 @@
 <template>
-  <section class="ga-5 skyRadioactive">
+  <section class="skyRadioactive pt-7">
     <p class="subtitle text-white">Who we are</p>
     <h2 class="text-white">Outsourcing made simple and cost-effective</h2>
-    <p class="text-white">
+    <p class="text-white my-3">
       Welcome to Iconic Assistants where outsourcing meets excellence! At Iconic
       Assistants, we take pride in being a <span class="font-weight-bold">premier outsourcing</span> company dedicated
       to bridging the gap between North American companies and top-tier <span class="font-weight-bold">global talent</span>. Our mission is clear: simplify and streamline the hiring process
       for businesses by managing all <span class="font-weight-bold">administrative</span> tasks related to recruitment
       and payroll.
     </p>
-    <div class="d-flex justify-space-between ga-5">
+    <div class="d-flex justify-space-between ga-5 my-3">
       <div class="d-flex flex-column ga-3">
         <div class="d-flex align-center">
           <v-icon
@@ -43,7 +43,7 @@
         </div>
       </div>
     </div>
-    <router-link class="primaryButton elevation-5 mt-5 mb-3" :to="'/services'"
+    <router-link class="primaryButton elevation-5 mt-5" :to="'/services'"
       >What We Do</router-link
     >
   </section>

@@ -1,12 +1,12 @@
 <template>
-  <section>
+  <section class="differences">
     <p class="subtitle text-radioactive">Differences that matter</p>
     <h2 class="text-midnight">Why Choose Iconic Assistants?</h2>
     <div class="columnAlignCenter ga-12 my-5">
       <div
         v-for="(choose, index) in differences"
         :key="index"
-        class="w-50 choose columnAlignCenter ga-5 pb-5 elevation-5">
+        class="w-50 choose columnAlignCenter ga-5 pb-5 elevation-4">
         <img :src="getImgUrl(choose.img)" :alt="choose.alt" width="100%" />
         <ul class="column ga-3 px-5">
           <li
@@ -19,7 +19,7 @@
       </div>
     </div>
     <div
-      class="w-75 bg-radioactive columnAlignCenter rounded-xl py-4 mt-5 elevation-5">
+      class="w-75 bg-radioactive columnAlignCenter rounded-xl py-4 my-5 elevation-5">
       <p class="text-white">
         At Iconic Assistants, we're
         <span class="font-weight-bold">dedicated</span> to finding your business
@@ -82,6 +82,13 @@
 </script>
 
 <style scoped>
+  .differences{
+    background-image: url("@/assets/images/misc/Sky-Blue-Bottom-Wave.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    padding-bottom: 20vw;
+  }
   .choose {
     border: 3px solid #373ae6;
     border-radius: 30vw 30vw 5vw 5vw;

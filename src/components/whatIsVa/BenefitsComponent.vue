@@ -6,8 +6,8 @@
       assistants instead of in-house employees due to several compelling
       reasons:
     </p>
-    <div class="w-75 columnAlignCenter ga-4 my-5">
-      <div class="w-100 columnAlignCenter ga-4">
+    <div class="w-75 columnAlignCenter ga-5 my-5">
+      <div class="w-100 columnAlignCenter ga-5">
         <v-expansion-panels
           v-for="(item, index) in benefitsLeft"
           :key="index"
@@ -21,7 +21,7 @@
           </v-expansion-panel>
         </v-expansion-panels>
       </div>
-      <div class="w-100 columnAlignCenter ga-4">
+      <div class="w-100 columnAlignCenter ga-5">
         <v-expansion-panels
           v-for="(item, index) in benefitsLeft"
           :key="index"

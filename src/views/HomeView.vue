@@ -3,7 +3,12 @@
     <video autoplay muted loop class="backgroundVideo">
       <source
         src="@/assets/videos/Outsource-Anything-with-Iconic-Assistants.mp4"
-        type="video/mp4" />
+        type="video/mp4"
+      />
+      <source
+        src="@/assets/videos/Outsource-Anything-with-Iconic-Assistants.mp4"
+        type="video/webm"
+      />
     </video>
     <div class="overlay"></div>
     <div class="hero flexCenter ga-5 mt-12">
@@ -12,12 +17,12 @@
         <span class="text-blueSky">ICONIC ASSISTANTS</span>
       </h1>
       <p class="text-landing text-center text-white">
-        Leading TEST the way in remote staffing solutions, the top choice for your
+        Leading the way in remote staffing solutions, the top choice for your
         outsourcing needs.
         <span class="font-weight-bold">Starting at $9.55/Hr.</span>
       </p>
       <div>
-        <button class="navbarCall bg-radioactive elevation-5" @click="calendly">
+        <button class="navbarCall bg-radioactive elevation-10" @click="calendly">
           Hire ICONIC
         </button>
       </div>
@@ -29,11 +34,11 @@
   <HowItWorksComponent />
   <CostComparisonComponent />
   <IndustriesComponent />
-  <section>
+  <section class="skyBlueWaves">
     <p class="subtitle text-radioactive">Pricing</p>
     <h2 class="text-midnight">Select A Plan Now To Get More Done</h2>
     <PricingComponent />
-    <router-link :to="'/contact-us'" class="secondaryButton mt-6 elevation-5"
+    <router-link :to="'/contact-us'" class="secondaryButton mt-5 mb-3 elevation-5"
       >Get a Free Consultation</router-link
     >
   </section>

@@ -1,6 +1,6 @@
 <template>
   <section
-    class="heroSection flexCenter"
+    class="heroIndustries flexCenter"
     :style="{
       backgroundImage: `url(${getBackgroundUrl(industry.img)})`,
     }">
@@ -14,7 +14,7 @@
   <DifferencesComponent />
   <section class="skyRadioactive">
     <h2 class="text-white">VAs That Suit Your Industry</h2>
-    <div v-if="industry" class="columnAlignCenter ga-10 my-5">
+    <div v-if="industry" class="columnAlignCenter ga-13 my-5">
       <div
         v-for="(vaType, index) in industry.vaTypes"
         :key="index"
@@ -30,7 +30,7 @@
         <p class="mt-3">{{ vaType.summary }}</p>
       </div>
     </div>
-    <router-link class="primaryButton my-5 elevation-5" :to="'/types-of-vas'"
+    <router-link class="primaryButton mt-5 elevation-5" :to="'/types-of-vas'"
       >Look at our Types of VAs</router-link
     >
   </section>
@@ -84,7 +84,7 @@
 </script>
 
 <style scoped>
-  .heroSection {
+  .heroIndustries {
     position: relative;
     width: 100%;
     height: 450px;

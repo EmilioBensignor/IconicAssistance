@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section class="skyBlueWaves">
     <p class="my-3">Outsource to the top 1%</p>
     <p class="w-75">
       Access the Top 1% of our VA candidates. Pre-vetted, pre-interviewed, and

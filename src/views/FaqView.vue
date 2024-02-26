@@ -1,5 +1,5 @@
 <template>
-  <section class="columnAlignCenter">
+  <section class="heroPagesWave columnAlignCenter">
     <div class="heroPages flexCenter">
       <h1 class="text-midnight">
         Outsource to
@@ -15,7 +15,7 @@
         type="search"
         name="faqSearch"
         v-model="faqSearch"
-        class="w-100 bg-white rounded-xl py-3 px-5"
+        class="w-100 bg-white rounded-xl py-3 px-5 elevation-4"
         placeholder="Type to search for a question"
         hide-details />
     </v-form>

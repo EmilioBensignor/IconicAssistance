@@ -1,8 +1,8 @@
 <template>
-  <section>
-    <p class="subtitle">Cost Comparison</p>
+  <section class="radioactiveWaves">
+    <p class="subtitle mt-2">Cost Comparison</p>
     <h2 class="text-midnight">Delegate Task At A Fraction Of The Cost</h2>
-    <div class="w-75 costComparison d-flex ga-2 my-5">
+    <div class="w-75 costComparison d-flex ga-2 my-7">
       <div class="w-50 columnAlignCenter bg-thinGray rounded-xl elevation-10">
         <div
           v-for="(item, index) in inHouse"
@@ -69,7 +69,7 @@
         compensation.
       </p>
     </div>
-    <router-link :to="'/before-you-start'" class="secondaryButton elevation-5"
+    <router-link :to="'/before-you-start'" class="secondaryButton elevation-5 mt-3"
       >Before you Start</router-link
     >
   </section>

@@ -1,5 +1,5 @@
 <template>
-  <section class="radioactiveSky">
+  <section class="radioactiveSky pb-10">
     <p class="subtitle text-white">Our Service</p>
     <h2 class="text-white">Tailored For Your Success</h2>
     <div class="columnAlignCenter py-3 px-2 ga-5">
@@ -21,7 +21,7 @@
       <div class="my-5 columnAlignCenter ga-2 w-100">
         <p class="text-white font-weight-bold homeH4">Tell us what you need!</p>
         <router-link
-          class="primaryButton elevation-5 mt-5 mb-3"
+          class="primaryButton elevation-5 mt-5"
           :to="'/contact-us'"
           >Contact Us</router-link
         >

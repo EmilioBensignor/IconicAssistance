@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="radioactiveWaves">
     <p class="subtitle text-radioactive">How We Work</p>
     <h2 class="text-midnight py-1">Your Prosperity, Our Approach</h2>
     <p class="py-2">

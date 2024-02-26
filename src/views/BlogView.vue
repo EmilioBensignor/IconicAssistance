@@ -1,5 +1,5 @@
 <template>
-  <section class="columnAlignCenter">
+  <section class="heroPagesWave columnAlignCenter">
     <div class="heroPages flexCenter">
       <h1 class="text-midnight">Explore Our Virtual Assistant Blog</h1>
     </div>

@@ -1,6 +1,6 @@
 <template>
-  <section>
-    <div class="w-100 flexCenter ga-15">
+  <section class="radioactiveWaves">
+    <div class="w-100 flexCenter ga-15 mt-5">
       <div class="w-75">
         <img
           src="@/assets/images/services/Recruitment-Expertise-Pre-Vetted-Proffesionals.png"

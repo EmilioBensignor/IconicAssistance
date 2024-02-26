@@ -1,5 +1,5 @@
 <template>
-  <section class="columnAlignCenter">
+  <section class="heroPagesWave columnAlignCenter">
     <div class="heroPages flexCenter">
       <h1 class="text-midnight">
         Grow Your Business With
@@ -21,12 +21,12 @@
       alt="Remote Talent Call"
       width="75%"
       class="rounded-circle elevation-5 my-5" />
-    <router-link class="primaryButton elevation-5 my-5" :to="'/contact-us'"
+    <router-link class="primaryButton elevation-5 mt-5" :to="'/contact-us'"
       >Request a Consultation</router-link
     >
   </section>
   <!-- Step 2 -->
-  <section>
+  <section class="radioactiveWaves">
     <p class="subtitle">Step 2</p>
     <h2 class="text-midnight">Pick The Right Candidate</h2>
     <p class="w-75 my-3">
@@ -39,7 +39,7 @@
       alt="Remote Talent Right Candidate"
       width="75%"
       class="rounded-circle elevation-5 my-5" />
-    <router-link class="secondaryButton elevation-5 my-5" :to="'/how-we-hire'"
+    <router-link class="secondaryButton elevation-5 mt-5" :to="'/how-we-hire'"
       >How We Hire</router-link
     >
   </section>
@@ -62,7 +62,7 @@
     >
   </section>
   <!-- Step 4 -->
-  <section>
+  <section class="skyRadioactiveWaves">
     <p class="subtitle">Step 4</p>
     <h2 class="text-midnight">Experience continual support</h2>
     <p class="w-75 my-3">
@@ -75,7 +75,7 @@
       alt="Remote Talent Tasks"
       width="75%"
       class="rounded-circle elevation-5 my-5" />
-    <router-link class="secondaryButton elevation-5 my-5" :to="'/contact-us'"
+    <router-link class="secondaryButton elevation-5 mt-5" :to="'/contact-us'"
       >Contact Us</router-link
     >
   </section>

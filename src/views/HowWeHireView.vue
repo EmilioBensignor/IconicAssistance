@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="heroPagesRadioactiveWave">
     <div class="heroPages flexCenter">
       <h1 class="text-midnight">
         Hiring Excellence At
@@ -25,3 +25,7 @@ import CandidateCriteriaComponent from "@/components/howWeHire/CandidateCriteria
     }
   };
 </script>
+
+<style scoped>
+
+</style>

@@ -48,7 +48,7 @@
         <p class="text-white">
           Want to know if our Remote Talent Experts are suitable for you?
         </p>
-        <router-link class="primaryButton elevation-5 my-5" :to="'/contact-us'"
+        <router-link class="primaryButton elevation-5 mt-5" :to="'/contact-us'"
           >Request a free consultation</router-link
         >
       </div>
