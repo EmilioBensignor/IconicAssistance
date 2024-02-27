@@ -9,6 +9,10 @@
         src="@/assets/videos/Outsource-Anything-with-Iconic-Assistants.mp4"
         type="video/webm"
       />
+      <source
+        src="@/assets/videos/Outsource-Anything-with-Iconic-Assistants.mp4"
+        type="video/quicktime"
+      />
     </video>
     <div class="overlay"></div>
     <div class="hero flexCenter ga-5 mt-15">
