@@ -27,7 +27,7 @@
           </ul>
           <v-expansion-panels class="moreInfo mt-3">
             <v-expansion-panel
-              class="bg-radioactive elevation-3"
+              class="bg-radioactive mt-3 elevation-3"
               title="More Info"
               text="Leave the complexity of recruitment to our specialized HR team with decades of experience. Our talent pool of pre-vetted remote professionals ensures a swift acquisition process, taking only 10 to 20 business days to secure the perfect match for your needs. Experience success with our dedicated team guiding you through every step.">
             </v-expansion-panel>
@@ -62,7 +62,7 @@
           </ul>
           <v-expansion-panels class="moreInfo mt-3">
             <v-expansion-panel
-              class="bg-radioactive elevation-3"
+              class="bg-radioactive mt-3 elevation-3"
               title="More Info"
               text="Our payroll services transcend borders. No matter where your remote talent is located or how many individuals you've hired, we charge a single, transparent fee. Simplify your financial operations and focus on your business while we handle payroll with precision.">
             </v-expansion-panel>
@@ -97,7 +97,7 @@
           </ul>
           <v-expansion-panels class="moreInfo mt-3">
             <v-expansion-panel
-              class="bg-radioactive elevation-3"
+              class="bg-radioactive mt-3 elevation-3"
               title="More Info"
               text="Ensuring a smooth relationship between you and your remote talent is our priority. Each client is assigned a dedicated Client Success Agent, fostering communication with periodic performance reports, and addressing concerns promptly. We not only guarantee compliance but also facilitate talent changes without additional fees, providing flexibility for your evolving needs.">
             </v-expansion-panel>

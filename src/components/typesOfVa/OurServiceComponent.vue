@@ -1,6 +1,6 @@
 <template>
   <section class="skyRadioactive">
-    <p class="sbutitle text-white">Our Service</p>
+    <p class="subtitle text-white">Our Service</p>
     <h2 class="text-white">
       Here's What Your Virtual Assistants Can Help You With
     </h2>

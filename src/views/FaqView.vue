@@ -20,8 +20,10 @@
         hide-details />
     </v-form>
     <div class="w-75 columnAlignCenter ga-5 mt-5">
+      <!-- Categories -->
       <div
-        class="column align-self-start text-start font-weight-bold text-white ga-3 filterCategories mt-2 mb-4">
+        class="column align-self-start text-start font-weight-bold text-white ga-3 filterCategories my-5">
+        <p class="w-100 text-white text-start mb-3">Filter by the category you are looking for:</p>
         <label class="d-flex align-center ga-3" for="Communication">
           <input
             id="Communication"
@@ -55,12 +57,13 @@
           Payment
         </label>
       </div>
+      <!-- FAQs -->
       <v-expansion-panels
         v-for="(item, index) in filteredFaqs"
         :key="index"
         class="faqWrapper">
         <v-expansion-panel
-          class="elevation-2"
+          class="elevation-3"
           :title="item.question"
           expand-icon="mdi-plus"
           collapse-icon="mdi-minus">

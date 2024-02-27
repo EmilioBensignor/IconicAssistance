@@ -7,7 +7,11 @@
         v-for="(choose, index) in differences"
         :key="index"
         class="w-50 choose columnAlignCenter ga-5 pb-5 elevation-4">
-        <img :src="getImgUrl(choose.img)" :alt="choose.alt" width="100%" />
+        <img 
+          :src="getImgUrl(choose.img)" 
+          :alt="choose.alt" 
+          class="shadow-2"
+          width="100%" />
         <ul class="column ga-3 px-5">
           <li
             v-for="(difference, index) in choose.list"

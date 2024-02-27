@@ -1,7 +1,7 @@
 <template>
   <div class="columnAlignCenter my-5 rounded-lg pricingContainer">
     <v-tabs
-      class="rounded-t-lg pricingTabs elevation-3"
+      class="rounded-t-lg pricingTabs elevation-4"
       v-model="tab"
       fixed-tabs
       bg-color="radioactive">
@@ -9,7 +9,7 @@
       <v-tab value="part-time">Part</v-tab>
       <v-tab value="build-team">Team</v-tab>
     </v-tabs>
-    <div class="elevation-5 w-75 mt-6 bg-white rounded-xl">
+    <div class="elevation-6 w-75 mt-6 bg-white rounded-xl">
       <v-window v-model="tab" class="pb-5">
         <v-window-item value="full-time">
           <div class="flexCenter px-4 ga-1">

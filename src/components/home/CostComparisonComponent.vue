@@ -19,7 +19,7 @@
           class="w-100 comparisonItem flexCenter justify-center pa-3">
           <p class="text-white text-center font-weight-bold">{{ item }}</p>
         </div>
-        <div class="saveIcon pl-3 mb-n6">
+        <div class="w-50 saveIcon pl-3 mb-n6">
           <img
             src="@/assets/images/misc/Save-75-Percentage.png"
             alt="Save 75%"

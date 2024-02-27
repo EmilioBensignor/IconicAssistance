@@ -11,7 +11,7 @@
       <img
         :src="getImgUrl(assistant.img)"
         :alt="assistant.at"
-        class="rounded-xl"
+        class="rounded-xl elevation-5"
         width="75%" />
     </div>
     <p class="text-white my-5">
@@ -32,7 +32,7 @@
         v-for="(task, index) in assistant.tasks"
         :key="index"
         class="w-75 columnAlignCenter ga-3 bg-white rounded-xl py-3 elevation-5">
-        <p>{{ task.title }}</p>
+        <p class="font-weight-bold">{{ task.title }}</p>
         <p>{{ task.text }}</p>
       </div>
     </div>
@@ -49,11 +49,12 @@
           <v-img
             :src="getImgUrl(item.blueIcon)"
             :alt="item.blueIconAlt"
+            class="shadow-15"
             width="85%">
           </v-img>
         </div>
         <p class="text-midnight font-weight-bold">{{ item.name }}</p>
-        <div class="circleNumber rounded-circle elevation-2">
+        <div class="circleNumber rounded-circle elevation-3">
           <p class="text-radioactive font-weight-bold">></p>
         </div>
       </router-link>
