@@ -1,7 +1,7 @@
 <template>
   <section class="skyRadioactive">
-    <h2 class="text-white">Benefits</h2>
-    <p class="text-white mt-3">
+    <h2 v-motion="scrollBottom" class="text-white">Benefits</h2>
+    <p v-motion="scrollBottom" class="text-white mt-3">
       Companies are increasingly mutating towards predominantly virtual
       assistants instead of in-house employees due to several compelling
       reasons:
@@ -11,6 +11,7 @@
         <v-expansion-panels
           v-for="(item, index) in benefitsLeft"
           :key="index"
+          v-motion="scrollBottom"
           class="faqWrapper">
           <v-expansion-panel
             class="elevation-2"
@@ -25,6 +26,7 @@
         <v-expansion-panels
           v-for="(item, index) in benefitsLeft"
           :key="index"
+          v-motion="scrollBottom"
           class="faqWrapper">
           <v-expansion-panel
             class="elevation-2"
@@ -90,4 +92,8 @@
       };
     },
   };
+</script>
+
+<script setup>
+  import { scrollBottom } from "@/motions.js"
 </script>

@@ -1,10 +1,10 @@
 <template>
   <section class="skyBlueWaves">
-    <p class="subtitle text-radioactive">Comparison Table</p>
-    <h2 class="text-midnight">
+    <p v-motion="scrollBottom" class="subtitle text-radioactive">Comparison Table</p>
+    <h2 v-motion="scrollBottom" class="text-midnight">
       <span class="text-radioactive">ICONIC</span> VAs Comparison Chart
     </h2>
-    <p class="w-75 text-midnight mt-2 mb-5">
+    <p v-motion="scrollBottom" class="w-75 text-midnight mt-2 mb-5">
       As an entrepreneur or business, finding top talent without overspending
       can be challenging. Our mission is to connect you with cost-effective
       remote talent who save you time and money.
@@ -13,6 +13,7 @@
       <div
         v-for="item in comparisonChart"
         :key="item.number"
+        v-motion="scrollBottom"
         class="cardComparison flexCenter rounded-xl elevation-6 my-5">
         <div
           class="w-100 cardComparisonHeader columnAlignCenter rounded-t-xl pa-5">
@@ -57,7 +58,7 @@
           </div>
         </div>
       </div>
-      <p class="cancelText mt-3 mb-5">
+      <p v-motion="scrollBottom" class="cancelText mt-3 mb-5">
         * After a thirty (30) days onboarding period, the customer may choose to
         change their Virtual Assistant or terminate the service by providing a
         fifteen (15) days prior written notice to their assigned Customer
@@ -184,6 +185,10 @@
       };
     },
   };
+</script>
+
+<script setup>
+  import { scrollBottom } from "@/motions.js"
 </script>
 
 <style scoped>

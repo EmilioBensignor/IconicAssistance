@@ -39,8 +39,8 @@
   <CostComparisonComponent />
   <IndustriesComponent />
   <section class="skyBlueWaves">
-    <p class="subtitle text-radioactive">Pricing</p>
-    <h2 class="text-midnight">Select A Plan Now To Get More Done</h2>
+    <p v-motion="scrollBottom" class="subtitle text-radioactive">Pricing</p>
+    <h2 v-motion="scrollBottom" class="text-midnight">Select A Plan Now To Get More Done</h2>
     <PricingComponent />
     <router-link :to="'/contact-us'" class="secondaryButton mt-5 mb-3 elevation-5"
       >Get a Free Consultation</router-link
@@ -76,6 +76,10 @@
       },
     },
   };
+</script>
+
+<script setup>
+  import { scrollBottom } from "@/motions.js"
 </script>
 
 <style scoped>

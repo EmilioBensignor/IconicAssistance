@@ -1,7 +1,7 @@
 <template>
   <section class="heroPagesWave columnAlignCenter">
     <div class="heroPages flexCenter">
-      <h1 class="text-midnight">
+      <h1 v-motion="scrollBottom" class="text-midnight">
         {{ assistant.name }}
       </h1>
     </div>
@@ -12,9 +12,10 @@
         :src="getImgUrl(assistant.img)"
         :alt="assistant.at"
         class="rounded-xl elevation-5"
+        v-motion="scrollBottom"
         width="75%" />
     </div>
-    <p class="text-white my-5">
+    <p v-motion="scrollBottom" class="text-white my-5">
       Experience precision in recruitment and payroll efficiency. Unlock skills
       in HR, administration, marketing, customer support, and more. Our platform
       optimizes business processes, from hiring to payroll. Simplify operations
@@ -24,19 +25,20 @@
       with integrated solutions, ensuring seamless operations and heightened
       performance.
     </p>
-    <p class="text-white pMedium font-weight-bold my-5">
+    <p v-motion="scrollBottom" class="text-white pMedium font-weight-bold my-5">
       Here's a detailed description of the Virtual Assistant role:
     </p>
     <div class="columnAlignCenter ga-7 mb-5">
       <div
         v-for="(task, index) in assistant.tasks"
         :key="index"
+        v-motion="scrollBottom"
         class="w-75 columnAlignCenter ga-3 bg-white rounded-xl py-3 elevation-5">
         <p class="font-weight-bold">{{ task.title }}</p>
         <p>{{ task.text }}</p>
       </div>
     </div>
-    <p class="w-75 text-white pMedium font-weight-bold mt-10">
+    <p v-motion="scrollBottom" class="w-75 text-white pMedium font-weight-bold mt-10">
       Other types of VAs that might interest you:
     </p>
     <div class="w-75 columnAlignCenter ga-7 mt-7">
@@ -44,6 +46,7 @@
         v-for="(item, index) in vaTypes"
         :to="`/virtual-assistant/${item.id}`"
         :key="index"
+        v-motion="scrollBottom"
         class="w-100 typesCards d-flex justify-space-between align-center bg-white rounded-xl pa-3 elevation-5">
         <div class="w-25">
           <v-img
@@ -94,6 +97,10 @@
       },
     },
   };
+</script>
+
+<script setup>
+  import { scrollBottom } from "@/motions.js"
 </script>
 
 <style scoped>

@@ -1,19 +1,19 @@
 <template>
   <section class="heroPagesWave columnAlignCenter">
     <div class="heroPages flexCenter">
-      <h1 class="text-midnight">Contact Us For a Free Demo</h1>
+      <h1 v-motion="scrollBottom" class="text-midnight">Contact Us For a Free Demo</h1>
     </div>
   </section>
   <section class="skyRadioactive">
     <div class="columnAlignCenter">
-      <h2 class="text-white">Book a Free Call</h2>
+      <h2 v-motion="scrollBottom" class="text-white">Book a Free Call</h2>
       <!-- <div
         class="calendly-inline-widget"
         data-url="https://calendly.com/iconicassistants/iconic-assistants-discovery-meeting?hide_event_type_details=1"
         style="min-width: 320px; height: 700px"></div> -->
     </div>
     <div class="columnAlignCenter">
-      <h2 class="text-white">Get in Touch</h2>
+      <h2 v-motion="scrollBottom" class="text-white">Get in Touch</h2>
       <!-- Formulario -->
     </div>
   </section>
@@ -22,9 +22,10 @@
       src="@/assets/images/contactUs/Contact-Us-Remote-Talent.png"
       alt="Contact Us Remote Talent"
       class="rounded-circle elevation-5 my-5"
+      v-motion="scrollBottom"
       width="75%" />
     <div class="w-75 columnAlignCenter ga-5 my-5">
-      <v-expansion-panels class="faqWrapper">
+      <v-expansion-panels v-motion="scrollBottom" class="faqWrapper">
         <v-expansion-panel class="elevation-4" title="How do I get started?">
           <v-expansion-panel-text>
             <ol class="pl-3 columnAlignCenter ga-3">
@@ -67,6 +68,7 @@
       <v-expansion-panels
         v-for="(item, index) in faqs"
         :key="index"
+        v-motion="scrollBottom"
         class="faqWrapper">
         <v-expansion-panel
           class="elevation-4"
@@ -74,7 +76,7 @@
           :text="item.text">
         </v-expansion-panel>
       </v-expansion-panels>
-      <v-expansion-panels class="faqWrapper">
+      <v-expansion-panels v-motion="scrollBottom" class="faqWrapper">
         <v-expansion-panel
           class="elevation-4"
           title="Do I need to pay any Taxes?">
@@ -133,4 +135,8 @@
       };
     },
   };
+</script>
+
+<script setup>
+  import { scrollBottom } from "@/motions.js"
 </script>

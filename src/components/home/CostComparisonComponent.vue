@@ -1,8 +1,10 @@
 <template>
   <section class="radioactiveWaves">
-    <p class="subtitle mt-2">Cost Comparison</p>
-    <h2 class="text-midnight">Delegate Task At A Fraction Of The Cost</h2>
-    <div class="w-75 costComparison d-flex ga-2 my-7">
+    <p v-motion="scrollBottom" class="subtitle mt-2">Cost Comparison</p>
+    <h2 v-motion="scrollBottom" class="text-midnight">
+      Delegate Task At A Fraction Of The Cost
+    </h2>
+    <div v-motion="scrollBottom" class="w-75 costComparison d-flex ga-2 my-7">
       <div class="w-50 columnAlignCenter bg-thinGray rounded-xl elevation-10">
         <div
           v-for="(item, index) in inHouse"
@@ -54,6 +56,7 @@
       </div>
     </div>
     <div
+      v-motion="scrollBottom"
       class="columnAlignCenter ga-3 text-lightGray CostComparisonAclaration my-5">
       <p>
         <sup class="mr-1">1</sup>Average hourly-rate for 25-34 years old US
@@ -69,11 +72,17 @@
         compensation.
       </p>
     </div>
-    <router-link :to="'/before-you-start'" class="secondaryButton elevation-5 mt-3"
+    <router-link
+      :to="'/before-you-start'"
+      class="secondaryButton elevation-5 mt-3"
       >Before you Start</router-link
     >
   </section>
 </template>
+
+<script setup>
+  import { scrollBottom } from "@/motions.js";
+</script>
 
 <script>
   export default {

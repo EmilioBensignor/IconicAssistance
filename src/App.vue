@@ -255,4 +255,10 @@
     width: 85%;
     padding: 10vw 0 22vw 0;
   }
+
+  /* Animations */
+  .delay{
+    transition: ease-in;
+    animation-delay: 250ms;
+  }
 </style>

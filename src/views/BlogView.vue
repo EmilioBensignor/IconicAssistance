@@ -1,11 +1,11 @@
 <template>
   <section class="heroPagesWave columnAlignCenter">
     <div class="heroPages flexCenter">
-      <h1 class="text-midnight">Explore Our Virtual Assistant Blog</h1>
+      <h1 v-motion="scrollBottom" class="text-midnight">Explore Our Virtual Assistant Blog</h1>
     </div>
   </section>
   <section class="skyRadioactive">
-    <h2 class="text-white font-weight-bold">Search</h2>
+    <h2 v-motion="scrollBottom" class="text-white font-weight-bold">Search</h2>
     <v-form class="w-75 buscador my-5 rounded-xl">
       <input
         type="search"
@@ -19,6 +19,7 @@
       <article
         v-for="(item, index) in filteredBlogs"
         :key="index"
+        v-motion="scrollBottom"
         class="columnAlignCenter bg-white rounded-lg elevation-7">
         <router-link :to="`/blog-post/${item.slug}`">
           <img
@@ -77,4 +78,8 @@
       },
     },
   };
+</script>
+
+<script setup>
+  import { scrollBottom } from "@/motions.js";
 </script>

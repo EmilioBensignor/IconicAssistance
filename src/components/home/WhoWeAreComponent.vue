@@ -1,15 +1,15 @@
 <template>
   <section class="skyRadioactive pt-7">
-    <p class="subtitle text-white">Who we are</p>
-    <h2 class="text-white">Outsourcing made simple and cost-effective</h2>
-    <p class="text-white my-3">
+    <p v-motion="scrollBottom" class="subtitle text-white">Who we are</p>
+    <h2 v-motion="scrollBottom" class="text-white">Outsourcing made simple and cost-effective</h2>
+    <p v-motion="scrollBottom" class="text-white my-3">
       Welcome to Iconic Assistants where outsourcing meets excellence! At Iconic
       Assistants, we take pride in being a <span class="font-weight-bold">premier outsourcing</span> company dedicated
       to bridging the gap between North American companies and top-tier <span class="font-weight-bold">global talent</span>. Our mission is clear: simplify and streamline the hiring process
       for businesses by managing all <span class="font-weight-bold">administrative</span> tasks related to recruitment
       and payroll.
     </p>
-    <div class="d-flex justify-space-between ga-5 my-3">
+    <div v-motion="scrollBottom" class="d-flex justify-space-between ga-5 my-3">
       <div class="d-flex flex-column ga-3">
         <div class="d-flex align-center">
           <v-icon
@@ -48,3 +48,7 @@
     >
   </section>
 </template>
+
+<script setup>
+  import { scrollBottom } from "@/motions.js"
+</script>

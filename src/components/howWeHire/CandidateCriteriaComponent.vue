@@ -1,11 +1,15 @@
 <template>
   <section class="skyRadioactive">
-    <h2 class="text-white">Candidate Interview Criteria</h2>
-    <p class="subtitle text-white  mt-3 mb-7">
+    <h2 v-motion="scrollBottom" class="text-white">Candidate Interview Criteria</h2>
+    <p v-motion="scrollBottom" class="subtitle text-white  mt-3 mb-7">
       All candidates will be screened on the following criteria:
     </p>
     <ul class="w-75 column text-center ga-3">
-      <div v-for="item in candidateCriteria" :key="item" class="d-flex ga-2">
+      <div 
+        v-for="item in candidateCriteria" 
+        :key="item" 
+        v-motion="scrollBottom"
+        class="d-flex ga-2">
         <v-icon
           icon="mdi-chevron-double-right"
           color="white"
@@ -34,6 +38,10 @@
       };
     },
   };
+</script>
+
+<script setup>
+  import { scrollBottom } from "@/motions.js"
 </script>
 
 <style scoped>

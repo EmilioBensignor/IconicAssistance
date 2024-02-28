@@ -1,8 +1,8 @@
 <template>
   <section class="skyRadioactive">
-    <h2 class="text-white mb-5">Frequently Asked Questions</h2>
+    <h2 v-motion="scrollBottom" class="text-white mb-5">Frequently Asked Questions</h2>
     <div class="w-75 columnAlignCenter ga-4">
-      <v-expansion-panels class="faqWrapper faqDesktop">
+      <v-expansion-panels v-motion="scrollBottom" class="faqWrapper faqDesktop">
         <v-expansion-panel
           class="elevation-4"
           title="Why is Iconic Assistants considered one of the best Ousourcing companies?">
@@ -21,7 +21,7 @@
       </v-expansion-panels>
       <!-- Left -->
       <div class="w-100 columnAlignCenter ga-4">
-        <v-expansion-panels class="faqWrapper">
+        <v-expansion-panels v-motion="scrollBottom" class="faqWrapper">
           <v-expansion-panel class="elevation-4" title="How do I get started?">
             <v-expansion-panel-text>
               <ol class="pl-3 columnAlignCenter ga-3">
@@ -63,6 +63,7 @@
         </v-expansion-panels>
         <v-expansion-panels
           v-for="(item, index) in faqsLeft"
+          v-motion="scrollBottom"
           :key="index"
           class="faqWrapper">
           <v-expansion-panel
@@ -71,7 +72,7 @@
             :text="item.text">
           </v-expansion-panel>
         </v-expansion-panels>
-        <v-expansion-panels class="faqWrapper">
+        <v-expansion-panels v-motion="scrollBottom" class="faqWrapper">
           <v-expansion-panel
             class="elevation-4"
             title="Do I need to pay any Taxes?">
@@ -99,7 +100,7 @@
       </div>
       <!-- Right -->
       <div class="w-100 columnAlignCenter ga-4">
-        <v-expansion-panels class="faqWrapper">
+        <v-expansion-panels v-motion="scrollBottom" class="faqWrapper">
           <v-expansion-panel
             class="elevation-4"
             title="Do I need a Virtual Assistant">
@@ -145,7 +146,7 @@
             </v-expansion-panel-text>
           </v-expansion-panel>
         </v-expansion-panels>
-        <v-expansion-panels class="faqWrapper">
+        <v-expansion-panels v-motion="scrollBottom" class="faqWrapper">
           <v-expansion-panel
             class="elevation-4"
             title="What tasks can I oursource to a VA?">
@@ -161,6 +162,7 @@
         </v-expansion-panels>
         <v-expansion-panels
           v-for="(item, index) in faqsRight"
+          v-motion="scrollBottom"
           :key="index"
           class="faqWrapper">
           <v-expansion-panel
@@ -217,6 +219,10 @@
       };
     },
   };
+</script>
+
+<script setup>
+  import { scrollBottom } from "@/motions.js"
 </script>
 
 <style scoped>

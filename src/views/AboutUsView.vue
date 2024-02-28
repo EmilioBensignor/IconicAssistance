@@ -1,7 +1,7 @@
 <template>
   <section class="heroPagesWave columnAlignCenter">
     <div class="heroPages flexCenter">
-      <h1 class="text-midnight">
+      <h1 class="text-midnight" v-motion="scrollBottom">
         Outsource to
         <span class="text-radioactive">Iconic Virtual Assistants</span>
       </h1>
@@ -13,6 +13,10 @@
   <ComparisonTableComponent />
   <HowItWorksComponent />
 </template>
+
+<script setup>
+  import { scrollBottom } from "@/motions.js"
+</script>
 
 <script>
   import AboutUsComponent from "@/components/aboutUs/AboutUsComponent.vue";

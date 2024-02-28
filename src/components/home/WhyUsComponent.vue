@@ -1,11 +1,12 @@
 <template>
   <section class="radioactiveWaves">
-    <p class="subtitle text-radioactive">Why us?</p>
-    <h2 class="mb-3 text-midnight">What Makes Us Different</h2>
+    <p v-motion="scrollBottom" class="subtitle text-radioactive">Why us?</p>
+    <h2 v-motion="scrollBottom" class="mb-3 text-midnight">What Makes Us Different</h2>
     <div class="flexCenter ga-10 my-5">
       <div
         v-for="(item, index) in different"
         :key="index"
+        v-motion="scrollBottom"
         class="flexCenter rounded-xl elevation-5 w-75 pa-4 pb-6">
         <p class="differentTitle text-midnight">{{ item.title }}</p>
         <v-img 
@@ -22,6 +23,10 @@
     </div>
   </section>
 </template>
+
+<script setup>
+  import { scrollBottom } from "@/motions.js"
+</script>
 
 <script>
   export default {

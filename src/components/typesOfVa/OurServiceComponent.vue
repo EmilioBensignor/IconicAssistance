@@ -1,14 +1,15 @@
 <template>
   <section class="skyRadioactive">
-    <p class="subtitle text-white">Our Service</p>
-    <h2 class="text-white">
+    <p v-motion="scrollBottom" class="subtitle text-white">Our Service</p>
+    <h2 v-motion="scrollBottom" class="text-white">
       Here's What Your Virtual Assistants Can Help You With
     </h2>
     <div class="w-75 column ga-3 my-5">
       <div
-        class="d-flex align-center"
         v-for="(item, index) in vaTypes"
-        :key="index">
+        :key="index"
+        v-motion="scrollBottom"
+        class="d-flex align-center">
         <img
           width="25%"
           class="shadow-25"
@@ -19,7 +20,7 @@
         </p>
       </div>
     </div>
-    <div class="w-75 columnAlignCenter my-5">
+    <div v-motion="scrollBottom" class="w-75 columnAlignCenter my-5">
       <v-carousel
         :show-arrows="false"
         class="carouselTypes rounded-xl elevation-5"
@@ -61,6 +62,10 @@
       },
     },
   };
+</script>
+
+<script setup>
+  import { scrollBottom } from "@/motions.js";
 </script>
 
 <style scoped>

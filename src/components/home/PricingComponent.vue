@@ -2,6 +2,7 @@
   <div class="columnAlignCenter my-5 rounded-lg pricingContainer">
     <v-tabs
       class="rounded-t-lg pricingTabs elevation-4"
+      v-motion="scrollBottom"
       v-model="tab"
       fixed-tabs
       bg-color="radioactive">
@@ -9,8 +10,8 @@
       <v-tab value="part-time">Part</v-tab>
       <v-tab value="build-team">Team</v-tab>
     </v-tabs>
-    <div class="elevation-6 w-75 mt-6 bg-white rounded-xl">
-      <v-window v-model="tab" class="pb-5">
+    <div v-motion="scrollBottom" class="elevation-6 w-75 mt-6 bg-white rounded-xl">
+      <v-window  v-model="tab" class="pb-5">
         <v-window-item value="full-time">
           <div class="flexCenter px-4 ga-1">
             <img
@@ -108,6 +109,10 @@
     </div>
   </div>
 </template>
+
+<script setup>
+  import { scrollBottom } from "@/motions.js"
+</script>
 
 <script>
   export default {

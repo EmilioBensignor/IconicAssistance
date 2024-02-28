@@ -1,13 +1,14 @@
 <template>
   <section class="radioactiveSkyWaves">
-    <p class="subtitle">Is this you?</p>
-    <h2 class="text-midnight">
+    <p v-motion="scrollBottom" class="subtitle">Is this you?</p>
+    <h2 v-motion="scrollBottom" class="text-midnight">
       Do You Identify Yourself With The Following Aspects?
     </h2>
     <div class="columnAlignCenter ga-8 mt-7 mb-5">
       <div 
         v-for="(item, index) in aspects" 
         :key="index"
+        v-motion="scrollBottom"
         class="w-75 columnAlignCenter ga-3 aspect elevation-5 rounded-xl pa-3">
         <img
           :src="getImgUrl(item.img)"
@@ -17,8 +18,8 @@
         <p v-html="item.text"></p>
       </div>
     </div>
-    <p class="mt-3">Do you identify yourself with the following aspects?</p>
-    <p class="my-1">Then it's time to hire a virtual assistant.</p>
+    <p v-motion="scrollBottom" class="mt-3">Do you identify yourself with the following aspects?</p>
+    <p v-motion="scrollBottom" class="my-1">Then it's time to hire a virtual assistant.</p>
     <router-link class="secondaryButton elevation-5 mt-3" :to="'/contact-us'"
       >Contact Us!</router-link
     >
@@ -65,6 +66,11 @@
     },
   };
 </script>
+
+<script setup>
+  import { scrollBottom } from "@/motions.js";
+</script>
+
 
 <style scoped>
   .aspect {

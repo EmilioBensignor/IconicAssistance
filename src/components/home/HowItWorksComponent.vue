@@ -1,11 +1,12 @@
 <template>
   <section class="skyRadioactive pt-10">
-    <p class="subtitle text-white">How It Works</p>
-    <h2 class="text-white">How Our Remote Talent Service Works</h2>
+    <p v-motion="scrollBottom" class="subtitle text-white">How It Works</p>
+    <h2 v-motion="scrollBottom" class="text-white">How Our Remote Talent Service Works</h2>
     <div class="columnAlignCenter ga-10 my-5">
       <div
         v-for="(item, index) in steps"
         :key="index"
+        v-motion="scrollBottom"
         class="bg-white w-75 rounded-xl pa-3 pb-6 elevation-5 columnAlignCenter ga-3">
         <p class="text-radioactive w-100 ml-3 stepNumbers">{{ item.number }}</p>
         <v-img 
@@ -20,6 +21,10 @@
     </div>
   </section>
 </template>
+
+<script setup>
+  import { scrollBottom } from "@/motions.js"
+</script>
 
 <script>
   export default {

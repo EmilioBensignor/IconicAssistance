@@ -1,8 +1,8 @@
 import './assets/main.css'
 
 import { createApp } from 'vue'
-import { MotionPlugin } from '@vueuse/motion'
 import App from './App.vue'
+import { MotionPlugin } from '@vueuse/motion'
 import router from './router'
 
 // Vuetify

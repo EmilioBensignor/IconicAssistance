@@ -1,7 +1,7 @@
 <template>
   <section class="radioactiveSky">
-    <p class="subtitle text-white">Industries</p>
-    <h2 class="text-white">Who We Serve</h2>
+    <p v-motion="scrollBottom" class="subtitle text-white">Industries</p>
+    <h2 v-motion="scrollBottom" class="text-white">Who We Serve</h2>
     <div class="column ga-5 mt-5">
       <!-- <div
         class="d-flex align-center w-75 ml-15"
@@ -15,7 +15,7 @@
           {{ item.name.toLowerCase().replace(/\b\w/g, (c) => c.toUpperCase()) }}
         </p>
       </div> -->
-      <div class="columnAlignCenter">
+      <div v-motion="scrollBottom" class="columnAlignCenter">
         <v-carousel
           :show-arrows="false"
           class="w-75 columnAlignCenter justify-space-between whiteBorder elevation-5"
@@ -44,8 +44,8 @@
           </v-carousel-item>
         </v-carousel>
       <div class="mt-10 columnAlignCenter w-75">
-        <h4 class="text-white font-weight-bold">And Many More!</h4>
-        <p class="text-white">
+        <h4 v-motion="scrollBottom" class="text-white font-weight-bold">And Many More!</h4>
+        <p v-motion="scrollBottom" class="text-white">
           Want to know if our Remote Talent Experts are suitable for you?
         </p>
         <router-link class="primaryButton elevation-5 mt-5" :to="'/contact-us'"
@@ -56,6 +56,10 @@
     </div>
   </section>
 </template>
+
+<script setup>
+  import { scrollBottom } from "@/motions.js";
+</script>
 
 <script>
   import { industries } from "@/cms/industries.service.js";

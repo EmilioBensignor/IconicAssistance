@@ -1,15 +1,15 @@
 <template>
   <section class="heroPagesWave columnAlignCenter">
     <div class="heroPages flexCenter">
-      <h1 class="text-midnight">
+      <h1 v-motion="scrollBottom" class="text-midnight">
         Outsource to
         <span class="text-radioactive">Iconic Virtual Assistants</span>
       </h1>
     </div>
   </section>
   <section class="skyRadioactive">
-    <h2 class="text-white">Frequently Asked Questions</h2>
-    <p class="searchLabel text-white font-weight-bold mt-5 mb-3">How can we help?</p>
+    <h2 v-motion="scrollBottom" class="text-white">Frequently Asked Questions</h2>
+    <p v-motion="scrollBottom" class="searchLabel text-white font-weight-bold mt-5 mb-3">How can we help?</p>
     <v-form class="w-75 buscador rounded-xl">
       <input
         type="search"
@@ -22,6 +22,7 @@
     <div class="w-75 columnAlignCenter ga-5 mt-5">
       <!-- Categories -->
       <div
+        v-motion="scrollBottom"
         class="column align-self-start text-start font-weight-bold text-white ga-3 filterCategories my-5">
         <p class="w-100 text-white text-start mb-3">Filter by the category you are looking for:</p>
         <label class="d-flex align-center ga-3" for="Communication">
@@ -61,6 +62,7 @@
       <v-expansion-panels
         v-for="(item, index) in filteredFaqs"
         :key="index"
+        v-motion="scrollBottom"
         class="faqWrapper">
         <v-expansion-panel
           class="elevation-3"
@@ -115,6 +117,10 @@
       },
     },
   };
+</script>
+
+<script setup>
+  import { scrollBottom } from "@/motions.js"
 </script>
 
 <style scoped>

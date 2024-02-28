@@ -1,7 +1,7 @@
 <template>
   <section class="heroPagesRadioactiveWave">
     <div class="heroPages flexCenter">
-      <h1 class="text-midnight">
+      <h1 v-motion="scrollBottom" class="text-midnight">
         Hiring Excellence At
         <span class="text-radioactive">Iconic Assistants</span>
       </h1>
@@ -26,6 +26,6 @@ import CandidateCriteriaComponent from "@/components/howWeHire/CandidateCriteria
   };
 </script>
 
-<style scoped>
-
-</style>
+<script setup>
+  import { scrollBottom } from "@/motions.js"
+</script>

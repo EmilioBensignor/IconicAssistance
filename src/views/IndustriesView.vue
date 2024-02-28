@@ -6,8 +6,8 @@
     }">
     <div class="heroOverlay flexCenter justify-center">
       <div class="heroPages flexCenter ga-4">
-        <h1 class="text-white">{{ industry.name }}</h1>
-        <p class="text-white">{{ industry.subtitle }}</p>
+        <h1 v-motion="scrollBottom" class="text-white">{{ industry.name }}</h1>
+        <p v-motion="scrollBottom" class="text-white">{{ industry.subtitle }}</p>
       </div>
     </div>
     <img 
@@ -19,11 +19,12 @@
   </section>
   <DifferencesComponent />
   <section class="skyRadioactive">
-    <h2 class="text-white">VAs That Suit Your Industry</h2>
+    <h2 v-motion="scrollBottom" class="text-white">VAs That Suit Your Industry</h2>
     <div v-if="industry" class="columnAlignCenter ga-13 my-5">
       <div
         v-for="(vaType, index) in industry.vaTypes"
         :key="index"
+        v-motion="scrollBottom"
         class="w-75 columnAlignCenter bg-white rounded-xl elevation-5 pb-5">
         <v-img
           :src="getVaTypeUrl(vaType.img)"
@@ -87,6 +88,10 @@
       },
     },
   };
+</script>
+
+<script setup>
+  import { scrollBottom } from "@/motions.js"
 </script>
 
 <style scoped>

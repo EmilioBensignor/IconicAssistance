@@ -1,8 +1,8 @@
 <template>
   <section class="skyRadioactive">
-    <p class="subtitle text-white">How It Works</p>
-    <h2 class="text-white">Unlocking efficiency in four simple steps</h2>
-    <p class="w-75 text-white mt-3">
+    <p v-motion="scrollBottom" class="subtitle text-white">How It Works</p>
+    <h2 v-motion="scrollBottom" class="text-white">Unlocking efficiency in four simple steps</h2>
+    <p v-motion="scrollBottom" class="w-75 text-white mt-3">
       Your business deserves tailored solutions, and we're here to deliver
       exactly that.
     </p>
@@ -10,6 +10,7 @@
       <div
         v-for="item in fourSteps"
         :key="item.number"
+        v-motion="scrollBottom"
         class="flexCenter">
         <div class="circleNumber bg-white elevation-5 mb-3">
           <p class="text-radioactive">{{ item.number }}</p>
@@ -57,6 +58,10 @@
       };
     },
   };
+</script>
+
+<script setup>
+  import { scrollBottom } from "@/motions.js"
 </script>
 
 <style scoped>

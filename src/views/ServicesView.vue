@@ -1,16 +1,17 @@
 <template>
   <section class="heroPagesWave columnAlignCenter">
     <div class="heroPages flexCenter">
-      <h1 class="text-midnight">
+      <h1 v-motion="scrollBottom" class="text-midnight">
         <span class="text-radioactive">Empower</span>
         Your Business Discover Our Services
       </h1>
     </div>
   </section>
   <section class="skyRadioactive">
-    <p class="subtitle text-white">Unlock Efficiency</p>
-    <h2 class="text-white">Ensuring Success</h2>
+    <p v-motion="scrollBottom" class="subtitle text-white">Unlock Efficiency</p>
+    <h2 v-motion="scrollBottom" class="text-white">Ensuring Success</h2>
     <div
+      v-motion="scrollBottom"
       class="w-75 ensuringSuccess columnAlignCenter rounded-xl py-3 my-5 elevation-5">
       <p class="text-white">
         At Iconic, we redefine outsourcing beyond
@@ -47,6 +48,10 @@
       EmpowerComponent,
     },
   };
+</script>
+
+<script setup>
+  import { scrollBottom } from "@/motions.js";
 </script>
 
 <style scoped>

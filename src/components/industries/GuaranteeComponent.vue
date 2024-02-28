@@ -1,6 +1,7 @@
 <template>
   <section class="radioactiveWaves">
     <div
+      v-motion="scrollBottom"
       class="w-75 bg-radioactive columnAlignCenter rounded-xl pb-4 my-5 elevation-5">
       <img
         src="@/assets/images/aboutUs/100-Guarantee-Remote-Talent.png"
@@ -18,3 +19,7 @@
     </div>
   </section>
 </template>
+
+<script setup>
+  import { scrollBottom } from "@/motions.js"
+</script>

@@ -1,14 +1,14 @@
 <template>
   <section class="radioactiveWaves">
-    <p class="subtitle text-radioactive">How We Work</p>
-    <h2 class="text-midnight py-1">Your Prosperity, Our Approach</h2>
-    <p class="py-2">
+    <p v-motion="scrollBottom" class="subtitle text-radioactive">How We Work</p>
+    <h2 v-motion="scrollBottom" class="text-midnight py-1">Your Prosperity, Our Approach</h2>
+    <p v-motion="scrollBottom" class="py-2">
       When collaborating with us, be confident that you'll receive the utmost
       professionalism and expertise. Our remote talent undergo rigorous training
       and possess extensive experience across various domains, such as
       administrative support, marketing, customer service, and beyond.
     </p>
-    <div class="prosperityModel columnAlignCenter mt-5 mb-10">
+    <div v-motion="scrollBottom" class="prosperityModel columnAlignCenter mt-5 mb-10">
       <img
         class="rounded-t-xl elevation-7"
         src="@/assets/images/aboutUs/Professional-Remote-Talent.png"
@@ -25,9 +25,13 @@
     <router-link class="secondaryButton elevation-5 mb-5" :to="'/how-we-hire'">
       Learn About How We Hire
     </router-link>
-    <p class="tools my-5">Some of the tools we use</p>
+    <p v-motion="scrollBottom" class="tools my-5">Some of the tools we use</p>
     <div class="w-75 d-flex justify-center flex-wrap ga-5">
-      <div v-for="(item, index) in tools" :key="index" class="tool">
+      <div 
+        v-for="(item, index) in tools" 
+        :key="index" 
+        v-motion="scrollBottom"
+        class="tool">
         <v-img
           eager
           width="100%"
@@ -113,6 +117,10 @@
       },
     },
   };
+</script>
+
+<script setup>
+  import { scrollBottom } from "@/motions.js"
 </script>
 
 <style scoped>

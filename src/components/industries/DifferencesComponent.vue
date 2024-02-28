@@ -1,11 +1,12 @@
 <template>
   <section class="differences">
-    <p class="subtitle text-radioactive">Differences that matter</p>
-    <h2 class="text-midnight">Why Choose Iconic Assistants?</h2>
+    <p v-motion="scrollBottom" class="subtitle text-radioactive">Differences that matter</p>
+    <h2 v-motion="scrollBottom" class="text-midnight">Why Choose Iconic Assistants?</h2>
     <div class="columnAlignCenter ga-12 my-5">
       <div
         v-for="(choose, index) in differences"
         :key="index"
+        v-motion="scrollBottom"
         class="w-50 choose columnAlignCenter ga-5 pb-5 elevation-4">
         <img 
           :src="getImgUrl(choose.img)" 
@@ -23,6 +24,7 @@
       </div>
     </div>
     <div
+      v-motion="scrollBottom"
       class="w-75 bg-radioactive columnAlignCenter rounded-xl py-4 my-5 elevation-5">
       <p class="text-white">
         At Iconic Assistants, we're
@@ -83,6 +85,10 @@
       },
     },
   };
+</script>
+
+<script setup>
+  import { scrollBottom } from "@/motions.js"
 </script>
 
 <style scoped>

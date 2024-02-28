@@ -4,8 +4,8 @@
     :style="{ backgroundImage: `url(${getImgUrl(blog.img)})` }">
     <div class="heroOverlay flexCenter justify-center">
       <div class="heroPages flexCenter">
-        <h1 class="text-white">{{ blog.title }}</h1>
-        <p class="text-radioactive font-weight-bold mt-3">
+        <h1 v-motion="scrollBottom" class="text-white">{{ blog.title }}</h1>
+        <p v-motion="scrollBottom" class="text-radioactive font-weight-bold mt-3">
           {{ formatDate(blog.date) }}
         </p>
       </div>
@@ -18,7 +18,7 @@
     />
   </section>
   <section class="radioactiveWave">
-    <h2 class="text-midnight">{{ blog.h2 }}</h2>
+    <h2 v-motion="scrollBottom" class="text-midnight">{{ blog.h2 }}</h2>
     <div class="text-start text-midnight px-5 my-5">
       <p class="w-100">{{ blog.intro }}</p>
       <ul class="blogBullets px-3 my-3 column ga-4">
@@ -29,11 +29,12 @@
       <p class="w-100">{{ blog.closer }}</p>
     </div>
     <div class="columnAlignCenter mt-5">
-      <h2 class="text-midnight">Recent Posts</h2>
+      <h2 v-motion="scrollBottom" class="text-midnight">Recent Posts</h2>
       <div class="columnAlignCenter ga-7 py-5">
         <article
           v-for="(recentBlog, index) in recentBlogs"
           :key="index"
+          v-motion="scrollBottom"
           class="recentBlog text-start w-75 elevation-5 rounded-lg">
           <img
             :src="getImgUrl(recentBlog.img)"
@@ -93,6 +94,10 @@
       },
     },
   };
+</script>
+
+<script setup>
+  import { scrollBottom } from "@/motions.js"
 </script>
 
 <style scoped>

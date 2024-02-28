@@ -1,7 +1,7 @@
 <template>
   <section class="heroPagesWave columnAlignCenter">
     <div class="heroPages flexCenter">
-      <h1 class="text-midnight">
+      <h1 v-motion="scrollBottom" class="text-midnight">
         Unlock your business' potencial with
         <span class="text-radioactive">Iconic Assistants</span>
       </h1>
@@ -24,4 +24,8 @@ export default {
     BenefitsComponent,
   }
 };
+</script>
+
+<script setup>
+  import { scrollBottom } from "@/motions.js"
 </script>

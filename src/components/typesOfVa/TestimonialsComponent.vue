@@ -1,11 +1,12 @@
 <template>
   <section class="radioactiveWaves">
-    <p class="subtitle text-midnight">Testimonials</p>
-    <h2 class="text-midnight">Positive Reviews From Our Clients</h2>
+    <p v-motion="scrollBottom" class="subtitle text-midnight">Testimonials</p>
+    <h2 v-motion="scrollBottom" class="text-midnight">Positive Reviews From Our Clients</h2>
     <div class="columnAlignCenter ga-8 my-5">
       <div
         v-for="(item, index) in reviews"
         :key="index"
+        v-motion="scrollBottom"
         class="w-75 column skyRadioactive rounded-xl elevation-5 py-3 pl-4">
         <div class="d-flex justify-self-start mb-3">
           <img 
@@ -49,4 +50,8 @@
       };
     },
   };
+</script>
+
+<script setup>
+  import { scrollBottom } from "@/motions.js";
 </script>
