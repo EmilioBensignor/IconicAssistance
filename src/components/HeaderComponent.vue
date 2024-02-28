@@ -3,29 +3,35 @@
     <v-app-bar
       elevation="3"
       app
-      class="d-flex align-center pb-1 pt-2 bg-radioactive">
+      class="d-flex align-center pt-3 pb-1"
+      :class="isScrolled ? 'bg-white' : 'bg-radioactive'">
       <v-app-bar-nav-icon
         icon="mdi-menu"
+        :color="isScrolled ? 'radioactive' : 'white'"
         size="x-large"
         @click="showMenu = !showMenu"></v-app-bar-nav-icon>
       <v-toolbar-title class="align-center navHeight">
-        <router-link :to="'/'">
-          <IconicLogo class="text-white" />
+        <router-link class="text-decoration-none" :to="'/'">
+          <IconicLogo :color="isScrolled ? 'blue' : 'white' " />
         </router-link>
       </v-toolbar-title>
     </v-app-bar>
-    <v-navigation-drawer v-model="showMenu" app class="mt-2">
+    <v-navigation-drawer v-model="showMenu" app class="mt-3">
       <v-list tag="ul">
         <p class="navTitles pt-1 pl-4">About</p>
         <li v-for="item in aboutMenu" :key="item.title">
           <v-list-item :to="item.path">
-            <v-list-item-title class="pl-4 text-midnight">{{ item.title }}</v-list-item-title>
+            <v-list-item-title class="pl-4 text-midnight">{{
+              item.title
+            }}</v-list-item-title>
           </v-list-item>
         </li>
         <p class="navTitles pt-1 pl-4">Learn</p>
         <li v-for="item in learnMenu" :key="item.title">
           <v-list-item :to="item.path">
-            <v-list-item-title class="pl-4 text-midnight">{{ item.title }}</v-list-item-title>
+            <v-list-item-title class="pl-4 text-midnight">{{
+              item.title
+            }}</v-list-item-title>
           </v-list-item>
         </li>
         <li>
@@ -59,6 +65,7 @@
     data() {
       return {
         showMenu: false,
+        isScrolled: false,
         aboutMenu: [
           {
             path: "/about-us",
@@ -97,10 +104,35 @@
         ],
       };
     },
+    mounted() {
+      window.addEventListener("scroll", this.handleScroll);
+    },
+    beforeDestroy() {
+      window.removeEventListener("scroll", this.handleScroll);
+    },
+    methods: {
+      handleScroll() {
+        const scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+        const windowHeight = window.innerHeight;
+
+        const threshold = windowHeight * 0.5;
+
+        if (scrollTop >= threshold) {
+          this.isScrolled = true;
+        } else {
+          this.isScrolled = false;
+        }
+      },
+    },
   };
 </script>
 
 <style scoped>
+  .v-app-bar {
+    transition: background-color 0.3s ease;
+  }
+
   .v-toolbar__content > .v-toolbar-title {
     margin: 0;
   }
