@@ -1,4 +1,5 @@
 <template>
+  <HeaderPagesComponent />
   <section class="heroPagesRadioactiveWave">
     <div class="heroPages flexCenter">
       <h1 v-motion="scrollBottom" class="text-midnight">
@@ -13,19 +14,21 @@
 </template>
 
 <script>
-import ExceptionalSkillComponent from "@/components/howWeHire/ExceptionalSkillComponent.vue";
-import OutsourceTopComponent from "@/components/howWeHire/OutsourceTopComponent.vue";
-import CandidateCriteriaComponent from "@/components/howWeHire/CandidateCriteriaComponent.vue";
+  import HeaderPagesComponent from "@/components/HeaderPagesComponent.vue";
+  import ExceptionalSkillComponent from "@/components/howWeHire/ExceptionalSkillComponent.vue";
+  import OutsourceTopComponent from "@/components/howWeHire/OutsourceTopComponent.vue";
+  import CandidateCriteriaComponent from "@/components/howWeHire/CandidateCriteriaComponent.vue";
 
   export default {
-    components:{
+    components: {
+      HeaderPagesComponent,
       ExceptionalSkillComponent,
       OutsourceTopComponent,
       CandidateCriteriaComponent,
-    }
+    },
   };
 </script>
 
 <script setup>
-  import { scrollBottom } from "@/motions.js"
+  import { scrollBottom } from "@/motions.js";
 </script>

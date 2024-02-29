@@ -1,4 +1,5 @@
 <template>
+  <HeaderPagesComponent />
   <section class="heroPagesWave columnAlignCenter">
     <div class="heroPages flexCenter">
       <h1 v-motion="scrollBottom" class="text-midnight">
@@ -8,8 +9,14 @@
     </div>
   </section>
   <section class="skyRadioactive">
-    <h2 v-motion="scrollBottom" class="text-white">Frequently Asked Questions</h2>
-    <p v-motion="scrollBottom" class="searchLabel text-white font-weight-bold mt-5 mb-3">How can we help?</p>
+    <h2 v-motion="scrollBottom" class="text-white">
+      Frequently Asked Questions
+    </h2>
+    <p
+      v-motion="scrollBottom"
+      class="searchLabel text-white font-weight-bold mt-5 mb-3">
+      How can we help?
+    </p>
     <v-form class="w-75 buscador rounded-xl">
       <input
         type="search"
@@ -24,7 +31,9 @@
       <div
         v-motion="scrollBottom"
         class="column align-self-start text-start font-weight-bold text-white ga-3 filterCategories my-5">
-        <p class="w-100 text-white text-start mb-3">Filter by the category you are looking for:</p>
+        <p class="w-100 text-white text-start mb-3">
+          Filter by the category you are looking for:
+        </p>
         <label class="d-flex align-center ga-3" for="Communication">
           <input
             id="Communication"
@@ -85,7 +94,12 @@
 
 <script>
   import { faqs } from "@/cms/faqs.service.js";
+  import HeaderPagesComponent from "@/components/HeaderPagesComponent.vue";
+
   export default {
+    components: {
+      HeaderPagesComponent,
+    },
     data() {
       return {
         faqSearch: "",
@@ -120,15 +134,15 @@
 </script>
 
 <script setup>
-  import { scrollBottom } from "@/motions.js"
+  import { scrollBottom } from "@/motions.js";
 </script>
 
 <style scoped>
-.searchLabel{
-  font-size: 1.2rem;
-}
-input[type="checkbox"]{
-  width: 7vw;
-  height: 7vw;
-}
+  .searchLabel {
+    font-size: 1.2rem;
+  }
+  input[type="checkbox"] {
+    width: 7vw;
+    height: 7vw;
+  }
 </style>

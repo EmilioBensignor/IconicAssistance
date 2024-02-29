@@ -1,4 +1,5 @@
 <template>
+  <HeaderPagesComponent />
   <section class="heroPagesWave columnAlignCenter">
     <div class="heroPages flexCenter">
       <h1 v-motion="scrollBottom" class="text-midnight">
@@ -41,10 +42,12 @@
 </template>
 
 <script>
+  import HeaderPagesComponent from "@/components/HeaderPagesComponent.vue";
   import EmpowerComponent from "@/components/services/EmpowerComponent.vue";
 
   export default {
     components: {
+      HeaderPagesComponent,
       EmpowerComponent,
     },
   };

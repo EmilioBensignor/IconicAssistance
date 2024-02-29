@@ -1,4 +1,5 @@
 <template>
+  <HeaderTransparentComponent />
   <section class="landing pa-0">
     <video autoplay muted loop class="backgroundVideo">
       <source
@@ -15,7 +16,7 @@
       />
     </video>
     <div class="overlay"></div>
-    <div class="hero flexCenter ga-5 mt-15">
+    <div class="hero flexCenter ga-5">
       <h1 class="text-white">
         Outsource Anything with
         <span class="text-blueSky">ICONIC ASSISTANTS</span>
@@ -50,6 +51,7 @@
 </template>
 
 <script>
+  import HeaderTransparentComponent from "@/components/HeaderTransparentComponent.vue"
   import WhoWeAreComponent from "@/components/home/WhoWeAreComponent.vue";
   import WhyUsComponent from "@/components/home/WhyUsComponent.vue";
   import OurServiceComponent from "@/components/home/OurServiceComponent.vue";
@@ -61,6 +63,7 @@
 
   export default {
     components: {
+      HeaderTransparentComponent,
       WhoWeAreComponent,
       WhyUsComponent,
       OurServiceComponent,
@@ -80,13 +83,14 @@
 
 <script setup>
   import { scrollBottom } from "@/motions.js"
+import HeaderTransparentComponentVue from '@/components/HeaderTransparentComponent.vue';
 </script>
 
 <style scoped>
   .landing {
     position: relative;
     width: 100vw;
-    height: 85vh;
+    height: 95vh;
     overflow: hidden;
   }
 
@@ -111,6 +115,7 @@
   .hero {
     width: 90vw;
     z-index: 3;
+    margin-top: 20vh;
   }
 
   .text-landing {

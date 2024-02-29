@@ -1,4 +1,5 @@
 <template>
+  <HeaderPagesComponent />
   <section class="heroPagesWave columnAlignCenter">
     <div class="heroPages flexCenter">
       <h1 v-motion="scrollBottom" class="text-midnight">
@@ -29,7 +30,9 @@
   <!-- Step 2 -->
   <section class="radioactiveWaves">
     <p v-motion="scrollBottom" class="subtitle">Step 2</p>
-    <h2 v-motion="scrollBottom" class="text-midnight">Pick The Right Candidate</h2>
+    <h2 v-motion="scrollBottom" class="text-midnight">
+      Pick The Right Candidate
+    </h2>
     <p v-motion="scrollBottom" class="w-75 my-3">
       Our HR team selects top candidates from our database, presenting you with
       a shortlist. Meet them with our representative for a perfect business
@@ -67,7 +70,9 @@
   <!-- Step 4 -->
   <section class="skyRadioactiveWaves">
     <p v-motion="scrollBottom" class="subtitle">Step 4</p>
-    <h2 v-motion="scrollBottom" class="text-midnight">Experience continual support</h2>
+    <h2 v-motion="scrollBottom" class="text-midnight">
+      Experience continual support
+    </h2>
     <p v-motion="scrollBottom" class="w-75 my-3">
       Iconic Assistants offers unwavering support, addressing inquiries and
       providing guidance whenever needed. You're never alone on your path to
@@ -86,5 +91,15 @@
 </template>
 
 <script setup>
-  import { scrollBottom } from "@/motions.js"
+  import { scrollBottom } from "@/motions.js";
+</script>
+
+<script>
+  import HeaderPagesComponent from "@/components/HeaderPagesComponent.vue";
+
+  export default {
+    components: {
+      HeaderPagesComponent,
+    },
+  };
 </script>

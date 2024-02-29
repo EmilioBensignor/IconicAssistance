@@ -1,4 +1,5 @@
 <template>
+  <HeaderTransparentComponent />
   <section
     class="heroIndustries flexCenter"
     :style="{
@@ -45,12 +46,14 @@
 </template>
 
 <script>
+  import HeaderTransparentComponent from "@/components/HeaderTransparentComponent.vue"
   import { industries } from "@/cms/industries.service.js";
   import DifferencesComponent from "@/components/industries/DifferencesComponent.vue";
   import GuaranteeComponent from "@/components/industries/GuaranteeComponent.vue";
 
   export default {
     components: {
+      HeaderTransparentComponent,
       DifferencesComponent,
       GuaranteeComponent,
     },

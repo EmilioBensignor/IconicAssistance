@@ -1,4 +1,5 @@
 <template>
+  <HeaderPagesComponent />
   <section class="heroPagesWave columnAlignCenter">
     <div class="heroPages flexCenter">
       <h1 class="text-midnight" v-motion="scrollBottom">
@@ -19,6 +20,7 @@
 </script>
 
 <script>
+  import HeaderPagesComponent from "@/components/HeaderPagesComponent.vue";
   import AboutUsComponent from "@/components/aboutUs/AboutUsComponent.vue";
   import HowWeWorkComponent from "@/components/aboutUs/HowWeWorkComponent.vue";
   import OurMissionComponent from "@/components/aboutUs/OurMissionComponent.vue";
@@ -27,6 +29,7 @@
 
   export default {
     components: {
+      HeaderPagesComponent,
       AboutUsComponent,
       HowWeWorkComponent,
       OurMissionComponent,

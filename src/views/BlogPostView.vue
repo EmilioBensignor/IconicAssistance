@@ -1,4 +1,5 @@
 <template>
+  <HeaderTransparentComponent />
   <section
     class="heroSection"
     :style="{ backgroundImage: `url(${getImgUrl(blog.img)})` }">
@@ -53,8 +54,12 @@
 
 <script>
   import { blogs } from "@/cms/blogs.service.js";
+  import HeaderTransparentComponent from "@/components/HeaderTransparentComponent.vue"
 
   export default {
+    components: {
+      HeaderTransparentComponent,
+    },
     data() {
       return {
         blogs: blogs,
@@ -97,6 +102,7 @@
 </script>
 
 <script setup>
+
   import { scrollBottom } from "@/motions.js"
 </script>
 

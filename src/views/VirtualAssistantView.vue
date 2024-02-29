@@ -1,4 +1,5 @@
 <template>
+  <HeaderPagesComponent />
   <section class="heroPagesWave columnAlignCenter">
     <div class="heroPages flexCenter">
       <h1 v-motion="scrollBottom" class="text-midnight">
@@ -38,7 +39,9 @@
         <p>{{ task.text }}</p>
       </div>
     </div>
-    <p v-motion="scrollBottom" class="w-75 text-white pMedium font-weight-bold mt-10">
+    <p
+      v-motion="scrollBottom"
+      class="w-75 text-white pMedium font-weight-bold mt-10">
       Other types of VAs that might interest you:
     </p>
     <div class="w-75 columnAlignCenter ga-7 mt-7">
@@ -67,8 +70,12 @@
 
 <script>
   import { vaTypes } from "@/cms/typesva.service.js";
+  import HeaderPagesComponent from "@/components/HeaderPagesComponent.vue";
 
   export default {
+    components: {
+      HeaderPagesComponent,
+    },
     data() {
       return {
         vaTypes: vaTypes,
@@ -80,9 +87,9 @@
       this.fetchAssistantDetails();
     },
     watch: {
-      '$route'(){
+      $route() {
         this.fetchAssistantDetails();
-      }
+      },
     },
     methods: {
       fetchAssistantDetails() {
@@ -100,7 +107,7 @@
 </script>
 
 <script setup>
-  import { scrollBottom } from "@/motions.js"
+  import { scrollBottom } from "@/motions.js";
 </script>
 
 <style scoped>

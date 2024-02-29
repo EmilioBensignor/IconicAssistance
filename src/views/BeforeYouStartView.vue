@@ -1,4 +1,5 @@
 <template>
+  <HeaderPagesComponent />
   <section class="heroPagesWave columnAlignCenter">
     <div class="heroPages flexCenter">
       <h1 v-motion="scrollBottom" class="text-midnight">
@@ -13,17 +14,19 @@
 </template>
 
 <script>
-import OpportunitiesComponent from "@/components/beforeYouStart/OpportunitiesComponent.vue";
-import IsThisYou from "@/components/beforeYouStart/IsThisYou.vue";
-import PerfectMatchComponent from "@/components/beforeYouStart/PerfectMatchComponent.vue";
+  import HeaderPagesComponent from "@/components/HeaderPagesComponent.vue";
+  import OpportunitiesComponent from "@/components/beforeYouStart/OpportunitiesComponent.vue";
+  import IsThisYou from "@/components/beforeYouStart/IsThisYou.vue";
+  import PerfectMatchComponent from "@/components/beforeYouStart/PerfectMatchComponent.vue";
 
-export default {
-  components:{
-    OpportunitiesComponent,
-    IsThisYou,
-    PerfectMatchComponent,
-  }
-}
+  export default {
+    components: {
+      HeaderPagesComponent,
+      OpportunitiesComponent,
+      IsThisYou,
+      PerfectMatchComponent,
+    },
+  };
 </script>
 
 <script setup>

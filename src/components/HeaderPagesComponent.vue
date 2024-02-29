@@ -1,22 +1,24 @@
 <template>
   <nav>
     <v-app-bar
-      elevation="3"
+      elevation="0"
       app
-      class="d-flex align-center pt-3 pb-1"
-      :class="isScrolled ? 'bg-white' : 'bg-radioactive'">
+      class="bg-white d-flex align-center pt-3 pb-1">
       <v-app-bar-nav-icon
         icon="mdi-menu"
-        :color="isScrolled ? 'radioactive' : 'white'"
+        color="radioactive"
+        class="shadow-15"
         size="x-large"
         @click="showMenu = !showMenu"></v-app-bar-nav-icon>
       <v-toolbar-title class="align-center navHeight">
         <router-link class="text-decoration-none" :to="'/'">
-          <IconicLogo :color="isScrolled ? 'blue' : 'white' " />
+          <IconicLogo
+            class="shadow-15"
+            color="blue" />
         </router-link>
       </v-toolbar-title>
     </v-app-bar>
-    <v-navigation-drawer v-model="showMenu" app class="mt-3">
+    <v-navigation-drawer v-model="showMenu" app class="mt-4">
       <v-list tag="ul">
         <p class="navTitles pt-1 pl-4">About</p>
         <li v-for="item in aboutMenu" :key="item.title">
@@ -58,7 +60,7 @@
   import IconicLogo from "./icons/IconicLogo.vue";
 
   export default {
-    name: "HeaderComponent",
+    name: "HeaderTransparentComponent",
     components: {
       IconicLogo,
     },
@@ -131,6 +133,7 @@
 <style scoped>
   .v-app-bar {
     transition: background-color 0.3s ease;
+    backdrop-filter: blur(5px);
   }
 
   .v-toolbar__content > .v-toolbar-title {

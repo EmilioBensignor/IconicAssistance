@@ -1,7 +1,6 @@
 <template>
-  <v-app class="pt-15">
-    <HeaderComponent />
-    <div class="pt-4">
+  <v-app>
+    <div>
       <router-view />
     </div>
     <FooterComponent class="pt-15" />
@@ -9,13 +8,11 @@
 </template>
 
 <script>
-  import HeaderComponent from "@/components/HeaderComponent.vue";
   import FooterComponent from "@/components/FooterComponent.vue";
 
   export default {
     name: "App",
     components: {
-      HeaderComponent,
       FooterComponent,
     },
     watch: {
@@ -253,7 +250,7 @@
   /* Pages */
   .heroPages {
     width: 85%;
-    padding: 10vw 0 22vw 0;
+    padding: 20vh 0 22vw 0;
   }
 
   /* Animations */

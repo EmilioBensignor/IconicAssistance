@@ -1,7 +1,10 @@
 <template>
+  <HeaderPagesComponent />
   <section class="heroPagesWave columnAlignCenter">
     <div class="heroPages flexCenter">
-      <h1 v-motion="scrollBottom" class="text-midnight">Contact Us For a Free Demo</h1>
+      <h1 v-motion="scrollBottom" class="text-midnight">
+        Contact Us For a Free Demo
+      </h1>
     </div>
   </section>
   <section class="skyRadioactive">
@@ -104,14 +107,14 @@
     </div>
   </section>
 </template>
-<!-- 
-<script
-  type="text/javascript"
-  src="https://assets.calendly.com/assets/external/widget.js"
-  async></script> -->
 
 <script>
+  import HeaderPagesComponent from "@/components/HeaderPagesComponent.vue";
+
   export default {
+    components: {
+      HeaderPagesComponent,
+    },
     data() {
       return {
         faqs: [
@@ -138,5 +141,5 @@
 </script>
 
 <script setup>
-  import { scrollBottom } from "@/motions.js"
+  import { scrollBottom } from "@/motions.js";
 </script>

@@ -1,4 +1,5 @@
 <template>
+  <HeaderPagesComponent />
   <section class="heroPagesWave columnAlignCenter">
     <div class="heroPages flexCenter">
       <h1 v-motion="scrollBottom" class="text-midnight">
@@ -13,19 +14,21 @@
 </template>
 
 <script>
-import WhatAreVAComponent from "@/components/whatIsVa/WhatAreVAComponent.vue";
-import HowItWorksComponent from "@/components/whatIsVa/HowItWorksComponent.vue";
-import BenefitsComponent from "@/components/whatIsVa/BenefitsComponent.vue";
+  import HeaderPagesComponent from "@/components/HeaderPagesComponent.vue";
+  import WhatAreVAComponent from "@/components/whatIsVa/WhatAreVAComponent.vue";
+  import HowItWorksComponent from "@/components/whatIsVa/HowItWorksComponent.vue";
+  import BenefitsComponent from "@/components/whatIsVa/BenefitsComponent.vue";
 
-export default {
-  components: {
-    WhatAreVAComponent,
-    HowItWorksComponent,
-    BenefitsComponent,
-  }
-};
+  export default {
+    components: {
+      HeaderPagesComponent,
+      WhatAreVAComponent,
+      HowItWorksComponent,
+      BenefitsComponent,
+    },
+  };
 </script>
 
 <script setup>
-  import { scrollBottom } from "@/motions.js"
+  import { scrollBottom } from "@/motions.js";
 </script>

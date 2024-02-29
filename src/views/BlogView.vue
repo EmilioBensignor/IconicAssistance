@@ -1,7 +1,10 @@
 <template>
+  <HeaderPagesComponent />
   <section class="heroPagesWave columnAlignCenter">
     <div class="heroPages flexCenter">
-      <h1 v-motion="scrollBottom" class="text-midnight">Explore Our Virtual Assistant Blog</h1>
+      <h1 v-motion="scrollBottom" class="text-midnight">
+        Explore Our Virtual Assistant Blog
+      </h1>
     </div>
   </section>
   <section class="skyRadioactive">
@@ -44,7 +47,12 @@
 
 <script>
   import { blogs } from "@/cms/blogs.service.js";
+  import HeaderPagesComponent from "@/components/HeaderPagesComponent.vue";
+
   export default {
+    components: {
+      HeaderPagesComponent,
+    },
     data() {
       return {
         blogSearch: "",
@@ -74,7 +82,8 @@
         );
       },
       getImgUrl(imgName) {
-        return new URL(`/src/assets/images/blogs/${imgName}`, import.meta.url).href;
+        return new URL(`/src/assets/images/blogs/${imgName}`, import.meta.url)
+          .href;
       },
     },
   };
