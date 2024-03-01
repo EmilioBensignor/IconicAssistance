@@ -8,7 +8,8 @@
         >Contact Us!</router-link
       >
       <div>
-        REDES
+        <v-icon icon="mdi-email"></v-icon>
+        <v-icon icon="mdi-map-marker"></v-icon>
       </div>
     </div>
     <div class="footerLinks align-self-start column ga-10 ml-8 my-3">

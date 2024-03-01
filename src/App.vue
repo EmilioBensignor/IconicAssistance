@@ -110,6 +110,12 @@
     line-height: 1.3rem;
     text-decoration: none;
     padding: 4vw 7vw;
+    transition: all ease 0.2s;
+  }
+
+  .primaryButton:hover{
+    background-color: transparent;
+    color: white;
   }
 
   .secondaryButton {
@@ -123,6 +129,12 @@
     line-height: 1.3rem;
     text-decoration: none;
     padding: 4vw 7vw;
+    transition: all ease 0.2s;
+  }
+
+  .secondaryButton:hover{
+    background-color: white;
+    color: #373ae6;
   }
 
   /* BackGrounds */
