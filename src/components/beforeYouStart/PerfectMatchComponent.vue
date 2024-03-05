@@ -12,7 +12,7 @@
         <img
           src="@/assets/images/beforeYouStart/Tailored-Skill.png"
           alt="Tailored Skill"
-          class="shadow-3"
+          class="shadow-2"
           width="25%" />
       </div>
       <div v-motion="scrollBottom" class="w-75 columnAlignCenter border-rb rounded-be-xl py-3 shadow-3">
@@ -23,7 +23,7 @@
         <img
           src="@/assets/images/beforeYouStart/Industry-Insights.png"
           alt="Industry Insights"
-          class="shadow-3"
+          class="shadow-2"
           width="25%" />
       </div>
       <div v-motion="scrollBottom" class="w-75 columnAlignCenter border-lt rounded-ts-xl py-3 shadow-3">
@@ -34,7 +34,7 @@
         <img
           src="@/assets/images/beforeYouStart/Experiental-Synergy.png"
           alt="Experiental Synergy"
-          class="shadow-3"
+          class="shadow-2"
           width="25%" />
       </div>
       <div v-motion="scrollBottom" class="w-75 columnAlignCenter border-rt rounded-te-xl py-3 shadow-3">
@@ -45,7 +45,7 @@
         <img
           src="@/assets/images/beforeYouStart/Personalized-Collaboration.png"
           alt="Personalized Collaboration"
-          class="shadow-3"
+          class="shadow-2"
           width="25%" />
       </div>
     </div>

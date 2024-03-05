@@ -2,6 +2,7 @@
   <v-app>
     <div>
       <router-view />
+      <CallToAction />
     </div>
     <FooterComponent class="pt-15" />
   </v-app>
@@ -9,10 +10,12 @@
 
 <script>
   import FooterComponent from "@/components/FooterComponent.vue";
+  import CallToAction from "@/components/calendly/CallToAction.vue";
 
   export default {
     name: "App",
     components: {
+      CallToAction,
       FooterComponent,
     },
     watch: {
@@ -214,6 +217,10 @@
   .shadow-5 {
     -webkit-filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
     filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
+  }
+  .shadow-35 {
+    -webkit-filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.35));
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.35));
   }
   .shadow-3 {
     -webkit-filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.3));

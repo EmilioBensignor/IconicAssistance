@@ -24,7 +24,7 @@
       v-motion="scrollBottom"
       class="rounded-circle elevation-5 my-5" />
     <router-link class="primaryButton elevation-5 mt-5" :to="'/contact-us'"
-      >Request a Consultation</router-link
+      >Request a Free Consultation</router-link
     >
   </section>
   <!-- Step 2 -->
@@ -64,7 +64,7 @@
       v-motion="scrollBottom"
       class="rounded-circle elevation-5 my-5" />
     <router-link class="primaryButton elevation-5 my-5" :to="'/types-of-vas'"
-      >Services</router-link
+      >Types of VAs</router-link
     >
   </section>
   <!-- Step 4 -->

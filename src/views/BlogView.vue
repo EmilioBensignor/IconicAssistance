@@ -37,7 +37,7 @@
           <router-link
             class="secondaryButton elevation-5 mt-2"
             :to="`/blog-post/${item.slug}`"
-            >Read full post</router-link
+            >Read Full Post</router-link
           >
         </div>
       </article>

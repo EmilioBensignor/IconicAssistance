@@ -7,16 +7,16 @@
       <router-link :to="'/contact-us'" class="primaryButton elevation-5 my-3">Contact Us!</router-link>
       <div class="w-75 social d-flex justify-space-between mb-5">
         <a href="mailto:ivan.j@iconicassistants.com">
-          <img src="@/assets/images/footer/Email-Icon.png" alt="Email Icon" width="40%">
+          <img src="@/assets/images/footer/Email-Icon.png" alt="Email Icon" width="35%">
         </a>
         <!-- <a href="https://www.facebook.com/YourPage">
-          <img src="@/assets/images/footer/Facebook-Icon.png" alt="Facebook Icon" width="40%">
+          <img src="@/assets/images/footer/Facebook-Icon.png" alt="Facebook Icon" width="35%">
         </a> -->
         <a href="https://www.instagram.com/iconicassistants/">
-          <img src="@/assets/images/footer/Instagram-Icon.png" alt="Instagram Icon" width="40%">
+          <img src="@/assets/images/footer/Instagram-Icon.png" alt="Instagram Icon" width="35%">
         </a>
         <a href="https://www.linkedin.com/company/iconic-assistance/posts/?feedView=all&viewAsMember=true">
-          <img src="@/assets/images/footer/Linkedin-Icon.png" alt="Linkedin Icon" width="40%">
+          <img src="@/assets/images/footer/Linkedin-Icon.png" alt="Linkedin Icon" width="35%">
         </a>
       </div>
     </div>

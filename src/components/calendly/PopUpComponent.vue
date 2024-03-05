@@ -19,6 +19,8 @@
     text-decoration: none;
     padding: 3vw 5vw;
     transition: all ease 0.2s;
+    /* Mobile */
+    display: none;
   }
 
   .popUp:hover {

@@ -3,7 +3,7 @@
     <v-app-bar
       elevation="0"
       app
-      class="d-flex align-center pt-1 pb-3"
+      class="d-flex align-center py-1"
       :class="isScrolled ? 'bg-white' : 'bg-transparent'">
       <v-app-bar-nav-icon
         icon="mdi-menu"
@@ -12,19 +12,21 @@
         size="x-large"
         @click="showMenu = !showMenu"></v-app-bar-nav-icon>
       <v-toolbar-title>
-        <v-toolbar-title__placeholder class="d-flex align-center justify-space-between">
-          <router-link class="text-decoration-none" :to="'/'">
-            <IconicLogo
-              class="shadow-15"
-              :color="isScrolled ? 'blue' : 'white'" />
-          </router-link>
-          <PopUpComponent />
-        </v-toolbar-title__placeholder>
+        <router-link class="text-decoration-none" :to="'/'">
+          <IconicLogo
+            class="shadow-15 mt-1"
+            :color="isScrolled ? 'blue' : 'white'" />
+        </router-link>
       </v-toolbar-title>
     </v-app-bar>
-    <v-navigation-drawer v-model="showMenu" app class="mt-4">
-      <v-list tag="ul">
-        <p class="navTitles pt-1 pl-4">About</p>
+    <v-navigation-drawer v-model="showMenu" app class="mt-2">
+      <v-list class="pt-5" tag="ul">
+        <a
+          class="bg-radioactive rounded-xl text-decoration-none ml-6 px-15 py-2"
+          href="/contact-us"
+          >Book a Call</a
+        >
+        <p class="navTitles pt-5 pl-4">About</p>
         <li v-for="item in aboutMenu" :key="item.title">
           <v-list-item :to="item.path">
             <v-list-item-title class="pl-4 text-midnight">{{
@@ -62,13 +64,11 @@
 
 <script>
   import IconicLogo from "./icons/IconicLogo.vue";
-  import PopUpComponent from "@/components/calendly/PopUpComponent.vue";
 
   export default {
     name: "HeaderTransparentComponent",
     components: {
       IconicLogo,
-      PopUpComponent,
     },
     data() {
       return {

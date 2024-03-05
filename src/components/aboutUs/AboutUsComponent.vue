@@ -23,7 +23,7 @@
       <router-link
         class="primaryButton elevation-7 mt-3"
         :to="'/contact-us'"
-        >Request a Consultation</router-link
+        >Request a Free Consultation</router-link
       >
     </div>
   </section>

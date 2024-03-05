@@ -95,5 +95,5 @@
 </script>
 
 <script setup>
-  import { scrollBottom } from "@/motions.js"
+  import { scrollBottom } from "@/motions.js";
 </script>
