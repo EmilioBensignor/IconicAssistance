@@ -3,7 +3,7 @@
     <v-app-bar
       elevation="0"
       app
-      class="d-flex align-center pt-3 pb-1"
+      class="d-flex align-center pt-1 pb-3"
       :class="isScrolled ? 'bg-white' : 'bg-transparent'">
       <v-app-bar-nav-icon
         icon="mdi-menu"
@@ -11,12 +11,15 @@
         class="shadow-15"
         size="x-large"
         @click="showMenu = !showMenu"></v-app-bar-nav-icon>
-      <v-toolbar-title class="align-center navHeight">
-        <router-link class="text-decoration-none" :to="'/'">
-          <IconicLogo
-            class="shadow-15"
-            :color="isScrolled ? 'blue' : 'white'" />
-        </router-link>
+      <v-toolbar-title>
+        <v-toolbar-title__placeholder class="d-flex align-center justify-space-between">
+          <router-link class="text-decoration-none" :to="'/'">
+            <IconicLogo
+              class="shadow-15"
+              :color="isScrolled ? 'blue' : 'white'" />
+          </router-link>
+          <PopUpComponent />
+        </v-toolbar-title__placeholder>
       </v-toolbar-title>
     </v-app-bar>
     <v-navigation-drawer v-model="showMenu" app class="mt-4">
@@ -59,11 +62,13 @@
 
 <script>
   import IconicLogo from "./icons/IconicLogo.vue";
+  import PopUpComponent from "@/components/calendly/PopUpComponent.vue";
 
   export default {
     name: "HeaderTransparentComponent",
     components: {
       IconicLogo,
+      PopUpComponent,
     },
     data() {
       return {
@@ -139,6 +144,11 @@
 
   .v-toolbar__content > .v-toolbar-title {
     margin: 0;
+    align-self: stretch;
+  }
+  .v-toolbar-title__placeholder {
+    display: flex !important;
+    align-items: center !important;
   }
   .navTitles {
     font-family: "Poppins", sans-serif;

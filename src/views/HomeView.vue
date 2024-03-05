@@ -23,15 +23,13 @@
         outsourcing needs.
         <span class="font-weight-bold">Starting at $9.55/Hr.</span>
       </p>
-      <div>
-        <button
-          class="navbarCall elevation-10"
-          @click="calendly">
-          Hire ICONIC
-        </button>
-      </div>
+      <a
+        href=""
+        class="heroCall elevation-10 mt-2"
+        onclick="Calendly.initPopupWidget({url:'https://calendly.com/iconic-assistants/15min-ij'});return false;"
+        >Hire ICONIC</a
+      >
     </div>
-    <CalendlyComponent />
   </section>
   <WhoWeAreComponent />
   <WhyUsComponent />
@@ -56,7 +54,6 @@
 
 <script>
   import HeaderTransparentComponent from "@/components/HeaderTransparentComponent.vue";
-  import CalendlyComponent from "@/components/CalendlyComponent.vue"
 
   import WhoWeAreComponent from "@/components/home/WhoWeAreComponent.vue";
   import WhyUsComponent from "@/components/home/WhyUsComponent.vue";
@@ -70,7 +67,6 @@
   export default {
     components: {
       HeaderTransparentComponent,
-      CalendlyComponent,
       WhoWeAreComponent,
       WhyUsComponent,
       OurServiceComponent,
@@ -79,11 +75,6 @@
       IndustriesComponent,
       PricingComponent,
       FAQsComponent,
-    },
-    methods: {
-      calendly() {
-        console.log("Calendly Popup");
-      },
     },
   };
 </script>
@@ -130,9 +121,10 @@
     font-weight: 500;
   }
 
-  .navbarCall {
+  .heroCall {
     background-color: #373ae6;
     color: white;
+    text-decoration: none;
     font-family: "Poppins", sans-serif;
     font-size: 1.3rem;
     font-weight: 600;
@@ -141,7 +133,7 @@
     transition: all ease 0.2s;
   }
 
-  .navbarCall:hover {
+  .heroCall:hover {
     background-color: #0cb8f1;
     border-radius: 0 50px 0 50px;
   }

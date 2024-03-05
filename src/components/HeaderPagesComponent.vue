@@ -1,21 +1,20 @@
 <template>
   <nav>
-    <v-app-bar
-      elevation="0"
-      app
-      class="bg-white d-flex align-center pt-3 pb-1">
+    <v-app-bar elevation="0" app class="bg-white d-flex align-center pt-3 pb-1">
       <v-app-bar-nav-icon
         icon="mdi-menu"
         color="radioactive"
         class="shadow-15"
         size="x-large"
         @click="showMenu = !showMenu"></v-app-bar-nav-icon>
-      <v-toolbar-title class="align-center navHeight">
-        <router-link class="text-decoration-none" :to="'/'">
-          <IconicLogo
-            class="shadow-15"
-            color="blue" />
-        </router-link>
+      <v-toolbar-title>
+        <v-toolbar-title__placeholder
+          class="d-flex align-center justify-space-between">
+          <router-link class="text-decoration-none" :to="'/'">
+            <IconicLogo class="shadow-15" color="blue" />
+          </router-link>
+          <PopUpComponent />
+        </v-toolbar-title__placeholder>
       </v-toolbar-title>
     </v-app-bar>
     <v-navigation-drawer v-model="showMenu" app class="mt-4">
@@ -58,11 +57,13 @@
 
 <script>
   import IconicLogo from "./icons/IconicLogo.vue";
+  import PopUpComponent from "@/components/calendly/PopUpComponent.vue";
 
   export default {
     name: "HeaderTransparentComponent",
     components: {
       IconicLogo,
+      PopUpComponent,
     },
     data() {
       return {
