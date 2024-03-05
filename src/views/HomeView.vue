@@ -1,7 +1,7 @@
 <template>
   <HeaderTransparentComponent />
   <section class="landing pa-0">
-    <video autoplay muted loop class="backgroundVideo">
+    <video preload="yes" autoplay muted loop class="backgroundVideo">
       <source
         src="@/assets/videos/Outsource-Anything-with-Iconic-Assistants.mp4"
         type="video/mp4" />
