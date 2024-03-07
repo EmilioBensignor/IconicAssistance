@@ -62,7 +62,7 @@
           </v-img>
         </div>
         <p class="w-75 text-midnight font-weight-bold">{{ item.name }}</p>
-        <div class="circleNumber rounded-circle elevation-3">
+        <div class="circleNumber rounded-circle elevation-3 ml-1">
           <p class="font-weight-bold">></p>
         </div>
       </router-link>

@@ -16,7 +16,7 @@
           <div class="flexCenter px-4 ga-1">
             <img
               class="shadow-15 mt-6 mb-2"
-              width="23%"
+              width="25%"
               src="@/assets/images/pricing/full-time-remote-talent.png"
               alt="Full Time Remote Talent" />
             <p>Full-Time</p>
@@ -47,7 +47,7 @@
           <div class="px-4 flexCenter ga-1">
             <img
               class="shadow-15 mt-6 mb-2"
-              width="23%"
+              width="25%"
               src="@/assets/images/pricing/part-time-remote-talent.png"
               alt="Part Time Remote Talent" />
             <p>Part-Time</p>
@@ -78,7 +78,7 @@
           <div class="px-4 flexCenter ga-1">
             <img
               class="shadow-15 mt-6 mb-2"
-              width="23%"
+              width="25%"
               src="@/assets/images/pricing/build-your-iconic-team.png"
               alt="Build Your Iconic Team" />
             <p>Build Your Team</p>

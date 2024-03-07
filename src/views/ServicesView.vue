@@ -29,12 +29,8 @@
         <span class="font-weight-bold">financial advantages</span> through
         global collaboration. Choosing ICONIC means accessing external
         expertise, ensuring
-        <span class="font-weight-bold">high-quality services</span> and freeing
-        internal resources for core competencies and
-        <span class="font-weight-bold">strategic growth</span>. Our services
-        position your business for
-        <span class="font-weight-bold">success</span> in a constantly evolving
-        market.
+        <span class="font-weight-bold">high-quality services</span> and
+        strategic growth for success in a constantly evolving market.
       </p>
     </div>
   </section>

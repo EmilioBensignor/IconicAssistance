@@ -9,14 +9,16 @@
   </section>
   <section class="skyRadioactive">
     <div class="columnAlignCenter">
-      <h2 v-motion="scrollBottom" class="text-white">Book a Free Call</h2>
-      <!-- <div
-        class="calendly-inline-widget"
-        data-url="https://calendly.com/iconicassistants/iconic-assistants-discovery-meeting?hide_event_type_details=1"
-        style="min-width: 320px; height: 700px"></div> -->
+      <h2 v-motion="scrollBottom" class="text-white mb-3">Book a Free Call</h2>
+      <div class="bg-white rounded-xl elevation-5 my-5">
+        <div
+          class="calendly-inline-widget"
+          data-url="https://calendly.com/iconic-assistants/15min-ij"
+          style="min-width: 75vw; height: 80vh"></div>
+      </div>
     </div>
     <div class="columnAlignCenter">
-      <h2 v-motion="scrollBottom" class="text-white">Get in Touch</h2>
+      <h2 v-motion="scrollBottom" class="text-white mt-3">Get in Touch</h2>
       <!-- Formulario -->
     </div>
   </section>
