@@ -117,8 +117,8 @@
     text-decoration: none;
   }
   .circleNumber {
-    width: 20%;
-    height: 10%;
+    width: 12vw;
+    height: 10vw;
   }
   .circleNumber:hover{
     background-color: #373ae6;
