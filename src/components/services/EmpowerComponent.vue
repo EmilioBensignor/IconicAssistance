@@ -61,7 +61,7 @@
               "<span class='font-weight-bold'>Rapid Acquisition:</span> 10 to 20 business days for the perfect match.",
             ],
             moreInfo:
-              "Leave the complexity of recruitment to our specialized HR team with decades of experience. Our talent pool of pre-vetted remote professionals ensures a swift acquisition process, taking only 10 to 20 business days to secure the perfect match for your needs. Experience success with our dedicated team guiding you through every step.",
+              "Entrust recruitment complexity to our seasoned HR team. With decades of expertise, our talent pool of vetted remote professionals ensures swift acquisition, taking just 10 to 20 business days. Experience success with our guiding team.",
           },
           {
             img: "Global-Payroll-Remote-Talent.png",
@@ -73,7 +73,7 @@
               "<span class='font-weight-bold'>Cost Efficiency:</span> One transparent fee for any number of hires.",
               "<span class='font-weight-bold'>Peace of Mind:</span> Trustworth payroll management."
             ],
-            moreInfo: "Our payroll services transcend borders. No matter where your remote talent is located or how many individuals you've hired, we charge a single, transparent fee. Simplify your financial operations and focus on your business while we handle payroll with precision.",
+            moreInfo: "Our payroll services transcend borders. Irrespective of your remote talent's location or hiring scale, we charge a single, transparent fee. Simplify financial operations while we handle payroll precisely.",
           },
           {
             img: "Compliance-Outsource-Remote-Talent.png",
@@ -86,7 +86,7 @@
               "<span class='font-weight-bold'>Flexibility:</span> Seamless talent changes without extra fees."
             ],
             moreInfo:
-              "Ensuring a smooth relationship between you and your remote talent is our priority. Each client is assigned a dedicated Client Success Agent, fostering communication with periodic performance reports, and addressing concerns promptly. We not only guarantee compliance but also facilitate talent changes without additional fees, providing flexibility for your evolving needs.",
+              "Smooth client-talent relationships are our priority. Each client gets a dedicated Success Agent, fostering communication with periodic reports and prompt issue resolution. We ensure compliance and offer flexibility for evolving needs without extra fees.",
           },
         ],
       };

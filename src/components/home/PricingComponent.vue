@@ -15,14 +15,14 @@
         <v-window-item value="full-time">
           <div class="flexCenter px-4 ga-1">
             <img
-              class="shadow-15 mt-6"
-              width="20%"
+              class="shadow-15 mt-6 mb-2"
+              width="23%"
               src="@/assets/images/pricing/full-time-remote-talent.png"
               alt="Full Time Remote Talent" />
             <p>Full-Time</p>
             <p class="planPrice">From $9.55/Hr</p>
             <p>Billed monthly.</p>
-            <ul class="column align-start ga-2 mt-2">
+            <ul class="column align-start ga-2 mt-3">
               <li class="d-flex">
                 <v-icon icon="mdi-check" color="radioactive" size="x-large">
                 </v-icon>
@@ -46,14 +46,14 @@
         <v-window-item value="part-time">
           <div class="px-4 flexCenter ga-1">
             <img
-              class="shadow-15 mt-6"
-              width="20%"
+              class="shadow-15 mt-6 mb-2"
+              width="23%"
               src="@/assets/images/pricing/part-time-remote-talent.png"
               alt="Part Time Remote Talent" />
             <p>Part-Time</p>
             <p class="planPrice">From $10.85/Hr</p>
             <p>Billed monthly.</p>
-            <ul class="d-flex flex-column align-start ga-2 mt-2">
+            <ul class="d-flex flex-column align-st3rt ga-2 mt-2">
               <li class="d-flex">
                 <v-icon icon="mdi-check" color="radioactive" size="x-large">
                 </v-icon>
@@ -77,14 +77,14 @@
         <v-window-item value="build-team">
           <div class="px-4 flexCenter ga-1">
             <img
-              class="shadow-15 mt-6"
-              width="20%"
+              class="shadow-15 mt-6 mb-2"
+              width="23%"
               src="@/assets/images/pricing/build-your-iconic-team.png"
               alt="Build Your Iconic Team" />
             <p>Build Your Team</p>
             <p class="planPrice">Get a Quote</p>
             <p>Billed monthly.</p>
-            <ul class="d-flex flex-column align-start ga-2 mt-2">
+            <ul class="d-flex flex-column align-st3rt ga-2 mt-2">
               <li class="d-flex">
                 <v-icon icon="mdi-check" color="radioactive" size="x-large">
                 </v-icon>

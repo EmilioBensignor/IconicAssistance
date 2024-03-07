@@ -32,7 +32,8 @@
                 :src="getImgUrl(item.logo)"
                 :alt="item.logoAlt"
                 class="shadow-35"
-                width="40%"></v-img>
+                width="45%"
+                eager></v-img>
               <h3 class="text-white">{{ item.name }}</h3>
               <p class="text-white">{{ item.description }}</p>
               <router-link

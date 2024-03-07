@@ -15,10 +15,10 @@
     </v-app-bar>
     <v-navigation-drawer v-model="showMenu" app class="mt-2">
       <v-list class="pt-5" tag="ul">
-        <a
+        <router-link
           class="bg-radioactive rounded-xl text-decoration-none ml-6 px-15 py-2"
-          href="/contact-us"
-          >Book a Call</a
+          :to="'/contact-us'"
+          >Book a Call</router-link
         >
         <p class="navTitles pt-5 pl-4">About</p>
         <li v-for="item in aboutMenu" :key="item.title">

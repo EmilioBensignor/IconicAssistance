@@ -32,8 +32,9 @@
               :src="getImgUrl(item.img)"
               :alt="item.alt"
               width="100%"
-              height="84%"
-              cover>
+              height="86%"
+              cover
+              eager>
               <p class="titleTypesofVA font-weight-bold text-midnight">
                 {{ item.name }}
               </p>

@@ -26,7 +26,8 @@
       alt="Contact Us Remote Talent"
       class="rounded-circle elevation-5 my-5"
       v-motion="scrollBottom"
-      width="75%" />
+      width="75%"
+      eager />
     <div class="w-75 columnAlignCenter ga-5 my-5">
       <v-expansion-panels v-motion="scrollBottom" class="faqWrapper">
         <v-expansion-panel class="elevation-4" title="How do I get started?">

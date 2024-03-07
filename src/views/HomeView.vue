@@ -113,7 +113,7 @@
   .hero {
     width: 90vw;
     z-index: 3;
-    margin-top: 20vh;
+    margin-top: 18vh;
   }
 
   .text-landing {

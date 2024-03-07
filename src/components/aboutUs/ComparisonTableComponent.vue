@@ -216,7 +216,7 @@
     padding: 3vw 1vw;
   }
   .iconicLogo{
-    width: 85%;
+    width: 90%;
   }
   .cancelText {
     font-size: 0.8rem;

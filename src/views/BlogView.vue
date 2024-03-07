@@ -29,7 +29,8 @@
             :src="getImgUrl(item.img)"
             :alt="item.alt"
             class="rounded-t-lg"
-            width="100%" />
+            width="100%"
+            eager />
         </router-link>
         <div class="column ga-4 pa-5 pt-3">
           <h3 class="text-midnight text-start">{{ item.title }}</h3>

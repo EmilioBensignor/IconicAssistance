@@ -14,9 +14,10 @@
         :alt="assistant.at"
         class="rounded-xl elevation-5"
         v-motion="scrollBottom"
-        width="75%" />
+        width="75%"
+        eager />
     </div>
-    <p v-motion="scrollBottom" class="text-white my-5">
+    <p v-motion="scrollBottom" class="w-75 text-white my-5">
       Experience precision in recruitment and payroll efficiency. Unlock skills
       in HR, administration, marketing, customer support, and more. Our platform
       optimizes business processes, from hiring to payroll. Simplify operations
@@ -56,12 +57,13 @@
             :src="getImgUrl(item.blueIcon)"
             :alt="item.blueIconAlt"
             class="shadow-15"
-            width="85%">
+            width="90%"
+            eager>
           </v-img>
         </div>
-        <p class="text-midnight font-weight-bold">{{ item.name }}</p>
+        <p class="w-75 text-midnight font-weight-bold">{{ item.name }}</p>
         <div class="circleNumber rounded-circle elevation-3">
-          <p class="text-radioactive font-weight-bold">></p>
+          <p class="font-weight-bold">></p>
         </div>
       </router-link>
     </div>
@@ -117,5 +119,15 @@
   .circleNumber {
     width: 20%;
     height: 10%;
+  }
+  .circleNumber:hover{
+    background-color: #373ae6;
+    color: white;
+  }
+  .circleNumber p{
+    color: #373ae6;
+  }
+  .circleNumber p:hover{
+    color: white;
   }
 </style>

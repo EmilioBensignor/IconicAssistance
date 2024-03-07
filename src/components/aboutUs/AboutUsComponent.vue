@@ -11,7 +11,8 @@
         v-motion="scrollBottom"
         src="@/assets/images/aboutUs/Remote-Talent-Iconic-Assistants.png"
         alt="Remote Talent Iconic Assistants"
-        width="75%" />
+        width="75%"
+        eager />
       <p v-motion="scrollBottom" class="text-white">
         Iconic Assistants, based in the U.S., partners with highly
         <span class="font-weight-bold">skilled foreign professionals</span> to
