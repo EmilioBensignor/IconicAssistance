@@ -28,7 +28,7 @@
           },
           {
             title: "Can I hire a Part-Time Virtual Assistant?",
-            text: "Yes, we can help you outsource part-time virtual assistant for your business or specific campaigns. Our plans include either part-time (80 hours per week) or full-time (160 hours per week) VA's.",
+            text: "Yes, we can help you outsource part-time virtual assistant for your business or specific campaigns. Our plans include either part-time (80 hours per month) or full-time (160 hours per month) VA's.",
           },
           {
             title: "Can I provide the work hours?",
