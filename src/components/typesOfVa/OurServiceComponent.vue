@@ -12,7 +12,7 @@
         class="d-flex align-center">
         <img
           width="25%"
-          class="shadow-25"
+          class="vaIcon shadow-25"
           :src="getImgUrl(item.whiteIcon)"
           :alt="item.whiteIconAlt" />
         <p class="text-white text-start pMedium ml-3 w-100">
@@ -33,6 +33,7 @@
               :alt="item.alt"
               width="100%"
               height="86%"
+              class="vaImg"
               cover
               eager>
               <p class="titleTypesofVA font-weight-bold text-midnight">
@@ -84,5 +85,37 @@
     text-decoration: none;
     background: rgba(255, 255, 255, 0.9);
     font-size: 1.4rem;
+  }
+
+  /* SM */
+  @media only screen and (min-width: 480px) {
+    .carouselTypes {
+      height: 60vh !important;
+    }
+    .vaImg {
+      height: 88% !important;
+    }
+    .vaIcon {
+      width: 20%;
+    }
+    .titleTypesofVA {
+      font-size: 1.5rem;
+    }
+  }
+
+  /* MD */
+  @media only screen and (min-width: 769px) {
+    .carouselTypes {
+      height: 65vh !important;
+    }
+    .vaImg {
+      height: 89% !important;
+    }
+    .vaIcon {
+      width: 15%;
+    }
+    .titleTypesofVA {
+      font-size: 1.6rem;
+    }
   }
 </style>

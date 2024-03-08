@@ -6,17 +6,18 @@
     <div class="heroOverlay flexCenter justify-center">
       <div class="heroPages flexCenter">
         <h1 v-motion="scrollBottom" class="text-white">{{ blog.title }}</h1>
-        <p v-motion="scrollBottom" class="text-radioactive font-weight-bold mt-3">
+        <p
+          v-motion="scrollBottom"
+          class="text-radioactive subtitle font-weight-bold mt-3">
           {{ formatDate(blog.date) }}
         </p>
       </div>
     </div>
-    <img 
+    <img
       src="@/assets/images/misc/White-Bottom-Wave.png"
       alt="White Bottom Wave"
       class="heroPagesWhiteWave"
-      width="100%"
-    />
+      width="100%" />
   </section>
   <section class="radioactiveWave">
     <h2 v-motion="scrollBottom" class="text-midnight">{{ blog.h2 }}</h2>
@@ -31,7 +32,7 @@
     </div>
     <div class="columnAlignCenter mt-5">
       <h2 v-motion="scrollBottom" class="text-midnight">Recent Posts</h2>
-      <div class="columnAlignCenter ga-7 py-5">
+      <div class="w-75 columnAlignCenter ga-10 py-5">
         <article
           v-for="(recentBlog, index) in recentBlogs"
           :key="index"
@@ -54,7 +55,7 @@
 
 <script>
   import { blogs } from "@/cms/blogs.service.js";
-  import HeaderTransparentComponent from "@/components/HeaderTransparentComponent.vue"
+  import HeaderTransparentComponent from "@/components/HeaderTransparentComponent.vue";
 
   export default {
     components: {
@@ -102,8 +103,7 @@
 </script>
 
 <script setup>
-
-  import { scrollBottom } from "@/motions.js"
+  import { scrollBottom } from "@/motions.js";
 </script>
 
 <style scoped>
@@ -125,7 +125,7 @@
     background-color: rgba(0, 0, 0, 0.7);
   }
 
-  .radioactiveWave{
+  .radioactiveWave {
     background-image: url("@/assets/images/misc/Radioactive-Bottom-Wave.png");
     background-repeat: no-repeat;
     background-size: contain;
@@ -135,5 +135,25 @@
 
   .recentBlog {
     width: 85%;
+  }
+
+  /* SM */
+  @media only screen and (min-width: 480px) {
+    .heroSection {
+      height: 600px;
+    }
+    .recentBlog {
+      width: 75% !important;
+    }
+  }
+
+  /* MD */
+  @media only screen and (min-width: 769px) {
+    .heroSection {
+      height: 675px;
+    }
+    .recentBlog{
+      width: 65% !important;
+    }
   }
 </style>

@@ -3,7 +3,8 @@
     href=""
     class="popUp elevation-5 mr-2"
     onclick="Calendly.initPopupWidget({url:'https://calendly.com/iconic-assistants/15min-ij'});return false;"
-    >Book a Call</a>
+    >Book a Call</a
+  >
 </template>
 
 <style scoped>

@@ -1,7 +1,7 @@
 <template>
   <section class="skyRadioactive">
     <h2 v-motion="scrollBottom" class="text-white">Benefits</h2>
-    <p v-motion="scrollBottom" class="text-white mt-3">
+    <p v-motion="scrollBottom" class="w-75 text-white mt-3">
       Companies are increasingly mutating towards predominantly virtual
       assistants instead of in-house employees due to several compelling
       reasons:

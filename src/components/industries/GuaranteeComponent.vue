@@ -2,7 +2,7 @@
   <section class="radioactiveWaves">
     <div
       v-motion="scrollBottom"
-      class="w-75 bg-radioactive columnAlignCenter rounded-xl pb-4 my-5 elevation-5">
+      class="w-75 quality bg-radioactive columnAlignCenter rounded-xl pb-4 my-5 elevation-5">
       <img
         src="@/assets/images/aboutUs/100-Guarantee-Remote-Talent.png"
         alt="100% Guarantee Remote Talent"
@@ -21,5 +21,21 @@
 </template>
 
 <script setup>
-  import { scrollBottom } from "@/motions.js"
+  import { scrollBottom } from "@/motions.js";
 </script>
+
+<style scoped>
+  /* SM */
+  @media only screen and (min-width: 480px) {
+    .quality {
+      width: 60% !important;
+    }
+  }
+
+  /* MD */
+  @media only screen and (min-width: 769px) {
+    .quality {
+      width: 50% !important;
+    }
+  }
+</style>

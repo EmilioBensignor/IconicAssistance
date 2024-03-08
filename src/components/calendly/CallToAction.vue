@@ -22,6 +22,7 @@
     text-decoration: none;
     border: 1px solid #373ae6;
   }
+
   /* SM */
   @media only screen and (min-width: 480px) {
     .cta {
@@ -31,7 +32,7 @@
   }
   /* MD */
   @media only screen and (min-width: 769px) {
-    .cta{
+    .cta {
       width: 10vw;
       height: 10vw;
     }

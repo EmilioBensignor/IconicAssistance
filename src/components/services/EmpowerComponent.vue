@@ -1,11 +1,11 @@
 <template>
   <section class="radioactiveWaves">
     <div class="w-100 flexCenter ga-15 mt-5">
-      <div 
-        v-for="(item, index) in empower" 
-        :key="index" 
+      <div
+        v-for="(item, index) in empower"
+        :key="index"
         v-motion="scrollBottom"
-        class="w-75">
+        class="empower w-75">
         <img
           :src="getImgUrl(item.img)"
           :alt="item.alt"
@@ -71,9 +71,10 @@
             advantages: [
               "<span class='font-weight-bold'>Global Reach:</span> Payroll services for remote talent worldwide.",
               "<span class='font-weight-bold'>Cost Efficiency:</span> One transparent fee for any number of hires.",
-              "<span class='font-weight-bold'>Peace of Mind:</span> Trustworth payroll management."
+              "<span class='font-weight-bold'>Peace of Mind:</span> Trustworth payroll management.",
             ],
-            moreInfo: "Our payroll services transcend borders. Irrespective of your remote talent's location or hiring scale, we charge a single, transparent fee. Simplify financial operations while we handle payroll precisely.",
+            moreInfo:
+              "Our payroll services transcend borders. Irrespective of your remote talent's location or hiring scale, we charge a single, transparent fee. Simplify financial operations while we handle payroll precisely.",
           },
           {
             img: "Compliance-Outsource-Remote-Talent.png",
@@ -83,7 +84,7 @@
             advantages: [
               "<span class='font-weight-bold'>Dedicated Support:</span> Client Success Agents for personalized assistance.",
               "<span class='font-weight-bold'>Compliance Assurance:</span> Meeting regulatory requirements.",
-              "<span class='font-weight-bold'>Flexibility:</span> Seamless talent changes without extra fees."
+              "<span class='font-weight-bold'>Flexibility:</span> Seamless talent changes without extra fees.",
             ],
             moreInfo:
               "Smooth client-talent relationships are our priority. Each client gets a dedicated Success Agent, fostering communication with periodic reports and prompt issue resolution. We ensure compliance and offer flexibility for evolving needs without extra fees.",
@@ -103,11 +104,28 @@
 </script>
 
 <script setup>
-  import { scrollBottom } from "@/motions.js"
+  import { scrollBottom } from "@/motions.js";
 </script>
 
 <style scoped>
   .moreInfo {
     width: 85%;
+  }
+
+  /* SM */
+  @media only screen and (min-width: 480px) {
+    .empower img {
+      width: 50%;
+    }
+    .moreInfo {
+      width: 90%;
+    }
+  }
+
+  /* MD */
+  @media only screen and (min-width: 769px) {
+    .empower{
+      width: 50% !important;
+    }
   }
 </style>

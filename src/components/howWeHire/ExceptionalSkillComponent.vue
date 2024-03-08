@@ -6,7 +6,7 @@
       to driving success and delivering excellence. Join us on our journey
       towards excellence.
     </p>
-    <div class="my-5">
+    <div class="w-75 my-5">
       <img
         src="@/assets/images/howWeHire/Exceptional-Skill-Remote-Talent.png"
         alt="Exceptional Skill Remote Talent"

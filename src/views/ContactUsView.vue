@@ -9,16 +9,18 @@
   </section>
   <section class="skyRadioactive">
     <h2 v-motion="scrollBottom" class="text-white">Get in Touch</h2>
-      <!-- Formulario -->
+    <!-- Formulario -->
   </section>
   <section class="radioactiveWaves">
-    <img
-      src="@/assets/images/contactUs/Contact-Us-Remote-Talent.png"
-      alt="Contact Us Remote Talent"
-      class="rounded-circle elevation-5 my-5"
-      v-motion="scrollBottom"
-      width="75%"
-      eager />
+    <div class="w-75">
+      <img
+        src="@/assets/images/contactUs/Contact-Us-Remote-Talent.png"
+        alt="Contact Us Remote Talent"
+        class="rounded-circle elevation-5 my-5"
+        v-motion="scrollBottom"
+        width="75%"
+        eager />
+    </div>
     <div class="w-75 columnAlignCenter ga-5 my-5">
       <v-expansion-panels v-motion="scrollBottom" class="faqWrapper">
         <v-expansion-panel class="elevation-4" title="How do I get started?">

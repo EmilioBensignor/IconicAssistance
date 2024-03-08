@@ -8,7 +8,7 @@
     </div>
   </section>
   <section class="skyRadioactive">
-    <div>
+    <div class="w-75">
       <img
         :src="getImgUrl(assistant.img)"
         :alt="assistant.at"
@@ -27,10 +27,12 @@
       with integrated solutions, ensuring seamless operations and heightened
       performance.
     </p>
-    <p v-motion="scrollBottom" class="text-white pMedium font-weight-bold my-5">
+    <p
+      v-motion="scrollBottom"
+      class="w-75 text-white pMedium font-weight-bold my-5">
       Here's a detailed description of the Virtual Assistant role:
     </p>
-    <div class="columnAlignCenter ga-7 mb-5">
+    <div class="columnAlignCenter ga-8 mb-5">
       <div
         v-for="(task, index) in assistant.tasks"
         :key="index"
@@ -61,7 +63,9 @@
             eager>
           </v-img>
         </div>
-        <p class="w-75 text-midnight font-weight-bold">{{ item.name }}</p>
+        <p class="w-75 vaName text-midnight font-weight-bold">
+          {{ item.name }}
+        </p>
         <div class="circleNumber rounded-circle elevation-3 ml-1">
           <p class="font-weight-bold">></p>
         </div>
@@ -120,14 +124,42 @@
     width: 12vw;
     height: 10vw;
   }
-  .circleNumber:hover{
+  .circleNumber:hover {
     background-color: #373ae6;
     color: white;
   }
-  .circleNumber p{
+  .circleNumber p {
     color: #373ae6;
   }
-  .circleNumber p:hover{
+  .circleNumber p:hover {
     color: white;
+  }
+
+  /* SM */
+  @media only screen and (min-width: 480px) {
+    .typesCards {
+      width: 75% !important;
+    }
+    .vaName {
+      font-size: 1.1rem;
+    }
+    .circleNumber {
+      width: 10vw;
+      height: 8vw;
+    }
+  }
+
+  /* MD */
+  @media only screen and (min-width: 769px) {
+    .typesCards {
+      width: 60% !important;
+    }
+    .vaName {
+      font-size: 1.2rem;
+    }
+    .circleNumber {
+      width: 8vw;
+      height: 6vw;
+    }
   }
 </style>

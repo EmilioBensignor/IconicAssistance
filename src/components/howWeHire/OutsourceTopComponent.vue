@@ -1,15 +1,17 @@
 <template>
-    <section class="skyBlueWaves">
+  <section class="skyBlueWaves">
     <p v-motion="scrollBottom" class="my-3">Outsource to the top 1%</p>
     <p v-motion="scrollBottom" class="w-75">
       Access the Top 1% of our VA candidates. Pre-vetted, pre-interviewed, and
       ready to work for you.
     </p>
-    <h2 v-motion="scrollBottom" class="text-midnight my-3">Remote Talent Application Process</h2>
+    <h2 v-motion="scrollBottom" class="text-midnight my-3">
+      Remote Talent Application Process
+    </h2>
     <p v-motion="scrollBottom" class="funnelNumber text-radioactive">100%</p>
     <div
       v-motion="scrollBottom"
-      class="w-75 flexCenter my-3 elevation-5 rounded-xl py-5">
+      class="w-75 funnel flexCenter my-3 elevation-5 rounded-xl py-5">
       <img
         src="@/assets/images/howWeHire/Remote-Talent-Applicants.png"
         alt="Remote Talent Applicants"
@@ -23,13 +25,13 @@
     <img
       src="@/assets/images/misc/Blue-Arrow-Down.png"
       alt="Blue Arrow Down"
-      class="my-3"
+      class="arrow my-3"
       v-motion="scrollBottom"
       width="20%" />
     <p v-motion="scrollBottom" class="funnelNumber text-radioactive">50%</p>
     <div
       v-motion="scrollBottom"
-      class="w-75 flexCenter my-3 elevation-5 rounded-xl py-5">
+      class="w-75 funnel flexCenter my-3 elevation-5 rounded-xl py-5">
       <img
         src="@/assets/images/howWeHire/Remote-Talent-Qualification.png"
         alt="Remote Talent Qualification"
@@ -42,13 +44,13 @@
     <img
       src="@/assets/images/misc/Blue-Arrow-Down.png"
       alt="Blue Arrow Down"
-      class="my-3"
+      class="arrow my-3"
       v-motion="scrollBottom"
       width="20%" />
     <p v-motion="scrollBottom" class="funnelNumber text-radioactive">20%</p>
     <div
       v-motion="scrollBottom"
-      class="w-75 flexCenter my-3 elevation-5 rounded-xl py-5">
+      class="w-75 funnel flexCenter my-3 elevation-5 rounded-xl py-5">
       <img
         src="@/assets/images/howWeHire/Remote-Talent-Review.png"
         alt="Remote Talent Review"
@@ -62,13 +64,13 @@
     <img
       src="@/assets/images/misc/Blue-Arrow-Down.png"
       alt="Blue Arrow Down"
-      class="my-3"
+      class="arrow my-3"
       v-motion="scrollBottom"
       width="20%" />
     <p v-motion="scrollBottom" class="funnelNumber text-radioactive">10%</p>
     <div
       v-motion="scrollBottom"
-      class="w-75 flexCenter my-3 elevation-5 rounded-xl py-5">
+      class="w-75 funnel flexCenter my-3 elevation-5 rounded-xl py-5">
       <img
         src="@/assets/images/howWeHire/Remote-Talent-Acceptance.png"
         alt="Remote Talent Acceptance"
@@ -82,13 +84,13 @@
     <img
       src="@/assets/images/misc/Blue-Arrow-Down.png"
       alt="Blue Arrow Down"
-      class="my-3"
+      class="arrow my-3"
       v-motion="scrollBottom"
       width="20%" />
     <p v-motion="scrollBottom" class="funnelNumber text-radioactive">5%</p>
     <div
       v-motion="scrollBottom"
-      class="w-75 flexCenter my-3 elevation-5 rounded-xl py-5">
+      class="w-75 funnel flexCenter my-3 elevation-5 rounded-xl py-5">
       <img
         src="@/assets/images/howWeHire/Remote-Talent-Assessment.png"
         alt="Remote Talent Assessment"
@@ -102,13 +104,13 @@
     <img
       src="@/assets/images/misc/Blue-Arrow-Down.png"
       alt="Blue Arrow Down"
-      class="my-3"
+      class="arrow my-3"
       v-motion="scrollBottom"
       width="20%" />
     <p v-motion="scrollBottom" class="funnelNumber text-radioactive">1%</p>
     <div
       v-motion="scrollBottom"
-      class="w-75 flexCenter my-3 elevation-5 rounded-xl py-5">
+      class="w-75 funnel flexCenter my-3 elevation-5 rounded-xl py-5">
       <img
         src="@/assets/images/howWeHire/Top-Remote-Talent.png"
         alt="Top Remote Talent"
@@ -123,12 +125,35 @@
 </template>
 
 <script setup>
-  import { scrollBottom } from "@/motions.js"
+  import { scrollBottom } from "@/motions.js";
 </script>
 
 <style scoped>
   .funnelNumber {
     font-weight: bold;
     font-size: 2.2rem;
+  }
+
+  /* SM */
+  @media only screen and (min-width: 480px) {
+    .funnelNumber {
+      font-size: 2.4rem;
+    }
+    .funnel {
+      width: 50% !important;
+    }
+    .arrow {
+      width: 12%;
+    }
+  }
+
+  /* MD */
+  @media only screen and (min-width: 769px) {
+    .funnelNumber{
+      font-size: 2.6rem;
+    }
+    .arrow{
+      width: 10%;
+    }
   }
 </style>

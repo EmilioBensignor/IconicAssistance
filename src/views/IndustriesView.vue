@@ -8,20 +8,23 @@
     <div class="heroOverlay flexCenter justify-center">
       <div class="heroPages flexCenter ga-4">
         <h1 v-motion="scrollBottom" class="text-white">{{ industry.name }}</h1>
-        <p v-motion="scrollBottom" class="text-white">{{ industry.subtitle }}</p>
+        <p v-motion="scrollBottom" class="text-white">
+          {{ industry.subtitle }}
+        </p>
       </div>
     </div>
-    <img 
+    <img
       src="@/assets/images/misc/White-Bottom-Wave.png"
       alt="White Bottom Wave"
       class="heroPagesWhiteWave"
-      width="100%"
-    />
+      width="100%" />
   </section>
   <DifferencesComponent />
   <section class="skyRadioactive">
-    <h2 v-motion="scrollBottom" class="text-white">VAs That Suit Your Industry</h2>
-    <div v-if="industry" class="columnAlignCenter ga-13 my-5">
+    <h2 v-motion="scrollBottom" class="text-white">
+      VAs That Suit Your Industry
+    </h2>
+    <div v-if="industry" class="w-75 vaSuit columnAlignCenter ga-13 my-5">
       <div
         v-for="(vaType, index) in industry.vaTypes"
         :key="index"
@@ -32,7 +35,9 @@
           :alt="vaType.alt"
           class="d-flex justify-center align-end rounded-t-xl"
           width="100%">
-          <h3 class="w-100 columnAlignCenter text-white mb-3">{{ vaType.va }}</h3>
+          <h3 class="w-100 columnAlignCenter text-white mb-3">
+            {{ vaType.va }}
+          </h3>
         </v-img>
         <p class="mt-3 font-weight-bold">Tasks to outsource:</p>
         <p class="mt-3">{{ vaType.summary }}</p>
@@ -46,7 +51,7 @@
 </template>
 
 <script>
-  import HeaderTransparentComponent from "@/components/HeaderTransparentComponent.vue"
+  import HeaderTransparentComponent from "@/components/HeaderTransparentComponent.vue";
   import { industries } from "@/cms/industries.service.js";
   import DifferencesComponent from "@/components/industries/DifferencesComponent.vue";
   import GuaranteeComponent from "@/components/industries/GuaranteeComponent.vue";
@@ -94,7 +99,7 @@
 </script>
 
 <script setup>
-  import { scrollBottom } from "@/motions.js"
+  import { scrollBottom } from "@/motions.js";
 </script>
 
 <style scoped>
@@ -116,4 +121,20 @@
     background-color: rgba(0, 0, 0, 0.5);
   }
 
+  /* SM */
+  @media only screen and (min-width: 480px) {
+    .heroIndustries {
+      height: 600px;
+    }
+  }
+
+  /* MD */
+  @media only screen and (min-width: 769px) {
+    .heroIndustries {
+      height: 675px;
+    }
+    .vaSuit{
+      width: 50% !important;
+    }
+  }
 </style>

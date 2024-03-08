@@ -1,16 +1,20 @@
 <template>
   <section class="differences">
-    <p v-motion="scrollBottom" class="subtitle text-radioactive">Differences that matter</p>
-    <h2 v-motion="scrollBottom" class="text-midnight">Why Choose Iconic Assistants?</h2>
-    <div class="columnAlignCenter ga-12 my-5">
+    <p v-motion="scrollBottom" class="subtitle text-radioactive">
+      Differences that matter
+    </p>
+    <h2 v-motion="scrollBottom" class="text-midnight">
+      Why Choose Iconic Assistants?
+    </h2>
+    <div class="w-75 chooses columnAlignCenter ga-12 my-5">
       <div
         v-for="(choose, index) in differences"
         :key="index"
         v-motion="scrollBottom"
         class="w-50 choose columnAlignCenter ga-5 pb-5 elevation-4">
-        <img 
-          :src="getImgUrl(choose.img)" 
-          :alt="choose.alt" 
+        <img
+          :src="getImgUrl(choose.img)"
+          :alt="choose.alt"
           class="shadow-2"
           width="100%" />
         <ul class="column ga-3 px-5">
@@ -25,7 +29,7 @@
     </div>
     <div
       v-motion="scrollBottom"
-      class="w-75 bg-radioactive columnAlignCenter rounded-xl py-4 my-5 elevation-5">
+      class="w-75 dedicated bg-radioactive columnAlignCenter rounded-xl py-4 my-5 elevation-5">
       <p class="text-white">
         At Iconic Assistants, we're
         <span class="font-weight-bold">dedicated</span> to finding your business
@@ -88,11 +92,11 @@
 </script>
 
 <script setup>
-  import { scrollBottom } from "@/motions.js"
+  import { scrollBottom } from "@/motions.js";
 </script>
 
 <style scoped>
-  .differences{
+  .differences {
     background-image: url("@/assets/images/misc/Sky-Blue-Bottom-Wave.png");
     background-repeat: no-repeat;
     background-size: contain;
@@ -102,5 +106,15 @@
   .choose {
     border: 3px solid #373ae6;
     border-radius: 30vw 30vw 5vw 5vw;
+  }
+
+  /* MD */
+  @media only screen and (min-width: 769px) {
+    .chooses{
+      width: 50% !important;
+    }
+    .dedicated{
+      width: 50% !important;
+    }
   }
 </style>

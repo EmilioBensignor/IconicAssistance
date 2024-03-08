@@ -145,4 +145,26 @@
     width: 7vw;
     height: 7vw;
   }
+
+  /* SM */
+  @media only screen and (min-width: 480px) {
+    .searchLabel {
+      font-size: 1.3rem;
+    }
+    input[type="checkbox"] {
+      width: 3.5vw;
+      height: 3.5vw;
+    }
+  }
+
+  /* MD */
+  @media only screen and (min-width: 769px) {
+    .searchLabel {
+      font-size: 1.4rem;
+    }
+    input[type="checkbox"] {
+      width: 3vw;
+      height: 3vw;
+    }
+  }
 </style>
