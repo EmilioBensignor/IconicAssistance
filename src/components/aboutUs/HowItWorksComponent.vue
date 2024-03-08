@@ -1,7 +1,9 @@
 <template>
   <section class="skyRadioactive">
     <p v-motion="scrollBottom" class="subtitle text-white">How It Works</p>
-    <h2 v-motion="scrollBottom" class="text-white">Unlocking efficiency in four simple steps</h2>
+    <h2 v-motion="scrollBottom" class="text-white">
+      Unlocking efficiency in four simple steps
+    </h2>
     <p v-motion="scrollBottom" class="w-75 text-white mt-3">
       Your business deserves tailored solutions, and we're here to deliver
       exactly that.
@@ -19,7 +21,9 @@
         <p class="text-white mt-1">{{ item.description }}</p>
       </div>
     </div>
-    <router-link class="primaryButton elevation-5 mt-3 mb-5" :to="'/how-it-works'"
+    <router-link
+      class="primaryButton elevation-5 mt-3 mb-5"
+      :to="'/how-it-works'"
       >Learn How It Works</router-link
     >
   </section>
@@ -61,12 +65,26 @@
 </script>
 
 <script setup>
-  import { scrollBottom } from "@/motions.js"
+  import { scrollBottom } from "@/motions.js";
 </script>
 
 <style scoped>
   .fourStepsTitle {
     font-size: 1.4rem;
     font-weight: 600;
+  }
+
+  /* SM */
+  @media only screen and (min-width: 480px) {
+    .fourStepsTitle {
+      font-size: 1.5rem;
+    }
+  }
+
+  /* MD */
+  @media only screen and (min-width: 769px) {
+    .fourStepsTitle {
+      font-size: 1.6rem;
+    }
   }
 </style>

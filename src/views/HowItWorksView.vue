@@ -17,12 +17,14 @@
       your business needs. Free yourself to focus on growth. Book your
       consultation with Iconic Assistants today.
     </p>
-    <img
-      src="@/assets/images/howItWorks/Remote-Talent-Call.png"
-      alt="Remote Talent Call"
-      width="75%"
-      v-motion="scrollBottom"
-      class="rounded-circle elevation-5 my-5" />
+    <div class="w-75">
+      <img
+        src="@/assets/images/howItWorks/Remote-Talent-Call.png"
+        alt="Remote Talent Call"
+        width="75%"
+        v-motion="scrollBottom"
+        class="rounded-circle elevation-5 my-5" />
+    </div>
     <router-link class="primaryButton elevation-5 mt-5" :to="'/contact-us'"
       >Request a Free Consultation</router-link
     >
@@ -38,12 +40,14 @@
       a shortlist. Meet them with our representative for a perfect business
       match.
     </p>
-    <img
-      src="@/assets/images/howItWorks/Remote-Talent-Right-Candidate.png"
-      alt="Remote Talent Right Candidate"
-      width="75%"
-      v-motion="scrollBottom"
-      class="rounded-circle elevation-5 my-5" />
+    <div class="w-75">
+      <img
+        src="@/assets/images/howItWorks/Remote-Talent-Right-Candidate.png"
+        alt="Remote Talent Right Candidate"
+        width="75%"
+        v-motion="scrollBottom"
+        class="rounded-circle elevation-5 my-5" />
+    </div>
     <router-link class="secondaryButton elevation-5 mt-5" :to="'/how-we-hire'"
       >How We Hire</router-link
     >
@@ -57,12 +61,14 @@
       responsibilities alignment, and receive ongoing support for seamless
       onboarding.
     </p>
-    <img
-      src="@/assets/images/howItWorks/Remote-Talent-Tasks.png"
-      alt="Remote Talent Tasks"
-      width="75%"
-      v-motion="scrollBottom"
-      class="rounded-circle elevation-5 my-5" />
+    <div class="w-75">
+      <img
+        src="@/assets/images/howItWorks/Remote-Talent-Tasks.png"
+        alt="Remote Talent Tasks"
+        width="75%"
+        v-motion="scrollBottom"
+        class="rounded-circle elevation-5 my-5" />
+    </div>
     <router-link class="primaryButton elevation-5 my-5" :to="'/types-of-vas'"
       >Types of VAs</router-link
     >
@@ -78,12 +84,14 @@
       providing guidance whenever needed. You're never alone on your path to
       success.
     </p>
-    <img
-      src="@/assets/images/howItWorks/Remote-Talent-Support.png"
-      alt="Remote Talent Tasks"
-      width="75%"
-      v-motion="scrollBottom"
-      class="rounded-circle elevation-5 my-5" />
+    <div class="w-75">
+      <img
+        src="@/assets/images/howItWorks/Remote-Talent-Support.png"
+        alt="Remote Talent Tasks"
+        width="75%"
+        v-motion="scrollBottom"
+        class="rounded-circle elevation-5 my-5" />
+    </div>
     <router-link class="secondaryButton elevation-5 mt-5" :to="'/contact-us'"
       >Contact Us</router-link
     >

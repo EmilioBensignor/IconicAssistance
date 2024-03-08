@@ -57,7 +57,7 @@
     </div>
     <div
       v-motion="scrollBottom"
-      class="columnAlignCenter ga-3 text-lightGray CostComparisonAclaration my-5">
+      class="w-75 columnAlignCenter ga-3 text-lightGray CostComparisonAclaration my-5">
       <p>
         <sup class="mr-1">1</sup>Average hourly-rate for 25-34 years old US
         employee according to Forbes.com
@@ -151,5 +151,22 @@
   .CostComparisonAclaration p {
     font-size: 0.75rem;
     color: #656875;
+  }
+
+  /* SM */
+  @media only screen and (min-width: 480px) {
+    .costComparison {
+      width: 50% !important;
+    }
+    .CostComparisonAclaration p {
+      font-size: 0.85rem;
+    }
+  }
+
+  /* MD */
+  @media only screen and (min-width: 769px) {
+    .CostComparisonAclaration p {
+      font-size: 0.9rem;
+    }
   }
 </style>

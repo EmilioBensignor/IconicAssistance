@@ -22,7 +22,7 @@
     <v-navigation-drawer v-model="showMenu" app class="mt-2">
       <v-list class="pt-5" tag="ul">
         <router-link
-          class="bg-radioactive rounded-xl text-decoration-none ml-6 px-15 py-2"
+          class="bg-radioactive rounded-xl font-weight-medium text-decoration-none ml-6 px-15 py-2"
           :to="'/contact-us'"
           >Book a Call</router-link
         >
@@ -140,23 +140,5 @@
   .v-app-bar {
     transition: background-color 0.3s ease;
     backdrop-filter: blur(5px);
-  }
-
-  .v-toolbar__content > .v-toolbar-title {
-    margin: 0;
-    align-self: stretch;
-  }
-  .v-toolbar-title__placeholder {
-    display: flex !important;
-    align-items: center !important;
-  }
-  .navTitles {
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-size: 1.2rem;
-    color: #120d40;
-  }
-  .v-list-item-title {
-    font-size: 1.1rem;
   }
 </style>

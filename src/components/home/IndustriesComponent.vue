@@ -44,15 +44,19 @@
             </router-link>
           </v-carousel-item>
         </v-carousel>
-      <div class="mt-10 columnAlignCenter w-75">
-        <h4 v-motion="scrollBottom" class="text-white font-weight-bold">And Many More!</h4>
-        <p v-motion="scrollBottom" class="text-white">
-          Want to know if our Remote Talent Experts are suitable for you?
-        </p>
-        <router-link class="primaryButton elevation-5 mt-5" :to="'/contact-us'"
-          >Request a free consultation</router-link
-        >
-      </div>
+        <div class="mt-10 columnAlignCenter w-75">
+          <h4 v-motion="scrollBottom" class="text-white font-weight-bold">
+            And Many More!
+          </h4>
+          <p v-motion="scrollBottom" class="text-white">
+            Want to know if our Remote Talent Experts are suitable for you?
+          </p>
+          <router-link
+            class="primaryButton elevation-5 mt-5"
+            :to="'/contact-us'"
+            >Request a free consultation</router-link
+          >
+        </div>
       </div>
     </div>
   </section>

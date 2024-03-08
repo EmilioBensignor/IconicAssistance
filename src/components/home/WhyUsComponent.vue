@@ -1,18 +1,20 @@
 <template>
   <section class="radioactiveWaves">
     <p v-motion="scrollBottom" class="subtitle text-radioactive">Why us?</p>
-    <h2 v-motion="scrollBottom" class="mb-3 text-midnight">What Makes Us Different</h2>
+    <h2 v-motion="scrollBottom" class="mb-3 text-midnight">
+      What Makes Us Different
+    </h2>
     <div class="flexCenter ga-10 my-5">
       <div
         v-for="(item, index) in different"
         :key="index"
         v-motion="scrollBottom"
-        class="flexCenter rounded-xl elevation-5 w-75 pa-4 pb-6">
+        class="different flexCenter rounded-xl elevation-5 w-75 pa-4 pb-6">
         <p class="differentTitle text-midnight">{{ item.title }}</p>
-        <v-img 
-          eager 
-          :src="getImgUrl(item.img)" 
-          :alt="item.alt" 
+        <v-img
+          eager
+          :src="getImgUrl(item.img)"
+          :alt="item.alt"
           class="shadow-2"
           width="70%"></v-img>
         <div class="flexCenter ga-3">
@@ -25,7 +27,7 @@
 </template>
 
 <script setup>
-  import { scrollBottom } from "@/motions.js"
+  import { scrollBottom } from "@/motions.js";
 </script>
 
 <script>
@@ -66,13 +68,34 @@
 </script>
 
 <style scoped>
+  .differentTitle {
+    font-weight: 600;
+    font-size: 1.4rem;
+  }
+  .differentSubtitle {
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
 
-.differentTitle {
-  font-weight: 600;
-  font-size: 1.4rem;
-}
-.differentSubtitle {
-  font-weight: 600;
-  font-size: 1.1rem;
-}
+  /* SM */
+  @media only screen and (min-width: 480px) {
+    .different {
+      width: 50% !important;
+    }
+    .differentTitle {
+      font-size: 1.5rem;
+    }
+    .differentSubtitle {
+      font-size: 1.2rem;
+    }
+  }
+  /* MD */
+  @media only screen and (min-width: 769px) {
+    .differentTitle {
+      font-size: 1.6rem;
+    }
+    .differentSubtitle {
+      font-size: 1.3rem;
+    }
+  }
 </style>

@@ -10,8 +10,10 @@
       <v-tab value="part-time">Part</v-tab>
       <v-tab value="build-team">Team</v-tab>
     </v-tabs>
-    <div v-motion="scrollBottom" class="elevation-6 w-75 mt-6 bg-white rounded-xl">
-      <v-window  v-model="tab" class="pb-5">
+    <div
+      v-motion="scrollBottom"
+      class="plan elevation-6 w-75 mt-6 bg-white rounded-xl">
+      <v-window v-model="tab" class="pb-5">
         <v-window-item value="full-time">
           <div class="flexCenter px-4 ga-1">
             <img
@@ -111,7 +113,7 @@
 </template>
 
 <script setup>
-  import { scrollBottom } from "@/motions.js"
+  import { scrollBottom } from "@/motions.js";
 </script>
 
 <script>
@@ -140,5 +142,22 @@
   .planPrice {
     font-weight: 700;
     font-size: 1.2rem;
+  }
+
+  /* SM */
+  @media only screen and (min-width: 480px) {
+    .plan {
+      width: 50% !important;
+    }
+    .planPrice {
+      font-size: 1.3rem;
+    }
+  }
+
+  /* MD */
+  @media only screen and (min-width: 769px) {
+    .planPrice {
+      font-size: 1.4rem;
+    }
   }
 </style>

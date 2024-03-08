@@ -5,7 +5,7 @@
       An American Enterprise Dedicated To Assisting You In The Expansion Of Your
       Business
     </h2>
-    <div class="columnAlignCenter ga-5 mt-3">
+    <div class="w-75 columnAlignCenter ga-5 mt-3">
       <img
         class="rounded-circle elevation-5 my-2"
         v-motion="scrollBottom"

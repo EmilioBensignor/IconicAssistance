@@ -1,17 +1,19 @@
 <template>
   <section class="radioactiveSky pb-10">
     <p v-motion="scrollBottom" class="subtitle text-white">Our Service</p>
-    <h2 v-motion="scrollBottom" class="text-white">Tailored For Your Success</h2>
+    <h2 v-motion="scrollBottom" class="text-white">
+      Tailored For Your Success
+    </h2>
     <div class="columnAlignCenter py-3 px-2 ga-5">
       <div
-        class="flexCenter text-white w-75 ga-2 mt-10"
+        class="tailor flexCenter text-white w-75 ga-2 mt-10"
         v-for="(item, index) in tailoredServices"
         v-motion="scrollBottom"
         :key="index">
-        <v-img 
-          eager 
-          :src="getImgUrl(item.img)" 
-          :alt="item.alt" 
+        <v-img
+          eager
+          :src="getImgUrl(item.img)"
+          :alt="item.alt"
           class="shadow-5"
           width="75%"></v-img>
         <p class="tailoredTitle text-white">{{ item.title }}</p>
@@ -20,10 +22,10 @@
         <div class="w-75 bg-white mt-10 whiteLine"></div>
       </div>
       <div class="my-5 columnAlignCenter ga-2 w-100">
-        <p v-motion="scrollBottom" class="text-white font-weight-bold homeH4">Tell us what you need!</p>
-        <router-link
-          class="primaryButton elevation-5 mt-5"
-          :to="'/contact-us'"
+        <p v-motion="scrollBottom" class="text-white font-weight-bold tellUs">
+          Tell us what you need!
+        </p>
+        <router-link class="primaryButton elevation-5 mt-5" :to="'/contact-us'"
           >Contact Us</router-link
         >
       </div>
@@ -32,7 +34,7 @@
 </template>
 
 <script setup>
-  import { scrollBottom } from "@/motions.js"
+  import { scrollBottom } from "@/motions.js";
 </script>
 
 <script>
@@ -77,8 +79,29 @@
   .whiteLine {
     height: 1px;
   }
-  .homeH4 {
+  .tellUs {
     font-size: 1.2rem;
     font-weight: 600;
+  }
+  /* SM */
+  @media only screen and (min-width: 480px) {
+    .tailor {
+      width: 50% !important;
+    }
+    .tailoredTitle {
+      font-size: 1.5rem;
+    }
+    .tellUs {
+      font-size: 1.3rem;
+    }
+  }
+  /* MD */
+  @media only screen and (min-width: 769px) {
+    .tailoredTitle {
+      font-size: 1.6rem;
+    }
+    .tellUs {
+      font-size: 1.4rem;
+    }
   }
 </style>

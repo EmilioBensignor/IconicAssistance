@@ -1,7 +1,15 @@
 <template>
   <HeaderTransparentComponent />
   <section class="landing pa-0">
-    <video preload="yes" playsinline webkit-playsinline x5-playsinline autoplay muted loop class="backgroundVideo">
+    <video
+      preload="yes"
+      playsinline
+      webkit-playsinline
+      x5-playsinline
+      autoplay
+      muted
+      loop
+      class="backgroundVideo">
       <source
         src="@/assets/videos/Outsource-Anything-with-Iconic-Assistants.mp4"
         type="video/mp4" />
@@ -136,5 +144,34 @@
   .heroCall:hover {
     background-color: #0cb8f1;
     border-radius: 0 50px 0 50px;
+  }
+
+  /* SM */
+  @media only screen and (min-width: 480px) {
+    .hero {
+      width: 85vw;
+      margin-top: 25vh;
+    }
+    .text-landing {
+      font-size: 1.4rem;
+    }
+    .heroCall {
+      font-size: 1.5rem;
+      padding: 2.5vw 7.5vw;
+    }
+  }
+  /* MD */
+  @media only screen and (min-width: 769px) {
+    .hero{
+      width: 80vw;
+      margin-top: 25vh;
+    }
+    .text-landing{
+      font-size: 1.5rem;
+    }
+    .heroCall{
+      font-size: 1.6rem;
+      padding: 2vw 5.5vw;
+    }
   }
 </style>

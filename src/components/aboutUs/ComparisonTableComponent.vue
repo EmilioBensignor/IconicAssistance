@@ -1,6 +1,8 @@
 <template>
   <section class="skyBlueWaves">
-    <p v-motion="scrollBottom" class="subtitle text-radioactive">Comparison Table</p>
+    <p v-motion="scrollBottom" class="subtitle text-radioactive">
+      Comparison Table
+    </p>
     <h2 v-motion="scrollBottom" class="text-midnight">
       <span class="text-radioactive">ICONIC</span> VAs Comparison Chart
     </h2>
@@ -9,12 +11,12 @@
       can be challenging. Our mission is to connect you with cost-effective
       remote talent who save you time and money.
     </p>
-    <div class="w-100 columnAlignCenter">
+    <div class="w-100 columnAlignCenter ga-5">
       <div
         v-for="item in comparisonChart"
         :key="item.number"
         v-motion="scrollBottom"
-        class="cardComparison flexCenter rounded-xl elevation-6 my-5">
+        class="w-75 flexCenter rounded-xl elevation-6 my-5">
         <div
           class="w-100 cardComparisonHeader columnAlignCenter rounded-t-xl pa-5">
           <div class="circleNumber bg-blueSky elevation-3">
@@ -58,7 +60,7 @@
           </div>
         </div>
       </div>
-      <p v-motion="scrollBottom" class="cancelText mt-3 mb-5">
+      <p v-motion="scrollBottom" class="w-75 cancelText mt-3 mb-5">
         * After a thirty (30) days onboarding period, the customer may choose to
         change their Virtual Assistant or terminate the service by providing a
         fifteen (15) days prior written notice to their assigned Customer
@@ -188,13 +190,10 @@
 </script>
 
 <script setup>
-  import { scrollBottom } from "@/motions.js"
+  import { scrollBottom } from "@/motions.js";
 </script>
 
 <style scoped>
-  .cardComparison {
-    width: 80%;
-  }
   .cardComparisonHeader {
     background: rgb(55, 58, 230);
     background: linear-gradient(
@@ -215,11 +214,34 @@
     border-bottom: 1px solid #e0e0e0;
     padding: 3vw 1vw;
   }
-  .iconicLogo{
+  .iconicLogo {
     width: 90%;
   }
   .cancelText {
     font-size: 0.8rem;
     color: #656875;
+  }
+
+  /* SM */
+  @media only screen and (min-width: 480px) {
+    .cardComparisonTitle {
+      font-size: 1.3rem;
+    }
+    .cardComparisonRow {
+      padding: 2vw 1vw;
+    }
+    .cancelText {
+      font-size: 0.9rem;
+    }
+  }
+
+  /* MD */
+  @media only screen and (min-width: 769px) {
+    .cardComparisonTitle {
+      font-size: 1.4rem;
+    }
+    .cardComparisonRow {
+      padding: 1.5vw 1vw;
+    }
   }
 </style>

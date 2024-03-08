@@ -2,7 +2,7 @@
   <section class="skyRadioactive">
     <h2 v-motion="scrollBottom" class="text-white mb-5">Frequently Asked Questions</h2>
     <div class="w-75 columnAlignCenter ga-4">
-      <v-expansion-panels v-motion="scrollBottom" class="faqWrapper faqDesktop">
+      <v-expansion-panels v-motion="scrollBottom" class="faqWrapper d-none d-sm-flex">
         <v-expansion-panel
           class="elevation-4"
           title="Why is Iconic Assistants considered one of the best Ousourcing companies?">
@@ -230,10 +230,5 @@
     text-decoration: none;
     color: #373ae6;
     font-weight: 600;
-  }
-  @media screen and (max-width: 490px) {
-    .faqDesktop {
-      display: none;
-    }
   }
 </style>

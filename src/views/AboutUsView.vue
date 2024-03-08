@@ -16,7 +16,7 @@
 </template>
 
 <script setup>
-  import { scrollBottom } from "@/motions.js"
+  import { scrollBottom } from "@/motions.js";
 </script>
 
 <script>
@@ -53,5 +53,27 @@
   .circleNumber p {
     font-size: 2rem;
     font-weight: bold;
+  }
+
+  /* SM */
+  @media only screen and (min-width: 480px) {
+    .circleNumber {
+      width: 10vw;
+      height: 10vw;
+    }
+    .circleNumber p {
+      font-size: 2.2rem;
+    }
+  }
+
+  /* MD */
+  @media only screen and (min-width: 769px) {
+    .circleNumber {
+      width: 7.5vw;
+      height: 7.5vw;
+    }
+    .circleNumber p {
+      font-size: 2.4rem;
+    }
   }
 </style>

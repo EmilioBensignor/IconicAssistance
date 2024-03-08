@@ -8,17 +8,8 @@
     </div>
   </section>
   <section class="skyRadioactive">
-    <div class="columnAlignCenter">
-      <h2 v-motion="scrollBottom" class="text-white mb-10">Book a Free Call</h2>
-      <div
-        class="calendly-inline-widget"
-        data-url="https://calendly.com/iconic-assistants/15min-ij"
-        style="width: 75vw; height: 80vh"></div>
-    </div>
-    <div class="columnAlignCenter">
-      <h2 v-motion="scrollBottom" class="text-white mt-10">Get in Touch</h2>
+    <h2 v-motion="scrollBottom" class="text-white">Get in Touch</h2>
       <!-- Formulario -->
-    </div>
   </section>
   <section class="radioactiveWaves">
     <img

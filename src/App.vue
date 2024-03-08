@@ -73,7 +73,7 @@
     font-weight: 500;
   }
 
-  .pMedium{
+  .pMedium {
     font-size: 1.15rem;
     font-weight: 500;
   }
@@ -102,11 +102,9 @@
 
   /* Buttons */
 
-  .primaryButton {
-    background-color: white;
-    border: 1px solid white;
+  .primaryButton,
+  .secondaryButton {
     border-radius: 20vw;
-    color: #373ae6;
     font-family: "Poppins", sans-serif;
     font-size: 1.1rem;
     font-weight: 600;
@@ -116,26 +114,24 @@
     transition: all ease 0.2s;
   }
 
-  .primaryButton:hover{
-    background-color: transparent;
-    color: white;
+  .primaryButton {
+    background-color: white;
+    border: 1px solid white;
+    color: #373ae6;
   }
 
   .secondaryButton {
     background-color: #373ae6;
     border: 1px solid #373ae6;
-    border-radius: 20vw;
     color: white;
-    font-family: "Poppins", sans-serif;
-    font-size: 1.1rem;
-    font-weight: 600;
-    line-height: 1.3rem;
-    text-decoration: none;
-    padding: 4vw 7vw;
-    transition: all ease 0.2s;
   }
 
-  .secondaryButton:hover{
+  .primaryButton:hover {
+    background-color: transparent;
+    color: white;
+  }
+
+  .secondaryButton:hover {
     background-color: white;
     color: #373ae6;
   }
@@ -207,7 +203,7 @@
     background-position: bottom;
   }
 
-  .heroPagesWhiteWave{
+  .heroPagesWhiteWave {
     position: absolute;
     bottom: 0;
     z-index: 1;
@@ -273,8 +269,74 @@
   }
 
   /* Animations */
-  .delay{
+  .delay {
     transition: ease-in;
     animation-delay: 250ms;
+  }
+
+  /* SM */
+  @media only screen and (min-width: 480px) {
+    h1 {
+      font-size: 2.6rem;
+    }
+    h2 {
+      font-size: 1.8rem;
+    }
+    h3 {
+      font-size: 1.4rem;
+    }
+    h4 {
+      font-size: 1.25rem;
+    }
+    .subtitle {
+      font-size: 1.2rem;
+    }
+    .pMedium {
+      font-size: 1.3rem;
+    }
+    .faqWrapper {
+      font-size: 1rem;
+    }
+    .primaryButton,
+    .secondaryButton {
+      font-size: 1.3rem;
+      padding: 3vw 5.5vw;
+    }
+    .heroPages{
+      padding: 20vh 0 25vw 0;
+    }
+  }
+
+  /* MD */
+  @media only screen and (min-width: 769px) {
+    h1 {
+      font-size: 3rem;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+    h3 {
+      font-size: 1.6rem;
+    }
+    h4 {
+      font-size: 1.45rem;
+    }
+    .subtitle {
+      font-size: 1.3rem;
+    }
+    .pMedium {
+      font-size: 1.4rem;
+    }
+    .faqWrapper {
+      font-size: 1rem;
+    }
+    .primaryButton,
+    .secondaryButton {
+      font-size: 1.3rem;
+      padding: 2.2vw 4vw;
+    }
+    .heroPages{
+      padding: 20vh 0 22vw 0;
+    }
   }
 </style>

@@ -2,7 +2,7 @@
   <section class="skyRadioactive pt-7">
     <p v-motion="scrollBottom" class="subtitle text-white">Who we are</p>
     <h2 v-motion="scrollBottom" class="text-white">Outsourcing made simple and cost-effective</h2>
-    <p v-motion="scrollBottom" class="text-white my-3">
+    <p v-motion="scrollBottom" class="w-75 text-white my-3">
       Welcome to Iconic Assistants where outsourcing meets excellence! At Iconic
       Assistants, we take pride in being a <span class="font-weight-bold">premier outsourcing</span> company dedicated
       to bridging the gap between North American companies and top-tier <span class="font-weight-bold">global talent</span>. Our mission is clear: simplify and streamline the hiring process
