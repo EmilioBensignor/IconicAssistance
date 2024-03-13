@@ -41,8 +41,9 @@
   </section>
   <WhoWeAreComponent />
   <WhyUsComponent />
-  <OurServiceComponent />
+  <JobComponentComponent />
   <HowItWorksComponent />
+  <OurServiceComponent />
   <CostComparisonComponent />
   <IndustriesComponent />
   <section class="skyBlueWaves">
@@ -65,8 +66,9 @@
 
   import WhoWeAreComponent from "@/components/home/WhoWeAreComponent.vue";
   import WhyUsComponent from "@/components/home/WhyUsComponent.vue";
-  import OurServiceComponent from "@/components/home/OurServiceComponent.vue";
+  import JobComponentComponent from "@/components/home/JobComponent.vue";
   import HowItWorksComponent from "@/components/home/HowItWorksComponent.vue";
+  import OurServiceComponent from "@/components/home/OurServiceComponent.vue";
   import CostComparisonComponent from "@/components/home/CostComparisonComponent.vue";
   import IndustriesComponent from "@/components/home/IndustriesComponent.vue";
   import PricingComponent from "@/components/home/PricingComponent.vue";
@@ -77,8 +79,9 @@
       HeaderTransparentComponent,
       WhoWeAreComponent,
       WhyUsComponent,
-      OurServiceComponent,
+      JobComponentComponent,
       HowItWorksComponent,
+      OurServiceComponent,
       CostComparisonComponent,
       IndustriesComponent,
       PricingComponent,
@@ -160,18 +163,33 @@
       padding: 2.5vw 7.5vw;
     }
   }
+
   /* MD */
   @media only screen and (min-width: 769px) {
-    .hero{
+    .hero {
       width: 80vw;
       margin-top: 25vh;
     }
-    .text-landing{
+    .text-landing {
       font-size: 1.5rem;
     }
-    .heroCall{
+    .heroCall {
       font-size: 1.6rem;
       padding: 2vw 5.5vw;
+    }
+  }
+
+  /* LG */
+  @media only screen and (min-width: 992px) {
+    .hero{
+      margin-top: 26vh;
+    }
+    .text-landing{
+      font-size: 1.8rem;
+    }
+    .heroCall{
+      font-size: 1.8rem;
+      padding: 1.35vw 4.5vw;
     }
   }
 </style>

@@ -302,7 +302,7 @@
       font-size: 1.3rem;
       padding: 3vw 5.5vw;
     }
-    .heroPages{
+    .heroPages {
       padding: 20vh 0 25vw 0;
     }
   }
@@ -335,8 +335,49 @@
       font-size: 1.3rem;
       padding: 2.2vw 4vw;
     }
-    .heroPages{
+    .heroPages {
       padding: 20vh 0 22vw 0;
     }
+  }
+
+  /* LG */
+  @media only screen and (min-width: 992px) {
+    h1 {
+      font-size: 3.6rem;
+    }
+    h2 {
+      font-size: 2.3rem;
+    }
+    h3 {
+      font-size: 1.8rem;
+    }
+    h4 {
+      font-size: 1.6rem;
+    }
+    p{
+      font-size: 1.1rem;
+    }
+    .subtitle {
+      font-size: 1.5rem;
+    }
+    .pMedium {
+      font-size: 1.55rem;
+    }
+    .faqWrapper {
+      font-size: 1.05rem;
+    }
+    .primaryButton,
+    .secondaryButton {
+      font-size: 1.4rem;
+      padding: 2.2vw 4vw;
+    }
+    .heroPages {
+      width: 100vw;
+      padding: 20vh 0 22vw 0;
+    }
+  }
+
+  /* XL */
+  @media only screen and (min-width: 1280px) {
   }
 </style>

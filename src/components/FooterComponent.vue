@@ -11,28 +11,31 @@
       <router-link :to="'/contact-us'" class="primaryButton elevation-5 my-3"
         >Contact Us!</router-link
       >
-      <div class="w-75 social d-flex justify-space-between mt-3 mb-5">
+      <div class="w-50 social d-flex justify-space-between mt-3 mb-5">
         <a href="mailto:ivan.j@iconicassistants.com">
           <img
             src="@/assets/images/footer/Email-Icon.png"
             alt="Email Icon"
-            width="35%" />
+            width="65%" />
         </a>
-        <!-- <a href="https://www.facebook.com/YourPage">
-          <img src="@/assets/images/footer/Facebook-Icon.png" alt="Facebook Icon" width="35%">
-        </a> -->
+        <a href="https://web.facebook.com/profile.php?id=61556663172397">
+          <img
+            src="@/assets/images/footer/Facebook-Icon.png"
+            alt="Facebook Icon"
+            width="65%" />
+        </a>
         <a href="https://www.instagram.com/iconicassistants/">
           <img
             src="@/assets/images/footer/Instagram-Icon.png"
             alt="Instagram Icon"
-            width="35%" />
+            width="65%" />
         </a>
         <a
           href="https://www.linkedin.com/company/iconic-assistance/posts/?feedView=all&viewAsMember=true">
           <img
             src="@/assets/images/footer/Linkedin-Icon.png"
             alt="Linkedin Icon"
-            width="35%" />
+            width="65%" />
         </a>
       </div>
     </div>
@@ -76,9 +79,6 @@
     components: {
       IconicLogo,
     },
-    data() {
-      return {};
-    },
   };
 </script>
 
@@ -105,8 +105,8 @@
 
   /* SM */
   @media only screen and (min-width: 480px) {
-    .social {
-      width: 50% !important;
+    .social a img {
+      width: 45%;
     }
     .footerLinks .column a {
       font-size: 1.15rem;
@@ -122,16 +122,19 @@
 
   /* MD */
   @media only screen and (min-width: 769px) {
-    .logo{
+    .logo {
       height: 10vh;
     }
-    .footerLinks .column a{
+    .social a img {
+      width: 35%;
+    }
+    .footerLinks .column a {
       font-size: 1.2rem;
     }
-    .footerTitle{
+    .footerTitle {
       font-size: 1.55rem;
     }
-    .rightsReserved{
+    .rightsReserved {
       font-size: 1rem;
     }
   }

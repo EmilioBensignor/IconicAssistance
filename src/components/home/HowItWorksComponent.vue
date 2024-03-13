@@ -1,24 +1,55 @@
 <template>
-  <section class="skyRadioactive pt-10">
-    <p v-motion="scrollBottom" class="subtitle text-white">How It Works</p>
-    <h2 v-motion="scrollBottom" class="text-white">
-      How Our Remote Talent Service Works
+  <section class="skyRadioactiveWaves">
+    <p v-motion="scrollBottom" class="subtitle text-radioactive">
+      How It Works
+    </p>
+    <h2 v-motion="scrollBottom" class="text-midnight">
+      How Our <span class="text-radioactive">Remote Talent Service</span> Works
     </h2>
-    <div class="columnAlignCenter ga-10 my-5">
-      <div
-        v-for="(item, index) in steps"
-        :key="index"
-        v-motion="scrollBottom"
-        class="step bg-white w-75 rounded-xl pa-3 pb-6 elevation-5 columnAlignCenter ga-3">
-        <p class="text-radioactive w-100 ml-3 stepNumbers">{{ item.number }}</p>
-        <v-img
-          eager
-          :src="getImgUrl(item.img)"
-          :alt="item.alt"
-          class="shadow-2"
-          width="45%"></v-img>
-        <p class="stepTitle">{{ item.title }}</p>
-        <p class="stepBody">{{ item.body }}</p>
+    <div class="works columnAlignCenter ga-10 mt-5 mb-3">
+      <div class="w-75 step12 columnAlignCenter ga-10">
+        <div
+          v-for="(item, index) in steps.slice(0, 2)"
+          :key="index"
+          v-motion="scrollBottom"
+          class="step rounded-xl pa-3 pb-6 elevation-5 columnAlignCenter ga-3">
+          <p class="text-radioactive w-100 ml-3 stepNumbers">
+            {{ item.number }}
+          </p>
+          <v-img
+            eager
+            :src="getImgUrl(item.img)"
+            :alt="item.alt"
+            class="shadow-2"
+            width="45%"></v-img>
+          <p class="stepTitle">{{ item.title }}</p>
+          <p class="stepBody">{{ item.body }}</p>
+        </div>
+      </div>
+      <div class="desktopImg" v-motion="scrollBottom">
+        <img
+          src="@/assets/images/misc/Remote-Talent-Four-Steps.png"
+          alt="Remote Talent Four Steps"
+          width="100%" />
+      </div>
+      <div class="step34 columnAlignCenter ga-10">
+        <div
+          v-for="(item, index) in steps.slice(2)"
+          :key="index + 2"
+          v-motion="scrollBottom"
+          class="w-75 step reversed rounded-xl pa-3 pb-6 elevation-5 columnAlignCenter ga-3">
+          <p class="text-radioactive w-100 ml-3 stepNumbers reversed">
+            {{ item.number }}
+          </p>
+          <v-img
+            eager
+            :src="getImgUrl(item.img)"
+            :alt="item.alt"
+            class="shadow-2"
+            width="45%"></v-img>
+          <p class="stepTitle">{{ item.title }}</p>
+          <p class="stepBody">{{ item.body }}</p>
+        </div>
       </div>
     </div>
   </section>
@@ -73,6 +104,12 @@
 </script>
 
 <style scoped>
+  .desktopImg {
+    display: none;
+  }
+  .step {
+    background-color: rgb(12, 185, 241, 0.2);
+  }
   .stepNumbers {
     text-align: start;
     font-weight: 700;
@@ -87,10 +124,11 @@
   .stepBody {
     font-size: 1rem;
   }
+
   /* SM */
   @media only screen and (min-width: 480px) {
-    .step {
-      width: 50% !important;
+    .works {
+      width: 75% !important;
     }
     .stepNumbers {
       font-size: 1.7rem;
@@ -99,13 +137,61 @@
       font-size: 1.3rem;
     }
   }
+
   /* MD */
   @media only screen and (min-width: 769px) {
+    .works {
+      width: 50% !important;
+    }
     .stepNumbers {
       font-size: 1.8rem;
     }
     .stepTitle {
       font-size: 1.4rem;
+    }
+  }
+
+  /* LG */
+  @media only screen and (min-width: 992px) {
+    .works {
+      width: 95% !important;
+      display: grid !important;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr;
+      justify-items: center;
+    }
+    .step12 {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+    .desktopImg {
+      display: block;
+      grid-area: 1 / 2 / 2 / 3;
+    }
+    .step34 {
+      grid-area: 1 / 3 / 2 / 4;
+    }
+    .step {
+      height: 35vh;
+      width: 100% !important;
+      text-align: start;
+      box-shadow: none !important;
+      background: none !important;
+    }
+    .reversed {
+      text-align: end !important;
+    }
+    .stepNumbers {
+      margin: 0 !important;
+    }
+    .stepTitle {
+      width: 100%;
+      font-weight: bold;
+    }
+    .stepBody {
+      width: 100%;
+    }
+    .step .v-img {
+      display: none;
     }
   }
 </style>

@@ -4,7 +4,7 @@
     <h2 v-motion="scrollBottom" class="mb-3 text-midnight">
       What Makes Us Different
     </h2>
-    <div class="flexCenter ga-10 my-5">
+    <div class="threeDifferent flexCenter ga-10 my-5">
       <div
         v-for="(item, index) in different"
         :key="index"
@@ -89,6 +89,7 @@
       font-size: 1.2rem;
     }
   }
+
   /* MD */
   @media only screen and (min-width: 769px) {
     .differentTitle {
@@ -96,6 +97,20 @@
     }
     .differentSubtitle {
       font-size: 1.3rem;
+    }
+  }
+
+  /* LG */
+  @media only screen and (min-width: 992px) {
+    .threeDifferent {
+      display: flex;
+      flex-direction: row;
+    }
+    .differentTitle {
+      font-size: 1.5rem;
+    }
+    .different .v-img {
+      width: 60% !important;
     }
   }
 </style>

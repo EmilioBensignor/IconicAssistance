@@ -30,11 +30,23 @@
       height: 12vw;
     }
   }
+
   /* MD */
   @media only screen and (min-width: 769px) {
     .cta {
       width: 10vw;
       height: 10vw;
     }
+  }
+
+  /* LG */
+  @media only screen and (min-width: 992px) {
+    .cta{
+      display: none;
+    }
+  }
+
+  /* XL */
+  @media only screen and (min-width: 1280px) {
   }
 </style>

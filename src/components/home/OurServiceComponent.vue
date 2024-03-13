@@ -4,7 +4,7 @@
     <h2 v-motion="scrollBottom" class="text-white">
       Tailored For Your Success
     </h2>
-    <div class="columnAlignCenter py-3 px-2 ga-5">
+    <div class="threeTailor columnAlignCenter py-3 px-2 ga-5">
       <div
         class="tailor flexCenter text-white w-75 ga-2 mt-10"
         v-for="(item, index) in tailoredServices"
@@ -17,18 +17,17 @@
           class="shadow-5"
           width="75%"></v-img>
         <p class="tailoredTitle text-white">{{ item.title }}</p>
-        <!-- <div v-html="item.body"></div> -->
         <p v-html="item.body" class="text-white"></p>
         <div class="w-75 bg-white mt-10 whiteLine"></div>
       </div>
-      <div class="my-5 columnAlignCenter ga-2 w-100">
-        <p v-motion="scrollBottom" class="text-white font-weight-bold tellUs">
-          Tell us what you need!
-        </p>
-        <router-link class="primaryButton elevation-5 mt-5" :to="'/contact-us'"
-          >Contact Us</router-link
-        >
-      </div>
+    </div>
+    <div class="my-5 columnAlignCenter ga-2 w-100">
+      <p v-motion="scrollBottom" class="text-white font-weight-bold tellUs">
+        Tell us what you need!
+      </p>
+      <router-link class="primaryButton elevation-5 mt-5" :to="'/contact-us'"
+        >Contact Us</router-link
+      >
     </div>
   </section>
 </template>
@@ -83,6 +82,7 @@
     font-size: 1.2rem;
     font-weight: 600;
   }
+
   /* SM */
   @media only screen and (min-width: 480px) {
     .tailor {
@@ -95,6 +95,7 @@
       font-size: 1.3rem;
     }
   }
+
   /* MD */
   @media only screen and (min-width: 769px) {
     .tailoredTitle {
@@ -102,6 +103,26 @@
     }
     .tellUs {
       font-size: 1.4rem;
+    }
+  }
+
+  /* LG */
+  @media only screen and (min-width: 992px) {
+    .threeTailor{
+      display: flex;
+      flex-direction: row;
+      margin: 5vw 0;
+    }
+    .tailor{
+      height: 60vh !important;
+      justify-content: space-between !important;
+      margin-top: 0 !important;
+    }
+    .tailor .v-img{
+      width: 60% !important;
+    }
+    .whiteLine{
+      display: none;
     }
   }
 </style>

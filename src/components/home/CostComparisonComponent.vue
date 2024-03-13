@@ -1,5 +1,5 @@
 <template>
-  <section class="radioactiveWaves">
+  <section class="skyRadioactiveWaves">
     <p v-motion="scrollBottom" class="subtitle mt-2">Cost Comparison</p>
     <h2 v-motion="scrollBottom" class="text-midnight">
       Delegate Task At A Fraction Of The Cost
@@ -11,22 +11,6 @@
           :key="index"
           class="w-100 comparisonItem flexCenter justify-center pa-3">
           <p class="text-midnight text-center">{{ item }}</p>
-        </div>
-      </div>
-      <div
-        class="w-50 columnAlignCenter bg-radioactive rounded-te-xl rounded-bs-xl elevation-10">
-        <div
-          v-for="(item, index) in iconicVa"
-          :key="index"
-          class="w-100 comparisonItem flexCenter justify-center pa-3">
-          <p class="text-white text-center font-weight-bold">{{ item }}</p>
-        </div>
-        <div class="w-50 saveIcon pl-3 mb-n6">
-          <img
-            src="@/assets/images/misc/Save-75-Percentage.png"
-            alt="Save 75%"
-            class="shadow-25"
-            width="95%" />
         </div>
       </div>
       <!-- Comparison Categories -->
@@ -53,6 +37,22 @@
       <div
         class="flexCenter category category6 bg-white elevation-5 rounded-pill py-1">
         <p class="text-midnight">TOTAL MONTHLY</p>
+      </div>
+      <div
+        class="w-50 columnAlignCenter bg-radioactive rounded-te-xl rounded-bs-xl elevation-10">
+        <div
+          v-for="(item, index) in iconicVa"
+          :key="index"
+          class="w-100 comparisonItem flexCenter justify-center pa-3">
+          <p class="text-white text-center font-weight-bold">{{ item }}</p>
+        </div>
+        <div class="w-50 saveIcon pl-3 mb-n6">
+          <img
+            src="@/assets/images/misc/Save-75-Percentage.png"
+            alt="Save 75%"
+            class="shadow-3"
+            width="95%" />
+        </div>
       </div>
     </div>
     <div
@@ -167,6 +167,31 @@
   @media only screen and (min-width: 769px) {
     .CostComparisonAclaration p {
       font-size: 0.9rem;
+    }
+  }
+
+  /* LG */
+  @media only screen and (min-width: 992px) {
+    .costComparison{
+      width: 75% !important;
+    }
+    .comparisonItem{
+      height: 20vh;
+    }
+    .comparisonItem p{
+      font-size: 1.65rem;
+    }
+    .category{
+      width: 75%;
+    }
+    .category p{
+      font-size: 1.3rem;
+    }
+    .saveIcon{
+      margin-bottom: -3vw !important;
+    }
+    .saveIcon img{
+      width: 65%;
     }
   }
 </style>

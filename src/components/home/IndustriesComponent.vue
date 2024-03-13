@@ -44,11 +44,31 @@
             </router-link>
           </v-carousel-item>
         </v-carousel>
+        <div class="d-flex justify-center flex-wrap">
+          <div
+            v-for="(item, index) in industries"
+            :key="index"
+            class="industry">
+            <v-img
+              :src="getImgUrl(item.logo)"
+              :alt="item.logoAlt"
+              class="shadow-35"
+              width="50%"
+              eager></v-img>
+            <h3 class="titulo text-white mb-3">{{ item.name }}</h3>
+            <p class="description text-white my-3">{{ item.description }}</p>
+            <router-link
+              :to="'/services'"
+              class="text-decoration-none primaryButton mt-3 mb-10 elevation-5"
+              >Learn More</router-link
+            >
+          </div>
+        </div>
         <div class="mt-10 columnAlignCenter w-75">
           <h4 v-motion="scrollBottom" class="text-white font-weight-bold">
             And Many More!
           </h4>
-          <p v-motion="scrollBottom" class="text-white">
+          <p v-motion="scrollBottom" class="w-100 text-white">
             Want to know if our Remote Talent Experts are suitable for you?
           </p>
           <router-link
@@ -90,5 +110,24 @@
   }
   .carouselCard {
     height: 100%;
+  }
+
+  /* LG */
+  @media only screen and (min-width: 992px) {
+    .v-carousel {
+      display: none;
+    }
+    .industry{
+      width: 28%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .industry .v-img{
+      text-align: start;
+    }
+    .description{
+      font-weight: 600;
+    }
   }
 </style>
