@@ -195,7 +195,7 @@
     }
   }
 
-  /* XL */
+  /* Desktop */
   @media only screen and (min-width: 1080px) {
     .costComparison {
       width: 65% !important;

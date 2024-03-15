@@ -114,7 +114,7 @@
     }
   }
 
-  /* XL */
+  /* Desktop */
   @media only screen and (min-width: 1080px) {
     .different {
       height: 64vh;

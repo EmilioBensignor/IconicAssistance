@@ -161,7 +161,7 @@
     }
   }
 
-  /* XL */
+  /* Desktop */
   @media only screen and (min-width: 1080px) {
     .pricingTabs{
       width: 50%;

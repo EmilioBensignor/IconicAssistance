@@ -242,7 +242,7 @@
     font-weight: 600;
   }
 
-  /* XL */
+  /* Desktop */
   @media only screen and (min-width: 1080px) {
     .leftRight{
       flex-direction: row;

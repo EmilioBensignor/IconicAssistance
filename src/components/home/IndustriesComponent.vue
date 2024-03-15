@@ -132,7 +132,7 @@
     }
   }
 
-  /* XL */
+  /* Desktop */
   @media only screen and (min-width: 1080px) {
     .industry{
       height: 70vh;

@@ -86,12 +86,15 @@
     display: none;
   }
 
-  /* XL */
+  /* Desktop */
   @media only screen and (min-width: 1080px) {
     .whoWeAre {
       display: flex;
       flex-direction: row;
       align-items: center;
+    }
+    h2{
+      line-height: 1.2;
     }
     .vaModel{
       position: relative;
@@ -102,7 +105,7 @@
       text-align: start;
     }
     .rightWhoWeAre p{
-      width: 90% !important;
+      width: 95% !important;
     }
     .textWhoWeAre{
       margin: 0.5vw 0 !important;
