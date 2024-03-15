@@ -172,26 +172,42 @@
 
   /* LG */
   @media only screen and (min-width: 992px) {
-    .costComparison{
+    .costComparison {
       width: 75% !important;
     }
-    .comparisonItem{
+    .comparisonItem {
       height: 20vh;
     }
-    .comparisonItem p{
+    .comparisonItem p {
       font-size: 1.65rem;
     }
-    .category{
+    .category {
       width: 75%;
     }
-    .category p{
+    .category p {
       font-size: 1.3rem;
     }
-    .saveIcon{
+    .saveIcon {
       margin-bottom: -3vw !important;
     }
-    .saveIcon img{
+    .saveIcon img {
       width: 65%;
+    }
+  }
+
+  /* XL */
+  @media only screen and (min-width: 1080px) {
+    .costComparison {
+      width: 65% !important;
+    }
+    .comparisonItem p {
+      font-size: 1.4rem;
+    }
+    .category p {
+      font-size: 1.2rem;
+    }
+    .saveIcon img {
+      width: 75%;
     }
   }
 </style>

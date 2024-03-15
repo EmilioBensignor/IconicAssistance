@@ -117,17 +117,32 @@
     .v-carousel {
       display: none;
     }
-    .industry{
+    .industry {
       width: 28%;
       display: flex;
+      justify-content: space-between;
       flex-direction: column;
       align-items: center;
     }
-    .industry .v-img{
+    .industry .v-img {
       text-align: start;
     }
-    .description{
+    .description {
       font-weight: 600;
+    }
+  }
+
+  /* XL */
+  @media only screen and (min-width: 1080px) {
+    .industry{
+      height: 70vh;
+      margin: 3vw 0;
+    }
+    .industry .v-img__img{
+      height: auto !important;
+    }
+    .v-responsive{
+      flex: none !important;
     }
   }
 </style>

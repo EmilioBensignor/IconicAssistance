@@ -108,21 +108,30 @@
 
   /* LG */
   @media only screen and (min-width: 992px) {
-    .threeTailor{
+    .threeTailor {
       display: flex;
       flex-direction: row;
       margin: 5vw 0;
     }
-    .tailor{
+    .tailor {
       height: 60vh !important;
-      justify-content: space-between !important;
       margin-top: 0 !important;
     }
-    .tailor .v-img{
+    .tailoredTitle{
+      margin-top: 3vw;
+    }
+    .tailor .v-img {
       width: 60% !important;
     }
-    .whiteLine{
+    .whiteLine {
       display: none;
+    }
+  }
+
+  /* XL */
+  @media only screen and (min-width: 1080px) {
+    .tailor{
+      height: 65vh !important;
     }
   }
 </style>

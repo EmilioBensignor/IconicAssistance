@@ -26,8 +26,8 @@
   /* SM */
   @media only screen and (min-width: 480px) {
     .cta {
-      width: 12vw;
-      height: 12vw;
+      width: 15vw;
+      height: 15vw;
     }
   }
 

@@ -160,4 +160,17 @@
       font-size: 1.4rem;
     }
   }
+
+  /* XL */
+  @media only screen and (min-width: 1080px) {
+    .pricingTabs{
+      width: 50%;
+    }
+    .v-tab{
+      font-size: 1rem;
+    }
+    .plan img{
+      width: 20%;
+    }
+  }
 </style>

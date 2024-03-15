@@ -30,7 +30,7 @@
         <img
           src="@/assets/images/misc/Remote-Talent-Four-Steps.png"
           alt="Remote Talent Four Steps"
-          width="100%" />
+          width="90%" />
       </div>
       <div class="step34 columnAlignCenter ga-10">
         <div
@@ -192,6 +192,13 @@
     }
     .step .v-img {
       display: none;
+    }
+  }
+
+  /* XL */
+  @media only screen and (min-width: 1080px) {
+    .step {
+      height: 33vh;
     }
   }
 </style>
