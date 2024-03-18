@@ -4,21 +4,21 @@
     <h2 v-motion="scrollBottom" class="text-white">
       Unlocking efficiency in four simple steps
     </h2>
-    <p v-motion="scrollBottom" class="w-75 text-white mt-3">
+    <p v-motion="scrollBottom" class="business w-75 text-white mt-3">
       Your business deserves tailored solutions, and we're here to deliver
       exactly that.
     </p>
-    <div class="w-75 columnAlignCenter ga-16 my-5 py-5">
+    <div class="fourSteps w-75 columnAlignCenter ga-16 my-5 py-5">
       <div
         v-for="item in fourSteps"
         :key="item.number"
         v-motion="scrollBottom"
-        class="flexCenter">
-        <div class="circleNumber bg-white elevation-5 mb-3">
+        class="step flexCenter ga-3">
+        <div class="circleNumber bg-white elevation-5">
           <p class="text-radioactive">{{ item.number }}</p>
         </div>
         <p class="fourStepsTitle text-white">{{ item.title }}</p>
-        <p class="text-white mt-1">{{ item.description }}</p>
+        <p class="text-white">{{ item.description }}</p>
       </div>
     </div>
     <router-link
@@ -79,12 +79,53 @@
     .fourStepsTitle {
       font-size: 1.5rem;
     }
+    .circleNumber {
+      width: 12vw;
+      height: 12vw;
+    }
+  }
+
+  @media only screen and (min-width: 600px) {
+    .circleNumber {
+      width: 10vw;
+      height: 10vw;
+    }
   }
 
   /* MD */
   @media only screen and (min-width: 769px) {
     .fourStepsTitle {
       font-size: 1.6rem;
+    }
+    .circleNumber {
+      width: 8vw;
+      height: 8vw;
+    }
+  }
+
+  /* Desktop */
+  @media only screen and (min-width: 1080px) {
+    .business {
+      font-size: 1.2rem;
+    }
+    .fourSteps {
+      width: 95% !important;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+    }
+    .step {
+      width: 25%;
+    }
+    .circleNumber {
+      width: 6vw;
+      height: 6vw;
+    }
+    .circleNumber p {
+      font-size: 2rem;
+    }
+    .step p{
+      width: 100% !important;
     }
   }
 </style>

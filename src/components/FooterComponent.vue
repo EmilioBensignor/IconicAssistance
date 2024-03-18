@@ -138,4 +138,8 @@
       font-size: 1rem;
     }
   }
+
+  /* Desktop */
+  @media only screen and (min-width: 1080px) {
+  }
 </style>

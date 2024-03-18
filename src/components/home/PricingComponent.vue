@@ -169,6 +169,9 @@
     .v-tab{
       font-size: 1rem;
     }
+    .plan{
+      width: 42% !important;
+    }
     .plan img{
       width: 20%;
     }

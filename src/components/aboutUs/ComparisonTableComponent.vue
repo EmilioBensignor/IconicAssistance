@@ -61,7 +61,53 @@
         </div>
       </div>
     </div>
-    <div class="comparisonChartDesktop"></div>
+    <div class="comparisonChartDesktop column mb-7">
+      <div class="comparison d-flex align-center bg-white mb-5">
+        <div class="chartTitleBlank"></div>
+        <div class="chartTitle py-2">
+          <IconicLogo class="chartLogo text-radioactive" />
+        </div>
+        <div class="chartTitle py-2">
+          <p>In-House Staff/Assistant</p>
+          <p>US-based</p>
+        </div>
+        <div class="chartTitle py-2">
+          <p>Virtual Assistant</p>
+          <p>US-based</p>
+        </div>
+        <div class="chartTitle py-2">
+          <p>Virtual Assistant</p>
+          <p>Philippines</p>
+        </div>
+      </div>
+      <div class="columnAlignCenter ga-6">
+        <div
+          v-for="(item, index) in comparisonChart"
+          :key="index"
+          v-motion="scrollBottom"
+          class="w-100 d-flex">
+          <div class="category d-flex align-center rounded-bs-xl ga-3 pa-3">
+            <div
+              class="categoryNumber columnAlignCenter justify-center bg-blueSky rounded-circle elevation-2">
+              <p class="text-white font-weight-bold">{{ item.number }}</p>
+            </div>
+            <p class="text-white text-start categoryTitle">{{ item.title }}</p>
+          </div>
+          <div class="itemIconic itemChart pa-5 bg-lightBlueSky">
+            <p>{{ item.iconic }}</p>
+          </div>
+          <div class="itemChart pa-5 bg-chartGray">
+            <p>{{ item.inHouseUS }}</p>
+          </div>
+          <div class="itemChart pa-5 bg-chartGray">
+            <p>{{ item.vaUS }}</p>
+          </div>
+          <div class="itemChart pa-5 bg-chartGray rounded-te-xl">
+            <p>{{ item.vaPhilippines }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
     <p v-motion="scrollBottom" class="w-75 cancelText mt-3 mb-5">
       * After a thirty (30) days onboarding period, the customer may choose to
       change their Virtual Assistant or terminate the service by providing a
@@ -254,8 +300,60 @@
     .comparisonChartMobile {
       display: none;
     }
-    .comparisonChartDesktop{
+    .comparisonChartDesktop {
+      width: 90%;
       display: flex;
+    }
+    .comparison {
+      position: sticky;
+      top: 6vw;
+      z-index: 2;
+    }
+    .chartTitleBlank {
+      width: 25%;
+    }
+    .chartTitle {
+      width: 20%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .chartTitle p {
+      font-weight: 500;
+    }
+    .category {
+      width: 25%;
+      background-image: linear-gradient(
+        to right,
+        #373ae6,
+        #0066f9,
+        #0085fe,
+        #00a0fa,
+        #0cb8f1
+      );
+    }
+    .categoryNumber {
+      width: 4.5vw;
+      height: 4vw;
+    }
+    .categoryTitle {
+      font-weight: 600;
+    }
+    .chartLogo {
+      height: 5.5vw !important;
+    }
+    .itemChart {
+      width: 20%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .itemIconic p {
+      font-weight: 600 !important;
+    }
+    .itemChart p {
+      font-weight: 500;
     }
   }
 </style>

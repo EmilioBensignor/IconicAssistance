@@ -1,6 +1,6 @@
 <template>
   <section class="radioactiveWaves">
-    <div class="howWeWork">
+    <div class="howWeWork columnAlignCenter">
       <div class="columnAlignCenter howWeWorkRight">
         <p v-motion="scrollBottom" class="subtitle text-radioactive">
           How We Work
@@ -44,9 +44,9 @@
       :to="'/how-we-hire'">
       Learn About How We Hire
     </router-link>
-    <div class="divTools">
+    <div class="divTools columnAlignCenter">
       <p v-motion="scrollBottom" class="tools my-5">Some of the tools we use</p>
-      <div class="w-75 logos d-flex justify-center flex-wrap ga-5">
+      <div class="w-100 logos d-flex justify-center flex-wrap ga-5">
         <div
           v-for="(item, index) in tools"
           :key="index"
@@ -172,12 +172,15 @@
       font-size: 1.4rem;
     }
     .tool {
-      width: 35%;
+      width: 45%;
     }
   }
 
   /* MD */
   @media only screen and (min-width: 769px) {
+    .divTools{
+      width: 75%;
+    }
     .tools {
       font-size: 1.5rem;
     }
@@ -217,16 +220,13 @@
     }
     .divTools {
       width: 95% !important;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
     }
     .tools {
       font-size: 1.8rem;
       margin-bottom: 3vw !important;
     }
     .logos {
-      width: 100% !important;
+      width: 75% !important;
     }
     .tool .v-img {
       width: 75% !important;
