@@ -22,7 +22,7 @@
         type="search"
         name="faqSearch"
         v-model="faqSearch"
-        class="w-100 bg-white rounded-xl py-3 px-5 elevation-4"
+        class="w-100 inputSearch bg-white rounded-xl py-3 px-5 elevation-4"
         placeholder="Type to search for a question"
         hide-details />
     </v-form>
@@ -31,10 +31,10 @@
       <div
         v-motion="scrollBottom"
         class="column align-self-start text-start font-weight-bold text-white ga-3 filterCategories my-5">
-        <p class="w-100 text-white text-start mb-3">
+        <p class="w-100 filter text-white text-start mb-3">
           Filter by the category you are looking for:
         </p>
-        <label class="d-flex align-center ga-3" for="Communication">
+        <label class="labelCheckbox d-flex align-center ga-3" for="Communication">
           <input
             id="Communication"
             type="checkbox"
@@ -42,7 +42,7 @@
             value="Communication" />
           Communication
         </label>
-        <label class="d-flex align-center ga-3" for="GettingStarted">
+        <label class="labelCheckbox d-flex align-center ga-3" for="GettingStarted">
           <input
             id="GettingStarted"
             type="checkbox"
@@ -50,7 +50,7 @@
             value="Getting Started" />
           Getting Started
         </label>
-        <label class="d-flex align-center ga-3" for="Hiring">
+        <label class="labelCheckbox d-flex align-center ga-3" for="Hiring">
           <input
             id="Hiring"
             type="checkbox"
@@ -58,7 +58,7 @@
             value="Hiring" />
           Hiring
         </label>
-        <label class="d-flex align-center ga-3" for="Payment">
+        <label class="labelCheckbox d-flex align-center ga-3" for="Payment">
           <input
             id="Payment"
             type="checkbox"
@@ -165,6 +165,25 @@
     input[type="checkbox"] {
       width: 3vw;
       height: 3vw;
+    }
+  }
+
+  /* Desktop */
+  @media only screen and (min-width: 1080px) {
+    .searchLabel{
+      font-size: 1.6rem;
+      text-align: start;
+      padding-left: 5vw;
+    }
+    .inputSearch{
+      font-size: 1.2rem;
+    }
+    .filter{
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
+    .labelCheckbox{
+      font-size: 1.2rem;
     }
   }
 </style>

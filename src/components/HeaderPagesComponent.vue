@@ -58,13 +58,11 @@
 
 <script>
   import IconicLogo from "./icons/IconicLogo.vue";
-  import PopUpComponent from "@/components/calendly/PopUpComponent.vue";
 
   export default {
     name: "HeaderTransparentComponent",
     components: {
       IconicLogo,
-      PopUpComponent,
     },
     data() {
       return {

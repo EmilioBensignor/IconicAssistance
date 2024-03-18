@@ -262,6 +262,13 @@ section {
 	text-align: center;
 }
 
+.allCenter{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
 /* Pages */
 .heroPages {
 	width: 85%;
@@ -379,5 +386,14 @@ section {
 
 /* Desktop */
 @media only screen and (min-width: 1080px) {
+	.v-expansion-panel-title{
+		font-size: 1.1rem !important;
+	}
+	.faqWrapper{
+		font-size: 1.1rem;
+	}
+	.faqWrapper p, .faqWrapper li{
+		font-size: 1.1rem;
+	}
 }
 </style>

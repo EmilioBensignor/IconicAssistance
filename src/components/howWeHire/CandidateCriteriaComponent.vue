@@ -6,19 +6,34 @@
     <p v-motion="scrollBottom" class="w-75 subtitle text-white mt-3 mb-7">
       All candidates will be screened on the following criteria:
     </p>
-    <ul class="w-75 candidate column text-center ga-3">
-      <div
-        v-for="item in candidateCriteria"
-        :key="item"
-        v-motion="scrollBottom"
-        class="d-flex ga-2">
-        <v-icon
-          icon="mdi-chevron-double-right"
-          color="white"
-          size="x-large"></v-icon>
-        <li class="text-start text-white">{{ item }}</li>
-      </div>
-    </ul>
+    <div class="w-75 twoCandidate columnAlignCenter">
+      <ul class="w-100 candidate column text-center ga-3">
+        <div
+          v-for="item in candidateCriteriaLeft"
+          :key="item"
+          v-motion="scrollBottom"
+          class="d-flex ga-2">
+          <v-icon
+            icon="mdi-chevron-double-right"
+            color="white"
+            size="x-large"></v-icon>
+          <li class="text-start text-white">{{ item }}</li>
+        </div>
+      </ul>
+      <ul class="w-100 candidate column text-center ga-3">
+        <div
+          v-for="item in candidateCriteriaRight"
+          :key="item"
+          v-motion="scrollBottom"
+          class="d-flex ga-2">
+          <v-icon
+            icon="mdi-chevron-double-right"
+            color="white"
+            size="x-large"></v-icon>
+          <li class="text-start text-white">{{ item }}</li>
+        </div>
+      </ul>
+    </div>
     <div class="w-50 bg-white mt-10 whiteLine"></div>
   </section>
 </template>
@@ -27,11 +42,13 @@
   export default {
     data() {
       return {
-        candidateCriteria: [
+        candidateCriteriaLeft: [
           "Experience in role understanding and impact on client's business",
           "Online VA experience with strong communication skills",
           "Motivated to work online and with our company",
           "Home office: focus on internet specs and backup plan",
+        ],
+        candidateCriteriaRight: [
           "Assessment of home situation, familial dynamics, and personal matters affecting work",
           "Accountability at work: situational questions",
           "Problem-solving skills",
@@ -53,8 +70,17 @@
 
   /* MD */
   @media only screen and (min-width: 769px) {
-    .candidate{
+    .candidate {
       width: 50% !important;
+    }
+  }
+
+  /* Desktop */
+  @media only screen and (min-width: 1080px) {
+    .twoCandidate{
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
     }
   }
 </style>
