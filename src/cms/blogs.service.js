@@ -45,7 +45,7 @@ export const blogs = [
     date: new Date('June 12, 2023'),
     img: 'Hire-Train-Virtual-Assistant.png',
     alt: 'Hire Train Virtual Assistant',
-    summary: "In today's digital landscape, hiring a virtual assistant (VA) has become an increasingly popular solution for entrepreneurs, small businesses.",
+    summary: "In today's digital landscape, hiring a virtual assistant (VA) has become an popular solution for entrepreneurs, small businesses.",
     h2: 'Building a Successful Partnership',
     intro: "In today's digital landscape, hiring a virtual assistant (VA) has become an increasingly popular solution for entrepreneurs, small businesses, and individuals seeking support in managing their workload. However, hiring and training a virtual assistant requires careful planning and consideration to ensure a successful working relationship. In this blog post, we will explore the three basic steps to hiring and training a virtual assistant effectively, enabling you to build a productive and collaborative partnership.",
     bullet: [

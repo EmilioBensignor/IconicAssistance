@@ -1,6 +1,6 @@
 <template>
   <section class="radioactiveWaves">
-    <div class="w-100 flexCenter ga-15 mt-5">
+    <div class="w-100 empowerWrapper flexCenter ga-15 mt-5">
       <div
         v-for="(item, index) in empower"
         :key="index"
@@ -12,7 +12,7 @@
           class="shadow-3 mb-n15"
           width="60%" />
         <div
-          class="bg-radioactive flexCenter rounded-te-xl rounded-bs-xl elevation-5 mt-n3 pt-15 pa-5">
+          class="empowerBody flexCenter bg-radioactive rounded-te-xl rounded-bs-xl elevation-5 mt-n3 pt-15 pa-5">
           <h3 class="text-white mt-2">{{ item.title }}</h3>
           <p class="subtitle font-weight-bold text-white">
             {{ item.subtitle }}
@@ -34,7 +34,7 @@
         </div>
       </div>
     </div>
-    <p v-motion="scrollBottom" class="font-weight-bold mt-10">
+    <p v-motion="scrollBottom" class="partner font-weight-bold mt-10">
       Partner with us for a transformative experience.
     </p>
     <router-link
@@ -124,8 +124,75 @@
 
   /* MD */
   @media only screen and (min-width: 769px) {
-    .empower{
+    .empower {
       width: 50% !important;
+    }
+  }
+
+  /* Desktop */
+  @media only screen and (min-width: 1080px) {
+    .empowerWrapper{
+      gap: 8vw !important;
+      margin-top: 5vw !important;
+    }
+    .empower {
+      width: 75% !important;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      gap: 5vw !important;
+      position: relative;
+      padding-right: 5vw;
+      margin-left: 5vw;
+    }
+    .empowerWrapper .empower:nth-child(2) {
+      flex-direction: row;
+      padding-right: 0 !important;
+      padding-left: 5vw;
+      margin-left: 0 !important;
+      margin-right: 5vw;
+    }
+    .empower img {
+      width: 30%;
+      position: absolute;
+      right: 4vw;
+      top: 2vw;
+      z-index: 2;
+    }
+    .empowerWrapper .empower:nth-child(2) img {
+      left: 4vw;
+    }
+    .empowerBody {
+      width: 85%;
+      align-items: flex-start;
+      text-align: start;
+      padding-top: 1vw !important;
+      padding-right: 5vw !important;
+    }
+    .empowerWrapper .empower:nth-child(2) .empowerBody{
+      padding-left: 11vw !important;
+    }
+    .empowerBody ul {
+      width: 90%;
+      list-style: circle;
+      padding-left: 3vw;
+    }
+    .empowerWrapper .empower:nth-child(2) .empowerBody ul{
+      width: 95%;
+    }
+    .empowerWrapper .empower:nth-child(2) .moreInfo{
+      width: 90%;
+    }
+    .moreInfo {
+      width: 80%;
+    }
+    .partner {
+      font-size: 1.3rem;
+      margin: 5vw 0 1.5vw 0 !important;
+    }
+    .secondaryButton {
+      width: auto !important;
+      padding: 2.2vw 5.5vw;
     }
   }
 </style>

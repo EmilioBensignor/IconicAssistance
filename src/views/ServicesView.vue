@@ -57,4 +57,15 @@
   .ensuringSuccess {
     border: 3px solid white;
   }
+
+  /* Desktop */
+  @media only screen and (min-width: 1080px) {
+    .ensuringSuccess{
+      width: 55% !important;
+      padding: 2vw 0 !important;
+    }
+    .ensuringSuccess p{
+      width: 95%;
+    }
+  }
 </style>

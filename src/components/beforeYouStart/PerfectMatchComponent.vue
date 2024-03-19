@@ -6,7 +6,7 @@
     <h2 v-motion="scrollBottom" class="text-white mb-5">
       Elements of Remote Talent Matching
     </h2>
-    <div class="columnAlignCenter ga-14 mt-5 py-5">
+    <div class="perfectMatch columnAlignCenter ga-14 mt-5 py-5">
       <div
         v-motion="scrollBottom"
         class="w-75 element columnAlignCenter border-lb rounded-bs-xl pt-3 pb-5 shadow-3">
@@ -91,8 +91,37 @@
 
   /* SM */
   @media only screen and (min-width: 480px) {
-    .element{
+    .element {
       width: 50% !important;
+    }
+  }
+
+  /* Desktop */
+  @media only screen and (min-width: 1080px) {
+    .perfectMatch {
+      width: 90%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      justify-items: center;
+      grid-column-gap: 8vw !important;
+      grid-row-gap: 5vw !important;
+      margin-bottom: 5vw;
+    }
+    .perfectMatch div:nth-child(1) {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+    .perfectMatch div:nth-child(2) {
+      grid-area: 1 / 2 / 2 / 3;
+    }
+    .perfectMatch div:nth-child(3) {
+      grid-area: 2 / 1 / 3 / 2;
+    }
+    .perfectMatch div:nth-child(4) {
+      grid-area: 2 / 2 / 3 / 3;
+    }
+    .element {
+      width: 100% !important;
     }
   }
 </style>

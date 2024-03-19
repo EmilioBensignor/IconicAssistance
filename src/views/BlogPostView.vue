@@ -19,20 +19,22 @@
       class="heroPagesWhiteWave"
       width="100%" />
   </section>
-  <section class="radioactiveWave">
-    <h2 v-motion="scrollBottom" class="text-midnight">{{ blog.h2 }}</h2>
-    <div class="text-start text-midnight px-5 my-5">
-      <p class="w-100">{{ blog.intro }}</p>
-      <ul class="blogBullets px-3 my-3 column ga-4">
-        <li v-for="(item, index) in blog.bullet" :key="index">
-          {{ item }}
-        </li>
-      </ul>
-      <p class="w-100">{{ blog.closer }}</p>
+  <section class="radioactiveWave blogRecentPost">
+    <div class="blogPost columnAlignCenter">
+      <h2 v-motion="scrollBottom" class="text-midnight">{{ blog.h2 }}</h2>
+      <div class="text-start text-midnight px-5 my-5">
+        <p class="w-100">{{ blog.intro }}</p>
+        <ul class="blogBullets px-3 my-3 column ga-4">
+          <li v-for="(item, index) in blog.bullet" :key="index">
+            {{ item }}
+          </li>
+        </ul>
+        <p class="w-100">{{ blog.closer }}</p>
+      </div>
     </div>
-    <div class="columnAlignCenter mt-5">
+    <div class="recentBlogs columnAlignCenter mt-5">
       <h2 v-motion="scrollBottom" class="text-midnight">Recent Posts</h2>
-      <div class="w-75 columnAlignCenter ga-10 py-5">
+      <div class="w-75 recentBlogWrapper columnAlignCenter ga-10 py-5">
         <article
           v-for="(recentBlog, index) in recentBlogs"
           :key="index"
@@ -137,6 +139,15 @@
     width: 85%;
   }
 
+  .recentBlog div p:nth-child(1) {
+    font-weight: 500;
+  }
+
+  .recentBlog div p:nth-child(2) {
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
   /* SM */
   @media only screen and (min-width: 480px) {
     .heroSection {
@@ -152,8 +163,69 @@
     .heroSection {
       height: 675px;
     }
-    .recentBlog{
+    .recentBlog {
       width: 65% !important;
+    }
+  }
+
+  /* Desktop */
+  @media only screen and (min-width: 1080px) {
+    .heroSection {
+      width: 100vw;
+      height: 725px;
+    }
+    h1 {
+      width: 85%;
+    }
+    .blogRecentPost {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      position: relative;
+      padding: 0 5vw 20vw 5vw;
+    }
+    .blogRecentPost h2 {
+      text-align: start;
+    }
+    .blogPost {
+      width: 60%;
+      align-items: flex-start;
+    }
+    .recentBlogs {
+      width: 35%;
+      box-shadow: 0px 3px 5px -1px var(--v-shadow-key-umbra-opacity, rgba(0, 0, 0, 0.2)),
+        0px 5px 8px 0px
+          var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.14)),
+        0px 1px 14px 0px
+          var(--v-shadow-key-ambient-opacity, rgba(0, 0, 0, 0.12)) !important;
+      position: sticky;
+      top: 8.5vw;
+      z-index: 2;
+      border-radius: 20px;
+      padding: 1vw 0;
+      margin-top: 1vw !important;
+    }
+    .recentBlogWrapper {
+      width: 90% !important;
+      gap: 2.5vw !important;
+    }
+    .recentBlogs .recentBlog {
+      width: 100% !important;
+      display: flex;
+      gap: 2vw;
+      box-shadow: none !important;
+    }
+    .recentBlog img {
+      width: 35%;
+      object-fit: contain;
+      border-radius: 20px !important;
+    }
+    .recentBlog div {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 0.5vw;
+      padding: 0 !important;
     }
   }
 </style>

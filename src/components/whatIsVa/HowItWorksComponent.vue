@@ -5,9 +5,17 @@
       Key Benefits Of Hiring
       <span class="text-radioactive">Iconic Assistant</span>
     </h2>
-    <div class="w-75">
+    <div class="w-75 keyMobile">
       <img
         src="@/assets/images/whatIsVa/Iconic-Assistants-Key-Benefits.jpg"
+        alt="Iconic Assistants Key Benefits"
+        class="my-5"
+        v-motion="scrollBottom"
+        width="75%" />
+    </div>
+    <div class="w-75 keyDesktop">
+      <img
+        src="@/assets/images/whatIsVa/Iconic-Assistants-Key-Benefits-Desktop.png"
         alt="Iconic Assistants Key Benefits"
         class="my-5"
         v-motion="scrollBottom"
@@ -31,3 +39,22 @@
 <script setup>
   import { scrollBottom } from "@/motions.js";
 </script>
+
+<style scoped>
+  .keyDesktop {
+    display: none;
+  }
+
+  /* Desktop */
+  @media only screen and (min-width: 1080px) {
+    .keyMobile{
+      display: none;
+    }
+    .keyDesktop{
+      display: block;
+    }
+    .explore{
+      width: 50% !important;
+    }
+  }
+</style>

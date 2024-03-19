@@ -8,17 +8,19 @@
     </div>
   </section>
   <section class="skyRadioactive">
-    <h2 v-motion="scrollBottom" class="text-white font-weight-bold">Search</h2>
+    <h2 v-motion="scrollBottom" class="h2Search text-white font-weight-bold">
+      Search
+    </h2>
     <v-form class="w-75 buscador my-5 rounded-xl">
       <input
         type="search"
         name="blogSearch"
         v-model="blogSearch"
-        class="w-100 bg-white rounded-xl elevation-5 py-3 px-5"
+        class="inputSearch w-100 bg-white rounded-xl elevation-5 py-3 px-5"
         placeholder="What do you want to learn?"
         hide-details />
     </v-form>
-    <div class="w-75 columnAlignCenter ga-13 mt-5">
+    <div class="w-75 blogPosts columnAlignCenter ga-13 mt-5">
       <article
         v-for="(item, index) in filteredBlogs"
         :key="index"
@@ -93,3 +95,30 @@
 <script setup>
   import { scrollBottom } from "@/motions.js";
 </script>
+
+<style scoped>
+  /* Desktop */
+  @media only screen and (min-width: 1080px) {
+    .h2Search {
+      text-align: start;
+      padding-left: 8vw;
+    }
+    .inputSearch{
+      font-size: 1.2rem;
+    }
+    .blogPosts{
+      width: 95% !important;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 3vw !important;
+      margin-top: 3vw !important;
+      margin-bottom: 5vw;
+    }
+    article{
+      width: 30% !important;
+      justify-content: space-between;
+    }
+  }
+</style>

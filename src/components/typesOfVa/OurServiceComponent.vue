@@ -4,7 +4,7 @@
     <h2 v-motion="scrollBottom" class="text-white">
       Here's What Your Virtual Assistants Can Help You With
     </h2>
-    <div class="w-75 column ga-3 my-5">
+    <div class="w-75 vaIcons column ga-3 my-5">
       <div
         v-for="(item, index) in vaTypes"
         :key="index"
@@ -32,7 +32,7 @@
               :src="getImgUrl(item.img)"
               :alt="item.alt"
               width="100%"
-              height="86%"
+              height="84%"
               class="vaImg"
               cover
               eager>
@@ -93,7 +93,7 @@
       height: 60vh !important;
     }
     .vaImg {
-      height: 88% !important;
+      height: 87% !important;
     }
     .vaIcon {
       width: 20%;
@@ -109,13 +109,20 @@
       height: 65vh !important;
     }
     .vaImg {
-      height: 89% !important;
+      height: 88% !important;
     }
     .vaIcon {
       width: 15%;
     }
     .titleTypesofVA {
       font-size: 1.6rem;
+    }
+  }
+
+  /* Desktop */
+  @media only screen and (min-width: 1080px) {
+    .vaIcons{
+      display: none;
     }
   }
 </style>

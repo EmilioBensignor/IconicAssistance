@@ -120,7 +120,7 @@
       backdrop-filter: blur(5px);
     }
     .caption p{
-      width: 90% !important;
+      width: 95% !important;
     }
   }
 </style>

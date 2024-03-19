@@ -27,11 +27,11 @@
     </div>
     <div class="aboutRight">
       <img
-        class="vaDesktop rounded-lg elevation-5 my-2"
-        v-motion="scrollBottom"
         src="@/assets/images/aboutUs/Remote-Talent-Iconic-Assistants.png"
         alt="Remote Talent Iconic Assistants"
-        width="80%"
+        class="vaDesktop rounded-xl elevation-5 my-2"
+        v-motion="scrollBottom"
+        width="90%"
         eager />
     </div>
   </section>
@@ -42,7 +42,7 @@
 </script>
 
 <style scoped>
-  .vaDesktop {
+  .vaDesktop, .aboutRight {
     display: none;
   }
 
@@ -57,6 +57,7 @@
     .aboutUs {
       display: flex;
       flex-direction: row;
+      gap: 3vw;
       padding: 0 10vw;
     }
     .aboutRight,
@@ -71,6 +72,9 @@
     }
     .aboutUsLeft .subtitle {
       text-align: start;
+    }
+    .aboutUsLeft p{
+      width: 100% !important;
     }
   }
 </style>

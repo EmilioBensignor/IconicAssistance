@@ -1,12 +1,12 @@
 <template>
   <section class="skyRadioactive">
     <h2 v-motion="scrollBottom" class="text-white">Benefits</h2>
-    <p v-motion="scrollBottom" class="w-75 text-white mt-3">
+    <p v-motion="scrollBottom" class="w-75 companies text-white mt-3">
       Companies are increasingly mutating towards predominantly virtual
       assistants instead of in-house employees due to several compelling
       reasons:
     </p>
-    <div class="w-75 columnAlignCenter ga-5 my-5">
+    <div class="w-75 twoBenefits columnAlignCenter ga-5 my-5">
       <div class="w-100 columnAlignCenter ga-5">
         <v-expansion-panels
           v-for="(item, index) in benefitsLeft"
@@ -97,3 +97,17 @@
 <script setup>
   import { scrollBottom } from "@/motions.js";
 </script>
+
+<style scoped>
+  /* Desktop */
+  @media only screen and (min-width: 1080px) {
+    .companies{
+      width: 60% !important;
+      font-size: 1.25rem;
+    }
+    .twoBenefits{
+      display: flex;
+      flex-direction: row;
+    }
+  }
+</style>

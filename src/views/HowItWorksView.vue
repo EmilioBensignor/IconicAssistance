@@ -34,7 +34,7 @@
       <img
         src="@/assets/images/howItWorks/Remote-Talent-Call.png"
         alt="Remote Talent Call"
-        width="85%"
+        width="90%"
         v-motion="scrollBottom"
         class="rounded-xl elevation-5 my-5" />
     </div>
@@ -67,7 +67,7 @@
       <img
         src="@/assets/images/howItWorks/Remote-Talent-Right-Candidate.png"
         alt="Remote Talent Right Candidate"
-        width="85%"
+        width="90%"
         v-motion="scrollBottom"
         class="rounded-xl elevation-5 my-5" />
     </div>
@@ -98,7 +98,7 @@
       <img
         src="@/assets/images/howItWorks/Remote-Talent-Tasks.png"
         alt="Remote Talent Tasks"
-        width="85%"
+        width="90%"
         v-motion="scrollBottom"
         class="rounded-xl elevation-5 my-5" />
     </div>
@@ -131,7 +131,7 @@
       <img
         src="@/assets/images/howItWorks/Remote-Talent-Support.png"
         alt="Remote Talent Support"
-        width="85%"
+        width="90%"
         v-motion="scrollBottom"
         class="rounded-xl elevation-5 my-5" />
     </div>

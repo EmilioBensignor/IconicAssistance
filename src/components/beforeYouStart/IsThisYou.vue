@@ -18,12 +18,14 @@
         <p v-html="item.text"></p>
       </div>
     </div>
-    <p v-motion="scrollBottom" class="mt-3">
-      Do you identify yourself with the following aspects?
-    </p>
-    <p v-motion="scrollBottom" class="my-1">
-      Then it's time to hire a virtual assistant.
-    </p>
+    <div class="w-75 identify columnAlignCenter mb-3">
+      <p v-motion="scrollBottom" class="mt-3">
+        Do you identify yourself with the following aspects?
+      </p>
+      <p v-motion="scrollBottom" class="my-1">
+        Then it's time to hire a virtual assistant.
+      </p>
+    </div>
     <router-link class="secondaryButton elevation-5 mt-3" :to="'/contact-us'"
       >Contact Us!</router-link
     >
@@ -87,6 +89,30 @@
   @media only screen and (min-width: 480px) {
     .aspect {
       width: 50% !important;
+    }
+  }
+
+  /* Desktop */
+  @media only screen and (min-width: 1080px) {
+    .aspect {
+      width: 75% !important;
+      display: flex;
+      flex-direction: row;
+      border-radius: 50px !important;
+      padding: 0 !important;
+    }
+    .aspect img {
+      width: 10%;
+      margin-left: -1px;
+    }
+    .aspect p {
+      text-align: start;
+      font-size: 1.2rem;
+      margin-left: 2vw;
+    }
+    .identify p{
+      font-weight: 500;
+      font-size: 1.15rem;
     }
   }
 </style>
