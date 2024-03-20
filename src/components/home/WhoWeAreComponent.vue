@@ -1,6 +1,6 @@
 <template>
   <section class="skyRadioactive whoWeAre pt-7">
-    <div class="w-50 vaModel d-flex">
+    <div class="w-50 vaModel">
       <img
         src="@/assets/images/misc/Remote-Talent-Iconic-Assistants.png"
         alt="Remote Talent Iconic Assistants"
@@ -10,7 +10,7 @@
         <p class="text-white">Our virtual assistants undergo rigorous interviews and thorough evaluations to guarantee a perfect alignment with your specific requirements and expectations.</p>
       </div>
     </div>
-    <div class="columnAlignCenter rightWhoWeAre pl-10">
+    <div class="columnAlignCenter rightWhoWeAre">
       <p v-motion="scrollBottom" class="subtitle text-white">Who we are</p>
       <h2 v-motion="scrollBottom" class="text-white">
         Outsourcing made simple and cost-effective
@@ -97,12 +97,14 @@
       line-height: 1.2;
     }
     .vaModel{
+      display: block;
       position: relative;
     }
     .rightWhoWeAre{
       width: 60%;
       align-items: flex-start;
       text-align: start;
+      padding-left: 5vw;
     }
     .rightWhoWeAre p{
       width: 95% !important;
@@ -115,9 +117,9 @@
     }
     .caption{
       position: absolute;
-      background: rgba(30, 58, 128, 0.36);
+      background: rgba(30, 58, 128, 0.66);
       bottom: 0;
-      backdrop-filter: blur(5px);
+      border-radius: 0 0 24px 24px;
     }
     .caption p{
       width: 95% !important;

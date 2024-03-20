@@ -44,7 +44,7 @@
             </router-link>
           </v-carousel-item>
         </v-carousel>
-        <div class="d-flex justify-center flex-wrap">
+        <div class="industries">
           <div
             v-for="(item, index) in industries"
             :key="index"
@@ -111,6 +111,9 @@
   .carouselCard {
     height: 100%;
   }
+  .industries{
+    display: none;
+  }
 
   /* LG */
   @media only screen and (min-width: 992px) {
@@ -134,9 +137,15 @@
 
   /* Desktop */
   @media only screen and (min-width: 1080px) {
+    .industries{
+      width: 95%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
     .industry{
-      height: 70vh;
-      margin: 3vw 0;
+      width: 30%;
+      margin: 2vw 0;
     }
     .industry .v-img__img{
       height: auto !important;

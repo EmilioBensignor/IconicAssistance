@@ -1,18 +1,20 @@
 <template>
   <section class="skyRadioactive">
     <p v-motion="scrollBottom" class="subtitle text-white">Testimonials</p>
-    <h2 v-motion="scrollBottom" class="text-white">Positive Reviews From Our Clients</h2>
-    <div class="columnAlignCenter ga-8 my-5">
+    <h2 v-motion="scrollBottom" class="text-white">
+      Positive Reviews From Our Clients
+    </h2>
+    <div class="testimonialWrap columnAlignCenter my-5">
       <div
         v-for="(item, index) in reviews"
         :key="index"
         v-motion="scrollBottom"
-        class="w-75 column bg-white rounded-xl elevation-5 py-3 pl-4">
+        class="testimonial column bg-white elevation-5 py-3 pl-4">
         <div class="d-flex justify-self-start mb-3">
-          <img 
-            src="@/assets/images/misc/Five-Stars.png" 
-            alt="Five Stars" 
-            class="shadow-15"/>
+          <img
+            src="@/assets/images/misc/Five-Stars.png"
+            alt="Five Stars"
+            class="shadow-15" />
         </div>
         <p class="text-start">
           {{ item.text }}
@@ -54,5 +56,5 @@
 </script>
 
 <script setup>
-  import { scrollBottom } from "@/motions.js"
+  import { scrollBottom } from "@/motions.js";
 </script>

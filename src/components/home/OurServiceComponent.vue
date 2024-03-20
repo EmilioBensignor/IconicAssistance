@@ -130,8 +130,14 @@
 
   /* Desktop */
   @media only screen and (min-width: 1080px) {
+    .threeTailor{
+      margin-bottom: 7vw;
+    }
     .tailor{
       height: 65vh !important;
+    }
+    .tailoredTitle{
+      width: 95% !important;
     }
   }
 </style>

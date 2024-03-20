@@ -1,13 +1,18 @@
 <template>
   <section class="radioactiveSkyWaves">
-    <h2 v-motion="scrollBottom" class="text-midnight">Questions That We Are Asked Most Often</h2>
-    <div class="w-75 columnAlignCenter ga-2 my-5">
+    <h2 v-motion="scrollBottom" class="text-midnight">
+      Questions That We Are Asked Most Often
+    </h2>
+    <div class="faq w-75 columnAlignCenter ga-2 my-5">
       <v-expansion-panels
         v-for="(item, index) in faq"
         :key="index"
         v-motion="scrollBottom"
         class="faqWrapper mt-3">
-        <v-expansion-panel class="elevation-2" :title="item.title" :text="item.text">
+        <v-expansion-panel
+          class="elevation-2"
+          :title="item.title"
+          :text="item.text">
         </v-expansion-panel>
       </v-expansion-panels>
     </div>
@@ -45,5 +50,17 @@
 </script>
 
 <script setup>
-  import { scrollBottom } from "@/motions.js"
+  import { scrollBottom } from "@/motions.js";
 </script>
+
+<style scoped>
+  h2 {
+    margin-top: 3vw;
+  }
+  .secondaryButton {
+    width: 50% !important;
+  }
+  .faq{
+    width: 60% !important;
+  }
+</style>

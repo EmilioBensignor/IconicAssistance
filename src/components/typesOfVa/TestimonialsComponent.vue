@@ -4,12 +4,12 @@
     <h2 v-motion="scrollBottom" class="text-midnight">
       Positive Reviews From Our Clients
     </h2>
-    <div class="testimonialWrap columnAlignCenter ga-8 my-5">
+    <div class="testimonialWrap columnAlignCenter my-5">
       <div
         v-for="(item, index) in reviews"
         :key="index"
         v-motion="scrollBottom"
-        class="w-75 testimonial column skyRadioactive rounded-xl elevation-5 py-3 pl-4">
+        class="testimonial column skyRadioactive elevation-5 py-3 pl-4">
         <div class="d-flex justify-self-start mb-3">
           <img
             class="shadow-15"
@@ -58,13 +58,22 @@
   import { scrollBottom } from "@/motions.js";
 </script>
 
-<style scoped>
+<style>
+  .testimonialWrap {
+    gap: 5vw;
+  }
+  .testimonial {
+    width: 75%;
+    border-radius: 24px;
+  }
   /* Desktop */
   @media only screen and (min-width: 1080px) {
     .testimonialWrap {
+      width: 90% !important;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(2, 1fr);
+      gap: 2vw;
     }
     .testimonialWrap div:nth-child(1) {
       grid-area: 1 / 1 / 2 / 3;
@@ -78,10 +87,10 @@
     .testimonialWrap div:nth-child(4) {
       grid-area: 2 / 2 / 3 / 4;
     }
-    .testimonial{
+    .testimonial {
       width: 100% !important;
       height: 100% !important;
-      border-radius: 16px !important;
+      border-radius: 16px;
     }
   }
 </style>

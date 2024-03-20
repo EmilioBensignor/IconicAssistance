@@ -20,7 +20,7 @@
         </p>
       </div>
     </div>
-    <div v-motion="scrollBottom" class="w-75 columnAlignCenter my-5">
+    <div v-motion="scrollBottom" class="carousel w-75 columnAlignCenter my-5">
       <v-carousel
         :show-arrows="false"
         class="carouselTypes rounded-xl elevation-5"
@@ -121,7 +121,7 @@
 
   /* Desktop */
   @media only screen and (min-width: 1080px) {
-    .vaIcons{
+    .vaIcons {
       display: none;
     }
   }

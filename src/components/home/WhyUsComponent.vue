@@ -117,8 +117,11 @@
   /* Desktop */
   @media only screen and (min-width: 1080px) {
     .different {
-      height: 64vh;
+      height: 66vh;
       justify-content: space-between !important;
+    }
+    .different p{
+      width: 95%;
     }
   }
 </style>
