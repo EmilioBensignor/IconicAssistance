@@ -17,7 +17,7 @@
           :alt="choose.alt"
           class="shadow-2"
           width="100%" />
-        <ul class="column ga-3 px-5">
+        <ul class="differentList column ga-3 px-5">
           <li
             v-for="(difference, index) in choose.list"
             :key="index"
@@ -115,6 +115,31 @@
     }
     .dedicated{
       width: 50% !important;
+    }
+  }
+
+    /* Desktop */
+  @media only screen and (min-width: 1080px){
+    .chooses{
+      width: 75% !important;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      margin-top: 3vw !important;
+    }
+    .choose{
+      width: 25% !important;
+      height: 65vh;
+    }
+    .differentList{
+      height: 100%;
+      justify-content: space-between !important;
+    }
+    .dedicated{
+      width: 65% !important;
+    }
+    .dedicated p{
+      width: 90% !important;
     }
   }
 </style>

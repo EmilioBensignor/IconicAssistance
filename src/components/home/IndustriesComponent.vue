@@ -18,7 +18,7 @@
       <div v-motion="scrollBottom" class="columnAlignCenter">
         <v-carousel
           :show-arrows="false"
-          class="w-75 columnAlignCenter justify-space-between whiteBorder elevation-5"
+          class="industriesCarousel w-75 columnAlignCenter justify-space-between whiteBorder elevation-5"
           cycle
           :interval="3000">
           <v-carousel-item
@@ -37,7 +37,7 @@
               <h3 class="text-white">{{ item.name }}</h3>
               <p class="text-white">{{ item.description }}</p>
               <router-link
-                :to="'/services'"
+                :to="`/industries/${item.slug}`"
                 class="text-decoration-none primaryButton mt-3 mb-10 elevation-5"
                 >Learn More</router-link
               >
@@ -58,7 +58,7 @@
             <h3 class="titulo text-white mb-3">{{ item.name }}</h3>
             <p class="description text-white my-3">{{ item.description }}</p>
             <router-link
-              :to="'/services'"
+              :to="`/industries/${item.slug}`"
               class="text-decoration-none primaryButton mt-3 mb-10 elevation-5"
               >Learn More</router-link
             >
@@ -117,7 +117,7 @@
 
   /* LG */
   @media only screen and (min-width: 992px) {
-    .v-carousel {
+    .industriesCarousel {
       display: none;
     }
     .industry {

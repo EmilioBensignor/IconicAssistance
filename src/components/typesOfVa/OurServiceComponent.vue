@@ -124,5 +124,17 @@
     .vaIcons {
       display: none;
     }
+    h2 {
+      width: 95%;
+    }
+    .carousel {
+      width: 50% !important;
+    }
+    .titleTypesofVA{
+      background: none;
+      color: white !important;
+      font-size: 2.5rem !important;
+      bottom: 0.75vw;
+    }
   }
 </style>

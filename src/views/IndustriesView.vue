@@ -8,7 +8,7 @@
     <div class="heroOverlay flexCenter justify-center">
       <div class="heroPages flexCenter ga-4">
         <h1 v-motion="scrollBottom" class="text-white">{{ industry.name }}</h1>
-        <p v-motion="scrollBottom" class="text-white">
+        <p v-motion="scrollBottom" class="subtitle text-white">
           {{ industry.subtitle }}
         </p>
       </div>
@@ -29,7 +29,7 @@
         v-for="(vaType, index) in industry.vaTypes"
         :key="index"
         v-motion="scrollBottom"
-        class="w-75 columnAlignCenter bg-white rounded-xl elevation-5 pb-5">
+        class="vaSuitIndividual w-75 columnAlignCenter bg-white rounded-xl elevation-5 pb-5">
         <v-img
           :src="getVaTypeUrl(vaType.img)"
           :alt="vaType.alt"
@@ -39,8 +39,10 @@
             {{ vaType.va }}
           </h3>
         </v-img>
-        <p class="mt-3 font-weight-bold">Tasks to outsource:</p>
-        <p class="mt-3">{{ vaType.summary }}</p>
+        <div class="tasksOutsource columnAlignCenter">
+          <p class="mt-3 font-weight-bold">Tasks to outsource:</p>
+          <p class="summary mt-3">{{ vaType.summary }}</p>
+        </div>
       </div>
     </div>
     <router-link class="primaryButton mt-5 elevation-5" :to="'/types-of-vas'"
@@ -133,8 +135,40 @@
     .heroIndustries {
       height: 675px;
     }
-    .vaSuit{
+    .vaSuit {
       width: 50% !important;
+    }
+  }
+
+  /* Desktop */
+  @media only screen and (min-width: 1080px) {
+    .heroIndustries {
+      width: 100vw;
+      height: 725px;
+    }
+    .subtitle{
+      width: 60%;
+      font-size: 1.3rem;
+    }
+    .vaSuit {
+      width: 90% !important;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 2vw !important;
+      margin-top: 3vw !important;
+    }
+    .vaSuitIndividual {
+      height: 75vh;
+    }
+    .vaSuit h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.5vw !important;
+    }
+    .tasksOutsource{
+      height: 100%;
+    }
+    .summary {
+      font-size: 1rem;
     }
   }
 </style>
