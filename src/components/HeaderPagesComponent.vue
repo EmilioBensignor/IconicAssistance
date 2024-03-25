@@ -4,7 +4,7 @@
       <v-app-bar-nav-icon
         icon="mdi-menu"
         color="radioactive"
-        class="shadow-15"
+        class="hamburger shadow-15"
         size="x-large"
         @click="showMenu = !showMenu"></v-app-bar-nav-icon>
       <v-toolbar-title>
@@ -12,6 +12,67 @@
           <IconicLogo class="shadow-15 mt-1" color="blue" />
         </router-link>
       </v-toolbar-title>
+      <div class="menuDesktop">
+        <v-menu open-on-hover>
+          <template v-slot:activator="{ props }">
+            <v-btn
+              class="btnNav font-weight-bold"
+              color="radioactive"
+              v-bind="props"
+              >About</v-btn
+            >
+          </template>
+          <v-list>
+            <v-list-item
+              :to="item.path"
+              v-for="(item, index) in aboutMenu"
+              :key="index">
+              <v-list-item-title class="navTitles">{{
+                item.title
+              }}</v-list-item-title>
+            </v-list-item>
+          </v-list>
+        </v-menu>
+        <v-menu open-on-hover>
+          <template v-slot:activator="{ props }">
+            <v-btn
+              class="btnNav font-weight-bold"
+              color="radioactive"
+              v-bind="props"
+              >Learn</v-btn
+            >
+          </template>
+          <v-list>
+            <v-list-item
+              :to="item.path"
+              v-for="(item, index) in learnMenu"
+              :key="index">
+              <v-list-item-title class="navTitles">{{
+                item.title
+              }}</v-list-item-title>
+            </v-list-item>
+          </v-list>
+        </v-menu>
+        <v-btn
+          class="btnNav font-weight-bold"
+          color="radioactive"
+          :to="'/services'">
+          Services
+        </v-btn>
+        <v-btn
+          class="btnNav font-weight-bold"
+          color="radioactive"
+          :to="'/pricing'">
+          Pricing
+        </v-btn>
+        <v-btn
+          class="btnNav font-weight-bold"
+          color="radioactive"
+          :to="'/contact-us'">
+          Contact Us
+        </v-btn>
+      </div>
+      <PopUp />
     </v-app-bar>
     <v-navigation-drawer v-model="showMenu" app class="mt-2">
       <v-list class="pt-5" tag="ul">
@@ -58,11 +119,13 @@
 
 <script>
   import IconicLogo from "./icons/IconicLogo.vue";
+  import PopUp from "./calendly/PopUpComponent.vue";
 
   export default {
     name: "HeaderTransparentComponent",
     components: {
       IconicLogo,
+      PopUp,
     },
     data() {
       return {
@@ -132,12 +195,43 @@
 
 <style>
   .v-toolbar__content > .v-toolbar-title {
+    flex: none;
+    align-self: center;
     margin: 0;
-    align-self: stretch;
+    margin-left: 3vw !important;
   }
   .navTitles {
     font-family: "Poppins", sans-serif;
-    font-weight: 600;
+    font-weight: 600 !important;
     color: #120d40;
+  }
+  .menuDesktop {
+    display: none;
+  }
+
+  /* Desktop */
+  @media only screen and (min-width: 1080px) {
+    .hamburger {
+      display: none !important;
+    }
+    .v-toolbar__content {
+      height: 80px !important;
+    }
+    .menuDesktop {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      gap: 0.5vw;
+    }
+    .v-toolbar__content {
+      justify-content: space-between !important;
+    }
+    .btnNav {
+      letter-spacing: 0;
+      text-indent: 0;
+      font-family: "Poppins", sans-serif;
+      font-size: 1.3rem !important;
+      text-transform: none !important;
+    }
   }
 </style>

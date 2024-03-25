@@ -25,7 +25,7 @@
         :show-arrows="false"
         class="carouselTypes rounded-xl elevation-5"
         cycle
-        :interval="3000">
+        :interval="300000000">
         <v-carousel-item v-for="(item, index) in vaTypes" :key="index" cover>
           <router-link :to="`/virtual-assistant/${item.id}`" class="typesCard">
             <v-img
@@ -49,6 +49,7 @@
 
 <script>
   import { vaTypes } from "@/cms/typesva.service.js";
+
   export default {
     data() {
       return {
@@ -121,6 +122,9 @@
 
   /* Desktop */
   @media only screen and (min-width: 1080px) {
+    body {
+      overflow: hidden;
+    }
     .vaIcons {
       display: none;
     }
@@ -130,11 +134,8 @@
     .carousel {
       width: 50% !important;
     }
-    .titleTypesofVA{
-      background: none;
-      color: white !important;
-      font-size: 2.5rem !important;
-      bottom: 0.75vw;
+    .carouselTypes {
+      height: 70vh !important;
     }
   }
 </style>

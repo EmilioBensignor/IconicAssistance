@@ -28,3 +28,9 @@
 <script setup>
   import { scrollBottom } from "@/motions.js";
 </script>
+
+<style scoped>
+section{
+  width: 100vw;
+}
+</style>

@@ -69,6 +69,7 @@
     .aboutUsLeft {
       text-align: start;
       align-items: flex-start;
+      gap: 1vw !important;
     }
     .aboutUsLeft .subtitle {
       text-align: start;

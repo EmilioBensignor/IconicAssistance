@@ -8,7 +8,7 @@
       <v-app-bar-nav-icon
         icon="mdi-menu"
         :color="isScrolled ? 'radioactive' : 'white'"
-        class="shadow-15"
+        class="hamburger shadow-15"
         size="x-large"
         @click="showMenu = !showMenu"></v-app-bar-nav-icon>
       <v-toolbar-title>
@@ -18,6 +18,52 @@
             :color="isScrolled ? 'blue' : 'white'" />
         </router-link>
       </v-toolbar-title>
+      <div class="menuDesktop">
+        <v-menu open-on-hover>
+          <template v-slot:activator="{ props }">
+            <v-btn class="btnNav font-weight-bold" color="white" v-bind="props"
+              >About</v-btn
+            >
+          </template>
+          <v-list>
+            <v-list-item
+              :to="item.path"
+              v-for="(item, index) in aboutMenu"
+              :key="index">
+              <v-list-item-title class="navTitles">{{
+                item.title
+              }}</v-list-item-title>
+            </v-list-item>
+          </v-list>
+        </v-menu>
+        <v-menu open-on-hover>
+          <template v-slot:activator="{ props }">
+            <v-btn class="btnNav font-weight-bold" color="white" v-bind="props"
+              >Learn</v-btn
+            >
+          </template>
+          <v-list>
+            <v-list-item
+              :to="item.path"
+              v-for="(item, index) in learnMenu"
+              :key="index">
+              <v-list-item-title class="navTitles">{{
+                item.title
+              }}</v-list-item-title>
+            </v-list-item>
+          </v-list>
+        </v-menu>
+        <v-btn class="btnNav font-weight-bold" color="white" :to="'/services'">
+          Services
+        </v-btn>
+        <v-btn class="btnNav font-weight-bold" color="white" :to="'/pricing'">
+          Pricing
+        </v-btn>
+        <v-btn class="btnNav font-weight-bold" color="white" :to="'/contact-us'">
+          Contact Us
+        </v-btn>
+      </div>
+      <PopUp />
     </v-app-bar>
     <v-navigation-drawer v-model="showMenu" app class="mt-2">
       <v-list class="pt-5" tag="ul">
@@ -64,11 +110,13 @@
 
 <script>
   import IconicLogo from "./icons/IconicLogo.vue";
+  import PopUp from "./calendly/PopUpComponent.vue";
 
   export default {
     name: "HeaderTransparentComponent",
     components: {
       IconicLogo,
+      PopUp,
     },
     data() {
       return {
