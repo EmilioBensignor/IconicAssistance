@@ -227,8 +227,8 @@
       justify-content: space-between !important;
     }
     .btnNav {
-      letter-spacing: 0;
-      text-indent: 0;
+      letter-spacing: 0 !important;
+      text-indent: 0 !important;
       font-family: "Poppins", sans-serif;
       font-size: 1.3rem !important;
       text-transform: none !important;
