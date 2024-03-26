@@ -16,7 +16,7 @@
     width: 18vw;
     height: 18vw;
     position: fixed;
-    right: 4%;
+    left: 4%;
     bottom: 5%;
     z-index: 5;
     text-decoration: none;
