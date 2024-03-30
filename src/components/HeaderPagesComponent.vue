@@ -198,7 +198,7 @@
     flex: none;
     align-self: center;
     margin: 0;
-    margin-left: 3vw !important;
+    margin-left: 1vw !important;
   }
   .navTitles {
     font-family: "Poppins", sans-serif;

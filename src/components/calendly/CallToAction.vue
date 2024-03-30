@@ -13,11 +13,11 @@
 
 <style scoped>
   .cta {
-    width: 18vw;
-    height: 18vw;
+    width: 20vw;
+    height: 20vw;
     position: fixed;
     left: 4%;
-    bottom: 5%;
+    bottom: 2.7%;
     z-index: 5;
     text-decoration: none;
     border: 1px solid #373ae6;
@@ -26,8 +26,15 @@
   /* SM */
   @media only screen and (min-width: 480px) {
     .cta {
-      width: 15vw;
-      height: 15vw;
+      width: 16vw;
+      height: 16vw;
+    }
+  }
+
+  @media only screen and (min-width: 600px) {
+    .cta {
+      width: 12vw;
+      height: 12vw;
     }
   }
 
@@ -41,7 +48,7 @@
 
   /* LG */
   @media only screen and (min-width: 992px) {
-    .cta{
+    .cta {
       display: none;
     }
   }

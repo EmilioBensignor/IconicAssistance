@@ -3,12 +3,12 @@
     version="1.0"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 3000.000000 1000.000000"
-    height="8vh"
+    height="15vw"
     preserveAspectRatio="xMidYMid meet">
     <g
       transform="translate(0.000000,1000.000000) scale(0.100000,-0.100000)"
       fill="currentColor"
-      stroke="none"> 
+      stroke="none">
       <path
         d="M2355 8948 c-160 -30 -308 -161 -366 -324 -28 -76 -30 -215 -6 -294
           113 -364 568 -471 826 -194 93 99 130 194 131 335 0 135 -47 248 -144 344
@@ -134,3 +134,35 @@
     </g>
   </svg>
 </template>
+
+<style scoped>
+  svg {
+    height: 12vw !important;
+  }
+
+  @media only screen and (min-width: 600px) {
+    svg {
+      height: 9vw !important;
+    }
+  }
+
+  @media only screen and (min-width: 850px) {
+    svg {
+      height: 7vw !important;
+    }
+  }
+
+  /* LG */
+  @media only screen and (min-width: 992px) {
+    svg {
+      height: 6vw !important;
+    }
+  }
+
+  /* Desktop */
+  @media only screen and (min-width: 1080px) {
+    svg {
+      height: 5.5vw !important;
+    }
+  }
+</style>

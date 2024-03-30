@@ -3,7 +3,7 @@
     <h2 v-motion="scrollBottom" class="text-white mb-5">
       Frequently Asked Questions
     </h2>
-    <div class="w-75 columnAlignCenter ga-4">
+    <div class="faqHome w-75 columnAlignCenter ga-4">
       <v-expansion-panels
         v-motion="scrollBottom"
         class="faqWrapper d-none d-sm-flex">
@@ -244,6 +244,9 @@
 
   /* Desktop */
   @media only screen and (min-width: 1080px) {
+    .faqHome{
+      width: 85% !important;
+    }
     .leftRight{
       flex-direction: row;
     }

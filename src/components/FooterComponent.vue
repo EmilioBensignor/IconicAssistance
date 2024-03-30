@@ -14,31 +14,31 @@
         <router-link :to="'/contact-us'" class="primaryButton elevation-5 my-3"
           >Contact Us!</router-link
         >
-        <div class="w-50 social d-flex justify-space-between mt-3 mb-5">
+        <div class="w-75 social d-flex justify-space-between mb-5">
           <a href="mailto:ivan.j@iconicassistants.com">
             <img
               src="@/assets/images/footer/Email-Icon.png"
               alt="Email Icon"
-              width="65%" />
+              width="55%" />
           </a>
           <a href="https://web.facebook.com/profile.php?id=61556663172397">
             <img
               src="@/assets/images/footer/Facebook-Icon.png"
               alt="Facebook Icon"
-              width="65%" />
+              width="55%" />
           </a>
           <a href="https://www.instagram.com/iconicassistants/">
             <img
               src="@/assets/images/footer/Instagram-Icon.png"
               alt="Instagram Icon"
-              width="65%" />
+              width="55%" />
           </a>
           <a
             href="https://www.linkedin.com/company/iconic-assistance/posts/?feedView=all&viewAsMember=true">
             <img
               src="@/assets/images/footer/Linkedin-Icon.png"
               alt="Linkedin Icon"
-              width="65%" />
+              width="55%" />
           </a>
         </div>
       </div>
@@ -114,7 +114,7 @@
   /* SM */
   @media only screen and (min-width: 480px) {
     .logo {
-      height: 10vh !important;
+      height: 15vw !important;
     }
     .ready p {
       font-size: 1.1rem;
@@ -126,7 +126,7 @@
       width: 55% !important;
     }
     .social a img {
-      width: 65%;
+      width: 60%;
     }
     .footerTitle {
       font-size: 1.45rem;
@@ -140,10 +140,19 @@
     }
   }
 
+  @media only screen and (min-width: 600px) {
+    .logo {
+      height: 12vw !important;
+    }
+    .social a img {
+      width: 55%;
+    }
+  }
+
   /* MD */
   @media only screen and (min-width: 769px) {
     .logo {
-      height: 12vh !important;
+      height: 10vw !important;
     }
     .ready p {
       font-size: 1.2rem;
@@ -168,16 +177,20 @@
     }
   }
 
+  /* MD */
+  @media only screen and (min-width: 850px) {
+    .logo{
+      height: 8vw !important;
+    }
+  }
+
   /* LG */
   @media only screen and (min-width: 992px) {
-    .logo {
-      height: 11vh !important;
-    }
     .primaryButton {
       padding: 2.5vw 5.5vw;
     }
     .social {
-      width: 35% !important;
+      width: 30% !important;
     }
     .social a img {
       width: 65%;
@@ -192,25 +205,26 @@
       justify-content: space-between;
     }
     .footerLeft {
-      width: 40% !important;
+      width: 35% !important;
       align-items: flex-start;
       text-align: start;
       margin-left: 2vw;
     }
     .logo {
+      height: 6.5vw !important;
       margin-left: -1vw;
     }
     .ready p:nth-child(1) {
-      font-size: 1.45rem;
+      font-size: 1.35rem;
     }
     .ready p:nth-child(2) {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
     .primaryButton {
       padding: 2vw 4vw;
     }
     .social {
-      width: 50% !important;
+      width: 60% !important;
     }
     .social a img {
       width: 60%;
@@ -220,16 +234,16 @@
       margin-right: 5vw;
     }
     .footerTitle {
-      font-size: 1.7rem;
+      font-size: 1.6rem;
     }
     .footerLinks .column {
       gap: 0.5vw;
     }
     .footerLinks .column a {
-      font-size: 1.35rem;
+      font-size: 1.25rem;
     }
     .rightsReserved {
-      font-size: 1.15rem;
+      font-size: 1rem;
       margin-bottom: 3vw !important;
     }
   }
