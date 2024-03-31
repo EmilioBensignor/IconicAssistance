@@ -35,7 +35,7 @@
               icon="mdi-chevron-double-right"
               color="white"
               size="x-large"></v-icon>
-            <p class="text-white w-100 font-weight-bold text-start">
+            <p class="who text-white w-100 font-weight-bold text-start">
               Tailored to you
             </p>
           </div>
@@ -44,7 +44,7 @@
               icon="mdi-chevron-double-right"
               color="white"
               size="x-large"></v-icon>
-            <p class="text-white w-100 font-weight-bold text-start">
+            <p class="who text-white w-100 font-weight-bold text-start">
               24/7 Support
             </p>
           </div>
@@ -55,7 +55,7 @@
               icon="mdi-chevron-double-right"
               color="white"
               size="x-large"></v-icon>
-            <p class="text-white w-100 font-weight-bold text-start">
+            <p class="who text-white w-100 font-weight-bold text-start">
               Budget Friendly
             </p>
           </div>
@@ -64,7 +64,7 @@
               icon="mdi-chevron-double-right"
               color="white"
               size="x-large"></v-icon>
-            <p class="text-white w-100 font-weight-bold text-start">
+            <p class="who text-white w-100 font-weight-bold text-start">
               Safe & Secure
             </p>
           </div>
@@ -123,6 +123,12 @@
     }
     .caption p{
       width: 95% !important;
+    }
+  }
+
+  @media only screen and (min-width: 1280px){
+    .who{
+      font-size: 1.2rem;
     }
   }
 </style>

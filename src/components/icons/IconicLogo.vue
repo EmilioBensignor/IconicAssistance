@@ -137,7 +137,19 @@
 
 <style scoped>
   svg {
-    height: 12vw !important;
+    height: 13vw !important;
+  }
+
+  @media only screen and (min-width: 445px){
+    svg{
+      height: 11vw;
+    }
+  }
+
+  @media only screen and (min-width: 520px) {
+    svg {
+      height: 10vw !important;
+    }
   }
 
   @media only screen and (min-width: 600px) {

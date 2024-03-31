@@ -106,7 +106,14 @@
       display: flex;
       flex-direction: row;
     }
+    .different{
+      height: 50vh;
+    }
+    .different p{
+      width: 100%;
+    }
     .differentTitle {
+      width: 100%;
       font-size: 1.5rem;
     }
     .different .v-img {
@@ -117,11 +124,16 @@
   /* Desktop */
   @media only screen and (min-width: 1080px) {
     .different {
-      height: 66vh;
       justify-content: space-between !important;
     }
     .different p{
       width: 95%;
+    }
+  }
+
+  @media only screen and (min-width: 1280px){
+    .different{
+      height: 47vh;
     }
   }
 </style>

@@ -245,6 +245,9 @@
     .mobilePricing {
       display: none;
     }
+    ul li p{
+      font-size: 1rem !important;
+    }
     .desktopPricing {
       width: 90%;
       display: flex;
@@ -252,6 +255,12 @@
     }
     .priceCard{
       width: 31%;
+    }
+  }
+
+  @media only screen and (min-width: 1280px){
+    .desktopPricing{
+      width: 95%;
     }
   }
 </style>

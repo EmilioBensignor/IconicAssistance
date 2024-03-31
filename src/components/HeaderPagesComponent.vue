@@ -16,7 +16,7 @@
         <v-menu open-on-hover>
           <template v-slot:activator="{ props }">
             <v-btn
-              class="btnNav font-weight-bold"
+              class="btnNav"
               color="radioactive"
               v-bind="props"
               >About</v-btn
@@ -36,7 +36,7 @@
         <v-menu open-on-hover>
           <template v-slot:activator="{ props }">
             <v-btn
-              class="btnNav font-weight-bold"
+              class="btnNav"
               color="radioactive"
               v-bind="props"
               >Learn</v-btn
@@ -54,19 +54,19 @@
           </v-list>
         </v-menu>
         <v-btn
-          class="btnNav font-weight-bold"
+          class="btnNav"
           color="radioactive"
           :to="'/services'">
           Services
         </v-btn>
         <v-btn
-          class="btnNav font-weight-bold"
+          class="btnNav"
           color="radioactive"
           :to="'/pricing'">
           Pricing
         </v-btn>
         <v-btn
-          class="btnNav font-weight-bold"
+          class="btnNav"
           color="radioactive"
           :to="'/contact-us'">
           Contact Us
@@ -211,7 +211,7 @@
 
   /* Desktop */
   @media only screen and (min-width: 1080px) {
-    .hamburger {
+    .hamburger, .v-navigation-drawer {
       display: none !important;
     }
     .v-toolbar__content {
@@ -231,6 +231,7 @@
       text-indent: 0 !important;
       font-family: "Poppins", sans-serif;
       font-size: 1.3rem !important;
+      font-weight: 600 !important;
       text-transform: none !important;
     }
   }

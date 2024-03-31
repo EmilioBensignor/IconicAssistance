@@ -57,7 +57,7 @@
     </div>
     <div
       v-motion="scrollBottom"
-      class="w-75 columnAlignCenter ga-3 text-lightGray CostComparisonAclaration my-5">
+      class="w-75 columnAlignCenter ga-3 text-lightGray costComparisonAclaration my-5">
       <p>
         <sup class="mr-1">1</sup>Average hourly-rate for 25-34 years old US
         employee according to Forbes.com
@@ -148,7 +148,7 @@
     margin: 0 auto;
     bottom: 0;
   }
-  .CostComparisonAclaration p {
+  .costComparisonAclaration p {
     font-size: 0.75rem;
     color: #656875;
   }
@@ -158,14 +158,14 @@
     .costComparison {
       width: 50% !important;
     }
-    .CostComparisonAclaration p {
+    .costComparisonAclaration p {
       font-size: 0.85rem;
     }
   }
 
   /* MD */
   @media only screen and (min-width: 769px) {
-    .CostComparisonAclaration p {
+    .costComparisonAclaration p {
       font-size: 0.9rem;
     }
   }
@@ -200,6 +200,9 @@
     .costComparison {
       width: 65% !important;
     }
+    .comparisonItem {
+      height: 17vh;
+    }
     .comparisonItem p {
       font-size: 1.4rem;
     }
@@ -208,6 +211,18 @@
     }
     .saveIcon img {
       width: 75%;
+    }
+  }
+
+  @media only screen and (min-width: 1280px){
+    .costComparison {
+      width: 60% !important;
+    }
+    .category {
+      width: 80%;
+    }
+    .costComparisonAclaration {
+      margin-top: 4vw !important;
     }
   }
 </style>

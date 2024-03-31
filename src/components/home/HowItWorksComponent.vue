@@ -172,7 +172,6 @@
     }
     .step {
       height: 35vh;
-      width: 100% !important;
       text-align: start;
       box-shadow: none !important;
       background: none !important;
@@ -199,6 +198,15 @@
   @media only screen and (min-width: 1080px) {
     .step {
       height: 33vh;
+    }
+    .stepNumbers{
+      font-size: 1.9rem;
+    }
+    .stepTitle{
+      font-size: 1.5rem
+    }
+    .stepBody{
+      font-size: 1.1rem
     }
   }
 </style>
