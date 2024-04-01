@@ -2,7 +2,6 @@
   <v-app>
     <div>
       <router-view />
-
       <CallToAction />
     </div>
     <FooterComponent class="pt-15" />
@@ -442,23 +441,29 @@ section {
   h1 {
     font-size: 3.5rem;
   }
+
   h2 {
     font-size: 2.2rem;
   }
+
   h3 {
     font-size: 1.7rem;
   }
+
   h4 {
     font-size: 1.5rem;
   }
+
   .subtitle {
     font-size: 1.4rem;
   }
+
   .primaryButton,
   .secondaryButton {
     font-size: 1.3rem;
     padding: 2vw 3.8vw;
   }
+
   .v-expansion-panel-title {
     font-size: 1rem !important;
   }

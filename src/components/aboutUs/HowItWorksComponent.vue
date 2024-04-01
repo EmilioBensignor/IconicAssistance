@@ -109,13 +109,14 @@
       font-size: 1.2rem;
     }
     .fourSteps {
-      width: 95% !important;
+      width: 85% !important;
       display: flex;
       flex-direction: row;
       align-items: flex-start;
+      gap: 2vw !important;
     }
     .step {
-      width: 25%;
+      width: 25% !important;
     }
     .circleNumber {
       width: 6vw;

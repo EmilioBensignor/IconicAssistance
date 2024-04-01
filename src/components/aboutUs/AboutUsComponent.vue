@@ -78,4 +78,10 @@
       width: 100% !important;
     }
   }
+
+  @media only screen and (min-width: 1280px){
+    h2{
+      line-height: 1.3;
+    }
+  }
 </style>

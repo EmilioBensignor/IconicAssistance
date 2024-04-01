@@ -63,4 +63,10 @@
   .faq{
     width: 60% !important;
   }
+
+  @media only screen and (min-width: 1280px){
+    .secondaryButton{
+      width: 40% !important;
+    }
+  }
 </style>

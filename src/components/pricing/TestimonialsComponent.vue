@@ -58,3 +58,13 @@
 <script setup>
   import { scrollBottom } from "@/motions.js";
 </script>
+
+<style scoped>
+  .testimonialWrap{
+    width: 80% !important;
+    margin-bottom: 5vw !important;
+  }
+  .testimonial{
+    justify-content: space-between;
+  }
+</style>

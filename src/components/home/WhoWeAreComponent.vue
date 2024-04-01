@@ -130,5 +130,8 @@
     .who{
       font-size: 1.2rem;
     }
+    .caption {
+      padding: 0.5vw 0 1.5vw 0 !important;
+    }
   }
 </style>

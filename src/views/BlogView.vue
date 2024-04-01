@@ -97,6 +97,20 @@
 </script>
 
 <style scoped>
+    /* MD */
+    @media only screen and (min-width: 769px){
+      article{
+        width: 65% !important;
+      }
+    }
+
+        /* LG */
+        @media only screen and (min-width: 992px){
+      article{
+        width: 55% !important;
+      }
+    }
+
   /* Desktop */
   @media only screen and (min-width: 1080px) {
     .h2Search {
@@ -107,18 +121,24 @@
       font-size: 1.2rem;
     }
     .blogPosts{
-      width: 95% !important;
+      width: 80% !important;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
       align-items: flex-start;
       gap: 3vw !important;
-      margin-top: 3vw !important;
-      margin-bottom: 5vw;
+      margin-top: 4vw !important;
+      margin-bottom: 7vw;
     }
     article{
       width: 30% !important;
       justify-content: space-between;
+    }
+    h3{
+      font-size: 1.5rem;
+    }
+    .secondaryButton{
+      font-size: 1.2rem
     }
   }
 </style>

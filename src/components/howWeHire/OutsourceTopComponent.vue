@@ -10,7 +10,7 @@
     <h2 v-motion="scrollBottom" class="text-midnight my-3">
       Remote Talent Application Process
     </h2>
-    <div class="columnAlignCenter">
+    <div class="funnelWrapper columnAlignCenter">
       <p v-motion="scrollBottom" class="funnelNumber text-radioactive">100%</p>
       <div
         v-motion="scrollBottom"
@@ -222,6 +222,10 @@
 
   /* Desktop */
   @media only screen and (min-width: 1080px) {
+    .funnelWrapper{
+      gap: 1.5vw;
+      margin: 3vw 0;
+    }
     .outsource {
       font-size: 1.2rem;
     }
@@ -284,7 +288,7 @@
       padding: 1vw 0;
     }
     .funnelBody img {
-      width: 20%;
+      width: 25%;
     }
     .funnelBody div {
       align-items: flex-start;

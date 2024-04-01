@@ -78,9 +78,21 @@
   /* Desktop */
   @media only screen and (min-width: 1080px) {
     .twoCandidate{
+      width: 85% !important;
       display: flex;
       flex-direction: row;
       align-items: flex-start;
+      gap: 1vw;
+    }
+    .whiteLine{
+      margin-bottom: 3vw;
+    }
+  }
+
+  @media only screen and (min-width: 1280px){
+    .twoCandidate{
+      width: 80% !important;
+      gap: 0.5vw;
     }
   }
 </style>

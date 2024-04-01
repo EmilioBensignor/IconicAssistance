@@ -195,4 +195,13 @@
       padding: 2.2vw 5.5vw;
     }
   }
+
+    @media only screen and (min-width: 1280px){
+      .empowerBody ul{
+        width: 85%;
+      }
+      ul li{
+        font-size: 1.1rem;
+      }
+    }
 </style>

@@ -26,7 +26,7 @@
         placeholder="Type to search for a question"
         hide-details />
     </v-form>
-    <div class="w-75 columnAlignCenter ga-5 mt-5">
+    <div class="w-75 columnAlignCenter ga-5 mt-5 mb-10">
       <!-- Categories -->
       <div
         v-motion="scrollBottom"
@@ -184,6 +184,17 @@
     }
     .labelCheckbox{
       font-size: 1.2rem;
+    }
+    input[type="checkbox"] {
+      width: 2.8vw;
+      height: 2.8vw;
+    }
+  }
+
+  @media only screen and (min-width: 1280px){
+    input[type="checkbox"] {
+      width: 2.5vw;
+      height: 2.5vw;
     }
   }
 </style>

@@ -47,13 +47,22 @@
     .quality{
       width: 75% !important;
       flex-direction: row;
-      padding:0 2vw;
+      padding:2vw;
     }
     .quality p{
       font-weight: 500;
     }
     .guarantee{
       width: 40%;
+    }
+  }
+
+  @media only screen and (min-width: 1280px){
+    .quality{
+      padding: 1vw;
+    }
+    .guarantee{
+      width: 35%;
     }
   }
 </style>

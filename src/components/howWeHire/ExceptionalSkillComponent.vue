@@ -42,6 +42,14 @@
   .desktopExceptional{
     display: none;
   }
+
+  /* LG */
+  @media only screen and (min-width: 992px){
+    .mobileExceptional{
+      width: 50% !important;
+    }
+  }
+
   /* Desktop */
   @media only screen and (min-width: 1080px) {
     .mobileExceptional {

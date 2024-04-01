@@ -99,14 +99,14 @@
   /* Desktop */
   @media only screen and (min-width: 1080px) {
     .perfectMatch {
-      width: 90%;
+      width: 80%;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
       justify-items: center;
       grid-column-gap: 8vw !important;
       grid-row-gap: 5vw !important;
-      margin-bottom: 5vw;
+      margin-bottom: 7vw;
     }
     .perfectMatch div:nth-child(1) {
       grid-area: 1 / 1 / 2 / 2;
@@ -121,7 +121,9 @@
       grid-area: 2 / 2 / 3 / 3;
     }
     .element {
+      height: 100%;
       width: 100% !important;
+      justify-content: space-between;
     }
   }
 </style>

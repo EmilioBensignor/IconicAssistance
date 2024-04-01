@@ -201,7 +201,7 @@
       width: 65% !important;
     }
     .comparisonItem {
-      height: 17vh;
+      height: 16vh;
     }
     .comparisonItem p {
       font-size: 1.4rem;

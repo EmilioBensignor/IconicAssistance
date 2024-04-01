@@ -94,6 +94,7 @@
       width: 100% !important;
     }
     .textOpportunities{
+      margin-top: 1vw !important;
       margin-bottom: 0 !important;
     }
     .vaOpportunities{
@@ -102,6 +103,12 @@
     }
     ul{
       list-style: circle;
+    }
+  }
+
+  @media only screen and (min-width: 1280px){
+    ul li{
+      font-size: 1.1rem
     }
   }
 </style>

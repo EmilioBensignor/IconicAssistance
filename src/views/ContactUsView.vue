@@ -434,7 +434,7 @@
 			margin: 2.5vw 0;
     }
     .contactForm {
-      width: 90% !important;
+      width: 80% !important;
     }
 		.twoInput{
 			display: flex;
@@ -452,7 +452,13 @@
 		}
     .submit {
 			width: 35% !important;
-      font-size: 1.6rem;
+      font-size: 1.5rem;
+    }
+  }
+
+  @media only screen and (min-width: 1280px){
+    .contactForm {
+      width: 75% !important;
     }
   }
 </style>

@@ -260,7 +260,7 @@
 
   @media only screen and (min-width: 1280px){
     .desktopPricing{
-      width: 95%;
+      width: 80%;
     }
   }
 </style>

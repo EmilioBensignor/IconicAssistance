@@ -4,7 +4,7 @@
     <h2 v-motion="scrollBottom" class="text-midnight">
       Do You Identify Yourself With The Following Aspects?
     </h2>
-    <div class="columnAlignCenter ga-8 mt-7 mb-5">
+    <div class="aspectsWrapper columnAlignCenter ga-8 mt-7 mb-5">
       <div
         v-for="(item, index) in aspects"
         :key="index"
@@ -94,6 +94,9 @@
 
   /* Desktop */
   @media only screen and (min-width: 1080px) {
+    .aspectsWrapper{
+      margin: 4vw 0 !important;
+    }
     .aspect {
       width: 75% !important;
       display: flex;
@@ -113,6 +116,12 @@
     .identify p{
       font-weight: 500;
       font-size: 1.15rem;
+    }
+  }
+
+  @media only screen and (min-width: 1280px){
+    .aspect img {
+      margin-left: -4px;
     }
   }
 </style>

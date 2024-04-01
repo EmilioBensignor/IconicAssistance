@@ -73,4 +73,10 @@
       list-style: circle;
     }
   }
+
+  @media only screen and (min-width: 1280px){
+    .tasks li{
+      font-size: 1.05rem;
+    }
+  }
 </style>

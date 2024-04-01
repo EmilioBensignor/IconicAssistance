@@ -177,7 +177,6 @@
     }
   }
 
-  /* MD */
   @media only screen and (min-width: 850px) {
     .logo{
       height: 8vw !important;
@@ -231,10 +230,13 @@
     }
     .footerLinks {
       flex-direction: row;
-      margin-right: 5vw;
+      margin-right: 10vw;
     }
     .footerTitle {
       font-size: 1.6rem;
+    }
+    .footerLinks {
+      margin-left: 1vw !important;
     }
     .footerLinks .column {
       gap: 0.5vw;
@@ -245,6 +247,30 @@
     .rightsReserved {
       font-size: 1rem;
       margin-bottom: 3vw !important;
+    }
+  }
+
+  @media only screen and (min-width: 1280px){
+    .logo {
+      height: 5.5vw !important;
+    }
+    .ready p:nth-child(1) {
+      font-size: 1.3rem;
+    }
+    .primaryButton {
+      padding: 1.7vw 3.8vw;
+    }
+    .social {
+      width: 55% !important;
+    }
+    .social a img {
+      width: 65%;
+    }
+    .footerTitle {
+      font-size: 1.5rem;
+    }
+    .footerLinks .column a {
+      font-size: 1.2rem;
     }
   }
 </style>

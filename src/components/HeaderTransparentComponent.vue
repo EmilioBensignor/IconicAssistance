@@ -21,7 +21,7 @@
       <div class="menuDesktop">
         <v-menu open-on-hover>
           <template v-slot:activator="{ props }">
-            <v-btn class="btnNav" color="white" v-bind="props"
+            <v-btn class="btnNav" :color="isScrolled ? 'radioactive' : 'white'" v-bind="props"
               >About</v-btn
             >
           </template>
@@ -38,7 +38,7 @@
         </v-menu>
         <v-menu open-on-hover>
           <template v-slot:activator="{ props }">
-            <v-btn class="btnNav" color="white" v-bind="props"
+            <v-btn class="btnNav" :color="isScrolled ? 'radioactive' : 'white'" v-bind="props"
               >Learn</v-btn
             >
           </template>
@@ -53,13 +53,13 @@
             </v-list-item>
           </v-list>
         </v-menu>
-        <v-btn class="btnNav" color="white" :to="'/services'">
+        <v-btn class="btnNav" :color="isScrolled ? 'radioactive' : 'white'" :to="'/services'">
           Services
         </v-btn>
-        <v-btn class="btnNav" color="white" :to="'/pricing'">
+        <v-btn class="btnNav" :color="isScrolled ? 'radioactive' : 'white'" :to="'/pricing'">
           Pricing
         </v-btn>
-        <v-btn class="btnNav" color="white" :to="'/contact-us'">
+        <v-btn class="btnNav" :color="isScrolled ? 'radioactive' : 'white'" :to="'/contact-us'">
           Contact Us
         </v-btn>
       </div>
