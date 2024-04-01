@@ -9,11 +9,7 @@
       exactly that.
     </p>
     <div class="fourSteps w-75 columnAlignCenter ga-16 my-5 py-5">
-      <div
-        v-for="item in fourSteps"
-        :key="item.number"
-        v-motion="scrollBottom"
-        class="step flexCenter ga-3">
+      <div v-for="item in fourSteps" :key="item.number" v-motion="scrollBottom" class="step flexCenter ga-3">
         <div class="circleNumber bg-white elevation-5">
           <p class="text-radioactive">{{ item.number }}</p>
         </div>
@@ -21,112 +17,133 @@
         <p class="text-white">{{ item.description }}</p>
       </div>
     </div>
-    <router-link
-      class="primaryButton elevation-5 mt-3 mb-5"
-      :to="'/how-it-works'"
-      >Learn How It Works</router-link
-    >
+    <router-link class="primaryButton elevation-5 mt-3 mb-5" :to="'/how-it-works'">Learn How It Works</router-link>
   </section>
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        fourSteps: [
-          {
-            number: 1,
-            title: "Book a Meeting",
-            description:
-              "Tell us everything we need to know about your business and what tasks you wish to delegate.",
-          },
-          {
-            number: 2,
-            title: "Recruitment",
-            description:
-              "We'll shortlist the best VAs suited to your preferences and our HR Manager will facilitate your VA interviews.",
-          },
-          {
-            number: 3,
-            title: "Onboarding",
-            description:
-              "We'll hold your hand through the onboarding process so your VA can fit seamlessly into your business.",
-          },
-          {
-            number: 4,
-            title: "Ongoing Support",
-            description:
-              "Once you've chosen yout VA, we'll handle all the HR matters including payroll, and performance reviews.",
-          },
-        ],
-      };
-    },
-  };
+export default {
+  data() {
+    return {
+      fourSteps: [
+        {
+          number: 1,
+          title: "Book a Meeting",
+          description:
+            "Tell us everything we need to know about your business and what tasks you wish to delegate.",
+        },
+        {
+          number: 2,
+          title: "Recruitment",
+          description:
+            "We'll shortlist the best VAs suited to your preferences and our HR Manager will facilitate your VA interviews.",
+        },
+        {
+          number: 3,
+          title: "Onboarding",
+          description:
+            "We'll hold your hand through the onboarding process so your VA can fit seamlessly into your business.",
+        },
+        {
+          number: 4,
+          title: "Ongoing Support",
+          description:
+            "Once you've chosen yout VA, we'll handle all the HR matters including payroll, and performance reviews.",
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <script setup>
-  import { scrollBottom } from "@/motions.js";
+import { scrollBottom } from "@/motions.js";
 </script>
 
 <style scoped>
+.fourStepsTitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* SM */
+@media only screen and (min-width: 480px) {
   .fourStepsTitle {
-    font-size: 1.4rem;
-    font-weight: 600;
+    font-size: 1.5rem;
   }
 
-  /* SM */
-  @media only screen and (min-width: 480px) {
-    .fourStepsTitle {
-      font-size: 1.5rem;
-    }
-    .circleNumber {
-      width: 12vw;
-      height: 12vw;
-    }
+  .circleNumber {
+    width: 12vw;
+    height: 12vw;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .circleNumber {
+    width: 10vw;
+    height: 10vw;
+  }
+}
+
+/* MD */
+@media only screen and (min-width: 769px) {
+  .fourStepsTitle {
+    font-size: 1.6rem;
   }
 
-  @media only screen and (min-width: 600px) {
-    .circleNumber {
-      width: 10vw;
-      height: 10vw;
-    }
+  .circleNumber {
+    width: 8vw;
+    height: 8vw;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1080px) {
+  .business {
+    font-size: 1.2rem;
   }
 
-  /* MD */
-  @media only screen and (min-width: 769px) {
-    .fourStepsTitle {
-      font-size: 1.6rem;
-    }
-    .circleNumber {
-      width: 8vw;
-      height: 8vw;
-    }
+  .fourSteps {
+    width: 85% !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2vw !important;
   }
 
-  /* Desktop */
-  @media only screen and (min-width: 1080px) {
-    .business {
-      font-size: 1.2rem;
-    }
-    .fourSteps {
-      width: 85% !important;
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      gap: 2vw !important;
-    }
-    .step {
-      width: 25% !important;
-    }
-    .circleNumber {
-      width: 6vw;
-      height: 6vw;
-    }
-    .circleNumber p {
-      font-size: 2rem;
-    }
-    .step p{
-      width: 100% !important;
-    }
+  .step {
+    width: 25% !important;
   }
+
+  .circleNumber {
+    width: 6vw;
+    height: 6vw;
+  }
+
+  .circleNumber p {
+    font-size: 2rem;
+  }
+
+  .step p {
+    width: 100% !important;
+  }
+}
+
+/* XL */
+@media only screen and (min-width: 1440px) {
+  .step {
+    width: 20% !important;
+  }
+  .circleNumber {
+    width: 5vw;
+    height: 5vw;
+  }
+  .fourSteps{
+    margin-bottom: 2vw !important;
+  }
+  .primaryButton{
+    margin-bottom: 5vw !important;
+  }
+}
 </style>

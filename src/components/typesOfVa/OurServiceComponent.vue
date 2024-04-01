@@ -143,9 +143,24 @@ import { scrollBottom } from "@/motions.js";
   }
 }
 
-@media only screen and (min-width: 1280px){
+@media only screen and (min-width: 1280px) {
   .carouselTypes {
     height: 60vh !important;
+  }
+}
+
+/* XL */
+@media only screen and (min-width: 1440px) {
+  .carousel {
+    width: 45% !important;
+  }
+
+  .v-carousel__controls {
+    padding: 3vw 0;
+  }
+
+  .vaImg {
+    height: 91% !important;
   }
 }
 </style>

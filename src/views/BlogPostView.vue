@@ -162,6 +162,7 @@ import { scrollBottom } from "@/motions.js";
     width: 100vw;
     height: 700px;
   }
+
   .recentBlogWrapper {
     width: 60% !important;
   }
@@ -234,9 +235,24 @@ import { scrollBottom } from "@/motions.js";
   }
 }
 
-@media only screen and (min-width: 1280px){
+@media only screen and (min-width: 1280px) {
   .heroSection {
     height: 800px;
+  }
+
+  .recentBlogs {
+    top: 15vw;
+  }
+}
+
+/* XL */
+@media only screen and (min-width: 1440px) {
+  .heroSection {
+    height: 875px;
+  }
+
+  .recentBlogs {
+    top: 9vw;
   }
 }
 </style>

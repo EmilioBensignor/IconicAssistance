@@ -189,4 +189,14 @@ import { scrollBottom } from "@/motions.js";
     height: 50vh;
   }
 }
+
+/* XL */
+@media only screen and (min-width: 1440px) {
+  .heroIndustries {
+    height: 875px;
+  }
+  .vaSuit{
+    margin-bottom: 3vw !important;
+  }
+}
 </style>

@@ -136,9 +136,20 @@ import { scrollBottom } from "@/motions.js";
   }
 }
 
-@media only screen and (min-width: 1280px){
-  .chooses{
+@media only screen and (min-width: 1280px) {
+  .chooses {
     width: 80% !important;
+  }
+}
+
+/* XL */
+@media only screen and (min-width: 1440px) {
+  .choose {
+    width: 20% !important;
+    height: 46vh;
+  }
+  .dedicated{
+    width: 55% !important;
   }
 }
 </style>

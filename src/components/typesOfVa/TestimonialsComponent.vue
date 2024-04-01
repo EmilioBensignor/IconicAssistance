@@ -93,4 +93,12 @@
       border-radius: 16px;
     }
   }
+
+  /* XL */
+@media only screen and (min-width: 1440px) {
+  .testimonialWrap {
+      width: 80% !important;
+      gap: 1.5vw;
+    }
+}
 </style>

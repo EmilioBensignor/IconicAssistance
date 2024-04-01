@@ -57,4 +57,14 @@
       width: 50% !important;
     }
   }
+
+  /* XL */
+@media only screen and (min-width: 1440px){
+  .keyDesktop img{
+    width: 65%;
+  }
+  .explore{
+    width: 40% !important;
+  }
+}
 </style>

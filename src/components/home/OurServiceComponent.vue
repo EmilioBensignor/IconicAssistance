@@ -143,4 +143,14 @@ export default {
     width: 65% !important;
   }
 }
+
+/* XL */
+@media only screen and (min-width: 1440px) {
+  .tailoredTitle{
+    font-size: 1.8rem;
+  }
+  .tellUs{
+    font-size: 1.5rem;
+  }
+}
 </style>

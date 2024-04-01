@@ -6,58 +6,39 @@
     </h2>
     <div v-motion="scrollBottom" class="w-75 costComparison d-flex ga-2 my-7">
       <div class="w-50 columnAlignCenter bg-thinGray rounded-xl elevation-10">
-        <div
-          v-for="(item, index) in inHouse"
-          :key="index"
-          class="w-100 comparisonItem flexCenter justify-center pa-3">
+        <div v-for="(item, index) in inHouse" :key="index" class="w-100 comparisonItem flexCenter justify-center pa-3">
           <p class="text-midnight text-center">{{ item }}</p>
         </div>
       </div>
       <!-- Comparison Categories -->
-      <div
-        class="flexCenter category category1 bg-white elevation-5 rounded-pill py-1">
+      <div class="flexCenter category category1 bg-white elevation-5 rounded-pill py-1">
         <p class="text-midnight">HOURLY RATE OF PAY</p>
       </div>
-      <div
-        class="flexCenter category category2 bg-white elevation-5 rounded-pill py-1">
+      <div class="flexCenter category category2 bg-white elevation-5 rounded-pill py-1">
         <p class="text-midnight">FRINGE BENEFITS</p>
       </div>
-      <div
-        class="flexCenter category category3 bg-white elevation-5 rounded-pill py-1">
+      <div class="flexCenter category category3 bg-white elevation-5 rounded-pill py-1">
         <p class="text-midnight">OVERHEAD RATE</p>
       </div>
-      <div
-        class="flexCenter category category4 bg-white elevation-5 rounded-pill py-1">
+      <div class="flexCenter category category4 bg-white elevation-5 rounded-pill py-1">
         <p class="text-midnight">TOTAL PAY RATE</p>
       </div>
-      <div
-        class="flexCenter category category5 bg-white elevation-5 rounded-pill py-1">
+      <div class="flexCenter category category5 bg-white elevation-5 rounded-pill py-1">
         <p class="text-midnight">WORK Hs / MONTH</p>
       </div>
-      <div
-        class="flexCenter category category6 bg-white elevation-5 rounded-pill py-1">
+      <div class="flexCenter category category6 bg-white elevation-5 rounded-pill py-1">
         <p class="text-midnight">TOTAL MONTHLY</p>
       </div>
-      <div
-        class="w-50 columnAlignCenter bg-radioactive rounded-te-xl rounded-bs-xl elevation-10">
-        <div
-          v-for="(item, index) in iconicVa"
-          :key="index"
-          class="w-100 comparisonItem flexCenter justify-center pa-3">
+      <div class="w-50 columnAlignCenter bg-radioactive rounded-te-xl rounded-bs-xl elevation-10">
+        <div v-for="(item, index) in iconicVa" :key="index" class="w-100 comparisonItem flexCenter justify-center pa-3">
           <p class="text-white text-center font-weight-bold">{{ item }}</p>
         </div>
         <div class="w-50 saveIcon pl-3 mb-n6">
-          <img
-            src="@/assets/images/misc/Save-75-Percentage.png"
-            alt="Save 75%"
-            class="shadow-3"
-            width="95%" />
+          <img src="@/assets/images/misc/Save-75-Percentage.png" alt="Save 75%" class="shadow-3" width="95%" />
         </div>
       </div>
     </div>
-    <div
-      v-motion="scrollBottom"
-      class="w-75 columnAlignCenter ga-3 text-lightGray costComparisonAclaration my-5">
+    <div v-motion="scrollBottom" class="w-75 columnAlignCenter ga-3 text-lightGray costComparisonAclaration my-5">
       <p>
         <sup class="mr-1">1</sup>Average hourly-rate for 25-34 years old US
         employee according to Forbes.com
@@ -72,157 +53,189 @@
         compensation.
       </p>
     </div>
-    <router-link
-      :to="'/before-you-start'"
-      class="secondaryButton elevation-5 mt-3"
-      >Before you Start</router-link
-    >
+    <router-link :to="'/before-you-start'" class="secondaryButton elevation-5 mt-3">Before you Start</router-link>
   </section>
 </template>
 
 <script setup>
-  import { scrollBottom } from "@/motions.js";
+import { scrollBottom } from "@/motions.js";
 </script>
 
 <script>
-  export default {
-    data() {
-      return {
-        inHouse: [
-          "IN-HOUSE EMPLOYEE",
-          "$25.45",
-          "$5.09",
-          "$7.64",
-          "$38.18",
-          "160 Hrs",
-          "$6,108.80",
-        ],
-        iconicVa: [
-          "ICONIC VA",
-          "$9.55",
-          "$0.00",
-          "$0.00",
-          "$9.55",
-          "160 Hrs",
-          "$1,528.00",
-        ],
-      };
-    },
-  };
+export default {
+  data() {
+    return {
+      inHouse: [
+        "IN-HOUSE EMPLOYEE",
+        "$25.45",
+        "$5.09",
+        "$7.64",
+        "$38.18",
+        "160 Hrs",
+        "$6,108.80",
+      ],
+      iconicVa: [
+        "ICONIC VA",
+        "$9.55",
+        "$0.00",
+        "$0.00",
+        "$9.55",
+        "160 Hrs",
+        "$1,528.00",
+      ],
+    };
+  },
+};
 </script>
 
 <style scoped>
+.costComparison {
+  position: relative;
+}
+
+.comparisonItem {
+  height: 15vh;
+}
+
+.category {
+  width: 90%;
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  margin: 0 auto;
+}
+
+.category1 {
+  top: 12.5%;
+}
+
+.category2 {
+  top: 26%;
+}
+
+.category3 {
+  top: 40.5%;
+}
+
+.category4 {
+  top: 54.5%;
+}
+
+.category5 {
+  top: 69%;
+}
+
+.category6 {
+  top: 83%;
+}
+
+.saveIcon {
+  position: absolute;
+  margin: 0 auto;
+  bottom: 0;
+}
+
+.costComparisonAclaration p {
+  font-size: 0.75rem;
+  color: #656875;
+}
+
+/* SM */
+@media only screen and (min-width: 480px) {
   .costComparison {
-    position: relative;
+    width: 50% !important;
+  }
+
+  .costComparisonAclaration p {
+    font-size: 0.85rem;
+  }
+}
+
+/* MD */
+@media only screen and (min-width: 769px) {
+  .costComparisonAclaration p {
+    font-size: 0.9rem;
+  }
+}
+
+/* LG */
+@media only screen and (min-width: 992px) {
+  .costComparison {
+    width: 75% !important;
+  }
+
+  .comparisonItem {
+    height: 20vh;
+  }
+
+  .comparisonItem p {
+    font-size: 1.65rem;
+  }
+
+  .category {
+    width: 75%;
+  }
+
+  .category p {
+    font-size: 1.3rem;
+  }
+
+  .saveIcon {
+    margin-bottom: -3vw !important;
+  }
+
+  .saveIcon img {
+    width: 65%;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1080px) {
+  .costComparison {
+    width: 65% !important;
+  }
+
+  .comparisonItem {
+    height: 16vh;
+  }
+
+  .comparisonItem p {
+    font-size: 1.4rem;
+  }
+
+  .category p {
+    font-size: 1.2rem;
+  }
+
+  .saveIcon img {
+    width: 75%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .costComparison {
+    width: 60% !important;
+  }
+
+  .category {
+    width: 80%;
+  }
+
+  .costComparisonAclaration {
+    margin-top: 4vw !important;
+  }
+}
+
+/* XL */
+@media only screen and (min-width: 1440px) {
+  .costComparison{
+    width: 55% !important;
   }
   .comparisonItem {
     height: 15vh;
   }
-  .category {
-    width: 90%;
-    position: absolute;
-    left: 0%;
-    right: 0%;
-    margin: 0 auto;
+  .costComparisonAclaration{
+    width: 65% !important;
   }
-  .category1 {
-    top: 12.5%;
-  }
-  .category2 {
-    top: 26%;
-  }
-  .category3 {
-    top: 40.5%;
-  }
-  .category4 {
-    top: 54.5%;
-  }
-  .category5 {
-    top: 69%;
-  }
-  .category6 {
-    top: 83%;
-  }
-  .saveIcon {
-    position: absolute;
-    margin: 0 auto;
-    bottom: 0;
-  }
-  .costComparisonAclaration p {
-    font-size: 0.75rem;
-    color: #656875;
-  }
-
-  /* SM */
-  @media only screen and (min-width: 480px) {
-    .costComparison {
-      width: 50% !important;
-    }
-    .costComparisonAclaration p {
-      font-size: 0.85rem;
-    }
-  }
-
-  /* MD */
-  @media only screen and (min-width: 769px) {
-    .costComparisonAclaration p {
-      font-size: 0.9rem;
-    }
-  }
-
-  /* LG */
-  @media only screen and (min-width: 992px) {
-    .costComparison {
-      width: 75% !important;
-    }
-    .comparisonItem {
-      height: 20vh;
-    }
-    .comparisonItem p {
-      font-size: 1.65rem;
-    }
-    .category {
-      width: 75%;
-    }
-    .category p {
-      font-size: 1.3rem;
-    }
-    .saveIcon {
-      margin-bottom: -3vw !important;
-    }
-    .saveIcon img {
-      width: 65%;
-    }
-  }
-
-  /* Desktop */
-  @media only screen and (min-width: 1080px) {
-    .costComparison {
-      width: 65% !important;
-    }
-    .comparisonItem {
-      height: 16vh;
-    }
-    .comparisonItem p {
-      font-size: 1.4rem;
-    }
-    .category p {
-      font-size: 1.2rem;
-    }
-    .saveIcon img {
-      width: 75%;
-    }
-  }
-
-  @media only screen and (min-width: 1280px){
-    .costComparison {
-      width: 60% !important;
-    }
-    .category {
-      width: 80%;
-    }
-    .costComparisonAclaration {
-      margin-top: 4vw !important;
-    }
-  }
+}
 </style>

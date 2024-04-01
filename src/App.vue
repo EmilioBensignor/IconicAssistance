@@ -423,6 +423,10 @@ section {
 
 /* Desktop */
 @media only screen and (min-width: 1080px) {
+  #app {
+    max-width: 100vw;
+  }
+
   .v-expansion-panel-title {
     font-size: 1.1rem !important;
   }
@@ -475,6 +479,35 @@ section {
   .faqWrapper p,
   .faqWrapper li {
     font-size: 1rem;
+  }
+}
+
+/* XL */
+@media only screen and (min-width: 1440px) {
+  h1 {
+    font-size: 3.6rem;
+  }
+
+  h2 {
+    font-size: 2.3rem;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+
+  h4 {
+    font-size: 1.6rem;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    font-size: 1.4rem;
+    padding: 1.8vw 3.6vw;
   }
 }
 </style>

@@ -384,4 +384,20 @@ import { scrollBottom } from "@/motions.js";
     font-weight: 500;
   }
 }
+
+@media only screen and (min-width: 1300px){
+  .comparison {
+    top: 6vw;
+  }
+}
+
+/* XL */
+@media only screen and (min-width: 1440px) {
+  .comparisonChartDesktop {
+    margin-top: 2vw;
+  }
+  .comparison {
+    top: 5.8vw;
+  }
+}
 </style>

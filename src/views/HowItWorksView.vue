@@ -19,24 +19,14 @@
         consultation with Iconic Assistants today.
       </p>
       <div class="w-75 mobileModel">
-        <img
-          src="@/assets/images/howItWorks/Remote-Talent-Call.png"
-          alt="Remote Talent Call"
-          width="75%"
-          v-motion="scrollBottom"
-          class="rounded-circle elevation-5 my-5" />
+        <img src="@/assets/images/howItWorks/Remote-Talent-Call.png" alt="Remote Talent Call" width="75%"
+          v-motion="scrollBottom" class="rounded-circle elevation-5 my-5" />
       </div>
-      <router-link class="primaryButton elevation-5 mt-5" :to="'/contact-us'"
-        >Request a Free Consultation</router-link
-      >
+      <router-link class="primaryButton elevation-5 mt-5" :to="'/contact-us'">Request a Free Consultation</router-link>
     </div>
     <div class="desktopModel columnAlignCenter justify-center">
-      <img
-        src="@/assets/images/howItWorks/Remote-Talent-Call.png"
-        alt="Remote Talent Call"
-        width="90%"
-        v-motion="scrollBottom"
-        class="rounded-xl elevation-5 my-5" />
+      <img src="@/assets/images/howItWorks/Remote-Talent-Call.png" alt="Remote Talent Call" width="90%"
+        v-motion="scrollBottom" class="rounded-xl elevation-5 my-5" />
     </div>
   </section>
   <!-- Step 2 -->
@@ -52,24 +42,14 @@
         business match.
       </p>
       <div class="w-75 mobileModel">
-        <img
-          src="@/assets/images/howItWorks/Remote-Talent-Right-Candidate.png"
-          alt="Remote Talent Right Candidate"
-          width="75%"
-          v-motion="scrollBottom"
-          class="rounded-circle elevation-5 my-5" />
+        <img src="@/assets/images/howItWorks/Remote-Talent-Right-Candidate.png" alt="Remote Talent Right Candidate"
+          width="75%" v-motion="scrollBottom" class="rounded-circle elevation-5 my-5" />
       </div>
-      <router-link class="secondaryButton elevation-5 mt-5" :to="'/how-we-hire'"
-        >How We Hire</router-link
-      >
+      <router-link class="secondaryButton elevation-5 mt-5" :to="'/how-we-hire'">How We Hire</router-link>
     </div>
     <div class="desktopModel columnAlignCenter justify-center">
-      <img
-        src="@/assets/images/howItWorks/Remote-Talent-Right-Candidate.png"
-        alt="Remote Talent Right Candidate"
-        width="90%"
-        v-motion="scrollBottom"
-        class="rounded-xl elevation-5 my-5" />
+      <img src="@/assets/images/howItWorks/Remote-Talent-Right-Candidate.png" alt="Remote Talent Right Candidate"
+        width="90%" v-motion="scrollBottom" class="rounded-xl elevation-5 my-5" />
     </div>
   </section>
   <!-- Step 3 -->
@@ -83,24 +63,14 @@
         onboarding.
       </p>
       <div class="w-75 mobileModel">
-        <img
-          src="@/assets/images/howItWorks/Remote-Talent-Tasks.png"
-          alt="Remote Talent Tasks"
-          width="75%"
-          v-motion="scrollBottom"
-          class="rounded-circle elevation-5 my-5" />
+        <img src="@/assets/images/howItWorks/Remote-Talent-Tasks.png" alt="Remote Talent Tasks" width="75%"
+          v-motion="scrollBottom" class="rounded-circle elevation-5 my-5" />
       </div>
-      <router-link class="primaryButton elevation-5 my-5" :to="'/types-of-vas'"
-        >Types of VAs</router-link
-      >
+      <router-link class="primaryButton elevation-5 my-5" :to="'/types-of-vas'">Types of VAs</router-link>
     </div>
     <div class="desktopModel columnAlignCenter justify-center">
-      <img
-        src="@/assets/images/howItWorks/Remote-Talent-Tasks.png"
-        alt="Remote Talent Tasks"
-        width="90%"
-        v-motion="scrollBottom"
-        class="rounded-xl elevation-5 my-5" />
+      <img src="@/assets/images/howItWorks/Remote-Talent-Tasks.png" alt="Remote Talent Tasks" width="90%"
+        v-motion="scrollBottom" class="rounded-xl elevation-5 my-5" />
     </div>
   </section>
   <!-- Step 4 -->
@@ -116,72 +86,79 @@
         success.
       </p>
       <div class="w-75 mobileModel">
-        <img
-          src="@/assets/images/howItWorks/Remote-Talent-Support.png"
-          alt="Remote Talent Support"
-          width="75%"
-          v-motion="scrollBottom"
-          class="rounded-circle elevation-5 my-5" />
+        <img src="@/assets/images/howItWorks/Remote-Talent-Support.png" alt="Remote Talent Support" width="75%"
+          v-motion="scrollBottom" class="rounded-circle elevation-5 my-5" />
       </div>
-      <router-link class="secondaryButton elevation-5 mt-5" :to="'/contact-us'"
-        >Contact Us</router-link
-      >
+      <router-link class="secondaryButton elevation-5 mt-5" :to="'/contact-us'">Contact Us</router-link>
     </div>
     <div class="desktopModel columnAlignCenter justify-center">
-      <img
-        src="@/assets/images/howItWorks/Remote-Talent-Support.png"
-        alt="Remote Talent Support"
-        width="90%"
-        v-motion="scrollBottom"
-        class="rounded-xl elevation-5 my-5" />
+      <img src="@/assets/images/howItWorks/Remote-Talent-Support.png" alt="Remote Talent Support" width="90%"
+        v-motion="scrollBottom" class="rounded-xl elevation-5 my-5" />
     </div>
   </section>
 </template>
 
 <script setup>
-  import { scrollBottom } from "@/motions.js";
+import { scrollBottom } from "@/motions.js";
 </script>
 
 <script>
-  import HeaderPagesComponent from "@/components/HeaderPagesComponent.vue";
+import HeaderPagesComponent from "@/components/HeaderPagesComponent.vue";
 
-  export default {
-    components: {
-      HeaderPagesComponent,
-    },
-  };
+export default {
+  components: {
+    HeaderPagesComponent,
+  },
+};
 </script>
 
 <style scoped>
-  .desktopModel {
+.desktopModel {
+  display: none;
+}
+
+/* Desktop */
+@media only screen and (min-width: 1080px) {
+  .mobileModel {
     display: none;
   }
-  /* Desktop */
-  @media only screen and (min-width: 1080px) {
-    .mobileModel {
-      display: none;
-    }
-    .desktopModel {
-      width: 32.5%;
-      display: inline-block;
-    }
-    .stepDesktop {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-    }
-    .reversed {
-      flex-direction: row-reverse;
-      gap: 3vw;
-    }
-    .stepDesktopBody {
-      width: 52.5%;
-      align-items: flex-start;
-      text-align: start;
-    }
-    .stepDesktopBody p {
-      width: 90% !important;
-    }
+
+  .desktopModel {
+    width: 32.5%;
+    display: inline-block;
   }
+
+  .stepDesktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .reversed {
+    flex-direction: row-reverse;
+    gap: 3vw;
+  }
+
+  .stepDesktopBody {
+    width: 52.5%;
+    align-items: flex-start;
+    text-align: start;
+  }
+
+  .stepDesktopBody p {
+    width: 90% !important;
+  }
+}
+
+/* XL */
+@media only screen and (min-width: 1440px) {
+  .desktopModel {
+    width: 30%;
+  }
+
+  .stepDesktopBody {
+    width: 45%;
+  }
+}
 </style>

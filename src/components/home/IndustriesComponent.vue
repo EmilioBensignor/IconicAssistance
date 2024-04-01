@@ -16,52 +16,27 @@
         </p>
       </div> -->
       <div v-motion="scrollBottom" class="columnAlignCenter">
-        <v-carousel
-          :show-arrows="false"
-          class="industriesCarousel w-75 columnAlignCenter justify-space-between whiteBorder elevation-5"
-          cycle
+        <v-carousel :show-arrows="false"
+          class="industriesCarousel w-75 columnAlignCenter justify-space-between whiteBorder elevation-5" cycle
           :interval="3000">
-          <v-carousel-item
-            v-for="(item, index) in industries"
-            :key="index"
-            cover>
-            <router-link
-              :to="`/industries/${item.slug}`"
+          <v-carousel-item v-for="(item, index) in industries" :key="index" cover>
+            <router-link :to="`/industries/${item.slug}`"
               class="carouselCard columnAlignCenter ga-3 text-decoration-none pa-3 pb-15">
-              <v-img
-                :src="getImgUrl(item.logo)"
-                :alt="item.logoAlt"
-                class="shadow-35"
-                width="45%"
-                eager></v-img>
+              <v-img :src="getImgUrl(item.logo)" :alt="item.logoAlt" class="shadow-35" width="45%" eager></v-img>
               <h3 class="text-white">{{ item.name }}</h3>
               <p class="text-white">{{ item.description }}</p>
-              <router-link
-                :to="`/industries/${item.slug}`"
-                class="text-decoration-none primaryButton mt-3 mb-10 elevation-5"
-                >Learn More</router-link
-              >
+              <router-link :to="`/industries/${item.slug}`"
+                class="text-decoration-none primaryButton mt-3 mb-10 elevation-5">Learn More</router-link>
             </router-link>
           </v-carousel-item>
         </v-carousel>
         <div class="industries">
-          <div
-            v-for="(item, index) in industries"
-            :key="index"
-            class="industry">
-            <v-img
-              :src="getImgUrl(item.logo)"
-              :alt="item.logoAlt"
-              class="shadow-35"
-              width="50%"
-              eager></v-img>
+          <div v-for="(item, index) in industries" :key="index" class="industry">
+            <v-img :src="getImgUrl(item.logo)" :alt="item.logoAlt" class="shadow-35" width="50%" eager></v-img>
             <h3 class="titulo text-white mb-3">{{ item.name }}</h3>
             <p class="description text-white my-3">{{ item.description }}</p>
-            <router-link
-              :to="`/industries/${item.slug}`"
-              class="text-decoration-none primaryButton mt-3 mb-10 elevation-5"
-              >Learn More</router-link
-            >
+            <router-link :to="`/industries/${item.slug}`"
+              class="text-decoration-none primaryButton mt-3 mb-10 elevation-5">Learn More</router-link>
           </div>
         </div>
         <div class="mt-10 columnAlignCenter w-75">
@@ -71,11 +46,8 @@
           <p v-motion="scrollBottom" class="w-100 text-white">
             Want to know if our Remote Talent Experts are suitable for you?
           </p>
-          <router-link
-            class="primaryButton elevation-5 mt-5"
-            :to="'/contact-us'"
-            >Request a free consultation</router-link
-          >
+          <router-link class="primaryButton elevation-5 mt-5" :to="'/contact-us'">Request a free
+            consultation</router-link>
         </div>
       </div>
     </div>
@@ -83,81 +55,105 @@
 </template>
 
 <script setup>
-  import { scrollBottom } from "@/motions.js";
+import { scrollBottom } from "@/motions.js";
 </script>
 
 <script>
-  import { industries } from "@/cms/industries.service.js";
+import { industries } from "@/cms/industries.service.js";
 
-  export default {
-    data() {
-      return {
-        industries: industries,
-      };
+export default {
+  data() {
+    return {
+      industries: industries,
+    };
+  },
+  methods: {
+    getImgUrl(imgName) {
+      return new URL(`../../assets/images/${imgName}`, import.meta.url).href;
     },
-    methods: {
-      getImgUrl(imgName) {
-        return new URL(`../../assets/images/${imgName}`, import.meta.url).href;
-      },
-    },
-  };
+  },
+};
 </script>
 
 <style>
-  .whiteBorder {
-    border: 5px solid white;
-    border-radius: 20px;
-  }
-  .carouselCard {
-    height: 100%;
-  }
-  .industries{
+.whiteBorder {
+  border: 5px solid white;
+  border-radius: 20px;
+}
+
+.carouselCard {
+  height: 100%;
+}
+
+.industries {
+  display: none;
+}
+
+/* LG */
+@media only screen and (min-width: 992px) {
+  .industriesCarousel {
     display: none;
   }
 
-  /* LG */
-  @media only screen and (min-width: 992px) {
-    .industriesCarousel {
-      display: none;
-    }
-    .industry {
-      width: 28%;
-      display: flex;
-      justify-content: space-between;
-      flex-direction: column;
-      align-items: center;
-    }
-    .industry .v-img {
-      text-align: start;
-    }
-    .description {
-      font-weight: 600;
-    }
+  .industry {
+    width: 28%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
   }
 
-  /* Desktop */
-  @media only screen and (min-width: 1080px) {
-    .industries{
-      width: 95%;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .industry{
-      width: 30%;
-      margin: 2vw 0;
-    }
-    .industry .v-img__img{
-      height: auto !important;
-    }
-    .v-responsive{
-      flex: none !important;
-    }
+  .industry .v-img {
+    text-align: start;
   }
 
-  @media only screen and (min-width: 1280px) {
-    .industries{
-      width: 100%;
-    }
+  .description {
+    font-weight: 600;
   }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1080px) {
+  .industries {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .industry {
+    width: 30%;
+    margin: 2vw 0;
+  }
+
+  .industry .v-img__img {
+    height: auto !important;
+  }
+
+  .v-responsive {
+    flex: none !important;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .industries {
+    width: 100%;
+  }
+}
+
+/* XL */
+@media only screen and (min-width: 1440px) {
+  .industry{
+    width: 27%;
+  }
+  .industry .v-img{
+    width: 40% !important;
+  }
+  .primaryButton{
+    padding: 1.5vw 3.2vw;
+  }
+  h4{
+    margin-bottom: 1vw;
+  }
+}
 </style>

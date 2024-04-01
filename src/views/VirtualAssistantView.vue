@@ -160,14 +160,17 @@ import { scrollBottom } from "@/motions.js";
   .vaGeneral {
     width: 55% !important;
   }
-  .pMedium{
+
+  .pMedium {
     margin-bottom: 4vw !important;
   }
-  .vasWrapper{
+
+  .vasWrapper {
     margin-top: 0 !important;
     margin-bottom: 5vw;
   }
-  .typesCards{
+
+  .typesCards {
     width: 70% !important;
   }
 }
@@ -242,8 +245,22 @@ import { scrollBottom } from "@/motions.js";
     height: 22vh;
     justify-content: center;
   }
-  .virtualAssistant .tasksWrapper div p:nth-child(2){
+
+  .virtualAssistant .tasksWrapper div p:nth-child(2) {
     font-size: 1rem
+  }
+}
+
+/* XL */
+@media only screen and (min-width: 1440px) {
+  .virtualAssistant div img{
+    width: 75%;
+  }
+  .typesCards{
+    width: 80% !important;
+  }
+  .virtualAssistant .tasksWrapper div{
+    height: 18vh;
   }
 }
 </style>
