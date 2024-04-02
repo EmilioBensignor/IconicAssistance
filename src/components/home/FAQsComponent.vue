@@ -226,4 +226,12 @@ import { scrollBottom } from "@/motions.js";
     flex-direction: row;
   }
 }
+
+@media only screen and (min-width: 1600px) {
+  .faqHome {
+    width: 75% !important;
+    margin-top: 1vw;
+    padding-bottom: 8vw;
+  }
+}
 </style>

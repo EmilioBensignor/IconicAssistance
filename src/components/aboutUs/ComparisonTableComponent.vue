@@ -315,6 +315,7 @@ import { scrollBottom } from "@/motions.js";
   .comparisonChartDesktop {
     width: 80%;
     display: flex;
+    margin-top: 3vw;
   }
 
   .comparison {
@@ -354,7 +355,7 @@ import { scrollBottom } from "@/motions.js";
   }
 
   .categoryNumber {
-    width: 4.5vw;
+    width: 5vw;
     height: 4vw;
   }
 
@@ -385,9 +386,26 @@ import { scrollBottom } from "@/motions.js";
   }
 }
 
-@media only screen and (min-width: 1300px){
+@media only screen and (min-width: 1300px) {
   .comparison {
     top: 6vw;
+  }
+
+  .chartLogo {
+    height: 4.8vw !important;
+  }
+
+  .categoryNumber {
+    width: 4vw;
+    height: 3.3vw;
+  }
+
+  .categoryNumber p {
+    font-size: 1.3rem;
+  }
+
+  .categoryTitle {
+    font-size: 1.1rem;
   }
 }
 
@@ -396,8 +414,22 @@ import { scrollBottom } from "@/motions.js";
   .comparisonChartDesktop {
     margin-top: 2vw;
   }
+
   .comparison {
     top: 5.8vw;
+  }
+
+  .chartLogo {
+    height: 4.5vw !important;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .comparison {
+    top: 5.4vw;
+  }
+  .chartLogo {
+    height: 4.2vw !important;
   }
 }
 </style>

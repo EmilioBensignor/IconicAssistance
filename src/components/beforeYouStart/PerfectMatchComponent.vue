@@ -117,12 +117,20 @@ import { scrollBottom } from "@/motions.js";
 
 /* XL */
 @media only screen and (min-width: 1440px) {
-  .perfectMatch{
+  .perfectMatch {
     width: 75%;
     padding-bottom: 5vw !important;
   }
-  .element img{
+
+  .element img {
     width: 20%;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .perfectMatch {
+    width: 70%;
+    padding-bottom: 7vw !important;
   }
 }
 </style>

@@ -243,9 +243,14 @@ export default {
 
 /* XL */
 @media only screen and (min-width: 1440px) {
+  .desktopPricing {
+    width: 85%;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
   .desktopPricing{
-    width: 85%
-    ;
+    margin-top: 2vw !important;
   }
 }
 </style>

@@ -121,4 +121,10 @@ import { scrollBottom } from "@/motions.js";
     width: 75%;
   }
 }
+
+@media only screen and (min-width: 1600px) {
+  .opportunitiesRight img {
+    width: 70%;
+  }
+}
 </style>

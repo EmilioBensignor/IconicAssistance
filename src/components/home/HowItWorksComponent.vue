@@ -215,4 +215,22 @@ export default {
     height: 27vh;
   }
 }
+
+@media only screen and (min-width: 1600px) {
+  .step {
+    height: 29vh;
+  }
+
+  .stepNumbers {
+    font-size: 2rem
+  }
+
+  .stepTitle {
+    font-size: 1.6rem
+  }
+
+  .stepBody {
+    font-size: 1.15rem;
+  }
+}
 </style>

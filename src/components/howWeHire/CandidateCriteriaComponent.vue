@@ -89,4 +89,15 @@ import { scrollBottom } from "@/motions.js";
     width: 70% !important;
   }
 }
+
+@media only screen and (min-width: 1600px) {
+  .twoCandidate {
+    gap: 2vw;
+    margin: 1vw 0;
+  }
+
+  .whiteLine {
+    margin-bottom: 6vw;
+  }
+}
 </style>

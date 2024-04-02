@@ -161,4 +161,10 @@ export default {
     width: 45%;
   }
 }
+
+@media only screen and (min-width: 1600px) {
+  .desktopModel img {
+    width: 80%;
+  }
+}
 </style>

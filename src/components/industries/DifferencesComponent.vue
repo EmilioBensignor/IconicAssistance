@@ -152,4 +152,17 @@ import { scrollBottom } from "@/motions.js";
     width: 55% !important;
   }
 }
+
+@media only screen and (min-width: 1600px){
+  .chooses{
+    gap: 5vw !important;
+  }
+  .choose{
+    width: 17% !important;
+  }
+  .dedicated{
+    width: 50% !important;
+    padding-bottom: 1.5vw !important;
+  }
+}
 </style>

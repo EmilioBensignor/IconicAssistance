@@ -190,4 +190,20 @@ input[type="checkbox"] {
     padding-bottom: 5vw;
   }
 }
+
+@media only screen and (min-width: 1600px) {
+  .searchLabel {
+    font-size: 1.7rem;
+    margin: 1vw 0 !important;
+  }
+
+  .faqDiv {
+    padding-bottom: 7vw;
+  }
+
+  input[type="checkbox"] {
+    width: 1.5vw;
+    height: 1.5vw;
+  }
+}
 </style>

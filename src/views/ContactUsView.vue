@@ -423,8 +423,23 @@ import { scrollBottom } from "@/motions.js";
 
 /* XL */
 @media only screen and (min-width: 1440px) {
-  .contactUsVa img{
+  .contactUsVa img {
     width: 70% !important;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .contactForm {
+    width: 70% !important;
+  }
+
+  .submit {
+    width: 30% !important;
+    font-size: 1.6rem;
+  }
+
+  .contactUsVa img {
+    width: 65% !important;
   }
 }
 </style>

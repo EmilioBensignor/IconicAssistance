@@ -188,14 +188,26 @@ import HeaderTransparentComponentVue from "@/components/HeaderTransparentCompone
 }
 
 /* XL */
-@media only screen and (min-width: 1440px){
-  .text-landing{
+@media only screen and (min-width: 1440px) {
+  .text-landing {
     width: 70%;
     font-size: 1.8rem;
   }
-  .heroCall{
+
+  .heroCall {
     font-size: 1.9rem;
     padding: 1.3vw 4vw;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .text-landing {
+    font-size: 1.9rem;
+  }
+
+  .heroCall {
+    font-size: 2rem;
+    padding: 1.1vw 3.8vw;
   }
 }
 </style>

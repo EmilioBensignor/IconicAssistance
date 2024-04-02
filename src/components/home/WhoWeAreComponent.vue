@@ -146,4 +146,22 @@ import { scrollBottom } from "@/motions.js";
     padding-left: 3vw;
   }
 }
+
+@media only screen and (min-width: 1600px) {
+  .caption p {
+    font-size: 1.05rem;
+  }
+
+  .rightWhoWeAre {
+    padding-left: 1vw;
+  }
+
+  .fourWhoWeAre {
+    margin: 1vw 0 !important;
+  }
+
+  .who {
+    font-size: 1.3rem;
+  }
+}
 </style>

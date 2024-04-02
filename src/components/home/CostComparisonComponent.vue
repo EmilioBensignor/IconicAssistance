@@ -228,14 +228,35 @@ export default {
 
 /* XL */
 @media only screen and (min-width: 1440px) {
-  .costComparison{
+  .costComparison {
     width: 55% !important;
   }
+
   .comparisonItem {
     height: 15vh;
   }
-  .costComparisonAclaration{
+
+  .costComparisonAclaration {
     width: 65% !important;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .costComparison {
+    margin-top: 3vw !important;
+    width: 50% !important;
+  }
+
+  .comparisonItem {
+    height: 16vh;
+  }
+
+  .saveIcon {
+    margin-bottom: -2.5vw !important;
+  }
+
+  .costComparisonAclaration {
+    width: 60% !important;
   }
 }
 </style>

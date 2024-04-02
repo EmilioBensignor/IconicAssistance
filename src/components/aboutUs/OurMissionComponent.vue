@@ -81,14 +81,30 @@ import { scrollBottom } from "@/motions.js";
 
 /* XL */
 @media only screen and (min-width: 1440px) {
-  .guaranteeTasks{
+  .guaranteeTasks {
     margin-top: 1.5vw;
   }
+
   .divGuarantee img {
     width: 55% !important;
   }
+
   .tasks li {
     font-size: 1.1rem;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .divGuarantee {
+    width: 40% !important;
+  }
+
+  .divGuarantee img {
+    width: 60% !important;
+  }
+
+  .tasks li {
+    font-size: 1.2rem;
   }
 }
 </style>

@@ -74,8 +74,18 @@ import { scrollBottom } from "@/motions.js";
 
 /* XL */
 @media only screen and (min-width: 1440px) {
-  .exceptional img{
+  .exceptional img {
     width: 80% !important;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .exceptional img {
+    width: 75% !important;
+  }
+
+  .reversed {
+    gap: 1.5vw;
   }
 }
 </style>

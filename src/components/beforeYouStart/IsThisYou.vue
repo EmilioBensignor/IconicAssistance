@@ -122,8 +122,14 @@ import { scrollBottom } from "@/motions.js";
 
 /* XL */
 @media only screen and (min-width: 1440px) {
-  .aspect{
+  .aspect {
     width: 60% !important;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .identify p {
+    font-size: 1.2rem
   }
 }
 </style>

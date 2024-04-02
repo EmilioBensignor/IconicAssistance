@@ -315,4 +315,19 @@ export default {
     font-size: 1.6rem;
   }
 }
+
+@media only screen and (min-width: 1600px){
+  .social {
+    width: 40% !important;
+  }
+  .footerTitle {
+    font-size: 1.7rem;
+  }
+  .footerLinks .column a {
+    font-size: 1.3rem;
+  }
+  .rightsReserved{
+    margin: 2vw 0 !important;
+  }
+}
 </style>

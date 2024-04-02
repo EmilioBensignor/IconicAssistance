@@ -439,6 +439,10 @@ section {
   .faqWrapper li {
     font-size: 1.1rem;
   }
+
+  .heroPages {
+    padding: 22vh 0 24vw 0;
+  }
 }
 
 @media only screen and (min-width: 1280px) {
@@ -480,6 +484,10 @@ section {
   .faqWrapper li {
     font-size: 1rem;
   }
+
+  .heroPages {
+    padding: 24vh 0 26vw 0;
+  }
 }
 
 /* XL */
@@ -508,6 +516,54 @@ section {
   .secondaryButton {
     font-size: 1.4rem;
     padding: 1.8vw 3.6vw;
+  }
+
+  .heroPages {
+    padding: 22vh 0 24vw 0;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  h1 {
+    font-size: 3.7rem;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+  }
+
+  h3 {
+    font-size: 1.9rem;
+  }
+
+  h4 {
+    font-size: 1.7rem;
+  }
+
+  .subtitle {
+    font-size: 1.6rem;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    font-size: 1.5rem;
+    padding: 1.6vw 3.2vw;
+  }
+  .heroPages {
+    padding: 22vh 0 22vw 0;
+  }
+
+  .v-expansion-panel-title {
+    font-size: 1.1rem !important;
+  }
+
+  .faqWrapper {
+    font-size: 1.1rem;
+  }
+
+  .faqWrapper p,
+  .faqWrapper li {
+    font-size: 1.1rem;
   }
 }
 </style>

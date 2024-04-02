@@ -37,8 +37,14 @@
 
 /* XL */
 @media only screen and (min-width: 1440px) {
-  .popUp{
+  .popUp {
     padding: 1.5vw 2.8vw;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .popUp {
+    padding: 1.3vw 2.6vw;
   }
 }
 </style>

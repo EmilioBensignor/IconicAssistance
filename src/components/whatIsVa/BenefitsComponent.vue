@@ -105,4 +105,10 @@ import { scrollBottom } from "@/motions.js";
     padding-bottom: 7vw;
   }
 }
+
+@media only screen and (min-width: 1600px) {
+  .twoBenefits {
+    width: 70% !important;
+  }
+}
 </style>

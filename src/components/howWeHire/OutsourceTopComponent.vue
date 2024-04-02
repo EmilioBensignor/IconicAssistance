@@ -287,4 +287,14 @@ import { scrollBottom } from "@/motions.js";
     width: 20%;
   }
 }
+
+@media only screen and (min-width: 1600px) {
+  .funnelWrapper {
+    width: 90%;
+  }
+
+  .funnelBody img {
+    width: 17%;
+  }
+}
 </style>

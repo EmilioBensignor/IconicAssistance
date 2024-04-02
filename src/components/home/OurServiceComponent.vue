@@ -13,7 +13,7 @@
         <div class="w-75 bg-white mt-10 whiteLine"></div>
       </div>
     </div>
-    <div class="my-5 columnAlignCenter ga-2 w-100">
+    <div class="tellUsWrapper my-5 columnAlignCenter ga-2 w-100">
       <p v-motion="scrollBottom" class="text-white font-weight-bold tellUs">
         Tell us what you need!
       </p>
@@ -146,11 +146,22 @@ export default {
 
 /* XL */
 @media only screen and (min-width: 1440px) {
-  .tailoredTitle{
+  .tailoredTitle {
     font-size: 1.8rem;
   }
-  .tellUs{
+
+  .tellUs {
     font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .threeTailor {
+    width: 90%;
+  }
+
+  .tellUsWrapper {
+    margin-top: 3vw !important;
   }
 }
 </style>

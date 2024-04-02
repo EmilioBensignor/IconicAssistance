@@ -165,4 +165,10 @@ svg {
     height: 4.5vw !important;
   }
 }
+
+@media only screen and (min-width: 1600px) {
+  svg {
+    height: 4vw !important;
+  }
+}
 </style>

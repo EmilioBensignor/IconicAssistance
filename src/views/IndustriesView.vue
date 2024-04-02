@@ -161,7 +161,7 @@ import { scrollBottom } from "@/motions.js";
   }
 
   .vaSuitIndividual {
-    height: 53vh;
+    height: 60vh;
   }
 
   .vaSuit h3 {
@@ -171,7 +171,6 @@ import { scrollBottom } from "@/motions.js";
 
   .tasksOutsource {
     height: 100%;
-    justify-content: space-between;
   }
 
   .summary {
@@ -186,7 +185,7 @@ import { scrollBottom } from "@/motions.js";
   }
 
   .vaSuitIndividual {
-    height: 50vh;
+    height: 52vh;
   }
 }
 
@@ -195,8 +194,27 @@ import { scrollBottom } from "@/motions.js";
   .heroIndustries {
     height: 875px;
   }
-  .vaSuit{
+
+  .subtitle {
+    font-size: 1.4rem;
+  }
+
+  .vaSuit {
     margin-bottom: 3vw !important;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .heroIndustries {
+    height: 925px;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+  }
+
+  .vaSuitIndividual {
+    height: 52vh;
   }
 }
 </style>

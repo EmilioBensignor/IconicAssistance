@@ -71,6 +71,11 @@ import { scrollBottom } from "@/motions.js";
   font-size: 1.4rem;
 }
 
+.v-carousel__controls__item.v-btn.v-btn--icon{
+  width: 1vw !important;
+  height: 1vw !important;
+}
+
 /* SM */
 @media only screen and (min-width: 480px) {
   .carouselTypes {
@@ -140,6 +145,7 @@ import { scrollBottom } from "@/motions.js";
 
   .carousel {
     width: 50% !important;
+    margin-top: 3vw !important;
   }
 }
 
@@ -153,6 +159,10 @@ import { scrollBottom } from "@/motions.js";
 @media only screen and (min-width: 1440px) {
   .carousel {
     width: 45% !important;
+  }
+
+  .carouselTypes {
+    height: 65vh !important;
   }
 
   .v-carousel__controls {

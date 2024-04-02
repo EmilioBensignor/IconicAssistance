@@ -65,9 +65,16 @@ import { scrollBottom } from "@/motions.js";
 
 /* XL */
 @media only screen and (min-width: 1440px) {
-  .testimonialWrap{
+  .testimonialWrap {
     width: 75% !important;
     padding-bottom: 5vw;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .testimonialWrap {
+    width: 70% !important;
+    margin-top: 2vw !important;
   }
 }
 </style>

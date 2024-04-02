@@ -75,6 +75,7 @@ import { scrollBottom } from "@/motions.js";
 
 /* XL */
 @media only screen and (min-width: 1440px) {
+
   .whatAreVaLeft,
   .whatAreVaRight {
     width: 45% !important;
@@ -82,6 +83,12 @@ import { scrollBottom } from "@/motions.js";
 
   .whatAreVaRight img {
     width: 75%;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .whatAreVaRight img {
+    width: 70%;
   }
 }
 </style>

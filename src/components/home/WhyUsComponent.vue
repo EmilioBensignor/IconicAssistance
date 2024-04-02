@@ -143,8 +143,19 @@ export default {
   .different {
     height: 44vh;
   }
-  .different .v-img{
+
+  .different .v-img {
     width: 50% !important;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .threeDifferent {
+    width: 90%;
+  }
+
+  .different {
+    height: 48vh;
   }
 }
 </style>

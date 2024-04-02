@@ -253,14 +253,35 @@ import { scrollBottom } from "@/motions.js";
 
 /* XL */
 @media only screen and (min-width: 1440px) {
-  .virtualAssistant div img{
+  .virtualAssistant div img {
     width: 75%;
   }
-  .typesCards{
+
+  .typesCards {
     width: 80% !important;
   }
-  .virtualAssistant .tasksWrapper div{
+
+  .virtualAssistant .tasksWrapper div {
     height: 18vh;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .virtualAssistant div img {
+    width: 70%;
+  }
+
+  .typesCards {
+    width: 75% !important;
+  }
+
+  .circleNumber {
+    width: 5vw;
+    height: 3.5vw;
+  }
+
+  .virtualAssistant .tasksWrapper div {
+    height: 17vh;
   }
 }
 </style>

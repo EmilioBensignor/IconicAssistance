@@ -36,14 +36,14 @@
             <h3 class="titulo text-white mb-3">{{ item.name }}</h3>
             <p class="description text-white my-3">{{ item.description }}</p>
             <router-link :to="`/industries/${item.slug}`"
-              class="text-decoration-none primaryButton mt-3 mb-10 elevation-5">Learn More</router-link>
+              class="learnMore text-decoration-none primaryButton mt-3 mb-10 elevation-5">Learn More</router-link>
           </div>
         </div>
         <div class="mt-10 columnAlignCenter w-75">
-          <h4 v-motion="scrollBottom" class="text-white font-weight-bold">
+          <h4 v-motion="scrollBottom" class="manyMore text-white font-weight-bold">
             And Many More!
           </h4>
-          <p v-motion="scrollBottom" class="w-100 text-white">
+          <p v-motion="scrollBottom" class="want w-100 text-white">
             Want to know if our Remote Talent Experts are suitable for you?
           </p>
           <router-link class="primaryButton elevation-5 mt-5" :to="'/contact-us'">Request a free
@@ -143,17 +143,34 @@ export default {
 
 /* XL */
 @media only screen and (min-width: 1440px) {
-  .industry{
+  .industry {
     width: 27%;
   }
-  .industry .v-img{
+
+  .industry .v-img {
     width: 40% !important;
   }
-  .primaryButton{
+
+  .learnMore {
     padding: 1.5vw 3.2vw;
   }
-  h4{
+
+  .manyMore {
     margin-bottom: 1vw;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .industries {
+    width: 90%;
+  }
+
+  .learnMore {
+    padding: 1.3vw 3vw;
+  }
+
+  .want {
+    font-size: 1.2rem;
   }
 }
 </style>

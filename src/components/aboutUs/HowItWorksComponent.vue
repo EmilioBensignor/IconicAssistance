@@ -132,18 +132,41 @@ import { scrollBottom } from "@/motions.js";
 
 /* XL */
 @media only screen and (min-width: 1440px) {
+  .fourSteps {
+    margin-bottom: 2vw !important;
+  }
+
   .step {
     width: 20% !important;
   }
+
   .circleNumber {
     width: 5vw;
     height: 5vw;
   }
-  .fourSteps{
-    margin-bottom: 2vw !important;
-  }
-  .primaryButton{
+
+  .primaryButton {
     margin-bottom: 5vw !important;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .fourSteps {
+    width: 80% !important;
+    margin: 3vw !important;
+  }
+
+  .step {
+    width: 25% !important;
+  }
+
+  .circleNumber {
+    width: 4.3vw;
+    height: 4.3vw;
+  }
+
+  .primaryButton {
+    margin-bottom: 7vw !important;
   }
 }
 </style>

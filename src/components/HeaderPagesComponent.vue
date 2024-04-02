@@ -218,4 +218,10 @@ export default {
     font-size: 1.43rem !important;
   }
 }
+
+@media only screen and (min-width: 1600px) {
+  .btnNav {
+    font-size: 1.5rem !important;
+  }
+}
 </style>

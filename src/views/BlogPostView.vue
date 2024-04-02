@@ -255,4 +255,14 @@ import { scrollBottom } from "@/motions.js";
     top: 9vw;
   }
 }
+
+@media only screen and (min-width: 1600px) {
+  .heroSection {
+    height: 925px;
+  }
+
+  .recentBlogs {
+    top: 6.5vw;
+  }
+}
 </style>
