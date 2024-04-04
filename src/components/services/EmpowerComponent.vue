@@ -217,4 +217,25 @@ import { scrollBottom } from "@/motions.js";
     margin: 7vw 0 1vw 0 !important;
   }
 }
+
+@media only screen and (min-width: 1750px) {
+  .empower img {
+    width: 25%;
+    right: 10vw;
+    top: 5vw;
+  }
+
+  .empowerWrapper .empower:nth-child(2) .empowerBody {
+    padding-left: 9vw !important;
+  }
+
+  .empowerWrapper .empower:nth-child(2) img {
+    left: 5vw;
+  }
+
+  .partner {
+    font-size: 1.5rem;
+    margin: 8vw 0 1vw 0 !important;
+  }
+}
 </style>

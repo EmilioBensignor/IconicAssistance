@@ -222,15 +222,29 @@ export default {
   }
 
   .stepNumbers {
-    font-size: 2rem
+    font-size: 2rem;
   }
 
   .stepTitle {
-    font-size: 1.6rem
+    font-size: 1.6rem;
   }
 
   .stepBody {
     font-size: 1.15rem;
+  }
+}
+
+@media only screen and (min-width: 1750px) {
+  .step {
+    height: 28vh;
+  }
+
+  .stepNumbers {
+    font-size: 2.1rem;
+  }
+
+  .stepTitle{
+    font-size: 1.7rem
   }
 }
 </style>

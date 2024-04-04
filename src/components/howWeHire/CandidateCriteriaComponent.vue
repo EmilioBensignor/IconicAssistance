@@ -100,4 +100,10 @@ import { scrollBottom } from "@/motions.js";
     margin-bottom: 6vw;
   }
 }
+
+@media only screen and (min-width: 1750px) {
+  .candidate li {
+    font-size: 1.2rem
+  }
+}
 </style>

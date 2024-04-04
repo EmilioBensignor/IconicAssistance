@@ -107,4 +107,10 @@ import { scrollBottom } from "@/motions.js";
     font-size: 1.2rem;
   }
 }
+
+@media only screen and (min-width: 1750px) {
+  .divGuarantee img {
+    width: 55% !important;
+  }
+}
 </style>

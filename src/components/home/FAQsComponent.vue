@@ -234,4 +234,10 @@ import { scrollBottom } from "@/motions.js";
     padding-bottom: 8vw;
   }
 }
+
+@media only screen and (min-width: 1750px) {
+  .faqHome {
+    width: 70% !important;
+  }
+}
 </style>

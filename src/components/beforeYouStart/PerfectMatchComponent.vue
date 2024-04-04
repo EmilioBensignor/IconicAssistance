@@ -133,4 +133,10 @@ import { scrollBottom } from "@/motions.js";
     padding-bottom: 7vw !important;
   }
 }
+
+@media only screen and (min-width: 1750px) {
+  .perfectMatch {
+    width: 65%;
+  }
+}
 </style>

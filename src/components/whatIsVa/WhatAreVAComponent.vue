@@ -91,4 +91,10 @@ import { scrollBottom } from "@/motions.js";
     width: 70%;
   }
 }
+
+@media only screen and (min-width: 1750px) {
+  .whatAreVaRight img {
+    width: 65%;
+  }
+}
 </style>

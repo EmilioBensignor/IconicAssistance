@@ -295,18 +295,22 @@ export default {
 
 /* XL */
 @media only screen and (min-width: 1440px) {
-  .footerLeft{
+  .footerLeft {
     width: 40% !important;
   }
+
   .ready p:nth-child(1) {
     font-size: 1.4rem;
   }
+
   .ready p:nth-child(2) {
     font-size: 1.2rem;
   }
+
   .primaryButton {
     padding: 1.5vw 3.6vw;
   }
+
   .social {
     width: 45% !important;
   }
@@ -316,18 +320,31 @@ export default {
   }
 }
 
-@media only screen and (min-width: 1600px){
+@media only screen and (min-width: 1600px) {
   .social {
     width: 40% !important;
   }
+
   .footerTitle {
     font-size: 1.7rem;
   }
+
   .footerLinks .column a {
     font-size: 1.3rem;
   }
-  .rightsReserved{
+
+  .rightsReserved {
     margin: 2vw 0 !important;
+  }
+}
+
+@media only screen and (min-width: 1750px) {
+  .social {
+    width: 35% !important;
+  }
+
+  .footerTitle {
+    font-size: 1.8rem;
   }
 }
 </style>

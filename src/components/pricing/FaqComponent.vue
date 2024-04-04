@@ -70,4 +70,10 @@ h2 {
     width: 55% !important;
   }
 }
+
+@media only screen and (min-width: 1750px) {
+  .secondaryButton {
+    width: 35% !important;
+  }
+}
 </style>

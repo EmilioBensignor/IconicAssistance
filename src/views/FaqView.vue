@@ -206,4 +206,15 @@ input[type="checkbox"] {
     height: 1.5vw;
   }
 }
+
+@media only screen and (min-width: 1750px) {
+  .labelCheckbox {
+    font-size: 1.4rem;
+  }
+
+  input[type="checkbox"] {
+    width: 1.3vw;
+    height: 1.3vw;
+  }
+}
 </style>

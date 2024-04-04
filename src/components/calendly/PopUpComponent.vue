@@ -47,4 +47,10 @@
     padding: 1.3vw 2.6vw;
   }
 }
+
+@media only screen and (min-width: 1750px) {
+  .popUp {
+    padding: 1.1vw 2vw;
+  }
+}
 </style>

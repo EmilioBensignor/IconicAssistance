@@ -164,4 +164,10 @@ export default {
     margin-top: 3vw !important;
   }
 }
+
+@media only screen and (min-width: 1750px) {
+  .tailor .v-img {
+    width: 60% !important;
+  }
+}
 </style>

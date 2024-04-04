@@ -217,4 +217,16 @@ import { scrollBottom } from "@/motions.js";
     height: 52vh;
   }
 }
+
+@media only screen and (min-width: 1750px) {
+  .heroIndustries {
+    height: 975px;
+  }
+  .subtitle{
+    font-size: 1.6rem;
+  }
+  .vaSuitIndividual{
+    height: 50vh;
+  }
+}
 </style>

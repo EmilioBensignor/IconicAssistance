@@ -549,6 +549,7 @@ section {
     font-size: 1.5rem;
     padding: 1.6vw 3.2vw;
   }
+
   .heroPages {
     padding: 22vh 0 22vw 0;
   }
@@ -564,6 +565,42 @@ section {
   .faqWrapper p,
   .faqWrapper li {
     font-size: 1.1rem;
+  }
+}
+
+@media only screen and (min-width: 1750px) {
+  h1 {
+    font-size: 3.8rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 1.7rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    font-size: 1.6rem;
+    padding: 1.4vw 2.8vw;
+  }
+
+  .heroPages {
+    padding: 24vh 0 24vw 0;
   }
 }
 </style>

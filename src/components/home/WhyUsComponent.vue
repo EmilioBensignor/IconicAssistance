@@ -158,4 +158,14 @@ export default {
     height: 48vh;
   }
 }
+
+@media only screen and (min-width: 1750px) {
+  .different {
+    height: 46vh;
+  }
+
+  .different .v-img {
+    width: 45% !important;
+  }
+}
 </style>

@@ -13,11 +13,11 @@
       </div>
     </div>
     <div v-motion="scrollBottom" class="carousel w-75 columnAlignCenter my-5">
-      <v-carousel :show-arrows="false" class="carouselTypes rounded-xl elevation-5" cycle :interval="2000">
+      <v-carousel show-arrows="hover" hide-delimiters :show-arrows="false" class="carouselTypes rounded-xl elevation-5" cycle :interval="2000">
         <v-carousel-item v-for="(item, index) in vaTypes" :key="index" cover>
           <router-link :to="`/virtual-assistant/${item.id}`" class="typesCard">
-            <v-img :src="getImgUrl(item.img)" :alt="item.alt" width="100%" height="86%" class="vaImg" cover eager>
-              <p class="titleTypesofVA font-weight-bold text-midnight py-1">
+            <v-img :src="getImgUrl(item.img)" :alt="item.alt" width="100%" height="100%"  class="vaImg" cover eager>
+              <p class="titleTypesofVA font-weight-bold text-midnight py-3">
                 {{ item.name }}
               </p>
             </v-img>
@@ -71,19 +71,10 @@ import { scrollBottom } from "@/motions.js";
   font-size: 1.4rem;
 }
 
-.v-carousel__controls__item.v-btn.v-btn--icon{
-  width: 1vw !important;
-  height: 1vw !important;
-}
-
 /* SM */
 @media only screen and (min-width: 480px) {
   .carouselTypes {
     height: 50vh !important;
-  }
-
-  .vaImg {
-    height: 88% !important;
   }
 
   .vaIcon {
@@ -103,10 +94,6 @@ import { scrollBottom } from "@/motions.js";
 
   .carouselTypes {
     height: 60vh !important;
-  }
-
-  .vaImg {
-    height: 90% !important;
   }
 
   .vaIcon {
@@ -167,10 +154,6 @@ import { scrollBottom } from "@/motions.js";
 
   .v-carousel__controls {
     padding: 3vw 0;
-  }
-
-  .vaImg {
-    height: 91% !important;
   }
 }
 </style>

@@ -127,4 +127,14 @@ import { scrollBottom } from "@/motions.js";
     width: 70%;
   }
 }
+
+@media only screen and (min-width: 1750px) {
+  .opportunitiesRight img {
+    width: 65%;
+  }
+
+  ul li {
+    font-size: 1.2rem;
+  }
+}
 </style>

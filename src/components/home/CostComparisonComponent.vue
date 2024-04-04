@@ -259,4 +259,15 @@ export default {
     width: 60% !important;
   }
 }
+
+@media only screen and (min-width: 1750px) {
+  .comparisonItem {
+    height: 15vh;
+  }
+
+  .costComparisonAclaration {
+    margin-top: 3vw !important;
+    margin-bottom: 2vw !important;
+  }
+}
 </style>

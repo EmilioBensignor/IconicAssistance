@@ -169,4 +169,15 @@ import { scrollBottom } from "@/motions.js";
     margin-bottom: 7vw !important;
   }
 }
+
+@media only screen and (min-width: 1750px) {
+  .fourSteps {
+    width: 75% !important;
+  }
+
+  .circleNumber {
+    width: 4vw;
+    height: 4vw;
+  }
+}
 </style>

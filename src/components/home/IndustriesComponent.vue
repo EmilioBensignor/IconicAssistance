@@ -173,4 +173,10 @@ export default {
     font-size: 1.2rem;
   }
 }
+
+@media only screen and (min-width: 1750px) {
+  .learnMore {
+    padding: 1.2vw 2.5vw;
+  }
+}
 </style>

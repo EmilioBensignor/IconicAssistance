@@ -442,4 +442,18 @@ import { scrollBottom } from "@/motions.js";
     width: 65% !important;
   }
 }
+
+@media only screen and (min-width: 1750px) {
+  .contactForm {
+    width: 65% !important;
+  }
+
+  .submit {
+    width: 25% !important;
+  }
+
+  .contactUsVa img {
+    width: 60% !important;
+  }
+}
 </style>

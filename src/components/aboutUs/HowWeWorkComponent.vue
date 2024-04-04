@@ -252,4 +252,14 @@ import { scrollBottom } from "@/motions.js";
     margin: 2vw 0 !important;
   }
 }
+
+@media only screen and (min-width: 1750px) {
+  .prosperityModel {
+    width: 35% !important;
+  }
+
+  .tool .v-img {
+    width: 70% !important;
+  }
+}
 </style>

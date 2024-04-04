@@ -164,4 +164,24 @@ import { scrollBottom } from "@/motions.js";
     font-size: 1.3rem;
   }
 }
+
+@media only screen and (min-width: 1750px) {
+  .vaModel img{
+    width: 80%;
+  }
+  .caption {
+    width: 80%;
+    left: 10%;
+    padding: 0.5vw 0 1vw 0 !important;
+  }
+  .caption p{
+    font-size: 1.075rem;
+  }
+  .rightWhoWeAre{
+    padding-left: 0;
+  }
+  .who{
+    font-size: 1.4rem;
+  }
+}
 </style>

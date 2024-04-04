@@ -128,8 +128,22 @@ import { scrollBottom } from "@/motions.js";
 }
 
 @media only screen and (min-width: 1600px) {
+  .aspect {
+    border-radius: 55px !important;
+  }
+
   .identify p {
     font-size: 1.2rem
+  }
+}
+
+@media only screen and (min-width: 1750px) {
+  .aspect {
+    border-radius: 60px !important;
+  }
+
+  .identify p {
+    font-size: 1.3rem;
   }
 }
 </style>

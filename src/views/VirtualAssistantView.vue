@@ -284,4 +284,23 @@ import { scrollBottom } from "@/motions.js";
     height: 17vh;
   }
 }
+
+@media only screen and (min-width: 1750px) {
+  .virtualAssistant div img {
+    width: 65%;
+  }
+
+  .typesCards {
+    width: 70% !important;
+  }
+
+  .circleNumber {
+    width: 4.5vw;
+    height: 3vw;
+  }
+
+  .virtualAssistant .tasksWrapper div {
+    height: 16vh;
+  }
+}
 </style>

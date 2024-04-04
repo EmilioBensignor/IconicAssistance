@@ -148,21 +148,38 @@ import { scrollBottom } from "@/motions.js";
     width: 20% !important;
     height: 46vh;
   }
-  .dedicated{
+
+  .dedicated {
     width: 55% !important;
   }
 }
 
-@media only screen and (min-width: 1600px){
-  .chooses{
+@media only screen and (min-width: 1600px) {
+  .chooses {
     gap: 5vw !important;
   }
-  .choose{
+
+  .choose {
     width: 17% !important;
   }
-  .dedicated{
+
+  .dedicated {
     width: 50% !important;
     padding-bottom: 1.5vw !important;
+  }
+}
+
+@media only screen and (min-width: 1750px) {
+  .chooses {
+    gap: 3.5vw !important;
+  }
+
+  .choose {
+    height: 48vh;
+  }
+
+  .differentList li {
+    font-size: 1.1rem;
   }
 }
 </style>

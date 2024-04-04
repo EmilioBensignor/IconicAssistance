@@ -66,4 +66,14 @@ import { scrollBottom } from "@/motions.js";
     margin-top: 2.5vw !important;
   }
 }
+
+@media only screen and (min-width: 1750px) {
+  .keyDesktop img {
+    width: 55%;
+  }
+
+  .explore p {
+    width: 90% !important;
+  }
+}
 </style>

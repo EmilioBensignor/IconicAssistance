@@ -68,4 +68,10 @@ import { scrollBottom } from "@/motions.js";
     width: 30%;
   }
 }
+
+@media only screen and (min-width: 1750px) {
+  .guarantee {
+    width: 25%;
+  }
+}
 </style>

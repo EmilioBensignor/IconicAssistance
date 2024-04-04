@@ -88,4 +88,10 @@ import { scrollBottom } from "@/motions.js";
     gap: 1.5vw;
   }
 }
+
+@media only screen and (min-width: 1750px) {
+  .exceptional img {
+    width: 70% !important;
+  }
+}
 </style>

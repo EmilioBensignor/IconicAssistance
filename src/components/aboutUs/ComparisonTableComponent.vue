@@ -428,8 +428,19 @@ import { scrollBottom } from "@/motions.js";
   .comparison {
     top: 5.4vw;
   }
+
   .chartLogo {
     height: 4.2vw !important;
+  }
+}
+
+@media only screen and (min-width: 1750px) {
+  .comparison {
+    top: 5vw
+  }
+
+  .chartLogo {
+    height: 3.9vw !important;
   }
 }
 </style>
