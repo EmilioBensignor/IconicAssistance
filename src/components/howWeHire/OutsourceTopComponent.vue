@@ -307,8 +307,31 @@ import { scrollBottom } from "@/motions.js";
     width: 80%;
   }
 
+  .funnelBlock {
+    height: 163px;
+  }
+
   .funnelBody img {
     width: 20%;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  p {
+    width: 60% !important;
+  }
+
+  .funnelWrapper {
+    margin: 70px 0;
+    gap: 25px;
+  }
+
+  .funnelBody {
+    gap: 50px;
+  }
+
+  .funnelBody p{
+    width: 100% !important;
   }
 }
 </style>

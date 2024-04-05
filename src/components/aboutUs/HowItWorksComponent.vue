@@ -180,4 +180,18 @@ import { scrollBottom } from "@/motions.js";
     height: 4vw;
   }
 }
+
+@media only screen and (min-width: 1920px){
+  .fourSteps{
+    width: 70% !important;
+    margin: 50px !important;
+  }
+  .circleNumber {
+    width: 79px;
+    height: 79px;
+  }
+  .primaryButton {
+    margin-bottom: 150px !important;
+  }
+}
 </style>

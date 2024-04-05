@@ -76,4 +76,10 @@ h2 {
     width: 35% !important;
   }
 }
+
+@media only screen and (min-width: 1920px) {
+  h2 {
+    margin-top: 50px;
+  }
+}
 </style>

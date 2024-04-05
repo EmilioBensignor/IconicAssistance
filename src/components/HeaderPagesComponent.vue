@@ -5,7 +5,7 @@
         @click="showMenu = !showMenu"></v-app-bar-nav-icon>
       <v-toolbar-title>
         <router-link class="text-decoration-none" :to="'/'">
-          <IconicLogo class="shadow-15 mt-1" color="blue" />
+          <IconicLogo class="mt-1" color="blue" />
         </router-link>
       </v-toolbar-title>
       <div class="menuDesktop">
@@ -228,6 +228,12 @@ export default {
 @media only screen and (min-width: 1750px) {
   .btnNav {
     font-size: 1.55rem !important;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .btnNav {
+    font-size: 1.65rem !important;
   }
 }
 </style>

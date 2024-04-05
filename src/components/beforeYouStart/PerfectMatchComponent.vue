@@ -139,4 +139,12 @@ import { scrollBottom } from "@/motions.js";
     width: 65%;
   }
 }
+
+@media only screen and (min-width: 1920px) {
+  .perfectMatch {
+    grid-column-gap: 150px !important;
+    grid-row-gap: 100px !important;
+    padding-bottom: 100px !important;
+  }
+}
 </style>

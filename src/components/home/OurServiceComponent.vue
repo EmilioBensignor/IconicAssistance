@@ -170,4 +170,26 @@ export default {
     width: 60% !important;
   }
 }
+
+
+@media only screen and (min-width: 1920px) {
+  .threeTailor{
+    margin-top: 100px;
+  }
+  .tailor{
+    height: 527px !important;
+  }
+  .tailor .v-img {
+    width: 50% !important;
+  }
+
+  .tailoredTitle {
+    font-size: 2rem;
+    margin-top: 40px;
+  }
+
+  .tellUsWrapper {
+    margin-top: 100px !important;
+  }
+}
 </style>

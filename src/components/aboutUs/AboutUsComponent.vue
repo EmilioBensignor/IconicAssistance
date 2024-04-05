@@ -99,4 +99,10 @@ import { scrollBottom } from "@/motions.js";
     width: 65%;
   }
 }
+
+@media only screen and (min-width: 1920px) {
+  .vaDesktop {
+    width: 60%;
+  }
+}
 </style>

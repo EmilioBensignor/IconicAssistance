@@ -115,4 +115,10 @@ import { scrollBottom } from "@/motions.js";
     width: 70% !important;
   }
 }
+
+@media only screen and (min-width: 1920px) {
+  .testimonialWrap {
+    gap: 20px;
+  }
+}
 </style>

@@ -202,7 +202,7 @@ import { scrollBottom } from "@/motions.js";
       0px 5px 8px 0px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.14)),
       0px 1px 14px 0px var(--v-shadow-key-ambient-opacity, rgba(0, 0, 0, 0.12)) !important;
     position: sticky;
-    top: 20vw;
+    top: 15vw;
     z-index: 2;
     border-radius: 20px;
     padding: 1vw 0;
@@ -230,8 +230,13 @@ import { scrollBottom } from "@/motions.js";
   .recentBlog div {
     display: flex;
     flex-direction: column-reverse;
+    justify-content: center;
     gap: 0.5vw;
     padding: 0 !important;
+  }
+
+  .recentBlog div p {
+    width: 100% !important;
   }
 }
 
@@ -241,7 +246,8 @@ import { scrollBottom } from "@/motions.js";
   }
 
   .recentBlogs {
-    top: 15vw;
+    top: 13vw;
+    width: 30%;
   }
 }
 
@@ -251,8 +257,18 @@ import { scrollBottom } from "@/motions.js";
     height: 875px;
   }
 
+  .blogPost {
+    width: 67.5%;
+  }
+
+
   .recentBlogs {
     top: 9vw;
+    width: 28%;
+  }
+
+  .recentBlog img {
+    width: 30%;
   }
 }
 
@@ -262,7 +278,8 @@ import { scrollBottom } from "@/motions.js";
   }
 
   .recentBlogs {
-    top: 6.5vw;
+    width: 26%;
+    top: 10vw;
   }
 }
 
@@ -273,6 +290,36 @@ import { scrollBottom } from "@/motions.js";
 
   .recentBlogs {
     top: 5.5vw;
+  }
+
+  .recentBlogs div {
+    gap: 0;
+  }
+
+  .recentBlog img {
+    width: 35%;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .heroSection {
+    height: 1025px;
+  }
+
+  .heroPages {
+    padding: 300px 0 450px 0;
+  }
+
+  .blogPost {
+    width: 72%;
+  }
+
+  .recentBlogs {
+    top: 120px;
+  }
+
+  .recentBlogs .recentBlog {
+    gap: 25px;
   }
 }
 </style>

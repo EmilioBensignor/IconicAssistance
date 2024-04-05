@@ -243,8 +243,29 @@ export default {
     font-size: 2.1rem;
   }
 
-  .stepTitle{
+  .stepTitle {
     font-size: 1.7rem
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .works{
+    width: 85% !important;
+  }
+  .step {
+    height: 240px;
+  }
+
+  .desktopImg img {
+    width: 80%;
+  }
+
+  .stepNumbers {
+    font-size: 2.2rem;
+  }
+
+  .stepTitle {
+    font-size: 1.8rem
   }
 }
 </style>

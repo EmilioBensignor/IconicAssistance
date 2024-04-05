@@ -179,4 +179,21 @@ export default {
     padding: 1.2vw 2.5vw;
   }
 }
+
+@media only screen and (min-width: 1920px) {
+  .industries{
+    width: 80%;
+  }
+
+  .industry{
+    margin: 20px 0;
+  }
+
+  .learnMore {
+    padding: 22px 45px
+  }
+  .manyMore{
+    margin-bottom: 15px;
+  }
+}
 </style>

@@ -303,4 +303,37 @@ import { scrollBottom } from "@/motions.js";
     height: 16vh;
   }
 }
+
+@media only screen and (min-width: 1920px) {
+  .otherVirtualAssistant {
+    padding: 0 100px 250px 100px;
+  }
+
+  .otherTypes {
+    width: 25% !important;
+  }
+
+  .virtualAssistant {
+    width: 65%;
+  }
+
+  .virtualAssistant div img {
+    width: 50%;
+  }
+
+  .vaGeneral {
+    width: 75% !important;
+    margin-top: 75px !important;
+    margin-bottom: 50px !important;
+  }
+
+  .pMedium {
+    margin-bottom: 75px !important;
+  }
+
+  .circleNumber {
+    width: 75px;
+    height: 51px;
+  }
+}
 </style>

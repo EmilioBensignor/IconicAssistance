@@ -117,4 +117,11 @@ import { scrollBottom } from "@/motions.js";
     width: 65% !important;
   }
 }
+
+@media only screen and (min-width: 1920px) {
+  .twoBenefits {
+    margin-top: 40px !important;
+    padding-bottom: 100px;
+  }
+}
 </style>

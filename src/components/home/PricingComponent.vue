@@ -259,4 +259,11 @@ export default {
     width: 80%;
   }
 }
+
+@media only screen and (min-width: 1920px) {
+  .desktopPricing {
+    width: 75%;
+    margin-top: 30px !important;
+  }
+}
 </style>

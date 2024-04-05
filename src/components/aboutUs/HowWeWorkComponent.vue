@@ -37,7 +37,7 @@
     <div class="divTools columnAlignCenter">
       <p v-motion="scrollBottom" class="tools my-5">Some of the tools we use</p>
       <div class="w-100 logos d-flex justify-center flex-wrap ga-5">
-        <div v-for="(item, index) in tools" :key="index" v-motion="scrollBottom" class="tool">
+        <div v-for="(item, index) in tools" :key="index" v-motion="scrollBottom" class="tool columnAlignCenter">
           <v-img eager width="100%" class="shadow-15" :src="getImgUrl(item.img)" :alt="item.alt"></v-img>
         </div>
       </div>
@@ -260,6 +260,19 @@ import { scrollBottom } from "@/motions.js";
 
   .tool .v-img {
     width: 70% !important;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .aboutModelCaption{
+    margin-top: -90px;
+  }
+  .divTools{
+    width: 70% !important;
+    margin: 30px 0 !important;
+  }
+  .tool .v-img {
+    width: 80% !important;
   }
 }
 </style>

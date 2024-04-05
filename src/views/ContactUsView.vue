@@ -45,8 +45,8 @@
         <v-radio label="Yes" value="true"></v-radio>
         <v-radio label="No" value="false"></v-radio>
       </v-radio-group>
-      <button class="w-100 submit secondaryButton text-white mt-2" :class="!valid ? 'disabled' : 'submit'" type="submit"
-        :disabled="!valid">
+      <button class="w-100 submit secondaryButton text-white elevation-5 mt-2" :class="!valid ? 'disabled' : 'submit'"
+        type="submit" :disabled="!valid">
         Submit
       </button>
     </v-form>
@@ -454,6 +454,26 @@ import { scrollBottom } from "@/motions.js";
 
   .contactUsVa img {
     width: 60% !important;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .contactForm {
+    width: 60% !important;
+  }
+
+  .submit {
+    width: 22.5% !important;
+  }
+
+  .contactUsFaq {
+    width: 75%;
+    gap: 50px;
+    margin: 30px 0;
+  }
+
+  .contactUsVa img {
+    width: 65% !important;
   }
 }
 </style>

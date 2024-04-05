@@ -77,4 +77,12 @@ import { scrollBottom } from "@/motions.js";
     margin-top: 2vw !important;
   }
 }
+
+@media only screen and (min-width: 1920px) {
+  .testimonialWrap {
+    gap: 25px;
+    margin-top: 30px !important;
+    padding-bottom: 100px;
+  }
+}
 </style>

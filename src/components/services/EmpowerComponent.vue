@@ -238,4 +238,39 @@ import { scrollBottom } from "@/motions.js";
     margin: 8vw 0 1vw 0 !important;
   }
 }
+
+@media only screen and (min-width: 1920px) {
+  .empowerWrapper {
+    gap: 200px !important;
+    margin-top: 100px !important;
+  }
+
+  .empowerBody {
+    width: 75%;
+  }
+
+  .empower {
+    gap: 100px !important;
+    padding-right: 200px;
+    margin-left: 350px;
+  }
+
+  .empower img {
+    right: 350px;
+    top: 80px
+  }
+
+  .empowerWrapper .empower:nth-child(2) {
+    padding-left: 200px;
+    margin-right: 400px
+  }
+
+  .empowerWrapper .empower:nth-child(2) img {
+    left: 330px;
+  }
+
+  .secondaryButton{
+    padding: 30px 75px;
+  }
+}
 </style>

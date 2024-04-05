@@ -11,9 +11,7 @@
   <section class="skyRadioactive">
     <p v-motion="scrollBottom" class="subtitle text-white">Unlock Efficiency</p>
     <h2 v-motion="scrollBottom" class="text-white">Ensuring Success</h2>
-    <div
-      v-motion="scrollBottom"
-      class="w-75 ensuringSuccess columnAlignCenter rounded-xl py-3 my-5 elevation-5">
+    <div v-motion="scrollBottom" class="w-75 ensuringSuccess columnAlignCenter rounded-xl py-3 my-5 elevation-5">
       <p class="text-white">
         At Iconic, we redefine outsourcing beyond
         <span class="font-weight-bold">cost-cutting</span>, offering
@@ -38,34 +36,41 @@
 </template>
 
 <script>
-  import HeaderPagesComponent from "@/components/HeaderPagesComponent.vue";
-  import EmpowerComponent from "@/components/services/EmpowerComponent.vue";
+import HeaderPagesComponent from "@/components/HeaderPagesComponent.vue";
+import EmpowerComponent from "@/components/services/EmpowerComponent.vue";
 
-  export default {
-    components: {
-      HeaderPagesComponent,
-      EmpowerComponent,
-    },
-  };
+export default {
+  components: {
+    HeaderPagesComponent,
+    EmpowerComponent,
+  },
+};
 </script>
 
 <script setup>
-  import { scrollBottom } from "@/motions.js";
+import { scrollBottom } from "@/motions.js";
 </script>
 
 <style scoped>
+.ensuringSuccess {
+  border: 3px solid white;
+}
+
+/* Desktop */
+@media only screen and (min-width: 1080px) {
   .ensuringSuccess {
-    border: 3px solid white;
+    width: 55% !important;
+    padding: 2vw 0 !important;
   }
 
-  /* Desktop */
-  @media only screen and (min-width: 1080px) {
-    .ensuringSuccess{
-      width: 55% !important;
-      padding: 2vw 0 !important;
-    }
-    .ensuringSuccess p{
-      width: 95%;
-    }
+  .ensuringSuccess p {
+    width: 95%;
   }
+}
+
+@media only screen and (min-width: 1920px) {
+  .ensuringSuccess {
+    padding: 30px 0 !important;
+  }
+}
 </style>

@@ -201,10 +201,12 @@ import HeaderTransparentComponentVue from "@/components/HeaderTransparentCompone
 }
 
 @media only screen and (min-width: 1600px) {
-  .hero{
+  .hero {
+    width: 85%;
     gap: 1.5vw !important;
+    margin-top: 237px;
   }
-  
+
   .text-landing {
     font-size: 1.9rem;
   }
@@ -223,6 +225,21 @@ import HeaderTransparentComponentVue from "@/components/HeaderTransparentCompone
   .heroCall {
     font-size: 2.1rem;
     padding: 1vw 3.2vw;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .hero{
+    gap: 25px !important;
+  }
+  .text-landing {
+    width: 65%;
+    font-size: 2.2rem;
+  }
+
+  .heroCall {
+    font-size: 2.3rem;
+    padding: 17.5px 54px;
   }
 }
 </style>

@@ -182,4 +182,23 @@ import { scrollBottom } from "@/motions.js";
     font-size: 1.1rem;
   }
 }
+
+@media only screen and (min-width: 1920px) {
+  .chooses {
+    gap: 70px !important;
+  }
+
+  .choose {
+    height: 460px;
+  }
+
+  .choose img {
+    margin-top: -3px;
+  }
+
+  .dedicated {
+    width: 45% !important;
+    padding-bottom: 20px;
+  }
+}
 </style>

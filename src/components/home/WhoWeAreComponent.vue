@@ -166,22 +166,47 @@ import { scrollBottom } from "@/motions.js";
 }
 
 @media only screen and (min-width: 1750px) {
-  .vaModel img{
+  .vaModel img {
     width: 80%;
   }
+
   .caption {
     width: 80%;
     left: 10%;
     padding: 0.5vw 0 1vw 0 !important;
   }
-  .caption p{
+
+  .caption p {
     font-size: 1.075rem;
   }
-  .rightWhoWeAre{
+
+  .rightWhoWeAre {
     padding-left: 0;
   }
-  .who{
+
+  .who {
     font-size: 1.4rem;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+
+  .vaModel img,
+  .caption {
+    width: 75%;
+  }
+
+  .caption {
+    left: 12.5%;
+    padding: 10px 0 20px 0 !important;
+  }
+
+  .fourWhoWeAre {
+    margin: 20px 0 !important;
+  }
+
+  .who {
+    font-size: 1.5rem;
   }
 }
 </style>

@@ -270,4 +270,24 @@ export default {
     margin-bottom: 2vw !important;
   }
 }
+
+@media only screen and (min-width: 1920px) {
+  .costComparison {
+    width: 45% !important;
+    margin-top: 50px !important;
+  }
+
+  .comparisonItem {
+    height: 138px;
+  }
+
+  .category {
+    width: 75%;
+  }
+
+  .costComparisonAclaration {
+    width: 50% !important;
+    margin-top: 75px !important;
+  }
+}
 </style>

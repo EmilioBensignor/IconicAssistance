@@ -49,8 +49,10 @@ import { scrollBottom } from "@/motions.js";
 /* Desktop */
 @media only screen and (min-width: 1080px) {
   .guaranteeTasks {
+    width: 90%;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
     margin-top: 3vw;
   }
@@ -111,6 +113,16 @@ import { scrollBottom } from "@/motions.js";
 @media only screen and (min-width: 1750px) {
   .divGuarantee img {
     width: 55% !important;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .guaranteeTasks{
+    width: 80%;
+    margin-top: 30px;
+  }
+  .divGuarantee img {
+    width: 65% !important;
   }
 }
 </style>

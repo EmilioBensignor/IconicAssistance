@@ -137,4 +137,28 @@ import { scrollBottom } from "@/motions.js";
     font-size: 1.2rem;
   }
 }
+
+@media only screen and (min-width: 1920px) {
+  .opportunities {
+    gap: 50px;
+    padding: 0 200px;
+  }
+
+  .opportunitiesRight img {
+    width: 60%;
+  }
+
+  .textOpportunities {
+    margin-top: 10px !important;
+  }
+
+  .vaOpportunities {
+    padding-left: 60px;
+    gap: 60px !important;
+  }
+
+  ul li {
+    font-size: 1.25rem;
+  }
+}
 </style>

@@ -177,4 +177,10 @@ svg {
     height: 3.75vw !important;
   }
 }
+
+@media only screen and (min-width: 1920px) {
+  svg {
+    height: 70px !important;
+  }
+}
 </style>

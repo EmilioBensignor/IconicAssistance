@@ -603,4 +603,40 @@ section {
     padding: 24vh 0 24vw 0;
   }
 }
+
+@media only screen and (min-width: 1920px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 2.7rem;
+  }
+
+  h3 {
+    font-size: 2.2rem;
+  }
+
+  h4 {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 1.9rem;
+  }
+
+  p {
+    font-size: 1.3rem;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    font-size: 1.8rem;
+    padding: 25px 49px;
+  }
+
+  .heroPages {
+    padding: 220px 0 450px 0;
+  }
+}
 </style>

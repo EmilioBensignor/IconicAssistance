@@ -145,4 +145,11 @@ import { scrollBottom } from "@/motions.js";
     width: 70% !important;
   }
 }
+@media only screen and (min-width: 1920px) {
+  .blogPosts{
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+    padding-bottom: 120px;
+  }
+}
 </style>

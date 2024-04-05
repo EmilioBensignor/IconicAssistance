@@ -160,12 +160,34 @@ export default {
 }
 
 @media only screen and (min-width: 1750px) {
+  .differentTitle {
+    font-size: 1.6rem;
+  }
+
   .different {
     height: 46vh;
   }
 
   .different .v-img {
     width: 45% !important;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .threeDifferent{
+    width: 85%;
+    margin-top: 30px !important;
+  }
+  .different {
+    height: 385px;
+  }
+
+  .different .v-img {
+    width: 40% !important;
+  }
+
+  .different div p:nth-child(2) {
+    font-size: 1.2rem !important;
   }
 }
 </style>

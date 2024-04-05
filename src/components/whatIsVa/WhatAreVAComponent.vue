@@ -97,4 +97,10 @@ import { scrollBottom } from "@/motions.js";
     width: 65%;
   }
 }
+
+@media only screen and (min-width: 1920px) {
+  .whatAreVa {
+    padding: 0 200px;
+  }
+}
 </style>

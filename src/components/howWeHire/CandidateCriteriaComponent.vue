@@ -106,4 +106,12 @@ import { scrollBottom } from "@/motions.js";
     font-size: 1.2rem
   }
 }
+
+@media only screen and (min-width: 1920px) {
+  .twoCandidate {
+    width: 60% !important;
+    gap: 30px;
+    margin: 15px 0;
+  }
+}
 </style>

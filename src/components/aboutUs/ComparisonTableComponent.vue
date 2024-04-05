@@ -83,16 +83,16 @@
             </div>
             <p class="text-white text-start categoryTitle">{{ item.title }}</p>
           </div>
-          <div class="itemIconic itemChart pa-5 bg-lightBlueSky">
+          <div class="itemIconic itemChart px-3 py-5 bg-lightBlueSky">
             <p>{{ item.iconic }}</p>
           </div>
-          <div class="itemChart pa-5 bg-chartGray">
+          <div class="itemChart px-3 py-5 bg-chartGray">
             <p>{{ item.inHouseUS }}</p>
           </div>
-          <div class="itemChart pa-5 bg-chartGray">
+          <div class="itemChart px-3 py-5 bg-chartGray">
             <p>{{ item.vaUS }}</p>
           </div>
-          <div class="itemChart pa-5 bg-chartGray rounded-te-xl">
+          <div class="itemChart px-3 py-5 bg-chartGray rounded-te-xl">
             <p>{{ item.vaPhilippines }}</p>
           </div>
         </div>
@@ -367,13 +367,17 @@ import { scrollBottom } from "@/motions.js";
     height: 5vw !important;
   }
 
+  .category,
+  .itemChart {
+    height: 7vw;
+  }
+
   .itemChart {
     width: 17%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1vw !important;
   }
 
   .itemIconic p {
@@ -383,6 +387,14 @@ import { scrollBottom } from "@/motions.js";
   .itemChart p {
     font-size: 1rem;
     font-weight: 500;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+
+  .category,
+  .itemChart {
+    height: 6vw;
   }
 }
 
@@ -422,6 +434,11 @@ import { scrollBottom } from "@/motions.js";
   .chartLogo {
     height: 4.5vw !important;
   }
+
+  .category,
+  .itemChart {
+    height: 5vw;
+  }
 }
 
 @media only screen and (min-width: 1600px) {
@@ -429,9 +446,24 @@ import { scrollBottom } from "@/motions.js";
     top: 5.4vw;
   }
 
+  .chartTitleBlank {
+    width: 35%;
+  }
+
   .chartLogo {
     height: 4.2vw !important;
   }
+
+  .category,
+  .itemChart {
+    height: 4.5vw;
+  }
+
+  .categoryNumber {
+    width: 3vw;
+    height: 2.6vw;
+  }
+
 }
 
 @media only screen and (min-width: 1750px) {
@@ -441,6 +473,39 @@ import { scrollBottom } from "@/motions.js";
 
   .chartLogo {
     height: 3.9vw !important;
+  }
+
+  .category,
+  .itemChart {
+    height: 4vw;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .comparisonChartDesktop {
+    width: 75%;
+  }
+
+  .comparison {
+    top: 85px
+  }
+
+  .category,
+  .itemChart {
+    height: 77px;
+  }
+
+  .chartLogo {
+    height: 75px !important;
+  }
+
+  .categoryNumber {
+    width: 55px;
+    height: 50px;
+  }
+
+  .cancelText{
+    width: 50% !important;
   }
 }
 </style>

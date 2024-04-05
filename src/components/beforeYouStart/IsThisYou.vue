@@ -146,4 +146,10 @@ import { scrollBottom } from "@/motions.js";
     font-size: 1.3rem;
   }
 }
+
+@media only screen and (min-width: 1920px) {
+  .aspectsWrapper {
+    margin: 70px 0 !important;
+  }
+}
 </style>

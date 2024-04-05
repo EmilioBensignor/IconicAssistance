@@ -53,4 +53,10 @@
     padding: 1.1vw 2vw;
   }
 }
+
+@media only screen and (min-width: 1920px) {
+  .popUp {
+    padding: 21px 39px;
+  }
+}
 </style>

@@ -347,4 +347,26 @@ export default {
     font-size: 1.8rem;
   }
 }
+
+@media only screen and (min-width: 1920px){
+  .logo{
+    height: 100px !important;
+    margin-left: -15px;
+  }
+  .primaryButton{
+    padding: 25px 50px;
+  }
+  .social a img{
+    width: 60%;
+  }
+  .footerTitle{
+    font-size: 2rem;
+  }
+  .footerLinks .column a {
+    font-size: 1.4rem;
+  }
+  .rightsReserved{
+    margin: 25px 0 !important;
+  }
+}
 </style>

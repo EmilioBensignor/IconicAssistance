@@ -217,4 +217,19 @@ input[type="checkbox"] {
     height: 1.3vw;
   }
 }
+
+@media only screen and (min-width: 1920px) {
+  .searchLabel {
+    margin: 20px 0 !important;
+  }
+  
+  .faqDiv {
+    padding-bottom: 100px;
+  }
+
+  input[type="checkbox"] {
+    width: 26px;
+    height: 26px;
+  }
+}
 </style>

@@ -13,10 +13,11 @@
       </div>
     </div>
     <div v-motion="scrollBottom" class="carousel w-75 columnAlignCenter my-5">
-      <v-carousel show-arrows="hover" hide-delimiters :show-arrows="false" class="carouselTypes rounded-xl elevation-5" cycle :interval="2000">
+      <v-carousel show-arrows="hover" hide-delimiters :show-arrows="false" class="carouselTypes rounded-xl elevation-5"
+        cycle :interval="2000">
         <v-carousel-item v-for="(item, index) in vaTypes" :key="index" cover>
           <router-link :to="`/virtual-assistant/${item.id}`" class="typesCard">
-            <v-img :src="getImgUrl(item.img)" :alt="item.alt" width="100%" height="100%"  class="vaImg" cover eager>
+            <v-img :src="getImgUrl(item.img)" :alt="item.alt" width="100%" height="100%" class="vaImg" cover eager>
               <p class="titleTypesofVA font-weight-bold text-midnight py-3">
                 {{ item.name }}
               </p>
@@ -151,9 +152,15 @@ import { scrollBottom } from "@/motions.js";
   .carouselTypes {
     height: 65vh !important;
   }
+}
 
-  .v-carousel__controls {
-    padding: 3vw 0;
+@media only screen and (min-width: 1920px) {
+  .carousel {
+    margin-top: 50px !important;
+  }
+
+  .carouselTypes {
+    height: 590px !important;
   }
 }
 </style>
