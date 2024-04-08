@@ -21,7 +21,6 @@
         onclick="Calendly.initPopupWidget({url:'https://calendly.com/iconic-assistants/15min-ij'});return false;">Hire
         ICONIC</a>
     </div>
-    <SliderComponent />
   </section>
   <WhoWeAreComponent />
   <WhyUsComponent />
@@ -44,7 +43,6 @@
 <script>
 import HeaderTransparentComponent from "@/components/HeaderTransparentComponent.vue";
 
-import SliderComponent from "@/components/home/SliderComponent.vue";
 import WhoWeAreComponent from "@/components/home/WhoWeAreComponent.vue";
 import WhyUsComponent from "@/components/home/WhyUsComponent.vue";
 import JobComponentComponent from "@/components/home/JobComponent.vue";
@@ -58,7 +56,6 @@ import FAQsComponent from "@/components/home/FAQsComponent.vue";
 export default {
   components: {
     HeaderTransparentComponent,
-    SliderComponent,
     WhoWeAreComponent,
     WhyUsComponent,
     JobComponentComponent,

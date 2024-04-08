@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="sliderWrapper">
     <div class="slider">
       <div class="slide-track">
@@ -194,4 +194,4 @@
       height: 95px;
     }
   }
-</style>
+</style> -->
