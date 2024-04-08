@@ -21,6 +21,7 @@
         onclick="Calendly.initPopupWidget({url:'https://calendly.com/iconic-assistants/15min-ij'});return false;">Hire
         ICONIC</a>
     </div>
+    <SliderComponent />
   </section>
   <WhoWeAreComponent />
   <WhyUsComponent />
@@ -167,7 +168,7 @@ import HeaderTransparentComponentVue from "@/components/HeaderTransparentCompone
 /* LG */
 @media only screen and (min-width: 992px) {
   .hero {
-    margin-top: 26vh;
+    margin-top: 22vh;
   }
 
   .text-landing {
