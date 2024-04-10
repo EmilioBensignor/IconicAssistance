@@ -1,25 +1,31 @@
 <template>
   <section class="radioactiveWaves">
-    <p v-motion="scrollBottom" class="subtitle text-radioactive">Why us?</p>
-    <h2 v-motion="scrollBottom" class="mb-3 text-midnight">
-      What Makes Us Different
-    </h2>
-    <div class="threeDifferent flexCenter ga-10 my-5">
-      <div
-        v-for="(item, index) in different"
-        :key="index"
-        v-motion="scrollBottom"
-        class="different flexCenter rounded-xl elevation-5 w-75 pa-4 pb-6">
-        <p class="differentTitle text-midnight">{{ item.title }}</p>
-        <v-img
-          eager
-          :src="getImgUrl(item.img)"
-          :alt="item.alt"
-          class="shadow-2"
-          width="70%"></v-img>
-        <div class="flexCenter ga-3">
-          <p class="differentSubtitle text-radioactive">{{ item.subtitle }}</p>
-          <p>{{ item.body }}</p>
+    <div class="content">
+      <div class="columnAlignCenter">
+        <p v-motion="scrollBottom" class="subtitle text-radioactive">Why us?</p>
+        <h2 v-motion="scrollBottom" class="mb-3 text-midnight">
+          What Makes Us Different
+        </h2>
+        <div class="threeDifferent flexCenter ga-10 my-5">
+          <div
+            v-for="(item, index) in different"
+            :key="index"
+            v-motion="scrollBottom"
+            class="different flexCenter rounded-xl elevation-5 w-75 pa-4 pb-6">
+            <p class="differentTitle text-midnight">{{ item.title }}</p>
+            <v-img
+              eager
+              :src="getImgUrl(item.img)"
+              :alt="item.alt"
+              class="shadow-2"
+              width="70%"></v-img>
+            <div class="flexCenter ga-3">
+              <p class="differentSubtitle text-radioactive">
+                {{ item.subtitle }}
+              </p>
+              <p>{{ item.body }}</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -183,7 +189,7 @@
       margin-top: 30px !important;
     }
     .different {
-      height: 385px;
+      height: 395px;
     }
 
     .different .v-img {

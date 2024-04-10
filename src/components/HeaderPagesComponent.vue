@@ -162,6 +162,10 @@ export default {
 </script>
 
 <style>
+.v-toolbar__content{
+  max-width: 1920px !important;
+}
+
 .v-toolbar__content>.v-toolbar-title {
   flex: none;
   align-self: center;
