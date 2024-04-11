@@ -189,8 +189,7 @@
 
     .searchLabel {
       font-size: 1.6rem;
-      text-align: start;
-      padding-left: 5vw;
+      text-align: center;
     }
 
     .inputSearch {
@@ -213,10 +212,11 @@
   }
 
   @media only screen and (min-width: 1280px) {
-    .categories{
-      width: 100% !important;
+    .categories,
+    .buscador {
+      width: 120% !important;
     }
-    
+
     input[type="checkbox"] {
       width: 2.5vw;
       height: 2.5vw;
@@ -225,6 +225,11 @@
 
   /* XL */
   @media only screen and (min-width: 1440px) {
+    .categories,
+    .buscador {
+      width: 135% !important;
+    }
+
     input[type="checkbox"] {
       width: 2vw;
       height: 2vw;
@@ -253,6 +258,11 @@
   }
 
   @media only screen and (min-width: 1750px) {
+        .categories,
+    .buscador {
+      width: 150% !important;
+    }
+    
     .labelCheckbox {
       font-size: 1.4rem;
     }

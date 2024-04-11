@@ -1,51 +1,47 @@
 <template>
   <section class="radioactiveWaves">
-    <div class="content">
-      <div class="columnAlignCenter">
-        <div class="w-100 empowerWrapper flexCenter ga-15 mt-5">
-          <div
-            v-for="(item, index) in empower"
-            :key="index"
-            v-motion="scrollBottom"
-            class="empower w-75">
-            <img
-              :src="getImgUrl(item.img)"
-              :alt="item.alt"
-              class="shadow-3 mb-n15"
-              width="60%" />
-            <div
-              class="empowerBody flexCenter bg-radioactive rounded-te-xl rounded-bs-xl elevation-5 mt-n3 pt-15 pa-5">
-              <h3 class="text-white mt-2">{{ item.title }}</h3>
-              <p class="subtitle font-weight-bold text-white">
-                {{ item.subtitle }}
-              </p>
-              <ul class="mt-5 column ga-3">
-                <li
-                  v-for="(advantage, index) in item.advantages"
-                  :key="index"
-                  class="mx-1"
-                  v-html="advantage"></li>
-              </ul>
-              <v-expansion-panels class="moreInfo mt-3">
-                <v-expansion-panel
-                  class="bg-radioactive mt-3 elevation-3"
-                  title="More Info"
-                  :text="item.moreInfo">
-                </v-expansion-panel>
-              </v-expansion-panels>
-            </div>
-          </div>
+    <div class="w-100 empowerWrapper flexCenter ga-15 mt-5">
+      <div
+        v-for="(item, index) in empower"
+        :key="index"
+        v-motion="scrollBottom"
+        class="empower w-75">
+        <img
+          :src="getImgUrl(item.img)"
+          :alt="item.alt"
+          class="shadow-3 mb-n15"
+          width="60%" />
+        <div
+          class="empowerBody flexCenter bg-radioactive rounded-te-xl rounded-bs-xl elevation-5 mt-n3 pt-15 pa-5">
+          <h3 class="text-white mt-2">{{ item.title }}</h3>
+          <p class="subtitle font-weight-bold text-white">
+            {{ item.subtitle }}
+          </p>
+          <ul class="mt-5 column ga-3">
+            <li
+              v-for="(advantage, index) in item.advantages"
+              :key="index"
+              class="mx-1"
+              v-html="advantage"></li>
+          </ul>
+          <v-expansion-panels class="moreInfo mt-3">
+            <v-expansion-panel
+              class="bg-radioactive mt-3 elevation-3"
+              title="More Info"
+              :text="item.moreInfo">
+            </v-expansion-panel>
+          </v-expansion-panels>
         </div>
-        <p v-motion="scrollBottom" class="partner font-weight-bold mt-10">
-          Partner with us for a transformative experience.
-        </p>
-        <router-link
-          class="w-50 secondaryButton my-3 elevation-5"
-          :to="'/contact-us'"
-          >Contact Us</router-link
-        >
       </div>
     </div>
+    <p v-motion="scrollBottom" class="partner font-weight-bold mt-10">
+      Partner with us for a transformative experience.
+    </p>
+    <router-link
+      class="w-50 secondaryButton my-3 elevation-5"
+      :to="'/contact-us'"
+      >Contact Us</router-link
+    >
   </section>
 </template>
 
@@ -142,7 +138,7 @@
     }
 
     .empower {
-      width: 75% !important;
+      width: 100% !important;
       display: flex;
       flex-direction: row-reverse;
       justify-content: flex-end;
@@ -161,15 +157,15 @@
     }
 
     .empower img {
-      width: 30%;
+      width: 35%;
       position: absolute;
-      right: 4vw;
+      right: 0;
       top: 2vw;
       z-index: 2;
     }
 
     .empowerWrapper .empower:nth-child(2) img {
-      left: 4vw;
+      left: 1vw;
     }
 
     .empowerBody {

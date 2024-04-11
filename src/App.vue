@@ -433,6 +433,7 @@
     }
 
     .faqWrapper {
+      width: 100% !important;
       font-size: 1rem;
     }
 

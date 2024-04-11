@@ -1,7 +1,7 @@
 <template>
   <section class="skyRadioactive">
     <div class="content">
-      <div class="columnAlignCenter">
+      <div class="w-100 columnAlignCenter">
         <h2 v-motion="scrollBottom" class="text-white mb-5">
           Frequently Asked Questions
         </h2>
@@ -25,9 +25,9 @@
               </v-expansion-panel-text>
             </v-expansion-panel>
           </v-expansion-panels>
-          <div class="leftRight w-100 columnAlignCenter ga-4">
+          <div class="leftRight columnAlignCenter ga-4">
             <!-- Left -->
-            <div class="w-100 columnAlignCenter ga-4">
+            <div class="left columnAlignCenter ga-4">
               <v-expansion-panels v-motion="scrollBottom" class="faqWrapper">
                 <v-expansion-panel
                   class="elevation-4"
@@ -111,7 +111,7 @@
               </v-expansion-panels>
             </div>
             <!-- Right -->
-            <div class="w-100 columnAlignCenter ga-4">
+            <div class="right columnAlignCenter ga-4">
               <v-expansion-panels v-motion="scrollBottom" class="faqWrapper">
                 <v-expansion-panel
                   class="elevation-4"
@@ -251,10 +251,14 @@
     font-weight: 600;
   }
 
+  .left, .right, .leftRight{
+    width: 100%;
+  }
+
   /* Desktop */
   @media only screen and (min-width: 1080px) {
     .faqHome {
-      width: 120%;
+      width: 100%;
       padding-bottom: 7vw;
     }
 

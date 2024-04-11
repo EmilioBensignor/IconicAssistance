@@ -61,11 +61,11 @@
                 <p class="description text-white my-3">
                   {{ item.description }}
                 </p>
-                <router-link
+                <!-- <router-link
                   :to="`/industries/${item.slug}`"
                   class="learnMore text-decoration-none primaryButton mt-3 mb-10 elevation-5"
                   >Learn More</router-link
-                >
+                > -->
               </div>
             </div>
             <div class="mt-10 columnAlignCenter w-75">

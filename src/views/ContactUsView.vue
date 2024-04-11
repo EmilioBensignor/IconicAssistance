@@ -455,7 +455,7 @@
     }
 
     .contactForm {
-      width: 100% !important;
+      width: 150% !important;
     }
 
     .twoInput {
@@ -501,6 +501,9 @@
   }
 
   @media only screen and (min-width: 1750px) {
+    .contactForm{
+      width: 175% !important;
+    }
 
     .submit {
       width: 25% !important;
