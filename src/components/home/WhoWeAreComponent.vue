@@ -217,12 +217,12 @@
   @media only screen and (min-width: 1920px) {
     .vaModel img,
     .caption {
-      width: 75%;
+      width: 76%;
     }
 
     .caption {
-      left: 12.5%;
-      padding: 10px 0 20px 0 !important;
+      left: 12%;
+      padding: 15px 0 20px 0 !important;
     }
 
     .fourWhoWeAre {

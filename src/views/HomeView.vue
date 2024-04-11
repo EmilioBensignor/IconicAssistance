@@ -43,7 +43,6 @@
   </section>
   <WhoWeAreComponent />
   <WhyUsComponent />
-  <JobComponentComponent />
   <HowItWorksComponent />
   <OurServiceComponent />
   <CostComparisonComponent />
@@ -68,7 +67,6 @@
 
   import WhoWeAreComponent from "@/components/home/WhoWeAreComponent.vue";
   import WhyUsComponent from "@/components/home/WhyUsComponent.vue";
-  import JobComponentComponent from "@/components/home/JobComponent.vue";
   import HowItWorksComponent from "@/components/home/HowItWorksComponent.vue";
   import OurServiceComponent from "@/components/home/OurServiceComponent.vue";
   import CostComparisonComponent from "@/components/home/CostComparisonComponent.vue";
@@ -81,7 +79,6 @@
       HeaderTransparentComponent,
       WhoWeAreComponent,
       WhyUsComponent,
-      JobComponentComponent,
       HowItWorksComponent,
       OurServiceComponent,
       CostComparisonComponent,
@@ -94,7 +91,6 @@
 
 <script setup>
   import { scrollBottom } from "@/motions.js";
-  import HeaderTransparentComponentVue from "@/components/HeaderTransparentComponent.vue";
 </script>
 
 <style scoped>

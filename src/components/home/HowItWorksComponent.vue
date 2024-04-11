@@ -1,5 +1,5 @@
 <template>
-  <section class="skyRadioactiveWaves">
+  <section class="bottomRadioactiveWave">
     <div class="content">
       <div class="columnAlignCenter">
         <p v-motion="scrollBottom" class="subtitle text-radioactive">
@@ -109,6 +109,15 @@
 </script>
 
 <style scoped>
+  .bottomRadioactiveWave{
+    background-image: url("@/assets/images/misc/Radioactive-Bottom-Wave.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom left;
+    padding-bottom: 20vw;
+    padding-top: 3vw;
+  }
+
   .desktopImg {
     display: none;
   }

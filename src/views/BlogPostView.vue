@@ -12,30 +12,34 @@
     <img src="@/assets/images/misc/White-Bottom-Wave.png" alt="White Bottom Wave" class="heroPagesWhiteWave"
       width="100%" />
   </section>
-  <section class="radioactiveWave blogRecentPost">
-    <div class="blogPost columnAlignCenter">
-      <h2 v-motion="scrollBottom" class="text-midnight">{{ blog.h2 }}</h2>
-      <div class="text-start text-midnight px-5 my-5">
-        <p class="w-100">{{ blog.intro }}</p>
-        <ul class="blogBullets px-3 my-3 column ga-4">
-          <li v-for="(item, index) in blog.bullet" :key="index">
-            {{ item }}
-          </li>
-        </ul>
-        <p class="w-100">{{ blog.closer }}</p>
-      </div>
-    </div>
-    <div class="recentBlogs columnAlignCenter mt-5">
-      <h2 v-motion="scrollBottom" class="text-midnight">Recent Posts</h2>
-      <div class="w-75 recentBlogWrapper columnAlignCenter ga-10 py-5">
-        <article v-for="(recentBlog, index) in recentBlogs" :key="index" v-motion="scrollBottom"
-          class="recentBlog text-start w-75 elevation-5 rounded-lg">
-          <img :src="getImgUrl(recentBlog.img)" :alt="recentBlog.alt" class="rounded-t-lg" width="100%" />
-          <div class="pa-3">
-            <p class="text-midnight mb-2">{{ recentBlog.title }}</p>
-            <p class="text-lightGray">{{ formatDate(recentBlog.date) }}</p>
+  <section class="radioactiveWave">
+    <div class="content">
+      <div class="blogRecentPost columnAlignCenter">
+        <div class="blogPost columnAlignCenter">
+          <h2 v-motion="scrollBottom" class="text-midnight">{{ blog.h2 }}</h2>
+          <div class="text-start text-midnight px-5 my-5">
+            <p class="w-100">{{ blog.intro }}</p>
+            <ul class="blogBullets px-3 my-3 column ga-4">
+              <li v-for="(item, index) in blog.bullet" :key="index">
+                {{ item }}
+              </li>
+            </ul>
+            <p class="w-100">{{ blog.closer }}</p>
           </div>
-        </article>
+        </div>
+        <div class="recentBlogs columnAlignCenter mt-5">
+          <h2 v-motion="scrollBottom" class="text-midnight">Recent Posts</h2>
+          <div class="w-75 recentBlogWrapper columnAlignCenter ga-10 py-5">
+            <article v-for="(recentBlog, index) in recentBlogs" :key="index" v-motion="scrollBottom"
+              class="recentBlog text-start w-75 elevation-5 rounded-lg">
+              <img :src="getImgUrl(recentBlog.img)" :alt="recentBlog.alt" class="rounded-t-lg" width="100%" />
+              <div class="pa-3">
+                <p class="text-midnight mb-2">{{ recentBlog.title }}</p>
+                <p class="text-lightGray">{{ formatDate(recentBlog.date) }}</p>
+              </div>
+            </article>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -184,7 +188,7 @@ import { scrollBottom } from "@/motions.js";
     justify-content: space-between;
     align-items: flex-start;
     position: relative;
-    padding: 0 5vw 20vw 5vw;
+    padding: 0 3vw 3vw 3vw;
   }
 
   .blogRecentPost h2 {

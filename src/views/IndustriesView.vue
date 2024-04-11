@@ -16,25 +16,29 @@
   </section>
   <DifferencesComponent />
   <section class="skyRadioactive">
-    <h2 v-motion="scrollBottom" class="text-white">
-      VAs That Suit Your Industry
-    </h2>
-    <div v-if="industry" class="w-75 vaSuit columnAlignCenter ga-13 my-5">
-      <div v-for="(vaType, index) in industry.vaTypes" :key="index" v-motion="scrollBottom"
-        class="vaSuitIndividual w-75 columnAlignCenter bg-white rounded-xl elevation-5 pb-5">
-        <v-img :src="getVaTypeUrl(vaType.img)" :alt="vaType.alt" class="d-flex justify-center align-end rounded-t-xl"
-          width="100%">
-          <h3 class="w-100 columnAlignCenter text-white mb-3">
-            {{ vaType.va }}
-          </h3>
-        </v-img>
-        <div class="tasksOutsource columnAlignCenter">
-          <p class="mt-3 font-weight-bold">Tasks to outsource:</p>
-          <p class="summary mt-3">{{ vaType.summary }}</p>
+    <div class="content">
+      <div class="columnAlignCenter">
+        <h2 v-motion="scrollBottom" class="text-white">
+          VAs That Suit Your Industry
+        </h2>
+        <div v-if="industry" class="w-75 vaSuit columnAlignCenter ga-13 my-5">
+          <div v-for="(vaType, index) in industry.vaTypes" :key="index" v-motion="scrollBottom"
+            class="vaSuitIndividual w-75 columnAlignCenter bg-white rounded-xl elevation-5 pb-5">
+            <v-img :src="getVaTypeUrl(vaType.img)" :alt="vaType.alt"
+              class="d-flex justify-center align-end rounded-t-xl" width="100%">
+              <h3 class="w-100 columnAlignCenter text-white mb-3">
+                {{ vaType.va }}
+              </h3>
+            </v-img>
+            <div class="tasksOutsource columnAlignCenter">
+              <p class="mt-3 font-weight-bold">Tasks to outsource:</p>
+              <p class="summary mt-3">{{ vaType.summary }}</p>
+            </div>
+          </div>
         </div>
+        <router-link class="primaryButton mt-5 elevation-5" :to="'/types-of-vas'">Look at our Types of VAs</router-link>
       </div>
     </div>
-    <router-link class="primaryButton mt-5 elevation-5" :to="'/types-of-vas'">Look at our Types of VAs</router-link>
   </section>
   <GuaranteeComponent />
 </template>
