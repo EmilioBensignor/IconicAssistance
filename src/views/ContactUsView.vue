@@ -8,92 +8,88 @@
     </div>
   </section>
   <section class="skyRadioactive">
-    <div class="content">
-      <div class="columnAlignCenter">
-        <h2 v-motion="scrollBottom" class="text-white mb-5">Get in Touch</h2>
-        <v-form
-          id="contact"
-          v-model="valid"
-          validate-on="input lazy"
-          @submit.prevent="submit"
-          class="w-75 contactForm columnAlignCenter bg-white pa-5 rounded-xl">
-          <div class="w-100 twoInput">
-            <v-text-field
-              v-model="leadData.firstName"
-              :rules="rules.firstNameRules"
-              label="First name"
-              class="w-100"
-              required></v-text-field>
-            <v-text-field
-              v-model="leadData.lastName"
-              :rules="rules.lastNameRules"
-              label="Last name"
-              class="w-100 my-5"
-              required></v-text-field>
-          </div>
-          <div class="w-100 twoInput">
-            <v-text-field
-              v-model="leadData.email"
-              :rules="rules.emailRules"
-              label="E-mail"
-              class="w-100"
-              required></v-text-field>
-            <div class="w-100">
-              <v-text-field
-                v-model="leadData.phoneNumber"
-                :rules="rules.phoneNumberRules"
-                label="Phone Number"
-                class="w-100 phoneNumber mt-5">
-              </v-text-field>
-              <p class="w-100 aclaration mb-5">
-                (We only use phone numbers for ease of communication.)
-              </p>
-            </div>
-          </div>
-          <div class="w-100 twoInput">
-            <v-text-field
-              v-model="leadData.companySize"
-              :rules="rules.companySizeRules"
-              label="Company Size"
-              class="w-100"
-              required></v-text-field>
-            <v-text-field
-              v-model="leadData.companyName"
-              :rules="rules.companyNameRules"
-              label="Company Name"
-              class="w-100 my-5"
-              required></v-text-field>
-          </div>
-          <v-textarea
-            v-model="leadData.staffingRequirements"
-            :rules="rules.staffingRequirementsRules"
-            label="Staffing Requirements"
-            class="w-100 mb-5"
-            required></v-textarea>
-          <p class="w-100 text-start mb-3">
-            Are you looking for a job?
-            <span class="aclaration"
-              >(Job applications are NOT accepted here).</span
-            >
-          </p>
-          <v-radio-group
-            v-model="leadData.lookingForJob"
-            :rules="rules.lookingForJobRules"
-            required
-            class="w-100">
-            <v-radio label="Yes" value="true"></v-radio>
-            <v-radio label="No" value="false"></v-radio>
-          </v-radio-group>
-          <button
-            class="w-100 submit secondaryButton text-white elevation-5 mt-2"
-            :class="!valid ? 'disabled' : 'submit'"
-            type="submit"
-            :disabled="!valid">
-            Submit
-          </button>
-        </v-form>
+    <h2 v-motion="scrollBottom" class="text-white mb-5">Get in Touch</h2>
+    <v-form
+      id="contact"
+      v-model="valid"
+      validate-on="input lazy"
+      @submit.prevent="submit"
+      class="w-75 content columnAlignCenter bg-white pa-5 rounded-xl">
+      <div class="w-100 twoInput">
+        <v-text-field
+          v-model="leadData.firstName"
+          :rules="rules.firstNameRules"
+          label="First name"
+          class="w-100"
+          required></v-text-field>
+        <v-text-field
+          v-model="leadData.lastName"
+          :rules="rules.lastNameRules"
+          label="Last name"
+          class="w-100 my-5"
+          required></v-text-field>
       </div>
-    </div>
+      <div class="w-100 twoInput">
+        <v-text-field
+          v-model="leadData.email"
+          :rules="rules.emailRules"
+          label="E-mail"
+          class="w-100"
+          required></v-text-field>
+        <div class="w-100">
+          <v-text-field
+            v-model="leadData.phoneNumber"
+            :rules="rules.phoneNumberRules"
+            label="Phone Number"
+            class="w-100 phoneNumber mt-5">
+          </v-text-field>
+          <p class="w-100 aclaration mb-5">
+            (We only use phone numbers for ease of communication.)
+          </p>
+        </div>
+      </div>
+      <div class="w-100 twoInput">
+        <v-text-field
+          v-model="leadData.companySize"
+          :rules="rules.companySizeRules"
+          label="Company Size"
+          class="w-100"
+          required></v-text-field>
+        <v-text-field
+          v-model="leadData.companyName"
+          :rules="rules.companyNameRules"
+          label="Company Name"
+          class="w-100 my-5"
+          required></v-text-field>
+      </div>
+      <v-textarea
+        v-model="leadData.staffingRequirements"
+        :rules="rules.staffingRequirementsRules"
+        label="Staffing Requirements"
+        class="w-100 mb-5"
+        required></v-textarea>
+      <p class="w-100 text-start mb-3">
+        Are you looking for a job?
+        <span class="aclaration"
+          >(Job applications are NOT accepted here).</span
+        >
+      </p>
+      <v-radio-group
+        v-model="leadData.lookingForJob"
+        :rules="rules.lookingForJobRules"
+        required
+        class="w-100">
+        <v-radio label="Yes" value="true"></v-radio>
+        <v-radio label="No" value="false"></v-radio>
+      </v-radio-group>
+      <button
+        class="w-100 submit secondaryButton text-white elevation-5 mt-2"
+        :class="!valid ? 'disabled' : 'submit'"
+        type="submit"
+        :disabled="!valid">
+        Submit
+      </button>
+    </v-form>
   </section>
   <section class="radioactiveWaves">
     <div class="content">
@@ -454,10 +450,6 @@
       margin: 2.5vw 0;
     }
 
-    .contactForm {
-      width: 150% !important;
-    }
-
     .twoInput {
       display: flex;
       flex-direction: row;
@@ -483,13 +475,15 @@
 
   /* XL */
   @media only screen and (min-width: 1440px) {
+    .v-form {
+      padding: 1vw 2vw 2vw 2vw !important;
+    }
     .contactUsVa img {
       width: 70% !important;
     }
   }
 
   @media only screen and (min-width: 1600px) {
-
     .submit {
       width: 30% !important;
       font-size: 1.6rem;
@@ -501,10 +495,6 @@
   }
 
   @media only screen and (min-width: 1750px) {
-    .contactForm{
-      width: 175% !important;
-    }
-
     .submit {
       width: 25% !important;
     }
@@ -515,6 +505,9 @@
   }
 
   @media only screen and (min-width: 1920px) {
+    .v-form {
+      padding: 1% 1.5% 1.5% 1.5% !important;
+    }
 
     .submit {
       width: 22.5% !important;

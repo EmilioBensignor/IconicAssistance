@@ -1,6 +1,6 @@
 <template>
   <section class="radioactiveWaves">
-    <div class="w-100 empowerWrapper flexCenter ga-15 mt-5">
+    <div class="w-100 content empowerWrapper flexCenter ga-15 mt-5">
       <div
         v-for="(item, index) in empower"
         :key="index"
@@ -133,7 +133,8 @@
   /* Desktop */
   @media only screen and (min-width: 1080px) {
     .empowerWrapper {
-      gap: 8vw !important;
+      width: 90% !important;
+      gap: 15vw !important;
       margin-top: 5vw !important;
     }
 
@@ -220,10 +221,6 @@
   }
 
   @media only screen and (min-width: 1600px) {
-    .empowerWrapper {
-      gap: 10vw !important;
-    }
-
     .empowerBody {
       padding-left: 1.5vw !important;
     }
@@ -239,6 +236,10 @@
   }
 
   @media only screen and (min-width: 1750px) {
+    .empowerWrapper {
+      gap: 12vw !important;
+    }
+
     .empower img {
       width: 25%;
       right: 10vw;
@@ -261,8 +262,8 @@
 
   @media only screen and (min-width: 1920px) {
     .empowerWrapper {
-      gap: 200px !important;
-      margin-top: 100px !important;
+      gap: 17.5rem !important;
+      margin-top: 7.5% !important;
     }
 
     .empowerBody {

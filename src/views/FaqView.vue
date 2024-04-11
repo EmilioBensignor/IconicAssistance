@@ -9,94 +9,90 @@
     </div>
   </section>
   <section class="skyRadioactive">
-    <div class="content">
-      <div class="w-75 faqView columnAlignCenter">
-        <h2 v-motion="scrollBottom" class="text-white">
-          Frequently Asked Questions
-        </h2>
-        <p
-          v-motion="scrollBottom"
-          class="searchLabel text-white font-weight-bold mt-5 mb-3">
-          How can we help?
+    <h2 v-motion="scrollBottom" class="text-white">
+      Frequently Asked Questions
+    </h2>
+    <p
+      v-motion="scrollBottom"
+      class="searchLabel text-white font-weight-bold mt-5 mb-3">
+      How can we help?
+    </p>
+    <v-form class="buscador rounded-xl">
+      <input
+        type="search"
+        name="faqSearch"
+        v-model="faqSearch"
+        class="w-100 inputSearch bg-white rounded-xl py-3 px-5 elevation-4"
+        placeholder="Type to search for a question"
+        hide-details />
+    </v-form>
+    <div class="w-75 categories columnAlignCenter ga-5 mt-5 mb-10">
+      <!-- Categories -->
+      <div
+        v-motion="scrollBottom"
+        class="column align-self-start text-start font-weight-bold text-white ga-3 filterCategories my-5">
+        <p class="w-100 filter text-white text-start mb-3">
+          Filter by the category you are looking for:
         </p>
-        <v-form class="w-100 buscador rounded-xl">
+        <label
+          class="labelCheckbox d-flex align-center ga-3"
+          for="Communication">
           <input
-            type="search"
-            name="faqSearch"
-            v-model="faqSearch"
-            class="w-100 inputSearch bg-white rounded-xl py-3 px-5 elevation-4"
-            placeholder="Type to search for a question"
-            hide-details />
-        </v-form>
-        <div class="categories columnAlignCenter ga-5 mt-5 mb-10">
-          <!-- Categories -->
-          <div
-            v-motion="scrollBottom"
-            class="column align-self-start text-start font-weight-bold text-white ga-3 filterCategories my-5">
-            <p class="w-100 filter text-white text-start mb-3">
-              Filter by the category you are looking for:
-            </p>
-            <label
-              class="labelCheckbox d-flex align-center ga-3"
-              for="Communication">
-              <input
-                id="Communication"
-                type="checkbox"
-                v-model="selectedCategories"
-                value="Communication" />
-              Communication
-            </label>
-            <label
-              class="labelCheckbox d-flex align-center ga-3"
-              for="GettingStarted">
-              <input
-                id="GettingStarted"
-                type="checkbox"
-                v-model="selectedCategories"
-                value="Getting Started" />
-              Getting Started
-            </label>
-            <label class="labelCheckbox d-flex align-center ga-3" for="Hiring">
-              <input
-                id="Hiring"
-                type="checkbox"
-                v-model="selectedCategories"
-                value="Hiring" />
-              Hiring
-            </label>
-            <label class="labelCheckbox d-flex align-center ga-3" for="Payment">
-              <input
-                id="Payment"
-                type="checkbox"
-                v-model="selectedCategories"
-                value="Payment" />
-              Payment
-            </label>
-          </div>
-          <!-- FAQs -->
-          <div class="w-100 faqDiv columnAlignCenter ga-5">
-            <v-expansion-panels
-              v-for="(item, index) in filteredFaqs"
-              :key="index"
-              v-motion="scrollBottom"
-              class="faqWrapper">
-              <v-expansion-panel
-                class="elevation-3"
-                :title="item.question"
-                expand-icon="mdi-plus"
-                collapse-icon="mdi-minus">
-                <v-expansion-panel-text class="py-2">
-                  <p>{{ item.answer }}</p>
-                  <ul class="column ga-3 pl-3 mt-3">
-                    <li v-for="(bullet, index) in item.bullets" :key="index">
-                      {{ bullet }}
-                    </li>
-                  </ul>
-                </v-expansion-panel-text>
-              </v-expansion-panel>
-            </v-expansion-panels>
-          </div>
-        </div>
+            id="Communication"
+            type="checkbox"
+            v-model="selectedCategories"
+            value="Communication" />
+          Communication
+        </label>
+        <label
+          class="labelCheckbox d-flex align-center ga-3"
+          for="GettingStarted">
+          <input
+            id="GettingStarted"
+            type="checkbox"
+            v-model="selectedCategories"
+            value="Getting Started" />
+          Getting Started
+        </label>
+        <label class="labelCheckbox d-flex align-center ga-3" for="Hiring">
+          <input
+            id="Hiring"
+            type="checkbox"
+            v-model="selectedCategories"
+            value="Hiring" />
+          Hiring
+        </label>
+        <label class="labelCheckbox d-flex align-center ga-3" for="Payment">
+          <input
+            id="Payment"
+            type="checkbox"
+            v-model="selectedCategories"
+            value="Payment" />
+          Payment
+        </label>
+      </div>
+      <!-- FAQs -->
+      <div class="w-100 faqDiv columnAlignCenter ga-5">
+        <v-expansion-panels
+          v-for="(item, index) in filteredFaqs"
+          :key="index"
+          v-motion="scrollBottom"
+          class="faqWrapper">
+          <v-expansion-panel
+            class="elevation-3"
+            :title="item.question"
+            expand-icon="mdi-plus"
+            collapse-icon="mdi-minus">
+            <v-expansion-panel-text class="py-2">
+              <p>{{ item.answer }}</p>
+              <ul class="column ga-3 pl-3 mt-3">
+                <li v-for="(bullet, index) in item.bullets" :key="index">
+                  {{ bullet }}
+                </li>
+              </ul>
+            </v-expansion-panel-text>
+          </v-expansion-panel>
+        </v-expansion-panels>
       </div>
     </div>
   </section>
@@ -157,6 +153,10 @@
     height: 7vw;
   }
 
+  .buscador{
+    width: 90%;
+  }
+
   /* SM */
   @media only screen and (min-width: 480px) {
     .searchLabel {
@@ -183,8 +183,8 @@
 
   /* Desktop */
   @media only screen and (min-width: 1080px) {
-    .faqView {
-      width: 100% !important;
+    .categories{
+      width: 85% !important;
     }
 
     .searchLabel {
@@ -212,9 +212,8 @@
   }
 
   @media only screen and (min-width: 1280px) {
-    .categories,
-    .buscador {
-      width: 120% !important;
+    .buscador{
+      width: 70%;
     }
 
     input[type="checkbox"] {
@@ -225,9 +224,8 @@
 
   /* XL */
   @media only screen and (min-width: 1440px) {
-    .categories,
-    .buscador {
-      width: 135% !important;
+    .categories{
+      width: 75% !important;
     }
 
     input[type="checkbox"] {
@@ -258,11 +256,10 @@
   }
 
   @media only screen and (min-width: 1750px) {
-        .categories,
-    .buscador {
-      width: 150% !important;
+    .buscador{
+      width: 60%;
     }
-    
+
     .labelCheckbox {
       font-size: 1.4rem;
     }
@@ -274,6 +271,13 @@
   }
 
   @media only screen and (min-width: 1920px) {
+    .buscador{
+      width: 50%;
+    }
+    .categories{
+      max-width: 1920px;
+    }
+    
     .searchLabel {
       margin: 20px 0 !important;
     }
