@@ -30,7 +30,7 @@
             </div>
             <div class="cardComparisonRow bg-blueSky">
               <div class="w-50">
-                <IconicLogo class="iconicLogo text-white shadow-25" />
+                <IconicLogo class="iconicLogo text-white" />
               </div>
               <div class="w-50 columnAlignCenter">
                 <p class="text-white font-weight-bold text-center">

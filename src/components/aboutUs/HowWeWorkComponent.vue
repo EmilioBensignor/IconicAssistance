@@ -30,7 +30,7 @@
               class="rounded-t-xl elevation-7"
               src="@/assets/images/aboutUs/Professional-Remote-Talent.png"
               alt="Professional Remote Talent"
-              width="85%" />
+              width="100%" />
             <div
               class="columnAlignCenter aboutModelCaption py-3 bg-white rounded-xl elevation-7">
               <p class="text-radioactive text-center">
@@ -162,7 +162,7 @@
   .aboutModelCaption {
     position: static;
     z-index: 1;
-    width: 85%;
+    width: 101%;
     border: 1px solid #373ae6;
     margin-top: -5vw;
   }
@@ -184,6 +184,15 @@
 
     .tool {
       width: 45%;
+    }
+  }
+
+  @media only screen and (min-width: 600px) {
+    .prosperityModel img{
+      width: 85%;
+    }
+    .aboutModelCaption{
+      width: 85%;
     }
   }
 

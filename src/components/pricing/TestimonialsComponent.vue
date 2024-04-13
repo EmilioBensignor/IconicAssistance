@@ -65,11 +65,12 @@
 
 <style scoped>
   .testimonialWrap {
-    width: 80% !important;
+    width: 85% !important;
     margin-bottom: 5vw !important;
   }
 
   .testimonial {
+    width: 90%;
     justify-content: space-between;
   }
 

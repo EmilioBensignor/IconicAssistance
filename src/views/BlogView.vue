@@ -29,7 +29,7 @@
             v-for="(item, index) in filteredBlogs"
             :key="index"
             v-motion="scrollBottom"
-            class="w-75 columnAlignCenter bg-white rounded-lg elevation-7">
+            class="columnAlignCenter bg-white rounded-lg elevation-7">
             <router-link :to="`/blog-post/${item.slug}`">
               <img
                 :src="getImgUrl(item.img)"

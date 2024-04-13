@@ -18,7 +18,7 @@
             </v-expansion-panel>
           </v-expansion-panels>
         </div>
-        <router-link class="w-75 secondaryButton mt-5 elevation-5" :to="'/faq'"
+        <router-link class="secondaryButton mt-5 elevation-5" :to="'/faq'"
           >View more Frequently Asked Questions</router-link
         >
       </div>
@@ -62,12 +62,12 @@
     margin-top: 3vw;
   }
 
-  .secondaryButton {
-    width: 50% !important;
+  .secondaryButton{
+    width: 90%;
   }
 
   .faq {
-    width: 60% !important;
+    width: 80% !important;
   }
 
   @media only screen and (min-width: 1080px) {

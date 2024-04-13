@@ -31,7 +31,7 @@
           <h2 v-motion="scrollBottom" class="text-midnight">Recent Posts</h2>
           <div class="w-75 recentBlogWrapper columnAlignCenter ga-10 py-5">
             <article v-for="(recentBlog, index) in recentBlogs" :key="index" v-motion="scrollBottom"
-              class="recentBlog text-start w-75 elevation-5 rounded-lg">
+              class="recentBlog text-start elevation-5 rounded-lg">
               <img :src="getImgUrl(recentBlog.img)" :alt="recentBlog.alt" class="rounded-t-lg" width="100%" />
               <div class="pa-3">
                 <p class="text-midnight mb-2">{{ recentBlog.title }}</p>
@@ -155,8 +155,15 @@ import { scrollBottom } from "@/motions.js";
     height: 675px;
   }
 
+  .recentBlogWrapper{
+    width: 90% !important;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
   .recentBlog {
-    width: 65% !important;
+    width: 35% !important;
   }
 }
 

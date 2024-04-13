@@ -14,7 +14,7 @@
       v-model="valid"
       validate-on="input lazy"
       @submit.prevent="submit"
-      class="w-75 content columnAlignCenter bg-white pa-5 rounded-xl">
+      class="content columnAlignCenter bg-white pa-5 rounded-xl">
       <div class="w-100 twoInput">
         <v-text-field
           v-model="leadData.firstName"
@@ -369,6 +369,10 @@
 </script>
 
 <style scoped>
+  .v-form{
+    width: 90%;
+  }
+
   .aclaration {
     text-align: start;
     font-size: 0.8rem;
@@ -442,6 +446,7 @@
   /* Desktop */
   @media only screen and (min-width: 1080px) {
     .v-form {
+      width: 80%;
       padding: 1vw 3vw 3vw 3vw !important;
     }
 
