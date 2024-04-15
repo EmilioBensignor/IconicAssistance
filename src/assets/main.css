@@ -11,8 +11,6 @@ body {
     color 0.5s,
     background-color 0.5s;
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .v-carousel__controls__item.v-btn.v-btn--icon.v-btn--active{
