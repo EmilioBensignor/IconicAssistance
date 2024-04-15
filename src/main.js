@@ -34,6 +34,10 @@ const vuetify = createVuetify({
 	},
 });
 
+if (typeof process !== 'undefined') {
+	require("@vue/server-renderer");
+}
+
 const app = createApp(App);
 
 app.use(router);
