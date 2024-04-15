@@ -20,5 +20,6 @@ export default defineConfig({
         robots: path.resolve(__dirname, 'robots.txt')
       }
     }
-  }
+  },
+  assetsInclude: ['**/*.xml', '**/*.txt']
 })
