@@ -1,7 +1,6 @@
 import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import path from 'path'
 
 export default defineConfig({
   plugins: [
@@ -12,14 +11,4 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
-  build: {
-    rollupOptions: {
-      input: {
-        main: path.resolve(__dirname, 'index.html'),
-        sitemap: path.resolve(__dirname, 'sitemap.xml'),
-        robots: path.resolve(__dirname, 'robots.txt')
-      }
-    }
-  },
-  assetsInclude: ['**/*.xml', '**/*.txt']
 })
