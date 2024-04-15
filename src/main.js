@@ -4,7 +4,7 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import { MotionPlugin } from "@vueuse/motion";
 import router from "./router";
-import { createMetaManager } from "vue-meta";
+// import { createMetaManager } from "vue-meta";
 
 // Vuetify
 import "vuetify/styles";
@@ -39,6 +39,6 @@ const app = createApp(App);
 app.use(router);
 app.use(vuetify);
 app.use(MotionPlugin);
-app.use(createMetaManager());
+// app.use(createMetaManager());
 
 app.mount("#app");
