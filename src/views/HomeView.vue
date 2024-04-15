@@ -75,6 +75,7 @@
   import FAQsComponent from "@/components/home/FAQsComponent.vue";
 
   export default {
+    name: 'Home',
     components: {
       HeaderTransparentComponent,
       WhoWeAreComponent,

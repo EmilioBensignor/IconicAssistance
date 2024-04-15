@@ -48,6 +48,7 @@
   import EmpowerComponent from "@/components/services/EmpowerComponent.vue";
 
   export default {
+    name: 'Services',
     components: {
       HeaderPagesComponent,
       EmpowerComponent,

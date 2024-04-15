@@ -20,6 +20,7 @@
   import BenefitsComponent from "@/components/whatIsVa/BenefitsComponent.vue";
 
   export default {
+    name: 'WhatIsVA',
     components: {
       HeaderPagesComponent,
       WhatAreVAComponent,

@@ -50,6 +50,7 @@ import { blogs } from "@/cms/blogs.service.js";
 import HeaderTransparentComponent from "@/components/HeaderTransparentComponent.vue";
 
 export default {
+  name: 'BlogPost',
   components: {
     HeaderTransparentComponent,
   },

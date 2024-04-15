@@ -20,6 +20,7 @@
   import CandidateCriteriaComponent from "@/components/howWeHire/CandidateCriteriaComponent.vue";
 
   export default {
+    name: 'HowWeHire',
     components: {
       HeaderPagesComponent,
       ExceptionalSkillComponent,

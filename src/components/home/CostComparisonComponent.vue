@@ -162,7 +162,7 @@
   .saveIcon {
     position: absolute;
     margin: 0 auto;
-    bottom: 0;
+    bottom: 1.5vw;
   }
 
   .costComparisonAclaration p {
@@ -172,9 +172,34 @@
 
   /* SM */
   @media only screen and (min-width: 480px) {
+    .comparisonItem p {
+      font-size: 1.1rem;
+    }
+
+    .saveIcon {
+      bottom: 1vw;
+    }
 
     .costComparisonAclaration p {
       font-size: 0.85rem;
+    }
+  }
+
+  @media only screen and (min-width: 520px) {
+    .saveIcon {
+      bottom: 0.5vw;
+    }
+  }
+
+  @media only screen and (min-width: 650px) {
+    .saveIcon {
+      bottom: -0.5vw;
+    }
+  }
+
+  @media only screen and (min-width: 700px) {
+    .comparisonItem p {
+      font-size: 1.2rem;
     }
   }
 
@@ -185,9 +210,24 @@
     }
   }
 
+  @media only screen and (min-width: 800px) {
+    .saveIcon {
+      bottom: -1.5vw;
+    }
+  }
+
+  @media only screen and (min-width: 920px) {
+    .comparisonItem p {
+      font-size: 1.3rem;
+    }
+
+    .saveIcon {
+      bottom: -2vw;
+    }
+  }
+
   /* LG */
   @media only screen and (min-width: 992px) {
-
     .comparisonItem {
       height: 20vh;
     }
@@ -205,11 +245,11 @@
     }
 
     .saveIcon {
-      margin-bottom: -3vw !important;
+      margin-bottom: -2vw !important;
     }
 
     .saveIcon img {
-      width: 65%;
+      width: 90%;
     }
   }
 
@@ -231,8 +271,8 @@
       font-size: 1.2rem;
     }
 
-    .saveIcon img {
-      width: 75%;
+    .saveIcon {
+      margin-bottom: -1vw !important;
     }
   }
 
@@ -252,13 +292,20 @@
 
   /* XL */
   @media only screen and (min-width: 1440px) {
-
     .comparisonItem {
       height: 15vh;
     }
 
     .costComparisonAclaration {
       width: 65% !important;
+    }
+
+    .costComparisonAclaration p {
+      font-size: 1.1rem;
+    }
+
+    .saveIcon {
+      margin-bottom: 0 !important;
     }
   }
 
@@ -271,10 +318,6 @@
       height: 16vh;
     }
 
-    .saveIcon {
-      margin-bottom: -2.5vw !important;
-    }
-
     .costComparisonAclaration {
       width: 60% !important;
     }
@@ -285,9 +328,21 @@
       height: 15vh;
     }
 
+    .comparisonItem p {
+      font-size: 1.6rem;
+    }
+
+    .category p {
+      font-size: 1.4rem;
+    }
+
     .costComparisonAclaration {
       margin-top: 3vw !important;
       margin-bottom: 2vw !important;
+    }
+
+    .costComparisonAclaration p {
+      font-size: 1.2rem;
     }
   }
 
@@ -301,8 +356,16 @@
       height: 138px;
     }
 
+    .comparisonItem p {
+      font-size: 1.8rem;
+    }
+
     .category {
       width: 75%;
+    }
+
+    .category p {
+      font-size: 1.5rem;
     }
 
     .costComparisonAclaration {

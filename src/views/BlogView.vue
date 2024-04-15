@@ -59,6 +59,7 @@
   import HeaderPagesComponent from "@/components/HeaderPagesComponent.vue";
 
   export default {
+    name: 'Blog',
     components: {
       HeaderPagesComponent,
     },

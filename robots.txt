@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /privado/
+Sitemap: https://www.iconicassistants.com/sitemap.xml

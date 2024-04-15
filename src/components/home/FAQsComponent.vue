@@ -236,6 +236,10 @@
 </script>
 
 <style scoped>
+  .faqHome{
+    width: 80%;
+  }
+
   .FAQLink {
     text-decoration: none;
     color: #373ae6;

@@ -20,6 +20,7 @@
   import PerfectMatchComponent from "@/components/beforeYouStart/PerfectMatchComponent.vue";
 
   export default {
+    name: 'BeforeYouStart',
     components: {
       HeaderPagesComponent,
       OpportunitiesComponent,

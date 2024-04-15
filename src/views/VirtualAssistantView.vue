@@ -67,6 +67,7 @@ import { vaTypes } from "@/cms/typesva.service.js";
 import HeaderPagesComponent from "@/components/HeaderPagesComponent.vue";
 
 export default {
+  name: 'VirtualAssistant',
   components: {
     HeaderPagesComponent,
   },

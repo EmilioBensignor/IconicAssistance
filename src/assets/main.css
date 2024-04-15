@@ -1,27 +1,20 @@
-@import './base.css';
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
 }
 
-.v-carousel__controls__item.v-btn.v-btn--icon{
-  width: 3vw;
-  height: 3vw;
+body {
+  min-height: 100vh;
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .v-carousel__controls__item.v-btn.v-btn--icon.v-btn--active{
   background-color: white;
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
 }

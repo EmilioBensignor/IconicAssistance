@@ -27,6 +27,7 @@
   import TestimonialsComponent from "@/components/pricing/TestimonialsComponent.vue";
 
   export default {
+    name: 'Pricing',
     components: {
       HeaderPagesComponent,
       PricingComponent,

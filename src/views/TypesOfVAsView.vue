@@ -17,6 +17,7 @@
   import TestimonialsComponentVue from "@/components/typesOfVa/TestimonialsComponent.vue";
 
   export default {
+    name: 'TypesOfVas',
     components: {
       HeaderPagesComponent,
       OurServiceComponentVue,

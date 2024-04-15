@@ -28,6 +28,7 @@
   import HowItWorksComponent from "@/components/aboutUs/HowItWorksComponent.vue";
 
   export default {
+    name: 'AboutUs',
     components: {
       HeaderPagesComponent,
       AboutUsComponent,

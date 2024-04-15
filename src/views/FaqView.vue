@@ -103,6 +103,7 @@
   import HeaderPagesComponent from "@/components/HeaderPagesComponent.vue";
 
   export default {
+    name: 'Faq',
     components: {
       HeaderPagesComponent,
     },
