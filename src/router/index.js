@@ -22,12 +22,9 @@ const routes = [
     component: HomeView,
     meta: {
       title: 'Home',
-      metaTags: [
-        {
-          name: 'description',
-          content: 'Welcome Home',
-        }
-      ],
+      metaTags: {
+        description: "Outsource Anything with Iconic Assistants. Leading the way in remote staffing solutions, the top choice for your outsourcing needs. Starting at $9.55/Hr.",
+      }
     }
   },
   {
@@ -36,12 +33,9 @@ const routes = [
     component: AboutUsView,
     meta: {
       title: 'About us',
-      metaTags: [
-        {
-          name: 'description',
-          content: 'Welcome About us',
-        }
-      ],
+      metaTags: {
+        description: "Discover Iconic Assistants – Your Trusted Partner in Virtual Professional Solutions.",
+      }
     }
   },
   {
@@ -50,12 +44,9 @@ const routes = [
     component: HowItWorksView,
     meta: {
       title: 'How it works',
-      metaTags: [
-        {
-          name: 'description',
-          content: 'Welcome How it works',
-        }
-      ],
+      metaTags: {
+        description: "Simplified Excellence – Explore How Iconic Assistants Transforms Your Operations.",
+      }
     }
   },
   {
@@ -64,12 +55,9 @@ const routes = [
     component: HowWeHireView,
     meta: {
       title: 'How we hire',
-      metaTags: [
-        {
-          name: 'description',
-          content: 'Welcome How we hire',
-        }
-      ],
+      metaTags: {
+        description: "Exclusively Top Talent – Learn About Iconic Assistants' Rigorous Hiring Process.",
+      }
     }
   },
   {
@@ -78,12 +66,9 @@ const routes = [
     component: FaqView,
     meta: {
       title: 'Faq',
-      metaTags: [
-        {
-          name: 'description',
-          content: 'Welcome Faq',
-        }
-      ],
+      metaTags: {
+        description: "Got Questions? Find Answers Here – Iconic Assistants' Frequently Asked Questions.",
+      }
     }
   },
   {
@@ -92,12 +77,9 @@ const routes = [
     component: WhatIsVAView,
     meta: {
       title: 'What is a va',
-      metaTags: [
-        {
-          name: 'description',
-          content: 'Welcome What is a va',
-        }
-      ],
+      metaTags: {
+        description: "Unlocking Efficiency – Understanding the Role of Virtual Assistants with Iconic.",
+      }
     }
   },
   {
@@ -106,12 +88,9 @@ const routes = [
     component: TypesOfVAsView,
     meta: {
       title: 'Types of va',
-      metaTags: [
-        {
-          name: 'description',
-          content: 'Welcome Types of va',
-        }
-      ],
+      metaTags: {
+        description: "Tailored Solutions – Explore the Diverse Virtual Assistant Specializations at Iconic.",
+      }
     }
   },
   {
@@ -120,12 +99,9 @@ const routes = [
     component: VirtualAssistantView,
     meta: {
       title: 'Virtual assistant',
-      metaTags: [
-        {
-          name: 'description',
-          content: 'Welcome Virtual assistant',
-        }
-      ],
+      metaTags: {
+        description: "Precision in recruitment, efficient payroll management. Unlock skills in HR, admin, marketing, support, and more.",
+      },
     }
   },
   {
@@ -134,12 +110,9 @@ const routes = [
     component: BeforeYouStartView,
     meta: {
       title: 'Before you start',
-      metaTags: [
-        {
-          name: 'description',
-          content: 'Welcome Before you start',
-        }
-      ],
+      metaTags: {
+        description: "Preparing for Success – Key Steps Before Diving into Iconic Assistants' Services.",
+      }
     }
   },
   {
@@ -148,12 +121,9 @@ const routes = [
     component: BlogView,
     meta: {
       title: 'Blog',
-      metaTags: [
-        {
-          name: 'description',
-          content: 'Welcome Blog',
-        }
-      ],
+      metaTags: {
+        description: "Insights and Trends – Stay Informed with Iconic Assistants' Virtual Assistant Blog.",
+      }
     }
   },
   {
@@ -162,12 +132,9 @@ const routes = [
     component: BlogPostView,
     meta: {
       title: 'Blog post',
-      metaTags: [
-        {
-          name: 'description',
-          content: 'Welcome Blog post',
-        }
-      ],
+      metaTags: {
+        description: "Insights and Trends – Stay Informed with Iconic Assistants' Virtual Assistant Blog.",
+      }
     }
   },
   // {
@@ -185,12 +152,9 @@ const routes = [
     component: ServicesView,
     meta: {
       title: 'Services',
-      metaTags: [
-        {
-          name: 'description',
-          content: 'Welcome Services',
-        }
-      ],
+      metaTags: {
+        description: "Elevate your business to new heights with our comprehensive all-in-one service, covering remote talent recruitment, overseas payroll, security compliance and expert support. Partner with us and discover a strategic ally dedicated to ensuring your seamless growth journey.",
+      },
     }
   },
   {
@@ -199,12 +163,9 @@ const routes = [
     component: PricingView,
     meta: {
       title: 'Pricing',
-      metaTags: [
-        {
-          name: 'description',
-          content: 'Welcome Pricing',
-        }
-      ],
+      metaTags: {
+        description: "Transparent Solutions – Explore Iconic Assistants' Competitive Virtual Assistant Pricing.",
+      },
     }
   },
   {
@@ -213,12 +174,9 @@ const routes = [
     component: ContactUsView,
     meta: {
       title: 'Contact us',
-      metaTags: [
-        {
-          name: 'description',
-          content: 'Welcome Contact us',
-        }
-      ],
+      metaTags: {
+        description: "Connect with Us – Let's Discuss Your Business Needs with Iconic Assistants.",
+      },
     }
   },
   {
@@ -242,7 +200,18 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
   document.title = `${to.meta.title}`;
+  const nearestWithTitle = to.matched.slice().reverse().find(r => r.meta && r.meta.title);
+  const nearestWithMeta = to.matched.slice().reverse().find(r => r.meta && r.meta.metaTags);
+
+  if (nearestWithMeta) {
+    const metaDescription = nearestWithMeta.meta.metaTags.description;
+    document.querySelector('meta[name="description"]').setAttribute('content', metaDescription);
+  } else if (nearestWithTitle) {
+    document.querySelector('meta[name="description"]').removeAttribute('content');
+  }
+
   next();
 });
+
 
 export default router;
