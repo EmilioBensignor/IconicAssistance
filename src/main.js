@@ -4,8 +4,6 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import { MotionPlugin } from "@vueuse/motion";
 import router from "./router";
-import { createHead } from '@vueuse/head';
-const head = createHead()
 
 // Vuetify
 import "vuetify/styles";
@@ -40,6 +38,5 @@ const app = createApp(App);
 app.use(router);
 app.use(vuetify);
 app.use(MotionPlugin);
-app.use(head);
 
 app.mount("#app");
