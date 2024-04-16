@@ -13,6 +13,8 @@ import BlogPostView from '../views/BlogPostView.vue'
 import ServicesView from '../views/ServicesView.vue'
 import PricingView from '../views/PricingView.vue'
 import ContactUsView from '../views/ContactUsView.vue'
+import PrivacyPolicyView from '../views/PrivacyPolicyView.vue'
+import TermsUseView from '../views/TermsUseView.vue'
 import Error404View from '../views/Error404View.vue'
 
 const routes = [
@@ -176,6 +178,28 @@ const routes = [
       title: 'Contact us',
       metaTags: {
         description: "Connect with Us – Let's Discuss Your Business Needs with Iconic Assistants.",
+      },
+    }
+  },
+  {
+    path: '/privacy',
+    name: 'PrivacyPolicy',
+    component: PrivacyPolicyView,
+    meta: {
+      title: 'Privacy Policy',
+      metaTags: {
+        description: "Privacy Policy - Iconic Assistants",
+      },
+    }
+  },
+  {
+    path: '/terms',
+    name: 'TermsUse',
+    component: TermsUseView,
+    meta: {
+      title: 'Terms of use',
+      metaTags: {
+        description: "Terms of use - Iconic Assistants",
       },
     }
   },
