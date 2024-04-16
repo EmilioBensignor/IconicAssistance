@@ -23,7 +23,7 @@ const routes = [
     name: 'Home',
     component: HomeView,
     meta: {
-      title: 'Home',
+      title: 'Iconic Virtual Asssitants',
       metaTags: {
         description: "Outsource Anything with Iconic Assistants. Leading the way in remote staffing solutions, the top choice for your outsourcing needs. Starting at $9.55/Hr.",
       }
@@ -34,7 +34,7 @@ const routes = [
     name: 'AboutUs',
     component: AboutUsView,
     meta: {
-      title: 'About us',
+      title: 'About Us - Iconic Assistants',
       metaTags: {
         description: "Discover Iconic Assistants – Your Trusted Partner in Virtual Professional Solutions.",
       }
@@ -45,7 +45,7 @@ const routes = [
     name: 'HowItWorks',
     component: HowItWorksView,
     meta: {
-      title: 'How it works',
+      title: 'How It Works - Iconic Assistants',
       metaTags: {
         description: "Simplified Excellence – Explore How Iconic Assistants Transforms Your Operations.",
       }
@@ -56,7 +56,7 @@ const routes = [
     name: 'HowWeHire',
     component: HowWeHireView,
     meta: {
-      title: 'How we hire',
+      title: 'How We Hire - Iconic Assistants',
       metaTags: {
         description: "Exclusively Top Talent – Learn About Iconic Assistants' Rigorous Hiring Process.",
       }
@@ -67,7 +67,7 @@ const routes = [
     name: 'Faq',
     component: FaqView,
     meta: {
-      title: 'Faq',
+      title: 'FAQ - Iconic Assistants',
       metaTags: {
         description: "Got Questions? Find Answers Here – Iconic Assistants' Frequently Asked Questions.",
       }
@@ -78,7 +78,7 @@ const routes = [
     name: 'WhatIsVA',
     component: WhatIsVAView,
     meta: {
-      title: 'What is a va',
+      title: 'What Is a VA - Iconic Assistants',
       metaTags: {
         description: "Unlocking Efficiency – Understanding the Role of Virtual Assistants with Iconic.",
       }
@@ -89,7 +89,7 @@ const routes = [
     name: 'TypesOfVAs',
     component: TypesOfVAsView,
     meta: {
-      title: 'Types of va',
+      title: 'Types of VAs - Iconic Assistants',
       metaTags: {
         description: "Tailored Solutions – Explore the Diverse Virtual Assistant Specializations at Iconic.",
       }
@@ -100,7 +100,7 @@ const routes = [
     name: 'VirtualAssistant',
     component: VirtualAssistantView,
     meta: {
-      title: 'Virtual assistant',
+      title: 'Virtual Assistant - Iconic Assistants',
       metaTags: {
         description: "Precision in recruitment, efficient payroll management. Unlock skills in HR, admin, marketing, support, and more.",
       },
@@ -111,7 +111,7 @@ const routes = [
     name: 'BeforeYouStart',
     component: BeforeYouStartView,
     meta: {
-      title: 'Before you start',
+      title: 'Before You Start - Iconic Assistants',
       metaTags: {
         description: "Preparing for Success – Key Steps Before Diving into Iconic Assistants' Services.",
       }
@@ -122,7 +122,7 @@ const routes = [
     name: 'Blog',
     component: BlogView,
     meta: {
-      title: 'Blog',
+      title: 'Blog - Iconic Assistants',
       metaTags: {
         description: "Insights and Trends – Stay Informed with Iconic Assistants' Virtual Assistant Blog.",
       }
@@ -133,7 +133,7 @@ const routes = [
     name: 'BlogPost',
     component: BlogPostView,
     meta: {
-      title: 'Blog post',
+      title: 'Blog Post - Iconic Assistants',
       metaTags: {
         description: "Insights and Trends – Stay Informed with Iconic Assistants' Virtual Assistant Blog.",
       }
@@ -153,7 +153,7 @@ const routes = [
     name: 'Services',
     component: ServicesView,
     meta: {
-      title: 'Services',
+      title: 'Services - Iconic Assistants',
       metaTags: {
         description: "Elevate your business to new heights with our comprehensive all-in-one service, covering remote talent recruitment, overseas payroll, security compliance and expert support. Partner with us and discover a strategic ally dedicated to ensuring your seamless growth journey.",
       },
@@ -164,7 +164,7 @@ const routes = [
     name: 'Pricing',
     component: PricingView,
     meta: {
-      title: 'Pricing',
+      title: 'Pricing - Iconic Assistants',
       metaTags: {
         description: "Transparent Solutions – Explore Iconic Assistants' Competitive Virtual Assistant Pricing.",
       },
@@ -175,7 +175,7 @@ const routes = [
     name: 'ContactUs',
     component: ContactUsView,
     meta: {
-      title: 'Contact us',
+      title: 'Contact Us - Iconic Assistants',
       metaTags: {
         description: "Connect with Us – Let's Discuss Your Business Needs with Iconic Assistants.",
       },
@@ -186,7 +186,7 @@ const routes = [
     name: 'PrivacyPolicy',
     component: PrivacyPolicyView,
     meta: {
-      title: 'Privacy Policy',
+      title: 'Privacy Policy - Iconic Assistants',
       metaTags: {
         description: "Privacy Policy - Iconic Assistants",
       },
@@ -197,7 +197,7 @@ const routes = [
     name: 'TermsUse',
     component: TermsUseView,
     meta: {
-      title: 'Terms of use',
+      title: 'Terms of Use - Iconic Assistants',
       metaTags: {
         description: "Terms of use - Iconic Assistants",
       },
@@ -208,7 +208,7 @@ const routes = [
     name: 'Error404',
     component: Error404View,
     meta: {
-      title: 'Error 404',
+      title: 'Error 404 - Iconic Assistants',
     }
   },
   {
