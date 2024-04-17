@@ -25,7 +25,7 @@ const routes = [
     meta: {
       title: 'Iconic Virtual Asssitants',
       metaTags: {
-        description: "Outsource Anything with Iconic Assistants. Leading the way in remote staffing solutions, the top choice for your outsourcing needs. Starting at $9.55/Hr.",
+        description: "Iconic Assistants supercharge productivity for entrepreneurs, executives, startups, and high growth companies.",
       }
     }
   },
@@ -36,7 +36,7 @@ const routes = [
     meta: {
       title: 'About Us - Iconic Assistants',
       metaTags: {
-        description: "Discover Iconic Assistants – Your Trusted Partner in Virtual Professional Solutions.",
+        description: "Iconic Assistants supercharge productivity for entrepreneurs, executives, startups, and high growth companies.",
       }
     }
   },
@@ -155,7 +155,7 @@ const routes = [
     meta: {
       title: 'Services - Iconic Assistants',
       metaTags: {
-        description: "Elevate your business to new heights with our comprehensive all-in-one service, covering remote talent recruitment, overseas payroll, security compliance and expert support. Partner with us and discover a strategic ally dedicated to ensuring your seamless growth journey.",
+        description: "Elevate your business to new heights with our Virtual Assistant services, covering remote talent recruitment, overseas payroll and expert support.",
       },
     }
   },
