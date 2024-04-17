@@ -119,7 +119,7 @@ export default {
   }
 
   .different {
-    height: 43vw;
+    height: 44vw;
   }
 
   .different p {
@@ -133,6 +133,17 @@ export default {
 
   .different .v-img {
     width: 60% !important;
+  }
+}
+
+@media only screen and (min-width: 1024px){
+  .different {
+    height: 42vw;
+  }
+}
+@media only screen and (min-width: 1074px){
+  .different {
+    height: 38vw;
   }
 }
 

@@ -6,7 +6,7 @@
         <h2 v-motion="scrollBottom" class="text-white">
           Tailored For Your Success
         </h2>
-        <div class="threeTailor columnAlignCenter py-3 px-2 ga-5">
+        <div class="threeTailor columnAlignCenter pt-3 px-2 ga-5">
           <div
             class="tailor flexCenter text-white w-75 ga-2 mt-10"
             v-for="(item, index) in tailoredServices"
@@ -23,7 +23,7 @@
             <div class="w-75 bg-white mt-10 whiteLine"></div>
           </div>
         </div>
-        <div class="tellUsWrapper my-5 columnAlignCenter ga-2 w-100">
+        <div class="tellUsWrapper mb-5 columnAlignCenter ga-2 w-100">
           <p v-motion="scrollBottom" class="text-white font-weight-bold tellUs">
             Tell us what you need!
           </p>
@@ -126,7 +126,7 @@
     }
 
     .tailor {
-      height: 60vh !important;
+      height: 55vh !important;
       margin-top: 0 !important;
     }
 
@@ -146,7 +146,7 @@
   /* Desktop */
   @media only screen and (min-width: 1080px) {
     .tailor {
-      height: 58vh !important;
+      height: 57vh !important;
     }
 
     .tailoredTitle {
@@ -192,7 +192,7 @@
       margin-top: 100px;
     }
     .tailor {
-      height: 527px !important;
+      height: 520px !important;
     }
     .tailor .v-img {
       width: 50% !important;
