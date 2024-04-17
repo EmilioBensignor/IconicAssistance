@@ -1,13 +1,13 @@
 <template>
-  <section class="bottomRadioactiveWave">
+  <section class="skyRadioactiveWaves">
     <div class="content">
       <div class="columnAlignCenter">
         <p v-motion="scrollBottom" class="subtitle text-radioactive">
           How It Works
         </p>
         <h2 v-motion="scrollBottom" class="text-midnight">
-          How Our
-          <span class="text-radioactive">Remote Talent Service</span> Works
+          Four simple steps to get an 
+          <span class="text-radioactive">Iconic Assistant</span>
         </h2>
         <div class="works columnAlignCenter ga-10 mt-5 mb-3">
           <div class="w-75 step12 columnAlignCenter ga-10">
@@ -74,14 +74,14 @@
             img: "misc/Book-Appointment.png",
             alt: "Book an Appointment",
             title: "Book an Appointment",
-            body: "Share all the essential details about your business and specify the tasks you'd like to assign.",
+            body: "Share all the essential details about your business and specify the tasks you'd like to delegate.",
           },
           {
             number: "2.",
             img: "misc/Pre-vetted-Recruitment.png",
             alt: "Pre-vetted Recruitment",
             title: "Recruitment",
-            body: "We'll identify the top VAs for you and our HR Manager will handle your VA interviews.",
+            body: "We handle al HR task and focus on finding the perfect match for you.",
           },
           {
             number: "3.",
@@ -95,7 +95,7 @@
             img: "misc/Ongoing-Support.png",
             alt: "Ongoing Support",
             title: "Ongoing Support",
-            body: "After selecting your VA, we'll take care of all HR-related matters, including payroll and performance reviews.",
+            body: "We continuously assist you through proper delegation and optimization.",
           },
         ],
       };
@@ -226,6 +226,7 @@
   /* Desktop */
   @media only screen and (min-width: 1080px) {
     .step {
+      width: 100% !important;
       height: 33vh;
     }
 

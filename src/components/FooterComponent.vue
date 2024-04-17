@@ -43,14 +43,13 @@
               <p class="footerTitle">Learn</p>
               <div class="column">
                 <router-link :to="'/what-is-a-va'">What is a VA</router-link>
-                <router-link :to="'/types-of-vas'">Types of VA</router-link>
                 <router-link :to="'/before-you-start'">Before you Start</router-link>
                 <router-link :to="'/blog'">Blog</router-link>
               </div>
             </div>
             <div class="d-flex flex-column">
               <router-link class="footerTitle" :to="'/services'">Services</router-link>
-              <router-link class="footerTitle" :to="'/pricing'">Pricing</router-link>
+              <router-link class="footerTitle" :to="'/types-of-vas'">Types of VAs</router-link>
             </div>
           </div>
         </div>

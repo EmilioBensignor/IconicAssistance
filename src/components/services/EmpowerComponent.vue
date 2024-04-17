@@ -58,7 +58,7 @@
             advantages: [
               "<span class='font-weight-bold'>Efficiency:</span> Streamlined recruitment process.",
               "<span class='font-weight-bold'>Thoroughness:</span> Background checks and <span class='font-weight-bold'>PDA Assessment.</span>",
-              "<span class='font-weight-bold'>Rapid Acquisition:</span> 10 to 20 business days for the perfect match.",
+              "<span class='font-weight-bold'>Rapid Acquisition:</span> 5 to 7 days for the perfect match.",
             ],
             moreInfo:
               "Entrust recruitment complexity to our seasoned HR team. With decades of expertise, our talent pool of vetted remote professionals ensures swift acquisition, taking just 10 to 20 business days. Experience success with our guiding team.",

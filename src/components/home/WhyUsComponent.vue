@@ -1,5 +1,5 @@
 <template>
-  <section class="topRadioactiveWave">
+  <section class="radioactiveWaves">
     <div class="content">
       <div class="columnAlignCenter">
         <p v-motion="scrollBottom" class="subtitle text-radioactive">Why us?</p>

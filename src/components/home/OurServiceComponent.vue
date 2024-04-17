@@ -51,7 +51,7 @@
             img: "tailoredServices/Recruitment-Expertise-Pre-Vetted Proffesionals.png",
             alt: "Recruitment Expertise Pre-Vetted Proffesionals",
             title: "Recruitment",
-            body: "We source the <span class=font-weight-bold>finest remote talent</span> from our extensive, <span class=font-weight-bold>pre-vetted</span> candidate pool. Our thorough process ensures a <span class=font-weight-bold>perfect match</span> for your needs within 10 to 20 business days.",
+            body: "We source the <span class=font-weight-bold>finest remote talent</span> from our extensive, <span class=font-weight-bold>pre-vetted</span> candidate pool. Our thorough process ensures a <span class=font-weight-bold>perfect match</span> for your needs within 5 to 7 days.",
           },
           {
             img: "tailoredServices/Payroll-Experience-Remote-Talent.png",
@@ -62,8 +62,8 @@
           {
             img: "tailoredServices/Compliance-Outsource-Remote-Talent.png",
             alt: "Compliance Outsource Remote Talent",
-            title: "Analytics & Compliance",
-            body: "Benefit from <span class=font-weight-bold>continuous support</span> with our dedicated Client Success Agents. We guide you through <span class=font-weight-bold>onboarding</span>, providing you with metrics and reports ensuring both <span class=font-weight-bold>satisfaction</span> and <span class='font-weight-bold text-decoration-underline'>compliance</span>.",
+            title: "Tailored Support",
+            body: "Benefit from <span class=font-weight-bold>continuous support</span> with our dedicated Customer Success Agents. We guide you through <span class=font-weight-bold>onboarding</span>, and periodically check up on your <span class=font-weight-bold>progress</span> towards <span class=font-weight-bold>growth.</span>",
           },
         ],
       };

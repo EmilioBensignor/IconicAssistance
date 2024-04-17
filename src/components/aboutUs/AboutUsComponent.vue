@@ -5,7 +5,7 @@
         <div class="aboutUsLeft w-75 columnAlignCenter ga-5 mt-3">
           <p v-motion="scrollBottom" class="subtitle text-white">About Us</p>
           <h2 v-motion="scrollBottom" class="text-white py-1">
-            An American Enterprise Dedicated To Assisting You In The Expansion
+            An American Company Dedicated To Assisting You In The Expansion
             Of Your Business
           </h2>
           <img
@@ -67,7 +67,7 @@
       display: flex;
       flex-direction: row;
       gap: 3vw;
-      padding: 0 10vw;
+      padding: 0 5vw;
     }
 
     .aboutRight,

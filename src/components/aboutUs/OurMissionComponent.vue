@@ -17,23 +17,22 @@
           </div>
           <ul class="w-75 tasks flexCenter text-white ga-5">
             <li v-motion="scrollBottom">
-              Make high-quality outsourcing accessible to all indsutries
+              Make <span class="font-weight-bold">high-quality</span> outsourcing accessible to all indsutries
             </li>
             <li v-motion="scrollBottom">
-              Provide cost-effective solutions without compromising excellence
+              Provide <span class="font-weight-bold">cost-effective</span> solutions without compromising excellence
             </li>
             <li v-motion="scrollBottom">
-              Commitment to maintaining the highest quality and performance
+              Commitment to maintaining the highest quality and <span class="font-weight-bold">performance</span>
             </li>
             <li v-motion="scrollBottom">
-              Ensure emerging businesses and entrepreneurs can access top-tier
-              support
+              Ensure emerging businesses and entrepreneurs can access <span class="font-weight-bold">top-tier support</span>
             </li>
             <li v-motion="scrollBottom">
-              Support businesses' thrive and expansion
+              Support businesses' thrive and <span class="font-weight-bold">expansion</span>
             </li>
             <li v-motion="scrollBottom">
-              Invite businesses to join our mission for outsourcing excellence
+              Invite businesses to join our mission for outsourcing <span class="font-weight-bold">excellence</span>
             </li>
           </ul>
         </div>
@@ -79,7 +78,7 @@
       text-align: start;
       gap: 1vw !important;
       font-weight: 500;
-      list-style: circle;
+      list-style: outside;
     }
   }
 

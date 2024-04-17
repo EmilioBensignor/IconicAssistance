@@ -11,7 +11,7 @@
               Your Prosperity, Our Approach
             </h2>
             <p v-motion="scrollBottom" class="w-75 textHowWeWorkRight py-2">
-              When collaborating with us, be confident that you'll receive the
+              When partnering with us, be confident that you'll receive the
               utmost professionalism and expertise. Our remote talent undergo
               rigorous training and possess extensive experience across various
               domains, such as administrative support, marketing, customer

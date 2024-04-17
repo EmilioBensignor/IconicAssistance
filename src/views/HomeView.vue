@@ -24,13 +24,11 @@
       <div class="overlay"></div>
       <div class="hero flexCenter ga-5">
         <h1 class="text-white">
-          Outsource Anything with
+          Hire Top Remote Talent with
           <span class="text-blueSky">ICONIC ASSISTANTS</span>
         </h1>
         <p class="text-landing text-center text-white">
-          Leading the way in remote staffing solutions, the top choice for your
-          outsourcing needs.
-          <span class="font-weight-bold">Starting at $9.55/Hr.</span>
+          Leading the way in Virtual Assistant solutions, the top choice for your outsourcing needs.
         </p>
         <a
           href=""
@@ -43,11 +41,11 @@
   </section>
   <WhoWeAreComponent />
   <WhyUsComponent />
-  <HowItWorksComponent />
   <OurServiceComponent />
-  <CostComparisonComponent />
+  <HowItWorksComponent />
   <IndustriesComponent />
-  <section class="skyBlueWaves">
+  <CostComparisonComponent />
+  <!-- <section class="skyBlueWaves">
     <p v-motion="scrollBottom" class="subtitle text-radioactive">Pricing</p>
     <h2 v-motion="scrollBottom" class="text-midnight">
       Select A Plan Now To Get More Done
@@ -58,7 +56,7 @@
       class="secondaryButton mt-5 mb-3 elevation-5"
       >Get a Free Consultation</router-link
     >
-  </section>
+  </section> -->
   <FAQsComponent />
 </template>
 

@@ -137,7 +137,7 @@
           {
             number: 1,
             title: "Time to hire",
-            iconic: "7-15 Days",
+            iconic: "5-7 Days",
             inHouseUS: "1-4 months",
             vaUS: "2-3 weeks",
             vaPhilippines: "1-2 months",
@@ -168,11 +168,11 @@
           },
           {
             number: 5,
-            title: "Avg lowest price/hr",
-            iconic: "$9.5/hr",
-            inHouseUS: "$25/hr",
-            vaUS: "$20/hr",
-            vaPhilippines: "$3-5/hr",
+            title: "Avg lowest price/Hr",
+            iconic: "$11/Hr",
+            inHouseUS: "$25/Hr",
+            vaUS: "$20/Hr",
+            vaPhilippines: "$3-5/Hr",
           },
           {
             number: 6,

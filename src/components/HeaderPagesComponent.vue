@@ -36,8 +36,8 @@
         <v-btn class="btnNav" color="radioactive" :to="'/services'">
           Services
         </v-btn>
-        <v-btn class="btnNav" color="radioactive" :to="'/pricing'">
-          Pricing
+        <v-btn class="btnNav" color="radioactive" :to="'/types-of-vas'">
+          Types of VAs
         </v-btn>
         <v-btn class="btnNav" color="radioactive" :to="'/contact-us'">
           Contact Us
@@ -71,8 +71,8 @@
           </v-list-item>
         </li>
         <li>
-          <v-list-item :to="'/pricing'">
-            <v-list-item-title class="navTitles">Pricing</v-list-item-title>
+          <v-list-item :to="'/types-of-vas'">
+            <v-list-item-title class="navTitles">Types of VAs</v-list-item-title>
           </v-list-item>
         </li>
         <li>
@@ -121,10 +121,6 @@ export default {
         {
           path: "/what-is-a-va",
           title: "What Is A VA",
-        },
-        {
-          path: "/types-of-vas",
-          title: "Types Of VAs",
         },
         {
           path: "/before-you-start",

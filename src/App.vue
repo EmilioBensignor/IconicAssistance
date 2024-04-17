@@ -116,6 +116,7 @@ li {
   font-weight: 600;
   line-height: 1.3rem;
   text-decoration: none;
+  text-align: center;
   padding: 4vw 7vw;
   transition: all ease 0.2s;
 }
