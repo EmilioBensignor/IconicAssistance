@@ -40,27 +40,27 @@
         fourSteps: [
           {
             number: 1,
-            title: "Book a Meeting",
+            title: "Book an Appointment",
             description:
-              "Tell us everything we need to know about your business and what tasks you wish to delegate.",
+              "Share all the essential details about your business and specify the tasks you'd like to delegate.",
           },
           {
             number: 2,
             title: "Recruitment",
             description:
-              "We'll shortlist the best VAs suited to your preferences and our HR Manager will facilitate your VA interviews.",
+              "We handle al HR task and focus on finding the perfect match for you.",
           },
           {
             number: 3,
             title: "Onboarding",
             description:
-              "We'll hold your hand through the onboarding process so your VA can fit seamlessly into your business.",
+              "We'll guide you through the onboarding process to ensure your VA integrates smoothly into your business.",
           },
           {
             number: 4,
             title: "Ongoing Support",
             description:
-              "Once you've chosen yout VA, we'll handle all the HR matters including payroll, and performance reviews.",
+              "We continuously assist you through proper delegation and optimization.",
           },
         ],
       };
