@@ -13,6 +13,7 @@ import BlogPostView from '../views/BlogPostView.vue'
 import ServicesView from '../views/ServicesView.vue'
 import PricingView from '../views/PricingView.vue'
 import ContactUsView from '../views/ContactUsView.vue'
+import NewContactUsView from '../views/NewContactUsView.vue'
 import PrivacyPolicyView from '../views/PrivacyPolicyView.vue'
 import TermsUseView from '../views/TermsUseView.vue'
 import Error404View from '../views/Error404View.vue'
@@ -176,6 +177,17 @@ const routes = [
     component: ContactUsView,
     meta: {
       title: 'Contact Us - Iconic Assistants',
+      metaTags: {
+        description: "Connect with Us – Let's Discuss Your Business Needs with Iconic Assistants.",
+      },
+    }
+  },
+  {
+    path: '/new-contact-us',
+    name: 'NewContactUs',
+    component: NewContactUsView,
+    meta: {
+      title: 'New Contact Us - Iconic Assistants',
       metaTags: {
         description: "Connect with Us – Let's Discuss Your Business Needs with Iconic Assistants.",
       },
