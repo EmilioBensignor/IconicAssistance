@@ -65,6 +65,7 @@ import { scrollBottom } from "@/motions.js";
 
 <style scoped>
 h1 {
+  width: 100%;
   line-height: 1em;
 }
 
@@ -75,7 +76,7 @@ h1 {
 }
 
 .heroPages {
-  width: 90%;
+  width: 95%;
   padding: 30vw 0 25vw 0;
 }
 
@@ -92,14 +93,6 @@ h1 {
 
 .form {
   width: 100%;
-}
-
-.delegating {
-  width: 85%;
-}
-
-.titleDelegating {
-  font-size: 1.3rem;
 }
 
 /* SM */
@@ -159,6 +152,10 @@ h1 {
 
 /* Desktop */
 @media only screen and (min-width: 1080px) {
+  .desktop {
+    display: block;
+  }
+  
   .heroContactUs {
     background: linear-gradient(90deg, rgba(255, 255, 255, 1) 30%, rgba(155, 220, 248, 1) 100%);
   }
@@ -173,16 +170,16 @@ h1 {
     width: 65%;
   }
 
+  .pMedium{
+    font-size: 1.3rem;
+  }
+
   .secondaryButton {
     padding: 2vw 3.5vw;
   }
 
-  .desktop {
-    display: block;
-  }
-
   .form {
-    width: 60%;
+    width: 50%;
   }
 }
 

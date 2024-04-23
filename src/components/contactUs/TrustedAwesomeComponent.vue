@@ -1,17 +1,13 @@
 <template>
-  <section class="skyRadioactive pb-10">
-    <h2 class="text-white">Trusted by Awesome Clients</h2>
-    <div>
-      <div>
-        <!-- <div class="w-25" v-for="(item, index) in slides" :key="index">
+  <section class="skyRadioactive pb-15">
+    <!-- <h2 class="text-white">Trusted by Awesome Clients</h2>  -->
+    <!-- <div class="w-25" v-for="(item, index) in slides" :key="index">
           <img width="10px" src="@/assets/images/contactUs/Stars-Slide.png" alt="Blue Stars" />
           <p v-html="item"></p>
         </div> -->
-      </div>
-    </div>
     <FindingSimpleComponent />
     <h3 v-motion="scrollBottom" class="text-white my-5">Find your next BEST HIRE with ICONIC</h3>
-    <a href="#hero" class="primaryButton">Get Started</a>
+    <a href="#hero" class="primaryButton elevation-3 px-10 py-5">Get Started</a>
   </section>
 </template>
 
