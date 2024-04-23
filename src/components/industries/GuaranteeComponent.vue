@@ -6,8 +6,8 @@
       <div class="columnAlignCenter ga-3">
         <p class="text-white">
           The Iconic Assistants program offers a quality assurance and
-          performance guarantee. If you’re not happy with your Virtual Assistant
-          by the end of the first 160 hours of work, we’ll replace your current
+          performance guarantee. If you're not happy with your Virtual Assistant
+          by the end of the first 160 hours of work, we'll replace your current
           assistant with a new VA at no additional cost to you.
         </p>
         <router-link class="primaryButton mt-5 elevation-5" :to="'/contact-us'">Hire with Iconic</router-link>

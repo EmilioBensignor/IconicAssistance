@@ -1,532 +1,250 @@
 <template>
-  <HeaderPagesComponent />
-  <section class="heroPagesWave columnAlignCenter">
-    <div class="heroPages flexCenter">
-      <h1 v-motion="scrollBottom" class="text-midnight">
-        Contact Us For a Free Demo
-      </h1>
-    </div>
-  </section>
-  <section class="skyRadioactive">
-    <h2 v-motion="scrollBottom" class="text-white mb-5">Get in Touch</h2>
-    <v-form
-      id="contact"
-      v-model="valid"
-      validate-on="input lazy"
-      @submit.prevent="submit"
-      class="content columnAlignCenter bg-white pa-5 rounded-xl">
-      <div class="w-100 twoInput">
-        <v-text-field
-          v-model="leadData.firstName"
-          :rules="rules.firstNameRules"
-          label="First name"
-          class="w-100"
-          required></v-text-field>
-        <v-text-field
-          v-model="leadData.lastName"
-          :rules="rules.lastNameRules"
-          label="Last name"
-          class="w-100 my-5"
-          required></v-text-field>
-      </div>
-      <div class="w-100 twoInput">
-        <v-text-field
-          v-model="leadData.email"
-          :rules="rules.emailRules"
-          label="E-mail"
-          class="w-100"
-          required></v-text-field>
-        <div class="w-100">
-          <v-text-field
-            v-model="leadData.phoneNumber"
-            :rules="rules.phoneNumberRules"
-            label="Phone Number"
-            class="w-100 phoneNumber mt-5">
-          </v-text-field>
-          <p class="w-100 aclaration mb-5">
-            (We only use phone numbers for ease of communication.)
-          </p>
-        </div>
-      </div>
-      <div class="w-100 twoInput">
-        <v-text-field
-          v-model="leadData.companySize"
-          :rules="rules.companySizeRules"
-          label="Company Size"
-          class="w-100"
-          required></v-text-field>
-        <v-text-field
-          v-model="leadData.companyName"
-          :rules="rules.companyNameRules"
-          label="Company Name"
-          class="w-100 my-5"
-          required></v-text-field>
-      </div>
-      <v-textarea
-        v-model="leadData.staffingRequirements"
-        :rules="rules.staffingRequirementsRules"
-        label="Staffing Requirements"
-        class="w-100 mb-5"
-        required></v-textarea>
-      <p class="w-100 text-start mb-3">
-        Are you looking for a job?
-        <span class="aclaration"
-          >(Job applications are NOT accepted here).</span
-        >
-      </p>
-      <v-radio-group
-        v-model="leadData.lookingForJob"
-        :rules="rules.lookingForJobRules"
-        required
-        class="w-100">
-        <v-radio label="Yes" value="true"></v-radio>
-        <v-radio label="No" value="false"></v-radio>
-      </v-radio-group>
-      <button
-        class="w-100 submit secondaryButton text-white elevation-5 mt-2"
-        :class="!valid ? 'disabled' : 'submit'"
-        type="submit"
-        :disabled="!valid">
-        Submit
-      </button>
-    </v-form>
-  </section>
-  <section class="radioactiveWaves">
+  <nav>
+    <v-app-bar elevation="0" app class="bg-white d-flex align-center px-5 py-1">
+      <router-link class="text-decoration-none" :to="'/'">
+        <IconicLogo class="mt-1" color="blue" />
+      </router-link>
+      <a class="secondaryButton desktop" href="#hero">Get Started</a>
+    </v-app-bar>
+  </nav>
+  <section class="heroContactUs">
     <div class="content">
-      <div class="contactUsFaq columnAlignCenter">
-        <div class="w-75 contactUsVa">
-          <img
-            src="@/assets/images/contactUs/Contact-Us-Remote-Talent.png"
-            alt="Contact Us Remote Talent"
-            class="rounded-circle elevation-5 my-5"
-            v-motion="scrollBottom"
-            width="75%"
-            eager />
+      <div class="columnAlignCenter">
+        <div id="hero" class="heroPages columnAlignCenter ga-5">
+          <div class="heroTitle">
+            <h1 v-motion="scrollBottom" class="text-start text-midnight mb-5">
+              Enhance your Productivity with an <span class="text-radioactive"> ICONIC Executive Assistant</span>
+            </h1>
+            <p v-motion="scrollBottom" class="pMedium text-start">
+              <span class="font-weight-bold">Successful leaders</span> understand the power of having reliable Executive Assistants. Through ICONIC Assistants, you can access <span class="font-weight-bold">personalized executive support</span> to elevate your daily achievements to new heights.
+            </p>
+          </div>
+          <div class="form mt-3">
+            <iframe src="https://api.leadconnectorhq.com/widget/form/RG0XNk4b2K2mq0UVwkBq"
+              style="display:none;width:100%;height:100%;border:none;border-radius:8px" id="inline-RG0XNk4b2K2mq0UVwkBq"
+              data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value=""
+              data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="leadCollected"
+              data-deactivation-value="" data-form-name="New Lead Form v1" data-height="1047"
+              data-layout-iframe-id="inline-RG0XNk4b2K2mq0UVwkBq" data-form-id="RG0XNk4b2K2mq0UVwkBq"
+              title="New Lead Form v1">
+            </iframe>
+          </div>
         </div>
-        <div class="contactFaq w-75 columnAlignCenter ga-5 my-5">
-          <v-expansion-panels v-motion="scrollBottom" class="faqWrapper">
-            <v-expansion-panel
-              class="elevation-4"
-              title="How do I get started?">
-              <v-expansion-panel-text>
-                <ol class="pl-3 columnAlignCenter ga-3">
-                  <li>
-                    <b>Discovery Call</b> -
-                    <router-link class="FAQLink" :to="'/contact-us'"
-                      >Book a FREE consultation</router-link
-                    >
-                    with our Outsourcing Specialist and give us an overview of
-                    everything you’re looking for in a VA.
-                  </li>
-                  <li>
-                    <b>Strategy Meeting</b> - Within 24 hours of the call, our
-                    HR team will schedule a virtual meeting to better understand
-                    the tasks to outsource and your company culture.
-                  </li>
-                  <li>
-                    <b>Virtual Assistant Recruitment</b> - We will start
-                    interviewing the candidates that meet your requirements and
-                    create a shortlist of options for you. This process usually
-                    takes around 1-2 weeks.
-                  </li>
-                  <li>
-                    <b>Hiring & Onboarding</b> - When you’re ready, we’ll hire
-                    the Virtual Assistant and you will start working with them,
-                    with the support of your Customer Success Agent to assist
-                    you in the initial ‘nesting period’ to avoid any
-                    miscommunications or misunderstandings.
-                  </li>
-                  <li>
-                    <b>Regular check-ins</b> - Our team will also have regular
-                    meetings and performance reviews and provide company
-                    benefits for your Virtual Assistant to ensure their
-                    happiness and to get all your tasks done the way you want
-                    them.
-                  </li>
-                </ol>
-              </v-expansion-panel-text>
-            </v-expansion-panel>
-          </v-expansion-panels>
-          <v-expansion-panels
-            v-for="(item, index) in faqs"
-            :key="index"
-            v-motion="scrollBottom"
-            class="faqWrapper">
-            <v-expansion-panel
-              class="elevation-4"
-              :title="item.title"
-              :text="item.text">
-            </v-expansion-panel>
-          </v-expansion-panels>
-          <v-expansion-panels v-motion="scrollBottom" class="faqWrapper">
-            <v-expansion-panel
-              class="elevation-4"
-              title="Do I need to pay any Taxes?">
-              <v-expansion-panel-text>
-                <ul class="pl-2 d-flex flex-column ga-3">
-                  <li><b>The short answer:</b> No</li>
-                  <li>
-                    <b>The long answer:</b> When you start working with a
-                    Virtual Assistant or Virtual Professional from Iconic
-                    Assistants, you are not hiring our VAs directly, you are
-                    hiring our company’s services (a US company), and like with
-                    any other service, no taxes are due. Our company handles all
-                    the paperwork for hiring our VAs as foreign independent
-                    contractors.
-                  </li>
-                  <li>
-                    In other words, 1) You are not hiring people from the US as
-                    employees, and 2) You are not hiring VAs in the US, you are
-                    hiring our services, so you don’t have to worry about any
-                    tax forms.
-                  </li>
-                </ul>
-              </v-expansion-panel-text>
-            </v-expansion-panel>
-          </v-expansion-panels>
-        </div>
+        <img class="blueWave" src="@/assets/images/misc/Radioactive-Bottom-Wave.png" alt="Blue Wave">
       </div>
     </div>
   </section>
+  <StartDelegatingComponent />
+  <WhyChooseComponent />
+  <TrustedAwesomeComponent />
 </template>
 
 <script>
-  import HeaderPagesComponent from "@/components/HeaderPagesComponent.vue";
-  import { collection, addDoc } from "firebase/firestore";
-  import db from "@/firebase/init.js";
-  import emailjs from "emailjs-com";
+import HeaderPagesComponent from "@/components/HeaderPagesComponent.vue";
+import IconicLogo from "@/components/icons/IconicLogo.vue";
+import StartDelegatingComponent from "@/components/contactUs/StartDelegatingComponent.vue";
+import WhyChooseComponent from "@/components/contactUs/WhyChooseComponent.vue";
+import TrustedAwesomeComponent from "@/components/contactUs/TrustedAwesomeComponent.vue";
+import "https://link.msgsndr.com/js/form_embed.js";
 
-  export default {
-    name: 'ContactUs',
-    components: {
-      HeaderPagesComponent,
-    },
-    data() {
-      return {
-        faqs: [
-          {
-            title: "How do I pay Iconic Assitants",
-            text: "You’ll pay your virtual assistant through Iconic Assistants. You’ll pay us, a US-based company, and we will pay the Virtual Assistant. For US-based clients, we accept Credit Cards and ACH payments and for international clients, we only accept Credit Cards (transactions fees may apply).",
-          },
-          {
-            title: "Do you offer a Guarantee?",
-            text: "Yes, we offer a Satisfaction Guarantee. If you’re not happy with your Virtual Assistant by the end of the first 160 hours of work, we’ll replace your current assistant with a new VA at no additional cost to you.",
-          },
-          {
-            title: "Can I hire a Part-Time VA?",
-            text: "Yes, we can help you outsource part-time virtual assistant for your business or specific campaigns. Our plans include either part-time (80 hours per week) or full-time (160 hours per week) VA's.",
-          },
-          {
-            title: "How can I sign up to be a VA?",
-            text: "To work as a virtual assistant and be a member of Iconic Assistants, you’ll first need to complete our online application.",
-          },
-        ],
-        leadData: {
-          firstName: "",
-          lastName: "",
-          email: "",
-          phoneNumber: "",
-          companySize: "",
-          companyName: "",
-          staffingRequirements: "",
-          lookingForJob: null,
-        },
-        rules: {
-          firstNameRules: [
-            (value) => {
-              if (value) return true;
-              return "First Name is required";
-            },
-            (value) => {
-              if (value?.length <= 20) return true;
-              return "First Name must be less than 20 characters";
-            },
-            (value) => {
-              if (value?.length > 2) return true;
-              return "First Name must be at least 2 characters";
-            },
-          ],
-          lastNameRules: [
-            (value) => {
-              if (value) return true;
-              return "Last Name is required";
-            },
-            (value) => {
-              if (value?.length <= 25) return true;
-              return "Last Name must be less than 25 characters";
-            },
-            (value) => {
-              if (value?.length > 2) return true;
-              return "Last Name must be at least 2 characters";
-            },
-          ],
-          emailRules: [
-            (value) => {
-              if (value) return true;
-
-              return "E-mail is requred.";
-            },
-            (value) => {
-              if (/.+@.+\..+/.test(value)) return true;
-
-              return 'E-mail must contain @ and "." ';
-            },
-          ],
-          phoneNumberRules: [
-            (value) => {
-              if (value.length === 0) return true;
-              const regex = /^(?:([0-9]{3}))?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
-              if (regex.test(value)) return true;
-
-              return "Phone Number must be valid";
-            },
-          ],
-          companySizeRules: [
-            (value) => {
-              if (value) return true;
-
-              return "Company Size is requred.";
-            },
-            (value) => {
-              if (value?.length <= 50) return true;
-              return "Company Size must be less than 50 characters";
-            },
-          ],
-          companyNameRules: [
-            (value) => {
-              if (value) return true;
-
-              return "Company Name is requred.";
-            },
-            (value) => {
-              if (value?.length <= 50) return true;
-              return "Company Name must be less than 50 characters";
-            },
-          ],
-          staffingRequirementsRules: [
-            (value) => {
-              if (value) return true;
-
-              return "Staffing Requirements is requred.";
-            },
-            (value) => {
-              if (value?.length <= 500) return true;
-              return "Staffing Requirements must be less than 500 characters";
-            },
-          ],
-          lookingForJobRules: [
-            (value) => {
-              if (value !== null) return true;
-
-              return "Please confirm if you are looking for a job or not";
-            },
-          ],
-        },
-        valid: false,
-      };
-    },
-    methods: {
-      async submit() {
-        try {
-          const ref = collection(db, "contact_us");
-          const snapshot = await addDoc(ref, this.leadData);
-          const id = snapshot.id;
-          this.sendEmail(id);
-          // window.location.reload();
-        } catch (error) {
-          console.error(error);
-        }
-      },
-      async sendEmail(id) {
-        try {
-          emailjs.init("ufkkB9C_G-eS3pD8_");
-        } catch (error) {}
-        const emailData = {
-          first_name: this.leadData.firstName,
-          last_name: this.leadData.lastName,
-          email: this.leadData.email,
-          phone_number: this.leadData.phoneNumber,
-          company_size: this.leadData.companySize,
-          company_name: this.leadData.companyName,
-          staffing_requirements: this.leadData.staffingRequirements,
-          looking_for_job: this.leadData.lookingForJob,
-          doc_id: id,
-        };
-        await emailjs.send("iconic_email", "template_fm1n94g", emailData).then(
-          (response) => {
-            window.location.reload();
-          },
-          (error) => {
-            console.log("There was an error sending the form", error);
-          }
-        );
-      },
-    },
-  };
+export default {
+  name: 'ContactUs',
+  components: {
+    HeaderPagesComponent,
+    IconicLogo,
+    StartDelegatingComponent,
+    WhyChooseComponent,
+    TrustedAwesomeComponent,
+  },
+};
 </script>
 
 <script setup>
-  import { scrollBottom } from "@/motions.js";
+import { scrollBottom } from "@/motions.js";
 </script>
 
 <style scoped>
-  .v-form{
+h1 {
+  line-height: 1em;
+}
+
+.heroContactUs {
+  position: relative;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 1) 10%, rgba(155, 220, 248, 1) 100%);
+}
+
+.heroPages {
+  width: 90%;
+  padding: 30vw 0 25vw 0;
+}
+
+.blueWave {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+
+.desktop {
+  display: none;
+}
+
+.form {
+  width: 100%;
+}
+
+.delegating {
+  width: 85%;
+}
+
+.titleDelegating {
+  font-size: 1.3rem;
+}
+
+/* SM */
+@media only screen and (min-width: 480px) {
+  .heroPages {
+    padding: 25vw 0 25vw 0;
+  }
+
+  .form {
+    width: 95%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .heroPages {
+    padding: 20vw 0 25vw 0;
+  }
+
+  .form {
     width: 90%;
   }
+}
 
-  .aclaration {
-    text-align: start;
-    font-size: 0.8rem;
+@media only screen and (min-width: 700px) {
+  .heroPages {
+    padding: 18vw 0 25vw 0;
+  }
+}
+
+/* MD */
+@media only screen and (min-width: 769px) {
+  .heroPages {
+    padding: 16vw 0 25vw 0;
   }
 
-  .submit {
-    font-weight: bold;
-    font-size: 1.3rem;
+  .form {
+    width: 85%;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .heroPages {
+    padding: 14vw 0 22vw 0;
+  }
+}
+
+/* LG */
+@media only screen and (min-width: 992px) {
+  .heroPages {
+    padding: 13vw 0 22vw 0;
   }
 
-  .disabled:hover {
-    background-color: #373ae6;
-    color: white;
+  .form {
+    width: 80%;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1080px) {
+  .heroContactUs {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 30%, rgba(155, 220, 248, 1) 100%);
   }
 
-  /* SM */
-  @media only screen and (min-width: 480px) {
-    .aclaration {
-      font-size: 0.9rem;
-    }
-
-    .submit {
-      width: 75% !important;
-    }
+  .heroPages {
+    flex-direction: row;
+    align-items: start;
+    padding: 15vw 0 20vw 0;
   }
 
-  /* MD */
-  @media only screen and (min-width: 769px) {
-    .submit {
-      width: 50% !important;
-      font-size: 1.5rem;
-    }
-
-    .contactUsVa img {
-      width: 50% !important;
-    }
+  .heroTitle {
+    width: 65%;
   }
 
-  /* LG */
-  @media only screen and (min-width: 992px) {
-    .aclaration {
-      font-size: 1rem;
-    }
-
-    .submit {
-      width: 50% !important;
-      font-size: 1.8rem;
-    }
-
-    .contactUsFaq {
-      width: 90%;
-      flex-direction: row-reverse;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 3vw;
-    }
-
-    .contactFaq {
-      width: 50% !important;
-    }
-
-    .contactUsVa {
-      width: 50% !important;
-    }
-
-    .contactUsVa img {
-      width: 85% !important;
-    }
+  .secondaryButton {
+    padding: 2vw 3.5vw;
   }
 
-  /* Desktop */
-  @media only screen and (min-width: 1080px) {
-    .v-form {
-      width: 80%;
-      padding: 1vw 3vw 3vw 3vw !important;
-    }
-
-    .contactUsFaq {
-      align-items: center;
-      margin: 2.5vw 0;
-    }
-
-    .twoInput {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 5vw;
-    }
-
-    .phoneNumber {
-      margin-top: 0 !important;
-    }
-
-    .aclaration {
-      text-align: center;
-      font-size: 0.9rem;
-      margin-bottom: 0 !important;
-    }
-
-    .submit {
-      width: 35% !important;
-      font-size: 1.5rem;
-    }
+  .desktop {
+    display: block;
   }
 
-  /* XL */
-  @media only screen and (min-width: 1440px) {
-    .v-form {
-      padding: 1vw 2vw 2vw 2vw !important;
-    }
-    .contactUsVa img {
-      width: 70% !important;
-    }
+  .form {
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .secondaryButton {
+    padding: 1.75vw 3.5vw;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .heroPages {
+    padding: 13vw 0 22vw 0;
   }
 
-  @media only screen and (min-width: 1600px) {
-    .submit {
-      width: 30% !important;
-      font-size: 1.6rem;
-    }
+  .form {
+    width: 65%;
+  }
+}
 
-    .contactUsVa img {
-      width: 65% !important;
-    }
+@media only screen and (min-width: 1350px) {
+  .heroPages {
+    padding: 12vw 0 22vw 0;
   }
 
-  @media only screen and (min-width: 1750px) {
-    .submit {
-      width: 25% !important;
-    }
+  .secondaryButton {
+    padding: 1.5vw 3.2vw;
+  }
+}
 
-    .contactUsVa img {
-      width: 60% !important;
-    }
+@media only screen and (min-width: 1550px) {
+  .secondaryButton {
+    padding: 1.2vw 3vw;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .heroPages {
+    padding: 10vw 0 22vw 0;
   }
 
-  @media only screen and (min-width: 1920px) {
-    .v-form {
-      padding: 1% 1.5% 1.5% 1.5% !important;
-    }
-
-    .submit {
-      width: 22.5% !important;
-    }
-
-    .contactUsFaq {
-      width: 75%;
-      gap: 50px;
-      margin: 30px 0;
-    }
-
-    .contactUsVa img {
-      width: 65% !important;
-    }
+  .form {
+    width: 60%;
   }
+}
+
+@media only screen and (min-width: 1750px) {
+  .secondaryButton {
+    padding: 1.2vw 2.5vw;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .heroPages {
+    padding: 10% 0 20% 0;
+  }
+
+  .form {
+    width: 55%;
+  }
+
+  .secondaryButton {
+    padding: 23px 46px;
+  }
+}
 </style>

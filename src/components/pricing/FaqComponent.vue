@@ -33,7 +33,7 @@
         faq: [
           {
             title: "How do i pay Iconic Assistants",
-            text: "You’ll pay your virtual assistant through Iconic Assistants. You’ll pay us, a US-based company, and we will pay the Virtual Assistant. For US-based clients, we accept Credit Cards and ACH payments and for international clients, we only accept Credit Cards (transactions fees may apply).",
+            text: "You'll pay your virtual assistant through Iconic Assistants. You'll pay us, a US-based company, and we will pay the Virtual Assistant. For US-based clients, we accept Credit Cards and ACH payments and for international clients, we only accept Credit Cards (transactions fees may apply).",
           },
           {
             title: "Can I hire a Part-Time Virtual Assistant?",
@@ -41,7 +41,7 @@
           },
           {
             title: "Can I provide the work hours?",
-            text: "Yes, candidates will be informed of your business’s preferred work hours. Iconic Assistants are flexible and can work within the time your business requires.",
+            text: "Yes, candidates will be informed of your business's preferred work hours. Iconic Assistants are flexible and can work within the time your business requires.",
           },
           {
             title: "How quickly can I be Up and Running?",
