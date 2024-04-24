@@ -1,6 +1,6 @@
 <template>
   <h2 v-motion="scrollBottom" class="text-white my-3">Finding an Executive Assistant is More SIMPLE Than Ever</h2>
-  <p v-motion="scrollBottom" class="explication text-white mb-3">
+  <p v-motion="scrollBottom" class="explication text-white mb-4">
     Whether you need part-time or full-time help, ICONIC is the <span class='font-weight-bold'>quickest way</span> to
     get your own
     <span class='font-weight-bold'>dedicated EA</span>.

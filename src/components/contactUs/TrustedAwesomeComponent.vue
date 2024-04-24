@@ -6,8 +6,8 @@
           <p v-html="item"></p>
         </div> -->
     <FindingSimpleComponent />
-    <h3 v-motion="scrollBottom" class="text-white my-5">Find your next BEST HIRE with ICONIC</h3>
-    <a href="#hero" class="primaryButton elevation-3 px-10 py-5">Get Started</a>
+    <h3 v-motion="scrollBottom" class="text-white mt-10 mb-5">Find your next BEST HIRE with ICONIC</h3>
+    <a href="#hero" class="primaryButton elevation-3 mb-3 px-10 py-5">Get Started</a>
   </section>
 </template>
 

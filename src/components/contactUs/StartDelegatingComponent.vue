@@ -1,7 +1,7 @@
 <template>
   <section class="radioactiveSky">
     <h2 v-motion="scrollBottom" class="text-white mb-5">Start Delegating Now</h2>
-    <p class="explication text-white" v-motion="scrollBottom">
+    <p class="explication text-white mb-4" v-motion="scrollBottom">
       Delegate efficiently with a remote executive assistant, managing schedules, messages, and gathering essential
       information for better decision-making
     </p>
@@ -50,7 +50,7 @@
         </div>
       </div>
     </div>
-    <a class="secondaryButton elevation-3 px-10 py-5" href="#hero">Get Started</a>
+    <a class="secondaryButton elevation-3 mt-4 px-10 py-5" href="#hero">Get Started</a>
   </section>
 </template>
 

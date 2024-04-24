@@ -44,9 +44,9 @@
     </div>
   </section>
   <!-- Step 2 -->
-  <section class="reversed radioactiveWaves">
+  <section class="radioactiveWaves">
     <div class="content">
-      <div class="stepDesktop columnAlignCenter">
+      <div class="stepDesktop reversed columnAlignCenter">
         <div class="stepDesktopBody columnAlignCenter ga-1">
           <p v-motion="scrollBottom" class="subtitle">Step 2</p>
           <h2 v-motion="scrollBottom" class="text-midnight">
@@ -118,9 +118,9 @@
     </div>
   </section>
   <!-- Step 4 -->
-  <section class="reversed skyRadioactiveWaves">
+  <section class="skyRadioactiveWaves">
     <div class="content">
-      <div class="stepDesktop columnAlignCenter">
+      <div class="stepDesktop reversed columnAlignCenter">
         <div class="stepDesktopBody columnAlignCenter ga-1">
           <p v-motion="scrollBottom" class="subtitle">Step 4</p>
           <h2 v-motion="scrollBottom" class="text-midnight">

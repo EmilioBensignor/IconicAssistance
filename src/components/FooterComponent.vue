@@ -227,6 +227,7 @@ export default {
     width: 95%;
     flex-direction: row;
     justify-content: space-between;
+    gap: 3rem;
   }
 
   .footerLeft {

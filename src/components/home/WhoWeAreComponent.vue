@@ -6,6 +6,7 @@
           src="@/assets/images/misc/Remote-Talent-Iconic-Assistants.png"
           alt="Remote Talent Iconic Assistants"
           class="rounded-xl elevation-5"
+          height="100%"
           width="100%" />
         <div class="caption columnAlignCenter py-3">
           <p class="text-white">
@@ -108,6 +109,10 @@
     .vaModel {
       display: block;
       position: relative;
+    }
+
+    .vaModel img{
+      object-fit: cover;
     }
 
     .rightWhoWeAre {

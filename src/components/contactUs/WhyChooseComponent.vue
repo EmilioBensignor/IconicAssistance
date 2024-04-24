@@ -1,7 +1,7 @@
 <template>
   <section class="skyBlueWaves">
     <h2 v-motion="scrollBottom" class="mb-5">Why chose ICONIC?</h2>
-    <p v-motion="scrollBottom" class="explication">
+    <p v-motion="scrollBottom" class="explication mb-4">
       Every day, we tackle numerous business challenges so you can focus on other things. Since 2022, we've transformed
       the task of getting work done into something seemingly simple.
     </p>
@@ -13,7 +13,7 @@
         <p v-html="item.text"></p>
       </div>
     </div>
-    <a class="secondaryButton elevation-3 px-10 py-5" href="#hero">Get Started</a>
+    <a class="secondaryButton elevation-3 mt-4 px-10 py-5" href="#hero">Get Started</a>
   </section>
 </template>
 
@@ -91,7 +91,7 @@ import { scrollBottom } from "@/motions.js";
     width: 90%;
     flex-direction: row;
     align-items: flex-start;
-    gap: 1.5rem !important;
+    gap: 2.5rem !important;
   }
   .choose img{
     width: 85% !important;
