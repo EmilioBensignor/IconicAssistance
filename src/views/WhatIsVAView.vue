@@ -11,6 +11,7 @@
   <WhatAreVAComponent />
   <HowItWorksComponent />
   <BenefitsComponent />
+  <FooterComponent />
 </template>
 
 <script>
@@ -18,6 +19,7 @@
   import WhatAreVAComponent from "@/components/whatIsVa/WhatAreVAComponent.vue";
   import HowItWorksComponent from "@/components/whatIsVa/HowItWorksComponent.vue";
   import BenefitsComponent from "@/components/whatIsVa/BenefitsComponent.vue";
+  import FooterComponent from "@/components/FooterComponent.vue";
 
   export default {
     name: 'WhatIsVA',
@@ -26,6 +28,7 @@
       WhatAreVAComponent,
       HowItWorksComponent,
       BenefitsComponent,
+      FooterComponent,
     },
   };
 </script>

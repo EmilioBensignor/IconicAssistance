@@ -1,19 +1,24 @@
 <template>
   <section class="skyBlueWaves">
-    <h2 v-motion="scrollBottom" class="mb-5">Why chose ICONIC?</h2>
-    <p v-motion="scrollBottom" class="explication mb-4">
-      Every day, we tackle numerous business challenges so you can focus on other things. Since 2022, we've transformed
-      the task of getting work done into something seemingly simple.
-    </p>
-    <div class="chooseWrapper columnAlignCenter ga-10 py-10">
-      <div v-motion="scrollBottom" class="choose w-75 columnAlignCenter ga-5" v-for="(item, index) in choose"
-        :key="index">
-        <img width="80%" :src="getImgUrl(item.img)" :alt="item.title">
-        <p class="titleContact titleChoose">{{ item.title }}</p>
-        <p v-html="item.text"></p>
+    <div class="content">
+      <div class="columnAlignCenter">
+        <h2 v-motion="scrollBottom" class="mb-5">Why chose ICONIC?</h2>
+        <p v-motion="scrollBottom" class="explication mb-4">
+          Every day, we tackle numerous business challenges so you can focus on other things. Since 2022, we've
+          transformed
+          the task of getting work done into something seemingly simple.
+        </p>
+        <div class="chooseWrapper columnAlignCenter ga-10 py-10">
+          <div v-motion="scrollBottom" class="choose w-75 columnAlignCenter ga-5" v-for="(item, index) in choose"
+            :key="index">
+            <img width="80%" :src="getImgUrl(item.img)" :alt="item.title">
+            <p class="titleContact titleChoose">{{ item.title }}</p>
+            <p v-html="item.text"></p>
+          </div>
+        </div>
+        <a class="secondaryButton elevation-3 mt-4 px-10 py-5" href="#hero">Get Started</a>
       </div>
     </div>
-    <a class="secondaryButton elevation-3 mt-4 px-10 py-5" href="#hero">Get Started</a>
   </section>
 </template>
 
@@ -56,7 +61,7 @@ import { scrollBottom } from "@/motions.js";
 </script>
 
 <style scoped>
-.titleChoose{
+.titleChoose {
   font-weight: 450;
 }
 
@@ -87,17 +92,40 @@ import { scrollBottom } from "@/motions.js";
 
 /* Desktop */
 @media only screen and (min-width: 1080px) {
-  .chooseWrapper{
+  .chooseWrapper {
     width: 90%;
     flex-direction: row;
     align-items: flex-start;
     gap: 2.5rem !important;
   }
-  .choose img{
+
+  .choose img {
     width: 85% !important;
   }
-  .secondaryButton {
-    padding: 2vw 3.5vw !important;
+}
+
+/* XL */
+@media only screen and (min-width: 1440px) {
+  .choose img {
+    width: 80% !important;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .choose img {
+    width: 75% !important;
+  }
+}
+
+@media only screen and (min-width: 1750px) {
+  .choose img {
+    width: 70% !important;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .choose img {
+    width: 65% !important;
   }
 }
 </style>

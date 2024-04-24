@@ -60,16 +60,19 @@
       </div>
     </div>
   </section>
+  <FooterComponent />
 </template>
 
 <script>
 import { vaTypes } from "@/cms/typesva.service.js";
 import HeaderPagesComponent from "@/components/HeaderPagesComponent.vue";
+import FooterComponent from "@/components/FooterComponent.vue";
 
 export default {
   name: 'VirtualAssistant',
   components: {
     HeaderPagesComponent,
+    FooterComponent,
   },
   data() {
     return {

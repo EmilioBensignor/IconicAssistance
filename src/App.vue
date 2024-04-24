@@ -4,19 +4,16 @@
       <router-view />
       <CallToAction />
     </div>
-    <FooterComponent class="pt-15" />
   </v-app>
 </template>
 
 <script>
-import FooterComponent from "@/components/FooterComponent.vue";
 import CallToAction from "@/components/calendly/CallToAction.vue";
 
 export default {
   name: "App",
   components: {
     CallToAction,
-    FooterComponent,
   },
   watch: {
     $route() {

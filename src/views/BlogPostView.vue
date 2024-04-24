@@ -43,16 +43,19 @@
       </div>
     </div>
   </section>
+  <FooterComponent />
 </template>
 
 <script>
 import { blogs } from "@/cms/blogs.service.js";
 import HeaderTransparentComponent from "@/components/HeaderTransparentComponent.vue";
+import FooterComponent from "@/components/FooterComponent.vue";
 
 export default {
   name: 'BlogPost',
   components: {
     HeaderTransparentComponent,
+    FooterComponent,
   },
   data() {
     return {

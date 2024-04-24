@@ -1,33 +1,34 @@
 <template>
-  <HeaderPagesComponent />
+  <nav>
+    <v-app-bar elevation="0" app class="bg-white d-flex align-center px-5 py-1">
+      <router-link class="text-decoration-none" :to="'/'">
+        <IconicLogo class="mt-1" color="blue" />
+      </router-link>
+      <a class="secondaryButton desktop" href="#hero">Get Started</a>
+    </v-app-bar>
+  </nav>
   <HeroComponent />
   <StartDelegatingComponent />
   <WhyChooseComponent />
   <TrustedAwesomeComponent />
-  <FooterComponent />
 </template>
 
 <script>
-import HeaderPagesComponent from "@/components/HeaderPagesComponent.vue";
 import IconicLogo from "@/components/icons/IconicLogo.vue";
 import HeroComponent from "@/components/contactUs/HeroComponent.vue";
 import StartDelegatingComponent from "@/components/contactUs/StartDelegatingComponent.vue";
 import WhyChooseComponent from "@/components/contactUs/WhyChooseComponent.vue";
 import TrustedAwesomeComponent from "@/components/contactUs/TrustedAwesomeComponent.vue";
-import FooterComponent from "@/components/FooterComponent.vue";
-
 import "https://link.msgsndr.com/js/form_embed.js";
 
 export default {
   name: 'ContactUs',
   components: {
-    HeaderPagesComponent,
     IconicLogo,
     HeroComponent,
     StartDelegatingComponent,
     WhyChooseComponent,
     TrustedAwesomeComponent,
-    FooterComponent,
   },
 };
 </script>

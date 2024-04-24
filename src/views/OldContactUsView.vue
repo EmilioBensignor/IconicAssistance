@@ -188,6 +188,7 @@
       </div>
     </div>
   </section>
+  <FooterComponent />
 </template>
 
 <script>
@@ -195,11 +196,13 @@
   import { collection, addDoc } from "firebase/firestore";
   import db from "@/firebase/init.js";
   import emailjs from "emailjs-com";
+  import FooterComponent from "@/components/FooterComponent.vue";
 
   export default {
     name: 'ContactUs',
     components: {
       HeaderPagesComponent,
+      FooterComponent,
     },
     data() {
       return {

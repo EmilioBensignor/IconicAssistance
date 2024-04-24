@@ -41,17 +41,20 @@
     </div>
   </section>
   <EmpowerComponent />
+  <FooterComponent />
 </template>
 
 <script>
   import HeaderPagesComponent from "@/components/HeaderPagesComponent.vue";
   import EmpowerComponent from "@/components/services/EmpowerComponent.vue";
+  import FooterComponent from "@/components/FooterComponent.vue";
 
   export default {
     name: 'Services',
     components: {
       HeaderPagesComponent,
       EmpowerComponent,
+      FooterComponent,
     },
   };
 </script>

@@ -41,6 +41,7 @@
     </div>
   </section>
   <GuaranteeComponent />
+  <FooterComponent />
 </template>
 
 <script>
@@ -48,12 +49,14 @@ import HeaderTransparentComponent from "@/components/HeaderTransparentComponent.
 import { industries } from "@/cms/industries.service.js";
 import DifferencesComponent from "@/components/industries/DifferencesComponent.vue";
 import GuaranteeComponent from "@/components/industries/GuaranteeComponent.vue";
+import FooterComponent from "@/components/FooterComponent.vue";
 
 export default {
   components: {
     HeaderTransparentComponent,
     DifferencesComponent,
     GuaranteeComponent,
+    FooterComponent,
   },
   data() {
     return {

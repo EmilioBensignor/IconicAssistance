@@ -96,16 +96,19 @@
       </div>
     </div>
   </section>
+  <FooterComponent />
 </template>
 
 <script>
   import { faqs } from "@/cms/faqs.service.js";
   import HeaderPagesComponent from "@/components/HeaderPagesComponent.vue";
+  import FooterComponent from "@/components/FooterComponent.vue";
 
   export default {
     name: 'Faq',
     components: {
       HeaderPagesComponent,
+      FooterComponent,
     },
     data() {
       return {

@@ -13,6 +13,7 @@
   <OurMissionComponent />
   <ComparisonTableComponent />
   <HowItWorksComponent />
+  <FooterComponent />
 </template>
 
 <script setup>
@@ -26,6 +27,7 @@
   import OurMissionComponent from "@/components/aboutUs/OurMissionComponent.vue";
   import ComparisonTableComponent from "@/components/aboutUs/ComparisonTableComponent.vue";
   import HowItWorksComponent from "@/components/aboutUs/HowItWorksComponent.vue";
+  import FooterComponent from "@/components/FooterComponent.vue";
 
   export default {
     name: 'AboutUs',
@@ -36,6 +38,7 @@
       OurMissionComponent,
       ComparisonTableComponent,
       HowItWorksComponent,
+      FooterComponent,
     },
   };
 </script>

@@ -11,6 +11,7 @@
   <OpportunitiesComponent />
   <IsThisYou />
   <PerfectMatchComponent />
+  <FooterComponent />
 </template>
 
 <script>
@@ -18,6 +19,7 @@
   import OpportunitiesComponent from "@/components/beforeYouStart/OpportunitiesComponent.vue";
   import IsThisYou from "@/components/beforeYouStart/IsThisYou.vue";
   import PerfectMatchComponent from "@/components/beforeYouStart/PerfectMatchComponent.vue";
+  import FooterComponent from "@/components/FooterComponent.vue";
 
   export default {
     name: 'BeforeYouStart',
@@ -26,6 +28,7 @@
       OpportunitiesComponent,
       IsThisYou,
       PerfectMatchComponent,
+      FooterComponent,
     },
   };
 </script>

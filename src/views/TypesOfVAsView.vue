@@ -9,12 +9,14 @@
   </section>
   <OurServiceComponentVue />
   <TestimonialsComponentVue />
+  <FooterComponent />
 </template>
 
 <script>
   import HeaderPagesComponent from "@/components/HeaderPagesComponent.vue";
   import OurServiceComponentVue from "@/components/typesOfVa/OurServiceComponent.vue";
   import TestimonialsComponentVue from "@/components/typesOfVa/TestimonialsComponent.vue";
+  import FooterComponent from "@/components/FooterComponent.vue";
 
   export default {
     name: 'TypesOfVas',
@@ -22,6 +24,7 @@
       HeaderPagesComponent,
       OurServiceComponentVue,
       TestimonialsComponentVue,
+      FooterComponent,
     },
   };
 </script>

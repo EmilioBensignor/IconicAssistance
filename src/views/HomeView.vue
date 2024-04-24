@@ -58,11 +58,11 @@
     >
   </section> -->
   <FAQsComponent />
+  <FooterComponent />
 </template>
 
 <script>
   import HeaderTransparentComponent from "@/components/HeaderTransparentComponent.vue";
-
   import WhoWeAreComponent from "@/components/home/WhoWeAreComponent.vue";
   import WhyUsComponent from "@/components/home/WhyUsComponent.vue";
   import HowItWorksComponent from "@/components/home/HowItWorksComponent.vue";
@@ -71,6 +71,7 @@
   import IndustriesComponent from "@/components/home/IndustriesComponent.vue";
   import PricingComponent from "@/components/home/PricingComponent.vue";
   import FAQsComponent from "@/components/home/FAQsComponent.vue";
+  import FooterComponent from "@/components/FooterComponent.vue";
 
   export default {
     name: 'Home',
@@ -84,12 +85,9 @@
       IndustriesComponent,
       PricingComponent,
       FAQsComponent,
+      FooterComponent,
     },
   };
-</script>
-
-<script setup>
-  import { scrollBottom } from "@/motions.js";
 </script>
 
 <style scoped>

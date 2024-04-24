@@ -244,15 +244,18 @@
       </div>
     </div>
   </section>
+  <FooterComponent />
 </template>
 
 <script>
 import HeaderPagesComponent from "@/components/HeaderPagesComponent.vue";
+import FooterComponent from "@/components/FooterComponent.vue";
 
 export default {
   name: 'PrivacyPolicy',
   components: {
     HeaderPagesComponent,
+    FooterComponent,
   },
 };
 </script>

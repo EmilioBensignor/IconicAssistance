@@ -13,6 +13,7 @@ import BlogPostView from '../views/BlogPostView.vue'
 import ServicesView from '../views/ServicesView.vue'
 import PricingView from '../views/PricingView.vue'
 import ContactUsView from '../views/ContactUsView.vue'
+import GetStartedView from '../views/GetStartedView.vue'
 import PrivacyPolicyView from '../views/PrivacyPolicyView.vue'
 import TermsUseView from '../views/TermsUseView.vue'
 import Error404View from '../views/Error404View.vue'
@@ -178,6 +179,17 @@ const routes = [
       title: 'Contact Us - Iconic Assistants',
       metaTags: {
         description: "Connect with Us – Let's Discuss Your Business Needs with Iconic Assistants.",
+      },
+    }
+  },
+  {
+    path: '/get-started',
+    name: 'GetStarted',
+    component: GetStartedView,
+    meta: {
+      title: 'Start delegating with ICONIC Assistants',
+      metaTags: {
+        description: "Discover the power of having realiable Executive Assistants.",
       },
     }
   },

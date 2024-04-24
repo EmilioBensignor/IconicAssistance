@@ -18,6 +18,7 @@
   </section>
   <FaqComponent />
   <TestimonialsComponent />
+  <FooterComponent />
 </template>
 
 <script>
@@ -25,6 +26,7 @@
   import PricingComponent from "@/components/home/PricingComponent.vue";
   import FaqComponent from "@/components/pricing/FaqComponent.vue";
   import TestimonialsComponent from "@/components/pricing/TestimonialsComponent.vue";
+  import FooterComponent from "@/components/FooterComponent.vue";
 
   export default {
     name: 'Pricing',
@@ -33,6 +35,7 @@
       PricingComponent,
       FaqComponent,
       TestimonialsComponent,
+      FooterComponent,
     },
   };
 </script>

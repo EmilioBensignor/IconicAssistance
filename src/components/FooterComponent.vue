@@ -1,7 +1,7 @@
 <template>
   <div class="bg-radioactive columnAlignCenter">
     <div class="content">
-      <div class="columnAlignCenter">
+      <div class="columnAlignCenter pt-15">
         <div class="footer columnAlignCenter">
           <div class="footerLeft w-75 flexCenter ga-3">
             <IconicLogo class="logo text-white" />

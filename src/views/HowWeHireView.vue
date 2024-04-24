@@ -11,6 +11,7 @@
   <ExceptionalSkillComponent />
   <OutsourceTopComponent />
   <CandidateCriteriaComponent />
+  <FooterComponent />
 </template>
 
 <script>
@@ -18,6 +19,7 @@
   import ExceptionalSkillComponent from "@/components/howWeHire/ExceptionalSkillComponent.vue";
   import OutsourceTopComponent from "@/components/howWeHire/OutsourceTopComponent.vue";
   import CandidateCriteriaComponent from "@/components/howWeHire/CandidateCriteriaComponent.vue";
+  import FooterComponent from "@/components/FooterComponent.vue";
 
   export default {
     name: 'HowWeHire',
@@ -26,6 +28,7 @@
       ExceptionalSkillComponent,
       OutsourceTopComponent,
       CandidateCriteriaComponent,
+      FooterComponent,
     },
   };
 </script>

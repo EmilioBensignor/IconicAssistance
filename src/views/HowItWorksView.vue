@@ -156,6 +156,7 @@
       </div>
     </div>
   </section>
+  <FooterComponent />
 </template>
 
 <script setup>
@@ -164,11 +165,13 @@
 
 <script>
   import HeaderPagesComponent from "@/components/HeaderPagesComponent.vue";
+  import FooterComponent from "@/components/FooterComponent.vue";
 
   export default {
     name: 'HowItWorks',
     components: {
       HeaderPagesComponent,
+      FooterComponent,
     },
   };
 </script>
