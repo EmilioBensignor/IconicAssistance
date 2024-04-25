@@ -238,8 +238,8 @@ export const vaTypes = [
   // },
   {
     id: 4,
-    name: 'Customer Support Assistant',
-    slug: 'customer-support-assistant',
+    name: 'Customer Support',
+    slug: 'customer-support',
     blueIcon: 'blueIcons/Customer-Support-VA-Blue-Icon.png',
     blueIconAlt: 'Customer Support VA Blue Icon',
     whiteIcon: 'whiteIcons/Customer-Support-VA-White-Icon.png',
@@ -357,7 +357,7 @@ export const vaTypes = [
   {
     id: 6,
     name: 'Marketing Assistant',
-    slug: 'marketing-Assistant',
+    slug: 'marketing-assistant',
     blueIcon: 'blueIcons/Marketing-Assistant-VA-Blue-Icon.png',
     blueIconAlt: 'Digital Marketing-Assistant VA Blue Icon',
     whiteIcon: 'whiteIcons/Marketing-Assistant-VA-White-Icon.png',
@@ -411,8 +411,8 @@ export const vaTypes = [
   },
   {
     id: 8,
-    name: 'Project Management Assistant',
-    slug: 'project-management Assistant',
+    name: 'Project Management',
+    slug: 'project-management',
     blueIcon: 'blueIcons/Project-Management-Assistant-VA-Blue-Icon.png',
     blueIconAlt: 'Project Management Assistant VA Blue Icon',
     whiteIcon: 'whiteIcons/Project-Management-Assistant-VA-White-Icon.png',
