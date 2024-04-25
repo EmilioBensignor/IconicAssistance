@@ -7,7 +7,7 @@
           <v-carousel-item>
             <div class="carouselContent d-flex flex-row ga-5">
               <div v-for="(reviewDesktop, index) in reviews.slice(0, 3)" :key="index"
-                class="columnAlignCenter bg-white rounded-xl elevation-5 pa-5">
+                class="columnAlignCenter bg-white rounded-xl elevation-5 px-8 py-5">
                 <img src="@/assets/images/contactUs/Stars-Slide.png" alt="Blue Stars" width="50%">
                 <p class="text-left mt-5" v-html="reviewDesktop"></p>
               </div>
@@ -16,7 +16,7 @@
           <v-carousel-item>
             <div class="carouselContent d-flex flex-row ga-5">
               <div v-for="(reviewDesktop, index) in reviews.slice(3, 6)" :key="index"
-                class="columnAlignCenter bg-white rounded-xl elevation-5 pa-5">
+                class="columnAlignCenter bg-white rounded-xl elevation-5 px-8 py-5">
                 <img src="@/assets/images/contactUs/Stars-Slide.png" alt="Blue Stars" width="50%">
                 <p class="text-left mt-5" v-html="reviewDesktop"></p>
               </div>
@@ -25,7 +25,7 @@
           <v-carousel-item>
             <div class="carouselContent d-flex flex-row ga-5">
               <div v-for="(reviewDesktop, index) in reviews.slice(6, 9)" :key="index"
-                class="columnAlignCenter bg-white rounded-xl elevation-5 pa-5">
+                class="columnAlignCenter bg-white rounded-xl elevation-5 px-8 py-5">
                 <img src="@/assets/images/contactUs/Stars-Slide.png" alt="Blue Stars" width="50%">
                 <p class="text-left mt-5" v-html="reviewDesktop"></p>
               </div>
@@ -36,7 +36,7 @@
           <v-carousel-item>
             <div class="carouselContent d-flex flex-row ga-5">
               <div v-for="(reviewDesktop, index) in reviews.slice(0, 2)" :key="index"
-                class="columnAlignCenter bg-white rounded-xl elevation-5 pa-5">
+                class="columnAlignCenter bg-white rounded-xl elevation-5 px-8 py-5">
                 <img src="@/assets/images/contactUs/Stars-Slide.png" alt="Blue Stars" width="60%">
                 <p class="text-left mt-5" v-html="reviewDesktop"></p>
               </div>
@@ -45,7 +45,7 @@
           <v-carousel-item>
             <div class="carouselContent d-flex flex-row ga-5">
               <div v-for="(reviewDesktop, index) in reviews.slice(2, 4)" :key="index"
-                class="columnAlignCenter bg-white rounded-xl elevation-5 pa-5">
+                class="columnAlignCenter bg-white rounded-xl elevation-5 px-8 py-5">
                 <img src="@/assets/images/contactUs/Stars-Slide.png" alt="Blue Stars" width="60%">
                 <p class="text-left mt-5" v-html="reviewDesktop"></p>
               </div>
@@ -54,7 +54,7 @@
           <v-carousel-item>
             <div class="carouselContent d-flex flex-row ga-5">
               <div v-for="(reviewDesktop, index) in reviews.slice(5, 7)" :key="index"
-                class="columnAlignCenter bg-white rounded-xl elevation-5 pa-5">
+                class="columnAlignCenter bg-white rounded-xl elevation-5 px-8 py-5">
                 <img src="@/assets/images/contactUs/Stars-Slide.png" alt="Blue Stars" width="60%">
                 <p class="text-left mt-5" v-html="reviewDesktop"></p>
               </div>
@@ -63,7 +63,7 @@
           <v-carousel-item>
             <div class="carouselContent d-flex flex-row ga-5">
               <div v-for="(reviewDesktop, index) in reviews.slice(8, 10)" :key="index"
-                class="columnAlignCenter bg-white rounded-xl elevation-5 pa-5">
+                class="columnAlignCenter bg-white rounded-xl elevation-5 px-8 py-5">
                 <img src="@/assets/images/contactUs/Stars-Slide.png" alt="Blue Stars" width="60%">
                 <p class="text-left mt-5" v-html="reviewDesktop"></p>
               </div>
@@ -74,7 +74,7 @@
           class="h-100 carousel mobileCarousel columnAlignCenter py-5">
           <v-carousel-item v-for="(reviewMobile, index) in reviews" :key="index">
             <div class="carouselContent">
-              <div class="columnAlignCenter bg-white rounded-xl elevation-5 pa-5">
+              <div class="columnAlignCenter bg-white rounded-xl elevation-5 px-8 py-5">
                 <img src="@/assets/images/contactUs/Stars-Slide.png" alt="Blue Stars" width="50%">
                 <p class="text-left mt-5" v-html="reviewMobile"></p>
               </div>
