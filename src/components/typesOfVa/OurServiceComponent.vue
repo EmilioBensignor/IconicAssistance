@@ -6,53 +6,14 @@
         <h2 v-motion="scrollBottom" class="text-white">
           Here's What Your Virtual Assistants Can Help You With
         </h2>
-        <div class="w-75 vaIcons column ga-3 my-5">
-          <div
-            v-for="(item, index) in vaTypes"
-            :key="index"
-            v-motion="scrollBottom"
-            class="d-flex align-center">
-            <img
-              width="25%"
-              class="vaIcon shadow-25"
-              :src="getImgUrl(item.whiteIcon)"
-              :alt="item.whiteIconAlt" />
-            <p class="text-white text-start pMedium ml-3 w-100">
+        <div class="vaCardsContainer w-75 d-flex justify-center flex-wrap ga-10 pt-5">
+          <router-link :to="`/virtual-assistant/${item.id}`" v-for="(item, index) in vaTypes" :key="index" class="vaCard rounded-xl elevation-5"
+            v-motion="scrollBottom">
+            <img :src="getImgUrl(item.img)" :alt="item.alt" width="100%" height="100%" class="rounded-xl" eager />
+            <p class="titleTypesofVA rounded-b-xl font-weight-bold text-midnight py-3">
               {{ item.name }}
             </p>
-          </div>
-        </div>
-        <div
-          v-motion="scrollBottom"
-          class="carousel w-75 columnAlignCenter my-5">
-          <v-carousel
-            show-arrows="hover"
-            hide-delimiters
-            class="carouselTypes rounded-xl elevation-5"
-            cycle
-            :interval="2000">
-            <v-carousel-item
-              v-for="(item, index) in vaTypes"
-              :key="index"
-              cover>
-              <router-link
-                :to="`/virtual-assistant/${item.id}`"
-                class="typesCard">
-                <v-img
-                  :src="getImgUrl(item.img)"
-                  :alt="item.alt"
-                  width="100%"
-                  height="100%"
-                  class="vaImg"
-                  cover
-                  eager>
-                  <p class="titleTypesofVA font-weight-bold text-midnight py-3">
-                    {{ item.name }}
-                  </p>
-                </v-img>
-              </router-link>
-            </v-carousel-item>
-          </v-carousel>
+          </router-link>
         </div>
       </div>
     </div>
@@ -60,132 +21,92 @@
 </template>
 
 <script>
-  import { vaTypes } from "@/cms/typesva.service.js";
+import { vaTypes } from "@/cms/typesva.service.js";
 
-  export default {
-    data() {
-      return {
-        vaTypes: vaTypes,
-      };
+export default {
+  data() {
+    return {
+      vaTypes: vaTypes,
+    };
+  },
+  methods: {
+    getImgUrl(imgName) {
+      return new URL(
+        `/src/assets/images/typesOfVa/${imgName}`,
+        import.meta.url
+      ).href;
     },
-    methods: {
-      getImgUrl(imgName) {
-        return new URL(
-          `/src/assets/images/typesOfVa/${imgName}`,
-          import.meta.url
-        ).href;
-      },
-    },
-  };
+  },
+};
 </script>
 
 <script setup>
-  import { scrollBottom } from "@/motions.js";
+import { scrollBottom } from "@/motions.js";
 </script>
 
 <style scoped>
-  .carouselTypes {
-    height: 40vh !important;
-  }
+.vaCard {
+  height: 15rem;
+  position: relative;
+}
 
-  .typesCard {
-    text-decoration: none;
-    position: relative;
-  }
+.vaCard img {
+  object-fit: cover;
+}
 
+.titleTypesofVA {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+}
+
+/* SM */
+@media only screen and (min-width: 480px) {
   .titleTypesofVA {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    text-decoration: none;
-    background: rgba(255, 255, 255, 0.9);
-    font-size: 1.4rem;
+    font-size: 1.15rem;
   }
+}
 
-  /* SM */
-  @media only screen and (min-width: 480px) {
-    .carouselTypes {
-      height: 50vh !important;
-    }
-
-    .vaIcon {
-      width: 20%;
-    }
-
-    .titleTypesofVA {
-      font-size: 1.5rem;
-    }
+@media only screen and (min-width: 600px) {
+  .vaCardsContainer{
+    width: 90% !important;
+    gap: 2rem !important;
   }
-
-  /* MD */
-  @media only screen and (min-width: 769px) {
-    .carousel {
-      width: 65% !important;
-    }
-
-    .carouselTypes {
-      height: 60vh !important;
-    }
-
-    .vaIcon {
-      width: 15%;
-    }
-
-    .titleTypesofVA {
-      font-size: 1.6rem;
-    }
+  
+  .vaCard {
+    width: 45% !important;
   }
+}
 
-  /* LG */
-  @media only screen and (min-width: 992px) {
-    .carousel {
-      width: 55% !important;
-    }
-
-    .carouselTypes {
-      height: 55vh !important;
-    }
+/* MD */
+@media only screen and (min-width: 769px) {
+  .titleTypesofVA {
+    font-size: 1.2rem;
   }
+}
 
-  /* Desktop */
-  @media only screen and (min-width: 1080px) {
-    body {
-      overflow: hidden;
-    }
-
-    .vaIcons {
-      display: none;
-    }
-
-    h2 {
-      width: 95%;
-    }
-
-    .carousel {
-      margin-top: 3vw !important;
-    }
+/* Desktop */
+@media only screen and (min-width: 1080px) {
+  h2 {
+    width: 95%;
   }
-
-  @media only screen and (min-width: 1280px) {
-    .carouselTypes {
-      height: 60vh !important;
-    }
+  .vaCardsContainer{
+    width: 95% !important;
+    gap: 1rem !important;
   }
-
-  /* XL */
-  @media only screen and (min-width: 1440px) {
-    .carouselTypes {
-      height: 65vh !important;
-    }
+  .vaCard {
+    width: 23% !important;
+    height: 17.5rem;
   }
+}
 
-  @media only screen and (min-width: 1920px) {
-    .carousel {
-      margin-top: 50px !important;
-    }
+@media only screen and (min-width: 1280px) {}
 
-    .carouselTypes {
-      height: 590px !important;
-    }
-  }
+/* XL */
+@media only screen and (min-width: 1440px) {}
+
+@media only screen and (min-width: 1920px) {}
 </style>

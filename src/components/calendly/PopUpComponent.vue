@@ -6,6 +6,7 @@
 
 <style scoped>
 .popUp {
+  text-align: center;
   background-color: white;
   border: 1px solid #373ae6;
   border-radius: 20vw;
@@ -16,7 +17,7 @@
   line-height: 1.3rem;
   text-decoration: none;
   transition: all ease 0.2s;
-  padding: 1.7vw 3vw;
+  padding: 1.7vw 2.75vw;
   margin-right: 3vw !important;
   /* Mobile */
   display: none;
