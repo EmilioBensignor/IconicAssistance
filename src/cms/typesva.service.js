@@ -1,4 +1,63 @@
 export const vaTypes = [
+  {
+    id: 7,
+    name: 'Executive Assistant',
+    slug: 'executive-assistant',
+    blueIcon: 'blueIcons/Executive-Assistant-VA-Blue-Icon.png',
+    blueIconAlt: 'Executive Assistant VA Blue Icon',
+    whiteIcon: 'whiteIcons/Executive-Assistant-VA-White-Icon.png',
+    whiteIconAlt: 'Executive Assistant VA White Icon',
+    img: 'main/Executive-Assistant-Virtual-Assistant.png',
+    alt: 'Executive Assistant Virtual Assistant',
+    description: [
+      "Calendar Management",
+      "Email Management",
+      "Travel Arrangements",
+      "Meeting Coordination",
+    ],
+    tasks: [
+      {
+        title: "Calendar Management:",
+        text: "Coordinate appointments and events efficiently."
+      },
+      {
+        title: "Email Management:",
+        text: "Filter, prioritize, and draft email responses."
+      },
+      {
+        title: "Travel Arrangements:",
+        text: "Handle comprehensive travel planning."
+      },
+      {
+        title: "Meeting Coordination:",
+        text: "Schedule, prepare for, and coordinate meetings."
+      },
+      {
+        title: "Document Preparation:",
+        text: "Create and format documents and presentations."
+      },
+      {
+        title: "Data Management:",
+        text: "Organize digital files and maintain data integrity."
+      },
+      {
+        title: "Communication Liaison:",
+        text: "Serve as a point of contact for communication."
+      },
+      {
+        title: "Task Delegation:",
+        text: "Assist in task assignment and tracking progress."
+      },
+      {
+        title: "Executive Assistant:",
+        text: "Streamline administrative tasks for efficiency."
+      },
+      {
+        title: "Expense and Event Management:",
+        text: "Manage expenses, plan events, and handle logistics."
+      },
+    ],
+  },
   // {
   //   id: 1,
   //   name: 'Administration',
@@ -179,8 +238,8 @@ export const vaTypes = [
   // },
   {
     id: 4,
-    name: 'Customer Support',
-    slug: 'customer-support',
+    name: 'Customer Support Assistant',
+    slug: 'customer-support-assistant',
     blueIcon: 'blueIcons/Customer-Support-VA-Blue-Icon.png',
     blueIconAlt: 'Customer Support VA Blue Icon',
     whiteIcon: 'whiteIcons/Customer-Support-VA-White-Icon.png',
@@ -347,65 +406,6 @@ export const vaTypes = [
       {
         title: "Lead Generation:",
         text: "Develop strategies to capture and nurture leads."
-      },
-    ],
-  },
-  {
-    id: 7,
-    name: 'Executive Assistant',
-    slug: 'executive-assistant',
-    blueIcon: 'blueIcons/Executive-Assistant-VA-Blue-Icon.png',
-    blueIconAlt: 'Executive Assistant VA Blue Icon',
-    whiteIcon: 'whiteIcons/Executive-Assistant-VA-White-Icon.png',
-    whiteIconAlt: 'Executive Assistant VA White Icon',
-    img: 'main/Executive-Assistant-Virtual-Assistant.png',
-    alt: 'Executive Assistant Virtual Assistant',
-    description: [
-      "Calendar Management",
-      "Email Management",
-      "Travel Arrangements",
-      "Meeting Coordination",
-    ],
-    tasks: [
-      {
-        title: "Calendar Management:",
-        text: "Coordinate appointments and events efficiently."
-      },
-      {
-        title: "Email Management:",
-        text: "Filter, prioritize, and draft email responses."
-      },
-      {
-        title: "Travel Arrangements:",
-        text: "Handle comprehensive travel planning."
-      },
-      {
-        title: "Meeting Coordination:",
-        text: "Schedule, prepare for, and coordinate meetings."
-      },
-      {
-        title: "Document Preparation:",
-        text: "Create and format documents and presentations."
-      },
-      {
-        title: "Data Management:",
-        text: "Organize digital files and maintain data integrity."
-      },
-      {
-        title: "Communication Liaison:",
-        text: "Serve as a point of contact for communication."
-      },
-      {
-        title: "Task Delegation:",
-        text: "Assist in task assignment and tracking progress."
-      },
-      {
-        title: "Executive Assistant:",
-        text: "Streamline administrative tasks for efficiency."
-      },
-      {
-        title: "Expense and Event Management:",
-        text: "Manage expenses, plan events, and handle logistics."
       },
     ],
   },
