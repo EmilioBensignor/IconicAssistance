@@ -1,10 +1,12 @@
 <template>
   <nav>
-    <v-app-bar elevation="0" app class="bg-white d-flex align-center px-5 py-1">
-      <router-link class="text-decoration-none" :to="'/'">
-        <IconicLogo class="mt-1" color="blue" />
-      </router-link>
-      <a class="secondaryButton desktop" href="#hero">Get Started</a>
+    <v-app-bar elevation="0" app class="bg-white px-5 py-1">
+      <div class="w-100 d-flex justify-space-between align-center">
+        <router-link class="text-decoration-none" :to="'/'">
+          <IconicLogo class="mt-1" color="blue" />
+        </router-link>
+        <a class="secondaryButton desktop" href="#hero">Get Started</a>
+      </div>
     </v-app-bar>
   </nav>
   <HeroComponent />

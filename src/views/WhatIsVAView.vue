@@ -1,4 +1,5 @@
 <template>
+  <CallToAction />
   <HeaderPagesComponent />
   <section class="heroPagesWave columnAlignCenter">
     <div class="heroPages flexCenter">
@@ -16,6 +17,7 @@
 
 <script>
   import HeaderPagesComponent from "@/components/HeaderPagesComponent.vue";
+  import CallToAction from "@/components/calendly/CallToAction.vue";
   import WhatAreVAComponent from "@/components/whatIsVa/WhatAreVAComponent.vue";
   import HowItWorksComponent from "@/components/whatIsVa/HowItWorksComponent.vue";
   import BenefitsComponent from "@/components/whatIsVa/BenefitsComponent.vue";
@@ -25,6 +27,7 @@
     name: 'WhatIsVA',
     components: {
       HeaderPagesComponent,
+      CallToAction,
       WhatAreVAComponent,
       HowItWorksComponent,
       BenefitsComponent,

@@ -1,4 +1,5 @@
 <template>
+  <CallToAction />
   <HeaderPagesComponent />
   <section class="heroPagesWave columnAlignCenter">
     <div class="heroPages flexCenter">
@@ -58,12 +59,14 @@
 <script>
   import { blogs } from "@/cms/blogs.service.js";
   import HeaderPagesComponent from "@/components/HeaderPagesComponent.vue";
+  import CallToAction from "@/components/calendly/CallToAction.vue";
   import FooterComponent from "@/components/FooterComponent.vue";
 
   export default {
     name: 'Blog',
     components: {
       HeaderPagesComponent,
+      CallToAction,
       FooterComponent,
     },
     data() {

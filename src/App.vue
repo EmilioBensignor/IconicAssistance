@@ -1,20 +1,13 @@
 <template>
   <v-app>
-    <div>
-      <router-view />
-      <CallToAction />
-    </div>
+    <router-view />
   </v-app>
 </template>
 
 <script>
-import CallToAction from "@/components/calendly/CallToAction.vue";
 
 export default {
   name: "App",
-  components: {
-    CallToAction,
-  },
   watch: {
     $route() {
       window.scrollTo(0, 0);
