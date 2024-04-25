@@ -1,6 +1,6 @@
 export const vaTypes = [
   {
-    id: 7,
+    id: 1,
     name: 'Executive Assistant',
     slug: 'executive-assistant',
     blueIcon: 'blueIcons/Executive-Assistant-VA-Blue-Icon.png',
@@ -59,7 +59,7 @@ export const vaTypes = [
     ],
   },
   // {
-  //   id: 1,
+  //   id: 2,
   //   name: 'Administration',
   //   slug: 'administration',
   //   blueIcon: 'blueIcons/Administration-VA-Blue-Icon.png',
@@ -118,7 +118,7 @@ export const vaTypes = [
   //   ],
   // },
   // {
-  //   id: 2,
+  //   id: 3,
   //   name: 'Appointment Setting',
   //   slug: 'appointment-setting',
   //   blueIcon: 'blueIcons/Appointment-Setting-VA-Blue-Icon.png',
@@ -177,7 +177,7 @@ export const vaTypes = [
   //   ],
   // },
   // {
-  //   id: 3,
+  //   id: 4,
   //   name: 'Bookkeeping',
   //   slug: 'bookkeeping',
   //   blueIcon: 'blueIcons/Bookkeeping-VA-Blue-Icon.png',
@@ -237,7 +237,7 @@ export const vaTypes = [
   //   // Industries Tasks
   // },
   {
-    id: 4,
+    id: 5,
     name: 'Customer Support',
     slug: 'customer-support',
     blueIcon: 'blueIcons/Customer-Support-VA-Blue-Icon.png',
@@ -296,7 +296,7 @@ export const vaTypes = [
     ],
   },
   // {
-  //   id: 5,
+  //   id: 6,
   //   name: 'Data Entry',
   //   slug: 'data-entry',
   //   blueIcon: 'blueIcons/Data-Entry-VA-Blue-Icon.png',
@@ -355,7 +355,7 @@ export const vaTypes = [
   //   ],
   // },
   {
-    id: 6,
+    id: 7,
     name: 'Marketing Assistant',
     slug: 'marketing-assistant',
     blueIcon: 'blueIcons/Marketing-Assistant-VA-Blue-Icon.png',
