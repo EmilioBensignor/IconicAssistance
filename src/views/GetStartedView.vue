@@ -36,16 +36,45 @@ export default {
 </script>
 
 <style scoped>
+header{
+  display: flex;
+  align-items: center;
+}
+
+.secondaryButton{
+  display: none;
+}
+
+/* MD */
+@media only screen and (min-width: 769px){
+  .secondaryButton{
+    display: block;
+    padding: 2vw 4vw;
+  }
+}
+
+@media only screen and (min-width: 850px){
+  .secondaryButton{
+    padding: 1.8vw 3.8vw;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .secondaryButton {
+    padding: 1.6vw 3.2vw;
+  }
+}
+
 /* Desktop */
 @media only screen and (min-width: 1080px) {
   .secondaryButton {
-    padding: 2vw 3.5vw;
+    padding: 1.8vw 3vw;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .secondaryButton {
-    padding: 1.75vw 3vw;
+    padding: 1.6vw 2.8vw;
   }
 }
 
@@ -55,7 +84,7 @@ export default {
   }
 }
 
-@media only screen and (min-width: 1550px) {
+@media only screen and (min-width: 1500px) {
   .secondaryButton {
     padding: 1.2vw 2.5vw;
   }
@@ -63,7 +92,7 @@ export default {
 
 @media only screen and (min-width: 1750px) {
   .secondaryButton {
-    padding: 1.2vw 2.2vw;
+    padding: 1.1vw 2.2vw;
   }
 }
 
