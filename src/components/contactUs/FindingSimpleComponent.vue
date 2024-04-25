@@ -1,8 +1,9 @@
 <template>
   <div class="content">
     <div class="columnAlignCenter">
-      <h2 v-motion="scrollBottom" class="text-white my-3">Finding an Executive Assistant is More SIMPLE Than Ever</h2>
-      <p v-motion="scrollBottom" class="explication text-white mb-4">
+      <h2 v-motion="scrollBottom" class="simpleTitle text-white my-3">Finding an Executive Assistant is More SIMPLE Than
+        Ever</h2>
+      <p v-motion="scrollBottom" class="simpleSubtitle explication text-white mb-4">
         Whether you need part-time or full-time help, ICONIC is the <span class='font-weight-bold'>quickest way</span>
         to
         get your own
@@ -106,6 +107,15 @@ import { scrollBottom } from "@/motions.js";
 @media only screen and (min-width: 1080px) {
   .reversed {
     flex-direction: row-reverse !important;
+  }
+
+  .simpleTitle {
+    text-align: start;
+  }
+
+  .simpleSubtitle {
+    width: 85% !important;
+    text-align: start;
   }
 
   .simple {
