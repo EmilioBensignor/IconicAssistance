@@ -1,20 +1,20 @@
 <template>
-  <div>
-    <h1>Test</h1>
-    <div id="form"></div>
-  </div>
+  <h1>Test</h1>
 </template>
 
 <script>
 export default {
-  beforeMount() {
+  mounted() {
     // Crear el elemento <script> para cargar el formulario de HubSpot
     const script = document.createElement('script');
     script.setAttribute('charset', 'utf-8');
     script.setAttribute('type', 'text/javascript');
     script.src = '//js.hsforms.net/forms/embed/v2.js';
     script.async = true;
-
+    
+    // Agregar el elemento <script> al final del body
+    document.body.appendChild(script);
+    
     // Llamar a la función de creación del formulario de HubSpot
     script.onload = function() {
       window.hbspt.forms.create({
@@ -23,10 +23,6 @@ export default {
         formId: "d164c3b6-b2b5-4fc9-acdf-b0920ec87420"
       });
     };
-
-    // Agregar el elemento <script> al div con id="form"
-    const formDiv = document.getElementById('form');
-    formDiv.appendChild(script);
   }
 };
 </script>
