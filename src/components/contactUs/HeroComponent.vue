@@ -13,7 +13,7 @@
                 executive support</span> to elevate your daily achievements to new heights.
             </p>
           </div>
-          <div ref="formContainer" id="form-container" class="form mt-3"></div>
+          <div ref="formContainer" id="form-container" class="form bg-white rounded-xl pa-5 elevation-3 mt-3"></div>
         </div>
         <img class="blueWave" src="@/assets/images/misc/Radioactive-Bottom-Wave.png" alt="Blue Wave">
       </div>
@@ -78,10 +78,6 @@ h1 {
 
 .form {
   width: 100%;
-}
-
-.hs-form-d164c3b6-b2b5-4fc9-acdf-b0920ec87420_a189bb6c-ae08-432a-953a-0c7c4f9446b1 .hs-form{
-  background-color: white !important;
 }
 
 /* SM */
