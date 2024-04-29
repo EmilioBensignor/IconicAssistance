@@ -17,6 +17,7 @@ import GetStartedView from '../views/GetStartedView.vue'
 import PrivacyPolicyView from '../views/PrivacyPolicyView.vue'
 import TermsUseView from '../views/TermsUseView.vue'
 import Error404View from '../views/Error404View.vue'
+import TestView from '../views/TestView.vue'
 
 const routes = [
   {
@@ -169,6 +170,14 @@ const routes = [
       metaTags: {
         description: "Transparent Solutions – Explore Iconic Assistants' Competitive Virtual Assistant Pricing.",
       },
+    }
+  },
+  {
+    path: '/test',
+    name: 'Test',
+    component: TestView,
+    meta: {
+      title: 'Testing - Iconic Assistants',
     }
   },
   {
