@@ -32,7 +32,8 @@
             </div>
           </v-carousel-item>
         </v-carousel>
-        <v-carousel interval="4000" cycle hide-delimiters class="h-100 carousel tabletCarousel columnAlignCenter py-5">
+        <v-carousel interval="400000" cycle hide-delimiters
+          class="h-100 carousel tabletCarousel columnAlignCenter py-5">
           <v-carousel-item>
             <div class="carouselContent d-flex flex-row ga-5">
               <div v-for="(reviewDesktop, index) in reviews.slice(0, 2)" :key="index"
@@ -71,7 +72,7 @@
           </v-carousel-item>
         </v-carousel>
         <v-carousel interval="3000" :show-arrows="false" hide-delimiters cycle
-          class="h-100 carousel mobileCarousel columnAlignCenter py-5">
+          class="h-100 carousel mobileCarousel columnAlignCenter pt-5">
           <v-carousel-item v-for="(reviewMobile, index) in reviews" :key="index">
             <div class="carouselContent">
               <div class="columnAlignCenter bg-white rounded-xl elevation-5 px-8 py-5">
@@ -131,11 +132,36 @@ import { scrollBottom } from "@/motions.js";
 }
 
 .carouselContent {
+  height: 26rem;
   padding: 3% 10%;
 }
 
-.carouselContent p{
+.carouselContent p {
   width: 100% !important;
+}
+
+@media only screen and (min-width: 370px) {
+  .carouselContent {
+    height: 24rem;
+  }
+}
+
+@media only screen and (min-width: 420px) {
+  .carouselContent {
+    height: 23rem;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .carouselContent {
+    height: 21rem;
+  }
+}
+
+@media only screen and (min-width: 550px) {
+  .carouselContent {
+    height: 20rem;
+  }
 }
 
 @media only screen and (min-width: 600px) {
@@ -148,7 +174,32 @@ import { scrollBottom } from "@/motions.js";
   }
 
   .carouselContent {
+    height: 31rem;
     padding: 3% 12%;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .carouselContent {
+    height: 26rem;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .carouselContent {
+    height: 24rem;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .carouselContent {
+    height: 22rem;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .carouselContent {
+    height: 23.5rem;
   }
 }
 
@@ -163,7 +214,32 @@ import { scrollBottom } from "@/motions.js";
   }
 
   .carouselContent {
+    height: 26rem;
     padding: 3% 8%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .carouselContent {
+    height: 24rem;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .carouselContent {
+    height: 23rem;
+  }
+}
+
+@media only screen and (min-width: 1750px) {
+  .carouselContent {
+    height: 24.5rem;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .carouselContent {
+    height: 420px;
   }
 }
 </style>
