@@ -1,5 +1,5 @@
 <template>
-    <section class="heroContactUs">
+  <section class="heroContactUs">
     <div class="content">
       <div class="columnAlignCenter">
         <div id="hero" class="heroPages columnAlignCenter ga-5">
@@ -8,19 +8,12 @@
               Enhance your Productivity with an <span class="text-radioactive"> ICONIC Executive Assistant</span>
             </h1>
             <p v-motion="scrollBottom" class="pMedium text-start">
-              <span class="font-weight-bold">Successful leaders</span> understand the power of having reliable Executive Assistants. Through ICONIC Assistants, you can access <span class="font-weight-bold">personalized executive support</span> to elevate your daily achievements to new heights.
+              <span class="font-weight-bold">Successful leaders</span> understand the power of having reliable Executive
+              Assistants. Through ICONIC Assistants, you can access <span class="font-weight-bold">personalized
+                executive support</span> to elevate your daily achievements to new heights.
             </p>
           </div>
-          <div class="form mt-3">
-            <iframe src="https://api.leadconnectorhq.com/widget/form/RG0XNk4b2K2mq0UVwkBq"
-              style="display:none;width:100%;height:100%;border:none;border-radius:8px" id="inline-RG0XNk4b2K2mq0UVwkBq"
-              data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value=""
-              data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="leadCollected"
-              data-deactivation-value="" data-form-name="New Lead Form v1" data-height="1047"
-              data-layout-iframe-id="inline-RG0XNk4b2K2mq0UVwkBq" data-form-id="RG0XNk4b2K2mq0UVwkBq"
-              title="New Lead Form v1">
-            </iframe>
-          </div>
+          <div ref="formContainer" id="form-container" class="form mt-3"></div>
         </div>
         <img class="blueWave" src="@/assets/images/misc/Radioactive-Bottom-Wave.png" alt="Blue Wave">
       </div>
@@ -30,6 +23,29 @@
 
 <script setup>
 import { scrollBottom } from "@/motions.js";
+</script>
+
+<script>
+export default {
+  mounted() {
+    const script = document.createElement('script');
+    script.setAttribute('charset', 'utf-8');
+    script.setAttribute('type', 'text/javascript');
+    script.src = '//js.hsforms.net/forms/embed/v2.js';
+    script.async = true;
+
+    this.$refs.formContainer.appendChild(script);
+
+    script.onload = () => {
+      window.hbspt.forms.create({
+        region: "na1",
+        portalId: "46001660",
+        formId: "d164c3b6-b2b5-4fc9-acdf-b0920ec87420",
+        target: '#form-container'
+      });
+    };
+  }
+};
 </script>
 
 <style scoped>
@@ -62,6 +78,10 @@ h1 {
 
 .form {
   width: 100%;
+}
+
+.hs-form-d164c3b6-b2b5-4fc9-acdf-b0920ec87420_a189bb6c-ae08-432a-953a-0c7c4f9446b1 .hs-form{
+  background-color: white !important;
 }
 
 /* SM */
@@ -124,7 +144,7 @@ h1 {
   .desktop {
     display: block;
   }
-  
+
   .heroContactUs {
     background: linear-gradient(90deg, rgba(255, 255, 255, 1) 30%, rgba(155, 220, 248, 1) 100%);
   }
@@ -139,7 +159,7 @@ h1 {
     width: 65%;
   }
 
-  .pMedium{
+  .pMedium {
     font-size: 1.3rem;
   }
 
