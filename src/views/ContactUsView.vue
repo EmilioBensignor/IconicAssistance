@@ -1,5 +1,4 @@
 <template>
-  <CallToAction />
   <HeaderPagesComponent />
   <HeroComponent />
   <StartDelegatingComponent />
@@ -10,7 +9,6 @@
 
 <script>
 import HeaderPagesComponent from "@/components/HeaderPagesComponent.vue";
-import CallToAction from "@/components/calendly/CallToAction.vue";
 import IconicLogo from "@/components/icons/IconicLogo.vue";
 import HeroComponent from "@/components/contactUs/HeroComponent.vue";
 import StartDelegatingComponent from "@/components/contactUs/StartDelegatingComponent.vue";
@@ -24,7 +22,6 @@ export default {
   name: 'ContactUs',
   components: {
     HeaderPagesComponent,
-    CallToAction,
     IconicLogo,
     HeroComponent,
     StartDelegatingComponent,

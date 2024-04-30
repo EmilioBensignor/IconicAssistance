@@ -1,5 +1,4 @@
 <template>
-  <CallToAction />
   <HeaderTransparentComponent />
   <section class="heroSection" :style="{ backgroundImage: `url(${getImgUrl(blog.img)})` }">
     <div class="heroOverlay flexCenter justify-center">
@@ -50,14 +49,12 @@
 <script>
 import { blogs } from "@/cms/blogs.service.js";
 import HeaderTransparentComponent from "@/components/HeaderTransparentComponent.vue";
-import CallToAction from "@/components/calendly/CallToAction.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
 
 export default {
   name: 'BlogPost',
   components: {
     HeaderTransparentComponent,
-    CallToAction,
     FooterComponent,
   },
   data() {

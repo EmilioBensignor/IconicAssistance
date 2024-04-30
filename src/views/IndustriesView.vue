@@ -1,5 +1,4 @@
 <template>
-  <CallToAction />
   <HeaderTransparentComponent />
   <section class="heroIndustries flexCenter" :style="{
     backgroundImage: `url(${getBackgroundUrl(industry.img)})`,
@@ -47,7 +46,6 @@
 
 <script>
 import HeaderTransparentComponent from "@/components/HeaderTransparentComponent.vue";
-import CallToAction from "@/components/calendly/CallToAction.vue";
 import { industries } from "@/cms/industries.service.js";
 import DifferencesComponent from "@/components/industries/DifferencesComponent.vue";
 import GuaranteeComponent from "@/components/industries/GuaranteeComponent.vue";
@@ -56,7 +54,6 @@ import FooterComponent from "@/components/FooterComponent.vue";
 export default {
   components: {
     HeaderTransparentComponent,
-    CallToAction,
     DifferencesComponent,
     GuaranteeComponent,
     FooterComponent,

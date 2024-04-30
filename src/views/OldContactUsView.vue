@@ -1,5 +1,4 @@
 <template>
-  <CallToAction />
   <HeaderPagesComponent />
   <section class="heroPagesWave columnAlignCenter">
     <div class="heroPages flexCenter">
@@ -194,7 +193,6 @@
 
 <script>
   import HeaderPagesComponent from "@/components/HeaderPagesComponent.vue";
-  import CallToAction from "@/components/calendly/CallToAction.vue";
   import { collection, addDoc } from "firebase/firestore";
   import db from "@/firebase/init.js";
   import emailjs from "emailjs-com";
@@ -204,7 +202,6 @@
     name: 'ContactUs',
     components: {
       HeaderPagesComponent,
-      CallToAction,
       FooterComponent,
     },
     data() {

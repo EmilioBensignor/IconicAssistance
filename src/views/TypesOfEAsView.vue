@@ -1,5 +1,4 @@
 <template>
-  <CallToAction />
   <HeaderPagesComponent />
   <section class="heroPagesWave columnAlignCenter">
     <div class="heroPages flexCenter">
@@ -15,7 +14,6 @@
 
 <script>
   import HeaderPagesComponent from "@/components/HeaderPagesComponent.vue";
-  import CallToAction from "@/components/calendly/CallToAction.vue";
   import OurServiceComponentVue from "@/components/typesOfEa/OurServiceComponent.vue";
   import TestimonialsComponentVue from "@/components/typesOfEa/TestimonialsComponent.vue";
   import FooterComponent from "@/components/FooterComponent.vue";
@@ -24,7 +22,6 @@
     name: 'TypesOfEas',
     components: {
       HeaderPagesComponent,
-      CallToAction,
       OurServiceComponentVue,
       TestimonialsComponentVue,
       FooterComponent,

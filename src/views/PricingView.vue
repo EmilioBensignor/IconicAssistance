@@ -1,5 +1,4 @@
 <template>
-  <CallToAction />
   <HeaderPagesComponent />
   <section class="heroPagesWave columnAlignCenter">
     <div class="heroPages flexCenter">
@@ -24,7 +23,6 @@
 
 <script>
   import HeaderPagesComponent from "@/components/HeaderPagesComponent.vue";
-  import CallToAction from "@/components/calendly/CallToAction.vue";
   import PricingComponent from "@/components/home/PricingComponent.vue";
   import FaqComponent from "@/components/pricing/FaqComponent.vue";
   import TestimonialsComponent from "@/components/pricing/TestimonialsComponent.vue";
@@ -34,7 +32,6 @@
     name: 'Pricing',
     components: {
       HeaderPagesComponent,
-      CallToAction,
       PricingComponent,
       FaqComponent,
       TestimonialsComponent,

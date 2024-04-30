@@ -1,5 +1,4 @@
 <template>
-  <CallToAction />
   <HeaderPagesComponent />
   <section class="heroPagesRadioactiveWave">
     <div class="heroPages flexCenter">
@@ -17,7 +16,6 @@
 
 <script>
   import HeaderPagesComponent from "@/components/HeaderPagesComponent.vue";
-  import CallToAction from "@/components/calendly/CallToAction.vue";
   import ExceptionalSkillComponent from "@/components/howWeHire/ExceptionalSkillComponent.vue";
   import OutsourceTopComponent from "@/components/howWeHire/OutsourceTopComponent.vue";
   import CandidateCriteriaComponent from "@/components/howWeHire/CandidateCriteriaComponent.vue";
@@ -27,7 +25,6 @@
     name: 'HowWeHire',
     components: {
       HeaderPagesComponent,
-      CallToAction,
       ExceptionalSkillComponent,
       OutsourceTopComponent,
       CandidateCriteriaComponent,

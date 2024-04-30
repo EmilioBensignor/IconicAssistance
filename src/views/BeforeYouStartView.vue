@@ -1,5 +1,4 @@
 <template>
-  <CallToAction />
   <HeaderPagesComponent />
   <section class="heroPagesWave columnAlignCenter">
     <div class="heroPages flexCenter">
@@ -17,7 +16,6 @@
 
 <script>
   import HeaderPagesComponent from "@/components/HeaderPagesComponent.vue";
-  import CallToAction from "@/components/calendly/CallToAction.vue";
   import OpportunitiesComponent from "@/components/beforeYouStart/OpportunitiesComponent.vue";
   import IsThisYou from "@/components/beforeYouStart/IsThisYou.vue";
   import PerfectMatchComponent from "@/components/beforeYouStart/PerfectMatchComponent.vue";
@@ -27,7 +25,6 @@
     name: 'BeforeYouStart',
     components: {
       HeaderPagesComponent,
-      CallToAction,
       OpportunitiesComponent,
       IsThisYou,
       PerfectMatchComponent,

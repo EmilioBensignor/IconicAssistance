@@ -1,5 +1,4 @@
 <template>
-  <CallToAction />
   <HeaderPagesComponent />
   <section class="heroPagesRadioactiveWave columnAlignCenter">
     <div class="heroPages flexCenter ga-5">
@@ -13,13 +12,11 @@
 
 <script>
   import HeaderPagesComponent from "@/components/HeaderPagesComponent.vue";
-  import CallToAction from "@/components/calendly/CallToAction.vue";
   import FooterComponent from "@/components/FooterComponent.vue";
   export default {
     name: "Error404",
     components: {
       HeaderPagesComponent,
-      CallToAction,
       FooterComponent,
     },
   };

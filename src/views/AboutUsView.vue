@@ -1,5 +1,4 @@
 <template>
-  <CallToAction />
   <HeaderPagesComponent />
   <section class="heroPagesWave columnAlignCenter">
     <div class="heroPages flexCenter">
@@ -23,7 +22,6 @@ import { scrollBottom } from "@/motions.js";
 
 <script>
 import HeaderPagesComponent from "@/components/HeaderPagesComponent.vue";
-import CallToAction from "@/components/calendly/CallToAction.vue";
 import AboutUsComponent from "@/components/aboutUs/AboutUsComponent.vue";
 import HowWeWorkComponent from "@/components/aboutUs/HowWeWorkComponent.vue";
 import OurMissionComponent from "@/components/aboutUs/OurMissionComponent.vue";
@@ -35,7 +33,6 @@ export default {
   name: 'AboutUs',
   components: {
     HeaderPagesComponent,
-    CallToAction,
     AboutUsComponent,
     HowWeWorkComponent,
     OurMissionComponent,

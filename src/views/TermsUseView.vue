@@ -1,5 +1,4 @@
 <template>
-  <CallToAction />
   <HeaderPagesComponent />
   <section class="columnAlignCenter">
     <div class="heroPrivacyTerms flexCenter">
@@ -501,14 +500,12 @@
 
 <script>
 import HeaderPagesComponent from "@/components/HeaderPagesComponent.vue";
-import CallToAction from "@/components/calendly/CallToAction.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
 
 export default {
   name: 'TermsUse',
   components: {
     HeaderPagesComponent,
-    CallToAction,
     FooterComponent,
   },
 };

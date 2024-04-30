@@ -1,5 +1,4 @@
 <template>
-  <CallToAction />
   <HeaderTransparentComponent />
   <section class="landing pa-0">
     <div class="content">
@@ -64,7 +63,6 @@
 
 <script>
   import HeaderTransparentComponent from "@/components/HeaderTransparentComponent.vue";
-  import CallToAction from "@/components/calendly/CallToAction.vue";
   import WhoWeAreComponent from "@/components/home/WhoWeAreComponent.vue";
   import WhyUsComponent from "@/components/home/WhyUsComponent.vue";
   import HowItWorksComponent from "@/components/home/HowItWorksComponent.vue";
@@ -79,7 +77,6 @@
     name: 'Home',
     components: {
       HeaderTransparentComponent,
-      CallToAction,
       WhoWeAreComponent,
       WhyUsComponent,
       HowItWorksComponent,
