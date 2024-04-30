@@ -340,7 +340,7 @@
 
     .comparison {
       position: sticky;
-      top: 6.5vw;
+      top: 7.5vw;
       z-index: 2;
     }
 
@@ -416,6 +416,12 @@
     .category,
     .itemChart {
       height: 6vw;
+    }
+  }
+
+  @media only screen and (min-width: 1250px){
+    .comparison {
+      top: 7vw;
     }
   }
 

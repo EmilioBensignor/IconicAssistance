@@ -30,12 +30,7 @@
         <p class="text-landing text-center text-white">
           Leading the way in Executive Assistant solutions, the top choice for your outsourcing needs.
         </p>
-        <a
-          href=""
-          class="heroCall elevation-10 mt-2"
-          onclick="Calendly.initPopupWidget({url:'https://calendly.com/iconic-assistants/15min-ij'});return false;"
-          >Hire ICONIC</a
-        >
+        <router-link class="heroCall elevation-10 mt-2" :to="'/contact-us'">Hire ICONIC</router-link>
       </div>
     </div>
   </section>
