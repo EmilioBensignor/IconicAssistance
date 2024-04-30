@@ -48,7 +48,7 @@
       return {
         candidateCriteriaLeft: [
           "Experience in role understanding and impact on client's business",
-          "Online VA experience with strong communication skills",
+          "Online EA experience with strong communication skills",
           "Motivated to work online and with our company",
           "Home office: focus on internet specs and backup plan",
         ],

@@ -12,8 +12,8 @@
               width="75%"
               class="guarantee shadow-5"
               v-motion="scrollBottom"
-              src="@/assets/images/aboutUs/100-Guarantee-Remote-Talent.png"
-              alt="100% Guarantee Remote Talent" />
+              src="@/assets/images/aboutUs/100-Guarantee-Executive-Assistant.png"
+              alt="100% Guarantee Executive Assistant" />
           </div>
           <ul class="w-75 tasks flexCenter text-white ga-5">
             <li v-motion="scrollBottom">

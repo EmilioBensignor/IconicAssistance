@@ -28,8 +28,8 @@
             class="w-75 prosperityModel columnAlignCenter mt-5 mb-10">
             <img
               class="rounded-t-xl elevation-7"
-              src="@/assets/images/aboutUs/Professional-Remote-Talent.png"
-              alt="Professional Remote Talent"
+              src="@/assets/images/aboutUs/Professional-Executive-Assistant.png"
+              alt="Professional Executive Assistant"
               width="100%" />
             <div
               class="columnAlignCenter aboutModelCaption py-3 bg-white rounded-xl elevation-7">

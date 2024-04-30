@@ -12,19 +12,19 @@
           <p v-motion="scrollBottom" class="textOpportunities text-white my-5">
             Ready to supercharge your efficiency?
           </p>
-          <div class="w-75 vaMobile">
+          <div class="w-75 eaMobile">
             <img
-              src="@/assets/images/beforeYouStart/Outsource-Remote-Talent.png"
-              alt="Outsource Remote Talent"
+              src="@/assets/images/beforeYouStart/Outsource-Executive-Assistant.png"
+              alt="Outsource Executive Assistant"
               class="rounded-circle elevation-5 my-5"
               v-motion="scrollBottom"
               width="100%" />
           </div>
           <p v-motion="scrollBottom" class="w-75 text-white my-3">
-            Start by pinpointing tasks ideal for a virtual assistant. Identify
+            Start by pinpointing tasks ideal for a executive assistant. Identify
             time-consuming and repetitive duties ripe for delegation, such as:
           </p>
-          <div class="vaOpportunities d-flex ga-3 my-5">
+          <div class="eaOpportunities d-flex ga-3 my-5">
             <ul
               v-motion="scrollBottom"
               class="column ga-3 text-white font-weight-bold">
@@ -47,7 +47,7 @@
         </div>
         <div class="w-75 opportunitiesRight">
           <img
-            src="@/assets/images/beforeYouStart/Outsource-Remote-Talent.png"
+            src="@/assets/images/beforeYouStart/Outsource-Executive-Assistant.png"
             alt="Outsource Remote Talent"
             class="rounded-xl elevation-5 my-5"
             v-motion="scrollBottom"
@@ -69,7 +69,7 @@
 
   /* Desktop */
   @media only screen and (min-width: 1080px) {
-    .vaMobile {
+    .eaMobile {
       display: none;
     }
 
@@ -109,7 +109,7 @@
       margin-bottom: 0 !important;
     }
 
-    .vaOpportunities {
+    .eaOpportunities {
       padding-left: 3vw;
       gap: 3.5vw !important;
     }
@@ -167,7 +167,7 @@
       margin-top: 10px !important;
     }
 
-    .vaOpportunities {
+    .eaOpportunities {
       padding-left: 60px;
       gap: 60px !important;
     }

@@ -95,7 +95,7 @@
   <section class="radioactiveWaves">
     <div class="content">
       <div class="contactUsFaq columnAlignCenter">
-        <div class="w-75 contactUsVa">
+        <div class="w-75 contactUsEa">
           <img
             src="@/assets/images/contactUs/Contact-Us-Remote-Talent.png"
             alt="Contact Us Remote Talent"
@@ -117,22 +117,22 @@
                       >Book a FREE consultation</router-link
                     >
                     with our Outsourcing Specialist and give us an overview of
-                    everything you’re looking for in a VA.
+                    everything you’re looking for in a EA.
                   </li>
                   <li>
                     <b>Strategy Meeting</b> - Within 24 hours of the call, our
-                    HR team will schedule a virtual meeting to better understand
+                    HR team will schedule a executive meeting to better understand
                     the tasks to outsource and your company culture.
                   </li>
                   <li>
-                    <b>Virtual Assistant Recruitment</b> - We will start
+                    <b>Executive Assistant Recruitment</b> - We will start
                     interviewing the candidates that meet your requirements and
                     create a shortlist of options for you. This process usually
                     takes around 1-2 weeks.
                   </li>
                   <li>
                     <b>Hiring & Onboarding</b> - When you’re ready, we’ll hire
-                    the Virtual Assistant and you will start working with them,
+                    the Executive Assistant and you will start working with them,
                     with the support of your Customer Success Agent to assist
                     you in the initial ‘nesting period’ to avoid any
                     miscommunications or misunderstandings.
@@ -140,7 +140,7 @@
                   <li>
                     <b>Regular check-ins</b> - Our team will also have regular
                     meetings and performance reviews and provide company
-                    benefits for your Virtual Assistant to ensure their
+                    benefits for your Executive Assistant to ensure their
                     happiness and to get all your tasks done the way you want
                     them.
                   </li>
@@ -168,16 +168,16 @@
                   <li><b>The short answer:</b> No</li>
                   <li>
                     <b>The long answer:</b> When you start working with a
-                    Virtual Assistant or Virtual Professional from Iconic
-                    Assistants, you are not hiring our VAs directly, you are
+                    Executive Assistant or Executive Professional from Iconic
+                    Assistants, you are not hiring our EAs directly, you are
                     hiring our company’s services (a US company), and like with
                     any other service, no taxes are due. Our company handles all
-                    the paperwork for hiring our VAs as foreign independent
+                    the paperwork for hiring our EAs as foreign independent
                     contractors.
                   </li>
                   <li>
                     In other words, 1) You are not hiring people from the US as
-                    employees, and 2) You are not hiring VAs in the US, you are
+                    employees, and 2) You are not hiring EAs in the US, you are
                     hiring our services, so you don’t have to worry about any
                     tax forms.
                   </li>
@@ -212,19 +212,19 @@
         faqs: [
           {
             title: "How do I pay Iconic Assitants",
-            text: "You’ll pay your virtual assistant through Iconic Assistants. You’ll pay us, a US-based company, and we will pay the Virtual Assistant. For US-based clients, we accept Credit Cards and ACH payments and for international clients, we only accept Credit Cards (transactions fees may apply).",
+            text: "You’ll pay your executive assistant through Iconic Assistants. You’ll pay us, a US-based company, and we will pay the Executive Assistant. For US-based clients, we accept Credit Cards and ACH payments and for international clients, we only accept Credit Cards (transactions fees may apply).",
           },
           {
             title: "Do you offer a Guarantee?",
-            text: "Yes, we offer a Satisfaction Guarantee. If you’re not happy with your Virtual Assistant by the end of the first 160 hours of work, we’ll replace your current assistant with a new VA at no additional cost to you.",
+            text: "Yes, we offer a Satisfaction Guarantee. If you’re not happy with your Executive Assistant by the end of the first 160 hours of work, we’ll replace your current assistant with a new EA at no additional cost to you.",
           },
           {
-            title: "Can I hire a Part-Time VA?",
-            text: "Yes, we can help you outsource part-time virtual assistant for your business or specific campaigns. Our plans include either part-time (80 hours per week) or full-time (160 hours per week) VA's.",
+            title: "Can I hire a Part-Time EA?",
+            text: "Yes, we can help you outsource part-time executive assistant for your business or specific campaigns. Our plans include either part-time (80 hours per week) or full-time (160 hours per week) EA's.",
           },
           {
-            title: "How can I sign up to be a VA?",
-            text: "To work as a virtual assistant and be a member of Iconic Assistants, you’ll first need to complete our online application.",
+            title: "How can I sign up to be a EA?",
+            text: "To work as a executive assistant and be a member of Iconic Assistants, you’ll first need to complete our online application.",
           },
         ],
         leadData: {
@@ -413,7 +413,7 @@
       font-size: 1.5rem;
     }
 
-    .contactUsVa img {
+    .contactUsEa img {
       width: 50% !important;
     }
   }
@@ -441,11 +441,11 @@
       width: 50% !important;
     }
 
-    .contactUsVa {
+    .contactUsEa {
       width: 50% !important;
     }
 
-    .contactUsVa img {
+    .contactUsEa img {
       width: 85% !important;
     }
   }
@@ -490,7 +490,7 @@
     .v-form {
       padding: 1vw 2vw 2vw 2vw !important;
     }
-    .contactUsVa img {
+    .contactUsEa img {
       width: 70% !important;
     }
   }
@@ -501,7 +501,7 @@
       font-size: 1.6rem;
     }
 
-    .contactUsVa img {
+    .contactUsEa img {
       width: 65% !important;
     }
   }
@@ -511,7 +511,7 @@
       width: 25% !important;
     }
 
-    .contactUsVa img {
+    .contactUsEa img {
       width: 60% !important;
     }
   }
@@ -531,7 +531,7 @@
       margin: 30px 0;
     }
 
-    .contactUsVa img {
+    .contactUsEa img {
       width: 65% !important;
     }
   }

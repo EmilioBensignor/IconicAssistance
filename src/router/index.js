@@ -4,9 +4,9 @@ import AboutUsView from '../views/AboutUsView.vue'
 import HowItWorksView from '../views/HowItWorksView.vue'
 import HowWeHireView from '../views/HowWeHireView.vue'
 import FaqView from '../views/FaqView.vue'
-import WhatIsVAView from '../views/WhatIsVAView.vue'
-import TypesOfVAsView from '../views/TypesOfVAsView.vue'
-import VirtualAssistantView from '../views/VirtualAssistantView.vue'
+import WhatIsEAView from '../views/WhatIsEAView.vue'
+import TypesOfEAsView from '../views/TypesOfEAsView.vue'
+import ExecutiveAssistantView from '../views/ExecutiveAssistantView.vue'
 import BeforeYouStartView from '../views/BeforeYouStartView.vue'
 import BlogView from '../views/BlogView.vue'
 import BlogPostView from '../views/BlogPostView.vue'
@@ -25,7 +25,7 @@ const routes = [
     name: 'Home',
     component: HomeView,
     meta: {
-      title: 'Iconic Virtual Asssitants',
+      title: 'Iconic Executive Asssitants',
       metaTags: {
         description: "Iconic Assistants supercharge productivity for entrepreneurs, executives, startups, and high growth companies.",
       }
@@ -76,33 +76,33 @@ const routes = [
     }
   },
   {
-    path: '/what-is-a-va',
-    name: 'WhatIsVA',
-    component: WhatIsVAView,
+    path: '/what-is-an-ea',
+    name: 'WhatIsEA',
+    component: WhatIsEAView,
     meta: {
-      title: 'What Is a VA - Iconic Assistants',
+      title: 'What Is an EA - Iconic Assistants',
       metaTags: {
-        description: "Unlocking Efficiency – Understanding the Role of Virtual Assistants with Iconic.",
+        description: "Unlocking Efficiency – Understanding the Role of Executive Assistants with Iconic.",
       }
     }
   },
   {
-    path: '/types-of-vas',
-    name: 'TypesOfVAs',
-    component: TypesOfVAsView,
+    path: '/types-of-eas',
+    name: 'TypesOfEAs',
+    component: TypesOfEAsView,
     meta: {
-      title: 'Types of VAs - Iconic Assistants',
+      title: 'Types of EAs - Iconic Assistants',
       metaTags: {
-        description: "Tailored Solutions – Explore the Diverse Virtual Assistant Specializations at Iconic.",
+        description: "Tailored Solutions – Explore the Diverse Executive Assistant Specializations at Iconic.",
       }
     }
   },
   {
-    path: '/virtual-assistant/:id',
-    name: 'VirtualAssistant',
-    component: VirtualAssistantView,
+    path: '/executive-assistant/:id',
+    name: 'ExecutiveAssistant',
+    component: ExecutiveAssistantView,
     meta: {
-      title: 'Virtual Assistant - Iconic Assistants',
+      title: 'Executive Assistant - Iconic Assistants',
       metaTags: {
         description: "Precision in recruitment, efficient payroll management. Unlock skills in HR, admin, marketing, support, and more.",
       },
@@ -126,7 +126,7 @@ const routes = [
     meta: {
       title: 'Blog - Iconic Assistants',
       metaTags: {
-        description: "Insights and Trends – Stay Informed with Iconic Assistants' Virtual Assistant Blog.",
+        description: "Insights and Trends – Stay Informed with Iconic Assistants' Executive Assistant Blog.",
       }
     }
   },
@@ -137,7 +137,7 @@ const routes = [
     meta: {
       title: 'Blog Post - Iconic Assistants',
       metaTags: {
-        description: "Insights and Trends – Stay Informed with Iconic Assistants' Virtual Assistant Blog.",
+        description: "Insights and Trends – Stay Informed with Iconic Assistants' Executive Assistant Blog.",
       }
     }
   },
@@ -157,7 +157,7 @@ const routes = [
     meta: {
       title: 'Services - Iconic Assistants',
       metaTags: {
-        description: "Elevate your business to new heights with our Virtual Assistant services, covering remote talent recruitment, overseas payroll and expert support.",
+        description: "Elevate your business to new heights with our Executive Assistant services, covering remote talent recruitment, overseas payroll and expert support.",
       },
     }
   },
@@ -168,7 +168,7 @@ const routes = [
     meta: {
       title: 'Pricing - Iconic Assistants',
       metaTags: {
-        description: "Transparent Solutions – Explore Iconic Assistants' Competitive Virtual Assistant Pricing.",
+        description: "Transparent Solutions – Explore Iconic Assistants' Competitive Executive Assistant Pricing.",
       },
     }
   },

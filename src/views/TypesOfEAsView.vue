@@ -4,33 +4,29 @@
   <section class="heroPagesWave columnAlignCenter">
     <div class="heroPages flexCenter">
       <h1 v-motion="scrollBottom" class="text-midnight">
-        Unlock your business' potencial with
-        <span class="text-radioactive">Iconic Assistants</span>
+        Types of Executive Assistants
       </h1>
     </div>
   </section>
-  <WhatAreVAComponent />
-  <HowItWorksComponent />
-  <BenefitsComponent />
+  <OurServiceComponentVue />
+  <TestimonialsComponentVue />
   <FooterComponent />
 </template>
 
 <script>
   import HeaderPagesComponent from "@/components/HeaderPagesComponent.vue";
   import CallToAction from "@/components/calendly/CallToAction.vue";
-  import WhatAreVAComponent from "@/components/whatIsVa/WhatAreVAComponent.vue";
-  import HowItWorksComponent from "@/components/whatIsVa/HowItWorksComponent.vue";
-  import BenefitsComponent from "@/components/whatIsVa/BenefitsComponent.vue";
+  import OurServiceComponentVue from "@/components/typesOfEa/OurServiceComponent.vue";
+  import TestimonialsComponentVue from "@/components/typesOfEa/TestimonialsComponent.vue";
   import FooterComponent from "@/components/FooterComponent.vue";
 
   export default {
-    name: 'WhatIsVA',
+    name: 'TypesOfEas',
     components: {
       HeaderPagesComponent,
       CallToAction,
-      WhatAreVAComponent,
-      HowItWorksComponent,
-      BenefitsComponent,
+      OurServiceComponentVue,
+      TestimonialsComponentVue,
       FooterComponent,
     },
   };
@@ -39,3 +35,9 @@
 <script setup>
   import { scrollBottom } from "@/motions.js";
 </script>
+
+<style scoped>
+section{
+  width: 100vw;
+}
+</style>

@@ -9,7 +9,7 @@
         </h2>
         <div class="w-75 keyMobile">
           <img
-            src="@/assets/images/whatIsVa/Iconic-Assistants-Key-Benefits.jpg"
+            src="@/assets/images/whatIsEa/Iconic-Assistants-Key-Benefits.jpg"
             alt="Iconic Assistants Key Benefits"
             class="my-5"
             v-motion="scrollBottom"
@@ -17,7 +17,7 @@
         </div>
         <div class="w-75 keyDesktop">
           <img
-            src="@/assets/images/whatIsVa/Iconic-Assistants-Key-Benefits-Desktop.png"
+            src="@/assets/images/whatIsEa/Iconic-Assistants-Key-Benefits-Desktop.png"
             alt="Iconic Assistants Key Benefits"
             class="my-5"
             v-motion="scrollBottom"
@@ -27,7 +27,7 @@
           v-motion="scrollBottom"
           class="w-75 explore flexCenter bg-radioactive rounded-xl elevation-5 px-3 py-5 mt-3 mb-5">
           <p class="text-white">
-            Explore the vast potential of Virtual Assistants (VAs) in seamlessly
+            Explore the vast potential of Executive Assistants (EAs) in seamlessly
             managing administrative tasks, from email and calendar to precise
             data entry and thorough research.
           </p>

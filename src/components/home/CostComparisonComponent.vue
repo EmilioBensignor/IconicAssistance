@@ -46,7 +46,7 @@
           <div
             class="w-50 columnAlignCenter bg-radioactive rounded-te-xl rounded-bs-xl elevation-10">
             <div
-              v-for="(item, index) in iconicVa"
+              v-for="(item, index) in iconicEa"
               :key="index"
               class="w-100 comparisonItem flexCenter justify-center pa-3">
               <p class="text-white text-center font-weight-bold">{{ item }}</p>
@@ -104,8 +104,8 @@
           "160 Hrs",
           "$6,108.80",
         ],
-        iconicVa: [
-          "ICONIC VA",
+        iconicEa: [
+          "ICONIC EA",
           "$9.55",
           "$0.00",
           "$0.00",

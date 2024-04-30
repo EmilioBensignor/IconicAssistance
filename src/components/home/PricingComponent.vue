@@ -31,7 +31,7 @@
                     <v-icon icon="mdi-check" color="radioactive" size="x-large">
                     </v-icon>
                     <p class="text-start w-100 text-radioactive ml-2">
-                      160 Hours per Month of Virtual Assistants
+                      160 Hours per Month of Executive Assistants
                     </p>
                   </li>
                   <li
@@ -62,7 +62,7 @@
                     <v-icon icon="mdi-check" color="radioactive" size="x-large">
                     </v-icon>
                     <p class="text-start w-100 text-radioactive ml-2">
-                      80 Hours per Month of Virtual Assistants
+                      80 Hours per Month of Executive Assistants
                     </p>
                   </li>
                   <li
@@ -165,14 +165,14 @@
             alt: "Full Time Remote Talent",
             title: "Full-Time",
             price: "From $9.55/Hr",
-            hours: "160 Hours per Month of Virtual Assistants",
+            hours: "160 Hours per Month of Executive Assistants",
           },
           {
             img: "pricing/part-time-remote-talent.png",
             alt: "Part Time Remote Talent",
             title: "Part-Time",
             price: "From $10.85/Hr",
-            hours: "80 Hours per Month of Virtual Assistants",
+            hours: "80 Hours per Month of Executive Assistants",
           },
           {
             img: "pricing/build-your-iconic-team.png",

@@ -56,7 +56,7 @@
             class="w-75 element columnAlignCenter border-rt rounded-te-xl pt-3 pb-5 shadow-3">
             <h3 class="text-white">Personalized Collaboration</h3>
             <p class="text-white mt-3 mb-6">
-              It's not just about finding a virtual assistant; it's about
+              It's not just about finding a executive assistant; it's about
               finding the right partner for your business journey.
             </p>
             <img

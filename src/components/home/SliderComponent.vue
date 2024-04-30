@@ -5,96 +5,96 @@
         <div class="logos-slide">
           <div class="slide">
             <img
-              src="@/assets/images/typesOfVa/slider/Administration.png"
+              src="@/assets/images/typesOfEa/slider/Administration.png"
               alt="" />
           </div>
           <div class="slide">
             <img
-              src="@/assets/images/typesOfVa/slider/Appointment-Setting.png"
+              src="@/assets/images/typesOfEa/slider/Appointment-Setting.png"
               alt="" />
           </div>
           <div class="slide">
             <img
-              src="@/assets/images/typesOfVa/slider/Book-Keeping.png"
+              src="@/assets/images/typesOfEa/slider/Book-Keeping.png"
               alt="" />
           </div>
           <div class="slide">
             <img
-              src="@/assets/images/typesOfVa/slider/Customer-Service.png"
+              src="@/assets/images/typesOfEa/slider/Customer-Service.png"
               alt="" />
           </div>
           <div class="slide">
-            <img src="@/assets/images/typesOfVa/slider/Data-Entry.png" alt="" />
+            <img src="@/assets/images/typesOfEa/slider/Data-Entry.png" alt="" />
           </div>
           <div class="slide">
             <img
-              src="@/assets/images/typesOfVa/slider/Digital-Marketing.png"
-              alt="" />
-          </div>
-          <div class="slide">
-            <img
-              src="@/assets/images/typesOfVa/slider/Executive-Admin.png"
+              src="@/assets/images/typesOfEa/slider/Digital-Marketing.png"
               alt="" />
           </div>
           <div class="slide">
             <img
-              src="@/assets/images/typesOfVa/slider/Project-Management.png"
+              src="@/assets/images/typesOfEa/slider/Executive-Admin.png"
               alt="" />
           </div>
           <div class="slide">
-            <img src="@/assets/images/typesOfVa/slider/Sales.png" alt="" />
+            <img
+              src="@/assets/images/typesOfEa/slider/Project-Management.png"
+              alt="" />
+          </div>
+          <div class="slide">
+            <img src="@/assets/images/typesOfEa/slider/Sales.png" alt="" />
           </div>
           <div class="slide">
             <img
-              src="@/assets/images/typesOfVa/slider/Social-Media.png"
+              src="@/assets/images/typesOfEa/slider/Social-Media.png"
               alt="" />
           </div>
         </div>
         <div class="logos-slide">
           <div class="slide">
             <img
-              src="@/assets/images/typesOfVa/slider/Administration.png"
+              src="@/assets/images/typesOfEa/slider/Administration.png"
               alt="" />
           </div>
           <div class="slide">
             <img
-              src="@/assets/images/typesOfVa/slider/Appointment-Setting.png"
+              src="@/assets/images/typesOfEa/slider/Appointment-Setting.png"
               alt="" />
           </div>
           <div class="slide">
             <img
-              src="@/assets/images/typesOfVa/slider/Book-Keeping.png"
+              src="@/assets/images/typesOfEa/slider/Book-Keeping.png"
               alt="" />
           </div>
           <div class="slide">
             <img
-              src="@/assets/images/typesOfVa/slider/Customer-Service.png"
+              src="@/assets/images/typesOfEa/slider/Customer-Service.png"
               alt="" />
           </div>
           <div class="slide">
-            <img src="@/assets/images/typesOfVa/slider/Data-Entry.png" alt="" />
+            <img src="@/assets/images/typesOfEa/slider/Data-Entry.png" alt="" />
           </div>
           <div class="slide">
             <img
-              src="@/assets/images/typesOfVa/slider/Digital-Marketing.png"
-              alt="" />
-          </div>
-          <div class="slide">
-            <img
-              src="@/assets/images/typesOfVa/slider/Executive-Admin.png"
+              src="@/assets/images/typesOfEa/slider/Digital-Marketing.png"
               alt="" />
           </div>
           <div class="slide">
             <img
-              src="@/assets/images/typesOfVa/slider/Project-Management.png"
+              src="@/assets/images/typesOfEa/slider/Executive-Admin.png"
               alt="" />
           </div>
           <div class="slide">
-            <img src="@/assets/images/typesOfVa/slider/Sales.png" alt="" />
+            <img
+              src="@/assets/images/typesOfEa/slider/Project-Management.png"
+              alt="" />
+          </div>
+          <div class="slide">
+            <img src="@/assets/images/typesOfEa/slider/Sales.png" alt="" />
           </div>
           <div class="slide">
             <img
-              src="@/assets/images/typesOfVa/slider/Social-Media.png"
+              src="@/assets/images/typesOfEa/slider/Social-Media.png"
               alt="" />
           </div>
         </div>

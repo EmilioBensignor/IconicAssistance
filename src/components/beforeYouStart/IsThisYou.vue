@@ -25,7 +25,7 @@
             Do you identify yourself with the following aspects?
           </p>
           <p v-motion="scrollBottom" class="my-1">
-            Then it's time to hire a virtual assistant.
+            Then it's time to hire a executive assistant.
           </p>
         </div>
         <router-link

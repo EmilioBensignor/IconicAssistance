@@ -9,10 +9,10 @@
             Of Your Business
           </h2>
           <img
-            class="vaMobile rounded-circle elevation-5 my-2"
+            class="eaMobile rounded-circle elevation-5 my-2"
             v-motion="scrollBottom"
-            src="@/assets/images/aboutUs/Remote-Talent-Iconic-Assistants.png"
-            alt="Remote Talent Iconic Assistants"
+            src="@/assets/images/aboutUs/Executive-Assistant-Iconic-Assistants.png"
+            alt="Executive Assistant Iconic Assistants"
             width="75%"
             eager />
           <p v-motion="scrollBottom" class="text-white">
@@ -31,9 +31,9 @@
         </div>
         <div class="aboutRight">
           <img
-            src="@/assets/images/aboutUs/Remote-Talent-Iconic-Assistants.png"
-            alt="Remote Talent Iconic Assistants"
-            class="vaDesktop rounded-xl elevation-5 my-2"
+            src="@/assets/images/aboutUs/Executive-Assistant-Iconic-Assistants.png"
+            alt="Executive Assistant Iconic Assistants"
+            class="eaDesktop rounded-xl elevation-5 my-2"
             v-motion="scrollBottom"
             width="90%"
             eager />
@@ -48,18 +48,18 @@
 </script>
 
 <style scoped>
-  .vaDesktop,
+  .eaDesktop,
   .aboutRight {
     display: none;
   }
 
   /* Desktop */
   @media only screen and (min-width: 1080px) {
-    .vaMobile {
+    .eaMobile {
       display: none;
     }
 
-    .vaDesktop {
+    .eaDesktop {
       display: block;
     }
 
@@ -100,25 +100,25 @@
 
   /* XL */
   @media only screen and (min-width: 1440px) {
-    .vaDesktop {
+    .eaDesktop {
       width: 75%;
     }
   }
 
   @media only screen and (min-width: 1600px) {
-    .vaDesktop {
+    .eaDesktop {
       width: 70%;
     }
   }
 
   @media only screen and (min-width: 1750px) {
-    .vaDesktop {
+    .eaDesktop {
       width: 65%;
     }
   }
 
   @media only screen and (min-width: 1920px) {
-    .vaDesktop {
+    .eaDesktop {
       width: 60%;
     }
   }

@@ -1,6 +1,6 @@
 <template>
   <section class="radioactiveWaves">
-    <div class="w-100 content empowerWrapper flexCenter ga-15 mt-5">
+    <div class="w-100 content empowerWrapper flexCenter ga-15 mt-5 mb-15">
       <div
         v-for="(item, index) in empower"
         :key="index"
@@ -64,8 +64,8 @@
               "Entrust recruitment complexity to our seasoned HR team. With decades of expertise, our talent pool of vetted remote professionals ensures swift acquisition, taking just 10 to 20 business days. Experience success with our guiding team.",
           },
           {
-            img: "Global-Payroll-Remote-Talent.png",
-            alt: "Global Payroll Remote Talent",
+            img: "Global-Payroll-Executive-Assistant.png",
+            alt: "Global Payroll Executive Assistant",
             title: "Payroll:",
             subtitle: "Seamlessly Global",
             advantages: [
@@ -77,8 +77,8 @@
               "Our payroll services transcend borders. Irrespective of your remote talent's location or hiring scale, we charge a single, transparent fee. Simplify financial operations while we handle payroll precisely.",
           },
           {
-            img: "Compliance-Outsource-Remote-Talent.png",
-            alt: "Compliance Outsource Remote Talent",
+            img: "Compliance-Outsource-Executive-Assistant.png",
+            alt: "Compliance Outsource Executive Assistant",
             title: "Support and Compliance:",
             subtitle: "Your Success, Our Priority",
             advantages: [
@@ -201,7 +201,6 @@
 
     .partner {
       font-size: 1.3rem;
-      margin: 5vw 0 1.5vw 0 !important;
     }
 
     .secondaryButton {
@@ -220,6 +219,12 @@
     }
   }
 
+  @media only screen and (min-width: 1350px) {
+    .partner {
+      margin-top: 7vw !important;
+    }
+  }
+
   @media only screen and (min-width: 1600px) {
     .empowerBody {
       padding-left: 1.5vw !important;
@@ -232,6 +237,12 @@
     .partner {
       font-size: 1.4rem;
       margin: 7vw 0 1vw 0 !important;
+    }
+  }
+
+  @media only screen and (min-width: 1650px) {
+    .partner {
+      margin-top: 10vw !important;
     }
   }
 
@@ -292,6 +303,10 @@
 
     .secondaryButton {
       padding: 30px 75px;
+    }
+
+    .partner {
+      margin-top: 155px !important;
     }
   }
 </style>

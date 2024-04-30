@@ -21,7 +21,7 @@
           </p>
           <div class="w-75 mobileModel">
             <img
-              src="@/assets/images/howItWorks/Remote-Talent-Call.png"
+              src="@/assets/images/howItWorks/Executive-Assistant-Call.png"
               alt="Remote Talent Call"
               width="75%"
               v-motion="scrollBottom"
@@ -35,7 +35,7 @@
         </div>
         <div class="desktopModel columnAlignCenter justify-center">
           <img
-            src="@/assets/images/howItWorks/Remote-Talent-Call.png"
+            src="@/assets/images/howItWorks/Executive-Assistant-Call.png"
             alt="Remote Talent Call"
             width="90%"
             v-motion="scrollBottom"
@@ -58,7 +58,7 @@
           </p>
           <div class="w-75 mobileModel">
             <img
-              src="@/assets/images/howItWorks/Remote-Talent-Right-Candidate.png"
+              src="@/assets/images/howItWorks/Executive-Assistant-Right-Candidate.png"
               alt="Remote Talent Right Candidate"
               width="75%"
               v-motion="scrollBottom"
@@ -72,7 +72,7 @@
         </div>
         <div class="desktopModel columnAlignCenter justify-center">
           <img
-            src="@/assets/images/howItWorks/Remote-Talent-Right-Candidate.png"
+            src="@/assets/images/howItWorks/Executive-Assistant-Right-Candidate.png"
             alt="Remote Talent Right Candidate"
             width="90%"
             v-motion="scrollBottom"
@@ -87,7 +87,7 @@
       <div class="stepDesktop columnAlignCenter">
         <div class="stepDesktopBody columnAlignCenter ga-1">
           <p v-motion="scrollBottom" class="subtitle text-white">Step 3</p>
-          <h2 v-motion="scrollBottom" class="text-white">Set Up Your VA</h2>
+          <h2 v-motion="scrollBottom" class="text-white">Set Up Your EA</h2>
           <p v-motion="scrollBottom" class="w-75 text-white my-3">
             A smooth transition for your remote talent: introduce tasks, ensure
             responsibilities alignment, and receive ongoing support for seamless
@@ -95,7 +95,7 @@
           </p>
           <div class="w-75 mobileModel">
             <img
-              src="@/assets/images/howItWorks/Remote-Talent-Tasks.png"
+              src="@/assets/images/howItWorks/Executive-Assistant-Tasks.png"
               alt="Remote Talent Tasks"
               width="75%"
               v-motion="scrollBottom"
@@ -103,13 +103,13 @@
           </div>
           <router-link
             class="primaryButton elevation-5 my-5"
-            :to="'/types-of-vas'"
-            >Types of VAs</router-link
+            :to="'/types-of-eas'"
+            >Types of EAs</router-link
           >
         </div>
         <div class="desktopModel columnAlignCenter justify-center">
           <img
-            src="@/assets/images/howItWorks/Remote-Talent-Tasks.png"
+            src="@/assets/images/howItWorks/Executive-Assistant-Tasks.png"
             alt="Remote Talent Tasks"
             width="90%"
             v-motion="scrollBottom"
@@ -134,7 +134,7 @@
           </p>
           <div class="w-75 mobileModel">
             <img
-              src="@/assets/images/howItWorks/Remote-Talent-Support.png"
+              src="@/assets/images/howItWorks/Executive-Assistant-Support.png"
               alt="Remote Talent Support"
               width="75%"
               v-motion="scrollBottom"
@@ -148,7 +148,7 @@
         </div>
         <div class="desktopModel columnAlignCenter justify-center">
           <img
-            src="@/assets/images/howItWorks/Remote-Talent-Support.png"
+            src="@/assets/images/howItWorks/Executive-Assistant-Support.png"
             alt="Remote Talent Support"
             width="90%"
             v-motion="scrollBottom"

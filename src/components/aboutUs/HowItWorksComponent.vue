@@ -1,7 +1,7 @@
 <template>
   <section class="skyRadioactive">
     <div class="content">
-      <div class="columnAlignCenter">
+      <div class="columnAlignCenter pb-15">
         <p v-motion="scrollBottom" class="subtitle text-white">How It Works</p>
         <h2 v-motion="scrollBottom" class="text-white">
           Unlocking efficiency in four simple steps

@@ -6,7 +6,7 @@
           Outsource to the top 1%
         </p>
         <p v-motion="scrollBottom" class="w-75 subtitle">
-          Access the <span class="font-weight-bold">Top 1%</span> of our VA
+          Access the <span class="font-weight-bold">Top 1%</span> of our EA
           candidates. Pre-vetted, pre-interviewed, and ready to work for you.
         </p>
         <h2 v-motion="scrollBottom" class="text-midnight my-3">
@@ -27,7 +27,7 @@
             </div>
             <div class="funnelBody columnAlignCenter">
               <img
-                src="@/assets/images/howWeHire/Remote-Talent-Applicants.png"
+                src="@/assets/images/howWeHire/Executive-Assistant-Applicants.png"
                 alt="Remote Talent Applicants"
                 width="25%" />
               <div class="columnAlignCenter">
@@ -58,11 +58,11 @@
             </div>
             <div class="funnelBody columnAlignCenter">
               <img
-                src="@/assets/images/howWeHire/Remote-Talent-Qualification.png"
+                src="@/assets/images/howWeHire/Executive-Assistant-Qualification.png"
                 alt="Remote Talent Qualification"
                 width="25%" />
               <div class="columnAlignCenter">
-                <h3 class="my-2">Initial VA Qualification</h3>
+                <h3 class="my-2">Initial EA Qualification</h3>
                 <p>
                   Our team conducts an initial qualification round to assess
                   applicants.
@@ -90,11 +90,11 @@
             </div>
             <div class="funnelBody columnAlignCenter">
               <img
-                src="@/assets/images/howWeHire/Remote-Talent-Review.png"
+                src="@/assets/images/howWeHire/Executive-Assistant-Review.png"
                 alt="Remote Talent Review"
                 width="25%" />
               <div class="columnAlignCenter">
-                <h3 class="my-2">Completed VA Application</h3>
+                <h3 class="my-2">Completed EA Application</h3>
                 <p>
                   Every application undergoes a thorough and meticulous review
                   process by our team.
@@ -121,7 +121,7 @@
             </div>
             <div class="funnelBody columnAlignCenter">
               <img
-                src="@/assets/images/howWeHire/Remote-Talent-Acceptance.png"
+                src="@/assets/images/howWeHire/Executive-Assistant-Acceptance.png"
                 alt="Remote Talent Acceptance"
                 width="25%" />
               <div class="columnAlignCenter">
@@ -153,13 +153,13 @@
             </div>
             <div class="funnelBody columnAlignCenter">
               <img
-                src="@/assets/images/howWeHire/Remote-Talent-Assessment.png"
+                src="@/assets/images/howWeHire/Executive-Assistant-Assessment.png"
                 alt="Remote Talent Assessment"
                 width="25%" />
               <div class="columnAlignCenter">
                 <h3 class="my-2">Final Profile Assessment</h3>
                 <p>
-                  An initial task is given to each VA to prove their skills, if
+                  An initial task is given to each EA to prove their skills, if
                   they fail to complete it successfully they’re rejected.
                 </p>
               </div>
@@ -184,7 +184,7 @@
             </div>
             <div class="funnelBody columnAlignCenter">
               <img
-                src="@/assets/images/howWeHire/Top-Remote-Talent.png"
+                src="@/assets/images/howWeHire/Top-Executive-Assistant.png"
                 alt="Top Remote Talent"
                 width="25%" />
               <div class="columnAlignCenter">
@@ -259,7 +259,7 @@
     }
 
     .funnel {
-      width: 75% !important;
+      width: 85% !important;
       display: flex;
       flex-direction: row;
       box-shadow: none !important;
@@ -325,7 +325,7 @@
     }
 
     .funnelBody img {
-      width: 25%;
+      width: 20%;
     }
 
     .funnelBody div {
@@ -338,10 +338,20 @@
     }
   }
 
+  @media only screen and (min-width: 1280px){
+    .funnel{
+      width: 75% !important;
+    }
+  }
+
   /* XL */
   @media only screen and (min-width: 1440px) {
     .funnelWrapper {
       margin: 5vw 0;
+    }
+
+    .funnel{
+      width: 70% !important;
     }
 
     .funnel h3 {
@@ -359,7 +369,7 @@
     }
 
     .funnelBody img {
-      width: 17%;
+      width: 20%;
     }
   }
 
@@ -372,8 +382,16 @@
       width: 80%;
     }
 
+    .funnel{
+      width: 75% !important;
+    }
+
     .funnelBlock {
       height: 163px;
+    }
+
+    .funnelBody{
+      width: 80%;
     }
 
     .funnelBody img {

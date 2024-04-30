@@ -13,13 +13,13 @@
         loop
         class="backgroundVideo">
         <source
-          src="@/assets/videos/Outsource-Anything-with-Iconic-Assistants.mp4"
+          src="@/assets/videos/Hire-Top-Remote-Talent-with-Iconic-Assistants.mp4"
           type="video/mp4" />
         <source
-          src="@/assets/videos/Outsource-Anything-with-Iconic-Assistants.mp4"
+          src="@/assets/videos/Hire-Top-Remote-Talent-with-Iconic-Assistants.mp4"
           type="video/webm" />
         <source
-          src="@/assets/videos/Outsource-Anything-with-Iconic-Assistants.mp4"
+          src="@/assets/videos/Hire-Top-Remote-Talent-with-Iconic-Assistants.mp4"
           type="video/quicktime" />
       </video>
       <div class="overlay"></div>
@@ -29,7 +29,7 @@
           <span class="text-blueSky">ICONIC ASSISTANTS</span>
         </h1>
         <p class="text-landing text-center text-white">
-          Leading the way in Virtual Assistant solutions, the top choice for your outsourcing needs.
+          Leading the way in Executive Assistant solutions, the top choice for your outsourcing needs.
         </p>
         <a
           href=""

@@ -10,7 +10,7 @@
           <span class="text-radioactive">Iconic Assistant</span>
         </h2>
         <div class="works columnAlignCenter ga-10 mt-5 mb-3">
-          <div class="w-75 step12 columnAlignCenter ga-10">
+          <div class="step12 columnAlignCenter ga-10">
             <div
               v-for="(item, index) in steps.slice(0, 2)"
               :key="index"
@@ -31,8 +31,8 @@
           </div>
           <div class="desktopImg" v-motion="scrollBottom">
             <img
-              src="@/assets/images/misc/Remote-Talent-Four-Steps.png"
-              alt="Remote Talent Four Steps"
+              src="@/assets/images/misc/Executive-Assistant-Four-Steps.png"
+              alt="Executive Assistant Four Steps"
               width="90%" />
           </div>
           <div class="step34 columnAlignCenter ga-10">
@@ -40,7 +40,7 @@
               v-for="(item, index) in steps.slice(2)"
               :key="index + 2"
               v-motion="scrollBottom"
-              class="w-75 step reversed rounded-xl pa-3 pb-6 elevation-5 columnAlignCenter ga-3">
+              class="step reversed rounded-xl pa-3 pb-6 elevation-5 columnAlignCenter ga-3">
               <p class="text-radioactive w-100 ml-3 stepNumbers reversed">
                 {{ item.number }}
               </p>
@@ -88,7 +88,7 @@
             img: "misc/Onboarding-Expertise.png",
             alt: "Onboarding Expertise",
             title: "Onboarding",
-            body: "We'll guide you through the onboarding process to ensure your VA integrates smoothly into your business.",
+            body: "We'll guide you through the onboarding process to ensure your EA integrates smoothly into your business.",
           },
           {
             number: "4.",

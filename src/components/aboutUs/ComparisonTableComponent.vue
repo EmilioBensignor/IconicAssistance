@@ -6,7 +6,7 @@
           Comparison Table
         </p>
         <h2 v-motion="scrollBottom" class="text-midnight">
-          <span class="text-radioactive">ICONIC</span> VAs Comparison Chart
+          <span class="text-radioactive">ICONIC</span> EAs Comparison Chart
         </h2>
         <p v-motion="scrollBottom" class="w-75 text-midnight mt-2 mb-5">
           As an entrepreneur or business, finding top talent without
@@ -48,19 +48,19 @@
             </div>
             <div class="cardComparisonRow text-midnight bg-grey-lighten-3">
               <div class="w-50 columnAlignCenter">
-                <p>Virtual Assistant Us-Based</p>
+                <p>Executive Assistant Us-Based</p>
               </div>
               <div class="w-50 columnAlignCenter">
-                <p>{{ item.vaUS }}</p>
+                <p>{{ item.eaUS }}</p>
               </div>
             </div>
             <div
               class="cardComparisonRow rounded-b-xl text-midnight bg-grey-lighten-3">
               <div class="w-50 columnAlignCenter">
-                <p>Virtual Assistant Philippines</p>
+                <p>Executive Assistant Philippines</p>
               </div>
               <div class="w-50 columnAlignCenter">
-                <p class="w-50">{{ item.vaPhilippines }}</p>
+                <p class="w-50">{{ item.eaPhilippines }}</p>
               </div>
             </div>
           </div>
@@ -76,11 +76,11 @@
               <p>US-based</p>
             </div>
             <div class="chartTitle py-2">
-              <p>Virtual Assistant</p>
+              <p>Executive Assistant</p>
               <p>US-based</p>
             </div>
             <div class="chartTitle py-2">
-              <p>Virtual Assistant</p>
+              <p>Executive Assistant</p>
               <p>Philippines</p>
             </div>
           </div>
@@ -106,17 +106,17 @@
                 <p>{{ item.inHouseUS }}</p>
               </div>
               <div class="itemChart px-3 py-5 bg-chartGray">
-                <p>{{ item.vaUS }}</p>
+                <p>{{ item.eaUS }}</p>
               </div>
               <div class="itemChart px-3 py-5 bg-chartGray rounded-te-xl">
-                <p>{{ item.vaPhilippines }}</p>
+                <p>{{ item.eaPhilippines }}</p>
               </div>
             </div>
           </div>
         </div>
         <p v-motion="scrollBottom" class="w-75 cancelText mt-3 mb-5">
           * After a thirty (30) days onboarding period, the customer may choose
-          to change their Virtual Assistant or terminate the service by
+          to change their Executive Assistant or terminate the service by
           providing a fifteen (15) days prior written notice to their assigned
           Customer Success Agent.
         </p>
@@ -139,104 +139,104 @@
             title: "Time to hire",
             iconic: "5-7 Days",
             inHouseUS: "1-4 months",
-            vaUS: "2-3 weeks",
-            vaPhilippines: "1-2 months",
+            eaUS: "2-3 weeks",
+            eaPhilippines: "1-2 months",
           },
           {
             number: 2,
             title: "Recruitment fee",
             iconic: "$0",
             inHouseUS: "$500-5k",
-            vaUS: "$0",
-            vaPhilippines: "$0",
+            eaUS: "$0",
+            eaPhilippines: "$0",
           },
           {
             number: 3,
             title: "Payroll, taxes & benefits",
             iconic: "NO",
             inHouseUS: "YES",
-            vaUS: "May vary",
-            vaPhilippines: "NO",
+            eaUS: "May vary",
+            eaPhilippines: "NO",
           },
           {
             number: 4,
             title: "Pre-vetted talent",
             iconic: "YES",
             inHouseUS: "NO",
-            vaUS: "May vary but usually No",
-            vaPhilippines: "May vary",
+            eaUS: "May vary but usually No",
+            eaPhilippines: "May vary",
           },
           {
             number: 5,
             title: "Avg lowest price/Hr",
             iconic: "$11/Hr",
             inHouseUS: "$25/Hr",
-            vaUS: "$20/Hr",
-            vaPhilippines: "$3-5/Hr",
+            eaUS: "$20/Hr",
+            eaPhilippines: "$3-5/Hr",
           },
           {
             number: 6,
             title: "Office space",
             iconic: "NO",
             inHouseUS: "YES",
-            vaUS: "NO",
-            vaPhilippines: "NO",
+            eaUS: "NO",
+            eaPhilippines: "NO",
           },
           {
             number: 7,
             title: "Quality guarantee",
             iconic: "YES",
             inHouseUS: "NO",
-            vaUS: "May vary",
-            vaPhilippines: "YES",
+            eaUS: "May vary",
+            eaPhilippines: "YES",
           },
           {
             number: 8,
             title: "Flexible schedule",
             iconic: "YES",
             inHouseUS: "NO",
-            vaUS: "May vary",
-            vaPhilippines: "YES",
+            eaUS: "May vary",
+            eaPhilippines: "YES",
           },
           {
             number: 9,
             title: "Certified professionals",
             iconic: "YES",
             inHouseUS: "YES",
-            vaUS: "YES",
-            vaPhilippines: "NO",
+            eaUS: "YES",
+            eaPhilippines: "NO",
           },
           {
             number: 10,
             title: "Turnover",
             iconic: "Very low",
             inHouseUS: "Low",
-            vaUS: "Varies",
-            vaPhilippines: "Med-high",
+            eaUS: "Varies",
+            eaPhilippines: "Med-high",
           },
           {
             number: 11,
             title: "Available in your time zone",
             iconic: "YES",
             inHouseUS: "YES",
-            vaUS: "YES",
-            vaPhilippines: "NO",
+            eaUS: "YES",
+            eaPhilippines: "NO",
           },
           {
             number: 12,
             title: "Success rate",
             iconic: "Very high",
             inHouseUS: "High",
-            vaUS: "Medium",
-            vaPhilippines: "Low medium",
+            eaUS: "Medium",
+            eaPhilippines: "Low medium",
           },
           {
             number: 13,
             title: "Cancel any time",
             iconic: "YES *",
             inHouseUS: "NO",
-            vaUS: "May vary",
-            vaPhilippines: "YES",
+            eaUS: "May vary",
+            eaPhilippines: "YES",
           },
         ],
       };

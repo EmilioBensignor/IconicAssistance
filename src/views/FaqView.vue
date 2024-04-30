@@ -5,7 +5,7 @@
     <div class="heroPages flexCenter">
       <h1 v-motion="scrollBottom" class="text-midnight">
         Outsource to
-        <span class="text-radioactive">Iconic Virtual Assistants</span>
+        <span class="text-radioactive">Iconic Executive Assistants</span>
       </h1>
     </div>
   </section>

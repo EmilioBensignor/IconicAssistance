@@ -4,7 +4,7 @@
   <section class="heroPagesWave columnAlignCenter">
     <div class="heroPages flexCenter">
       <h1 v-motion="scrollBottom" class="text-midnight">
-        Explore Our Virtual Assistant Blog
+        Explore Our Executive Assistant Blog
       </h1>
     </div>
   </section>

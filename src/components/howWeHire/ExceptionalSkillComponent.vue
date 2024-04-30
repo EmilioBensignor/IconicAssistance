@@ -13,7 +13,7 @@
           </p>
           <div class="w-75 mobileExceptional my-5">
             <img
-              src="@/assets/images/howWeHire/Exceptional-Skill-Remote-Talent.png"
+              src="@/assets/images/howWeHire/Exceptional-Skill-Executive-Assistant.png"
               alt="Exceptional Skill Remote Talent"
               v-motion="scrollBottom"
               class="remoteModel rounded-circle elevation-5"
@@ -28,7 +28,7 @@
         </div>
         <div class="desktopExceptional columnAlignCenter justify-center">
           <img
-            src="@/assets/images/howWeHire/Exceptional-Skill-Remote-Talent.png"
+            src="@/assets/images/howWeHire/Exceptional-Skill-Executive-Assistant.png"
             alt="Exceptional Skill Remote Talent"
             v-motion="scrollBottom"
             class="remoteModel rounded-xl elevation-5"

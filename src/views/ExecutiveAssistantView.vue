@@ -10,8 +10,8 @@
   </section>
   <section class="skyRadioactive">
     <div class="content">
-      <div class="otherVirtualAssistant columnAlignCenter">
-        <div class="virtualAssistant columnAlignCenter">
+      <div class="otherExecutiveAssistant columnAlignCenter">
+        <div class="executiveAssistant columnAlignCenter">
           <div class="w-75">
             <img :src="getImgUrl(assistant.img)" :alt="assistant.at" class="rounded-xl elevation-5"
               v-motion="scrollBottom" width="75%" eager />
@@ -42,7 +42,7 @@
             Other types of VAs that might interest you:
           </p>
           <div class="w-75 vasWrapper columnAlignCenter ga-7 mt-7">
-            <router-link v-for="(item, index) in vaTypes" :to="`/virtual-assistant/${item.id}`" :key="index"
+            <router-link v-for="(item, index) in eaTypes" :to="`/virtual-assistant/${item.id}`" :key="index"
               v-motion="scrollBottom"
               class="w-100 typesCards d-flex justify-space-between align-center bg-white rounded-xl pa-3 elevation-5">
               <div class="w-25 imgWrapper">
@@ -65,13 +65,13 @@
 </template>
 
 <script>
-import { vaTypes } from "@/cms/typesva.service.js";
+import { eaTypes } from "@/cms/typesea.service.js";
 import HeaderPagesComponent from "@/components/HeaderPagesComponent.vue";
 import CallToAction from "@/components/calendly/CallToAction.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
 
 export default {
-  name: 'VirtualAssistant',
+  name: 'ExecutiveAssistant',
   components: {
     HeaderPagesComponent,
     CallToAction,
@@ -79,7 +79,7 @@ export default {
   },
   data() {
     return {
-      vaTypes: vaTypes,
+      eaTypes: eaTypes,
       assistant: null,
       assistantId: null,
     };
@@ -95,12 +95,12 @@ export default {
   methods: {
     fetchAssistantDetails() {
       this.assistantId = this.$route.params.id;
-      this.assistant = vaTypes.find(
+      this.assistant = eaTypes.find(
         (va) => va.id === parseInt(this.assistantId)
       );
     },
     getImgUrl(imgName) {
-      return new URL(`../assets/images/typesOfVa/${imgName}`, import.meta.url)
+      return new URL(`../assets/images/typesOfEa/${imgName}`, import.meta.url)
         .href;
     },
   },
@@ -188,7 +188,7 @@ import { scrollBottom } from "@/motions.js";
 
 /* Desktop */
 @media only screen and (min-width: 1080px) {
-  .otherVirtualAssistant {
+  .otherExecutiveAssistant {
     flex-direction: row-reverse;
     justify-content: space-around;
     align-items: flex-start;
@@ -221,15 +221,15 @@ import { scrollBottom } from "@/motions.js";
     height: 4vw;
   }
 
-  .virtualAssistant {
+  .executiveAssistant {
     width: 55%;
   }
 
-  .virtualAssistant div {
+  .executiveAssistant div {
     width: 100% !important;
   }
 
-  .virtualAssistant div img {
+  .executiveAssistant div img {
     width: 90%;
     border-radius: 16px !important;
   }
@@ -244,27 +244,27 @@ import { scrollBottom } from "@/motions.js";
     margin-top: 0 !important;
   }
 
-  .virtualAssistant .tasksWrapper {
+  .executiveAssistant .tasksWrapper {
     width: 90% !important;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
   }
 
-  .virtualAssistant .tasksWrapper div {
+  .executiveAssistant .tasksWrapper div {
     width: 40% !important;
     height: 22vh;
     justify-content: center;
   }
 
-  .virtualAssistant .tasksWrapper div p:nth-child(2) {
+  .executiveAssistant .tasksWrapper div p:nth-child(2) {
     font-size: 1rem
   }
 }
 
 /* XL */
 @media only screen and (min-width: 1440px) {
-  .virtualAssistant div img {
+  .executiveAssistant div img {
     width: 75%;
   }
 
@@ -272,13 +272,13 @@ import { scrollBottom } from "@/motions.js";
     width: 80% !important;
   }
 
-  .virtualAssistant .tasksWrapper div {
+  .executiveAssistant .tasksWrapper div {
     height: 18vh;
   }
 }
 
 @media only screen and (min-width: 1600px) {
-  .virtualAssistant div img {
+  .executiveAssistant div img {
     width: 70%;
   }
 
@@ -291,13 +291,13 @@ import { scrollBottom } from "@/motions.js";
     height: 3.5vw;
   }
 
-  .virtualAssistant .tasksWrapper div {
+  .executiveAssistant .tasksWrapper div {
     height: 17vh;
   }
 }
 
 @media only screen and (min-width: 1750px) {
-  .virtualAssistant div img {
+  .executiveAssistant div img {
     width: 65%;
   }
 
@@ -310,13 +310,13 @@ import { scrollBottom } from "@/motions.js";
     height: 3vw;
   }
 
-  .virtualAssistant .tasksWrapper div {
+  .executiveAssistant .tasksWrapper div {
     height: 17vh;
   }
 }
 
 @media only screen and (min-width: 1920px) {
-  .otherVirtualAssistant {
+  .otherExecutiveAssistant {
     padding: 0 100px 250px 100px;
   }
 
@@ -332,11 +332,11 @@ import { scrollBottom } from "@/motions.js";
     width: 90% !important;
   }
 
-  .virtualAssistant {
+  .executiveAssistant {
     width: 65%;
   }
 
-  .virtualAssistant div img {
+  .executiveAssistant div img {
     width: 50%;
   }
 

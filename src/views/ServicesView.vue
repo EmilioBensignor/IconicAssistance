@@ -27,7 +27,7 @@
             <span class="font-weight-bold">offshore staffing</span>,
             <span class="font-weight-bold">remote work</span>,
             <span class="font-weight-bold">call centers</span>, and
-            <span class="font-weight-bold">virtual assistants</span>. Our
+            <span class="font-weight-bold">executive assistants</span>. Our
             Business Process Outsourcing (BPO) services streamline operations,
             enhance <span class="font-weight-bold">efficiency</span>, and cut
             costs, providing

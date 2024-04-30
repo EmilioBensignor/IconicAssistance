@@ -1,16 +1,16 @@
 <template>
   <section class="skyRadioactive whoWeAre pt-7">
     <div class="content">
-      <div class="w-50 vaModel">
+      <div class="w-50 eaModel">
         <img
-          src="@/assets/images/misc/Remote-Talent-Iconic-Assistants.png"
-          alt="Remote Talent Iconic Assistants"
+          src="@/assets/images/misc/Executive-Assistant-Iconic-Assistants.png"
+          alt="Executive Assistant Iconic Assistants"
           class="rounded-xl elevation-5"
           height="100%"
           width="100%" />
         <div class="caption columnAlignCenter py-3">
           <p class="text-white">
-            Our virtual assistants undergo rigorous interviews and thorough
+            Our executive assistants undergo rigorous interviews and thorough
             evaluations to guarantee a perfect alignment with your specific
             requirements and expectations.
           </p>
@@ -89,7 +89,7 @@
 </script>
 
 <style scoped>
-  .vaModel {
+  .eaModel {
     display: none;
   }
 
@@ -106,12 +106,12 @@
       line-height: 1.2;
     }
 
-    .vaModel {
+    .eaModel {
       display: block;
       position: relative;
     }
 
-    .vaModel img{
+    .eaModel img{
       object-fit: cover;
     }
 
@@ -158,11 +158,11 @@
 
   /* XL */
   @media only screen and (min-width: 1440px) {
-    .vaModel {
+    .eaModel {
       width: 45% !important;
     }
 
-    .vaModel img,
+    .eaModel img,
     .caption {
       left: 7.5%;
       width: 85%;
@@ -196,7 +196,7 @@
   }
 
   @media only screen and (min-width: 1750px) {
-    .vaModel img {
+    .eaModel img {
       width: 80%;
     }
 
@@ -220,7 +220,7 @@
   }
 
   @media only screen and (min-width: 1920px) {
-    .vaModel img,
+    .eaModel img,
     .caption {
       width: 76%;
     }
