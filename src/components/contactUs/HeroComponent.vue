@@ -26,38 +26,15 @@ import { scrollBottom } from "@/motions.js";
 </script>
 
 <script>
-export default {
-  mounted() {
-    const hubspotScript = document.createElement('script');
-    hubspotScript.setAttribute('charset', 'utf-8');
-    hubspotScript.setAttribute('type', 'text/javascript');
-    hubspotScript.src = '//js.hsforms.net/forms/embed/v2.js';
-    hubspotScript.async = true;
+hbspt.forms.create({
+  region: "na1",
+  portalId: "46001660",
+  formId: "d164c3b6-b2b5-4fc9-acdf-b0920ec87420",
+  target: '#form-container'
+});
 
-    const chilipiperScript = document.createElement('script');
-    chilipiperScript.setAttribute('charset', 'utf-8');
-    chilipiperScript.setAttribute('type', 'text/javascript');
-    chilipiperScript.src = 'https://js.na.chilipiper.com/marketing.js';
-    chilipiperScript.async = true;
-
-    this.$refs.formContainer.appendChild(hubspotScript);
-    this.$refs.formContainer.appendChild(chilipiperScript);
-
-    hubspotScript.onload = () => {
-      window.hbspt.forms.create({
-        region: "na1",
-        portalId: "46001660",
-        formId: "d164c3b6-b2b5-4fc9-acdf-b0920ec87420",
-        target: '#form-container'
-      });
-    };
-
-    chilipiperScript.onload = () => {
-      function q(a){return function(){ChiliPiper[a].q=(ChiliPiper[a].q||[]).concat([arguments])}}window.ChiliPiper=window.ChiliPiper||"submit scheduling showCalendar submit widget bookMeeting".split(" ").reduce(function(a,b){a[b]=q(b);return a},{});
-      ChiliPiper.scheduling("iconicassistants", "discovery-call", {title: "Thanks! What time works best for a quick call?"});
-    };
-  }
-};
+function q(a) { return function () { ChiliPiper[a].q = (ChiliPiper[a].q || []).concat([arguments]) } } window.ChiliPiper = window.ChiliPiper || "submit scheduling showCalendar submit widget bookMeeting".split(" ").reduce(function (a, b) { a[b] = q(b); return a }, {});
+ChiliPiper.scheduling("iconicassistants", "discovery-call", { title: "Thanks! What time works best for a quick call?", formId: "d164c3b6-b2b5-4fc9-acdf-b0920ec874209" })
 </script>
 
 <style scoped>
