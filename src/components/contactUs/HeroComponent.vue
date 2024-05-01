@@ -23,19 +23,51 @@
 
 <script setup>
 import { scrollBottom } from "@/motions.js";
+
+const hubspotScript = document.createElement('script');
+hubspotScript.setAttribute('charset', 'utf-8');
+hubspotScript.setAttribute('type', 'text/javascript');
+hubspotScript.src = '//js.hsforms.net/forms/embed/v2.js';
+hubspotScript.async = true;
+
+const createHubSpotForm = () => {
+  window.hbspt.forms.create({
+    region: "na1",
+    portalId: "46001660",
+    formId: "d164c3b6-b2b5-4fc9-acdf-b0920ec87420",
+    target: '#form-container'
+  });
+
+  integrateChiliPiper();
+};
+
+document.body.appendChild(hubspotScript);
+
+hubspotScript.onload = createHubSpotForm;
+
+const integrateChiliPiper = () => {
+  const chilipiperScript = document.createElement('script');
+  chilipiperScript.setAttribute('src', 'https://js.chilipiper.com/marketing.js');
+  chilipiperScript.setAttribute('type', 'text/javascript');
+  chilipiperScript.async = true;
+
+  document.body.appendChild(chilipiperScript);
+
+  var cpTenantDomain = "iconicassistants";
+  var cpRouterName = "discovery-call";
+  var cpHSDataFormIDs = [];
+  window.addEventListener("message", function (event) {
+    if (cpHSDataFormIDs.length > 0 && !cpHSDataFormIDs.includes(event.data.id)) return;
+    if (event.data.type === "hsFormCallback" && event.data.eventName === "onFormSubmitted") {
+      var lead = event.data.data.submissionValues;
+      for (var key in lead) { if (Array.isArray(lead[key])) { lead[key] = lead[key].toString().replaceAll(",", ";"); } }
+      ChiliPiper.submit(cpTenantDomain, cpRouterName, { map: true, lead: lead });
+    }
+  });
+
+};
 </script>
 
-<script>
-hbspt.forms.create({
-  region: "na1",
-  portalId: "46001660",
-  formId: "d164c3b6-b2b5-4fc9-acdf-b0920ec87420",
-  target: '#form-container'
-});
-
-function q(a) { return function () { ChiliPiper[a].q = (ChiliPiper[a].q || []).concat([arguments]) } } window.ChiliPiper = window.ChiliPiper || "submit scheduling showCalendar submit widget bookMeeting".split(" ").reduce(function (a, b) { a[b] = q(b); return a }, {});
-ChiliPiper.scheduling("iconicassistants", "discovery-call", { title: "Thanks! What time works best for a quick call?", formId: "d164c3b6-b2b5-4fc9-acdf-b0920ec874209" })
-</script>
 
 <style scoped>
 h1 {
