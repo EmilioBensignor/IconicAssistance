@@ -1,5 +1,5 @@
 <template>
-  <router-link class="popUp elevation-5 mr-2" :to="'/contact-us'">Get Started</router-link>
+  <router-link class="popUp elevation-3 mr-2" :to="'/contact-us'">Get Started</router-link>
 </template>
 
 <style scoped>
