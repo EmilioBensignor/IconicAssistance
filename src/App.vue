@@ -165,34 +165,34 @@ li {
 }
 
 .radioactiveWaves {
-  background-image: url("@/assets/images/misc/Radioactive-Top-Wave.png"),
-    url("@/assets/images/misc/Radioactive-Bottom-Wave.png");
+  background-image: url("@/web/assets/images/misc/Radioactive-Top-Wave.png"),
+    url("@/web/assets/images/misc/Radioactive-Bottom-Wave.png");
 }
 
 .skyBlueWaves {
-  background-image: url("@/assets/images/misc/Sky-Blue-Top-Wave.png"),
-    url("@/assets/images/misc/Sky-Blue-Bottom-Wave.png");
+  background-image: url("@/web/assets/images/misc/Sky-Blue-Top-Wave.png"),
+    url("@/web/assets/images/misc/Sky-Blue-Bottom-Wave.png");
 }
 
 .skyRadioactiveWaves {
-  background-image: url("@/assets/images/misc/Sky-Blue-Top-Wave.png"),
-    url("@/assets/images/misc/Radioactive-Bottom-Wave.png");
+  background-image: url("@/web/assets/images/misc/Sky-Blue-Top-Wave.png"),
+    url("@/web/assets/images/misc/Radioactive-Bottom-Wave.png");
 }
 
 .radioactiveSkyWaves {
-  background-image: url("@/assets/images/misc/Radioactive-Top-Wave.png"),
-    url("@/assets/images/misc/Sky-Blue-Bottom-Wave.png");
+  background-image: url("@/web/assets/images/misc/Radioactive-Top-Wave.png"),
+    url("@/web/assets/images/misc/Sky-Blue-Bottom-Wave.png");
 }
 
 .heroPagesWave {
-  background-image: url("@/assets/images/misc/Sky-Blue-Bottom-Wave.png");
+  background-image: url("@/web/assets/images/misc/Sky-Blue-Bottom-Wave.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: bottom;
 }
 
 .heroPagesRadioactiveWave {
-  background-image: url("@/assets/images/misc/Radioactive-Bottom-Wave.png");
+  background-image: url("@/web/assets/images/misc/Radioactive-Bottom-Wave.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: bottom;
