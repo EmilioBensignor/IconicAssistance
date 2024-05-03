@@ -66,33 +66,30 @@
     chilipiperScript.async = true;
 
     document.body.appendChild(chilipiperScript);
-
-    var cpTenantDomain = "iconicassistants.com";
-    var cpRouterName = "disco_call";
-    var cpHSDataFormIDs = [];
-    window.addEventListener("message", function (event) {
-      if (
-        cpHSDataFormIDs.length > 0 &&
-        !cpHSDataFormIDs.includes(event.data.id)
-      )
-        return;
-      if (
-        event.data.type === "hsFormCallback" &&
-        event.data.eventName === "onFormSubmitted"
-      ) {
-        var lead = event.data.data.submissionValues;
-        for (var key in lead) {
-          if (Array.isArray(lead[key])) {
-            lead[key] = lead[key].toString().replaceAll(",", ";");
-          }
-        }
-        ChiliPiper.submit(cpTenantDomain, cpRouterName, {
-          map: true,
-          lead: lead,
-        });
-      }
-    });
   };
+
+  var cpTenantDomain = "iconicassistants.com";
+  var cpRouterName = "disco_call";
+  var cpHSDataFormIDs = [];
+  window.addEventListener("message", function (event) {
+    if (cpHSDataFormIDs.length > 0 && !cpHSDataFormIDs.includes(event.data.id))
+      return;
+    if (
+      event.data.type === "hsFormCallback" &&
+      event.data.eventName === "onFormSubmitted"
+    ) {
+      var lead = event.data.data.submissionValues;
+      for (var key in lead) {
+        if (Array.isArray(lead[key])) {
+          lead[key] = lead[key].toString().replaceAll(",", ";");
+        }
+      }
+      ChiliPiper.submit(cpTenantDomain, cpRouterName, {
+        map: true,
+        lead: lead,
+      });
+    }
+  });
 </script>
 
 <style scoped>
