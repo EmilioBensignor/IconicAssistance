@@ -68,7 +68,7 @@
     document.body.appendChild(chilipiperScript);
   };
 
-  var cpTenantDomain = "iconicassistants.com";
+  var cpTenantDomain = "iconicassistants";
   var cpRouterName = "disco_call";
   var cpHSDataFormIDs = [];
   window.addEventListener("message", function (event) {

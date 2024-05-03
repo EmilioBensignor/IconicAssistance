@@ -15,6 +15,7 @@ export const eaTypes = [
       "Travel Arrangements",
       "Meeting Coordination",
     ],
+    summary: "An executive assistant provides comprehensive administrative support to executives or senior management. They manage calendars, coordinate meetings and travel arrangements, handle correspondence, and assist with project management tasks. Their role is crucial in helping executives stay organized and focused on strategic priorities.",
     tasks: [
       {
         title: "Calendar Management:",
@@ -252,6 +253,7 @@ export const eaTypes = [
       "Product Information",
       "Complaint Management",
     ],
+    summary: "A customer support assistant delivers exceptional service by promptly responding to inquiries, resolving issues, and assisting customers with product information and order processing. They manage customer accounts, handle complaints with professionalism and empathy, and maintain accurate records of interactions to ensure customer satisfaction.",
     tasks: [
       {
         title: "Customer Complaint Management:",
@@ -290,7 +292,7 @@ export const eaTypes = [
         text: "Gather and relay customer feedback for improvements."
       },
       {
-        title: "Technical Support and Language Support:",
+        title: "Technical and Language Support:",
         text: "Offer technical assistance and multilingual support as needed."
       },
     ],
@@ -370,6 +372,7 @@ export const eaTypes = [
       "Email Marketing",
       "Paid Advertising",
     ],
+    summary: "A marketing assistant supports marketing efforts by assisting with campaign planning, execution, and analysis. They conduct market research, create and distribute marketing materials, manage social media accounts, and coordinate events and promotions to increase brand awareness and drive sales.",
     tasks: [
       {
         title: "Marketing Assistant Strategy:",
@@ -425,6 +428,7 @@ export const eaTypes = [
       "Scheduling Management",
       "Document Management",
     ],
+    summary: "A project management assistant provides administrative support to project managers or teams to ensure projects are executed efficiently. They assist with project planning, scheduling, and resource allocation, track project progress, organize meetings, and manage project documentation to ensure compliance and accountability. Their role is essential in facilitating effective project execution and delivery.",
     tasks: [
       {
         title: "Task Coordination:",

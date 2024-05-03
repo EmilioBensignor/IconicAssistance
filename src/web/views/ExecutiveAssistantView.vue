@@ -16,14 +16,7 @@
               v-motion="scrollBottom" width="75%" eager />
           </div>
           <p v-motion="scrollBottom" class="vaGeneral w-75 text-white my-5">
-            Experience precision in recruitment and payroll efficiency. Unlock
-            skills in HR, administration, marketing, customer support, and more. Our
-            platform optimizes business processes, from hiring to payroll. Simplify
-            operations and enhance productivity with advanced technology. Enter a
-            new era of efficiency with innovative tools designed for success.
-            Elevate capabilities and stay ahead in a competitive landscape.
-            Transform work with integrated solutions, ensuring seamless operations
-            and heightened performance.
+          {{assistant.summary}}
           </p>
           <p v-motion="scrollBottom" class="w-75 text-white pMedium font-weight-bold my-5">
             Here's a detailed description of the Virtual Assistant role:
@@ -41,7 +34,7 @@
             Other types of VAs that might interest you:
           </p>
           <div class="w-75 vasWrapper columnAlignCenter ga-7 mt-7">
-            <router-link v-for="(item, index) in eaTypes" :to="`/virtual-assistant/${item.id}`" :key="index"
+            <router-link v-for="(item, index) in eaTypes" :to="`/executive-assistant/${item.id}`" :key="index"
               v-motion="scrollBottom"
               class="w-100 typesCards d-flex justify-space-between align-center bg-white rounded-xl pa-3 elevation-5">
               <div class="w-25 imgWrapper">
@@ -270,7 +263,7 @@ import { scrollBottom } from "@/motions.js";
   }
 
   .executiveAssistant .tasksWrapper div {
-    height: 18vh;
+    height: 20vh;
   }
 }
 
@@ -305,10 +298,6 @@ import { scrollBottom } from "@/motions.js";
   .circleNumber {
     width: 4.5vw;
     height: 3vw;
-  }
-
-  .executiveAssistant .tasksWrapper div {
-    height: 17vh;
   }
 }
 
