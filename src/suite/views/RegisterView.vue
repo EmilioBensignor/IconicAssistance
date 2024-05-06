@@ -30,7 +30,7 @@
 			<p class="w-auto text-black">Already registered?</p>
 			<router-link class="login text-radioactive" :to="routes.LOGIN">Log in</router-link>
 		</div>
-		<button class="w-50 register secondaryButton text-white elevation-5 mt-5 mb-1" type="submit">
+		<button class="w-75 register secondaryButton text-white elevation-5 mt-5 mb-1" type="submit">
 			Create Account
 		</button>
 	</v-form>
@@ -91,5 +91,41 @@ label {
 
 .register:hover {
 	color: #373ae6 !important;
+}
+
+@media only screen and (min-width: 350px) {
+	.register {
+		width: 70% !important;
+	}
+}
+
+@media only screen and (min-width: 400px) {
+	.register {
+		width: 65% !important;
+	}
+}
+
+@media only screen and (min-width: 450px) {
+	.register {
+		width: 60% !important;
+	}
+}
+
+@media only screen and (min-width: 480px) {
+	.register {
+		width: 55% !important;
+	}
+}
+
+@media only screen and (min-width: 550px) {
+	.register {
+		width: 50% !important;
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	.register {
+		width: 45% !important;
+	}
 }
 </style>
