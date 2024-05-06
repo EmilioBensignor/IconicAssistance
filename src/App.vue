@@ -249,6 +249,11 @@ section {
   flex-direction: column;
 }
 
+.row{
+  display: flex;
+  flex-direction: row;
+}
+
 .columnAlignCenter {
   display: flex;
   flex-direction: column;
@@ -281,6 +286,10 @@ section {
 
 .heroPrivacyTerms h1 {
   width: 100%;
+}
+
+.heroSuite{
+  padding: 5% 0 2% 0;
 }
 
 /* Animations */

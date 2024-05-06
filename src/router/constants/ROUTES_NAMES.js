@@ -7,4 +7,5 @@ export default {
 	ACCOUNT: "/suite/account",
 	ADD_PAYMENT_METHOD: "/suite/add-payment-method",
 	PAYMENT_METHODS: "/suite/payment-methods",
+	RESET_PASSWORD: "/reset-password",
 };

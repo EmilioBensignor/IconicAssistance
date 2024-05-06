@@ -1,7 +1,7 @@
 <template>
 	<HeaderSuiteComponent />
 	<div class="heroSuite columnAlignCenter">
-		<h1>Assistants</h1>
+		<h1>Reset Password</h1>
 	</div>
 </template>
 
