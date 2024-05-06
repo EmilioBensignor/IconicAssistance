@@ -53,8 +53,8 @@
             </div>
             <div class="w-50 saveIcon pl-3 mb-n6">
               <img
-                src="@/web/assets/images/misc/Save-75-Percentage.png"
-                alt="Save 75%"
+                src="@/web/assets/images/misc/Save-70-Percentage.png"
+                alt="Save 70%"
                 class="shadow-3"
                 width="95%" />
             </div>
@@ -106,12 +106,12 @@
         ],
         iconicEa: [
           "ICONIC EA",
-          "$9.55",
+          "$11.00",
           "$0.00",
           "$0.00",
           "$9.55",
           "160 Hrs",
-          "$1,528.00",
+          "$1,760.00",
         ],
       };
     },
