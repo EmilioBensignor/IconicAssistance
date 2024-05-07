@@ -6,13 +6,13 @@
 	<v-form class="columnAlignCenter" v-model="valid">
 		<div class="w-75">
 			<label for="email">Email</label>
-			<v-text-field id="email" v-model="email" :rules="emailRules"></v-text-field>
+			<v-text-field id="email" v-model="contactData.email" :rules="rules.emailRules"></v-text-field>
 		</div>
 		<div class="w-75">
 			<label for="password">Password</label>
-			<v-text-field id="password" v-model="password" :rules="passwordRules">
+			<v-text-field id="password" v-model="contactData.password" :rules="rules.passwordRules" :type="!showPassword ? 'password' : 'text'">
 				<template v-slot:append>
-					<v-icon :icon="showPassword ? 'mdi-eye-off-outline' : 'mdi-eye-outline'"
+					<v-icon :icon="!showPassword ? 'mdi-eye-off-outline' : 'mdi-eye-outline'"
 						@click="togglePasswordVisibility"></v-icon>
 				</template>
 			</v-text-field>
@@ -20,6 +20,9 @@
 		<div class="w-75 resetPassword column ga-1">
 			<p class="w-auto text-black">Forgot password?</p>
 			<router-link class="reset text-radioactive" :to="routes.RESET_PASSWORD">Reset password</router-link>
+		</div>
+		<div class="w-75 mt-5">
+			<router-link class="reset text-radioactive" :to="routes.REGISTER">Client Signup</router-link>
 		</div>
 		<button class="w-50 register secondaryButton text-white elevation-5 mt-5 mb-1" type="submit">
 			Login

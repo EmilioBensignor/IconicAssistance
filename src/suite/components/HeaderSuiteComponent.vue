@@ -5,7 +5,7 @@
         @click="showMenu = !showMenu"></v-app-bar-nav-icon>
       <v-toolbar-title>
         <router-link class="text-decoration-none" :to="'/'">
-          <img src="@/suite/assets/images/Suite-Logo.png" alt="Suite Logo">
+          <img width="75%" src="@/suite/assets/images/Suite-Logo.png" alt="Suite Logo">
         </router-link>
       </v-toolbar-title>
     </v-app-bar>

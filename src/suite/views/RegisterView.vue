@@ -6,23 +6,23 @@
 	<v-form class="columnAlignCenter" v-model="valid">
 		<div class="w-75">
 			<label for="email">Email</label>
-			<v-text-field id="email" v-model="email" :rules="emailRules"></v-text-field>
+			<v-text-field id="email" v-model="contactData.email" :rules="rules.emailRules"></v-text-field>
 		</div>
 		<div class="w-75">
 			<label for="password">Password</label>
-			<v-text-field id="password" v-model="password" :rules="passwordRules">
+			<v-text-field id="password" v-model="contactData.password" :rules="rules.passwordRules" :type="!showPassword ? 'password' : 'text'">
 				<template v-slot:append>
-					<v-icon :icon="showPassword ? 'mdi-eye-off-outline' : 'mdi-eye-outline'"
+					<v-icon :icon="!showPassword ? 'mdi-eye-off-outline' : 'mdi-eye-outline'"
 						@click="togglePasswordVisibility"></v-icon>
 				</template>
 			</v-text-field>
 		</div>
 		<div class="w-75">
 			<label for="password2">Repeat Password</label>
-			<v-text-field id="password2" v-model="password2" :rules="password2Rules">
+			<v-text-field id="password2" v-model="contactData.password2" :rules="rules.password2Rules" :type="!showPassword ? 'password' : 'text'">
 				<template v-slot:append>
-					<v-icon :icon="showPassword2 ? 'mdi-eye-off-outline' : 'mdi-eye-outline'"
-						@click="togglePassword2Visibility"></v-icon>
+					<v-icon :icon="!showPassword ? 'mdi-eye-off-outline' : 'mdi-eye-outline'"
+						@click="togglePasswordVisibility"></v-icon>
 				</template>
 			</v-text-field>
 		</div>
@@ -48,7 +48,6 @@ export default {
 		return {
 			routes: ROUTES_NAMES,
 			showPassword: false,
-			showPassword2: false,
 			contactData: {
 				email: '',
 				password: '',
@@ -57,7 +56,6 @@ export default {
 			rules: {
 				emailRules: [],
 				passwordRules: [],
-				password2Rules: [],
 			},
 			valid: false,
 		}
@@ -66,9 +64,6 @@ export default {
 		togglePasswordVisibility() {
 			this.showPassword = !this.showPassword;
 		},
-		togglePassword2Visibility() {
-			this.showPassword2 = !this.showPassword2;
-		}
 	}
 };
 </script>
