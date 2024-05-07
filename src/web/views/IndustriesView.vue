@@ -1,8 +1,10 @@
 <template>
   <HeaderTransparentComponent />
-  <section class="heroIndustries flexCenter" :style="{
-    backgroundImage: `url(${getBackgroundUrl(industry.img)})`,
-  }">
+  <section
+    class="heroIndustries flexCenter"
+    :style="{
+      backgroundImage: `url(${getBackgroundUrl(industry.img)})`,
+    }">
     <div class="heroOverlay flexCenter justify-center">
       <div class="heroPages flexCenter ga-4">
         <h1 v-motion="scrollBottom" class="text-white">{{ industry.name }}</h1>
@@ -11,7 +13,10 @@
         </p>
       </div>
     </div>
-    <img src="@/web/assets/images/misc/White-Bottom-Wave.png" alt="White Bottom Wave" class="heroPagesWhiteWave"
+    <img
+      src="@/web/assets/images/misc/White-Bottom-Wave.png"
+      alt="White Bottom Wave"
+      class="heroPagesWhiteWave"
       width="100%" />
   </section>
   <DifferencesComponent />
@@ -22,10 +27,16 @@
           VAs That Suit Your Industry
         </h2>
         <div v-if="industry" class="w-75 vaSuit columnAlignCenter ga-13 my-5">
-          <div v-for="(vaType, index) in industry.vaTypes" :key="index" v-motion="scrollBottom"
+          <div
+            v-for="(vaType, index) in industry.vaTypes"
+            :key="index"
+            v-motion="scrollBottom"
             class="vaSuitIndividual w-75 columnAlignCenter bg-white rounded-xl elevation-5 pb-5">
-            <v-img :src="getVaTypeUrl(vaType.img)" :alt="vaType.alt"
-              class="d-flex justify-center align-end rounded-t-xl" width="100%">
+            <v-img
+              :src="getVaTypeUrl(vaType.img)"
+              :alt="vaType.alt"
+              class="d-flex justify-center align-end rounded-t-xl"
+              width="100%">
               <h3 class="w-100 columnAlignCenter text-white mb-3">
                 {{ vaType.va }}
               </h3>
@@ -36,7 +47,11 @@
             </div>
           </div>
         </div>
-        <router-link class="primaryButton mt-5 elevation-5" :to="'/types-of-vas'">Look at our Types of VAs</router-link>
+        <router-link
+          class="primaryButton mt-5 elevation-5"
+          :to="'/types-of-vas'"
+          >Look at our Types of VAs</router-link
+        >
       </div>
     </div>
   </section>
@@ -45,211 +60,227 @@
 </template>
 
 <script>
-import HeaderTransparentComponent from "@/web/components/HeaderTransparentComponent.vue";
-import { industries } from "@/web/cms/industries.service.js";
-import DifferencesComponent from "@/web/components/industries/DifferencesComponent.vue";
-import GuaranteeComponent from "@/web/components/industries/GuaranteeComponent.vue";
-import FooterComponent from "@/web/components/FooterComponent.vue";
+  import HeaderTransparentComponent from "@/web/components/HeaderTransparentComponent.vue";
+  import { industries } from "@/web/cms/industries.service.js";
+  import DifferencesComponent from "@/web/components/industries/DifferencesComponent.vue";
+  import GuaranteeComponent from "@/web/components/industries/GuaranteeComponent.vue";
+  import FooterComponent from "@/web/components/FooterComponent.vue";
 
-export default {
-  components: {
-    HeaderTransparentComponent,
-    DifferencesComponent,
-    GuaranteeComponent,
-    FooterComponent,
-  },
-  data() {
-    return {
-      industries: industries,
-      industry: null,
-      industrySlug: null,
-    };
-  },
-  created() {
-    this.fetchIndustryDetails();
-  },
-  watch: {
-    $route() {
+  import { computed } from "vue";
+  import { useHead } from "@vueuse/head";
+  import { useRoute } from "vue-router";
+
+  export default {
+    components: {
+      HeaderTransparentComponent,
+      DifferencesComponent,
+      GuaranteeComponent,
+      FooterComponent,
+    },
+    setup() {
+      const route = useRoute();
+      useHead({
+        title: computed(() => route.meta.title),
+        meta: [
+          {
+            name: "description",
+            content: computed(() => route.meta.description),
+          },
+        ],
+      });
+      return {
+        industries: industries,
+        industry: null,
+        industrySlug: null,
+      };
+    },
+    created() {
       this.fetchIndustryDetails();
     },
-  },
-  methods: {
-    fetchIndustryDetails() {
-      this.industrySlug = this.$route.params.slug;
-      this.industry = industries.find(
-        (industry) => industry.slug === this.industrySlug
-      );
+    watch: {
+      $route() {
+        this.fetchIndustryDetails();
+      },
     },
-    getBackgroundUrl(imgName) {
-      return new URL(
-        `../web/assets/images/industries/${imgName}`,
-        import.meta.url
-      ).href;
+    methods: {
+      fetchIndustryDetails() {
+        this.industrySlug = this.$route.params.slug;
+        this.industry = industries.find(
+          (industry) => industry.slug === this.industrySlug
+        );
+      },
+      getBackgroundUrl(imgName) {
+        return new URL(
+          `../web/assets/images/industries/${imgName}`,
+          import.meta.url
+        ).href;
+      },
+      getVaTypeUrl(imgName) {
+        return new URL(
+          `../web/assets/images/typesOfVa/${imgName}`,
+          import.meta.url
+        ).href;
+      },
     },
-    getVaTypeUrl(imgName) {
-      return new URL(`../web/assets/images/typesOfVa/${imgName}`, import.meta.url)
-        .href;
-    },
-  },
-};
+  };
 </script>
 
 <script setup>
-import { scrollBottom } from "@/motions.js";
+  import { scrollBottom } from "@/motions.js";
 </script>
 
 <style scoped>
-.heroIndustries {
-  position: relative;
-  width: 100%;
-  height: 525px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.heroOverlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-/* SM */
-@media only screen and (min-width: 480px) {
   .heroIndustries {
-    height: 600px;
-  }
-}
-
-/* MD */
-@media only screen and (min-width: 769px) {
-  .heroIndustries {
-    height: 675px;
+    position: relative;
+    width: 100%;
+    height: 525px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
-  .subtitle {
-    font-size: 1.2rem;
-  }
-
-  .vaSuit {
-    width: 50% !important;
-  }
-}
-
-/* LG */
-@media only screen and (min-width: 992px) {
-  .heroIndustries {
-    width: 100vw;
-    height: 700px;
-  }
-}
-
-/* Desktop */
-@media only screen and (min-width: 1080px) {
-  .heroIndustries {
-    width: 100vw;
-    height: 725px;
-  }
-
-  .subtitle {
-    width: 60%;
-    font-size: 1.3rem;
-  }
-
-  .vaSuit {
-    width: 90% !important;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 2vw !important;
-    margin-top: 3vw !important;
-  }
-
-  .vaSuitIndividual {
-    height: 60vh;
-  }
-
-  .vaSuit h3 {
-    font-size: 1.4rem;
-    margin-bottom: 0.5vw !important;
-  }
-
-  .tasksOutsource {
+  .heroOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
-  .summary {
-    font-size: 1rem;
-  }
-}
-
-@media only screen and (min-width: 1280px) {
-  .heroIndustries {
-    width: 100vw;
-    height: 800px;
+  /* SM */
+  @media only screen and (min-width: 480px) {
+    .heroIndustries {
+      height: 600px;
+    }
   }
 
-  .vaSuitIndividual {
-    height: 52vh;
-  }
-}
+  /* MD */
+  @media only screen and (min-width: 769px) {
+    .heroIndustries {
+      height: 675px;
+    }
 
-/* XL */
-@media only screen and (min-width: 1440px) {
-  .heroIndustries {
-    height: 875px;
-  }
+    .subtitle {
+      font-size: 1.2rem;
+    }
 
-  .subtitle {
-    font-size: 1.4rem;
-  }
-
-  .vaSuit {
-    margin-bottom: 3vw !important;
-  }
-}
-
-@media only screen and (min-width: 1600px) {
-  .heroIndustries {
-    height: 925px;
+    .vaSuit {
+      width: 50% !important;
+    }
   }
 
-  .subtitle {
-    font-size: 1.5rem;
+  /* LG */
+  @media only screen and (min-width: 992px) {
+    .heroIndustries {
+      width: 100vw;
+      height: 700px;
+    }
   }
 
-  .vaSuitIndividual {
-    height: 52vh;
-  }
-}
+  /* Desktop */
+  @media only screen and (min-width: 1080px) {
+    .heroIndustries {
+      width: 100vw;
+      height: 725px;
+    }
 
-@media only screen and (min-width: 1750px) {
-  .heroIndustries {
-    height: 975px;
+    .subtitle {
+      width: 60%;
+      font-size: 1.3rem;
+    }
+
+    .vaSuit {
+      width: 90% !important;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 2vw !important;
+      margin-top: 3vw !important;
+    }
+
+    .vaSuitIndividual {
+      height: 60vh;
+    }
+
+    .vaSuit h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.5vw !important;
+    }
+
+    .tasksOutsource {
+      height: 100%;
+    }
+
+    .summary {
+      font-size: 1rem;
+    }
   }
 
-  .subtitle {
-    font-size: 1.6rem;
+  @media only screen and (min-width: 1280px) {
+    .heroIndustries {
+      width: 100vw;
+      height: 800px;
+    }
+
+    .vaSuitIndividual {
+      height: 52vh;
+    }
   }
 
-  .vaSuitIndividual {
-    height: 50vh;
-  }
-}
+  /* XL */
+  @media only screen and (min-width: 1440px) {
+    .heroIndustries {
+      height: 875px;
+    }
 
-@media only screen and (min-width: 1920px) {
-  .heroIndustries {
-    height: 1015px;
+    .subtitle {
+      font-size: 1.4rem;
+    }
+
+    .vaSuit {
+      margin-bottom: 3vw !important;
+    }
   }
 
-  .subtitle {
-    font-size: 1.7rem;
+  @media only screen and (min-width: 1600px) {
+    .heroIndustries {
+      height: 925px;
+    }
+
+    .subtitle {
+      font-size: 1.5rem;
+    }
+
+    .vaSuitIndividual {
+      height: 52vh;
+    }
   }
 
-  .vaSuitIndividual {
-    height: 465px;
+  @media only screen and (min-width: 1750px) {
+    .heroIndustries {
+      height: 975px;
+    }
+
+    .subtitle {
+      font-size: 1.6rem;
+    }
+
+    .vaSuitIndividual {
+      height: 50vh;
+    }
   }
-}
+
+  @media only screen and (min-width: 1920px) {
+    .heroIndustries {
+      height: 1015px;
+    }
+
+    .subtitle {
+      font-size: 1.7rem;
+    }
+
+    .vaSuitIndividual {
+      height: 465px;
+    }
+  }
 </style>

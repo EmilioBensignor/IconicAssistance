@@ -24,10 +24,7 @@ export const webRoutes = [
 		component: HomeView,
 		meta: {
 			title: "Iconic Executive Asssitants",
-			metaTags: {
-				description:
-					"Iconic Assistants supercharge productivity for entrepreneurs, executives, startups, and high growth companies.",
-			},
+			description: "Iconic Assistants supercharge productivity for entrepreneurs, executives, startups, and high growth companies.",
 		},
 	},
 	{
@@ -36,10 +33,7 @@ export const webRoutes = [
 		component: AboutUsView,
 		meta: {
 			title: "About Us - Iconic Assistants",
-			metaTags: {
-				description:
-					"Iconic Assistants supercharge productivity for entrepreneurs, executives, startups, and high growth companies.",
-			},
+			description: "Discover Iconic Assistants – Your Trusted Partner in Virtual Professional Solutions.",
 		},
 	},
 	{
@@ -48,10 +42,7 @@ export const webRoutes = [
 		component: HowItWorksView,
 		meta: {
 			title: "How It Works - Iconic Assistants",
-			metaTags: {
-				description:
-					"Simplified Excellence – Explore How Iconic Assistants Transforms Your Operations.",
-			},
+			description: "Simplified Excellence – Explore How Iconic Assistants Transforms Your Operations.",
 		},
 	},
 	{
@@ -60,10 +51,7 @@ export const webRoutes = [
 		component: HowWeHireView,
 		meta: {
 			title: "How We Hire - Iconic Assistants",
-			metaTags: {
-				description:
-					"Exclusively Top Talent – Learn About Iconic Assistants' Rigorous Hiring Process.",
-			},
+			description: "Exclusively Top Talent – Learn About Iconic Assistants' Rigorous Hiring Process.",
 		},
 	},
 	{
@@ -72,10 +60,7 @@ export const webRoutes = [
 		component: FaqView,
 		meta: {
 			title: "FAQ - Iconic Assistants",
-			metaTags: {
-				description:
-					"Got Questions? Find Answers Here – Iconic Assistants' Frequently Asked Questions.",
-			},
+			description: "Got Questions? Find Answers Here – Iconic Assistants' Frequently Asked Questions.",
 		},
 	},
 	{
@@ -84,10 +69,7 @@ export const webRoutes = [
 		component: WhatIsEAView,
 		meta: {
 			title: "What Is an EA - Iconic Assistants",
-			metaTags: {
-				description:
-					"Unlocking Efficiency – Understanding the Role of Executive Assistants with Iconic.",
-			},
+			description: "Unlocking Efficiency – Understanding the Role of Executive Assistants with Iconic.",
 		},
 	},
 	{
@@ -96,10 +78,7 @@ export const webRoutes = [
 		component: TypesOfEAsView,
 		meta: {
 			title: "Types of EAs - Iconic Assistants",
-			metaTags: {
-				description:
-					"Tailored Solutions – Explore the Diverse Executive Assistant Specializations at Iconic.",
-			},
+			description: "Tailored Solutions – Explore the Diverse Executive Assistant Specializations at Iconic.",
 		},
 	},
 	{
@@ -108,10 +87,7 @@ export const webRoutes = [
 		component: ExecutiveAssistantView,
 		meta: {
 			title: "Executive Assistant - Iconic Assistants",
-			metaTags: {
-				description:
-					"Precision in recruitment, efficient payroll management. Unlock skills in HR, admin, marketing, support, and more.",
-			},
+			description: "Precision in recruitment, efficient payroll management. Unlock skills in HR, admin, marketing, support, and more.",
 		},
 	},
 	{
@@ -120,10 +96,7 @@ export const webRoutes = [
 		component: BeforeYouStartView,
 		meta: {
 			title: "Before You Start - Iconic Assistants",
-			metaTags: {
-				description:
-					"Preparing for Success – Key Steps Before Diving into Iconic Assistants' Services.",
-			},
+			description: "Preparing for Success – Key Steps Before Diving into Iconic Assistants' Services.",
 		},
 	},
 	{
@@ -132,10 +105,7 @@ export const webRoutes = [
 		component: BlogView,
 		meta: {
 			title: "Blog - Iconic Assistants",
-			metaTags: {
-				description:
-					"Insights and Trends – Stay Informed with Iconic Assistants' Executive Assistant Blog.",
-			},
+			description: "Insights and Trends – Stay Informed with Iconic Assistants' Executive Assistant Blog.",
 		},
 	},
 	{
@@ -144,10 +114,7 @@ export const webRoutes = [
 		component: BlogPostView,
 		meta: {
 			title: "Blog Post - Iconic Assistants",
-			metaTags: {
-				description:
-					"Insights and Trends – Stay Informed with Iconic Assistants' Executive Assistant Blog.",
-			},
+			description: "Insights and Trends – Stay Informed with Iconic Assistants' Executive Assistant Blog.",
 		},
 	},
 	// {
@@ -156,7 +123,7 @@ export const webRoutes = [
 	//   component: IndustriesView,
 	//   meta: {
 	//     title: 'Industries',
-	//     content: 'Welcome Industries'
+	//     description: 'Welcome Industries'
 	//   }
 	// },
 	{
@@ -165,10 +132,7 @@ export const webRoutes = [
 		component: ServicesView,
 		meta: {
 			title: "Services - Iconic Assistants",
-			metaTags: {
-				description:
-					"Elevate your business to new heights with our Executive Assistant services, covering remote talent recruitment, overseas payroll and expert support.",
-			},
+			description: "Elevate your business to new heights with our Executive Assistant services, covering remote talent recruitment, overseas payroll and expert support.",
 		},
 	},
 	{
@@ -177,10 +141,7 @@ export const webRoutes = [
 		component: PricingView,
 		meta: {
 			title: "Pricing - Iconic Assistants",
-			metaTags: {
-				description:
-					"Transparent Solutions – Explore Iconic Assistants' Competitive Executive Assistant Pricing.",
-			},
+			description: "Transparent Solutions – Explore Iconic Assistants' Competitive Executive Assistant Pricing.",
 		},
 	},
 	{
@@ -197,10 +158,7 @@ export const webRoutes = [
 		component: ContactUsView,
 		meta: {
 			title: "Contact Us - Iconic Assistants",
-			metaTags: {
-				description:
-					"Connect with Us – Let's Discuss Your Business Needs with Iconic Assistants.",
-			},
+			description: "Connect with Us – Let's Discuss Your Business Needs with Iconic Assistants.",
 		},
 	},
 	{
@@ -209,22 +167,17 @@ export const webRoutes = [
 		component: GetStartedView,
 		meta: {
 			title: "Start delegating with ICONIC Assistants",
-			metaTags: {
-				description:
-					"Discover the power of having realiable Executive Assistants.",
-			},
+			description: "Discover the power of having realiable Executive Assistants.",
 		},
 	},
 	// {
-	//   path: '/old-contact-us',
-	//   name: 'OldContactUs',
-	//   component: OldContactUsView,
-	//   meta: {
-	//     title: 'Old Contact Us - Iconic Assistants',
-	//     metaTags: {
-	//       description: "Connect with Us – Let's Discuss Your Business Needs with Iconic Assistants.",
-	//     },
-	//   }
+	// 	path: '/old-contact-us',
+	// 	name: 'OldContactUs',
+	// 	component: OldContactUsView,
+	// 	meta: {
+	// 		title: 'Old Contact Us - Iconic Assistants',
+	// 		description: "Connect with Us – Let's Discuss Your Business Needs with Iconic Assistants.",
+	// 	}
 	// },
 	{
 		path: "/privacy",
@@ -232,9 +185,7 @@ export const webRoutes = [
 		component: PrivacyPolicyView,
 		meta: {
 			title: "Privacy Policy - Iconic Assistants",
-			metaTags: {
-				description: "Privacy Policy - Iconic Assistants",
-			},
+			description: "Privacy Policy - Iconic Assistants",
 		},
 	},
 	{
@@ -243,9 +194,7 @@ export const webRoutes = [
 		component: TermsUseView,
 		meta: {
 			title: "Terms of Use - Iconic Assistants",
-			metaTags: {
-				description: "Terms of use - Iconic Assistants",
-			},
+			description: "Terms of use - Iconic Assistants",
 		},
 	},
 ];

@@ -28,9 +28,12 @@
           <span class="text-blueSky">ICONIC ASSISTANTS</span>
         </h1>
         <p class="text-landing text-center text-white">
-          Leading the way in Executive Assistant solutions, the top choice for your outsourcing needs.
+          Leading the way in Executive Assistant solutions, the top choice for
+          your outsourcing needs.
         </p>
-        <router-link class="heroCall elevation-10 mt-2" :to="'/contact-us'">Hire ICONIC</router-link>
+        <router-link class="heroCall elevation-10 mt-2" :to="'/contact-us'"
+          >Hire ICONIC</router-link
+        >
       </div>
     </div>
   </section>
@@ -68,8 +71,12 @@
   import FAQsComponent from "@/web/components/home/FAQsComponent.vue";
   import FooterComponent from "@/web/components/FooterComponent.vue";
 
+  import { computed } from "vue";
+  import { useHead } from "@vueuse/head";
+  import { useRoute } from "vue-router";
+
   export default {
-    name: 'Home',
+    name: "Home",
     components: {
       HeaderTransparentComponent,
       WhoWeAreComponent,
@@ -81,6 +88,18 @@
       PricingComponent,
       FAQsComponent,
       FooterComponent,
+    },
+    setup() {
+      const route = useRoute();
+      useHead({
+        title: computed(() => route.meta.title),
+        meta: [
+          {
+            name: "description",
+            content: computed(() => route.meta.description),
+          },
+        ],
+      });
     },
   };
 </script>
@@ -238,7 +257,7 @@
   }
 
   @media only screen and (min-width: 1920px) {
-    .landing{
+    .landing {
       height: auto;
     }
     .hero {

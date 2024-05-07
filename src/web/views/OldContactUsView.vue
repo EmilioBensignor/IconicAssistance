@@ -120,8 +120,8 @@
                   </li>
                   <li>
                     <b>Strategy Meeting</b> - Within 24 hours of the call, our
-                    HR team will schedule a executive meeting to better understand
-                    the tasks to outsource and your company culture.
+                    HR team will schedule a executive meeting to better
+                    understand the tasks to outsource and your company culture.
                   </li>
                   <li>
                     <b>Executive Assistant Recruitment</b> - We will start
@@ -131,9 +131,9 @@
                   </li>
                   <li>
                     <b>Hiring & Onboarding</b> - When you’re ready, we’ll hire
-                    the Executive Assistant and you will start working with them,
-                    with the support of your Customer Success Agent to assist
-                    you in the initial ‘nesting period’ to avoid any
+                    the Executive Assistant and you will start working with
+                    them, with the support of your Customer Success Agent to
+                    assist you in the initial ‘nesting period’ to avoid any
                     miscommunications or misunderstandings.
                   </li>
                   <li>
@@ -198,13 +198,27 @@
   import emailjs from "emailjs-com";
   import FooterComponent from "@/components/FooterComponent.vue";
 
+  import { computed } from "vue";
+  import { useHead } from "@vueuse/head";
+  import { useRoute } from "vue-router";
+
   export default {
-    name: 'ContactUs',
+    name: "ContactUs",
     components: {
       HeaderPagesComponent,
       FooterComponent,
     },
-    data() {
+    setup() {
+      const route = useRoute();
+      useHead({
+        title: computed(() => route.meta.title),
+        meta: [
+          {
+            name: "description",
+            content: computed(() => route.meta.description),
+          },
+        ],
+      });
       return {
         faqs: [
           {
@@ -373,7 +387,7 @@
 </script>
 
 <style scoped>
-  .v-form{
+  .v-form {
     width: 90%;
   }
 

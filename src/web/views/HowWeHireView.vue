@@ -21,14 +21,30 @@
   import CandidateCriteriaComponent from "@/web/components/howWeHire/CandidateCriteriaComponent.vue";
   import FooterComponent from "@/web/components/FooterComponent.vue";
 
+  import { computed } from "vue";
+  import { useHead } from "@vueuse/head";
+  import { useRoute } from "vue-router";
+
   export default {
-    name: 'HowWeHire',
+    name: "HowWeHire",
     components: {
       HeaderPagesComponent,
       ExceptionalSkillComponent,
       OutsourceTopComponent,
       CandidateCriteriaComponent,
       FooterComponent,
+    },
+    setup() {
+      const route = useRoute();
+      useHead({
+        title: computed(() => route.meta.title),
+        meta: [
+          {
+            name: "description",
+            content: computed(() => route.meta.description),
+          },
+        ],
+      });
     },
   };
 </script>

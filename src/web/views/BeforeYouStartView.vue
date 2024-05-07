@@ -21,14 +21,30 @@
   import PerfectMatchComponent from "@/web/components/beforeYouStart/PerfectMatchComponent.vue";
   import FooterComponent from "@/web/components/FooterComponent.vue";
 
+  import { computed } from "vue";
+  import { useHead } from "@vueuse/head";
+  import { useRoute } from "vue-router";
+
   export default {
-    name: 'BeforeYouStart',
+    name: "BeforeYouStart",
     components: {
       HeaderPagesComponent,
       OpportunitiesComponent,
       IsThisYou,
       PerfectMatchComponent,
       FooterComponent,
+    },
+    setup() {
+      const route = useRoute();
+      useHead({
+        title: computed(() => route.meta.title),
+        meta: [
+          {
+            name: "description",
+            content: computed(() => route.meta.description),
+          },
+        ],
+      });
     },
   };
 </script>

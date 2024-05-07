@@ -21,14 +21,30 @@
   import BenefitsComponent from "@/web/components/whatIsEa/BenefitsComponent.vue";
   import FooterComponent from "@/web/components/FooterComponent.vue";
 
+  import { computed } from "vue";
+  import { useHead } from "@vueuse/head";
+  import { useRoute } from "vue-router";
+
   export default {
-    name: 'WhatIsEA',
+    name: "WhatIsEA",
     components: {
       HeaderPagesComponent,
       WhatAreVAComponent,
       HowItWorksComponent,
       BenefitsComponent,
       FooterComponent,
+    },
+    setup() {
+      const route = useRoute();
+      useHead({
+        title: computed(() => route.meta.title),
+        meta: [
+          {
+            name: "description",
+            content: computed(() => route.meta.description),
+          },
+        ],
+      });
     },
   };
 </script>

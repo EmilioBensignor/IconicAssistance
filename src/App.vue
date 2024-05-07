@@ -5,6 +5,8 @@
 </template>
 
 <script>
+import { computed } from 'vue'
+import { useHead } from '@vueuse/head'
 
 export default {
   name: "App",
@@ -12,6 +14,17 @@ export default {
     $route() {
       window.scrollTo(0, 0);
     },
+  },
+  setup(){
+    useHead({
+      title: 'Iconic Executive Asssitants',
+      meta: [
+        {
+          name: 'description',
+          content: 'Iconic Assistants supercharge productivity for entrepreneurs, executives, startups, and high growth companies.',
+        }
+      ],
+    })
   },
 };
 </script>

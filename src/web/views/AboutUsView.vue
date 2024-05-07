@@ -29,6 +29,10 @@ import ComparisonTableComponent from "@/web/components/aboutUs/ComparisonTableCo
 import HowItWorksComponent from "@/web/components/aboutUs/HowItWorksComponent.vue";
 import FooterComponent from "@/web/components/FooterComponent.vue";
 
+import { computed } from 'vue'
+import { useHead } from '@vueuse/head'
+import { useRoute } from 'vue-router'
+
 export default {
   name: 'AboutUs',
   components: {
@@ -40,6 +44,18 @@ export default {
     HowItWorksComponent,
     FooterComponent,
   },
+  setup() {
+    const route = useRoute()
+    useHead({
+      title: computed(() => route.meta.title),
+      meta: [
+        {
+          name: 'description',
+          content: computed(() => route.meta.description)
+        }
+      ]
+    })
+  }
 };
 </script>
 

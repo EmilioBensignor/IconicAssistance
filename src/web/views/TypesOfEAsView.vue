@@ -18,13 +18,29 @@
   import TestimonialsComponentVue from "@/web/components/typesOfEa/TestimonialsComponent.vue";
   import FooterComponent from "@/web/components/FooterComponent.vue";
 
+  import { computed } from "vue";
+  import { useHead } from "@vueuse/head";
+  import { useRoute } from "vue-router";
+
   export default {
-    name: 'TypesOfEas',
+    name: "TypesOfEas",
     components: {
       HeaderPagesComponent,
       OurServiceComponentVue,
       TestimonialsComponentVue,
       FooterComponent,
+    },
+    setup() {
+      const route = useRoute();
+      useHead({
+        title: computed(() => route.meta.title),
+        meta: [
+          {
+            name: "description",
+            content: computed(() => route.meta.description),
+          },
+        ],
+      });
     },
   };
 </script>
@@ -34,7 +50,7 @@
 </script>
 
 <style scoped>
-section{
-  width: 100vw;
-}
+  section {
+    width: 100vw;
+  }
 </style>

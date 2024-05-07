@@ -60,13 +60,27 @@
   import HeaderPagesComponent from "@/web/components/HeaderPagesComponent.vue";
   import FooterComponent from "@/web/components/FooterComponent.vue";
 
+  import { computed } from "vue";
+  import { useHead } from "@vueuse/head";
+  import { useRoute } from "vue-router";
+
   export default {
-    name: 'Blog',
+    name: "Blog",
     components: {
       HeaderPagesComponent,
       FooterComponent,
     },
-    data() {
+    setup() {
+      const route = useRoute();
+      useHead({
+        title: computed(() => route.meta.title),
+        meta: [
+          {
+            name: "description",
+            content: computed(() => route.meta.description),
+          },
+        ],
+      });
       return {
         blogSearch: "",
         blogs: blogs,
@@ -95,8 +109,10 @@
         );
       },
       getImgUrl(imgName) {
-        return new URL(`/src/web/assets/images/blogs/${imgName}`, import.meta.url)
-          .href;
+        return new URL(
+          `/src/web/assets/images/blogs/${imgName}`,
+          import.meta.url
+        ).href;
       },
     },
   };

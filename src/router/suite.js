@@ -16,9 +16,7 @@ export const suiteRoutes = [
 		component: SuiteView,
 		meta: {
 			title: "Iconic Executive Asssitants Suite",
-			metaTags: {
-				description: "Iconic Assistants Suite.",
-			},
+			description: "Iconic Assistants Suite.",
 		},
 	},
 	{

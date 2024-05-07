@@ -104,13 +104,27 @@
   import HeaderPagesComponent from "@/web/components/HeaderPagesComponent.vue";
   import FooterComponent from "@/web/components/FooterComponent.vue";
 
+  import { computed } from "vue";
+  import { useHead } from "@vueuse/head";
+  import { useRoute } from "vue-router";
+
   export default {
-    name: 'Faq',
+    name: "Faq",
     components: {
       HeaderPagesComponent,
       FooterComponent,
     },
-    data() {
+    setup() {
+      const route = useRoute();
+      useHead({
+        title: computed(() => route.meta.title),
+        meta: [
+          {
+            name: "description",
+            content: computed(() => route.meta.description),
+          },
+        ],
+      });
       return {
         faqSearch: "",
         faqs: faqs,
@@ -157,7 +171,7 @@
     height: 7vw;
   }
 
-  .buscador{
+  .buscador {
     width: 90%;
   }
 
@@ -187,7 +201,7 @@
 
   /* Desktop */
   @media only screen and (min-width: 1080px) {
-    .categories{
+    .categories {
       width: 85% !important;
     }
 
@@ -216,7 +230,7 @@
   }
 
   @media only screen and (min-width: 1280px) {
-    .buscador{
+    .buscador {
       width: 70%;
     }
 
@@ -228,7 +242,7 @@
 
   /* XL */
   @media only screen and (min-width: 1440px) {
-    .categories{
+    .categories {
       width: 75% !important;
     }
 
@@ -260,7 +274,7 @@
   }
 
   @media only screen and (min-width: 1750px) {
-    .buscador{
+    .buscador {
       width: 60%;
     }
 
@@ -275,13 +289,13 @@
   }
 
   @media only screen and (min-width: 1920px) {
-    .buscador{
+    .buscador {
       width: 50%;
     }
-    .categories{
+    .categories {
       max-width: 1920px;
     }
-    
+
     .searchLabel {
       margin: 20px 0 !important;
     }

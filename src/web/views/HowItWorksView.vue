@@ -16,7 +16,9 @@
           <p v-motion="scrollBottom" class="subtitle text-white">Step 1</p>
           <h2 v-motion="scrollBottom" class="text-white">Share Your Needs</h2>
           <p v-motion="scrollBottom" class="w-75 text-white my-3">
-            Schedule a 15-minute call so we can tailor our services to your business needs. Free yourself to focus on growth. Book your consultation with Iconic Assistants today.
+            Schedule a 15-minute call so we can tailor our services to your
+            business needs. Free yourself to focus on growth. Book your
+            consultation with Iconic Assistants today.
           </p>
           <div class="w-75 mobileModel">
             <img
@@ -53,7 +55,9 @@
             Pick The Right Candidate
           </h2>
           <p v-motion="scrollBottom" class="w-75 my-3">
-            Our HR team selects top candidates from our database, presenting you the best match. Meet them with our representative for a smooth introduction.
+            Our HR team selects top candidates from our database, presenting you
+            the best match. Meet them with our representative for a smooth
+            introduction.
           </p>
           <div class="w-75 mobileModel">
             <img
@@ -167,11 +171,27 @@
   import HeaderPagesComponent from "@/web/components/HeaderPagesComponent.vue";
   import FooterComponent from "@/web/components/FooterComponent.vue";
 
+  import { computed } from "vue";
+  import { useHead } from "@vueuse/head";
+  import { useRoute } from "vue-router";
+
   export default {
-    name: 'HowItWorks',
+    name: "HowItWorks",
     components: {
       HeaderPagesComponent,
       FooterComponent,
+    },
+    setup() {
+      const route = useRoute();
+      useHead({
+        title: computed(() => route.meta.title),
+        meta: [
+          {
+            name: "description",
+            content: computed(() => route.meta.description),
+          },
+        ],
+      });
     },
   };
 </script>
