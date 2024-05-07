@@ -1,30 +1,58 @@
 <template>
-	<HeaderSuiteComponent />
+	<HeaderOutsideComponent />
 	<div class="heroSuite columnAlignCenter">
 		<h1 class="text-center">Login</h1>
 	</div>
-	<v-form class="columnAlignCenter" v-model="valid">
+	<v-form
+		class="columnAlignCenter"
+		v-model="valid"
+		@submit="onSubmit($event)"
+	>
 		<div class="w-75">
 			<label for="email">Email</label>
-			<v-text-field id="email" v-model="contactData.email" :rules="rules.emailRules"></v-text-field>
+			<v-text-field
+				id="email"
+				v-model="contactData.email"
+				:rules="rules.emailRules"
+			></v-text-field>
 		</div>
 		<div class="w-75">
 			<label for="password">Password</label>
-			<v-text-field id="password" v-model="contactData.password" :rules="rules.passwordRules" :type="!showPassword ? 'password' : 'text'">
+			<v-text-field
+				id="password"
+				v-model="contactData.password"
+				:rules="rules.passwordRules"
+				:type="!showPassword ? 'password' : 'text'"
+			>
 				<template v-slot:append>
-					<v-icon :icon="!showPassword ? 'mdi-eye-off-outline' : 'mdi-eye-outline'"
-						@click="togglePasswordVisibility"></v-icon>
+					<v-icon
+						:icon="
+							!showPassword
+								? 'mdi-eye-off-outline'
+								: 'mdi-eye-outline'
+						"
+						@click="togglePasswordVisibility"
+					></v-icon>
 				</template>
 			</v-text-field>
 		</div>
 		<div class="w-75 resetPassword column ga-1">
 			<p class="w-auto text-black">Forgot password?</p>
-			<router-link class="reset text-radioactive" :to="routes.RESET_PASSWORD">Reset password</router-link>
+			<router-link
+				class="reset text-radioactive"
+				:to="routes.RESET_PASSWORD"
+				>Reset password</router-link
+			>
 		</div>
 		<div class="w-75 mt-5">
-			<router-link class="reset text-radioactive" :to="routes.REGISTER">Client Signup</router-link>
+			<router-link class="reset text-radioactive" :to="routes.REGISTER"
+				>Client Signup</router-link
+			>
 		</div>
-		<button class="w-50 register secondaryButton text-white elevation-5 mt-5 mb-1" type="submit">
+		<button
+			class="w-50 register secondaryButton text-white elevation-5 mt-5 mb-1"
+			type="submit"
+		>
 			Login
 		</button>
 	</v-form>
@@ -32,38 +60,37 @@
 
 <script>
 import ROUTES_NAMES from "@/router/constants/ROUTES_NAMES";
-import HeaderSuiteComponent from "@/suite/components/HeaderSuiteComponent.vue";
+import HeaderOutsideComponent from "@/suite/components/HeaderOutsideComponent.vue";
+import { login } from "../services/auth.service";
 
 export default {
 	components: {
-		HeaderSuiteComponent,
+		HeaderOutsideComponent,
 	},
 	data() {
 		return {
 			routes: ROUTES_NAMES,
 			showPassword: false,
-			showPassword2: false,
 			contactData: {
-				email: '',
-				password: '',
-				password2: '',
+				email: "",
+				password: "",
 			},
 			rules: {
 				emailRules: [],
 				passwordRules: [],
-				password2Rules: [],
 			},
 			valid: false,
-		}
+		};
 	},
 	methods: {
 		togglePasswordVisibility() {
 			this.showPassword = !this.showPassword;
 		},
-		togglePassword2Visibility() {
-			this.showPassword2 = !this.showPassword2;
-		}
-	}
+		onSubmit(event) {
+			event.preventDefault();
+			login(this.contactData.email, this.contactData.password);
+		},
+	},
 };
 </script>
 

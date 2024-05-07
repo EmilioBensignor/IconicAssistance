@@ -1,11 +1,12 @@
 import "./main.css";
 
 import { createApp } from "vue";
+import { createPinia } from "pinia";
 import App from "./App.vue";
 import { MotionPlugin } from "@vueuse/motion";
 import router from "./router";
 import { createHead } from "@vueuse/head";
-const head = createHead()
+const head = createHead();
 
 // Vuetify
 import "vuetify/styles";
@@ -29,15 +30,17 @@ const vuetify = createVuetify({
 					thinGray: "#f0f0f0",
 					gray: "#6e7191",
 					chartGray: "#E4E4E4",
-					suiteGray: "#BCC1D1"
+					suiteGray: "#BCC1D1",
 				},
 			},
 		},
 	},
 });
 
+const pinia = createPinia();
 const app = createApp(App);
 
+app.use(pinia);
 app.use(head);
 app.use(router);
 app.use(vuetify);

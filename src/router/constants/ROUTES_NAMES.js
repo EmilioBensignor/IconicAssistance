@@ -1,4 +1,5 @@
 export default {
+	HOME: "/",
 	SUITE: "/suite",
 	REGISTER: "/suite/register",
 	LOGIN: "/suite/login",
@@ -8,4 +9,5 @@ export default {
 	ADD_PAYMENT_METHOD: "/suite/add-payment-method",
 	PAYMENT_METHODS: "/suite/payment-methods",
 	RESET_PASSWORD: "/reset-password",
+	RESET_PASSWORD_CONFIRMATION: "/reset-password-confirmation",
 };

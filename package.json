@@ -8,13 +8,14 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"pull": "git pull origin main && npm i",
-		"start": "git pull origin main && npm i && vite"
+		"start": "git pull origin main && npm i && vite --open"
 	},
 	"dependencies": {
 		"@vueuse/head": "^2.0.0",
 		"@vueuse/motion": "^2.1.0",
 		"emailjs-com": "^3.2.0",
 		"firebase": "^10.8.1",
+		"pinia": "^2.1.7",
 		"vue": "^3.3.11",
 		"vue-router": "^4.2.5",
 		"vuetify": "^3.4.10"

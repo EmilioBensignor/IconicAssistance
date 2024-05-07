@@ -8,12 +8,25 @@ import AccountView from "@/suite/views/AccountView.vue";
 import PaymentMethodsView from "@/suite/views/PaymentMethodsView.vue";
 import AddPaymentMethodView from "@/suite/views/AddPaymentMethodView.vue";
 import ResetPasswordView from "@/suite/views/ResetPasswordView.vue";
+import ResetPasswordConfirmationView from "@/suite/views/ResetPasswordConfirmationView.vue";
+import { useAuthStore } from "@/suite/stores/auth.store";
+import ROUTES_NAMES from "./constants/ROUTES_NAMES";
+
+const requiteAuth = (to, from, next) => {
+	let store = useAuthStore();
+	if (!store.user) {
+		next(ROUTES_NAMES.LOGIN);
+	} else {
+		next();
+	}
+};
 
 export const suiteRoutes = [
 	{
 		path: routes.SUITE,
 		name: "Suite",
 		component: SuiteView,
+		beforeEnter: requiteAuth,
 		meta: {
 			title: "Iconic Executive Asssitants Suite",
 			description: "Iconic Assistants Suite.",
@@ -39,6 +52,7 @@ export const suiteRoutes = [
 		path: routes.ASSISTANTS,
 		name: "Assistants",
 		component: AssistantsView,
+		beforeEnter: requiteAuth,
 		meta: {
 			title: "Assistants",
 		},
@@ -47,6 +61,7 @@ export const suiteRoutes = [
 		path: routes.INVOICES,
 		name: "Invoices",
 		component: InvoicesView,
+		beforeEnter: requiteAuth,
 		meta: {
 			title: "Invoices",
 		},
@@ -55,6 +70,7 @@ export const suiteRoutes = [
 		path: routes.ACCOUNT,
 		name: "Account",
 		component: AccountView,
+		beforeEnter: requiteAuth,
 		meta: {
 			title: "Account",
 		},
@@ -63,6 +79,7 @@ export const suiteRoutes = [
 		path: routes.PAYMENT_METHODS,
 		name: "PaymentMethods",
 		component: PaymentMethodsView,
+		beforeEnter: requiteAuth,
 		meta: {
 			title: "PaymentMethods",
 		},
@@ -71,6 +88,7 @@ export const suiteRoutes = [
 		path: routes.ADD_PAYMENT_METHOD,
 		name: "AddPaymentMethod",
 		component: AddPaymentMethodView,
+		beforeEnter: requiteAuth,
 		meta: {
 			title: "AddPaymentMethod",
 		},
@@ -81,6 +99,14 @@ export const suiteRoutes = [
 		component: ResetPasswordView,
 		meta: {
 			title: "ResetPasswordView",
+		},
+	},
+	{
+		path: routes.RESET_PASSWORD_CONFIRMATION,
+		name: "ResetPasswordConfirmationView",
+		component: ResetPasswordConfirmationView,
+		meta: {
+			title: "ResetPasswordConfirmationView",
 		},
 	},
 ];
