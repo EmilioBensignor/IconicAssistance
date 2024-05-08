@@ -6,6 +6,7 @@ import AssistantsView from "@/suite/views/AssistantsView.vue";
 import InvoicesView from "@/suite/views/InvoicesView.vue";
 import AccountView from "@/suite/views/AccountView.vue";
 import PaymentMethodsView from "@/suite/views/PaymentMethodsView.vue";
+import AddPaymentMethodConfirmationView from "@/suite/views/AddPaymentMethodConfirmationView.vue";
 import AddPaymentMethodView from "@/suite/views/AddPaymentMethodView.vue";
 import ResetPasswordView from "@/suite/views/ResetPasswordView.vue";
 import ResetPasswordConfirmationView from "@/suite/views/ResetPasswordConfirmationView.vue";
@@ -91,6 +92,15 @@ export const suiteRoutes = [
 		beforeEnter: requiteAuth,
 		meta: {
 			title: "AddPaymentMethod",
+		},
+	},
+	{
+		path: routes.ADD_PAYMENT_METHOD_CONFIRMATION,
+		name: "AddPaymentMethodConfirmation",
+		component: AddPaymentMethodConfirmationView,
+		beforeEnter: requiteAuth,
+		meta: {
+			title: "AddPaymentMethodConfirmation",
 		},
 	},
 	{

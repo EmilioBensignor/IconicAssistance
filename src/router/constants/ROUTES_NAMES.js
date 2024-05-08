@@ -7,6 +7,7 @@ export default {
 	INVOICES: "/suite/invoices",
 	ACCOUNT: "/suite/account",
 	ADD_PAYMENT_METHOD: "/suite/add-payment-method",
+	ADD_PAYMENT_METHOD_CONFIRMATION: "/suite/add-payment-method-confirmation",
 	PAYMENT_METHODS: "/suite/payment-methods",
 	RESET_PASSWORD: "/reset-password",
 	RESET_PASSWORD_CONFIRMATION: "/reset-password-confirmation",
