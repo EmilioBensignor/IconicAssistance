@@ -36,13 +36,15 @@ router.beforeEach((to, from, next) => {
 
 	if (nearestWithMeta) {
 		const metaDescription = nearestWithMeta.meta.metaTags.description;
-		document
-			.querySelector('meta[name="description"]')
-			.setAttribute("content", metaDescription);
+		const metaTag = document.querySelector('meta[name="description"]');
+		if (metaTag) {
+			metaTag.setAttribute("content", metaDescription);
+		}
 	} else if (nearestWithTitle) {
-		document
-			.querySelector('meta[name="description"]')
-			.removeAttribute("content");
+		const metaTag = document.querySelector('meta[name="description"]');
+		if (metaTag) {
+			metaTag.removeAttribute("content");
+		}
 	}
 
 	next();

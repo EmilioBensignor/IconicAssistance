@@ -78,7 +78,7 @@
   @media only screen and (min-width: 1080px) {
     .testimonialWrap {
       width: 90% !important;
-      display: grid;
+      display: grid !important;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(2, 1fr);
       gap: 2vw;

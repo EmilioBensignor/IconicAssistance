@@ -81,6 +81,8 @@
           },
         ],
       });
+    },
+    data(){
       return {
         blogSearch: "",
         blogs: blogs,

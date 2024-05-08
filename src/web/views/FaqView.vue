@@ -125,6 +125,8 @@
           },
         ],
       });
+    },
+    data(){
       return {
         faqSearch: "",
         faqs: faqs,

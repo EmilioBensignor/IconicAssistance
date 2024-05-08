@@ -137,11 +137,11 @@ import { scrollBottom } from "@/motions.js";
 /* Desktop */
 @media only screen and (min-width: 1080px) {
   .delegatingWrapper {
-    flex-direction: row;
+    flex-direction: row !important;
   }
 
   .delegating {
-    align-items: flex-start;
+    align-items: flex-start !important;
     text-align: start;
   }
 

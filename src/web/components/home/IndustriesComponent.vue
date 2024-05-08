@@ -50,7 +50,7 @@
             </div>
             <div class="mt-10 columnAlignCenter w-75">
               <h4 v-motion="scrollBottom" class="manyMore text-white font-weight-bold">
-                And Many!
+                And Many More!
               </h4>
               <p v-motion="scrollBottom" class="want w-100 text-white">
                 Want to know if our Remote Talent Experts are suitable for you?
@@ -117,7 +117,7 @@ export default {
 /* LG */
 @media only screen and (min-width: 992px) {
   .industriesCarousel {
-    display: none;
+    display: none !important;
   }
 
   .industries {

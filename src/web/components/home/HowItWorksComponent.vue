@@ -102,7 +102,7 @@
     },
     methods: {
       getImgUrl(imgName) {
-        return new URL(`../../web/assets/images/${imgName}`, import.meta.url).href;
+        return new URL(`../../assets/images/${imgName}`, import.meta.url).href;
       },
     },
   };
