@@ -1,9 +1,6 @@
 <template>
   <nav class="mb-15">
-    <v-app-bar
-      elevation="0"
-      app
-      class="bg-white d-flex justify-space-between align-center py-1">
+    <v-app-bar elevation="0" app class="bg-white d-flex align-center py-1">
       <v-app-bar-nav-icon
         icon="mdi-menu"
         color="radioactive"
@@ -19,9 +16,29 @@
             alt="Suite Logo" />
         </router-link>
       </v-toolbar-title>
-      <div class="account bg-radioactive elevation-3 rounded-circle pa-1">
-        <v-icon color="white" size="x-large" icon="mdi-account"></v-icon>
-      </div>
+      <v-menu>
+        <template v-slot:activator="{ props }">
+          <v-btn
+            class="account bg-radioactive elevation-3 pa-1"
+            icon="mdi-account"
+            v-bind="props">
+          </v-btn>
+        </template>
+        <v-list class="mt-1 py-0">
+          <v-list-item v-for="(item, index) in accountMenu" :key="index">
+            <router-link :to="item.path">
+              <v-list-item-title class="text-radioactive">
+                {{ item.title }}
+              </v-list-item-title>
+            </router-link>
+          </v-list-item>
+          <v-list-item @click="onLogout">
+            <v-list-item-title class="text-radioactive"
+              >Logout</v-list-item-title
+            >
+          </v-list-item>
+        </v-list>
+      </v-menu>
     </v-app-bar>
     <v-navigation-drawer v-model="showMenu" app class="mt-2">
       <v-list class="py-0" tag="ul">
@@ -42,6 +59,7 @@
 
 <script>
   import routes from "@/router/constants/ROUTES_NAMES";
+  import { logout } from "@/suite/services/auth.service";
 
   export default {
     name: "HeaderSuiteComponent",
@@ -63,6 +81,16 @@
             path: routes.INVOICES,
             title: "INVOICES",
             icon: "receipt",
+          },
+        ],
+        accountMenu: [
+          {
+            path: routes.ACCOUNT,
+            title: "Account",
+          },
+          {
+            path: routes.PAYMENT_METHODS,
+            title: "Payment Methods",
           },
         ],
       };
@@ -87,12 +115,32 @@
           this.isScrolled = false;
         }
       },
+      onLogout() {
+        logout();
+      },
     },
   };
 </script>
 
 <style scoped>
+  .v-app-bar {
+    position: relative;
+  }
   .account {
+    position: absolute;
+    right: 4%;
     cursor: pointer;
+  }
+  a {
+    text-decoration: none;
+  }
+  .v-list-item:hover {
+    background: #f6f6f6;
+  }
+  .v-menu .v-list-item-title {
+    font-weight: 600;
+  }
+  .v-navigation-drawer .v-list-item-title {
+    font-weight: 500;
   }
 </style>

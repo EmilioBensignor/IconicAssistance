@@ -9,6 +9,7 @@
 import HeaderSuiteComponent from "@/suite/components/HeaderSuiteComponent.vue";
 
 export default {
+	name: "ResetPasswordView",
 	components: {
 		HeaderSuiteComponent,
 	},

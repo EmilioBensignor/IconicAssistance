@@ -64,6 +64,7 @@ import HeaderOutsideComponent from "@/suite/components/HeaderOutsideComponent.vu
 import { login } from "../services/auth.service";
 
 export default {
+	name: "LoginView",
 	components: {
 		HeaderOutsideComponent,
 	},

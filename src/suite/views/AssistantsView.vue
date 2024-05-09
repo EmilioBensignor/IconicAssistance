@@ -9,6 +9,7 @@
 import HeaderSuiteComponent from "@/suite/components/HeaderSuiteComponent.vue";
 
 export default {
+	name: "AssistantsView",
 	components: {
 		HeaderSuiteComponent,
 	},

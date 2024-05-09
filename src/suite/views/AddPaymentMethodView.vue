@@ -25,3 +25,14 @@ onMounted(async() => {
 	})
 });
 </script>
+
+<script>
+import HeaderSuiteComponent from "@/suite/components/HeaderSuiteComponent.vue";
+
+export default {
+	name: "AddPaymentMethodView",
+	components: {
+		HeaderSuiteComponent,
+	},
+};
+</script>

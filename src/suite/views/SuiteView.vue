@@ -9,16 +9,16 @@
 	<section class="px-5 py-3">
 		<SuiteActionsComponent />
 	</section>
-	<v-btn @click="onLogout()">logout</v-btn>
 </template>
 
 <script>
 import ROUTES_NAMES from "@/router/constants/ROUTES_NAMES";
 import HeaderSuiteComponent from "@/suite/components/HeaderSuiteComponent.vue";
 import SuiteActionsComponent from "@/suite/components/suite/SuiteActionsComponent.vue";
-import { useAuthStore } from "../stores/auth.store";
-import { logout } from "../services/auth.service";
+import { useAuthStore } from "@/suite/stores/auth.store";
+
 export default {
+	name: "SuiteView",
 	components: {
 		HeaderSuiteComponent,
 		SuiteActionsComponent,
@@ -29,13 +29,9 @@ export default {
 			store: useAuthStore(),
 		};
 	},
-	methods: {
-		onLogout() {
-			logout();
-		},
-	},
 };
 </script>
+
 <script setup>
 const userStore = useAuthStore();
 console.log(userStore.user);

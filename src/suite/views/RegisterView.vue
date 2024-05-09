@@ -77,6 +77,7 @@ import HeaderOutsideComponent from "@/suite/components/HeaderOutsideComponent.vu
 import { signup } from "../services/auth.service";
 
 export default {
+	name: "RegisterView",
 	components: {
 		HeaderOutsideComponent,
 	},
