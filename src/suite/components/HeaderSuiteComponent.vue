@@ -126,6 +126,10 @@
   .v-app-bar {
     position: relative;
   }
+  .hamburger{
+    display: block !important;
+  }
+
   .account {
     position: absolute;
     right: 4%;
@@ -142,5 +146,13 @@
   }
   .v-navigation-drawer .v-list-item-title {
     font-weight: 500;
+  }
+
+  @media only screen and (min-width: 1080px){
+    .v-toolbar-title{
+    position: absolute;
+    left: 6%;
+    cursor: pointer;
+  }
   }
 </style>

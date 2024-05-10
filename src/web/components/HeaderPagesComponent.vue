@@ -16,8 +16,8 @@
           <v-list>
             <v-list-item :to="item.path" v-for="(item, index) in aboutMenu" :key="index">
               <v-list-item-title class="navTitles">{{
-          item.title
-        }}</v-list-item-title>
+                item.title
+                }}</v-list-item-title>
             </v-list-item>
           </v-list>
         </v-menu>
@@ -28,8 +28,8 @@
           <v-list>
             <v-list-item :to="item.path" v-for="(item, index) in learnMenu" :key="index">
               <v-list-item-title class="navTitles">{{
-          item.title
-        }}</v-list-item-title>
+                item.title
+                }}</v-list-item-title>
             </v-list-item>
           </v-list>
         </v-menu>
@@ -47,22 +47,23 @@
     </v-app-bar>
     <v-navigation-drawer v-model="showMenu" app class="mt-2">
       <v-list class="pt-5" tag="ul">
-        <router-link class="bg-radioactive rounded-xl font-weight-medium text-decoration-none ml-6 px-15 py-2 elevation-3"
+        <router-link
+          class="bg-radioactive rounded-xl font-weight-medium text-decoration-none ml-6 px-15 py-2 elevation-3"
           :to="'/contact-us'">Get Started</router-link>
         <p class="navTitles pt-5 pl-4">About</p>
         <li v-for="item in aboutMenu" :key="item.title">
           <v-list-item :to="item.path">
             <v-list-item-title class="pl-4 text-midnight">{{
-          item.title
-        }}</v-list-item-title>
+              item.title
+              }}</v-list-item-title>
           </v-list-item>
         </li>
         <p class="navTitles pt-1 pl-4">Learn</p>
         <li v-for="item in learnMenu" :key="item.title">
           <v-list-item :to="item.path">
             <v-list-item-title class="pl-4 text-midnight">{{
-          item.title
-        }}</v-list-item-title>
+              item.title
+              }}</v-list-item-title>
           </v-list-item>
         </li>
         <li>
@@ -158,7 +159,7 @@ export default {
 </script>
 
 <style>
-.v-toolbar__content{
+.v-toolbar__content {
   max-width: 1920px !important;
 }
 
@@ -189,6 +190,7 @@ export default {
 
   .v-toolbar__content {
     height: 80px !important;
+    justify-content: space-between;
   }
 
   .menuDesktop {
@@ -196,10 +198,6 @@ export default {
     display: flex;
     align-items: center;
     gap: 0.5vw;
-  }
-
-  .v-toolbar__content {
-    justify-content: space-between !important;
   }
 
   .btnNav {
