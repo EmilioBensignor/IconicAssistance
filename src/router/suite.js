@@ -12,8 +12,10 @@ import ResetPasswordView from "@/suite/views/ResetPasswordView.vue";
 import ResetPasswordConfirmationView from "@/suite/views/ResetPasswordConfirmationView.vue";
 import { useAuthStore } from "@/suite/stores/auth.store";
 import ROUTES_NAMES from "./constants/ROUTES_NAMES";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "../suite/firebase/init.js";
 
-const requiteAuth = (to, from, next) => {
+const requireAuth = (to, from, next) => {
 	let store = useAuthStore();
 	if (!store.user) {
 		next(ROUTES_NAMES.LOGIN);
@@ -27,7 +29,7 @@ export const suiteRoutes = [
 		path: routes.SUITE,
 		name: "Suite",
 		component: SuiteView,
-		beforeEnter: requiteAuth,
+		beforeEnter: requireAuth,
 		meta: {
 			title: "Iconic Executive Asssitants Suite",
 			description: "Iconic Assistants Suite.",
@@ -53,7 +55,7 @@ export const suiteRoutes = [
 		path: routes.ASSISTANTS,
 		name: "Assistants",
 		component: AssistantsView,
-		beforeEnter: requiteAuth,
+		beforeEnter: requireAuth,
 		meta: {
 			title: "Assistants",
 		},
@@ -62,7 +64,7 @@ export const suiteRoutes = [
 		path: routes.INVOICES,
 		name: "Invoices",
 		component: InvoicesView,
-		beforeEnter: requiteAuth,
+		beforeEnter: requireAuth,
 		meta: {
 			title: "Invoices",
 		},
@@ -71,7 +73,7 @@ export const suiteRoutes = [
 		path: routes.ACCOUNT,
 		name: "Account",
 		component: AccountView,
-		beforeEnter: requiteAuth,
+		beforeEnter: requireAuth,
 		meta: {
 			title: "Account",
 		},
@@ -80,7 +82,7 @@ export const suiteRoutes = [
 		path: routes.PAYMENT_METHODS,
 		name: "PaymentMethods",
 		component: PaymentMethodsView,
-		beforeEnter: requiteAuth,
+		beforeEnter: requireAuth,
 		meta: {
 			title: "PaymentMethods",
 		},
@@ -89,7 +91,7 @@ export const suiteRoutes = [
 		path: routes.ADD_PAYMENT_METHOD,
 		name: "AddPaymentMethod",
 		component: AddPaymentMethodView,
-		beforeEnter: requiteAuth,
+		beforeEnter: requireAuth,
 		meta: {
 			title: "AddPaymentMethod",
 		},
@@ -98,7 +100,7 @@ export const suiteRoutes = [
 		path: routes.ADD_PAYMENT_METHOD_CONFIRMATION,
 		name: "AddPaymentMethodConfirmation",
 		component: AddPaymentMethodConfirmationView,
-		beforeEnter: requiteAuth,
+		beforeEnter: requireAuth,
 		meta: {
 			title: "AddPaymentMethodConfirmation",
 		},

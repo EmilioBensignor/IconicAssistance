@@ -11,6 +11,12 @@ import {
 } from "firebase/auth";
 
 let store;
+const noAuthRoutes = [
+	"/suite/login",
+	"/suite/register",
+	"/suite/reset-password",
+	"/suite/reset-password-confirmation",
+];
 
 async function signup(email, password) {
 	if (!store) {
@@ -59,7 +65,9 @@ function init() {
 	onAuthStateChanged(auth, (user) => {
 		if (user) {
 			store.user = user;
-			router.replace(ROUTES_NAMES.SUITE);
+			if (noAuthRoutes.includes(window.location.pathname)) {
+				router.replace(ROUTES_NAMES.SUITE);
+			}
 		}
 	});
 }
