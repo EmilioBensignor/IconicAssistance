@@ -29,7 +29,7 @@ async function signup(email, password) {
 			password
 		);
 		store.isAuthenticated = true;
-		router.replace(ROUTES_NAMES.SUITE);
+		router.push(ROUTES_NAMES.SUITE);
 	} catch (error) {
 		console.log(error);
 	}
@@ -42,7 +42,7 @@ async function login(email, password) {
 		const res = await signInWithEmailAndPassword(auth, email, password);
 		if (res) {
 			store.isAuthenticated = true;
-			router.replace(ROUTES_NAMES.SUITE);
+			router.push(ROUTES_NAMES.SUITE);
 		}
 	} catch (error) {
 		console.log(error);
@@ -66,7 +66,7 @@ function init() {
 		if (user) {
 			store.user = user;
 			if (noAuthRoutes.includes(window.location.pathname)) {
-				router.replace(ROUTES_NAMES.SUITE);
+				router.push(ROUTES_NAMES.SUITE);
 			}
 		}
 	});
