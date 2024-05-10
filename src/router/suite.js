@@ -12,8 +12,6 @@ import ResetPasswordView from "@/suite/views/ResetPasswordView.vue";
 import ResetPasswordConfirmationView from "@/suite/views/ResetPasswordConfirmationView.vue";
 import { useAuthStore } from "@/suite/stores/auth.store";
 import ROUTES_NAMES from "./constants/ROUTES_NAMES";
-import { onAuthStateChanged } from "firebase/auth";
-import { auth } from "../suite/firebase/init.js";
 
 const requireAuth = (to, from, next) => {
 	let store = useAuthStore();
