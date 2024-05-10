@@ -6,7 +6,7 @@
 	<section class="mt-3">
 		<div class="w-75 column ga-2">
 			<p class="text-start">
-				An email was sent to juanperez@gmail.com to reset his password.
+				An email was sent to {{email ? email : ''}} to reset his password.
 			</p>
 			<div class="row align-center ga-2">
 				<p class="text-start w-auto">Is the provided email incorrect?</p>
@@ -20,7 +20,8 @@
 <script>
 import ROUTES_NAMES from "@/router/constants/ROUTES_NAMES";
 import HeaderOutsideComponent from "@/suite/components/HeaderOutsideComponent.vue";
-
+import { resetEmail } from "../services/auth.service.js";
+import router from "@/router/index.js";
 export default {
 	name: "ResetPasswordConfirmationView",
 	components: {
@@ -29,7 +30,14 @@ export default {
 	data() {
 		return {
 			routes: ROUTES_NAMES,
+			email: resetEmail.value
 		}
+	},
+	mounted(){
+		if (this.email === null) {
+			router.push(ROUTES_NAMES.RESET_PASSWORD)
+		}
+		
 	}
 };
 </script>

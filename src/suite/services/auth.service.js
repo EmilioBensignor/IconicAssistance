@@ -9,6 +9,7 @@ import {
 	signOut,
 	sendPasswordResetEmail,
 } from "firebase/auth";
+import { ref } from "vue";
 
 let store;
 const noAuthRoutes = [
@@ -17,6 +18,8 @@ const noAuthRoutes = [
 	"/suite/reset-password",
 	"/suite/reset-password-confirmation",
 ];
+
+const resetEmail = ref(null)
 
 async function signup(email, password) {
 	if (!store) {
@@ -75,10 +78,11 @@ function init() {
 async function resetPassword(email) {
 	try {
 		await sendPasswordResetEmail(auth, email).then(() => {
+			resetEmail.value =email 
 			router.push(ROUTES_NAMES.RESET_PASSWORD_CONFIRMATION);
 		});
 	} catch (error) {
 		console.log(error);
 	}
 }
-export { signup, login, logout, init, resetPassword };
+export { signup, login, logout, init, resetPassword, resetEmail };
