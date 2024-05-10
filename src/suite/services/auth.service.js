@@ -55,7 +55,7 @@ async function logout() {
 	await signOut(auth);
 	store.user = {};
 	store.isAuthenticated = false;
-	router.replace(ROUTES_NAMES.LOGIN);
+	router.push(ROUTES_NAMES.LOGIN);
 }
 
 function init() {
@@ -73,14 +73,10 @@ function init() {
 }
 
 async function resetPassword(email) {
-	if (!store) {
-		store = useAuthStore();
-	}
 	try {
-		const res = await sendPasswordResetEmail(auth, email);
-		if (res) {
-			router.replace(ROUTES_NAMES.RESET_PASSWORD_CONFIRMATION);
-		}
+		await sendPasswordResetEmail(auth, email).then(() => {
+			router.push(ROUTES_NAMES.RESET_PASSWORD_CONFIRMATION);
+		});
 	} catch (error) {
 		console.log(error);
 	}
