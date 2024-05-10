@@ -36,7 +36,7 @@
 				</template>
 			</v-text-field>
 		</div>
-		<div class="w-75 resetPassword column ga-1">
+		<div class="w-75 rowCenter ga-1">
 			<p class="w-auto text-black">Forgot password?</p>
 			<router-link
 				class="reset text-radioactive"
@@ -113,11 +113,5 @@ label {
 
 .register:hover {
 	color: #373ae6 !important;
-}
-
-@media only screen and (min-width: 384px) {
-	.resetPassword {
-		flex-direction: row;
-	}
 }
 </style>

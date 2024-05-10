@@ -13,7 +13,7 @@
           <template v-slot:activator="{ props }">
             <v-btn class="btnNav" color="radioactive" v-bind="props">About</v-btn>
           </template>
-          <v-list>
+          <v-list class="py-0 mt-1">
             <v-list-item :to="item.path" v-for="(item, index) in aboutMenu" :key="index">
               <v-list-item-title class="navTitles">{{
                 item.title
@@ -25,7 +25,7 @@
           <template v-slot:activator="{ props }">
             <v-btn class="btnNav" color="radioactive" v-bind="props">Learn</v-btn>
           </template>
-          <v-list>
+          <v-list class="py-0 mt-1">
             <v-list-item :to="item.path" v-for="(item, index) in learnMenu" :key="index">
               <v-list-item-title class="navTitles">{{
                 item.title

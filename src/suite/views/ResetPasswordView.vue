@@ -8,16 +8,16 @@
 			<v-icon icon="mdi-keyboard-backspace" color="radioactive"></v-icon>
 			<p class="w-100 goBack text-radioactive ml-1">Go back to Login</p>
 		</router-link>
-		<h1>Reset Password</h1>
+		<h1 class="text-center">Reset Password</h1>
 	</div>
 	<section>
-		<p>Enter the email address of your account to reset your password</p>
+		<p class="text-start">Enter the email address of your account to reset your password</p>
 		<v-form
 			class="w-75 columnAlignCenter mt-5"
 			v-model="valid"
 			@submit="onSubmit($event)"
 		>
-			<div class="w-75 column align-start ga-2">
+			<div class="w-100 column align-start ga-2">
 				<label for="email">Email</label>
 				<v-text-field
 					class="w-100"

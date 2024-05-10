@@ -281,6 +281,12 @@
     flex-direction: row;
   }
 
+  .rowCenter{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
   .columnAlignCenter {
     display: flex;
     flex-direction: column;

@@ -25,7 +25,7 @@
               >About</v-btn
             >
           </template>
-          <v-list>
+          <v-list class="py-0 mt-1">
             <v-list-item
               :to="item.path"
               v-for="(item, index) in aboutMenu"
@@ -42,7 +42,7 @@
               >Learn</v-btn
             >
           </template>
-          <v-list>
+          <v-list class="py-0 mt-1">
             <v-list-item
               :to="item.path"
               v-for="(item, index) in learnMenu"
