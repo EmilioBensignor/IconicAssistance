@@ -47,19 +47,23 @@ exports.attatchPaymentMethod = onRequest({ cors: true }, async (req, res) => {
 	res.send({ data: attachedPaymentMethod });
 });
 
-exports.getHubspotData = onRequest({ cors: true }, (req, res) => {
+exports.getHubspotData = onRequest({ cors: true }, async (req, res) => {
 	res.set("Access-Control-Allow-Origin", "*");
 	const data = req;
-	db.collection("allowedUsers")
-		.add(data)
-		.then((res) => {
-			res.send({ data: res });
-		});
+	try {
+		await db
+			.collection("allowedUsers")
+			.add(data)
+			.then((response) => {
+				res.send({ data: response });
+			});
+	} catch (error) {
+		console.log(data);
+	}
 });
 
 exports.signUpClient = onRequest({ cors: true }, async (req, res) => {
 	res.set("Access-Control-Allow-Origin", "*");
-	console.log(req);
 	const data = req.body.data;
 	const email = data.email;
 	const password = data.password;
