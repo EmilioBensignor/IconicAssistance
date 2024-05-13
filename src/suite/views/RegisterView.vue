@@ -65,16 +65,20 @@
 		<button
 			class="w-75 register secondaryButton text-white elevation-5 mt-5 mb-1"
 			type="submit"
+			:loading="loading"
 		>
 			Create Account
 		</button>
+		<p v-if="error">
+			{{ error }}
+		</p>
 	</v-form>
 </template>
 
 <script>
 import ROUTES_NAMES from "@/router/constants/ROUTES_NAMES";
 import HeaderOutsideComponent from "@/suite/components/HeaderOutsideComponent.vue";
-import { signup } from "../services/auth.service";
+import { registerError, signup } from "../services/auth.service";
 
 export default {
 	name: "RegisterView",
@@ -95,6 +99,8 @@ export default {
 				passwordRules: [],
 			},
 			valid: false,
+			loading: false,
+			error: registerError,
 		};
 	},
 	methods: {
@@ -103,7 +109,9 @@ export default {
 		},
 		onSubmit(event) {
 			event.preventDefault();
+			this.loading = true;
 			signup(this.contactData.email, this.contactData.password);
+			this.loading = false;
 		},
 	},
 };
