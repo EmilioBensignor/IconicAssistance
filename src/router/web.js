@@ -135,23 +135,23 @@ export const webRoutes = [
 			description: "Elevate your business to new heights with our Executive Assistant services, covering remote talent recruitment, overseas payroll and expert support.",
 		},
 	},
-	{
-		path: "/pricing",
-		name: "Pricing",
-		component: PricingView,
-		meta: {
-			title: "Pricing - Iconic Assistants",
-			description: "Transparent Solutions – Explore Iconic Assistants' Competitive Executive Assistant Pricing.",
-		},
-	},
-	{
-		path: "/test",
-		name: "Test",
-		component: TestView,
-		meta: {
-			title: "Testing - Iconic Assistants",
-		},
-	},
+	// {
+	// 	path: "/pricing",
+	// 	name: "Pricing",
+	// 	component: PricingView,
+	// 	meta: {
+	// 		title: "Pricing - Iconic Assistants",
+	// 		description: "Transparent Solutions – Explore Iconic Assistants' Competitive Executive Assistant Pricing.",
+	// 	},
+	// },
+	// {
+	// 	path: "/test",
+	// 	name: "Test",
+	// 	component: TestView,
+	// 	meta: {
+	// 		title: "Testing - Iconic Assistants",
+	// 	},
+	// },
 	{
 		path: "/contact-us",
 		name: "ContactUs",
