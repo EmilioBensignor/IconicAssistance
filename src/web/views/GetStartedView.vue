@@ -1,11 +1,11 @@
 <template>
   <nav>
-    <v-app-bar elevation="0" app class="bg-white px-5 py-1">
+    <v-app-bar elevation="0" app class="bg-white px-3 py-1">
       <div class="w-100 d-flex justify-space-between align-center">
         <router-link class="text-decoration-none" :to="'/'">
           <IconicLogo class="mt-1" color="blue" />
         </router-link>
-        <a class="secondaryButton desktop" href="#hero">Get Started</a>
+        <a class="popUp desktop elevation-3" href="#hero">Get Started</a>
       </div>
     </v-app-bar>
   </nav>
@@ -57,63 +57,63 @@
     align-items: center;
   }
 
-  .secondaryButton {
+  .primaryButton {
     display: none;
   }
 
   /* MD */
   @media only screen and (min-width: 769px) {
-    .secondaryButton {
+    .primaryButton {
       display: block;
       padding: 2vw 4vw;
     }
   }
 
   @media only screen and (min-width: 850px) {
-    .secondaryButton {
+    .primaryButton {
       padding: 1.8vw 3.8vw;
     }
   }
 
   @media only screen and (min-width: 1000px) {
-    .secondaryButton {
+    .primaryButton {
       padding: 1.6vw 3.2vw;
     }
   }
 
   /* Desktop */
   @media only screen and (min-width: 1080px) {
-    .secondaryButton {
+    .primaryButton {
       padding: 1.8vw 3vw;
     }
   }
 
   @media only screen and (min-width: 1200px) {
-    .secondaryButton {
+    .primaryButton {
       padding: 1.6vw 2.8vw;
     }
   }
 
   @media only screen and (min-width: 1350px) {
-    .secondaryButton {
+    .primaryButton {
       padding: 1.5vw 2.8vw;
     }
   }
 
   @media only screen and (min-width: 1500px) {
-    .secondaryButton {
+    .primaryButton {
       padding: 1.2vw 2.5vw;
     }
   }
 
   @media only screen and (min-width: 1750px) {
-    .secondaryButton {
+    .primaryButton {
       padding: 1.1vw 2.2vw;
     }
   }
 
   @media only screen and (min-width: 1920px) {
-    .secondaryButton {
+    .primaryButton {
       padding: 21px 42px;
     }
   }

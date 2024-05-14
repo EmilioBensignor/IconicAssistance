@@ -2,7 +2,7 @@
   <router-link class="popUp elevation-3 mr-2" :to="'/contact-us'">Get Started</router-link>
 </template>
 
-<style scoped>
+<style>
 .popUp {
   text-align: center;
   background-color: white;
