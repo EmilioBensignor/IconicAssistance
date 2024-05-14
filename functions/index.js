@@ -49,7 +49,7 @@ exports.attatchPaymentMethod = onRequest({ cors: true }, async (req, res) => {
 
 exports.getHubspotData = onRequest({ cors: true }, async (req, res) => {
 	res.set("Access-Control-Allow-Origin", "*");
-	const data = req;
+	const data = req.body;
 	try {
 		await db
 			.collection("allowedUsers")
@@ -58,7 +58,7 @@ exports.getHubspotData = onRequest({ cors: true }, async (req, res) => {
 				res.send({ data: response });
 			});
 	} catch (error) {
-		console.log(data);
+		console.log(error);
 	}
 });
 

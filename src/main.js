@@ -1,13 +1,13 @@
 import "./main.css";
-
+import { VueFire, VueFireAuth } from "vuefire";
 import { createApp } from "vue";
 import { createPinia } from "pinia";
 import App from "./App.vue";
 import { MotionPlugin } from "@vueuse/motion";
 import router from "./router";
 import { createHead } from "@vueuse/head";
+import { firebaseApp } from "./suite/firebase/init";
 const head = createHead();
-
 // Vuetify
 import "vuetify/styles";
 import { createVuetify } from "vuetify";
@@ -38,12 +38,19 @@ const vuetify = createVuetify({
 });
 
 const pinia = createPinia();
-const app = createApp(App);
+const app = createApp(App)
+	.use(pinia)
+	.use(head)
+	.use(router)
+	.use(vuetify)
+	.use(MotionPlugin);
 
-app.use(pinia);
-app.use(head);
-app.use(router);
-app.use(vuetify);
-app.use(MotionPlugin);
-
+app.use(VueFire, {
+	// imported above but could also just be created here
+	firebaseApp,
+	modules: [
+		// we will see other modules later on
+		VueFireAuth(),
+	],
+});
 app.mount("#app");

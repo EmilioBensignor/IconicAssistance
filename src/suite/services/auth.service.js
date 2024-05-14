@@ -24,6 +24,8 @@ const resetEmail = ref(null);
 
 const registerError = ref(null);
 
+const userId = ref(null);
+
 async function signup(email, password) {
 	registerError.value = "";
 	if (!store) {
@@ -80,6 +82,7 @@ function init() {
 	onAuthStateChanged(auth, (user) => {
 		if (user) {
 			store.user = user;
+			userId.value = user.uid;
 			if (noAuthRoutes.includes(window.location.pathname)) {
 				router.push(ROUTES_NAMES.SUITE);
 			}
@@ -105,4 +108,5 @@ export {
 	resetPassword,
 	resetEmail,
 	registerError,
+	userId,
 };
