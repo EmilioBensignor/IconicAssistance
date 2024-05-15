@@ -1,7 +1,7 @@
 <template>
   <div class="action bg-suiteGray column ga-3 rounded-xl elevation-4 pa-5">
     <p class="titleAction text-start font-weight-bold">Payment Method Required</p>
-    <p class="text-start">Submit youy payment method for future transactions</p>
+    <p class="text-start">Submit your payment method for future transactions</p>
     <router-link class="secondaryButton elevation-4" :to="'/suite/add-payment-method'">ADD PAYMENT METHOD</router-link>
   </div>
 </template>
