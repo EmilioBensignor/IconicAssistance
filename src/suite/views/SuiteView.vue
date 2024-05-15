@@ -2,10 +2,14 @@
 	<HeaderSuiteComponent />
 	<div class="heroSuite columnAlignCenter">
 		<h1>
-			Welcome, <span>{{ store ? store.user.email : "" }}</span
+			Welcome,
+			<span>{{
+				userData && userData.firstname && userData.lastname
+					? `${userData.firstname} ${userData.lastname}`
+					: ""
+			}}</span
 			>!
 		</h1>
-		<p>{{ userData && userData.email ? userData.email : "" }}</p>
 	</div>
 	<section class="px-5 py-3">
 		<SuiteActionsComponent />

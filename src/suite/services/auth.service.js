@@ -1,5 +1,5 @@
 import router from "@/router";
-import { auth, functions } from "../firebase/init.js";
+import { auth, db, functions } from "../firebase/init.js";
 import ROUTES_NAMES from "@/router/constants/ROUTES_NAMES";
 import { useAuthStore } from "../stores/auth.store.js";
 import {
@@ -11,6 +11,7 @@ import {
 } from "firebase/auth";
 import { ref } from "vue";
 import { httpsCallableFromURL } from "firebase/functions";
+import { doc, getDoc } from "firebase/firestore";
 
 let store;
 const noAuthRoutes = [
