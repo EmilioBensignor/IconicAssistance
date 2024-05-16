@@ -4,9 +4,9 @@
 		<h1 class="text-center">Register</h1>
 	</div>
 	<v-form
-		class="columnAlignCenter"
+		class="columnAlignCenter ga-3 mt-5"
 		v-model="valid"
-		@submit="onSubmit($event)"
+		@submit.prevent="onSubmit()"
 	>
 		<div class="w-75">
 			<label for="email">Email</label>
@@ -14,6 +14,7 @@
 				id="email"
 				v-model="contactData.email"
 				:rules="rules.emailRules"
+				required
 			></v-text-field>
 		</div>
 		<div class="w-75">
@@ -23,6 +24,7 @@
 				v-model="contactData.password"
 				:rules="rules.passwordRules"
 				:type="!showPassword ? 'password' : 'text'"
+				required
 			>
 				<template v-slot:append>
 					<v-icon
@@ -43,6 +45,7 @@
 				v-model="contactData.password2"
 				:rules="rules.password2Rules"
 				:type="!showPassword ? 'password' : 'text'"
+				required
 			>
 				<template v-slot:append>
 					<v-icon
@@ -62,6 +65,9 @@
 				>Log in</router-link
 			>
 		</div>
+		<p class="text-center text-red mt-3" v-if="error">
+			{{ error }}
+		</p>
 		<button
 			class="w-75 register secondaryButton text-white elevation-5 mt-5 mb-1"
 			type="submit"
@@ -69,9 +75,6 @@
 		>
 			Create Account
 		</button>
-		<p v-if="error">
-			{{ error }}
-		</p>
 	</v-form>
 </template>
 
@@ -95,8 +98,45 @@ export default {
 				password2: "",
 			},
 			rules: {
-				emailRules: [],
-				passwordRules: [],
+				emailRules: [
+					(value) => {
+						if (value) return true;
+
+						return "E-mail is requred.";
+					},
+				],
+				passwordRules: [
+					(value) => {
+						if (value) return true;
+						return "Password is required.";
+					},
+					(value) => {
+						if (value.length >= 8) return true;
+						return "Password must be at least 8 characters long.";
+					},
+					(value) => {
+						if (value.length < 20) return true;
+						return "Password must be shorter than 20 characters.";
+					},
+				],
+				password2Rules: [
+					(value) => {
+						if (value) return true;
+						return "Password is required.";
+					},
+					(value) => {
+						if (value.length >= 8) return true;
+						return "Password must be at least 8 characters long.";
+					},
+					(value) => {
+						if (value.length < 20) return true;
+						return "Password must be shorter than 20 characters.";
+					},
+					(value) => {
+						if (value === this.contactData.password) return true;
+						return "Passwords don't match.";
+					},
+				],
 			},
 			valid: false,
 			loading: false,
@@ -107,12 +147,18 @@ export default {
 		togglePasswordVisibility() {
 			this.showPassword = !this.showPassword;
 		},
-		onSubmit(event) {
-			event.preventDefault();
+		onSubmit() {
+			if (!this.valid) {
+				return;
+			}
 			this.loading = true;
 			signup(this.contactData.email, this.contactData.password);
 			this.loading = false;
 		},
+	},
+	beforeRouteLeave(to, from, next) {
+		registerError.value = null;
+		next();
 	},
 };
 </script>

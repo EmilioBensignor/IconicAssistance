@@ -5,15 +5,25 @@
 	</div>
 	<section class="mt-3">
 		<div class="w-75 column ga-2">
-			<p class="text-start">
-				An email was sent to {{email ? email : ''}} to reset his password.
+			<p class="w-100 text-start">
+				An email was sent to
+				<span class="font-weight-bold">{{ email ? email : "" }}</span>
+				to reset his password.
 			</p>
-			<div class="row align-center ga-2">
-				<p class="text-start w-auto">Is the provided email incorrect?</p>
-				<router-link class="modify text-radioactive" :to="routes.RESET_PASSWORD">Modify</router-link>
+			<div>
+				<p class="text-start w-100">
+					Is the provided email incorrect?
+					<router-link
+						class="modify text-radioactive"
+						:to="routes.RESET_PASSWORD"
+						>Modify</router-link
+					>
+				</p>
 			</div>
 		</div>
-		<router-link class="secondaryButton elevation-5 mt-8" :to="routes.LOGIN">Go back to Login</router-link>
+		<router-link class="secondaryButton elevation-5 mt-8" :to="routes.LOGIN"
+			>Go back to Login</router-link
+		>
 	</section>
 </template>
 
@@ -30,15 +40,14 @@ export default {
 	data() {
 		return {
 			routes: ROUTES_NAMES,
-			email: resetEmail.value
+			email: resetEmail.value,
+		};
+	},
+	mounted() {
+		if (this.email === null) {
+			router.push(ROUTES_NAMES.RESET_PASSWORD);
 		}
 	},
-	mounted(){
-		if (this.email === null) {
-			router.push(ROUTES_NAMES.RESET_PASSWORD)
-		}
-		
-	}
 };
 </script>
 

@@ -72,7 +72,7 @@ exports.signUpClient = onRequest({ cors: true }, async (req, res) => {
 	let allowedUsersSnap;
 
 	if (!email || !password) {
-		res.send({ data: "Error: falta usuario y/o contraseña" });
+		res.send({ data: "Email and/or password are missing." });
 	}
 
 	await db
@@ -84,7 +84,7 @@ exports.signUpClient = onRequest({ cors: true }, async (req, res) => {
 			allowedUsersSnap = snap;
 		})
 		.catch(() => {
-			res.send({ data: "Usuario no autorizado" });
+			res.send({ data: "Unauthorized email." });
 		});
 
 	await admin
@@ -97,7 +97,7 @@ exports.signUpClient = onRequest({ cors: true }, async (req, res) => {
 			userId = userRecord.uid;
 		})
 		.catch(() => {
-			res.send({ data: "Error creando usuario" });
+			res.send({ data: "Error creating account." });
 		});
 
 	await db
@@ -110,10 +110,10 @@ exports.signUpClient = onRequest({ cors: true }, async (req, res) => {
 			});
 		})
 		.then(() => {
-			res.send({ data: "Usuario creado" });
+			res.send({ data: "User created." });
 		})
 		.catch(() => {
-			res.send({ data: "Error agregando usuario a base de datos" });
+			res.send({ data: "Error adding user to database." });
 		});
 });
 

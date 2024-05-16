@@ -24,6 +24,7 @@ const noAuthRoutes = [
 const resetEmail = ref(null);
 
 const registerError = ref(null);
+const loginError = ref(null);
 
 const userId = ref(null);
 
@@ -38,7 +39,7 @@ async function signup(email, password) {
 	);
 	await signUpClient({ email, password })
 		.then((res) => {
-			if (res.data === "Usuario creado") {
+			if (res.data === "User created.") {
 				login(email, password);
 			} else {
 				registerError.value = res.data;
@@ -49,6 +50,7 @@ async function signup(email, password) {
 		});
 }
 async function login(email, password) {
+	loginError.value = null;
 	if (!store) {
 		store = useAuthStore();
 	}
@@ -63,7 +65,7 @@ async function login(email, password) {
 			router.push(ROUTES_NAMES.SUITE);
 		}
 	} catch (error) {
-		console.log(error);
+		loginError.value = error.message;
 	}
 }
 async function logout() {
@@ -109,5 +111,6 @@ export {
 	resetPassword,
 	resetEmail,
 	registerError,
+	loginError,
 	userId,
 };
