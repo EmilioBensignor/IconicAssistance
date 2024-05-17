@@ -5,9 +5,11 @@ import LoginView from "@/suite/views/LoginView.vue";
 import AssistantsView from "@/suite/views/AssistantsView.vue";
 import InvoicesView from "@/suite/views/InvoicesView.vue";
 import AccountView from "@/suite/views/AccountView.vue";
+import AboutYouView from "@/suite/views/AboutYouView.vue";
+import CommunicationView from "@/suite/views/CommunicationView.vue";
 import PaymentMethodsView from "@/suite/views/PaymentMethodsView.vue";
-import AddPaymentMethodConfirmationView from "@/suite/views/AddPaymentMethodConfirmationView.vue";
 import AddPaymentMethodView from "@/suite/views/AddPaymentMethodView.vue";
+import AddPaymentMethodConfirmationView from "@/suite/views/AddPaymentMethodConfirmationView.vue";
 import ResetPasswordView from "@/suite/views/ResetPasswordView.vue";
 import ResetPasswordConfirmationView from "@/suite/views/ResetPasswordConfirmationView.vue";
 import { useAuthStore } from "@/suite/stores/auth.store";
@@ -74,6 +76,24 @@ export const suiteRoutes = [
 		beforeEnter: requireAuth,
 		meta: {
 			title: "Account",
+		},
+	},
+	{
+		path: routes.ABOUT_YOU,
+		name: "AboutYou",
+		component: AboutYouView,
+		beforeEnter: requireAuth,
+		meta: {
+			title: "AboutYou",
+		},
+	},
+	{
+		path: routes.COMMUNICATION,
+		name: "CommunicationPreferences",
+		component: CommunicationView,
+		beforeEnter: requireAuth,
+		meta: {
+			title: "CommunicationPreferences",
 		},
 	},
 	{

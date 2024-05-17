@@ -4,22 +4,24 @@
 		<h1>
 			Welcome,
 			<span>{{
-				userData && userData.firstname && userData.lastname
-					? `${userData.firstname} ${userData.lastname}`
+				userData && userData.firstname
+					? `${userData.firstname}`
 					: ""
 			}}</span
 			>!
 		</h1>
 	</div>
-	<section class="px-5 py-3">
-		<SuiteActionsComponent />
-	</section>
+	<SuiteActionsComponent />
+	<ActiveTeamsComponent />
+	<AssistantsComponent />
 </template>
 
 <script>
 import ROUTES_NAMES from "@/router/constants/ROUTES_NAMES";
 import HeaderSuiteComponent from "@/suite/components/HeaderSuiteComponent.vue";
 import SuiteActionsComponent from "@/suite/components/suite/SuiteActionsComponent.vue";
+import ActiveTeamsComponent from "@/suite/components/suite/ActiveTeamsComponent.vue";
+import AssistantsComponent from "@/suite/components/suite/AssistantsComponent.vue";
 import { useAuthStore } from "@/suite/stores/auth.store";
 import { userId } from "../services/auth.service";
 
@@ -28,6 +30,8 @@ export default {
 	components: {
 		HeaderSuiteComponent,
 		SuiteActionsComponent,
+		ActiveTeamsComponent,
+		AssistantsComponent,
 	},
 	data() {
 		return {
