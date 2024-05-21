@@ -19,7 +19,7 @@ onMounted(async () => {
 		functions,
 		"https://createcheckoutsession-cgjqatnysa-uc.a.run.app"
 	);
-	await createCheckoutSession({ data: store.user.stripeId })
+	await createCheckoutSession()
 		.then(async (res) => {
 			const data = res.data;
 			console.log(data);
