@@ -1,6 +1,7 @@
 const { onRequest } = require("firebase-functions/v2/https");
 const stripe = require("stripe")(process.env.VITE_STRIPE_SECRET_KEY);
 const admin = require("firebase-admin");
+const { documentId } = require("firebase/firestore");
 try {
 	admin.initializeApp();
 } catch (error) {
@@ -22,17 +23,25 @@ exports.createCheckoutSession = onRequest({ cors: true }, async (req, res) => {
 
 exports.attatchPaymentMethod = onRequest({ cors: true }, async (req, res) => {
 	res.set("Access-Control-Allow-Origin", "*");
+	let customerId;
 	const sessions = await stripe.checkout.sessions.list();
 	const index = sessions.findIndex((e) => {
-		return e.id === req.data;
+		return e.id === req.data[0];
 	});
 	const data = sessions[index];
-	const clientEmail = data.customer_details.email;
 	const setupIntentID = data.setup_intent;
-	const customerId = await stripe.customers.list({
-		email: clientEmail,
-		limit: 1,
-	});
+
+	await db
+		.collection("clients")
+		.doc(req.data[1])
+		.get()
+		.then((snap) => {
+			customerId = snap.data();
+		})
+		.catch(() => {
+			res.send({ data: "Unauthorized email." });
+		});
+
 	if (!customerId) {
 		res.send({ data: "Error: no stripe customer with that id" });
 	}
@@ -42,7 +51,7 @@ exports.attatchPaymentMethod = onRequest({ cors: true }, async (req, res) => {
 	);
 	const attachedPaymentMethod = await stripe.paymentMethods.attach(
 		paymentMethod.id,
-		{ customer: customerId.data[0].id }
+		{ customer: customerId }
 	);
 	res.send({ data: attachedPaymentMethod });
 });
