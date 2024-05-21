@@ -24,18 +24,16 @@ exports.createCheckoutSession = onRequest({ cors: true }, async (req, res) => {
 exports.attatchPaymentMethod = onRequest({ cors: true }, async (req, res) => {
 	res.set("Access-Control-Allow-Origin", "*");
 	let customerId;
-	console.log(req.body);
-	const data = await stripe.checkout.sessions.retrieve(req.body.data.session);
+	const data = req.body.data;
+	const session = await stripe.checkout.sessions.retrieve(data.session);
 
-	const setupIntentID = data.setup_intent;
-
+	const setupIntentID = session.setup_intent;
 	await db
 		.collection("clients")
-		.doc(req.body.data.userId)
+		.doc(data.userId)
 		.get()
 		.then((snap) => {
 			customerId = snap.data();
-			console.log(customerId);
 		})
 		.catch(() => {
 			res.send({ data: "Unauthorized email." });
@@ -50,7 +48,7 @@ exports.attatchPaymentMethod = onRequest({ cors: true }, async (req, res) => {
 	);
 	const attachedPaymentMethod = await stripe.paymentMethods.attach(
 		paymentMethod.id,
-		{ customer: customerId }
+		{ customer: customerId.stripeId }
 	);
 	res.send({ data: attachedPaymentMethod });
 });

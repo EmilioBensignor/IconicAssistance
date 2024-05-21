@@ -13,7 +13,6 @@ import { useAuthStore } from "../stores/auth.store";
 const store = useAuthStore();
 const loading = ref(false);
 onMounted(async () => {
-	console.log(store.user.uid);
 	loading.value = true;
 	const params = new Proxy(new URLSearchParams(window.location.search), {
 		get: (searchParams, prop) => searchParams.get(prop),
