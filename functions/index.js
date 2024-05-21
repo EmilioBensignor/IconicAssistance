@@ -25,11 +25,8 @@ exports.createCheckoutSession = onRequest({ cors: true }, async (req, res) => {
 exports.attatchPaymentMethod = onRequest({ cors: true }, async (req, res) => {
 	res.set("Access-Control-Allow-Origin", "*");
 	let customerId;
-	const sessions = await stripe.checkout.sessions.list();
-	const index = sessions.findIndex((e) => {
-		return e.id === req.data[0];
-	});
-	const data = sessions[index];
+	const data = await stripe.checkout.sessions.retrieve(req.data[0]);
+
 	const setupIntentID = data.setup_intent;
 
 	await db

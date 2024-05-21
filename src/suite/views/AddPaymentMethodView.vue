@@ -8,6 +8,7 @@
 import { onMounted } from "vue";
 import { functions } from "../firebase/init";
 import { httpsCallableFromURL } from "firebase/functions";
+import { useAuthStore } from "../stores/auth.store";
 
 const stripe = Stripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
 
