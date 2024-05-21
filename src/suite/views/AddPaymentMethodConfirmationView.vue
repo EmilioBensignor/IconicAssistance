@@ -20,7 +20,9 @@ onMounted(async () => {
 		functions,
 		"https://attatchpaymentmethod-cgjqatnysa-uc.a.run.app"
 	);
-	await attatchPaymentMethod({ data: [payment_id, userId.value] })
+	await attatchPaymentMethod({
+		data: { session: payment_id, userId: userId.value },
+	})
 		.then((res) => {
 			console.log(res);
 			loading.value = false;

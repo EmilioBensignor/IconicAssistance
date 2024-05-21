@@ -1,7 +1,7 @@
 const { onRequest } = require("firebase-functions/v2/https");
 const stripe = require("stripe")(process.env.VITE_STRIPE_SECRET_KEY);
 const admin = require("firebase-admin");
-const { documentId } = require("firebase/firestore");
+
 try {
 	admin.initializeApp();
 } catch (error) {
@@ -25,13 +25,14 @@ exports.createCheckoutSession = onRequest({ cors: true }, async (req, res) => {
 exports.attatchPaymentMethod = onRequest({ cors: true }, async (req, res) => {
 	res.set("Access-Control-Allow-Origin", "*");
 	let customerId;
-	const data = await stripe.checkout.sessions.retrieve(req.data[0]);
+
+	const data = await stripe.checkout.sessions.retrieve(req.data.session);
 
 	const setupIntentID = data.setup_intent;
 
 	await db
 		.collection("clients")
-		.doc(req.data[1])
+		.doc(req.data.userId)
 		.get()
 		.then((snap) => {
 			customerId = snap.data();
