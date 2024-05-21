@@ -108,7 +108,7 @@ exports.signUpClient = onRequest({ cors: true }, async (req, res) => {
 	if (!customerId) {
 		res.send({ data: "Error: no stripe customer with that email" });
 	} else {
-		userInformation.stripeId = customerId;
+		userInformation.stripeId = customerId[0].id;
 	}
 
 	await db
