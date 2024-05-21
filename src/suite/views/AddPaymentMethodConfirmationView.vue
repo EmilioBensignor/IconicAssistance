@@ -8,10 +8,12 @@
 import { onMounted, ref } from "vue";
 import { functions } from "../firebase/init";
 import { httpsCallableFromURL } from "firebase/functions";
+import { useAuthStore } from "../stores/auth.store";
 
+const store = useAuthStore();
 const loading = ref(false);
 onMounted(async () => {
-	console.log(userId.value);
+	console.log(store.user.uid);
 	loading.value = true;
 	const params = new Proxy(new URLSearchParams(window.location.search), {
 		get: (searchParams, prop) => searchParams.get(prop),
@@ -21,7 +23,7 @@ onMounted(async () => {
 		functions,
 		"https://attatchpaymentmethod-cgjqatnysa-uc.a.run.app"
 	);
-	await attatchPaymentMethod({ session: payment_id, userId: userId.value })
+	await attatchPaymentMethod({ session: payment_id, userId: store.user.uid })
 		.then((res) => {
 			console.log(res);
 			loading.value = false;
@@ -36,7 +38,6 @@ onMounted(async () => {
 
 <script>
 import HeaderSuiteComponent from "@/suite/components/HeaderSuiteComponent.vue";
-import { userId } from "../services/auth.service";
 
 export default {
 	name: "AddPaymentMethodConfirmationView",
