@@ -24,17 +24,18 @@ exports.createCheckoutSession = onRequest({ cors: true }, async (req, res) => {
 exports.attatchPaymentMethod = onRequest({ cors: true }, async (req, res) => {
 	res.set("Access-Control-Allow-Origin", "*");
 	let customerId;
-
-	const data = await stripe.checkout.sessions.retrieve(req.data.session);
+	console.log(req.body);
+	const data = await stripe.checkout.sessions.retrieve(req.body.data.session);
 
 	const setupIntentID = data.setup_intent;
 
 	await db
 		.collection("clients")
-		.doc(req.data.userId)
+		.doc(req.body.data.userId)
 		.get()
 		.then((snap) => {
 			customerId = snap.data();
+			console.log(customerId);
 		})
 		.catch(() => {
 			res.send({ data: "Unauthorized email." });
