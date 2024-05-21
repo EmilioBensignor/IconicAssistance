@@ -13,6 +13,7 @@ import "vuetify/styles";
 import { createVuetify } from "vuetify";
 import * as components from "vuetify/components";
 import * as directives from "vuetify/directives";
+import { useAuthStore } from "./suite/stores/auth.store";
 
 const vuetify = createVuetify({
 	components,
@@ -53,4 +54,7 @@ app.use(VueFire, {
 		VueFireAuth(),
 	],
 });
+const authStore = useAuthStore();
+authStore.initAuth();
+
 app.mount("#app");

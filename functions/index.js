@@ -14,6 +14,7 @@ exports.createCheckoutSession = onRequest({ cors: true }, async (req, res) => {
 	const session = await stripe.checkout.sessions.create({
 		payment_method_types: ["card"],
 		mode: "setup",
+		customer: req.data,
 		ui_mode: "embedded",
 		return_url:
 			"https://www.iconicassistants.com/suite/add-payment-method-confirmation?session_id={CHECKOUT_SESSION_ID}",

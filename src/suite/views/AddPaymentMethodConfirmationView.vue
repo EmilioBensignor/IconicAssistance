@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<h1>add payment confirmation</h1>
-		<p>{{ loading }}</p>
+		<p>{{ loading ? "Cargando..." : "Metodo de pago asociado" }}</p>
 	</div>
 </template>
 <script setup>

@@ -4,9 +4,7 @@
 		<h1>
 			Welcome,
 			<span>{{
-				userData && userData.firstname
-					? `${userData.firstname}`
-					: ""
+				userData && userData.firstname ? `${userData.firstname}` : ""
 			}}</span
 			>!
 		</h1>
@@ -45,6 +43,7 @@ export default {
 import { collection, doc } from "firebase/firestore";
 import { useDocument } from "vuefire";
 import { db } from "../firebase/init";
-const userData = useDocument(doc(collection(db, "clients"), userId.value));
+const store = useAuthStore();
+const userData = useDocument(doc(collection(db, "clients"), store.user.uid));
 console.log(userData);
 </script>

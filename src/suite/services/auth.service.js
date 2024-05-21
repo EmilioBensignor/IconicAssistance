@@ -78,20 +78,20 @@ async function logout() {
 	router.push(ROUTES_NAMES.LOGIN);
 }
 
-function init() {
-	if (!store) {
-		store = useAuthStore();
-	}
-	onAuthStateChanged(auth, (user) => {
-		if (user) {
-			store.user = user;
-			userId.value = user.uid;
-			if (noAuthRoutes.includes(window.location.pathname)) {
-				router.push(ROUTES_NAMES.SUITE);
-			}
-		}
-	});
-}
+// function init() {
+// 	if (!store) {
+// 		store = useAuthStore();
+// 	}
+// 	onAuthStateChanged(auth, (user) => {
+// 		if (user) {
+// 			store.user = user;
+// 			userId.value = user.uid;
+// 			if (noAuthRoutes.includes(window.location.pathname)) {
+// 				router.push(ROUTES_NAMES.SUITE);
+// 			}
+// 		}
+// 	});
+// }
 
 async function resetPassword(email) {
 	try {
@@ -107,7 +107,6 @@ export {
 	signup,
 	login,
 	logout,
-	init,
 	resetPassword,
 	resetEmail,
 	registerError,

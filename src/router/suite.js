@@ -14,15 +14,38 @@ import ResetPasswordView from "@/suite/views/ResetPasswordView.vue";
 import ResetPasswordConfirmationView from "@/suite/views/ResetPasswordConfirmationView.vue";
 import { useAuthStore } from "@/suite/stores/auth.store";
 import ROUTES_NAMES from "./constants/ROUTES_NAMES";
+import { watch } from "vue";
 
 const requireAuth = (to, from, next) => {
-	let store = useAuthStore();
-	if (!store.user) {
-		next(ROUTES_NAMES.LOGIN);
+	const authStore = useAuthStore();
+
+	if (authStore.isAuthLoading) {
+		// If still loading, wait for the state to be determined
+		const unwatch = watch(
+			() => authStore.isAuthLoading,
+			(isAuthLoading) => {
+				if (!isAuthLoading) {
+					// Authentication state has been determined
+					unwatch(); // Stop watching
+					if (authStore.isAuthenticated) {
+						next();
+					} else {
+						next({ name: ROUTES_NAMES.LOGIN }); // Adjust the route name as needed
+					}
+				}
+			}
+		);
 	} else {
-		next();
+		// If not loading, proceed with the normal checks
+		if (authStore.isAuthenticated) {
+			next();
+		} else {
+			next({ name: ROUTES_NAMES.LOGIN }); // Adjust the route name as needed
+		}
 	}
 };
+
+export default requireAuth;
 
 export const suiteRoutes = [
 	{
