@@ -30,7 +30,7 @@ const requireAuth = (to, from, next) => {
 					if (authStore.isAuthenticated) {
 						next();
 					} else {
-						next({ name: ROUTES_NAMES.LOGIN }); // Adjust the route name as needed
+						next(ROUTES_NAMES.LOGIN); // Adjust the route name as needed
 					}
 				}
 			}
@@ -40,7 +40,7 @@ const requireAuth = (to, from, next) => {
 		if (authStore.isAuthenticated) {
 			next();
 		} else {
-			next({ name: ROUTES_NAMES.LOGIN }); // Adjust the route name as needed
+			next(ROUTES_NAMES.LOGIN); // Adjust the route name as needed
 		}
 	}
 };

@@ -14,7 +14,6 @@ const stripe = Stripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
 
 onMounted(async () => {
 	console.log("hola");
-	const store = useAuthStore();
 	const createCheckoutSession = httpsCallableFromURL(
 		functions,
 		"https://createcheckoutsession-cgjqatnysa-uc.a.run.app"
