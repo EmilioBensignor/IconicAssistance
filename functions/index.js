@@ -50,6 +50,7 @@ exports.attatchPaymentMethod = onRequest({ cors: true }, async (req, res) => {
 exports.getHubspotData = onRequest({ cors: true }, async (req, res) => {
 	res.set("Access-Control-Allow-Origin", "*");
 	const data = req.body;
+	data.hasCCOnFile = false;
 	try {
 		await db
 			.collection("allowedUsers")
@@ -99,6 +100,16 @@ exports.signUpClient = onRequest({ cors: true }, async (req, res) => {
 		.catch(() => {
 			res.send({ data: "Error creating account." });
 		});
+
+	const customerId = await stripe.customers.list({
+		email: email,
+		limit: 1,
+	});
+	if (!customerId) {
+		res.send({ data: "Error: no stripe customer with that email" });
+	} else {
+		userInformation.stripeId = customerId;
+	}
 
 	await db
 		.collection("clients")
