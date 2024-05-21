@@ -45,8 +45,6 @@ const requireAuth = (to, from, next) => {
 	}
 };
 
-export default requireAuth;
-
 export const suiteRoutes = [
 	{
 		path: routes.SUITE,
