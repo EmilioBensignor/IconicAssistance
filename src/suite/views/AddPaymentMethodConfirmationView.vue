@@ -11,6 +11,7 @@ import { httpsCallableFromURL } from "firebase/functions";
 
 const loading = ref(false);
 onMounted(async () => {
+	console.log(userId.value);
 	loading.value = true;
 	const params = new Proxy(new URLSearchParams(window.location.search), {
 		get: (searchParams, prop) => searchParams.get(prop),
