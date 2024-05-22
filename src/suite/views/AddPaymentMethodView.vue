@@ -1,15 +1,17 @@
 <template>
+	<div v-if="loading">Cargando...</div>
 	<div id="checkout">
 		<!-- Checkout will insert the payment form here -->
 	</div>
 </template>
 
 <script setup>
-import { onMounted } from "vue";
+import { onMounted, ref } from "vue";
 import { functions } from "../firebase/init";
 import { httpsCallableFromURL } from "firebase/functions";
 
 const stripe = Stripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
+const loading = ref(true);
 
 onMounted(async () => {
 	const createCheckoutSession = httpsCallableFromURL(
@@ -24,6 +26,7 @@ onMounted(async () => {
 				clientSecret,
 			});
 			checkout.mount("#checkout");
+			loading.value = false;
 		})
 		.catch((error) => {
 			console.log(error);
