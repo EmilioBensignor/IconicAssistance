@@ -149,25 +149,21 @@ li {
 
 /* BackGrounds */
 .skyRadioactive {
-	background-image: linear-gradient(
-		to bottom,
-		#0cb8f1,
-		#00a0fa,
-		#0085fe,
-		#0066f9,
-		#373ae6
-	);
+	background-image: linear-gradient(to bottom,
+			#0cb8f1,
+			#00a0fa,
+			#0085fe,
+			#0066f9,
+			#373ae6);
 }
 
 .radioactiveSky {
-	background-image: linear-gradient(
-		to bottom,
-		#373ae6,
-		#0066f9,
-		#0085fe,
-		#00a0fa,
-		#0cb8f1
-	);
+	background-image: linear-gradient(to bottom,
+			#373ae6,
+			#0066f9,
+			#0085fe,
+			#00a0fa,
+			#0cb8f1);
 }
 
 /* Waves */
@@ -321,6 +317,35 @@ section {
 	transition: ease-in;
 	animation-delay: 250ms;
 }
+
+/* Loaders */
+.loader {
+	border: 16px solid #f3f3f3;
+	border-top: 16px solid #373ae6;
+	border-radius: 50%;
+	width: 5rem;
+	height: 5rem;
+	animation: spin 2s linear infinite;
+	margin: auto;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.loader-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
 
 /* SM */
 @media only screen and (min-width: 480px) {

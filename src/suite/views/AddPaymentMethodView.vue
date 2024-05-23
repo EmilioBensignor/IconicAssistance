@@ -1,7 +1,15 @@
 <template>
-	<div v-if="loading">Cargando...</div>
-	<div id="checkout">
-		<!-- Checkout will insert the payment form here -->
+	<HeaderSuiteComponent />
+	<div class="heroSuite columnAlignCenter">
+		<h1>Add Payment Method</h1>
+	</div>
+	<div v-if="loading" class="loader-container">
+		<div class="loader"></div>
+	</div>
+	<div class="bg-radioactive">
+		<div id="checkout" class="bg-radioactive pt-10">
+			<!-- Checkout will insert the payment form here -->
+		</div>
 	</div>
 </template>
 
@@ -44,3 +52,9 @@ export default {
 	},
 };
 </script>
+
+<style>
+#checkout iframe {
+	height: 100vh !important;
+}
+</style>
