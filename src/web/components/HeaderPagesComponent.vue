@@ -17,7 +17,7 @@
             <v-list-item :to="item.path" v-for="(item, index) in aboutMenu" :key="index">
               <v-list-item-title class="navTitles">{{
                 item.title
-                }}</v-list-item-title>
+              }}</v-list-item-title>
             </v-list-item>
           </v-list>
         </v-menu>
@@ -29,7 +29,7 @@
             <v-list-item :to="item.path" v-for="(item, index) in learnMenu" :key="index">
               <v-list-item-title class="navTitles">{{
                 item.title
-                }}</v-list-item-title>
+              }}</v-list-item-title>
             </v-list-item>
           </v-list>
         </v-menu>
@@ -55,7 +55,7 @@
           <v-list-item :to="item.path">
             <v-list-item-title class="pl-4 text-midnight">{{
               item.title
-              }}</v-list-item-title>
+            }}</v-list-item-title>
           </v-list-item>
         </li>
         <p class="navTitles pt-1 pl-4">Learn</p>
@@ -63,7 +63,7 @@
           <v-list-item :to="item.path">
             <v-list-item-title class="pl-4 text-midnight">{{
               item.title
-              }}</v-list-item-title>
+            }}</v-list-item-title>
           </v-list-item>
         </li>
         <li>
@@ -182,9 +182,7 @@ export default {
 
 /* Desktop */
 @media only screen and (min-width: 1080px) {
-
-  .hamburger,
-  .v-navigation-drawer {
+  .hamburger {
     display: none !important;
   }
 
