@@ -3,9 +3,7 @@
 	<div class="heroSuite columnAlignCenter">
 		<h1>Add Payment Method</h1>
 	</div>
-	<div v-if="loading" class="loader-container">
-		<div class="loader"></div>
-	</div>
+	<SpinnerComponent v-if="loading" />
 	<div class="bg-radioactive">
 		<div id="checkout" class="bg-radioactive pt-10">
 			<!-- Checkout will insert the payment form here -->
@@ -44,11 +42,13 @@ onMounted(async () => {
 
 <script>
 import HeaderSuiteComponent from "@/suite/components/HeaderSuiteComponent.vue";
+import SpinnerComponent from "@/suite/components/loader/SpinnerComponent.vue";
 
 export default {
 	name: "AddPaymentMethodView",
 	components: {
 		HeaderSuiteComponent,
+		SpinnerComponent,
 	},
 };
 </script>
