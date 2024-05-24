@@ -3,47 +3,31 @@
 	<div class="heroSuite columnAlignCenter">
 		<h1>Account</h1>
 	</div>
-	<section>
-		<p class="text-start">Personalize your Iconic Experience</p>
-		<div>
-			<router-link :to="item.path" class="row" v-for="(item, index) in actions" :key="index">
-				<v-icon color="radioactive" :icon="`mdi-${item.icon}`"> </v-icon>
-				<p>{{ item.title }}</p>
-			</router-link>
-		</div>
-	</section>
+	<div>
+		<v-skeleton-loader class="w-75" type="text" v-if="!userData || !userData.firstname"></v-skeleton-loader>
+		<p v-else>{{ userData.firstname }}</p>
+		<v-skeleton-loader class="w-75" type="text" v-if="!userData || !userData.email"></v-skeleton-loader>
+		<p v-else>{{ userData.email }}</p>
+	</div>
 </template>
 
 <script>
-import routes from "@/router/constants/ROUTES_NAMES";
 import HeaderSuiteComponent from "@/suite/components/HeaderSuiteComponent.vue";
+import { useAuthStore } from "@/suite/stores/auth.store";
 
 export default {
 	name: "AccountView",
 	components: {
 		HeaderSuiteComponent,
 	},
-	data(){
-		return{
-			actions: [
-				{
-					path: routes.ABOUT_YOU,
-					icon: "information",
-					title: "About You"
-				},
-				{
-					path: routes.COMMUNICATION,
-					icon: "account-voice",
-					title: "Communication Preferences"
-				},
-			],
-		}
-	}
 };
 </script>
 
-<style scoped>
-a{
-	text-decoration: none;
-}
-</style>
+<script setup>
+import { collection, doc } from "firebase/firestore";
+import { useDocument } from "vuefire";
+import { db } from "../firebase/init";
+const store = useAuthStore();
+const userData = useDocument(doc(collection(db, "clients"), store.user.uid));
+console.log(userData);
+</script>

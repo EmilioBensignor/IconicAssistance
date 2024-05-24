@@ -1,17 +1,18 @@
 <template>
 	<HeaderSuiteComponent />
-	<div class="heroSuite columnAlignCenter">
-		<h1>
+	<div class="heroSuite column">
+		<v-skeleton-loader class="w-75" type="heading" v-if="!userData || !userData.firstname"></v-skeleton-loader>
+		<h1 class="px-5" v-else>
 			Welcome,
-			<span>{{
-				userData && userData.firstname ? `${userData.firstname}` : ""
-			}}</span
-			>!
+			<span>{{ userData.firstname }}</span>!
 		</h1>
 	</div>
-	<SuiteActionsComponent />
-	<ActiveTeamsComponent />
-	<AssistantsComponent />
+	<v-skeleton-loader class="w-75 border mx-5" v-if="!userData || !userData.firstname" type="image"></v-skeleton-loader>
+	<SuiteActionsComponent v-else />
+	<v-skeleton-loader class="w-75" type="article" v-if="!userData || !userData.firstname"></v-skeleton-loader>
+	<ActiveTeamsComponent v-else />
+	<v-skeleton-loader class="w-75" type="article" v-if="!userData || !userData.firstname"></v-skeleton-loader>
+	<AssistantsComponent v-else />
 </template>
 
 <script>
@@ -21,7 +22,6 @@ import SuiteActionsComponent from "@/suite/components/suite/SuiteActionsComponen
 import ActiveTeamsComponent from "@/suite/components/suite/ActiveTeamsComponent.vue";
 import AssistantsComponent from "@/suite/components/suite/AssistantsComponent.vue";
 import { useAuthStore } from "@/suite/stores/auth.store";
-import { userId } from "../services/auth.service";
 
 export default {
 	name: "SuiteView",

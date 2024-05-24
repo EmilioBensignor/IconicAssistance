@@ -38,17 +38,26 @@
           </v-list-item>
         </li>
         <li>
-          <v-list-item @click="onLogout">
+          <v-list-item @click="dialog = true">
             <div class="d-flex align-center">
               <v-icon color="radioactive" icon="mdi-logout"></v-icon>
               <v-list-item-title class="pl-4 text-midnight">
-                LOGOUT
+                LOG OUT
               </v-list-item-title>
             </div>
           </v-list-item>
         </li>
       </v-list>
     </v-navigation-drawer>
+    <v-dialog v-model="dialog">
+      <v-card class="align-self-center ga-3" max-width="400"
+        title="Are you sure you want to log out?">
+        <div class="d-flex justify-center ga-3 px-5">
+          <v-btn class="" text="Cancel" @click="dialog = false"></v-btn>
+          <v-btn class="bg-radioactive" text="Log Out" @click="onLogout"></v-btn>
+        </div>
+      </v-card>
+    </v-dialog>
   </nav>
 </template>
 
@@ -61,6 +70,7 @@ export default {
   data() {
     return {
       showMenu: false,
+      dialog: false,
       suiteMenu: [
         {
           path: routes.SUITE,
@@ -111,6 +121,7 @@ export default {
       }
     },
     onLogout() {
+      this.dialog = false;
       logout();
     },
   },

@@ -1,60 +1,36 @@
 <template>
 	<HeaderOutsideComponent />
 	<div class="heroSuite columnAlignCenter">
-		<h1 class="text-center">Login</h1>
+		<h1 class="text-center">Log In</h1>
 	</div>
-	<v-form
-		class="columnAlignCenter ga-3 mt-5"
-		v-model="valid"
-		@submit.prevent="onSubmit()"
-	>
+	<v-form class="columnAlignCenter ga-3 mt-5" v-model="valid" @submit.prevent="onSubmit()">
 		<div class="w-75">
 			<label for="email">Email</label>
-			<v-text-field
-				id="email"
-				v-model="contactData.email"
-				:rules="rules.emailRules"
-				required
-			></v-text-field>
+			<v-text-field id="email" v-model="contactData.email" :rules="rules.emailRules" required></v-text-field>
 		</div>
 		<div class="w-75">
 			<label for="password">Password</label>
-			<v-text-field
-				id="password"
-				v-model="contactData.password"
-				:rules="rules.passwordRules"
-				:type="!showPassword ? 'password' : 'text'"
-				required
-			>
+			<v-text-field id="password" v-model="contactData.password" :rules="rules.passwordRules"
+				:type="!showPassword ? 'password' : 'text'" required>
 				<template v-slot:append>
-					<v-icon
-						:icon="
-							!showPassword
-								? 'mdi-eye-off-outline'
-								: 'mdi-eye-outline'
-						"
-						@click="togglePasswordVisibility"
-					></v-icon>
+					<v-icon :icon="!showPassword
+							? 'mdi-eye-off-outline'
+							: 'mdi-eye-outline'
+						" @click="togglePasswordVisibility"></v-icon>
 				</template>
 			</v-text-field>
 		</div>
 		<div class="w-75 rowCenter flex-wrap ga-1">
 			<p class="w-auto text-black">Forgot&nbsp;password?</p>
-			<router-link
-				class="reset text-radioactive"
-				:to="routes.RESET_PASSWORD"
-				>Reset&nbsp;password</router-link
-			>
+			<router-link class="reset text-radioactive" :to="routes.RESET_PASSWORD">Reset&nbsp;password</router-link>
 		</div>
 		<div class="w-75 mt-5">
-			<router-link class="reset text-radioactive" :to="routes.REGISTER"
-				>Client Signup</router-link
-			>
+			<router-link class="reset text-radioactive" :to="routes.REGISTER">Client Signup</router-link>
 		</div>
 		<p v-if="error" class="w-75 text-red text-center mt-3">
 			{{ firebaseErrors[error] ? firebaseErrors[error] : error }}
 		</p>
-		<SecondaryBtnComponent text="Login" :loading="loading" />
+		<SecondaryBtnComponent text="Log In" :loading="loading" />
 	</v-form>
 </template>
 
