@@ -54,25 +54,21 @@
 		<p v-if="error" class="w-75 text-red text-center mt-3">
 			{{ firebaseErrors[error] ? firebaseErrors[error] : error }}
 		</p>
-		<button
-			class="w-50 register secondaryButton text-white elevation-5 mt-5 mb-1"
-			type="submit"
-			:loading="loading"
-		>
-			Login
-		</button>
+		<SecondaryBtnComponent text="Login" :loading="loading" />
 	</v-form>
 </template>
 
 <script>
 import ROUTES_NAMES from "@/router/constants/ROUTES_NAMES";
 import HeaderOutsideComponent from "@/suite/components/HeaderOutsideComponent.vue";
+import SecondaryBtnComponent from "@/suite/components/buttons/SecondaryBtnComponent.vue";
 import { login, loginError } from "../services/auth.service";
 
 export default {
 	name: "LoginView",
 	components: {
 		HeaderOutsideComponent,
+		SecondaryBtnComponent,
 	},
 	data() {
 		return {
