@@ -3,38 +3,67 @@
 	<div class="heroSuite columnAlignCenter">
 		<h1 class="text-center">Register</h1>
 	</div>
-	<v-form class="columnAlignCenter ga-3 mt-5" v-model="valid" @submit.prevent="onSubmit()">
+	<v-form
+		class="columnAlignCenter ga-3 mt-5"
+		v-model="valid"
+		@submit.prevent="onSubmit()"
+	>
 		<div class="w-75">
 			<label for="email">Email</label>
-			<v-text-field id="email" v-model="contactData.email" :rules="rules.emailRules" required></v-text-field>
+			<v-text-field
+				id="email"
+				v-model="contactData.email"
+				:rules="rules.emailRules"
+				required
+			></v-text-field>
 		</div>
 		<div class="w-75">
 			<label for="password">Password</label>
-			<v-text-field id="password" v-model="contactData.password" :rules="rules.passwordRules"
-				:type="!showPassword ? 'password' : 'text'" required>
+			<v-text-field
+				id="password"
+				v-model="contactData.password"
+				:rules="rules.passwordRules"
+				:type="!showPassword ? 'password' : 'text'"
+				required
+			>
 				<template v-slot:append>
-					<v-icon :icon="!showPassword
-						? 'mdi-eye-off-outline'
-						: 'mdi-eye-outline'
-						" @click="togglePasswordVisibility"></v-icon>
+					<v-icon
+						:icon="
+							!showPassword
+								? 'mdi-eye-off-outline'
+								: 'mdi-eye-outline'
+						"
+						@click="togglePasswordVisibility"
+					></v-icon>
 				</template>
 			</v-text-field>
 		</div>
 		<div class="w-75">
 			<label for="password2">Repeat Password</label>
-			<v-text-field id="password2" v-model="contactData.password2" :rules="rules.password2Rules"
-				:type="!showPassword ? 'password' : 'text'" required>
+			<v-text-field
+				id="password2"
+				v-model="contactData.password2"
+				:rules="rules.password2Rules"
+				:type="!showPassword ? 'password' : 'text'"
+				required
+			>
 				<template v-slot:append>
-					<v-icon :icon="!showPassword
-						? 'mdi-eye-off-outline'
-						: 'mdi-eye-outline'
-						" @click="togglePasswordVisibility"></v-icon>
+					<v-icon
+						:icon="
+							!showPassword
+								? 'mdi-eye-off-outline'
+								: 'mdi-eye-outline'
+						"
+						@click="togglePasswordVisibility"
+					></v-icon>
 				</template>
 			</v-text-field>
 		</div>
 		<div class="w-75 row ga-1">
 			<p class="w-auto text-black">Already registered?</p>
-			<router-link class="login text-radioactive" :to="routes.LOGIN">Log in</router-link>
+			<router-link class="login text-radioactive" :to="routes.LOGIN"
+				>Log in</router-link
+			>
 		</div>
 		<p class="text-center text-red mt-3" v-if="error">
 			{{ error }}
@@ -114,13 +143,18 @@ export default {
 		togglePasswordVisibility() {
 			this.showPassword = !this.showPassword;
 		},
-		onSubmit() {
+		async onSubmit() {
 			if (!this.valid) {
 				return;
 			}
 			this.loading = true;
-			signup(this.contactData.email, this.contactData.password);
-			this.loading = false;
+			try {
+				await signup(this.contactData.email, this.contactData.password);
+			} catch (error) {
+				console.log(error);
+			} finally {
+				this.loading = false;
+			}
 		},
 	},
 	beforeRouteLeave(to, from, next) {

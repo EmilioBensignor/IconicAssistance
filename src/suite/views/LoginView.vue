@@ -119,13 +119,18 @@ export default {
 		togglePasswordVisibility() {
 			this.showPassword = !this.showPassword;
 		},
-		onSubmit() {
+		async onSubmit() {
 			if (!this.valid) {
 				return;
 			}
 			this.loading = true;
-			login(this.contactData.email, this.contactData.password);
-			this.loading = false;
+			try {
+				await login(this.contactData.email, this.contactData.password);
+			} catch (error) {
+				console.log(error);
+			} finally {
+				this.loading = false;
+			}
 		},
 	},
 	beforeRouteLeave(to, from, next) {
