@@ -5,7 +5,7 @@
         @click="showMenu = !showMenu">
       </v-app-bar-nav-icon>
       <v-toolbar-title>
-        <router-link class="text-decoration-none" :to="'/'">
+        <router-link class="text-decoration-none" :to="routes.SUITE">
           <img width="75%" src="@/suite/assets/images/Suite-Logo.png" alt="Suite Logo" />
         </router-link>
       </v-toolbar-title>
@@ -71,6 +71,7 @@ export default {
     return {
       showMenu: false,
       dialog: false,
+      routes: routes,
       suiteMenu: [
         {
           path: routes.SUITE,
