@@ -6,9 +6,14 @@
 
 <script>
 import { useHead } from "@vueuse/head";
+import { logEvent } from "firebase/analytics";
+import { analytics } from "./suite/firebase/init";
 
 export default {
 	name: "App",
+	mounted() {
+		logEvent(analytics, "app_open");
+	},
 	watch: {
 		$route() {
 			window.scrollTo(0, 0);
@@ -149,21 +154,25 @@ li {
 
 /* BackGrounds */
 .skyRadioactive {
-	background-image: linear-gradient(to bottom,
-			#0cb8f1,
-			#00a0fa,
-			#0085fe,
-			#0066f9,
-			#373ae6);
+	background-image: linear-gradient(
+		to bottom,
+		#0cb8f1,
+		#00a0fa,
+		#0085fe,
+		#0066f9,
+		#373ae6
+	);
 }
 
 .radioactiveSky {
-	background-image: linear-gradient(to bottom,
-			#373ae6,
-			#0066f9,
-			#0085fe,
-			#00a0fa,
-			#0cb8f1);
+	background-image: linear-gradient(
+		to bottom,
+		#373ae6,
+		#0066f9,
+		#0085fe,
+		#00a0fa,
+		#0cb8f1
+	);
 }
 
 /* Waves */
