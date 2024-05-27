@@ -50,7 +50,7 @@
       </v-list>
     </v-navigation-drawer>
     <v-dialog v-model="dialog">
-      <v-card class="align-self-center ga-3" max-width="400"
+      <v-card class="align-self-center ga-3 rounded-lg" max-width="400"
         title="Are you sure you want to log out?">
         <div class="d-flex justify-center ga-3 px-5">
           <v-btn class="" text="Cancel" @click="dialog = false"></v-btn>
