@@ -73,7 +73,7 @@
         type="text"
         v-if="!userData"></v-skeleton-loader>
       <div v-else>
-        <p class="dataTitle">Profession</p>
+        <p class="dataTitle">Position</p>
       </div>
     </div>
     <div>

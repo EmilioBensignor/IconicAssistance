@@ -39,6 +39,7 @@ export default {
 	},
 };
 </script>
+
 <script setup>
 import { collection, doc } from "firebase/firestore";
 import { useDocument } from "vuefire";

@@ -2,14 +2,22 @@
 	<HeaderSuiteComponent />
 	<div class="heroSuite columnAlignCenter">
 		<h1>Payment Methods</h1>
-		<div v-if="cards.length > 0 && !loading">
-			<div v-for="card in cards" :key="card.id">
-				<p>{{ card.card.brand }} {{ card.card.funding }}</p>
-				<p>Terminada en {{ card.card.last4 }}</p>
+		<v-skeleton-loader class="w-75 border mt-5" type="image" v-if="loading"></v-skeleton-loader>
+		<div class="w-100 columnAlignCenter mt-5">
+			<div class="columnAlignCenter" v-if="cards.length > 0 && !loading">
+				<div v-for="card in cards" :key="card.id" class="card column bg-radioactive rounded-xl elevation-5 pa-5">
+					<p class="cardBrand text-end align-self-end">{{ toUpperCase(card.card.brand) }}</p>
+					<p class="text-end align-self-end">{{ capitalizeFirstLetter(card.card.funding) }}</p>
+					<p class="cardName">{{ card.billing_details.name }}</p>
+					<div>
+						<p></p>
+					</div>
+					<p class="w-100 cardNumber text-center my-3">**** **** **** {{ card.card.last4 }}</p>
+					<p>{{ card.card.exp_month }}/{{ card.card.exp_year }}</p>
+				</div>
 			</div>
+			<p v-if="!loading && cards.length === 0">No payment method</p>
 		</div>
-		<p v-if="!loading && cards.length === 0">No payment method</p>
-		<p v-if="loading">SKELETON</p>
 	</div>
 </template>
 
@@ -21,8 +29,19 @@ export default {
 	components: {
 		HeaderSuiteComponent,
 	},
+	methods: {
+		capitalizeFirstLetter(value) {
+			if (!value) return '';
+			return value.charAt(0).toUpperCase() + value.slice(1).toLowerCase();
+		},
+		toUpperCase(value) {
+			if (!value) return '';
+			return value.toUpperCase();
+		}
+	}
 };
 </script>
+
 <script setup>
 import { onMounted, ref, watchEffect } from "vue";
 import { collection, doc } from "firebase/firestore";
@@ -46,9 +65,10 @@ onMounted(() => {
 			);
 			await getClientPaymentMethods({ id: stripeId })
 				.then((data) => {
+					console.log(data);
 					cards.value = data.data.data;
-					console.log(cards.value);
 					loading.value = false;
+					console.log(cards.value)
 				})
 				.catch((err) => {
 					console.log(err);
@@ -58,3 +78,26 @@ onMounted(() => {
 	});
 });
 </script>
+
+<style scoped>
+.card {
+	width: 100%;
+}
+
+.card p {
+	color: white;
+}
+
+.cardBrand{
+	font-size: 1.4rem;
+}
+
+.cardName {
+	font-size: 1.2rem;
+}
+
+.cardNumber {
+	font-size: 1rem;
+	letter-spacing: 0.3rem;
+}
+</style>

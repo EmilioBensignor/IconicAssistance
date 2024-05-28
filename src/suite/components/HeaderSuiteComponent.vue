@@ -11,8 +11,12 @@
       </v-toolbar-title>
       <v-menu>
         <template v-slot:activator="{ props }">
-          <v-btn class="account bg-radioactive elevation-3 pa-1" icon="mdi-account" v-bind="props">
+          <v-btn v-if="!userData || !userData.firstname" icon="mdi-account"
+            class="account bg-radioactive elevation-3 pa-1" v-bind="props">
           </v-btn>
+          <button v-else class="account bg-radioactive rounded-circle elevation-3 pa-1" v-bind="props">
+            {{ getUserInitials(userData.firstname, userData.lastname) }}
+          </button>
         </template>
         <v-list class="mt-1 py-0">
           <v-list-item v-for="(item, index) in accountMenu" :key="index">
@@ -50,8 +54,7 @@
       </v-list>
     </v-navigation-drawer>
     <v-dialog v-model="dialog">
-      <v-card class="align-self-center ga-3 rounded-lg" max-width="400"
-        title="Are you sure you want to log out?">
+      <v-card class="align-self-center ga-3 rounded-lg" max-width="400" title="Are you sure you want to log out?">
         <div class="d-flex justify-center ga-3 px-5">
           <v-btn class="" text="Cancel" @click="dialog = false"></v-btn>
           <v-btn class="bg-radioactive" text="Log Out" @click="onLogout"></v-btn>
@@ -64,6 +67,7 @@
 <script>
 import routes from "@/router/constants/ROUTES_NAMES";
 import { logout } from "@/suite/services/auth.service";
+import { useAuthStore } from "@/suite/stores/auth.store";
 
 export default {
   name: "HeaderSuiteComponent",
@@ -125,8 +129,20 @@ export default {
       this.dialog = false;
       logout();
     },
+    getUserInitials(firstname, lastname) {
+      if (!firstname || !lastname) return '';
+      return firstname.charAt(0).toUpperCase() + lastname.charAt(0).toUpperCase();
+    }
   },
 };
+</script>
+
+<script setup>
+import { collection, doc } from "firebase/firestore";
+import { useDocument } from "vuefire";
+import { db } from "../firebase/init";
+const store = useAuthStore();
+const userData = useDocument(doc(collection(db, "clients"), store.user.uid));
 </script>
 
 <style scoped>
@@ -139,8 +155,11 @@ export default {
 }
 
 .account {
+  width: 3rem;
+  height: 3rem !important;
   position: absolute;
   right: 4%;
+  font-weight: 600;
   cursor: pointer;
 }
 
