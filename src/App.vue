@@ -19,18 +19,18 @@ export default {
 			window.scrollTo(0, 0);
 		},
 	},
-	setup() {
-		useHead({
-			title: "Iconic Executive Asssitants",
-			meta: [
-				{
-					name: "description",
-					content:
-						"Iconic Assistants supercharge productivity for entrepreneurs, executives, startups, and high growth companies.",
-				},
-			],
-		});
-	},
+	// setup() {
+	// 	useHead({
+	// 		title: "Iconic Executive Asssitants",
+	// 		meta: [
+	// 			{
+	// 				name: "description",
+	// 				content:
+	// 					"Iconic Assistants supercharge productivity for entrepreneurs, executives, startups, and high growth companies.",
+	// 			},
+	// 		],
+	// 	});
+	// },
 };
 </script>
 

@@ -139,6 +139,24 @@ exports.signUpClient = onRequest({ cors: true }, async (req, res) => {
 		});
 });
 
+exports.getClientPaymentMethods = onRequest(
+	{ cors: true },
+	async (req, res) => {
+		res.set("Access-Control-Allow-Origin", "*");
+		const data = req.body.data;
+		const stripeId = data.id;
+		try {
+			const paymentMethods = await stripe.paymentMethods.list({
+				customer: stripeId,
+				type: "card",
+			});
+			res.send({ data: paymentMethods });
+		} catch (error) {
+			res.send({ data: error });
+		}
+	}
+);
+
 // modelo completo de user:
 // {
 //     email: email,

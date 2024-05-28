@@ -50,7 +50,7 @@ export const suiteRoutes = [
 		component: SuiteView,
 		beforeEnter: requireAuth,
 		meta: {
-			title: "Iconic Executive Asssitants Suite",
+			title: "Iconic Asssitants Suite",
 			description: "Iconic Assistants Suite.",
 		},
 	},
