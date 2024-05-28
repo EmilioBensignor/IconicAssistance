@@ -1,6 +1,7 @@
 const { onRequest } = require("firebase-functions/v2/https");
 const stripe = require("stripe")(process.env.VITE_STRIPE_SECRET_KEY);
 const admin = require("firebase-admin");
+const cors = require("cors")({ origin: true });
 
 try {
 	admin.initializeApp();
@@ -139,12 +140,14 @@ exports.signUpClient = onRequest({ cors: true }, async (req, res) => {
 		});
 });
 
-exports.getClientPaymentMethods = onRequest(
-	{ cors: true },
-	async (req, res) => {
-		res.set("Access-Control-Allow-Origin", "*");
+exports.getClientPaymentMethods = onRequest((req, res) => {
+	cors(req, res, async () => {
+		res.set("Access-Control-Allow-Methods", "POST");
+		res.set("Access-Control-Allow-Headers", "Content-Type");
+		res.set("Access-Control-Max-Age", "3600");
 		const data = req.body.data;
 		const stripeId = data.id;
+		console.log(stripeId);
 		try {
 			const paymentMethods = await stripe.paymentMethods.list({
 				customer: stripeId,
@@ -152,10 +155,10 @@ exports.getClientPaymentMethods = onRequest(
 			});
 			res.send({ data: paymentMethods });
 		} catch (error) {
-			res.send({ data: error });
+			res.status(500).send({ data: error });
 		}
-	}
-);
+	});
+});
 
 // modelo completo de user:
 // {
