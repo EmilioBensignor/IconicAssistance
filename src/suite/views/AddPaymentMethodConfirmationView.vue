@@ -1,7 +1,8 @@
 <template>
 	<HeaderSuiteComponent />
 	<div class="heroSuite columnAlignCenter">
-		<h1>Payment Method Saved</h1>
+		<h1 v-if="loading">Waiting for Payment Method</h1>
+		<h1 v-else>Payment Method Saved</h1>
 	</div>
 	<div class="w-100 columnAlignCenter mt-5">
 		<SpinnerComponent v-if="loading" />
