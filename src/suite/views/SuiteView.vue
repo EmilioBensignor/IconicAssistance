@@ -1,17 +1,34 @@
 <template>
 	<HeaderSuiteComponent />
 	<div class="heroSuite column">
-		<v-skeleton-loader class="w-75 px-3" type="heading" v-if="!userData || !userData.firstname"></v-skeleton-loader>
+		<v-skeleton-loader
+			class="w-75 px-3"
+			type="heading"
+			v-if="!userData || !userData.firstname"
+		></v-skeleton-loader>
 		<h1 class="px-5" v-else>
 			Welcome,
-			<span>{{ userData.firstname }}</span>!
+			<span>{{ userData.firstname }}</span
+			>!
 		</h1>
 	</div>
-	<v-skeleton-loader class="w-75 border mx-7" v-if="!userData || !userData.firstname" type="image"></v-skeleton-loader>
-	<SuiteActionsComponent v-else />
-	<v-skeleton-loader class="w-75 px-3" type="article" v-if="!userData || !userData.firstname"></v-skeleton-loader>
+	<v-skeleton-loader
+		class="w-75 border mx-7"
+		v-if="!userData || !userData.firstname"
+		type="image"
+	></v-skeleton-loader>
+	<SuiteActionsComponent :hasCCOnFile="userData.hasCCOnFile" v-else />
+	<v-skeleton-loader
+		class="w-75 px-3"
+		type="article"
+		v-if="!userData || !userData.firstname"
+	></v-skeleton-loader>
 	<ActiveTeamsComponent v-else />
-	<v-skeleton-loader class="w-75 px-3" type="article" v-if="!userData || !userData.firstname"></v-skeleton-loader>
+	<v-skeleton-loader
+		class="w-75 px-3"
+		type="article"
+		v-if="!userData || !userData.firstname"
+	></v-skeleton-loader>
 	<AssistantsComponent v-else />
 </template>
 

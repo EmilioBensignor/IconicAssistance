@@ -51,6 +51,13 @@ exports.attatchPaymentMethod = onRequest({ cors: true }, async (req, res) => {
 		paymentMethod.id,
 		{ customer: customerId.stripeId }
 	);
+	await db
+		.collection("clients")
+		.doc(data.userId)
+		.update({ hasCCOnFile: true })
+		.catch(() => {
+			res.send({ data: "Error updating CC on DB." });
+		});
 	res.send({ data: attachedPaymentMethod });
 });
 
@@ -154,6 +161,25 @@ exports.getClientPaymentMethods = onRequest((req, res) => {
 				type: "card",
 			});
 			res.send({ data: paymentMethods });
+		} catch (error) {
+			res.status(500).send({ data: error });
+		}
+	});
+});
+exports.deleteClientPaymentMethod = onRequest((req, res) => {
+	cors(req, res, async () => {
+		res.set("Access-Control-Allow-Methods", "POST");
+		res.set("Access-Control-Allow-Headers", "Content-Type");
+		res.set("Access-Control-Max-Age", "3600");
+		const data = req.body.data;
+		const stripeId = data.customer_id;
+		const cardId = data.card_id;
+		try {
+			const remove = await stripe.customers.deleteSource(
+				stripeId,
+				cardId
+			);
+			res.status(200).send({ data: remove });
 		} catch (error) {
 			res.status(500).send({ data: error });
 		}
