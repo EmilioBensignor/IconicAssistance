@@ -19,8 +19,8 @@
       </div> -->
           <div v-motion="scrollBottom" class="columnAlignCenter">
             <v-carousel :show-arrows="false"
-              class="industriesCarousel w-75 columnAlignCenter justify-space-between whiteBorder elevation-5 py-3" cycle
-              :interval="3000">
+              class="industriesCarousel columnAlignCenter justify-space-between whiteBorder elevation-5 py-3" cycle
+              :interval="500000">
               <v-carousel-item v-for="(item, index) in industries" :key="index" cover>
                 <router-link :to="`/industries/${item.slug}`"
                   class="carouselCard columnAlignCenter ga-3 text-decoration-none pa-3 pb-15">
@@ -101,11 +101,24 @@ export default {
 }
 
 .industriesCarousel {
+  width: 95%;
   height: 24.5rem !important;
 }
 
 .v-responsive {
   flex: none !important;
+}
+
+@media only screen and (min-width: 380px) {
+  .industriesCarousel {
+    width: 85% !important;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .industriesCarousel {
+    width: 75% !important;
+  }
 }
 
 @media only screen and (min-width: 770px) {

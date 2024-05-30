@@ -1,10 +1,10 @@
 <template>
   <nav>
     <v-app-bar elevation="0" app class="bg-white d-flex align-center py-1">
-      <v-app-bar-nav-icon icon="mdi-menu" color="radioactive" class="hamburger shadow-15" size="x-large"
-        @click="showMenu = !showMenu"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon aria-label="Hamburger Menu" icon="mdi-menu" color="radioactive" class="hamburger shadow-15"
+        size="x-large" @click="showMenu = !showMenu"></v-app-bar-nav-icon>
       <v-toolbar-title>
-        <router-link class="text-decoration-none" :to="'/'">
+        <router-link aria-label="Iconic Assitants Home" class="text-decoration-none" :to="'/'">
           <IconicLogo class="mt-1" color="blue" />
         </router-link>
       </v-toolbar-title>
@@ -51,36 +51,38 @@
           class="bg-radioactive rounded-xl font-weight-medium text-decoration-none ml-6 px-15 py-2 elevation-3"
           :to="'/contact-us'">Get Started</router-link>
         <p class="navTitles pt-5 pl-4">About</p>
-        <li v-for="item in aboutMenu" :key="item.title">
-          <v-list-item :to="item.path">
-            <v-list-item-title class="pl-4 text-midnight">{{
-              item.title
-            }}</v-list-item-title>
-          </v-list-item>
-        </li>
-        <p class="navTitles pt-1 pl-4">Learn</p>
-        <li v-for="item in learnMenu" :key="item.title">
-          <v-list-item :to="item.path">
-            <v-list-item-title class="pl-4 text-midnight">{{
-              item.title
-            }}</v-list-item-title>
-          </v-list-item>
-        </li>
-        <li>
-          <v-list-item :to="'/services'">
-            <v-list-item-title class="navTitles">Services</v-list-item-title>
-          </v-list-item>
-        </li>
-        <li>
-          <v-list-item :to="'/types-of-eas'">
-            <v-list-item-title class="navTitles">Types of EAs</v-list-item-title>
-          </v-list-item>
-        </li>
-        <li>
-          <v-list-item :to="'/contact-us'">
-            <v-list-item-title class="navTitles">Contact Us</v-list-item-title>
-          </v-list-item>
-        </li>
+        <ul>
+          <li v-for="item in aboutMenu" :key="item.title">
+            <v-list-item :to="item.path">
+              <v-list-item-title class="pl-4 text-midnight">{{
+                item.title
+                }}</v-list-item-title>
+            </v-list-item>
+          </li>
+          <p class="navTitles pt-1 pl-4">Learn</p>
+          <li v-for="item in learnMenu" :key="item.title">
+            <v-list-item :to="item.path">
+              <v-list-item-title class="pl-4 text-midnight">{{
+                item.title
+                }}</v-list-item-title>
+            </v-list-item>
+          </li>
+          <li>
+            <v-list-item :to="'/services'">
+              <v-list-item-title class="navTitles">Services</v-list-item-title>
+            </v-list-item>
+          </li>
+          <li>
+            <v-list-item :to="'/types-of-eas'">
+              <v-list-item-title class="navTitles">Types of EAs</v-list-item-title>
+            </v-list-item>
+          </li>
+          <li>
+            <v-list-item :to="'/contact-us'">
+              <v-list-item-title class="navTitles">Contact Us</v-list-item-title>
+            </v-list-item>
+          </li>
+        </ul>
       </v-list>
     </v-navigation-drawer>
   </nav>
