@@ -1,4 +1,15 @@
 import routes from "./constants/ROUTES_NAMES";
+import SuiteView from "@/suite/views/SuiteView.vue";
+import RegisterView from "@/suite/views/RegisterView.vue";
+import LoginView from "@/suite/views/LoginView.vue";
+import AssistantsView from "@/suite/views/AssistantsView.vue";
+import InvoicesView from "@/suite/views/InvoicesView.vue";
+import AccountView from "@/suite/views/AccountView.vue";
+import PaymentMethodsView from "@/suite/views/PaymentMethodsView.vue";
+import AddPaymentMethodView from "@/suite/views/AddPaymentMethodView.vue";
+import AddPaymentMethodConfirmationView from "@/suite/views/AddPaymentMethodConfirmationView.vue";
+import ResetPasswordView from "@/suite/views/ResetPasswordView.vue";
+import ResetPasswordConfirmationView from "@/suite/views/ResetPasswordConfirmationView.vue";
 import { useAuthStore } from "@/suite/stores/auth.store";
 import ROUTES_NAMES from "./constants/ROUTES_NAMES";
 import { watch } from "vue";
@@ -36,7 +47,7 @@ export const suiteRoutes = [
 	{
 		path: routes.SUITE,
 		name: "Suite",
-		component: () => import("@/suite/views/SuiteView.vue"),
+		component: SuiteView,
 		beforeEnter: requireAuth,
 		meta: {
 			title: "Iconic Asssitants Suite",
@@ -46,7 +57,7 @@ export const suiteRoutes = [
 	{
 		path: routes.REGISTER,
 		name: "Register",
-		component: () => import("@/suite/views/RegisterView.vue"),
+		component: RegisterView,
 		meta: {
 			title: "Register",
 		},
@@ -54,8 +65,7 @@ export const suiteRoutes = [
 	{
 		path: routes.LOGIN,
 		name: "Login",
-		component: () => import("@/suite/views/LoginView.vue"),
-
+		component: LoginView,
 		meta: {
 			title: "Log In",
 		},
@@ -63,7 +73,7 @@ export const suiteRoutes = [
 	{
 		path: routes.ASSISTANTS,
 		name: "Assistants",
-		component: () => import("@/suite/views/AssistantsView.vue"),
+		component: AssistantsView,
 		beforeEnter: requireAuth,
 		meta: {
 			title: "Assistants",
@@ -72,8 +82,7 @@ export const suiteRoutes = [
 	{
 		path: routes.INVOICES,
 		name: "Invoices",
-		component: () => import("@/suite/views/InvoicesView.vue"),
-
+		component: InvoicesView,
 		beforeEnter: requireAuth,
 		meta: {
 			title: "Invoices",
@@ -82,7 +91,7 @@ export const suiteRoutes = [
 	{
 		path: routes.ACCOUNT,
 		name: "Account",
-		component: () => import("@/suite/views/AccountView.vue"),
+		component: AccountView,
 		beforeEnter: requireAuth,
 		meta: {
 			title: "Account",
@@ -91,8 +100,7 @@ export const suiteRoutes = [
 	{
 		path: routes.PAYMENT_METHODS,
 		name: "PaymentMethods",
-		component: () => import("@/suite/views/PaymentMethodsView.vue"),
-
+		component: PaymentMethodsView,
 		beforeEnter: requireAuth,
 		meta: {
 			title: "PaymentMethods",
@@ -101,8 +109,7 @@ export const suiteRoutes = [
 	{
 		path: routes.ADD_PAYMENT_METHOD,
 		name: "AddPaymentMethod",
-		component: () => import("@/suite/views/AddPaymentMethodView.vue"),
-
+		component: AddPaymentMethodView,
 		beforeEnter: requireAuth,
 		meta: {
 			title: "AddPaymentMethod",
@@ -111,9 +118,7 @@ export const suiteRoutes = [
 	{
 		path: routes.ADD_PAYMENT_METHOD_CONFIRMATION,
 		name: "AddPaymentMethodConfirmation",
-		component: () =>
-			import("@/suite/views/AddPaymentMethodConfirmationView.vue"),
-
+		component: AddPaymentMethodConfirmationView,
 		beforeEnter: requireAuth,
 		meta: {
 			title: "AddPaymentMethodConfirmation",
@@ -122,8 +127,7 @@ export const suiteRoutes = [
 	{
 		path: routes.RESET_PASSWORD,
 		name: "ResetPasswordView",
-		component: () => import("@/suite/views/ResetPasswordView.vue"),
-
+		component: ResetPasswordView,
 		meta: {
 			title: "ResetPasswordView",
 		},
@@ -131,9 +135,7 @@ export const suiteRoutes = [
 	{
 		path: routes.RESET_PASSWORD_CONFIRMATION,
 		name: "ResetPasswordConfirmationView",
-		component: () =>
-			import("@/suite/views/ResetPasswordConfirmationView.vue"),
-
+		component: ResetPasswordConfirmationView,
 		meta: {
 			title: "ResetPasswordConfirmationView",
 		},

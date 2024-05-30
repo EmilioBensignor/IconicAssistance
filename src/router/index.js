@@ -1,12 +1,13 @@
 import { createRouter, createWebHistory } from "vue-router";
 import { webRoutes } from "./web";
 import { suiteRoutes } from "./suite";
+import Error404View from "../web/views/Error404View.vue";
 
 const routes = [
 	{
 		path: "/404",
 		name: "Error404",
-		component: () => import("../web/views/Error404View.vue"),
+		component: Error404View,
 		meta: {
 			title: "Error 404 - Iconic Assistants",
 		},
