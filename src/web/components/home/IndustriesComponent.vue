@@ -24,7 +24,7 @@
               <v-carousel-item v-for="(item, index) in industries" :key="index" cover>
                 <router-link :to="`/industries/${item.slug}`"
                   class="carouselCard columnAlignCenter ga-3 text-decoration-none pa-3 pb-15">
-                  <v-img :src="getImgUrl(item.logo)" :alt="item.logoAlt" class="shadow-35" width="45%" eager></v-img>
+                  <v-img :src="getImgUrl(item.logo)" :alt="item.logoAlt" class="shadow-35" width="45%"></v-img>
                   <h3 class="text-white">{{ item.name }}</h3>
                   <p class="text-white">{{ item.description }}</p>
                   <!-- <router-link
@@ -36,7 +36,7 @@
             </v-carousel>
             <div class="industries">
               <div v-for="(item, index) in industries" :key="index" class="industry">
-                <v-img :src="getImgUrl(item.logo)" :alt="item.logoAlt" class="shadow-35" width="50%" eager></v-img>
+                <v-img :src="getImgUrl(item.logo)" :alt="item.logoAlt" class="shadow-35" width="50%"></v-img>
                 <h3 class="titulo text-white mb-3">{{ item.name }}</h3>
                 <p class="description text-white my-3">
                   {{ item.description }}

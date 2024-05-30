@@ -13,7 +13,6 @@
             v-motion="scrollBottom"
             :key="index">
             <v-img
-              eager
               :src="getImgUrl(item.img)"
               :alt="item.alt"
               class="shadow-5"

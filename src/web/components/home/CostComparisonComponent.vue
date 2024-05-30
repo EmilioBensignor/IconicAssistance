@@ -56,6 +56,7 @@
                 src="@/web/assets/images/misc/Save-70-Percentage.png"
                 alt="Save 70%"
                 class="shadow-3"
+                loading="lazy"
                 width="95%" />
             </div>
           </div>

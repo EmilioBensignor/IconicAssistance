@@ -14,7 +14,6 @@
             class="different flexCenter rounded-xl elevation-5 w-75 pa-4 pb-6">
             <p class="differentTitle text-midnight">{{ item.title }}</p>
             <v-img
-              eager
               :src="getImgUrl(item.img)"
               :alt="item.alt"
               class="shadow-2"
