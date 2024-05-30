@@ -3,7 +3,7 @@
   <section class="landing pa-0">
     <div class="content">
       <video preload="yes" playsinline webkit-playsinline x5-playsinline autoplay muted loop class="backgroundVideo">
-        <source src="@/web/assets/videos/Hire-Top-Remote-Talent-with-Iconic-Assistants.mp4" type="video/mp4" />
+        <source src="@/web/assets/videos/Hire-Top-Remote-Talent-With-Iconic-Assistants.mp4" type="video/mp4" />
       </video>
       <div class="overlay"></div>
       <div class="hero flexCenter ga-5">
