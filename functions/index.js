@@ -1,4 +1,8 @@
-const { onRequest } = require("firebase-functions/v2/https");
+const {
+	onRequest,
+	onCall,
+	HttpsError,
+} = require("firebase-functions/v2/https");
 const stripe = require("stripe")(process.env.VITE_STRIPE_SECRET_KEY);
 const admin = require("firebase-admin");
 const cors = require("cors")({ origin: true });
@@ -166,24 +170,15 @@ exports.getClientPaymentMethods = onRequest((req, res) => {
 		}
 	});
 });
-exports.deleteClientPaymentMethod = onRequest((req, res) => {
-	cors(req, res, async () => {
-		res.set("Access-Control-Allow-Methods", "POST");
-		res.set("Access-Control-Allow-Headers", "Content-Type");
-		res.set("Access-Control-Max-Age", "3600");
-		const data = req.body.data;
-		const stripeId = data.customer_id;
-		const cardId = data.card_id;
-		try {
-			const remove = await stripe.customers.deleteSource(
-				stripeId,
-				cardId
-			);
-			res.status(200).send({ data: remove });
-		} catch (error) {
-			res.status(500).send({ data: error });
-		}
-	});
+
+exports.deleteClientPaymentMethod = onCall(async (data, context) => {
+	const cardId = data.data.card_id;
+	try {
+		const remove = await stripe.paymentMethods.detach(cardId);
+		return { data: remove };
+	} catch (error) {
+		throw new HttpsError("internal", error.message);
+	}
 });
 
 // modelo completo de user:
