@@ -23,7 +23,7 @@ export default {
 <style scoped>
 .secondary {
   height: auto !important;
-  border-radius: 20vw;
+  border-radius: 100px;
   background-color: #373ae6;
   border: 1px solid #373ae6;
   color: white;
