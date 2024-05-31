@@ -6,7 +6,7 @@
 			type="heading"
 			v-if="!userData || !userData.firstname"
 		></v-skeleton-loader>
-		<h1 class="px-5" v-else>
+		<h1 class="pl-7 pr-1" v-else>
 			Welcome,
 			<span>{{ userData.firstname }}</span
 			>!

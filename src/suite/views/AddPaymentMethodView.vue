@@ -5,7 +5,7 @@
 	</div>
 	<SpinnerComponent v-if="loading" />
 	<div class="bg-radioactive">
-		<div id="checkout" class="bg-radioactive pt-10">
+		<div id="checkout" class="bg-radioactive rounded-xl pt-10">
 			<!-- Checkout will insert the payment form here -->
 		</div>
 	</div>

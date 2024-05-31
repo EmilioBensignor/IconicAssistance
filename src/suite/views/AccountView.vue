@@ -10,7 +10,7 @@
 				type="text"
 				v-if="!userData || !userData.firstname"
 			></v-skeleton-loader>
-			<div v-else>
+			<div class="pl-4 pr-1" v-else>
 				<p class="dataTitle">First Name</p>
 				<p class="dataInfo">{{ userData.firstname }}</p>
 			</div>
@@ -21,7 +21,7 @@
 				type="text"
 				v-if="!userData || !userData.lastname"
 			></v-skeleton-loader>
-			<div v-else>
+			<div class="pl-4 pr-1" v-else>
 				<p class="dataTitle">Last Name</p>
 				<p class="dataInfo">{{ userData.lastname }}</p>
 			</div>
@@ -32,7 +32,7 @@
 				type="text"
 				v-if="!userData || !userData.email"
 			></v-skeleton-loader>
-			<div v-else>
+			<div class="pl-4 pr-1" v-else>
 				<p class="dataTitle">Email</p>
 				<p class="dataInfo">{{ userData.email }}</p>
 			</div>
@@ -43,7 +43,7 @@
 				type="text"
 				v-if="!userData || !userData.phone"
 			></v-skeleton-loader>
-			<div v-else>
+			<div class="pl-4 pr-1" v-else>
 				<p class="dataTitle">Phone Number</p>
 				<p class="dataInfo">{{ userData.phone }}</p>
 			</div>
@@ -54,7 +54,7 @@
 				type="text"
 				v-if="!userData || !userData.company"
 			></v-skeleton-loader>
-			<div v-else>
+			<div class="pl-4 pr-1" v-else>
 				<p class="dataTitle">Company Name</p>
 				<p class="dataInfo">{{ userData.company }}</p>
 			</div>
@@ -65,7 +65,7 @@
 				type="text"
 				v-if="!userData || !userData.numemployees"
 			></v-skeleton-loader>
-			<div v-else>
+			<div class="pl-4 pr-1" v-else>
 				<p class="dataTitle">Company Size</p>
 				<p class="dataInfo">{{ userData.numemployees }} Employees</p>
 			</div>
@@ -76,7 +76,7 @@
 				type="text"
 				v-if="!userData"
 			></v-skeleton-loader>
-			<div v-else>
+			<div class="pl-4 pr-1" v-else>
 				<p class="dataTitle">Position</p>
 			</div>
 		</div>
@@ -86,7 +86,7 @@
 				type="text"
 				v-if="!userData"
 			></v-skeleton-loader>
-			<div v-else>
+			<div class="pl-4 pr-1" v-else>
 				<p class="dataTitle">Communication Preferences</p>
 			</div>
 		</div>
