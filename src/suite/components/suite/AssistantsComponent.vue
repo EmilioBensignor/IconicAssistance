@@ -1,5 +1,5 @@
 <template>
-  <div class="column ga-3 pl-7 pr-1 my-5">
+  <div class="column ga-3 pl-8 pr-1 my-5">
     <p class="titleSuite text-start">Assistants <span>(0)</span></p>
     <p class="text-start">You currently have no active teams</p>
   </div>

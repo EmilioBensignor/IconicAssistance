@@ -1,7 +1,7 @@
 <template>
 	<HeaderSuiteComponent />
 	<div class="heroSuite columnAlignCenter">
-		<h1>Invoices</h1>
+		<h1 class="ml-4">Invoices</h1>
 	</div>
 </template>
 

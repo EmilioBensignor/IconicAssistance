@@ -1,7 +1,7 @@
 <template>
 	<HeaderSuiteComponent />
 	<div class="heroSuite columnAlignCenter">
-		<h1>Payment Methods</h1>
+		<h1 class="ml-4">Payment Methods</h1>
 		<p class="my-3">
 			If you wish to modify or remove the payment method, you need to add
 			a new one first and then delete the one that will no longer be used.
@@ -13,7 +13,7 @@
 		></v-skeleton-loader>
 		<div class="w-100 columnAlignCenter mt-5">
 			<div
-				class="columnAlignCenter ga-5"
+				class="justifyCenter flex-wrap ga-5"
 				v-if="cards.length > 0 && !loading"
 			>
 				<div v-for="card in cards" :key="card.id" class="cardContainer">

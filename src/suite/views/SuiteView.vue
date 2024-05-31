@@ -17,7 +17,7 @@
 		v-if="!userData || !userData.firstname"
 		type="image"
 	></v-skeleton-loader>
-	<SuiteActionsComponent :hasCCOnFile="userData.hasCCOnFile" v-else />
+	<SuiteActionsComponent  v-else />
 	<v-skeleton-loader
 		class="w-75 px-3"
 		type="article"

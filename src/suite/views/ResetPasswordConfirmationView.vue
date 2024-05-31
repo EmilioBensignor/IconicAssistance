@@ -3,10 +3,10 @@
     <div class="suiteContent">
       <HeaderOutsideComponent />
       <div class="heroSuite columnAlignCenter">
-        <h1 class="w-100 text-center">Reset Password Confirmation</h1>
+        <h1 class="text-center">Reset Password Confirmation</h1>
       </div>
       <section class="w-100 mt-3">
-        <div class="w-75 column ga-2">
+        <div class="w-100 column ga-2">
           <p class="w-100 text-center">
             An email was sent to
             <span class="font-weight-bold">{{ email ? email : "" }}</span>

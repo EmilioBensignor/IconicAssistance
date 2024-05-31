@@ -1,7 +1,7 @@
 <template>
 	<HeaderSuiteComponent />
 	<div class="heroSuite columnAlignCenter">
-		<h1>Account</h1>
+		<h1 class="ml-4">Account</h1>
 	</div>
 	<div class="column ga-3 mt-5 px-5">
 		<div>

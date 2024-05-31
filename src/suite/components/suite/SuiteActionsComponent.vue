@@ -1,7 +1,7 @@
 <template>
 	<div
 		v-if="!hasCCOnFile"
-		class="action bg-suiteGray column ga-3 rounded-xl elevation-4 pa-5 mx-5 my-5"
+		class="action bg-suiteGray column ga-3 rounded-xl elevation-4 pa-5 mx-7 my-5"
 	>
 		<p class="titleAction text-start font-weight-bold">
 			Payment Method Required
@@ -53,11 +53,7 @@ export default {
 /* SM */
 @media only screen and (min-width: 400px) {
 	.action {
-		width: 80%;
-	}
-	.secondaryButton {
-		width: 75%;
-		align-self: center;
+		max-width: 350px;
 	}
 }
 </style>

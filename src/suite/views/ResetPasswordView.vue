@@ -4,23 +4,23 @@
       <HeaderOutsideComponent />
       <div class="w-100 heroSuite columnAlignCenter">
 				<router-link
-					class="d-flex align-center align-self-start ma-3"
+					class="d-flex align-center align-self-start ml-5 ma-3"
 					:to="routes.LOGIN">
 					<v-icon icon="mdi-keyboard-backspace" color="radioactive"></v-icon>
 					<p class="w-100 goBack text-radioactive ml-1">Go back to Login</p>
 				</router-link>
-        <h1 class="w-100 text-center my-3">Reset Password</h1>
+        <h1 class="text-center my-3">Reset Password</h1>
       </div>
       <section class="w-100">
-        <p class="w-100 text-center">
+        <p class="text-center">
           Enter the email address of your account to reset your password
         </p>
         <v-form
-          class="w-75 columnAlignCenter mt-5"
+          class="w-100 columnAlignCenter mt-5"
           v-model="valid"
           @submit.prevent="onSubmit()">
-          <div class="w-100 column align-start ga-2">
-            <label for="email">Email</label>
+          <div class="w-75 columnAlignCenter ga-2">
+            <label class="align-self-start" for="email">Email</label>
             <v-text-field
               class="w-100"
               id="email"

@@ -1,7 +1,7 @@
 <template>
 	<HeaderSuiteComponent />
 	<div class="heroSuite columnAlignCenter">
-		<h1>Add Payment Method</h1>
+		<h1 class="ml-4">Add Payment Method</h1>
 	</div>
 	<SpinnerComponent v-if="loading" />
 	<div class="bg-radioactive">
