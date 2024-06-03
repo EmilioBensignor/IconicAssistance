@@ -15,8 +15,8 @@
 	<SkeletonSuiteComponent v-if="!userData || !userData.firstname" />
 	<div class="suiteComponents" v-else>
 		<SuiteActionsComponent :hasCCOnFile="userData.hasCCOnFile" />
+		<AssistantsComponent :assistants="store.assistants.data.assistants" />
 		<ActiveTeamsComponent />
-		<AssistantsComponent />
 	</div>
 </template>
 
