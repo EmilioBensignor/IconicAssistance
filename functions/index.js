@@ -5,6 +5,7 @@ const {
 } = require("firebase-functions/v2/https");
 const stripe = require("stripe")(process.env.VITE_STRIPE_SECRET_KEY);
 const admin = require("firebase-admin");
+const { default: axios } = require("axios");
 const cors = require("cors")({ origin: true });
 
 try {
@@ -178,6 +179,59 @@ exports.deleteClientPaymentMethod = onCall(async (data, context) => {
 		return { data: remove };
 	} catch (error) {
 		throw new HttpsError("internal", error.message);
+	}
+});
+
+exports.getAssistantsData = onCall(async (data, context) => {
+	const hubspotId = data.data.hubspotId;
+	const headers = {
+		Authorization: `Bearer ${process.env.VITE_HUBSPOT_PRIVATE_APP_KEY}`,
+	};
+
+	try {
+		const dealsResponse = await axios.get(
+			`https://api.hubapi.com/crm/v4/objects/contacts/${hubspotId}/associations/deals?properties=dealname,amount&associations=contacts`,
+			{ headers }
+		);
+		const dealIds = dealsResponse.data.results.map(
+			(result) => result.toObjectId
+		);
+
+		const assistantIds = await Promise.all(
+			dealIds.map((deal) =>
+				axios
+					.get(
+						`https://api.hubapi.com/crm/v4/objects/deals/${deal}/associations/contacts`,
+						{ headers }
+					)
+					.then((response) =>
+						response.data.results
+							.filter(
+								(contact) => contact.toObjectId !== hubspotId
+							)
+							.map((contact) => contact.toObjectId)
+					)
+			)
+		).then((results) => results.flat());
+
+		const assistantsData = await Promise.all(
+			assistantIds.map((assistantId) =>
+				axios
+					.get(
+						`https://api.hubapi.com/crm/v3/objects/contacts/${assistantId}`,
+						{ headers }
+					)
+					.then((response) => response.data)
+			)
+		);
+
+		return { assistants: assistantsData };
+	} catch (err) {
+		console.error(err);
+		throw new HttpsError(
+			"unknown",
+			"An error occurred while fetching assistant data"
+		);
 	}
 });
 

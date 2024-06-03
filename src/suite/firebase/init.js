@@ -1,7 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
-import { getFunctions } from "firebase/functions";
+import { connectFunctionsEmulator, getFunctions } from "firebase/functions";
 import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
@@ -19,4 +19,9 @@ const auth = getAuth(firebaseApp);
 const db = getFirestore(firebaseApp);
 const functions = getFunctions(firebaseApp);
 const analytics = getAnalytics(firebaseApp);
+
+if (location.hostname === "localhost") {
+	connectFunctionsEmulator(functions, "localhost", 5001);
+}
+
 export { db, auth, functions, firebaseApp, analytics };
