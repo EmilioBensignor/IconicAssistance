@@ -5,7 +5,7 @@
         <p v-motion="scrollBottom" class="subtitle">How It Works</p>
         <h2 v-motion="scrollBottom">
           Key Benefits Of Hiring
-          <span class="text-radioactive">Iconic Assistant</span>
+          <span class="text-radioactive">Iconic Assistants</span>
         </h2>
         <div class="w-75 keyMobile">
           <img

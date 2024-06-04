@@ -61,7 +61,7 @@
               "<span class='font-weight-bold'>Rapid Acquisition:</span> 5 to 7 days for the perfect match.",
             ],
             moreInfo:
-              "Entrust recruitment complexity to our seasoned HR team. With decades of expertise, our talent pool of vetted remote professionals ensures swift acquisition, taking just 10 to 20 business days. Experience success with our guiding team.",
+              "Entrust recruitment complexity to our seasoned HR team. With decades of expertise, our talent pool of vetted remote professionals ensures swift acquisition, taking just 5 to 7 days. Experience success with our guiding team.",
           },
           {
             img: "Global-Payroll-Executive-Assistant.png",
@@ -71,7 +71,7 @@
             advantages: [
               "<span class='font-weight-bold'>Global Reach:</span> Payroll services for remote talent worldwide.",
               "<span class='font-weight-bold'>Cost Efficiency:</span> One transparent fee for any number of hires.",
-              "<span class='font-weight-bold'>Peace of Mind:</span> Trustworth payroll management.",
+              "<span class='font-weight-bold'>Peace of Mind:</span> Trustworthy payroll management.",
             ],
             moreInfo:
               "Our payroll services transcend borders. Irrespective of your remote talent's location or hiring scale, we charge a single, transparent fee. Simplify financial operations while we handle payroll precisely.",

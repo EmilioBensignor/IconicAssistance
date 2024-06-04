@@ -11,7 +11,7 @@
           class="elevation-4"
           title="Why is Iconic Assistants considered one of the best Ousourcing companies?">
           <v-expansion-panel-text>
-            At <span class="font-weight-bold">Iconic Assistant</span>, we're
+            At <span class="font-weight-bold">Iconic Assistants</span>, we're
             more than just an outsourcing company; we're your dedicated ally in
             achieving your business goals. With a team of experts committed to
             quality, affordability, and customization, we offer a wide range of
@@ -38,24 +38,16 @@
                       >Book a FREE consultation</router-link
                     >
                     with our Outsourcing Specialist and give us an overview of
-                    everything you’re looking for in a EA.
+                    everything you're looking for in a EA.
                   </li>
                   <li>
-                    <b>Strategy Meeting</b> - Within 24 hours of the call, our
-                    HR team will schedule a executive meeting to better understand
-                    the tasks to outsource and your company culture.
+                    <b>Executive Assistant Recruitment</b> - We will start interviewing the candidates that meet your requirements and notify you when we find the perfect match. This process usually takes around 5 to 7 days.
                   </li>
                   <li>
-                    <b>Executive Assistant Recruitment</b> - We will start
-                    interviewing the candidates that meet your requirements and
-                    create a shortlist of options for you. This process usually
-                    takes around 1-2 weeks.
-                  </li>
-                  <li>
-                    <b>Hiring & Onboarding</b> - When you’re ready, we’ll hire
+                    <b>Hiring & Onboarding</b> - When you're ready, we'll hire
                     the Executive Assistant and you will start working with them,
                     with the support of your Customer Success Agent to assist
-                    you in the initial ‘nesting period’ to avoid any
+                    you in the initial 'nesting period' to avoid any
                     miscommunications or misunderstandings.
                   </li>
                   <li>
@@ -91,7 +83,7 @@
                     <b>The long answer:</b> When you start working with a
                     Executive Assistant or Executive Professional from Iconic
                     Assistants, you are not hiring our EAs directly, you are
-                    hiring our company’s services (a US company), and like with
+                    hiring our company's services (a US company), and like with
                     any other service, no taxes are due. Our company handles all
                     the paperwork for hiring our EAs as foreign independent
                     contractors.
@@ -99,7 +91,7 @@
                   <li>
                     In other words, 1) You are not hiring people from the US as
                     employees, and 2) You are not hiring EAs in the US, you are
-                    hiring our services, so you don’t have to worry about any
+                    hiring our services, so you don't have to worry about any
                     tax forms.
                   </li>
                 </ul>

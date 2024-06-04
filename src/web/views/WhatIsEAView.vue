@@ -3,7 +3,7 @@
   <section class="heroPagesWave columnAlignCenter">
     <div class="heroPages flexCenter">
       <h1 v-motion="scrollBottom" class="text-midnight">
-        Unlock your business' potencial with
+        Unlock your business' potential with
         <span class="text-radioactive">Iconic Assistants</span>
       </h1>
     </div>
