@@ -219,7 +219,12 @@ exports.getAssistantsData = onCall(async (data, context) => {
 				axios
 					.get(
 						`https://api.hubapi.com/crm/v3/objects/contacts/${assistantId}`,
-						{ headers }
+						{
+							headers,
+							params: {
+								properties: "phone, firstname, lastname, email",
+							},
+						}
 					)
 					.then((response) => response.data)
 			)
@@ -231,6 +236,48 @@ exports.getAssistantsData = onCall(async (data, context) => {
 		throw new HttpsError(
 			"unknown",
 			"An error occurred while fetching assistant data"
+		);
+	}
+});
+
+exports.getInvoicesData = onCall(async (data, context) => {
+	const hubspotId = data.data.hubspotId;
+	try {
+		const invoicesResponse = await axios.get(
+			`https://api.hubapi.com/crm/v3/objects/contacts/${hubspotId}/associations/invoices`,
+			{
+				headers: {
+					Authorization: `Bearer ${process.env.VITE_HUBSPOT_PRIVATE_APP_KEY}`,
+				},
+			}
+		);
+		const invoiceIds = invoicesResponse.data.results.map(
+			(result) => result.id
+		);
+		const invoicesData = await Promise.all(
+			invoiceIds.map((invoice) =>
+				axios
+					.get(
+						`https://api.hubapi.com/crm/v3/objects/invoices/${invoice}`,
+						{
+							headers: {
+								Authorization: `Bearer ${process.env.VITE_HUBSPOT_PRIVATE_APP_KEY}`,
+							},
+							params: {
+								properties:
+									"hs_amount_billed,hs_balance_due, hs_last_sent_date",
+							},
+						}
+					)
+					.then((response) => response.data)
+			)
+		).then((results) => results.flat());
+		return { invoices: invoicesData };
+	} catch (error) {
+		console.error(error);
+		throw new HttpsError(
+			"unknown",
+			"An error occurred while fetching invoice data"
 		);
 	}
 });

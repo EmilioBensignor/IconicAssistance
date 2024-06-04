@@ -20,8 +20,8 @@ const db = getFirestore(firebaseApp);
 const functions = getFunctions(firebaseApp);
 const analytics = getAnalytics(firebaseApp);
 
-// if (location.hostname === "localhost") {
-// 	connectFunctionsEmulator(functions, "localhost", 5001);
-// }
+if (location.hostname === "localhost") {
+	connectFunctionsEmulator(functions, "localhost", 5001);
+}
 
 export { db, auth, functions, firebaseApp, analytics };

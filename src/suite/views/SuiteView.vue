@@ -12,7 +12,7 @@
 			>!
 		</h1>
 	</div>
-	<SkeletonSuiteComponent v-if="!userData || !userData.firstname" />
+	<SkeletonSuiteComponent v-if="store.assistants === null" />
 	<div class="suiteComponents" v-else>
 		<SuiteActionsComponent :hasCCOnFile="userData.hasCCOnFile" />
 		<AssistantsComponent :assistants="store.assistants.data.assistants" />
@@ -57,7 +57,7 @@ console.log(userData);
 </script>
 
 <style scoped>
-	p{
-		color: #120d40;
-	}
+p {
+	color: #120d40;
+}
 </style>

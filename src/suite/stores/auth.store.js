@@ -12,6 +12,7 @@ export const useAuthStore = defineStore("auth", {
 		user: null,
 		isAuthLoading: true, // Initial loading state
 		assistants: null,
+		invoices: null,
 	}),
 	actions: {
 		initAuth() {
@@ -19,6 +20,7 @@ export const useAuthStore = defineStore("auth", {
 				if (user) {
 					this.user = user;
 					this.isAuthenticated = true;
+					this.isAuthLoading = false; // Loading is complete
 					const userData = await getDoc(
 						doc(collection(db, "clients"), this.user.uid)
 					);
@@ -30,8 +32,20 @@ export const useAuthStore = defineStore("auth", {
 						hubspotId: userData.data()["hs_object_id"],
 					})
 						.then((data) => {
-							console.log(data);
 							this.assistants = data;
+						})
+						.catch((err) => {
+							console.log(err);
+						});
+					const getInvoicesData = httpsCallable(
+						functions,
+						"getInvoicesData"
+					);
+					await getInvoicesData({
+						hubspotId: userData.data()["hs_object_id"],
+					})
+						.then((data) => {
+							this.invoices = data;
 						})
 						.catch((err) => {
 							console.log(err);
@@ -40,8 +54,9 @@ export const useAuthStore = defineStore("auth", {
 					this.user = null;
 					this.isAuthenticated = false;
 					this.assistants = null;
+					this.invoices = null;
+					this.isAuthLoading = false; // Loading is complete
 				}
-				this.isAuthLoading = false; // Loading is complete
 			});
 		},
 	},
