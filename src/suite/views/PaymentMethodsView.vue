@@ -1,7 +1,7 @@
 <template>
 	<HeaderSuiteComponent />
 	<div class="heroSuite columnAlignCenter">
-		<h1 class="ml-4">Payment Methods</h1>
+		<h1 class="text-midnight ml-4">Payment Methods</h1>
 		<p class="my-3">
 			If you wish to modify or remove the payment method, you need to add
 			a new one first and then delete the one that will no longer be used.

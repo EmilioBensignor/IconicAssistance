@@ -1,7 +1,7 @@
 <template>
 	<HeaderSuiteComponent />
 	<div class="heroSuite columnAlignCenter">
-		<h1 class="ml-4">Account</h1>
+		<h1 class="text-midnight ml-4">Account</h1>
 	</div>
 	<SkeletonAccountComponent v-if="!userData" />
 	<div v-else class="suiteComponents column ga-3 mt-5">

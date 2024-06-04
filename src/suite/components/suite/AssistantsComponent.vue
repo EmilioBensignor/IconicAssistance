@@ -1,7 +1,7 @@
 <template>
 	<div class="column ga-3 my-5">
 		<p class="titleSuite text-start">Assistants (<span>{{ assistants.length }}</span>)</p>
-		<div v-if="assistants.length > 0">
+		<div class="rowCenter flex-wrap ga-5" v-if="assistants.length > 0">
 			<AssistantCardComponent v-for="(assistant, index) in assistants" :key="index" :assistant="assistant" />
 		</div>
 		<p v-else class="text-start">You currently have no assistants</p>

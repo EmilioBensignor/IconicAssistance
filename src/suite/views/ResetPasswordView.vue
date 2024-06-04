@@ -9,10 +9,10 @@
 					<v-icon icon="mdi-keyboard-backspace" color="radioactive"></v-icon>
 					<p class="w-100 goBack text-radioactive ml-1">Go back to Login</p>
 				</router-link>
-        <h1 class="text-center my-3">Reset Password</h1>
+        <h1 class="text-midnight text-center my-3">Reset Password</h1>
       </div>
       <section class="w-100">
-        <p class="text-center">
+        <p class="text-midnight text-center">
           Enter the email address of your account to reset your password
         </p>
         <v-form
@@ -20,7 +20,7 @@
           v-model="valid"
           @submit.prevent="onSubmit()">
           <div class="w-75 columnAlignCenter ga-2">
-            <label class="align-self-start" for="email">Email</label>
+            <label class="text-midnight align-self-start" for="email">Email</label>
             <v-text-field
               class="w-100"
               id="email"

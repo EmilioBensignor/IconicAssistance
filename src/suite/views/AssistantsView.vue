@@ -1,10 +1,10 @@
 <template>
 	<HeaderSuiteComponent />
 	<div class="heroSuite columnAlignCenter">
-		<h1 class="ml-4">Assistants</h1>
+		<h1 class="text-midnight ml-4">Assistants</h1>
 	</div>
-	<div>
-		<div v-if="store.assistants.data.assistants.length > 0">
+	<div class="suiteComponents">
+		<div class="rowCenter flex-wrap ga-5" v-if="store.assistants.data.assistants.length > 0">
 			<AssistantCardComponent v-for="(assistant, index) in store.assistants.data.assistants" :key="index" :assistant="assistant" />
 		</div>
 		<p v-else class="text-start">You currently have no assistants</p>

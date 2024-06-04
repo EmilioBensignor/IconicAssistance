@@ -6,7 +6,7 @@
 			type="heading"
 			v-if="!userData || !userData.firstname"
 		></v-skeleton-loader>
-		<h1 class="ml-4" v-else>
+		<h1 class="text-midnight ml-4" v-else>
 			Welcome,
 			<span>{{ userData.firstname }}</span
 			>!
@@ -55,3 +55,9 @@ const store = useAuthStore();
 const userData = useDocument(doc(collection(db, "clients"), store.user.uid));
 console.log(userData);
 </script>
+
+<style scoped>
+	p{
+		color: #120d40;
+	}
+</style>
