@@ -33,7 +33,7 @@
           <p v-motion="scrollBottom" class="w-75 text-white pMedium font-weight-bold mt-10">
             Other types of VAs that might interest you:
           </p>
-          <div class="w-75 vasWrapper columnAlignCenter ga-7 mt-7">
+          <div class="w-100 vasWrapper columnAlignCenter ga-7 mt-7">
             <router-link v-for="(item, index) in eaTypes" :to="`/executive-assistant/${item.slug}`" :key="index"
               v-motion="scrollBottom"
               class="w-100 typesCards d-flex justify-space-between align-center bg-white rounded-xl pa-3 elevation-5">
@@ -123,8 +123,8 @@ import { scrollBottom } from "@/motions.js";
 }
 
 .circleNumber {
-  width: 12vw;
-  height: 10vw;
+  width: 50px;
+  height: 40px;
 }
 
 .circleNumber:hover {
@@ -149,11 +149,6 @@ import { scrollBottom } from "@/motions.js";
   .vaName {
     font-size: 1.1rem;
   }
-
-  .circleNumber {
-    width: 10vw;
-    height: 8vw;
-  }
 }
 
 /* MD */
@@ -165,11 +160,6 @@ import { scrollBottom } from "@/motions.js";
   .vaName {
     font-size: 1.2rem;
   }
-
-  .circleNumber {
-    width: 8vw;
-    height: 6vw;
-  }
 }
 
 /* LG */
@@ -179,12 +169,12 @@ import { scrollBottom } from "@/motions.js";
   }
 
   .pMedium {
-    margin-bottom: 4vw !important;
+    margin-bottom: 4rem !important;
   }
 
   .vasWrapper {
     margin-top: 0 !important;
-    margin-bottom: 5vw;
+    margin-bottom: 5rem;
   }
 
   .typesCards {
@@ -222,9 +212,8 @@ import { scrollBottom } from "@/motions.js";
     font-size: 1.1rem;
   }
 
-  .circleNumber {
-    width: 6vw;
-    height: 4vw;
+  .circleNumber{
+    width: 60px;
   }
 
   .executiveAssistant {
@@ -259,7 +248,7 @@ import { scrollBottom } from "@/motions.js";
 
   .executiveAssistant .tasksWrapper div {
     width: 40% !important;
-    height: 22vh;
+    height: 12rem;
     justify-content: center;
   }
 
@@ -268,18 +257,23 @@ import { scrollBottom } from "@/motions.js";
   }
 }
 
+@media only screen and (min-width: 1280px) {
+  .executiveAssistant .tasksWrapper div {
+    height: 11rem;
+  }
+}
 /* XL */
 @media only screen and (min-width: 1440px) {
   .executiveAssistant div img {
     width: 75%;
   }
 
-  .typesCards {
-    width: 80% !important;
+  .executiveAssistant .tasksWrapper div {
+    height: 10rem;
   }
 
-  .executiveAssistant .tasksWrapper div {
-    height: 20vh;
+  .typesCards {
+    width: 80% !important;
   }
 }
 
@@ -291,15 +285,6 @@ import { scrollBottom } from "@/motions.js";
   .typesCards {
     width: 75% !important;
   }
-
-  .circleNumber {
-    width: 5vw;
-    height: 3.5vw;
-  }
-
-  .executiveAssistant .tasksWrapper div {
-    height: 17vh;
-  }
 }
 
 @media only screen and (min-width: 1750px) {
@@ -309,11 +294,6 @@ import { scrollBottom } from "@/motions.js";
 
   .typesCards {
     width: 80% !important;
-  }
-
-  .circleNumber {
-    width: 4.5vw;
-    height: 3vw;
   }
 }
 
@@ -355,6 +335,10 @@ import { scrollBottom } from "@/motions.js";
   .circleNumber {
     width: 75px;
     height: 51px;
+  }
+
+  .executiveAssistant .tasksWrapper div {
+    height: 145px;
   }
 }
 </style>
