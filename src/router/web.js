@@ -167,8 +167,8 @@ export const webRoutes = [
 		name: "Booking",
 		component: BookingView,
 		meta: {
-			title: "Start delegating with ICONIC Assistants",
-			description: "Discover the power of having realiable Executive Assistants.",
+			title: "Book a discovery call",
+			description: "Find out how our service can save you time and money by delegating to an Executive Assistant.",
 		},
 	},
 	{
@@ -176,8 +176,8 @@ export const webRoutes = [
 		name: "ThankYou",
 		component: ThankYouView,
 		meta: {
-			title: "Start delegating with ICONIC Assistants",
-			description: "Discover the power of having realiable Executive Assistants.",
+			title: "Thank you for submitting our form",
+			description: "Our team will contact you soon.",
 		},
 	},
 	// {
