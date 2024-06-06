@@ -1,46 +1,29 @@
 <template>
-  <div class="h-100 column justify-space-between">
-    <section>
-      <nav class="justifyCenter py-5">
-        <IconicLogo class="align-self-center mt-1" color="blue" />
-      </nav>
-      <div class="flexCenter mt-5">
-        <p>Thank you for submitting our form.</p>
-        <p>Our team will contact you soon.</p>
-        <router-link class="secondaryButton elevation-5 mt-10" :to="routes.HOME">Return to Homepage</router-link>
-      </div>
-    </section>
-    <div class="columnAlignCenter">
-      <FooterRightsComponent />
-    </div>
+  <div class="footerBelow d-flex align-center ga-3">
+    <router-link :to="'/privacy'">Privacy</router-link>
+    <p>|</p>
+    <router-link :to="'/terms'">Terms</router-link>
   </div>
+  <p class="rightsReserved text-center my-3">
+    © Iconic Assistants. All Rights Reserved {{ currentYear }}
+  </p>
 </template>
 
 <script>
-import ROUTES_NAMES from "@/router/constants/ROUTES_NAMES";
-import IconicLogo from "@/web/components/icons/IconicLogo.vue";
-import FooterRightsComponent from "../components/FooterRightsComponent.vue";
-
 export default {
-  name: "Booking",
-  components: {
-    IconicLogo,
-    FooterRightsComponent,
-  },
   data() {
     return {
-      routes: ROUTES_NAMES,
       currentYear: new Date().getFullYear()
     }
-  },
-};
+  }
+}
 </script>
 
 <style scoped>
 .footerBelow p,
 .footerBelow a {
   font-size: 0.9rem;
-  color: white;
+  color: #120d40;
   text-decoration: none;
 }
 
@@ -50,7 +33,6 @@ export default {
 
 /* SM */
 @media only screen and (min-width: 480px) {
-
   .footerBelow p,
   .footerBelow a {
     font-size: 1rem;
@@ -62,7 +44,6 @@ export default {
 }
 
 @media only screen and (min-width: 769px) {
-
   .footerBelow p,
   .footerBelow a {
     font-size: 1.05rem;
