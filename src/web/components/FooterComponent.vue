@@ -59,7 +59,7 @@
           <router-link :to="'/terms'">Terms</router-link>
         </div>
         <p class="my-3 text-center text-white rightsReserved">
-          © Iconic Assistants. All Rights Reserved 2023
+          © Iconic Assistants. All Rights Reserved {{ currentYear }}
         </p>
       </div>
     </div>
@@ -74,6 +74,11 @@ export default {
   components: {
     IconicLogo,
   },
+  data(){
+    return{
+      currentYear: new Date().getFullYear()
+    }
+  }
 };
 </script>
 

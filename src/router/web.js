@@ -10,12 +10,12 @@ import BeforeYouStartView from "../web/views/BeforeYouStartView.vue";
 import BlogView from "../web/views/BlogView.vue";
 import BlogPostView from "../web/views/BlogPostView.vue";
 import ServicesView from "../web/views/ServicesView.vue";
-import PricingView from "../web/views/PricingView.vue";
 import ContactUsView from "../web/views/ContactUsView.vue";
 import GetStartedView from "../web/views/GetStartedView.vue";
+import BookingView from "../web/views/BookingView.vue";
+import ThankYouView from "../web/views/ThankYouView.vue";
 import PrivacyPolicyView from "../web/views/PrivacyPolicyView.vue";
 import TermsUseView from "../web/views/TermsUseView.vue";
-import TestView from "../web/views/TestView.vue";
 
 export const webRoutes = [
 	{
@@ -144,14 +144,6 @@ export const webRoutes = [
 	// 		description: "Transparent Solutions – Explore Iconic Assistants' Competitive Executive Assistant Pricing.",
 	// 	},
 	// },
-	// {
-	// 	path: "/test",
-	// 	name: "Test",
-	// 	component: TestView,
-	// 	meta: {
-	// 		title: "Testing - Iconic Assistants",
-	// 	},
-	// },
 	{
 		path: "/contact-us",
 		name: "ContactUs",
@@ -165,6 +157,24 @@ export const webRoutes = [
 		path: "/get-started",
 		name: "GetStarted",
 		component: GetStartedView,
+		meta: {
+			title: "Start delegating with ICONIC Assistants",
+			description: "Discover the power of having realiable Executive Assistants.",
+		},
+	},
+	{
+		path: "/booking",
+		name: "Booking",
+		component: BookingView,
+		meta: {
+			title: "Start delegating with ICONIC Assistants",
+			description: "Discover the power of having realiable Executive Assistants.",
+		},
+	},
+	{
+		path: "/thank-you",
+		name: "ThankYou",
+		component: ThankYouView,
 		meta: {
 			title: "Start delegating with ICONIC Assistants",
 			description: "Discover the power of having realiable Executive Assistants.",
