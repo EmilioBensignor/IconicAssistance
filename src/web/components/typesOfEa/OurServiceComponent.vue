@@ -7,8 +7,8 @@
           Here's What Your Executive Assistants Can Help You With
         </h2>
         <div class="eaCardsContainer w-75 d-flex justify-center flex-wrap ga-10 pt-5">
-          <router-link :to="`/executive-assistant/${item.id}`" v-for="(item, index) in eaTypes" :key="index" class="eaCard rounded-xl elevation-5"
-            v-motion="scrollBottom">
+          <router-link :to="`/executive-assistant/${item.slug}`" v-for="(item, index) in eaTypes" :key="index"
+            class="eaCard rounded-xl elevation-5" v-motion="scrollBottom">
             <img :src="getImgUrl(item.img)" :alt="item.alt" width="100%" height="100%" class="rounded-xl" eager />
             <p class="titleTypesofEA rounded-b-xl font-weight-bold text-midnight py-3">
               {{ item.name }}
@@ -71,11 +71,11 @@ import { scrollBottom } from "@/motions.js";
 }
 
 @media only screen and (min-width: 600px) {
-  .eaCardsContainer{
+  .eaCardsContainer {
     width: 90% !important;
     gap: 2rem !important;
   }
-  
+
   .eaCard {
     width: 45% !important;
   }
@@ -93,10 +93,12 @@ import { scrollBottom } from "@/motions.js";
   h2 {
     width: 95%;
   }
-  .eaCardsContainer{
+
+  .eaCardsContainer {
     width: 95% !important;
     gap: 1rem !important;
   }
+
   .eaCard {
     width: 23% !important;
     height: 17.5rem;

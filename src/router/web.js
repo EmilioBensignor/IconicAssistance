@@ -82,7 +82,7 @@ export const webRoutes = [
 		},
 	},
 	{
-		path: "/executive-assistant/:id",
+		path: "/executive-assistant/:name",
 		name: "ExecutiveAssistant",
 		component: ExecutiveAssistantView,
 		meta: {
