@@ -16,16 +16,16 @@
         :key="index"
         class="card w-100 column ga-5 rounded-xl elevation-5 pa-5">
         <div>
-          <p class="cardLabel">ID:</p>
-          <p>{{ invoice.properties.hs_object_id }}</p>
+          <p class="cardLabel">Number:</p>
+          <p>{{ invoice.properties.hs_number }}</p>
         </div>
         <div>
           <p class="cardLabel">Amount Billed:</p>
           <p>{{ formatCurrency(invoice.properties.hs_amount_billed) }}</p>
         </div>
         <div>
-          <p class="cardLabel">Due?/Create?:</p>
-          <p>{{ formatDate(invoice.properties.hs_createdate) }}</p>
+          <p class="cardLabel">Due Date:</p>
+          <p>{{ formatDate(invoice.properties.hs_due_date) }}</p>
         </div>
         <!-- <p>{{ invoice.properties }}</p> -->
       </div>
