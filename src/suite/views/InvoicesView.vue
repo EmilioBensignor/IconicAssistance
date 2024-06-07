@@ -15,17 +15,18 @@
         v-for="(invoice, index) in store.invoices.data.invoices"
         :key="index"
         class="card w-100 column ga-5 rounded-xl elevation-5 pa-5">
-        <div>
-          <p class="cardLabel">Number:</p>
-          <p>{{ invoice.properties.hs_number }}</p>
+        <div class="rowCenter">
+          <v-skeleton-loader v-if="!userData || !userData.firstname" type="text"></v-skeleton-loader>
+          <p v-else class="cardLabel">{{ userData.firstname }}</p>
+          <p class="text-end">{{ formatDate(invoice.properties.hs_due_date) }}</p>
         </div>
         <div>
           <p class="cardLabel">Amount Billed:</p>
           <p>{{ formatCurrency(invoice.properties.hs_amount_billed) }}</p>
         </div>
         <div>
-          <p class="cardLabel">Due Date:</p>
-          <p>{{ formatDate(invoice.properties.hs_due_date) }}</p>
+          <p class="cardLabel">Number:</p>
+          <p>{{ invoice.properties.hs_number }}</p>
         </div>
         <!-- <p>{{ invoice.properties }}</p> -->
       </div>
@@ -60,10 +61,6 @@
           year: "numeric",
           month: "2-digit",
           day: "2-digit",
-          hour: "2-digit",
-          minute: "2-digit",
-          second: "2-digit",
-          hour12: false,
         };
         const date = new Date(dateString);
         return date.toLocaleDateString("en-GB", options).replace(",", "");
@@ -77,6 +74,15 @@
     },
   };
 </script>
+
+<script setup>
+import { collection, doc } from "firebase/firestore";
+import { useDocument } from "vuefire";
+import { db } from "../firebase/init";
+const store = useAuthStore();
+const userData = useDocument(doc(collection(db, "clients"), store.user.uid));
+</script>
+
 
 <style scoped>
   .card {
