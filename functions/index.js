@@ -265,7 +265,7 @@ exports.getInvoicesData = onCall(async (data, context) => {
 							},
 							params: {
 								properties:
-									"hs_amount_billed,hs_balance_due, hs_last_sent_date",
+									"hs_amount_billed,hs_balance_due, hs_last_sent_date, hs_due_date,hs_number",
 							},
 						}
 					)
