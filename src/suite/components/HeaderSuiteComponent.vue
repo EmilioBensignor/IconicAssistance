@@ -182,7 +182,7 @@ a {
 @media only screen and (min-width: 1080px) {
   .v-toolbar-title {
     position: absolute;
-    left: 6%;
+    left: 65px;
     cursor: pointer;
   }
   .v-navigation-drawer{

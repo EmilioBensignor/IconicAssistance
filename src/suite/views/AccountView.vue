@@ -29,12 +29,6 @@
 			<p class="dataTitle">Company Size</p>
 			<p class="dataInfo">{{ userData.numemployees }} Employees</p>
 		</div>
-		<div class="pl-4 pr-1">
-			<p class="dataTitle">Position</p>
-		</div>
-		<div class="pl-4 pr-1">
-			<p class="dataTitle">Communication Preferences</p>
-		</div>
 	</div>
 </template>
 

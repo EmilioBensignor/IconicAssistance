@@ -24,11 +24,10 @@
           <p class="cardLabel">Amount Billed:</p>
           <p>{{ formatCurrency(invoice.properties.hs_amount_billed) }}</p>
         </div>
-        <div>
+        <!-- <div>
           <p class="cardLabel">Number:</p>
           <p>{{ invoice.properties.hs_number }}</p>
-        </div>
-        <!-- <p>{{ invoice.properties }}</p> -->
+        </div> -->
       </div>
     </div>
     <p

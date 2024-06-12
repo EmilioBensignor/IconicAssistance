@@ -168,25 +168,21 @@ li {
 
 /* BackGrounds */
 .skyRadioactive {
-	background-image: linear-gradient(
-		to bottom,
-		#0cb8f1,
-		#00a0fa,
-		#0085fe,
-		#0066f9,
-		#373ae6
-	);
+	background-image: linear-gradient(to bottom,
+			#0cb8f1,
+			#00a0fa,
+			#0085fe,
+			#0066f9,
+			#373ae6);
 }
 
 .radioactiveSky {
-	background-image: linear-gradient(
-		to bottom,
-		#373ae6,
-		#0066f9,
-		#0085fe,
-		#00a0fa,
-		#0cb8f1
-	);
+	background-image: linear-gradient(to bottom,
+			#373ae6,
+			#0066f9,
+			#0085fe,
+			#00a0fa,
+			#0cb8f1);
 }
 
 /* Waves */
@@ -509,6 +505,10 @@ section {
 	.heroPages {
 		padding: 22vh 0 24vw 0;
 	}
+
+	.heroSuite {
+		padding: 3% 0 2% 0;
+	}
 }
 
 @media only screen and (min-width: 1280px) {
@@ -715,6 +715,10 @@ section {
 
 	.heroPrivacyTerms {
 		padding: 8% 0 3% 0;
+	}
+
+	.heroSuite {
+		padding: 2% 0 2% 0;
 	}
 }
 </style>
