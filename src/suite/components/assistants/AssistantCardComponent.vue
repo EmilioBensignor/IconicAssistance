@@ -9,7 +9,7 @@
 				<p>{{ assistant.properties.lastname }}</p>
 			</div>
 		</div>
-		<div class="column ga-3">
+		<div class="cardBody column ga-3">
 			<p>{{ assistant.properties.email }}</p>
 			<p>{{ assistant.properties.phone }}</p>
 		</div>
@@ -45,9 +45,34 @@ export default {
 	font-weight: 600;
 }
 
+.cardBody p {
+	font-size: 0.9rem;
+}
+
+@media only screen and (min-width: 350px) {
+	.cardBody p {
+		font-size: 1rem;
+	}
+}
+
 @media only screen and (min-width: 1080px) {
 	.card {
 		max-width: 350px;
+	}
+	.cardBody p {
+		font-size: 1.05rem;
+	}
+}
+
+@media only screen and (min-width: 1750px) {
+	.cardBody p {
+		font-size: 1.1rem;
+	}
+}
+
+@media only screen and (min-width: 1920px) {
+	.cardBody p {
+		font-size: 1.15rem;
 	}
 }
 </style>
