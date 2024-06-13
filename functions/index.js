@@ -15,25 +15,37 @@ try {
 }
 const db = admin.firestore();
 
-exports.createCheckoutSession = onRequest({ cors: true }, async (req, res) => {
+exports.createSetupIntent = onRequest({ cors: true }, async (req, res) => {
 	res.set("Access-Control-Allow-Origin", "*");
-	const session = await stripe.checkout.sessions.create({
-		payment_method_types: ["card"],
-		mode: "setup",
-		ui_mode: "embedded",
-		return_url:
-			"https://www.iconicassistants.com/suite/add-payment-method-confirmation?session_id={CHECKOUT_SESSION_ID}",
-	});
-	res.send({ data: { clientSecret: session.client_secret } });
+	let customerId;
+	const data = req.body.data;
+	await db
+		.collection("clients")
+		.doc(data.userId)
+		.get()
+		.then((snap) => {
+			customerId = snap.data();
+		})
+		.catch(() => {
+			res.send({ data: "Unauthorized email." });
+		});
+
+	if (!customerId) {
+		res.send({ data: "Error: no stripe customer with that id" });
+	}
+
+	const setupIntent = await stripe.setupIntents.create({
+		customer: customerId.stripeId,
+	})
+	res.send({ data: { clientSecret: setupIntent.client_secret } });
 });
 
 exports.attatchPaymentMethod = onRequest({ cors: true }, async (req, res) => {
 	res.set("Access-Control-Allow-Origin", "*");
 	let customerId;
 	const data = req.body.data;
-	const session = await stripe.checkout.sessions.retrieve(data.session);
 
-	const setupIntentID = session.setup_intent;
+	const setupIntentID = data.setup_intent;
 	await db
 		.collection("clients")
 		.doc(data.userId)

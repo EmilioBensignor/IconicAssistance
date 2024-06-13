@@ -1,12 +1,12 @@
 <template>
 	<HeaderSuiteComponent />
 	<div class="heroSuite columnAlignCenter">
-		<h1 class="text-midnight ml-4" v-if="loading">Waiting for Payment Method</h1>
-		<h1 class="text-midnight ml-4" v-else>Payment Method Saved</h1>
+	
+		<h1 class="text-midnight ml-4">Payment Method Saved</h1>
 	</div>
 	<div class="w-100 columnAlignCenter mt-5">
-		<SpinnerComponent v-if="loading" />
-		<div v-else class="confirmation columnAlignCenter rounded-xl elevation-5 pb-3">
+
+		<div class="w-75 columnAlignCenter rounded-xl  pb-3">
 			<div class="tick-container">
 				<div class="tick"></div>
 			</div>
@@ -16,41 +16,6 @@
 	</div>
 </template>
 
-<script setup>
-import { onMounted, ref } from "vue";
-import { functions } from "../firebase/init";
-import { httpsCallableFromURL } from "firebase/functions";
-import { useAuthStore } from "../stores/auth.store";
-
-//TODO: agregar estado de error
-const store = useAuthStore();
-const loading = ref(false);
-onMounted(async () => {
-	loading.value = true;
-	const params = new Proxy(new URLSearchParams(window.location.search), {
-		get: (searchParams, prop) => searchParams.get(prop),
-	});
-	const payment_id = params.session_id;
-	if (!payment_id) {
-		loading.value = false;
-		return;
-	}
-	const attatchPaymentMethod = httpsCallableFromURL(
-		functions,
-		"https://attatchpaymentmethod-cgjqatnysa-uc.a.run.app"
-	);
-	await attatchPaymentMethod({ session: payment_id, userId: store.user.uid })
-		.then((res) => {
-			console.log(res);
-			loading.value = false;
-			console.log("Se asocio el metodo de pago");
-		})
-		.catch((error) => {
-			console.log(error);
-			loading.value = false;
-		});
-});
-</script>
 
 <script>
 import ROUTES_NAMES from "@/router/constants/ROUTES_NAMES";
@@ -72,10 +37,6 @@ export default {
 </script>
 
 <style scoped>
-.confirmation {
-	width: 60%;
-	border: 3px solid #373ae6;
-}
 
 .tick-container {
 	display: flex;
