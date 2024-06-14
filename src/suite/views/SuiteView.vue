@@ -14,7 +14,7 @@
 	</div>
 	<SkeletonSuiteComponent v-if="store.assistants === null" />
 	<div class="suiteComponents" v-else>
-		<SuiteActionsComponent :hasCCOnFile="userData.hasCCOnFile" />
+		<SuiteActionsComponent :hasCCOnFile="userData.hasCCOnFile === 'true'" />
 		<AssistantsComponent :assistants="store.assistants.data.assistants" />
 	</div>
 </template>
