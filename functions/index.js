@@ -71,27 +71,11 @@ exports.attatchPaymentMethod = onRequest({ cors: true }, async (req, res) => {
 	await db
 		.collection("clients")
 		.doc(data.userId)
-		.update({ hasCCOnFile: true })
+		.update({ hasCCOnFile: 'true' })
 		.catch(() => {
 			res.send({ data: "Error updating CC on DB." });
 		});
 	res.send({ data: attachedPaymentMethod });
-});
-
-exports.getHubspotData = onRequest({ cors: true }, async (req, res) => {
-	res.set("Access-Control-Allow-Origin", "*");
-	const data = req.body;
-	data.hasCCOnFile = false;
-	try {
-		await db
-			.collection("allowedUsers")
-			.add(data)
-			.then((response) => {
-				res.send({ data: response });
-			});
-	} catch (error) {
-		console.log(error);
-	}
 });
 
 exports.signUpClient = onRequest({ cors: true }, async (req, res) => {

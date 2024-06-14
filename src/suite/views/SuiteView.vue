@@ -12,10 +12,11 @@
 			>!
 		</h1>
 	</div>
-	<SkeletonSuiteComponent v-if="store.assistants === null" />
+	<SkeletonSuiteComponent v-if="store.assistants === null || store.invoices === null" />
 	<div class="suiteComponents" v-else>
 		<SuiteActionsComponent :hasCCOnFile="userData.hasCCOnFile === 'true'" />
 		<AssistantsComponent :assistants="store.assistants.data.assistants" />
+		<NextInvoiceComponent :nextInvoice="store.invoices.data.invoices[0]" :userData="userData" :formatCurrency="formatCurrency" :formatDate="formatDate" />
 	</div>
 </template>
 
@@ -25,6 +26,8 @@ import HeaderSuiteComponent from "@/suite/components/HeaderSuiteComponent.vue";
 import SkeletonSuiteComponent from "@/suite/components/skeleton/SkeletonSuiteComponent.vue";
 import SuiteActionsComponent from "@/suite/components/suite/SuiteActionsComponent.vue";
 import AssistantsComponent from "@/suite/components/suite/AssistantsComponent.vue";
+import NextInvoiceComponent from "@/suite/components/suite/NextInvoiceComponent.vue";
+import { formatCurrency, formatDate } from "../services/format.service";
 import { useAuthStore } from "@/suite/stores/auth.store";
 
 export default {
@@ -34,6 +37,7 @@ export default {
 		SkeletonSuiteComponent,
 		SuiteActionsComponent,
 		AssistantsComponent,
+		NextInvoiceComponent
 	},
 	data() {
 		return {
@@ -41,6 +45,10 @@ export default {
 			store: useAuthStore(),
 		};
 	},
+	setup(){
+		formatCurrency(),
+		formatDate()
+	}
 };
 </script>
 

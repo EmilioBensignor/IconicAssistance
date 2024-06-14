@@ -13,7 +13,7 @@
 		></v-skeleton-loader>
 		<div class="w-100 columnAlignCenter mt-5">
 			<div
-				class="justifyCenter flex-wrap ga-5"
+				class="rowCenter justify-center flex-wrap ga-5"
 				v-if="cards.length > 0 && !loading"
 			>
 				<div v-for="card in cards" :key="card.id" class="cardContainer">

@@ -45,7 +45,9 @@ export const useAuthStore = defineStore("auth", {
 						hubspotId: userData.data()["hs_object_id"],
 					})
 						.then((data) => {
-							this.invoices = data;
+							let sortedInvoices = data
+							sortedInvoices.data.invoices.sort((a,b)=>new Date(b.properties.hs_due_date)-new Date(a.properties.hs_due_date))
+							this.invoices = sortedInvoices;
 						})
 						.catch((err) => {
 							console.log(err);
