@@ -31,8 +31,8 @@
             managing administrative tasks, from email and calendar to precise
             data entry and thorough research.
           </p>
-          <router-link class="primaryButton elevation-5 mt-5" :to="'/services'"
-            >Explore Our Services</router-link
+          <router-link class="primaryButton elevation-5 mt-5" :to="'/our-solution'"
+            >Explore Our Solution</router-link
           >
         </div>
       </div>

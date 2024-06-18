@@ -58,7 +58,7 @@
             </div>
           </div>
         </div>
-        <router-link class="primaryButton elevation-5 mt-5" :to="'/services'">What We Do</router-link>
+        <router-link class="primaryButton elevation-5 mt-5" :to="'/our-solution'">What We Do</router-link>
       </div>
     </div>
   </section>

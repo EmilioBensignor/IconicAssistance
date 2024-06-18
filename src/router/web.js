@@ -9,7 +9,7 @@ import ExecutiveAssistantView from "../web/views/ExecutiveAssistantView.vue";
 import BeforeYouStartView from "../web/views/BeforeYouStartView.vue";
 import BlogView from "../web/views/BlogView.vue";
 import BlogPostView from "../web/views/BlogPostView.vue";
-import ServicesView from "../web/views/ServicesView.vue";
+import OurSolutionView from "../web/views/OurSolutionView.vue";
 import ContactUsView from "../web/views/ContactUsView.vue";
 import GetStartedView from "../web/views/GetStartedView.vue";
 import BookingView from "../web/views/BookingView.vue";
@@ -127,11 +127,11 @@ export const webRoutes = [
 	//   }
 	// },
 	{
-		path: "/services",
-		name: "Services",
-		component: ServicesView,
+		path: "/our-solution",
+		name: "OurSolution",
+		component: OurSolutionView,
 		meta: {
-			title: "Services - Iconic Assistants",
+			title: "Our Solution - Iconic Assistants",
 			description: "Elevate your business to new heights with our Executive Assistant services, covering remote talent recruitment, overseas payroll and expert support.",
 		},
 	},

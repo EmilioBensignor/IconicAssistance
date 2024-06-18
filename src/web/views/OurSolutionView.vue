@@ -4,7 +4,7 @@
     <div class="heroPages flexCenter">
       <h1 v-motion="scrollBottom" class="text-midnight">
         <span class="text-radioactive">Empower</span>
-        Your Business Discover Our Services
+        Your Business
       </h1>
     </div>
   </section>
