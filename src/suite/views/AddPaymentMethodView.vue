@@ -4,26 +4,23 @@
 		<h1 class="text-midnight ml-4">Add Payment Method</h1>
 	</div>
 	<SpinnerComponent v-if="loading" />
-	<div class="columnAlignCenter mt-5">
-		<div class="w-75">
-			<v-text-field label="First name" v-model="firstName"></v-text-field>
+	<div v-show="!loading" class="columnAlignCenter mt-5">
+		<div class="w-75 column ga-3">
+			<label for="firstName">First name</label>
+			<v-text-field id="firstName" v-model="firstName"></v-text-field>
 		</div>
-		<div class="w-75">
-			<v-text-field label="Last name" v-model="lastName"></v-text-field>
+		<div class="w-75 column ga-3">
+			<label for="lastName">Last name</label>
+			<v-text-field id="lastName" v-model="lastName"></v-text-field>
 		</div>
-		<div id="card-element" class="w-75 rounded-xl elevation-3 pa-5">
+		<div id="card-element" class="w-75 rounded-lg elevation-3 pa-5">
 			<!-- Stripe Elements will insert the payment form here -->
 		</div>
 		<p class="w-75 text-red text-center mt-5" v-if="errorMsg">
 			{{ errorMsg }}
 		</p>
-		<SecondaryBtnComponent
-			id="submit"
-			@click.prevent="getSetupIntent()"
-			v-if="!loading"
-			text="Add Payment Method"
-			:loading="loadingAttach"
-		></SecondaryBtnComponent>
+		<SecondaryBtnComponent id="submit" @click.prevent="getSetupIntent()" v-if="!loading" text="Add Payment Method"
+			:loading="loadingAttach"></SecondaryBtnComponent>
 	</div>
 </template>
 
@@ -55,6 +52,7 @@ const style = {
 		iconColor: "#fa755a",
 	},
 };
+
 onMounted(async () => {
 	const createSetupIntent = httpsCallableFromURL(
 		functions,
@@ -77,6 +75,7 @@ onMounted(async () => {
 	cardElement.value.mount("#card-element");
 	loading.value = false;
 });
+
 async function getSetupIntent() {
 	loadingAttach.value = true;
 	errorMsg.value = null;
@@ -139,8 +138,14 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 #checkout iframe {
 	height: 100vh !important;
+}
+
+@media only screen and (min-width: 1080px) {
+	label {
+		font-size: 1.1rem;
+	}
 }
 </style>
