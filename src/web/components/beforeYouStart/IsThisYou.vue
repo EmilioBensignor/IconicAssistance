@@ -11,7 +11,7 @@
             v-for="(item, index) in aspects"
             :key="index"
             v-motion="scrollBottom"
-            class="w-75 aspect columnAlignCenter ga-3 elevation-5 rounded-xl pa-3">
+            class="w-75 aspect columnAlignCenter ga-3 bg-white elevation-5 rounded-xl pa-3">
             <img
               :src="getImgUrl(item.img)"
               :alt="item.alt"

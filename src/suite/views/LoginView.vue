@@ -1,5 +1,5 @@
 <template>
-  <div class="justifyCenter">
+  <div class="justifyCenter bg-white h-100">
     <div class="suiteContent">
       <HeaderOutsideComponent />
       <div class="heroSuite columnAlignCenter">

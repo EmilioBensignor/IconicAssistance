@@ -66,7 +66,7 @@
           </div>
         </div>
         <div class="comparisonChartDesktop column mb-7">
-          <div class="comparison d-flex align-center bg-white mb-5">
+          <div class="comparison d-flex align-center bg-suiteBg mb-5">
             <div class="chartTitleBlank"></div>
             <div class="chartTitle py-2">
               <IconicLogo class="chartLogo text-radioactive" />

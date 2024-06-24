@@ -105,7 +105,7 @@ export default {
 }
 
 .step {
-  background-color: rgb(12, 185, 241, 0.2);
+  background-color: #fff;
 }
 
 .stepNumbers {

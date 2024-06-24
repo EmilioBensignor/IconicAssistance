@@ -4,14 +4,14 @@
     <h1 class="text-midnight ml-4">Invoices</h1>
   </div>
   <div class="suiteComponents mt-5">
-    <v-skeleton-loader class="w-75 px-3" type="card" v-if="store.assistants === null"></v-skeleton-loader>
+    <v-skeleton-loader class="w-75 bg-suiteBg px-3" type="card" v-if="store.assistants === null"></v-skeleton-loader>
     <div class="column ga-7" v-if="store.invoices !== null && store.invoices.data.invoices.length > 0">
       <div v-for="(invoice, index) in store.invoices.data.invoices" :key="index">
         <div class="d-flex ml-5">
           <p :class="new Date(invoice.properties.hs_due_date) > new Date() ? 'bg-radioactive text-white' : 'bg-suiteGray text-midnight'"
             class="w-auto rounded-t-lg py-1 px-2">{{ new Date(invoice.properties.hs_due_date) > new Date() ? 'Next Invoice': 'Paid'}}</p>
         </div>
-        <div class="w-100 column ga-5 rounded-xl elevation-5 pa-5"
+        <div class="w-100 bg-white column ga-5 rounded-lg elevation-5 pa-5"
           :class="new Date(invoice.properties.hs_due_date) > new Date() ? 'futureInvoice' : 'pastInvoice'">
           <div class="rowCenter">
             <v-skeleton-loader v-if="!userData || !userData.firstname" type="text"></v-skeleton-loader>

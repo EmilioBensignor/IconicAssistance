@@ -1,6 +1,6 @@
 <template>
   <HeaderPagesComponent />
-  <section class="heroPagesWave columnAlignCenter">
+  <section class="heroPagesWave columnAlignCenter bg-white">
     <div class="heroPages flexCenter">
       <h1 v-motion="scrollBottom" class="text-midnight">
         <span class="text-radioactive">Empower</span>

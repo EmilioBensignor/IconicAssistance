@@ -1,5 +1,5 @@
 <template>
-	<router-link :to="routes.ASSISTANTS" class="card w-100 columnAlignCenter ga-5 rounded-xl elevation-5 pa-5">
+	<router-link :to="routes.ASSISTANTS" class="card w-100 bg-white columnAlignCenter ga-5 rounded-lg elevation-5 pa-5">
 		<div class="rowCenter align-self-start ga-5">
 			<div class="bg-radioactive rounded-circle elevation-3 pa-2">
 				<v-icon icon="mdi-account"></v-icon>
@@ -37,7 +37,6 @@ export default {
 <style scoped>
 .card {
 	max-width: 300px;
-	border: 3px solid #373ae6;
 	text-decoration: none;
 }
 

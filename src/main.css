@@ -16,3 +16,7 @@ body {
 .v-carousel__controls__item.v-btn.v-btn--icon.v-btn--active{
   background-color: white;
 }
+
+.v-application{
+  background-color: #F4F5FB !important;
+}

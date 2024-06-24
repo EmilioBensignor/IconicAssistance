@@ -32,6 +32,7 @@ const vuetify = createVuetify({
 					gray: "#6e7191",
 					chartGray: "#E4E4E4",
 					suiteGray: "#BCC1D1",
+					suiteBg: "#F4F5FB"
 				},
 			},
 		},

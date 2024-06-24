@@ -1,6 +1,6 @@
 <template>
   <HeaderPagesComponent />
-  <section class="heroPagesWave columnAlignCenter">
+  <section class="heroPagesWave bg-white columnAlignCenter">
     <div class="heroPages flexCenter">
       <h1 class="text-midnight" v-motion="scrollBottom">
         Outsource to

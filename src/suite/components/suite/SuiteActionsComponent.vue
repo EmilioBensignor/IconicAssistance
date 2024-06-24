@@ -1,7 +1,7 @@
 <template>
 	<div
 		v-if="!hasCCOnFile"
-		class="action bg-suiteGray column ga-3 rounded-xl elevation-4 pa-5 my-5"
+		class="action bg-white column ga-3 rounded-lg elevation-5 pa-5 my-5"
 	>
 		<p class="titleAction text-start font-weight-bold">
 			Payment Method Required

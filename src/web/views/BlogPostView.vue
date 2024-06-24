@@ -12,7 +12,7 @@
     <img src="@/web/assets/images/misc/White-Bottom-Wave.png" alt="White Bottom Wave" class="heroPagesWhiteWave"
       width="100%" />
   </section>
-  <section class="radioactiveWave">
+  <section class="radioactiveWave bg-white">
     <div class="content">
       <div class="blogRecentPost columnAlignCenter">
         <div class="blogPost columnAlignCenter">
@@ -27,7 +27,7 @@
             <p class="w-100">{{ blog.closer }}</p>
           </div>
         </div>
-        <div class="recentBlogs columnAlignCenter mt-5">
+        <div class="recentBlogs bg-white columnAlignCenter mt-5">
           <h2 v-motion="scrollBottom" class="text-midnight">Recent Posts</h2>
           <div class="w-75 recentBlogWrapper columnAlignCenter ga-10 py-5">
             <article v-for="(recentBlog, index) in recentBlogs" :key="index" v-motion="scrollBottom"
@@ -233,7 +233,7 @@ import { scrollBottom } from "@/motions.js";
       0px 5px 8px 0px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.14)),
       0px 1px 14px 0px var(--v-shadow-key-ambient-opacity, rgba(0, 0, 0, 0.12)) !important;
     position: sticky;
-    top: 15vw;
+    top: 7.5rem;
     z-index: 2;
     border-radius: 20px;
     padding: 1vw 0;
@@ -277,7 +277,6 @@ import { scrollBottom } from "@/motions.js";
   }
 
   .recentBlogs {
-    top: 13vw;
     width: 30%;
   }
 }
@@ -293,7 +292,6 @@ import { scrollBottom } from "@/motions.js";
   }
 
   .recentBlogs {
-    top: 9vw;
     width: 28%;
   }
 
@@ -309,17 +307,12 @@ import { scrollBottom } from "@/motions.js";
 
   .recentBlogs {
     width: 26%;
-    top: 10vw;
   }
 }
 
 @media only screen and (min-width: 1750px) {
   .heroSection {
     height: 975px;
-  }
-
-  .recentBlogs {
-    top: 5.5vw;
   }
 
   .recentBlogs div {
@@ -342,10 +335,6 @@ import { scrollBottom } from "@/motions.js";
 
   .blogPost {
     width: 72%;
-  }
-
-  .recentBlogs {
-    top: 120px;
   }
 
   .recentBlogs .recentBlog {

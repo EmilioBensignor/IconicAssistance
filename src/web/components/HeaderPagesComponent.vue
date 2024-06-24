@@ -156,10 +156,6 @@
             path: "/how-we-hire",
             title: "How We Hire",
           },
-          {
-            path: "/faq",
-            title: "FAQ",
-          },
         ],
         learnMenu: [
           {
@@ -173,6 +169,10 @@
           {
             path: "/blog",
             title: "Blog",
+          },
+          {
+            path: "/faq",
+            title: "FAQ",
           },
         ],
         typesOfEasMenu: [

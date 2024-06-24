@@ -11,7 +11,7 @@
             v-for="(item, index) in different"
             :key="index"
             v-motion="scrollBottom"
-            class="different flexCenter rounded-xl elevation-5 w-75 pa-4 pb-6">
+            class="different bg-white flexCenter rounded-xl elevation-5 w-75 pa-4 pb-6">
             <p class="differentTitle text-midnight">{{ item.title }}</p>
             <v-img
               :src="getImgUrl(item.img)"
