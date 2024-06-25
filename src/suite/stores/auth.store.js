@@ -24,6 +24,9 @@ export const useAuthStore = defineStore("auth", {
 					const userData = await getDoc(
 						doc(collection(db, "clients"), this.user.uid)
 					);
+					if (!userData.exists()) {
+						return;
+					}
 					const getAssistantsData = httpsCallable(
 						functions,
 						"getAssistantsData"
@@ -45,8 +48,12 @@ export const useAuthStore = defineStore("auth", {
 						hubspotId: userData.data()["hs_object_id"],
 					})
 						.then((data) => {
-							let sortedInvoices = data
-							sortedInvoices.data.invoices.sort((a,b)=>new Date(b.properties.hs_due_date)-new Date(a.properties.hs_due_date))
+							let sortedInvoices = data;
+							sortedInvoices.data.invoices.sort(
+								(a, b) =>
+									new Date(b.properties.hs_due_date) -
+									new Date(a.properties.hs_due_date)
+							);
 							this.invoices = sortedInvoices;
 						})
 						.catch((err) => {

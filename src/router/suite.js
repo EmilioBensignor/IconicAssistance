@@ -10,45 +10,16 @@ import AddPaymentMethodView from "@/suite/views/AddPaymentMethodView.vue";
 import AddPaymentMethodConfirmationView from "@/suite/views/AddPaymentMethodConfirmationView.vue";
 import ResetPasswordView from "@/suite/views/ResetPasswordView.vue";
 import ResetPasswordConfirmationView from "@/suite/views/ResetPasswordConfirmationView.vue";
-import { useAuthStore } from "@/suite/stores/auth.store";
-import ROUTES_NAMES from "./constants/ROUTES_NAMES";
-import { watch } from "vue";
-
-const requireAuth = (to, from, next) => {
-	const authStore = useAuthStore();
-
-	if (authStore.isAuthLoading) {
-		// If still loading, wait for the state to be determined
-		const unwatch = watch(
-			() => authStore.isAuthLoading,
-			(isAuthLoading) => {
-				if (!isAuthLoading) {
-					// Authentication state has been determined
-					unwatch(); // Stop watching
-					if (authStore.isAuthenticated) {
-						next();
-					} else {
-						next(ROUTES_NAMES.LOGIN); // Adjust the route name as needed
-					}
-				}
-			}
-		);
-	} else {
-		// If not loading, proceed with the normal checks
-		if (authStore.isAuthenticated) {
-			next();
-		} else {
-			next(ROUTES_NAMES.LOGIN); // Adjust the route name as needed
-		}
-	}
-};
+import AssistantSuiteView from "@/suite/views/assistant/AssistantSuiteView.vue";
+import requireAuthClient from "./guards/requireAuthClient";
+import requireAuthAssistant from "./guards/requireAuthAssistant";
 
 export const suiteRoutes = [
 	{
 		path: routes.SUITE,
 		name: "Suite",
 		component: SuiteView,
-		beforeEnter: requireAuth,
+		beforeEnter: requireAuthClient,
 		meta: {
 			title: "Iconic Asssitants Suite",
 			description: "Iconic Assistants Suite.",
@@ -74,7 +45,7 @@ export const suiteRoutes = [
 		path: routes.ASSISTANTS,
 		name: "Assistants",
 		component: AssistantsView,
-		beforeEnter: requireAuth,
+		beforeEnter: requireAuthClient,
 		meta: {
 			title: "Assistants",
 		},
@@ -83,7 +54,7 @@ export const suiteRoutes = [
 		path: routes.INVOICES,
 		name: "Invoices",
 		component: InvoicesView,
-		beforeEnter: requireAuth,
+		beforeEnter: requireAuthClient,
 		meta: {
 			title: "Invoices",
 		},
@@ -92,7 +63,7 @@ export const suiteRoutes = [
 		path: routes.ACCOUNT,
 		name: "Account",
 		component: AccountView,
-		beforeEnter: requireAuth,
+		beforeEnter: requireAuthClient,
 		meta: {
 			title: "Account",
 		},
@@ -101,7 +72,7 @@ export const suiteRoutes = [
 		path: routes.PAYMENT_METHODS,
 		name: "PaymentMethods",
 		component: PaymentMethodsView,
-		beforeEnter: requireAuth,
+		beforeEnter: requireAuthClient,
 		meta: {
 			title: "PaymentMethods",
 		},
@@ -110,7 +81,7 @@ export const suiteRoutes = [
 		path: routes.ADD_PAYMENT_METHOD,
 		name: "AddPaymentMethod",
 		component: AddPaymentMethodView,
-		beforeEnter: requireAuth,
+		beforeEnter: requireAuthClient,
 		meta: {
 			title: "AddPaymentMethod",
 		},
@@ -119,7 +90,7 @@ export const suiteRoutes = [
 		path: routes.ADD_PAYMENT_METHOD_CONFIRMATION,
 		name: "AddPaymentMethodConfirmation",
 		component: AddPaymentMethodConfirmationView,
-		beforeEnter: requireAuth,
+		beforeEnter: requireAuthClient,
 		meta: {
 			title: "AddPaymentMethodConfirmation",
 		},
@@ -138,6 +109,16 @@ export const suiteRoutes = [
 		component: ResetPasswordConfirmationView,
 		meta: {
 			title: "ResetPasswordConfirmationView",
+		},
+	},
+	{
+		path: routes.ASSISTANT_SUITE,
+		name: "AssistantSuite",
+		component: AssistantSuiteView,
+		beforeEnter: requireAuthAssistant,
+		meta: {
+			title: "Iconic Asssitants Suite",
+			description: "Iconic Assistants Suite.",
 		},
 	},
 ];
