@@ -17,7 +17,7 @@
         <h2 v-motion="scrollBottom" class="text-white">
           Outsourcing made simple and cost-effective
         </h2>
-        <p v-motion="scrollBottom" class="textWhoWeAre w-75 text-white my-3">
+        <p v-motion="scrollBottom" class="textWhoWeAre w-75 text-white my-4">
           Welcome to Iconic Assistants where outsourcing meets excellence! At
           Iconic Assistants, we take pride in being a
           <span class="font-weight-bold">premier outsourcing</span> company
