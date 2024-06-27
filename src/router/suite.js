@@ -11,6 +11,7 @@ import AddPaymentMethodConfirmationView from "@/suite/views/AddPaymentMethodConf
 import ResetPasswordView from "@/suite/views/ResetPasswordView.vue";
 import ResetPasswordConfirmationView from "@/suite/views/ResetPasswordConfirmationView.vue";
 import AssistantSuiteView from "@/suite/views/assistant/AssistantSuiteView.vue";
+import AssistantActionsView from "@/suite/views/AssistantActionsView.vue";
 import requireAuthClient from "./guards/requireAuthClient";
 import requireAuthAssistant from "./guards/requireAuthAssistant";
 
@@ -109,6 +110,16 @@ export const suiteRoutes = [
 		component: ResetPasswordConfirmationView,
 		meta: {
 			title: "ResetPasswordConfirmationView",
+		},
+	},
+	{
+		path: routes.ASSISTANT_ACTIONS,
+		name: "AssistantActions",
+		component: AssistantActionsView,
+		beforeEnter: requireAuthClient,
+		meta: {
+			title: "Iconic Asssitants Suite",
+			description: "Iconic Assistants Suite.",
 		},
 	},
 	{
