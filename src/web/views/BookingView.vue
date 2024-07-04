@@ -1,15 +1,6 @@
 <template>
-  <div class="h-100 column justify-space-between">
-    <section>
-      <nav class="justifyCenter py-5">
-        <IconicLogo class="align-self-center mt-1" color="blue" />
-      </nav>
-      <div class="flexCenter mt-5">
-        <p>Thank you for submitting our form.</p>
-        <p>Our team will contact you soon.</p>
-        <router-link class="secondaryButton elevation-5 mt-10" :to="routes.HOME">Return to Homepage</router-link>
-      </div>
-    </section>
+  <div class="h-100 column justify-space-between align-center">
+    <iframe class="mt-10" src="https://iconicassistants.na.chilipiper.com/router/disco_call" width="560" height="700"></iframe>
     <div class="columnAlignCenter">
       <FooterRightsComponent />
     </div>
