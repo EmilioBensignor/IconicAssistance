@@ -58,13 +58,7 @@ export default {
 @media only screen and (min-width: 1080px) {
   .rightsReserved {
     font-size: 1rem;
-    margin-bottom: 3vw !important;
-  }
-}
-
-@media only screen and (min-width: 1600px) {
-  .rightsReserved {
-    margin: 2vw 0 !important;
+    margin-bottom: 1rem !important;
   }
 }
 

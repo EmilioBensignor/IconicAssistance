@@ -1,6 +1,6 @@
 <template>
-  <div class="h-100 column justify-space-between align-center">
-    <iframe class="mt-10" src="https://iconicassistants.na.chilipiper.com/router/disco_call" width="560" height="700"></iframe>
+  <div class="booking column justify-space-between align-center ga-3">
+    <iframe class="mt-2" src="https://iconicassistants.na.chilipiper.com/router/disco_call" width="90%" height="100%"></iframe>
     <div class="columnAlignCenter">
       <FooterRightsComponent />
     </div>
@@ -28,6 +28,10 @@ export default {
 </script>
 
 <style scoped>
+.booking {
+  height: 100%;
+}
+
 .footerBelow p,
 .footerBelow a {
   font-size: 0.9rem;
@@ -37,6 +41,10 @@ export default {
 
 .rightsReserved {
   font-size: 0.8rem;
+}
+
+iframe {
+  max-width: 600px;
 }
 
 /* SM */
