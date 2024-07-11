@@ -1,6 +1,6 @@
 <template>
   <div class="booking column justify-space-between align-center ga-3">
-    <iframe class="mt-2" src="https://iconicassistants.na.chilipiper.com/router/disco_call" width="90%" height="100%"></iframe>
+    <iframe class="mt-2" src="https://iconicassistants.na.chilipiper.com/router/disco_call" width="85%" height="100%"></iframe>
     <div class="columnAlignCenter">
       <FooterRightsComponent />
     </div>
