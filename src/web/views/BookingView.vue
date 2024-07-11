@@ -29,7 +29,7 @@ export default {
 
 <style scoped>
 .booking {
-  height: 100%;
+  height: 100vh;
 }
 
 .footerBelow p,
