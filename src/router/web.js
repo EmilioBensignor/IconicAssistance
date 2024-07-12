@@ -14,6 +14,7 @@ import ContactUsView from "../web/views/ContactUsView.vue";
 import GetStartedView from "../web/views/GetStartedView.vue";
 import BookingView from "../web/views/BookingView.vue";
 import ThankYouView from "../web/views/ThankYouView.vue";
+import ThankYouForBookingView from "../web/views/ThankYouForBookingView.vue";
 import PrivacyPolicyView from "../web/views/PrivacyPolicyView.vue";
 import TermsUseView from "../web/views/TermsUseView.vue";
 
@@ -175,6 +176,15 @@ export const webRoutes = [
 		path: "/thank-you",
 		name: "ThankYou",
 		component: ThankYouView,
+		meta: {
+			title: "Thank you for submitting our form",
+			description: "Our team will contact you soon.",
+		},
+	},
+	{
+		path: "/thank-you-for-booking",
+		name: "ThankYouForBooking",
+		component: ThankYouForBookingView,
 		meta: {
 			title: "Thank you for submitting our form",
 			description: "Our team will contact you soon.",
