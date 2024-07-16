@@ -15,7 +15,7 @@
   line-height: 1.3rem;
   text-decoration: none;
   transition: all ease 0.2s;
-  padding: 1.7vw 2.75vw;
+  padding: 1.3rem 1.3rem;
   margin-right: 3vw !important;
   /* Mobile */
   display: none;
@@ -34,24 +34,19 @@
   }
 }
 
-/* XL */
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1100px) {
   .popUp {
-    padding: 1.5vw 2.8vw;
+    padding: 1.4rem 1.5rem;
   }
 }
 
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1280px) {
   .popUp {
-    padding: 1.3vw 2.6vw;
+    padding: 1.4rem 2rem;
   }
 }
 
-@media only screen and (min-width: 1750px) {
-  .popUp {
-    padding: 1.1vw 2vw;
-  }
-}
+
 
 @media only screen and (min-width: 1920px) {
   .popUp {

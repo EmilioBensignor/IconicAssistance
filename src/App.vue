@@ -145,7 +145,7 @@
     line-height: 1.3rem;
     text-decoration: none;
     text-align: center;
-    padding: 4vw 7vw;
+    padding: 1rem 2rem;
     transition: all ease 0.2s;
   }
 
@@ -384,7 +384,7 @@
     .primaryButton,
     .secondaryButton {
       font-size: 1.3rem;
-      padding: 3vw 5.5vw;
+      padding: 1.2rem 2.2rem;
     }
 
     .heroPages {
@@ -429,7 +429,7 @@
     .primaryButton,
     .secondaryButton {
       font-size: 1.3rem;
-      padding: 2.2vw 4vw;
+      padding: 1.4rem 2.4rem;
     }
 
     .heroPages {
@@ -478,7 +478,7 @@
     .primaryButton,
     .secondaryButton {
       font-size: 1.4rem;
-      padding: 2.2vw 4vw;
+      padding: 1.5rem 2.7rem;
     }
 
     .heroPages {
@@ -544,7 +544,7 @@
     .primaryButton,
     .secondaryButton {
       font-size: 1.3rem;
-      padding: 2vw 3.8vw;
+      padding: 1.6rem 3rem;
     }
 
     .v-expansion-panel-title {
@@ -594,7 +594,7 @@
     .primaryButton,
     .secondaryButton {
       font-size: 1.4rem;
-      padding: 1.8vw 3.6vw;
+      padding: 1.7rem 3.2rem;
     }
 
     .heroPages {
@@ -626,7 +626,6 @@
     .primaryButton,
     .secondaryButton {
       font-size: 1.5rem;
-      padding: 1.6vw 3.2vw;
     }
 
     .heroPages {
@@ -679,7 +678,6 @@
     .primaryButton,
     .secondaryButton {
       font-size: 1.6rem;
-      padding: 1.4vw 2.8vw;
     }
 
     .heroPages {
@@ -715,7 +713,7 @@
     .primaryButton,
     .secondaryButton {
       font-size: 1.8rem;
-      padding: 25px 49px;
+      padding: 30px 52px;
     }
 
     .heroPages {
