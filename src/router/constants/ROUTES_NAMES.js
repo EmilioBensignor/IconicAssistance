@@ -13,6 +13,6 @@ export default {
 	ADD_PAYMENT_METHOD_CONFIRMATION: "/suite/add-payment-method-confirmation",
 	RESET_PASSWORD: "/suite/reset-password",
 	RESET_PASSWORD_CONFIRMATION: "/suite/reset-password-confirmation",
-	ASSISTANT_ACTIONS: "/suite/assistant-actions/:id",
+	ASSISTANT_ACTIONS: "/suite/assistant-actions",
 	ASSISTANT_SUITE: "/assistant-suite",
 };

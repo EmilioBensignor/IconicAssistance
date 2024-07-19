@@ -113,7 +113,7 @@ export const suiteRoutes = [
 		},
 	},
 	{
-		path: routes.ASSISTANT_ACTIONS,
+		path: `${routes.ASSISTANT_ACTIONS}/:id`,
 		name: "AssistantActions",
 		component: AssistantActionsView,
 		beforeEnter: requireAuthClient,
