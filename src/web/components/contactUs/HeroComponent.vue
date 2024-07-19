@@ -13,13 +13,13 @@
               Assistants.
             </p>
             <div ref="formContainer" id="form-container" class="form bg-white rounded-xl pa-5 elevation-3 mt-5"></div>
-            <div class="googleLogo columnAlignCenter mt-5">
-              <img class="w-75" src="@/web/assets/images/contactUs/Google-Five-Star-Reviews.png" alt="Google Five Star Reviews">
-            </div>
           </div>
           <div class="w-50 desktop">
             <img v-motion="scrollBottom" class="w-100"
-              src="@/web/assets/images/contactUs/Executive-Assistant-Model-Iconic-Assistants.png" alt="Executive Assistant Model Iconic Assistants" />
+            src="@/web/assets/images/contactUs/Executive-Assistant-Model-Iconic-Assistants.png" alt="Executive Assistant Model Iconic Assistants" />
+            <div class="googleLogo columnAlignCenter mt-5">
+              <img class="w-75" src="@/web/assets/images/contactUs/Google-Five-Star-Reviews.png" alt="Google Five Star Reviews">
+            </div>
           </div>
         </div>
       </div>

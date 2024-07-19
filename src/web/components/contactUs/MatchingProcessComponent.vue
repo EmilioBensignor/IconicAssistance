@@ -13,13 +13,13 @@
           <img class="matchingImg" width="50%":src="getImgUrl(item.img)" :alt="item.alt" />
           <p class="columnAlignCenter mt-5" v-html="item.title"></p>
           <ul class="matchingList column ga-3 mt-5">
-            <li class="text-start">
+            <li class="rowStart ga-2 text-start">
               <v-icon color="radioactive" icon="mdi-check-bold"></v-icon>
-              {{ item.item1 }}
+              <p>{{ item.item1 }}</p>
             </li>
-            <li class="text-start">
+            <li class="rowStart ga-2 text-start">
               <v-icon color="radioactive" icon="mdi-check-bold"></v-icon>
-              {{ item.item2 }}
+              <p>{{ item.item2 }}</p>
             </li>
           </ul>
         </div>

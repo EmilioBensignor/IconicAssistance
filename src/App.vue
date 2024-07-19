@@ -302,6 +302,12 @@
     align-items: center;
   }
 
+  .rowStart {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+  }
+
   .justifyCenter {
     display: flex;
     justify-content: center;
