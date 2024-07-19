@@ -2,253 +2,174 @@
   <section class="heroContactUs">
     <div class="content">
       <div class="columnAlignCenter">
-        <div id="hero" class="heroPages columnAlignCenter ga-5">
+        <div id="hero" class="heroPages columnAlignCenter ga-10 mt-15 py-15 px-3">
           <div class="heroTitle">
             <h1 v-motion="scrollBottom" class="text-start text-midnight mb-5">
-              Enhance your Productivity with an
-              <span class="text-radioactive"> ICONIC Executive Assistant</span>
+              Meet your perfect assistant, starting at
+              <span class="text-radioactive"> $11 an hour!</span>
             </h1>
-            <p v-motion="scrollBottom" class="pMedium text-start">
-              <span class="font-weight-bold">Successful leaders</span>
-              understand the power of having reliable Executive Assistants.
-              Through ICONIC Assistants, you can access
-              <span class="font-weight-bold"
-                >personalized executive support</span
-              >
-              to elevate your daily achievements to new heights.
+            <p v-motion="scrollBottom" class="w-100 pMedium text-start">
+              Recruitment made simple, cost effective and scalable. Hire top 1% of Executive and Customer Service
+              Assistants.
             </p>
+            <div ref="formContainer" id="form-container" class="form bg-white rounded-xl pa-5 elevation-3 mt-5"></div>
+            <div class="googleLogo columnAlignCenter mt-5">
+              <img class="w-75" src="@/web/assets/images/contactUs/Google-Five-Star-Reviews.png" alt="Google Five Star Reviews">
+            </div>
           </div>
-          <div
-            ref="formContainer"
-            id="form-container"
-            class="form bg-white rounded-xl pa-5 elevation-3 mt-3"></div>
+          <div class="w-50 desktop">
+            <img v-motion="scrollBottom" class="w-100"
+              src="@/web/assets/images/contactUs/Executive-Assistant-Model-Iconic-Assistants.png" alt="Executive Assistant Model Iconic Assistants" />
+          </div>
         </div>
-        <img
-          class="blueWave"
-          src="@/web/assets/images/misc/Radioactive-Bottom-Wave.png"
-          alt="Blue Wave" />
       </div>
     </div>
   </section>
 </template>
 
 <script setup>
-  import { scrollBottom } from "@/motions.js";
+import { scrollBottom } from "@/motions.js";
+import { onMounted } from 'vue';
 
+const createHubSpotForm = () => {
   const hubspotScript = document.createElement("script");
   hubspotScript.setAttribute("charset", "utf-8");
   hubspotScript.setAttribute("type", "text/javascript");
   hubspotScript.src = "//js.hsforms.net/forms/embed/v2.js";
   hubspotScript.async = true;
 
-  const createHubSpotForm = () => {
+  hubspotScript.onload = () => {
     window.hbspt.forms.create({
       region: "na1",
       portalId: "46001660",
       formId: "d164c3b6-b2b5-4fc9-acdf-b0920ec87420",
       target: "#form-container",
+      onFormSubmit: function ($form) {
+        const lead = {};
+        window.addEventListener("message", function (event) {
+          if (event.data.type === "hsFormCallback") {
+            if (event.data.eventName === "onFormSubmit") {
+              for (var key in event.data.data) {
+                if (Array.isArray(event.data.data[key].value)) {
+                  event.data.data[key].value = event.data.data[key].value.toString().replaceAll(",", ";");
+                }
+                lead[event.data.data[key].name] = event.data.data[key].value;
+              }
+              if (Object.keys(lead).length <= 1) {
+                lead = event.data.data;
+              }
+            } else if (event.data.eventName === "onFormSubmitted") {
+              var redirectURL = "/booking"; // replace with the redirect URL
+              var queryString = new URLSearchParams(lead).toString();
+              window.location.href = `${redirectURL}?${queryString}`; // this is the query string
+            }
+          }
+        });
+      }
     });
-
-    integrateChiliPiper();
   };
 
   document.body.appendChild(hubspotScript);
+};
 
-  hubspotScript.onload = createHubSpotForm;
-
-  const integrateChiliPiper = () => {
-    const chilipiperScript = document.createElement("script");
-    chilipiperScript.setAttribute(
-      "src",
-      "https://js.chilipiper.com/marketing.js"
-    );
-    chilipiperScript.setAttribute("type", "text/javascript");
-    chilipiperScript.async = true;
-
-    document.body.appendChild(chilipiperScript);
-  };
-
-  var cpTenantDomain = "iconicassistants";
-  var cpRouterName = "disco_call";
-  var cpHSDataFormIDs = [];
-  window.addEventListener("message", function (event) {
-    if (cpHSDataFormIDs.length > 0 && !cpHSDataFormIDs.includes(event.data.id))
-      return;
-    if (
-      event.data.type === "hsFormCallback" &&
-      event.data.eventName === "onFormSubmitted"
-    ) {
-      var lead = event.data.data.submissionValues;
-      for (var key in lead) {
-        if (Array.isArray(lead[key])) {
-          lead[key] = lead[key].toString().replaceAll(",", ";");
-        }
-      }
-      ChiliPiper.submit(cpTenantDomain, cpRouterName, {
-        map: true,
-        lead: lead,
-      });
-    }
-  });
+onMounted(() => {
+  createHubSpotForm();
+});
 </script>
 
 <style scoped>
-  h1 {
-    width: 100%;
-    line-height: 1em;
-  }
+h1 {
+  width: 100%;
+  line-height: 1em;
+}
 
-  .heroContactUs {
-    position: relative;
-    background: rgb(255, 255, 255);
-    background: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 1) 10%,
-      rgba(155, 220, 248, 1) 100%
-    );
+.heroPages {
+  width: 95%;
+}
+
+.desktop {
+  display: none;
+}
+
+.form {
+  width: 100%;
+}
+
+/* SM */
+@media only screen and (min-width: 480px) {
+
+  .form {
+    width: 95%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+
+  .form {
+    width: 90%;
+  }
+}
+
+/* MD */
+@media only screen and (min-width: 769px) {
+
+  .form, .googleLogo {
+    width: 85%;
+  }
+}
+
+/* LG */
+@media only screen and (min-width: 992px) {
+
+  .form, .googleLogo {
+    width: 80%;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1080px) {
+  .desktop {
+    display: block;
   }
 
   .heroPages {
+    flex-direction: row;
+    align-items: start;
+    margin-top: 5rem !important;
+  }
+
+  .heroTitle {
+    width: 55%;
+  }
+
+  .pMedium {
+    width: 85% !important;
+    font-size: 1.3rem;
+  }
+
+  .form, .googleLogo {
     width: 95%;
-    padding: 30vw 0 25vw 0;
   }
+}
 
-  .blueWave {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    z-index: 1;
+@media only screen and (min-width: 1280px) {
+
+  .form, .googleLogo {
+    width: 90%;
   }
+}
 
-  .desktop {
-    display: none;
+@media only screen and (min-width: 1600px) {
+
+  .form, .googleLogo {
+    width: 85%;
   }
+}
 
-  .form {
-    width: 100%;
+@media only screen and (min-width: 1920px) {
+
+  .form, .googleLogo {
+    width: 80%;
   }
-
-  /* SM */
-  @media only screen and (min-width: 480px) {
-    .heroPages {
-      padding: 25vw 0 25vw 0;
-    }
-
-    .form {
-      width: 95%;
-    }
-  }
-
-  @media only screen and (min-width: 600px) {
-    .heroPages {
-      padding: 20vw 0 25vw 0;
-    }
-
-    .form {
-      width: 90%;
-    }
-  }
-
-  @media only screen and (min-width: 700px) {
-    .heroPages {
-      padding: 18vw 0 25vw 0;
-    }
-  }
-
-  /* MD */
-  @media only screen and (min-width: 769px) {
-    .heroPages {
-      padding: 16vw 0 25vw 0;
-    }
-
-    .form {
-      width: 85%;
-    }
-  }
-
-  @media only screen and (min-width: 900px) {
-    .heroPages {
-      padding: 14vw 0 22vw 0;
-    }
-  }
-
-  /* LG */
-  @media only screen and (min-width: 992px) {
-    .heroPages {
-      padding: 13vw 0 22vw 0;
-    }
-
-    .form {
-      width: 80%;
-    }
-  }
-
-  /* Desktop */
-  @media only screen and (min-width: 1080px) {
-    .desktop {
-      display: block;
-    }
-
-    .heroContactUs {
-      background: linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 1) 30%,
-        rgba(155, 220, 248, 1) 100%
-      );
-    }
-
-    .heroPages {
-      flex-direction: row;
-      align-items: start;
-      padding: 15vw 0 20vw 0;
-    }
-
-    .heroTitle {
-      width: 65%;
-    }
-
-    .pMedium {
-      font-size: 1.3rem;
-    }
-
-    .form {
-      width: 50%;
-    }
-  }
-
-  @media only screen and (min-width: 1280px) {
-    .heroPages {
-      padding: 13vw 0 22vw 0;
-    }
-
-    .form {
-      width: 65%;
-    }
-  }
-
-  @media only screen and (min-width: 1350px) {
-    .heroPages {
-      padding: 12vw 0 22vw 0;
-    }
-  }
-
-  @media only screen and (min-width: 1600px) {
-    .heroPages {
-      padding: 10vw 0 22vw 0;
-    }
-
-    .form {
-      width: 60%;
-    }
-  }
-
-  @media only screen and (min-width: 1920px) {
-    .heroPages {
-      padding: 10% 0 20% 0;
-    }
-
-    .form {
-      width: 55%;
-    }
-  }
+}
 </style>

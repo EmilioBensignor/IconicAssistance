@@ -8,7 +8,7 @@
             <div class="carouselContent d-flex flex-row ga-5">
               <div v-for="(reviewDesktop, index) in reviews.slice(0, 3)" :key="index"
                 class="columnAlignCenter bg-white rounded-xl elevation-5 px-8 py-5">
-                <img src="@/web/assets/images/contactUs/Stars-Slide.png" alt="Blue Stars" width="50%">
+                <!-- <img src="@/web/assets/images/contactUs/Stars-Slide.png" alt="Blue Stars" width="50%"> -->
                 <p class="text-left mt-5" v-html="reviewDesktop"></p>
               </div>
             </div>
@@ -17,7 +17,7 @@
             <div class="carouselContent d-flex flex-row ga-5">
               <div v-for="(reviewDesktop, index) in reviews.slice(3, 6)" :key="index"
                 class="columnAlignCenter bg-white rounded-xl elevation-5 px-8 py-5">
-                <img src="@/web/assets/images/contactUs/Stars-Slide.png" alt="Blue Stars" width="50%">
+                <!-- <img src="@/web/assets/images/contactUs/Stars-Slide.png" alt="Blue Stars" width="50%"> -->
                 <p class="text-left mt-5" v-html="reviewDesktop"></p>
               </div>
             </div>
@@ -26,7 +26,7 @@
             <div class="carouselContent d-flex flex-row ga-5">
               <div v-for="(reviewDesktop, index) in reviews.slice(6, 9)" :key="index"
                 class="columnAlignCenter bg-white rounded-xl elevation-5 px-8 py-5">
-                <img src="@/web/assets/images/contactUs/Stars-Slide.png" alt="Blue Stars" width="50%">
+                <!-- <img src="@/web/assets/images/contactUs/Stars-Slide.png" alt="Blue Stars" width="50%"> -->
                 <p class="text-left mt-5" v-html="reviewDesktop"></p>
               </div>
             </div>
@@ -38,7 +38,7 @@
             <div class="carouselContent d-flex flex-row ga-5">
               <div v-for="(reviewDesktop, index) in reviews.slice(0, 2)" :key="index"
                 class="columnAlignCenter bg-white rounded-xl elevation-5 px-8 py-5">
-                <img src="@/web/assets/images/contactUs/Stars-Slide.png" alt="Blue Stars" width="60%">
+                <!-- <img src="@/web/assets/images/contactUs/Stars-Slide.png" alt="Blue Stars" width="60%"> -->
                 <p class="text-left mt-5" v-html="reviewDesktop"></p>
               </div>
             </div>
@@ -47,7 +47,7 @@
             <div class="carouselContent d-flex flex-row ga-5">
               <div v-for="(reviewDesktop, index) in reviews.slice(2, 4)" :key="index"
                 class="columnAlignCenter bg-white rounded-xl elevation-5 px-8 py-5">
-                <img src="@/web/assets/images/contactUs/Stars-Slide.png" alt="Blue Stars" width="60%">
+                <!-- <img src="@/web/assets/images/contactUs/Stars-Slide.png" alt="Blue Stars" width="60%"> -->
                 <p class="text-left mt-5" v-html="reviewDesktop"></p>
               </div>
             </div>
@@ -56,7 +56,7 @@
             <div class="carouselContent d-flex flex-row ga-5">
               <div v-for="(reviewDesktop, index) in reviews.slice(5, 7)" :key="index"
                 class="columnAlignCenter bg-white rounded-xl elevation-5 px-8 py-5">
-                <img src="@/web/assets/images/contactUs/Stars-Slide.png" alt="Blue Stars" width="60%">
+                <!-- <img src="@/web/assets/images/contactUs/Stars-Slide.png" alt="Blue Stars" width="60%"> -->
                 <p class="text-left mt-5" v-html="reviewDesktop"></p>
               </div>
             </div>
@@ -65,7 +65,7 @@
             <div class="carouselContent d-flex flex-row ga-5">
               <div v-for="(reviewDesktop, index) in reviews.slice(8, 10)" :key="index"
                 class="columnAlignCenter bg-white rounded-xl elevation-5 px-8 py-5">
-                <img src="@/web/assets/images/contactUs/Stars-Slide.png" alt="Blue Stars" width="60%">
+                <!-- <img src="@/web/assets/images/contactUs/Stars-Slide.png" alt="Blue Stars" width="60%"> -->
                 <p class="text-left mt-5" v-html="reviewDesktop"></p>
               </div>
             </div>
@@ -76,13 +76,12 @@
           <v-carousel-item v-for="(reviewMobile, index) in reviews" :key="index">
             <div class="carouselContent">
               <div class="columnAlignCenter bg-white rounded-xl elevation-5 px-8 py-5">
-                <img src="@/web/assets/images/contactUs/Stars-Slide.png" alt="Blue Stars" width="50%">
+                <!-- <img src="@/web/assets/images/contactUs/Stars-Slide.png" alt="Blue Stars" width="50%"> -->
                 <p class="text-left mt-5" v-html="reviewMobile"></p>
               </div>
             </div>
           </v-carousel-item>
         </v-carousel>
-        <FindingSimpleComponent />
         <h3 v-motion="scrollBottom" class="text-white mt-10 mb-5">Find your next BEST HIRE with ICONIC</h3>
         <a href="#hero" class="primaryButton elevation-3 mb-3 px-10 py-5">Get Started</a>
       </div>
@@ -91,13 +90,9 @@
 </template>
 
 <script>
-import FindingSimpleComponent from "@/web/components/contactUs/FindingSimpleComponent.vue";
 
 export default {
   name: 'ContactUs',
-  components: {
-    FindingSimpleComponent,
-  },
   data() {
     return {
       reviews: [

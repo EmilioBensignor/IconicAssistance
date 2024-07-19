@@ -46,7 +46,7 @@ export const faqs = [
   },
   {
     question: "How quickly can I be Up and Running?",
-    answer: "From the first meeting, it takes approximately 10 to 20 business days to find, interview and qualify the right candidate for you and your business.",
+    answer: "From the first meeting, it takes approximately 5 to 7 business days to find, interview and qualify the right candidate for you and your business.",
     bullets: [],
     category: "Getting Started"
   },
@@ -118,7 +118,7 @@ export const faqs = [
     category: "Payment"
   },
   {
-    question: "What tasks can I outsource to a VA?",
+    question: "What tasks can I outsource to a EA?",
     answer: "You can outsource almost anything to a Executive Assistant as long as you’re clear with what, when and how you want things done (we can help you with that!). ",
     bullets: [],
     category: "Getting Started"

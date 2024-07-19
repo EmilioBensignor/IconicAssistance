@@ -4,7 +4,7 @@
       <nav class="justifyCenter py-5">
         <IconicLogo class="align-self-center mt-1" color="blue" />
       </nav>
-      <div class="flexCenter mt-5">
+      <div class="w-75 flexCenter mt-5">
         <p>Thank you for booking a call.</p>
         <p>See you soon!</p>
         <router-link class="secondaryButton elevation-5 mt-10" :to="routes.HOME">Return to Homepage</router-link>

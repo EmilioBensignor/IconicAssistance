@@ -1,190 +1,153 @@
 <template>
-  <section class="radioactiveSky">
-    <div class="content">
-      <div class="columnAlignCenter">
-        <h2 v-motion="scrollBottom" class="text-white mb-5">Start Delegating Now</h2>
-        <p class="explication text-white mb-4" v-motion="scrollBottom">
-          Delegate efficiently with a remote executive assistant, managing schedules, messages, and gathering essential
-          information for better decision-making
-        </p>
-        <div class="delegatingWrapper columnAlignCenter ga-15 py-10">
-          <div class="twoDelegating columnAlignCenter ga-15">
-            <div class="delegating columnAlignCenter ga-4" v-motion="scrollBottom">
-              <img class="elevation-5" width="40%" src="@/web/assets/images/contactUs/Email-Calendar-Management.png"
-                alt="Email Calendar Management">
-              <p class="titleContact text-white font-weight-bold">Email and Calendar Management</p>
-              <p class="text-white">
-                Your EA can efficiently handle <span class="font-weight-bold">scheduling</span>, organizing events,
-                managing
-                invitations, and <span class="font-weight-bold">setting reminders</span>, keeping your day organized and
-                productive.
-              </p>
-            </div>
-            <div class="delegating columnAlignCenter ga-4" v-motion="scrollBottom">
-              <img class="elevation-5" width="40%" src="@/web/assets/images/contactUs/Data-Management.png"
-                alt="Data Management">
-              <p class="titleContact text-white font-weight-bold">Data Management</p>
-              <p class="text-white">
-                An EA <span class="font-weight-bold">proficiently manages</span> data, including organizing files,
-                inputting
-                data, maintaining databases, and generating reports, ensuring your information is organized and
-                accessible
-                when needed.
-              </p>
-            </div>
+  <section class="content">
+    <div class="columnAlignCenter py-10">
+      <h2 v-motion="scrollBottom" class="w-100 text-midnight mb-2">
+        Start delegating in <span class="text-radioactive">3 simple steps.</span>
+      </h2>
+      <img class="line" src="@/web/assets/images/misc/sky-line-4.png" />
+      <div class="stepsContainer columnAlignCenter ga-15 py-15">
+        <div v-for="(item, index) in steps" :key="index" class="w-75 step columnAlignCenter ga-5"
+          v-motion="scrollBottom" :class="item.class">
+          <div class="stepContent">
+            <p class="text-start text-radioactive font-weight-bold">STEP {{ item.number }}</p>
+            <h3 class="w-100 text-start mb-2">{{ item.title }}</h3>
+            <p class="text-start">{{ item.text }}</p>
           </div>
-          <div class="twoDelegating columnAlignCenter ga-15">
-            <div class="delegating columnAlignCenter ga-4" v-motion="scrollBottom">
-              <img class="elevation-5" width="40%" src="@/web/assets/images/contactUs/Document-Preparation.png"
-                alt="Document Preparation">
-              <p class="titleContact text-white font-weight-bold">Document Preparation</p>
-              <p class="text-white">
-                A remote EA can handle <span class="font-weight-bold">formatting documents</span>, <span
-                  class="font-weight-bold">proofreading</span>, compiling reports, and drafting correspondence, ensuring
-                your documents are polished and <span class="font-weight-bold">professional</span>.
-              </p>
-            </div>
-            <div class="delegating columnAlignCenter ga-4" v-motion="scrollBottom">
-              <img class="elevation-5" width="40%" src="@/web/assets/images/contactUs/Research.png" alt="Research">
-              <p class="titleContact text-white font-weight-bold">Research</p>
-              <p class="text-white">
-                Have your EA handle <span class="font-weight-bold">research tasks</span>, such as gathering information,
-                conducting market research, summarizing findings, and <span class="font-weight-bold">compiling
-                  reports</span>, providing you with valuable insights to inform your decisions.
-              </p>
-            </div>
-          </div>
+          <img class="w-100 shadow-25" :src="getImgUrl(item.img)" :alt="item.alt">
         </div>
-        <a class="secondaryButton elevation-3 mt-4 px-10 py-5" href="#hero">Get Started</a>
       </div>
+      <p v-motion="scrollBottom" class="pMedium font-weight-bold">
+        Find your next BEST HIRE with <span class="text-radioactive">ICONIC</span>
+      </p>
+      <a class="secondaryButton mt-5 elevation-5">Get Started</a>
     </div>
   </section>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      steps: [
+        {
+          number: 1,
+          title: "Discovery call",
+          text: "Complete the registration form to schedule a call with us and discuss your business needs and the desired qualities in your executive assistant.",
+          img: "contactUs/step-discovery-call.png",
+          alt: "Discovery Call"
+        },
+        {
+          number: 2,
+          title: "Marching and interview",
+          text: "Our recruitment team will provide you with a perfect match from a pool of over 5,000 pre-vetted professionals for you to interview and approve.",
+          img: "contactUs/step-matching-interview.png",
+          alt: "Matching Interview",
+          class: "reversed blueBorders"
+        },
+        {
+          number: 3,
+          title: "Onboarding & Ongoing support",
+          text: "We help you onboard your Executive Assistant and provide support with your dedicated Customer Success Manager.",
+          img: "contactUs/step-onboarding-support.png",
+          alt: "Onboarding & Ongoing Support"
+        },
+      ]
+    }
+  },
+  methods: {
+    getImgUrl(imgName) {
+      return new URL(`../../assets/images/${imgName}`, import.meta.url).href;
+    },
+  },
+}
+</script>
 
 <script setup>
 import { scrollBottom } from "@/motions.js";
 </script>
 
-<style>
-.titleContact {
-  width: 100% !important;
-  font-size: 1.3rem;
-}
-
-.explication {
+<style scoped>
+.line {
   width: 90%;
 }
 
-.delegating {
-  width: 85%;
+.blueBorders {
+  border-top: 2px solid #373ae6;
+  border-bottom: 2px solid #373ae6;
+  padding: 4rem 0;
 }
 
-/* SM */
 @media only screen and (min-width: 480px) {
-  .delegating {
-    width: 75%;
-  }
-
-  .titleContact {
-    font-size: 1.4rem;
-  }
-
-  .delegating img {
-    width: 30%;
-  }
-}
-
-@media only screen and (min-width: 600px) {
-  .titleContact {
-    font-size: 1.55rem;
-  }
-
-  .delegating img {
-    width: 25%;
-  }
-}
-
-/* MD */
-@media only screen and (min-width: 769px) {
-  .explication {
+  .line {
     width: 85%;
   }
+}
 
-  .titleContact {
-    font-size: 1.65rem;
-  }
-
-  .delegating img {
-    width: 20%;
+@media only screen and (min-width: 770px) {
+  .line {
+    width: 77%;
   }
 }
 
-/* LG */
 @media only screen and (min-width: 992px) {
-  .explication {
-    width: 80%;
-  }
-
-  .titleContact {
-    font-size: 1.75rem;
-  }
-
-  .delegating img {
-    width: 15%;
+  .line {
+    width: 70%;
   }
 }
 
-/* Desktop */
 @media only screen and (min-width: 1080px) {
-  .delegatingWrapper {
-    flex-direction: row !important;
+  .reversed {
+    flex-direction: row-reverse !important;
   }
 
-  .delegating {
-    align-items: flex-start !important;
-    text-align: start;
+  .line {
+    width: 62% !important;
   }
 
-  .titleContact {
-    font-size: 1.7rem;
+  .step {
+    width: 85% !important;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3rem !important;
   }
 
-  .delegating img {
-    width: 20%;
+  .stepContent {
+    width: 45%;
   }
 
-  .delegating p {
-    width: 100% !important;
+  .stepContent p {
+    width: 95% !important;
+  }
+
+  .step img {
+    width: 45% !important;
   }
 }
 
 @media only screen and (min-width: 1280px) {
-  .titleContact {
-    font-size: 1.8rem;
+  .line {
+    width: 52% !important;
   }
+}
 
-  .delegating img {
-    width: 15%;
+@media only screen and (min-width: 1440px) {
+  .line {
+    width: 48% !important;
   }
 }
 
 @media only screen and (min-width: 1600px) {
-  .titleContact {
-    font-size: 1.9rem;
-  }
-
-  .delegating img {
-    width: 12.5%;
+  .line {
+    width: 45% !important;
   }
 }
 
-@media only screen and (min-width: 1920px) {
-  .titleContact {
-    font-size: 2rem;
+@media only screen and (min-width: 1750px) {
+  .line {
+    width: 43% !important;
   }
-
-  .delegating img {
-    width: 10%;
+  .stepsContainer {
+    width: 90%;
   }
 }
 </style>
