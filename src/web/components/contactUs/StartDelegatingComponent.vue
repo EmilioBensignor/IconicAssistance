@@ -38,7 +38,7 @@ export default {
         },
         {
           number: 2,
-          title: "Marching and interview",
+          title: "Matching and interview",
           text: "Our recruitment team will provide you with a perfect match from a pool of over 5,000 pre-vetted professionals for you to interview and approve.",
           img: "contactUs/step-matching-interview.png",
           alt: "Matching Interview",
