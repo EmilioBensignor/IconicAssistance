@@ -1,16 +1,25 @@
 <template>
-  <section class="content yourReturn">
-    <div class="columnAlignCenter py-15">
-      <h2 v-motion="scrollBottom" class="w-100 text-midnight mb-1">
-        Your Return on Investment
-      </h2>
-      <img class="line" src="@/web/assets/images/misc/blue-line-2.png" />
-      <ReturnInvestmentComponent class="returnInvestment my-15" v-motion="scrollBottom" />
-      <CostComparisonComponent class="costComparison my-15" v-motion="scrollBottom" />
-      <p v-motion="scrollBottom" class="pMedium mt-5">
-        Our clients save $30k+ a year by hiring <span class="font-weight-bold text-radioactive">ICONIC</span> EAs
-        instead of an in-house employee
-      </p>
+  <section class="columnAlignCenter yourReturn">
+    <div class="content">
+      <div class="columnAlignCenter py-15">
+        <h2 v-motion="scrollBottom" class="w-100 text-midnight mb-1">
+          Your Return on Investment
+        </h2>
+        <img class="line" src="@/web/assets/images/misc/blue-line-2.png" />
+        <ReturnInvestmentComponent
+          class="returnInvestment my-15"
+          v-motion="scrollBottom"
+        />
+        <CostComparisonComponent
+          class="costComparison my-15"
+          v-motion="scrollBottom"
+        />
+        <p v-motion="scrollBottom" class="pMedium mt-5">
+          Our clients save $30k+ a year by hiring
+          <span class="font-weight-bold text-radioactive">ICONIC</span> EAs
+          instead of an in-house employee
+        </p>
+      </div>
     </div>
   </section>
 </template>
@@ -22,8 +31,8 @@ export default {
   components: {
     ReturnInvestmentComponent,
     CostComparisonComponent,
-  }
-}
+  },
+};
 </script>
 
 <script setup>

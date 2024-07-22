@@ -1,23 +1,47 @@
 <template>
-  <section class="content bg-white">
-    <div class="columnAlignCenter py-10">
-      <h2 v-motion="scrollBottom" class="w-100 text-midnight mb-5">
-        With <span class="text-radioactive">Iconic Assistants,</span> you'll benefit from...
-      </h2>
-      <div class="w-75 benefitsContainer column ga-15 mt-10 mb-5">
-        <div v-motion="scrollBottom" v-for="(benefit, index) in benefits" class="benefit column ga-5"
-          :class="benefit.class" :key="index">
-          <div class="w-75 benefitImg" :class="benefit.imgClass">
-            <img class="w-75" :src="getImgUrl(benefit.img)" :alt="benefit.alt" />
-          </div>
-          <div class="column benefitContent" :class="benefit.contentClass">
-            <div class="w-75 column benefitHeader">
-              <p class="pMedium text-start">{{ benefit.title }}</p>
-              <img class="benefitHeaderLine" src="@/web/assets/images/misc/blue-line-1.png" />
+  <section class="columnAlignCenter bg-white">
+    <div class="content">
+      <div class="columnAlignCenter py-10">
+        <h2 v-motion="scrollBottom" class="w-100 text-midnight mb-5">
+          With <span class="text-radioactive">Iconic Assistants,</span> you'll
+          benefit from...
+        </h2>
+        <div class="w-75 benefitsContainer column ga-15 mt-10 mb-5">
+          <div
+            v-motion="scrollBottom"
+            v-for="(benefit, index) in benefits"
+            class="benefit column ga-5"
+            :class="benefit.class"
+            :key="index"
+          >
+            <div class="w-75 benefitImg" :class="benefit.imgClass">
+              <img
+                class="w-75"
+                :src="getImgUrl(benefit.img)"
+                :alt="benefit.alt"
+              />
             </div>
-            <ul class="benefitList column ga-1 text-start pl-5 mt-5" :class="benefit.listClass">
-              <li class="text-midnight" v-for="(item, index) in benefit.list" :key="index">{{ item }}</li>
-            </ul>
+            <div class="column benefitContent" :class="benefit.contentClass">
+              <div class="w-75 column benefitHeader">
+                <p class="pMedium text-start">{{ benefit.title }}</p>
+                <img
+                  class="benefitHeaderLine"
+                  src="@/web/assets/images/misc/blue-line-1.png"
+                />
+              </div>
+              <ul
+                class="benefitList column ga-1 text-start pl-5 mt-5"
+                :class="benefit.listClass"
+              >
+                <li
+                  class="text-midnight"
+                  v-for="(item, index) in benefit.list"
+                  :key="index"
+                >
+                  {{ item }}
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -39,8 +63,8 @@ export default {
             "No deposit fee",
             "No recruitment fee",
             "No lock in contract",
-            "Upscale your teams on demand"
-          ]
+            "Upscale your teams on demand",
+          ],
         },
         {
           title: "EFFICIENCY",
@@ -50,12 +74,12 @@ export default {
             "5-7 days turnaround time",
             "Pre-vetted talent pool",
             "3 step recruitment",
-            "48hr rapid replacement"
+            "48hr rapid replacement",
           ],
           class: "reversed",
           imgClass: "justifyStart",
           contentClass: "justifyEnd",
-          listClass: "listClass"
+          listClass: "listClass",
         },
         {
           title: "EXPERTISE",
@@ -67,18 +91,18 @@ export default {
             "English tested c1 / c2 level",
             "PDA assessment",
             "Skilled assistants that will adapt to your business",
-            "1:1 interviews with recruitment professionals"
-          ]
+            "1:1 interviews with recruitment professionals",
+          ],
         },
-      ]
-    }
+      ],
+    };
   },
   methods: {
     getImgUrl(imgName) {
       return new URL(`/src/web/assets/images/${imgName}`, import.meta.url).href;
     },
   },
-}
+};
 </script>
 
 <script setup>
@@ -214,7 +238,8 @@ import { scrollBottom } from "@/motions.js";
 }
 
 @media only screen and (min-width: 1600px) {
-  .benefitsContainer, .benefit{
+  .benefitsContainer,
+  .benefit {
     width: 100% !important;
   }
 
@@ -223,7 +248,7 @@ import { scrollBottom } from "@/motions.js";
   }
 
   .listClass {
-    margin-right: 2rem
+    margin-right: 2rem;
   }
 }
 

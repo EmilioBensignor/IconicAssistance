@@ -1,25 +1,40 @@
 <template>
-  <section class="content">
-    <div class="columnAlignCenter py-10">
-      <h2 v-motion="scrollBottom" class="w-100 text-midnight mb-2">
-        Start delegating in <span class="text-radioactive">3 simple steps.</span>
-      </h2>
-      <img class="line" src="@/web/assets/images/misc/sky-line-4.png" />
-      <div class="stepsContainer columnAlignCenter ga-15 py-15">
-        <div v-for="(item, index) in steps" :key="index" class="w-75 step columnAlignCenter ga-5"
-          v-motion="scrollBottom" :class="item.class">
-          <div class="stepContent">
-            <p class="text-start text-radioactive font-weight-bold">STEP {{ item.number }}</p>
-            <h3 class="w-100 text-start mb-2">{{ item.title }}</h3>
-            <p class="text-start">{{ item.text }}</p>
+  <section class="columnAlignCenter">
+    <div class="content">
+      <div class="columnAlignCenter py-10">
+        <h2 v-motion="scrollBottom" class="w-100 text-midnight mb-2">
+          Start delegating in
+          <span class="text-radioactive">3 simple steps.</span>
+        </h2>
+        <img class="line" src="@/web/assets/images/misc/sky-line-4.png" />
+        <div class="stepsContainer columnAlignCenter ga-15 py-15">
+          <div
+            v-for="(item, index) in steps"
+            :key="index"
+            class="w-75 step columnAlignCenter ga-5"
+            v-motion="scrollBottom"
+            :class="item.class"
+          >
+            <div class="stepContent">
+              <p class="text-start text-radioactive font-weight-bold">
+                STEP {{ item.number }}
+              </p>
+              <h3 class="w-100 text-start mb-2">{{ item.title }}</h3>
+              <p class="text-start">{{ item.text }}</p>
+            </div>
+            <img
+              class="w-100 shadow-25"
+              :src="getImgUrl(item.img)"
+              :alt="item.alt"
+            />
           </div>
-          <img class="w-100 shadow-25" :src="getImgUrl(item.img)" :alt="item.alt">
         </div>
+        <p v-motion="scrollBottom" class="pMedium font-weight-bold">
+          Find your next BEST HIRE with
+          <span class="text-radioactive">ICONIC</span>
+        </p>
+        <a class="secondaryButton mt-5 elevation-5">Get Started</a>
       </div>
-      <p v-motion="scrollBottom" class="pMedium font-weight-bold">
-        Find your next BEST HIRE with <span class="text-radioactive">ICONIC</span>
-      </p>
-      <a class="secondaryButton mt-5 elevation-5">Get Started</a>
     </div>
   </section>
 </template>
@@ -34,7 +49,7 @@ export default {
           title: "Discovery call",
           text: "Complete the registration form to schedule a call with us and discuss your business needs and the desired qualities in your executive assistant.",
           img: "contactUs/step-discovery-call.png",
-          alt: "Discovery Call"
+          alt: "Discovery Call",
         },
         {
           number: 2,
@@ -42,24 +57,24 @@ export default {
           text: "Our recruitment team will provide you with a perfect match from a pool of over 5,000 pre-vetted professionals for you to interview and approve.",
           img: "contactUs/step-matching-interview.png",
           alt: "Matching Interview",
-          class: "reversed blueBorders"
+          class: "reversed blueBorders",
         },
         {
           number: 3,
           title: "Onboarding & Ongoing support",
           text: "We help you onboard your Executive Assistant and provide support with your dedicated Customer Success Manager.",
           img: "contactUs/step-onboarding-support.png",
-          alt: "Onboarding & Ongoing Support"
+          alt: "Onboarding & Ongoing Support",
         },
-      ]
-    }
+      ],
+    };
   },
   methods: {
     getImgUrl(imgName) {
       return new URL(`../../assets/images/${imgName}`, import.meta.url).href;
     },
   },
-}
+};
 </script>
 
 <script setup>

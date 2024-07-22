@@ -1,121 +1,123 @@
 <template>
-  <section class="content googleBg">
-    <div class="columnAlignCenter py-10">
-      <img
-        v-motion="scrollBottom"
-        class="googleLogo w-50"
-        src="@/web/assets/images/contactUs/logo-google.png"
-        alt="Logo Google"
-      />
-      <div class="mt-5">
-        <h2 v-motion="scrollBottom" class="w-100 text-white">Reviews 5.0</h2>
+  <section class="columnAlignCenter googleBg">
+    <div class="content">
+      <div class="columnAlignCenter py-10">
         <img
-          class="w-75"
-          src="@/web/assets/images/contactUs/five-stars.png"
-          alt="Five Stars"
+          v-motion="scrollBottom"
+          class="googleLogo w-50"
+          src="@/web/assets/images/contactUs/logo-google.png"
+          alt="Logo Google"
         />
-      </div>
-      <v-carousel
-        id="reviewsDesktop"
-        class="columnAlignCenter"
-        cycle
-        hide-delimiters
-        show-arrows="hover"
-      >
-        <v-carousel-item>
-          <div
-            class="w-75 googleReviewsContainer columnAlignCenter ga-5 mt-10 mb-5"
-          >
+        <div class="mt-5">
+          <h2 v-motion="scrollBottom" class="w-100 text-white">Reviews 5.0</h2>
+          <img
+            class="w-75"
+            src="@/web/assets/images/contactUs/five-stars.png"
+            alt="Five Stars"
+          />
+        </div>
+        <v-carousel
+          id="reviewsDesktop"
+          class="columnAlignCenter"
+          cycle
+          hide-delimiters
+          show-arrows="hover"
+        >
+          <v-carousel-item>
             <div
-              class="bg-white googleReview"
-              v-for="(item, index) in reviews1Desktop"
-              :key="index"
+              class="w-75 googleReviewsContainer columnAlignCenter ga-5 mt-10 mb-5"
             >
-              <img class="w-100" :src="getImgUrl(item.img)" :alt="item.alt" />
+              <div
+                class="bg-white googleReview"
+                v-for="(item, index) in reviews1Desktop"
+                :key="index"
+              >
+                <img class="w-100" :src="getImgUrl(item.img)" :alt="item.alt" />
+              </div>
             </div>
-          </div>
-        </v-carousel-item>
-        <v-carousel-item>
-          <div
-            class="w-75 googleReviewsContainer columnAlignCenter ga-5 mt-10 mb-5"
-          >
+          </v-carousel-item>
+          <v-carousel-item>
             <div
-              class="bg-white googleReview"
-              v-for="(item, index) in reviews2Desktop"
-              :key="index"
+              class="w-75 googleReviewsContainer columnAlignCenter ga-5 mt-10 mb-5"
             >
-              <img class="w-100" :src="getImgUrl(item.img)" :alt="item.alt" />
+              <div
+                class="bg-white googleReview"
+                v-for="(item, index) in reviews2Desktop"
+                :key="index"
+              >
+                <img class="w-100" :src="getImgUrl(item.img)" :alt="item.alt" />
+              </div>
             </div>
-          </div>
-        </v-carousel-item>
-        <v-carousel-item>
-          <div
-            class="w-75 googleReviewsContainer columnAlignCenter ga-5 mt-10 mb-5"
-          >
+          </v-carousel-item>
+          <v-carousel-item>
             <div
-              class="bg-white googleReview"
-              v-for="(item, index) in reviews3Desktop"
-              :key="index"
+              class="w-75 googleReviewsContainer columnAlignCenter ga-5 mt-10 mb-5"
             >
-              <img class="w-100" :src="getImgUrl(item.img)" :alt="item.alt" />
+              <div
+                class="bg-white googleReview"
+                v-for="(item, index) in reviews3Desktop"
+                :key="index"
+              >
+                <img class="w-100" :src="getImgUrl(item.img)" :alt="item.alt" />
+              </div>
             </div>
-          </div>
-        </v-carousel-item>
-      </v-carousel>
-      <v-carousel
-        id="reviewsMobile"
-        class="h-100 columnAlignCenter"
-        hide-delimiters
-        cycle
-        :show-arrows="false"
-      >
-        <v-carousel-item>
-          <div class="w-75 carouselItemDiv columnAlignCenter ga-5 mt-10 mb-5">
-            <img
-              v-for="(item, index) in reviews1Mobile"
-              :key="index"
-              class="w-100 rounded-xl pa-1"
-              :src="getImgUrl(item.img)"
-              :alt="item.alt"
-            />
-          </div>
-        </v-carousel-item>
-        <v-carousel-item>
-          <div class="w-75 carouselItemDiv columnAlignCenter ga-5 mt-10 mb-5">
-            <img
-              v-for="(item, index) in reviews2Mobile"
-              :key="index"
-              class="w-100 rounded-xl"
-              :src="getImgUrl(item.img)"
-              :alt="item.alt"
-            />
-          </div>
-        </v-carousel-item>
-        <v-carousel-item>
-          <div class="w-75 carouselItemDiv columnAlignCenter ga-5 mt-10 mb-5">
-            <img
-              v-for="(item, index) in reviews3Mobile"
-              :key="index"
-              class="w-100 rounded-xl"
-              :src="getImgUrl(item.img)"
-              :alt="item.alt"
-            />
-          </div>
-        </v-carousel-item>
-        <v-carousel-item>
-          <div class="w-75 carouselItemDiv columnAlignCenter ga-5 mt-10 mb-5">
-            <img
-              v-for="(item, index) in reviews4Mobile"
-              :key="index"
-              class="w-100 rounded-xl"
-              :src="getImgUrl(item.img)"
-              :alt="item.alt"
-            />
-          </div>
-        </v-carousel-item>
-      </v-carousel>
-      <!-- <h3 v-motion="scrollBottom" class="text-white mt-5 mb-2">Success Stories</h3>
+          </v-carousel-item>
+        </v-carousel>
+        <v-carousel
+          id="reviewsMobile"
+          class="h-100 columnAlignCenter"
+          hide-delimiters
+          cycle
+          :show-arrows="false"
+        >
+          <v-carousel-item>
+            <div class="w-75 carouselItemDiv columnAlignCenter ga-5 mt-10 mb-5">
+              <img
+                v-for="(item, index) in reviews1Mobile"
+                :key="index"
+                class="w-100 rounded-xl pa-1"
+                :src="getImgUrl(item.img)"
+                :alt="item.alt"
+              />
+            </div>
+          </v-carousel-item>
+          <v-carousel-item>
+            <div class="w-75 carouselItemDiv columnAlignCenter ga-5 mt-10 mb-5">
+              <img
+                v-for="(item, index) in reviews2Mobile"
+                :key="index"
+                class="w-100 rounded-xl"
+                :src="getImgUrl(item.img)"
+                :alt="item.alt"
+              />
+            </div>
+          </v-carousel-item>
+          <v-carousel-item>
+            <div class="w-75 carouselItemDiv columnAlignCenter ga-5 mt-10 mb-5">
+              <img
+                v-for="(item, index) in reviews3Mobile"
+                :key="index"
+                class="w-100 rounded-xl"
+                :src="getImgUrl(item.img)"
+                :alt="item.alt"
+              />
+            </div>
+          </v-carousel-item>
+          <v-carousel-item>
+            <div class="w-75 carouselItemDiv columnAlignCenter ga-5 mt-10 mb-5">
+              <img
+                v-for="(item, index) in reviews4Mobile"
+                :key="index"
+                class="w-100 rounded-xl"
+                :src="getImgUrl(item.img)"
+                :alt="item.alt"
+              />
+            </div>
+          </v-carousel-item>
+        </v-carousel>
+        <!-- <h3 v-motion="scrollBottom" class="text-white mt-5 mb-2">Success Stories</h3>
       <img class="w-75" src="@/web/assets/images/misc/sky-line-3.png" alt="" /> -->
+      </div>
     </div>
   </section>
 </template>
@@ -292,7 +294,7 @@ import { scrollBottom } from "@/motions.js";
   #reviewsMobile {
     display: none;
   }
-  
+
   #reviewsDesktop {
     display: flex;
   }
@@ -317,6 +319,7 @@ import { scrollBottom } from "@/motions.js";
 
   .googleReview img {
     object-fit: contain;
+    height: 100%;
   }
 
   .googleLogo {

@@ -1,32 +1,50 @@
 <template>
-  <section class="content">
-    <div class="columnAlignCenter py-10">
-      <h2 v-motion="scrollBottom" class="w-100 text-midnight mb-1">
-        What can Iconic Assistants do?
-      </h2>
-      <img class="w-75 blueLine" src="@/web/assets/images/misc/blue-line-2.png" />
-      <p v-motion="scrollBottom" class="mt-5">Stop spending countless hours every week on tasks someone else can do for
-        you.</p>
-      <div v-motion="scrollBottom" class="whatCan column ga-15 my-10">
-        <div v-for="(task, index) in tasks" class="whatCanDiv" :key="index">
-          <div class="rowCenter ga-5">
-            <img :src="getImgUrl(task.img)" class="w-25 whatCanImg shadow-2" :alt="task.title" />
-            <p class="w-100 whatCanTitle text-start font-weight-bold">{{ task.title }}</p>
-          </div>
-          <div class="mt-7">
-            <ul class="column ga-3">
-              <li 
-                v-for="(item, index) in task.list" 
-                class="text-start" 
-                :key="index">
-                <v-icon class="mr-3" icon="mdi-check-bold" color="radioactive"></v-icon>
-                {{ item }}
-              </li>
-            </ul>
+  <section class="columnAlignCenter">
+    <div class="content">
+      <div class="columnAlignCenter py-10">
+        <h2 v-motion="scrollBottom" class="w-100 text-midnight mb-1">
+          What can Iconic Assistants do?
+        </h2>
+        <img
+          class="w-75 blueLine"
+          src="@/web/assets/images/misc/blue-line-2.png"
+        />
+        <p v-motion="scrollBottom" class="mt-5">
+          Stop spending countless hours every week on tasks someone else can do
+          for you.
+        </p>
+        <div v-motion="scrollBottom" class="whatCan column ga-15 my-10">
+          <div v-for="(task, index) in tasks" class="whatCanDiv" :key="index">
+            <div class="rowCenter ga-5">
+              <img
+                :src="getImgUrl(task.img)"
+                class="w-25 whatCanImg shadow-2"
+                :alt="task.title"
+              />
+              <p class="w-100 whatCanTitle text-start font-weight-bold">
+                {{ task.title }}
+              </p>
+            </div>
+            <div class="mt-7">
+              <ul class="column ga-3">
+                <li
+                  v-for="(item, index) in task.list"
+                  class="text-start"
+                  :key="index"
+                >
+                  <v-icon
+                    class="mr-3"
+                    icon="mdi-check-bold"
+                    color="radioactive"
+                  ></v-icon>
+                  {{ item }}
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
+        <a href="#hero" class="secondaryButton elevation-5 mt-5">Get Started</a>
       </div>
-      <a href="#hero" class="secondaryButton elevation-5 mt-5">Get Started</a>
     </div>
   </section>
 </template>
@@ -43,7 +61,7 @@ export default {
             "Scheduling and Prioritizing Appointments",
             "Travel Plans and Reservations",
             "Arranging Meetings and Taking Minutes",
-            "Preparing Reports and Presentations"
+            "Preparing Reports and Presentations",
           ],
         },
         {
@@ -53,7 +71,7 @@ export default {
             "Managing Emails",
             "Data Entry",
             "Posting to Social Media",
-            "Taking phone calls"
+            "Taking phone calls",
           ],
         },
         {
@@ -63,7 +81,7 @@ export default {
             "Phone, Email & Live Chat Support",
             "Customer Retention & Relationship Building",
             "Escalation Management",
-            "Customer Onboarding"
+            "Customer Onboarding",
           ],
         },
         {
@@ -73,18 +91,18 @@ export default {
             "Cloud Bookkeeping",
             "Tracking and Reporting Expenses",
             "Maintaining Ledgers",
-            "Invoicing and Payroll Support"
+            "Invoicing and Payroll Support",
           ],
         },
       ],
-    }
+    };
   },
   methods: {
     getImgUrl(imgName) {
       return new URL(`/src/web/assets/images/${imgName}`, import.meta.url).href;
     },
-  }
-}
+  },
+};
 </script>
 
 <script setup>
@@ -127,7 +145,7 @@ import { scrollBottom } from "@/motions.js";
 }
 
 @media only screen and (min-width: 992px) {
-  .blueLine{
+  .blueLine {
     width: 85% !important;
   }
 
@@ -140,7 +158,7 @@ import { scrollBottom } from "@/motions.js";
   .blueLine {
     width: 60% !important;
   }
-  
+
   .whatCan {
     flex-direction: row;
     flex-wrap: wrap;

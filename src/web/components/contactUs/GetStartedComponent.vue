@@ -1,20 +1,36 @@
 <template>
-  <section class="content getStartedBg py-10">
-    <div class="columnAlignCenter">
-      <h2 v-motion="scrollBottom" class="text-midnight mb-5">
-        Get started with <span class="text-radioactive">ICONIC</span> if you are struggling with...
-      </h2>
-      <div v-motion="scrollBottom" class="getStarted columnAlignCenter ga-15 mt-15">
-        <div v-for="(start, index) in started" class="started w-75 bg-white elevation-5 pt-15 pa-5" :key="index">
-          <img class="startIcon shadow-25" :src="getImgUrl(start.image)" :alt="start.alt" />
-          <div class="column ga-1">
-            <p class="startedTitle w-100 text-start font-weight-bold mt-5">
-              {{ start.title }}
-            </p>
+  <section class="columnAlignCenter getStartedBg">
+    <div class="content py-10">
+      <div class="columnAlignCenter">
+        <h2 v-motion="scrollBottom" class="text-midnight mb-5">
+          Get started with <span class="text-radioactive">ICONIC</span> if you
+          are struggling with...
+        </h2>
+        <div
+          v-motion="scrollBottom"
+          class="getStarted columnAlignCenter ga-15 mt-15"
+        >
+          <div
+            v-for="(start, index) in started"
+            class="started w-75 bg-white elevation-5 pt-15 pa-5"
+            :key="index"
+          >
+            <img
+              class="startIcon shadow-25"
+              :src="getImgUrl(start.image)"
+              :alt="start.alt"
+            />
+            <div class="column ga-1">
+              <p class="startedTitle w-100 text-start font-weight-bold mt-5">
+                {{ start.title }}
+              </p>
+            </div>
+            <ul class="startedList column ga-3 text-start pl-5 pr-3 mt-5">
+              <li v-for="(item, index) in start.list" :key="index">
+                {{ item }}
+              </li>
+            </ul>
           </div>
-          <ul class="startedList column ga-3 text-start pl-5 pr-3 mt-5">
-            <li v-for="(item, index) in start.list" :key="index">{{ item }}</li>
-          </ul>
         </div>
       </div>
     </div>
@@ -34,8 +50,8 @@ export default {
             "Recruitment costs",
             "Employment taxes",
             "Overhead costs & Fringe benefits",
-            "Payroll management"
-          ]
+            "Payroll management",
+          ],
         },
         {
           title: "LONG RECRUITMENT TIME:",
@@ -45,8 +61,8 @@ export default {
             "2-8 weeks recruitment",
             "Dozens of interviews that lead nowhere",
             "Candidate Drop-off and long-term unavailability",
-            "Inaccurate job posting"
-          ]
+            "Inaccurate job posting",
+          ],
         },
         {
           title: "NOT FINDING THE RIGHT CANDIDATES:",
@@ -57,17 +73,17 @@ export default {
             "Unqualified candidates",
             "Lack of experience in recruitment",
             "Difficulty in international hiring",
-          ]
+          ],
         },
-      ]
-    }
+      ],
+    };
   },
   methods: {
     getImgUrl(imgName) {
       return new URL(`/src/web/assets/images/${imgName}`, import.meta.url).href;
     },
   },
-}
+};
 </script>
 
 <script setup>
@@ -147,7 +163,7 @@ import { scrollBottom } from "@/motions.js";
   }
 
   li {
-    font-size: 0.9rem
+    font-size: 0.9rem;
   }
 
   .line {
@@ -159,7 +175,7 @@ import { scrollBottom } from "@/motions.js";
   .started {
     height: 21rem;
   }
-  
+
   .line {
     width: 90%;
   }
@@ -169,11 +185,11 @@ import { scrollBottom } from "@/motions.js";
   .getStarted {
     width: 85%;
   }
-  
+
   .started {
-    height: 20rem
+    height: 20rem;
   }
-  
+
   .line {
     width: 100%;
   }
@@ -183,11 +199,11 @@ import { scrollBottom } from "@/motions.js";
   .getStarted {
     width: 75%;
   }
-  
+
   .started {
-    height: 22.5rem
+    height: 22.5rem;
   }
-  
+
   .line {
     width: 92%;
   }

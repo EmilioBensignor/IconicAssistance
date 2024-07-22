@@ -44,11 +44,6 @@
       return {
         aspects: [
           {
-            img: "Time-Icon.png",
-            alt: "Time Icon",
-            text: "Seeking ways to enhance efficiency without exceeding a limited <strong class='text-radioactive'>budget</strong>",
-          },
-          {
             img: "Tired-Icon.png",
             alt: "Tired Icon",
             text: "Constantly <strong class='text-radioactive'>fatigued</strong> due to the overwhelming working demands",
