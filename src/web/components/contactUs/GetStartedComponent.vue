@@ -90,7 +90,7 @@
 
 <style scoped>
   .getStartedBg {
-    background: url("@/web/assets/images/contactUs/get-started-bg.png");
+    background: url("@/web/assets/images/contactUs/get-started-Executive-Assistant-bg.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

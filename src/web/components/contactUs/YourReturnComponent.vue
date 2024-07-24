@@ -42,7 +42,7 @@
 
 <style scoped>
   .yourReturn {
-    background: url("@/web/assets/images/contactUs/your-return-bg.png");
+    background: url("@/web/assets/images/contactUs/your-return-Remote-Payroll-bg.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
