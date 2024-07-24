@@ -2,9 +2,7 @@
   <nav>
     <v-app-bar elevation="0" app class="bg-white px-3 py-1">
       <div class="w-100 d-flex justify-space-between align-center">
-        <router-link class="text-decoration-none" :to="'/'">
-          <IconicLogo class="mt-1" color="blue" />
-        </router-link>
+        <IconicLogo class="mt-1" color="blue" />
         <a class="popUp desktop elevation-3" href="#hero">Get Started</a>
       </div>
     </v-app-bar>
