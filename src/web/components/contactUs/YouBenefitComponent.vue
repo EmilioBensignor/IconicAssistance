@@ -57,7 +57,7 @@ export default {
       benefits: [
         {
           title: "SCALABILITY",
-          img: "contactUs/benefit-scalability.png",
+          img: "contactUs/benefit-scalability-executive-assistant.png",
           alt: "Benefit Scalability",
           list: [
             "Starting at $11/Hr",
@@ -69,7 +69,7 @@ export default {
         },
         {
           title: "EFFICIENCY",
-          img: "contactUs/benefit-efficiency.png",
+          img: "contactUs/benefit-efficiency-executive-assistant.png",
           alt: "Benefit Efficiency",
           list: [
             "5-7 days turnaround time",
@@ -84,7 +84,7 @@ export default {
         },
         {
           title: "EXPERTISE",
-          img: "contactUs/benefit-expertise.png",
+          img: "contactUs/benefit-expertise-executive-assistant.png",
           alt: "Benefit Expertise",
           list: [
             "10+ years recruitment experience",
