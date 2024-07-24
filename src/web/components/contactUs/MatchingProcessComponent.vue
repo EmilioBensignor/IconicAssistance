@@ -72,7 +72,7 @@ export default {
           img: "contactUs/Psychometric-Job-Compatibility-Matching-Process.png",
           alt: "Psychometric Job Compatibility Matching Process",
           title:
-            "<p class='matchingTitle text-center font-weight-bold text-radioactive'>Proficiency <span class='text-blueSky'>and</span> Job Compatibility <span class='text-blueSky'>Assessment</span></p>",
+            "<p class='matchingTitle text-center font-weight-bold text-radioactive'>Psychometric <span class='text-blueSky'>and</span> Job Compatibility <span class='text-blueSky'>Assessment</span></p>",
           item1: "Perform behavioral assessments",
           item2: "Test candidate's compatibility with job position",
         },

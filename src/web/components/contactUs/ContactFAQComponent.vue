@@ -6,7 +6,7 @@
           Frequently Asked Questions
         </h2>
         <img class="w-75 line" src="@/web/assets/images/misc/sky-line-3.png" />
-        <div class="w-100 faqContainer columnAlignCenter ga-5 mt-10">
+        <div class="faqContainer columnAlignCenter ga-5 mt-10">
           <v-expansion-panels v-motion="scrollBottom" class="faqWrapper">
             <v-expansion-panel class="elevation-4 rounded-lg">
               <v-expansion-panel-title>
@@ -99,6 +99,10 @@ import { scrollBottom } from "@/motions.js";
 <style scoped>
 .examples {
   text-decoration: none;
+}
+
+.faqContainer {
+  width: 75%;
 }
 
 @media only screen and (min-width: 480px) {

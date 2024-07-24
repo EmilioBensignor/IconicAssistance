@@ -33,7 +33,7 @@
           Find your next BEST HIRE with
           <span class="text-radioactive">ICONIC</span>
         </p>
-        <a class="secondaryButton mt-5 elevation-5">Get Started</a>
+        <a href="#hero" class="secondaryButton mt-5 elevation-5">Get Started</a>
       </div>
     </div>
   </section>

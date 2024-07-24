@@ -1,5 +1,5 @@
 <template>
-  <HeaderPagesComponent />
+  <HeaderContactComponent />
   <HeroComponent />
   <GetStartedComponent />
   <WhatCanComponent />
@@ -9,11 +9,11 @@
   <StartDelegatingComponent />
   <GoogleReviewsComponent />
   <ContactFAQComponent />
-  <FooterComponent />
+  <FooterContactComponent />
 </template>
 
 <script>
-import HeaderPagesComponent from "@/web/components/HeaderPagesComponent.vue";
+import HeaderContactComponent from "@/web/components/contactUs/HeaderContactComponent.vue";
 import IconicLogo from "@/web/components/icons/IconicLogo.vue";
 import HeroComponent from "@/web/components/contactUs/HeroComponent.vue";
 import GetStartedComponent from "@/web/components/contactUs/GetStartedComponent.vue";
@@ -24,7 +24,7 @@ import MatchingProcessComponent from "@/web/components/contactUs/MatchingProcess
 import StartDelegatingComponent from "@/web/components/contactUs/StartDelegatingComponent.vue";
 import GoogleReviewsComponent from "@/web/components/contactUs/GoogleReviewsComponent.vue";
 import ContactFAQComponent from "@/web/components/contactUs/ContactFAQComponent.vue";
-import FooterComponent from "@/web/components/FooterComponent.vue";
+import FooterContactComponent from "@/web/components/contactUs/FooterContactComponent.vue";
 
 import "https://link.msgsndr.com/js/form_embed.js";
 
@@ -35,7 +35,7 @@ import { useRoute } from "vue-router";
 export default {
   name: "ContactUs",
   components: {
-    HeaderPagesComponent,
+    HeaderContactComponent,
     IconicLogo,
     HeroComponent,
     GetStartedComponent,
@@ -46,7 +46,7 @@ export default {
     StartDelegatingComponent,
     GoogleReviewsComponent,
     ContactFAQComponent,
-    FooterComponent,
+    FooterContactComponent,
   },
   setup() {
     const route = useRoute();

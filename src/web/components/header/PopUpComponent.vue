@@ -46,8 +46,6 @@
   }
 }
 
-
-
 @media only screen and (min-width: 1920px) {
   .popUp {
     padding: 21px 39px;
