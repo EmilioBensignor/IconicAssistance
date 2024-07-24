@@ -41,8 +41,8 @@
         started: [
           {
             title: "HIGH WAGES & OPERATING COSTS:",
-            image: "contactUs/high-wages.png",
-            alt: "High Wages",
+            image: "contactUs/high-wages-recruitment.png",
+            alt: "High Wages Recruitment",
             list: [
               "Recruitment costs",
               "Employment taxes",
@@ -63,8 +63,8 @@
           },
           {
             title: "NOT FINDING THE RIGHT CANDIDATES:",
-            image: "contactUs/right-candidates.png",
-            alt: "Right Candidates",
+            image: "contactUs/right-candidates-recruitment.png",
+            alt: "Right Candidates Recruitment",
             list: [
               "Inaccurate resumes",
               "Unqualified candidates",
@@ -115,10 +115,6 @@
     margin: 0 auto;
   }
 
-  .line {
-    width: 85%;
-  }
-
   .startedList {
     list-style: outside;
   }
@@ -130,27 +126,6 @@
     .startIcon {
       width: 7rem;
       top: -3rem;
-    }
-    .line {
-      width: 90%;
-    }
-  }
-
-  @media only screen and (min-width: 600px) {
-    .line {
-      width: 80%;
-    }
-  }
-
-  @media only screen and (min-width: 770px) {
-    .line {
-      width: 72%;
-    }
-  }
-
-  @media only screen and (min-width: 992px) {
-    .line {
-      width: 80%;
     }
   }
 
@@ -180,10 +155,6 @@
     li {
       font-size: 0.9rem;
     }
-
-    .line {
-      width: 95%;
-    }
   }
 
   @media only screen and (min-width: 1085px) {
@@ -196,10 +167,6 @@
     .started {
       height: 20rem;
     }
-
-    .line {
-      width: 90%;
-    }
   }
 
   @media only screen and (min-width: 1440px) {
@@ -210,10 +177,6 @@
     .started {
       height: 20rem;
     }
-
-    .line {
-      width: 100%;
-    }
   }
 
   @media only screen and (min-width: 1600px) {
@@ -223,22 +186,6 @@
 
     .started {
       height: 21.5rem;
-    }
-
-    .line {
-      width: 92%;
-    }
-  }
-
-  @media only screen and (min-width: 1750px) {
-    .line {
-      width: 82%;
-    }
-  }
-
-  @media only screen and (min-width: 1920px) {
-    .line {
-      width: 75%;
     }
   }
 </style>

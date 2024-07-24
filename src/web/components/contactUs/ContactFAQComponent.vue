@@ -5,7 +5,7 @@
         <h2 v-motion="scrollBottom" class="w-100 text-midnight mt-10 mb-2">
           Frequently Asked Questions
         </h2>
-        <img class="w-75 line" src="@/web/assets/images/misc/sky-line-3.png" />
+        <img class="w-75 line" src="@/web/assets/images/misc/sky-line-3-Virtual-Assistant.png" alt="Line Virtual Assistant" />
         <div class="faqContainer columnAlignCenter ga-5 mt-10">
           <v-expansion-panels v-motion="scrollBottom" class="faqWrapper">
             <v-expansion-panel class="elevation-4 rounded-lg">

@@ -42,16 +42,16 @@ export default {
     return {
       matchingProcess: [
         {
-          img: "contactUs/Filtering-Screening-Matching-Process.png",
-          alt: "Filtering Screening Matching Process",
+          img: "contactUs/Filtering-Screening-Recruitment.png",
+          alt: "Filtering Screening Recruitment",
           title:
             "<p class='matchingTitle text-center font-weight-bold text-radioactive'>Filtering <span class='text-blueSky'>and</span> Screening</p>",
           item1: "Filter candidates by experience, skills and education",
           item2: "Conduct initial screening aligning with client's needs",
         },
         {
-          img: "contactUs/Values-Background-Matching-Process.png",
-          alt: "Values Background Matching Process",
+          img: "contactUs/Values-Background-Recruitment.png",
+          alt: "Values Background Recruitment",
           title:
             "<p class='matchingTitle text-center font-weight-bold text-radioactive'>Values <span class='text-blueSky'>and</span> Background</p>",
           item1:
@@ -60,8 +60,8 @@ export default {
             "Conduct thorough background check such as education and criminal records",
         },
         {
-          img: "contactUs/English-Proficiency-Assessment-Matching-Process.png",
-          alt: "English Proficiency Assessment Matching Process",
+          img: "contactUs/English-Proficiency-Executive-Assistant.png",
+          alt: "English Proficiency Executive Assistant",
           title:
             "<p class='matchingTitle text-center font-weight-bold text-radioactive'>English Proficiency <span class='text-blueSky'>Assessment</span></p>",
           item1:
@@ -69,8 +69,8 @@ export default {
           item2: "Conduct English proficiency tests",
         },
         {
-          img: "contactUs/Psychometric-Job-Compatibility-Matching-Process.png",
-          alt: "Psychometric Job Compatibility Matching Process",
+          img: "contactUs/Psychometric-Job-Compatibility-Virtual-Assistant.png",
+          alt: "Psychometric Job Compatibility Virtual Assistant",
           title:
             "<p class='matchingTitle text-center font-weight-bold text-radioactive'>Psychometric <span class='text-blueSky'>and</span> Job Compatibility <span class='text-blueSky'>Assessment</span></p>",
           item1: "Perform behavioral assessments",

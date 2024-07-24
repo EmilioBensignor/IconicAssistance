@@ -71,7 +71,7 @@
       <div class="lastDiv">
         <p class="text-white font-weight-bold">$1,528.00</p>
       </div>
-      <img class="save w-100 shadow-2" src="@/web/assets/images/contactUs/70-Percent-Less.png" />
+      <img class="save w-100 shadow-2" src="@/web/assets/images/contactUs/70-Percent-Less-Remote-Payroll.png" alt="70 Percent Less Remote Payroll" />
     </div>
   </div>
 </template>

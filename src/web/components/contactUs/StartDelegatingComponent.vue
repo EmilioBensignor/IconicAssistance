@@ -6,7 +6,7 @@
           Start delegating in
           <span class="text-radioactive">3 simple steps.</span>
         </h2>
-        <img class="line" src="@/web/assets/images/misc/sky-line-4.png" />
+        <img class="line" src="@/web/assets/images/misc/sky-line-4-Virtual-Assistant.png" alt="Line Virtual Assistant" />
         <div class="stepsContainer columnAlignCenter ga-15 py-15">
           <div
             v-for="(item, index) in steps"
@@ -48,23 +48,23 @@ export default {
           number: 1,
           title: "Discovery call",
           text: "Complete the registration form to schedule a call with us and discuss your business needs and the desired qualities in your executive assistant.",
-          img: "contactUs/step-discovery-call.png",
-          alt: "Discovery Call",
+          img: "contactUs/discovery-call-customer-support.png",
+          alt: "Discovery Call Customer Support",
         },
         {
           number: 2,
           title: "Matching and interview",
           text: "Our recruitment team will provide you with a perfect match from a pool of over 5,000 pre-vetted professionals for you to interview and approve.",
-          img: "contactUs/step-matching-interview.png",
-          alt: "Matching Interview",
+          img: "contactUs/matching-interview-recruitment.png",
+          alt: "Matching Interview Recruitment",
           class: "reversed blueBorders",
         },
         {
           number: 3,
           title: "Onboarding & Ongoing support",
           text: "We help you onboard your Executive Assistant and provide support with your dedicated Customer Success Manager.",
-          img: "contactUs/step-onboarding-support.png",
-          alt: "Onboarding & Ongoing Support",
+          img: "contactUs/onboarding-customer-support.png",
+          alt: "Onboarding Customer Support",
         },
       ],
     };

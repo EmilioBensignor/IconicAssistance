@@ -26,7 +26,8 @@
                 <p class="pMedium text-start">{{ benefit.title }}</p>
                 <img
                   class="benefitHeaderLine"
-                  src="@/web/assets/images/misc/blue-line-1.png"
+                  src="@/web/assets/images/misc/blue-line-1-Executive-Assistant.png"
+                  alt="Line Executive Assistant"
                 />
               </div>
               <ul

@@ -7,7 +7,8 @@
         </h2>
         <img
           class="w-75 blueLine"
-          src="@/web/assets/images/misc/blue-line-2.png"
+          src="@/web/assets/images/misc/blue-line-2-Executive-Assistant.png"
+          alt="Line Executive Assistant"
         />
         <p v-motion="scrollBottom" class="mt-5">
           Stop spending countless hours every week on tasks someone else can do
@@ -19,7 +20,7 @@
               <img
                 :src="getImgUrl(task.img)"
                 class="w-25 whatCanImg shadow-2"
-                :alt="task.title"
+                :alt="task.alt"
               />
               <p class="w-100 whatCanTitle text-start font-weight-bold">
                 {{ task.title }}
@@ -55,8 +56,9 @@ export default {
     return {
       tasks: [
         {
-          img: "contactUs/executive-support.png",
+          img: "contactUs/executive-support-virtual-assistant.png",
           title: "Executive Support",
+          alt: "Executive Support Virtual Assistant",
           list: [
             "Scheduling and Prioritizing Appointments",
             "Travel Plans and Reservations",
@@ -65,8 +67,9 @@ export default {
           ],
         },
         {
-          img: "contactUs/finance-bookkeeping.png",
-          title: "Finance & Bookkeeping",
+          img: "contactUs/administrative-tasks-virtual-assistant.png",
+          title: "Administrative Tasks",
+          alt: "Administrative Tasks Virtual Assistant",
           list: [
             "Managing Emails",
             "Data Entry",
@@ -75,8 +78,9 @@ export default {
           ],
         },
         {
-          img: "contactUs/customer-support.png",
+          img: "contactUs/customer-support-virtual-assistant.png",
           title: "Customer Support",
+          alt: "Customer Support Virtual Assistant",
           list: [
             "Phone, Email & Live Chat Support",
             "Customer Retention & Relationship Building",
@@ -85,8 +89,9 @@ export default {
           ],
         },
         {
-          img: "contactUs/administrative-tasks.png",
-          title: "Administrative Tasks",
+          img: "contactUs/finance-bookkeeping-virtual-assistant.png",
+          title: "Finance & Bookkeeping",
+          alt: "Finance Bookkeeping Virtual Assistant",
           list: [
             "Cloud Bookkeeping",
             "Tracking and Reporting Expenses",
