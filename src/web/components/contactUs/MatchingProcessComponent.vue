@@ -45,7 +45,7 @@ export default {
           img: "contactUs/Filtering-Screening-Recruitment.png",
           alt: "Filtering Screening Recruitment",
           title:
-            "<p class='matchingTitle text-center font-weight-bold text-radioactive'>Filtering <span class='text-darkBlueSky'>and</span> Screening</p>",
+            "<p class='matchingTitle text-center font-weight-bold text-radioactive'>Filtering <span class='text-blueSky'>and</span> Screening</p>",
           item1: "Filter candidates by experience, skills and education",
           item2: "Conduct initial screening aligning with client's needs",
         },
@@ -53,7 +53,7 @@ export default {
           img: "contactUs/Values-Background-Recruitment.png",
           alt: "Values Background Recruitment",
           title:
-            "<p class='matchingTitle text-center font-weight-bold text-radioactive'>Values <span class='text-darkBlueSky'>and</span> Background</p>",
+            "<p class='matchingTitle text-center font-weight-bold text-radioactive'>Values <span class='text-blueSky'>and</span> Background</p>",
           item1:
             "Ensure candidates values and work ethics are aligned with ICONIC's",
           item2:
@@ -63,7 +63,7 @@ export default {
           img: "contactUs/English-Proficiency-Executive-Assistant.png",
           alt: "English Proficiency Executive Assistant",
           title:
-            "<p class='matchingTitle text-center font-weight-bold text-radioactive'>English Proficiency <span class='text-darkBlueSky'>Assessment</span></p>",
+            "<p class='matchingTitle text-center font-weight-bold text-radioactive'>English Proficiency <span class='text-blueSky'>Assessment</span></p>",
           item1:
             "Assess candidate's ability to communicate efficiently and truthfully",
           item2: "Conduct English proficiency tests",
@@ -72,7 +72,7 @@ export default {
           img: "contactUs/Psychometric-Job-Compatibility-Virtual-Assistant.png",
           alt: "Psychometric Job Compatibility Virtual Assistant",
           title:
-            "<p class='matchingTitle text-center font-weight-bold text-radioactive'>Psychometric <span class='text-darkBlueSky'>and</span> Job Compatibility <span class='text-darkBlueSky'>Assessment</span></p>",
+            "<p class='matchingTitle text-center font-weight-bold text-radioactive'>Psychometric <span class='text-blueSky'>and</span> Job Compatibility <span class='text-blueSky'>Assessment</span></p>",
           item1: "Perform behavioral assessments",
           item2: "Test candidate's compatibility with job position",
         },
