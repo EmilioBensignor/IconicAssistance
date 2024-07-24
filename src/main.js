@@ -26,7 +26,7 @@ const vuetify = createVuetify({
 					black: "#040406",
 					radioactive: "#373ae6",
 					blueSky: "#0cb9f1",
-					darkBlueSky: "#0C9DF1",
+					darkBlueSky: "#0C7DFF",
 					lightBlueSky: "#9BDCF8",
 					midnight: "#120d40",
 					thinGray: "#f0f0f0",
