@@ -15,4 +15,5 @@ export default {
 	RESET_PASSWORD_CONFIRMATION: "/suite/reset-password-confirmation",
 	ASSISTANT_ACTIONS: "/suite/assistant-actions",
 	ASSISTANT_SUITE: "/assistant-suite",
+	ASSISTANT_REGISTER: "/assistant-register",
 };

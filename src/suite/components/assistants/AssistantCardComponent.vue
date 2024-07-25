@@ -1,6 +1,6 @@
 <template>
 	<router-link
-		:to="routes.ASSISTANT_ACTIONS + '/' + '7rRr4RsFbvf3M9EMIG4oHteHnbo2'"
+		:to="routes.ASSISTANT_ACTIONS + '/' + assistant.id"
 		class="card w-100 bg-white columnAlignCenter ga-5 rounded-lg elevation-5 pa-5"
 	>
 		<div class="rowCenter align-self-start ga-5">
@@ -8,13 +8,13 @@
 				<v-icon icon="mdi-account"></v-icon>
 			</div>
 			<div class="cardTitle rowCenter ga-2">
-				<p>{{ assistant.properties.firstname }}</p>
-				<p>{{ assistant.properties.lastname }}</p>
+				<p>{{ assistant.firstname }}</p>
+				<p>{{ assistant.lastname }}</p>
 			</div>
 		</div>
 		<div class="cardBody column ga-3">
-			<p>{{ assistant.properties.email }}</p>
-			<p>{{ assistant.properties.phone }}</p>
+			<p>{{ assistant.email }}</p>
+			<p>{{ assistant.phone }}</p>
 		</div>
 	</router-link>
 </template>

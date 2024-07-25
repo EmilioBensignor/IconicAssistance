@@ -28,19 +28,22 @@ const loginError = ref(null);
 
 const userId = ref(null);
 
-async function signup(email, password) {
+async function signup(email, password, type = "client") {
+	let fnUrl;
+	if (type === "client") {
+		fnUrl = "https://signupclient-cgjqatnysa-uc.a.run.app";
+	} else {
+		fnUrl = "https://signupassistant-cgjqatnysa-uc.a.run.app";
+	}
 	registerError.value = "";
 	if (!store) {
 		store = useAuthStore();
 	}
-	const signUpClient = httpsCallableFromURL(
-		functions,
-		"https://signupclient-cgjqatnysa-uc.a.run.app"
-	);
-	await signUpClient({ email, password })
+	const signUpFn = httpsCallableFromURL(functions, fnUrl);
+	await signUpFn({ email, password })
 		.then((res) => {
 			if (res.data === "User created.") {
-				login(email, password);
+				login(email, password, type);
 			} else {
 				registerError.value = res.data;
 			}
@@ -49,7 +52,7 @@ async function signup(email, password) {
 			registerError.value = error;
 		});
 }
-async function login(email, password) {
+async function login(email, password, type = "client") {
 	loginError.value = null;
 	if (!store) {
 		store = useAuthStore();
@@ -62,7 +65,11 @@ async function login(email, password) {
 		);
 		if (response) {
 			store.isAuthenticated = true;
-			router.push(ROUTES_NAMES.SUITE);
+			if (type === "client") {
+				router.push(ROUTES_NAMES.SUITE);
+			} else {
+				router.push(ROUTES_NAMES.ASSISTANT_SUITE);
+			}
 		}
 	} catch (error) {
 		loginError.value = error.message;

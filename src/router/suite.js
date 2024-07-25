@@ -3,6 +3,7 @@ import SuiteView from "@/suite/views/SuiteView.vue";
 import RegisterView from "@/suite/views/RegisterView.vue";
 import LoginView from "@/suite/views/LoginView.vue";
 import AssistantsView from "@/suite/views/AssistantsView.vue";
+import AssistantRegisterView from "@/suite/views/assistant/AssistantRegisterView.vue";
 import InvoicesView from "@/suite/views/InvoicesView.vue";
 import AccountView from "@/suite/views/AccountView.vue";
 import PaymentMethodsView from "@/suite/views/PaymentMethodsView.vue";
@@ -127,6 +128,15 @@ export const suiteRoutes = [
 		name: "AssistantSuite",
 		component: AssistantSuiteView,
 		beforeEnter: requireAuthAssistant,
+		meta: {
+			title: "Iconic Asssitants Suite",
+			description: "Iconic Assistants Suite.",
+		},
+	},
+	{
+		path: routes.ASSISTANT_REGISTER,
+		name: "AssistantRegister",
+		component: AssistantRegisterView,
 		meta: {
 			title: "Iconic Asssitants Suite",
 			description: "Iconic Assistants Suite.",

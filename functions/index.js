@@ -15,6 +15,12 @@ try {
 }
 const db = admin.firestore();
 
+function transformAssistantData(rawData) {
+	const data = { ...rawData.data() };
+	data.id = rawData.id;
+	return data;
+}
+
 exports.createSetupIntent = onRequest({ cors: true }, async (req, res) => {
 	res.set("Access-Control-Allow-Origin", "*");
 	let customerId;
@@ -36,7 +42,7 @@ exports.createSetupIntent = onRequest({ cors: true }, async (req, res) => {
 
 	const setupIntent = await stripe.setupIntents.create({
 		customer: customerId.stripeId,
-	})
+	});
 	res.send({ data: { clientSecret: setupIntent.client_secret } });
 });
 
@@ -71,7 +77,7 @@ exports.attatchPaymentMethod = onRequest({ cors: true }, async (req, res) => {
 	await db
 		.collection("clients")
 		.doc(data.userId)
-		.update({ hasCCOnFile: 'true' })
+		.update({ hasCCOnFile: "true" })
 		.catch(() => {
 			res.send({ data: "Error updating CC on DB." });
 		});
@@ -148,6 +154,62 @@ exports.signUpClient = onRequest({ cors: true }, async (req, res) => {
 		});
 });
 
+exports.signUpAssistant = onRequest({ cors: true }, async (req, res) => {
+	res.set("Access-Control-Allow-Origin", "*");
+	const data = req.body.data;
+	const email = data.email;
+	const password = data.password;
+	let userInformation;
+	let userId;
+	let allowedUsersSnap;
+
+	if (!email || !password) {
+		res.send({ data: "Email and/or password are missing." });
+	}
+
+	await db
+		.collection("allowedAssistants")
+		.where("email", "=", email)
+		.get()
+		.then((snap) => {
+			userInformation = snap.docs[0].data();
+			userInformation.tasks = [];
+			allowedUsersSnap = snap;
+		})
+		.catch(() => {
+			res.send({ data: "Unauthorized email." });
+		});
+
+	await admin
+		.auth()
+		.createUser({
+			email: email,
+			password: password,
+		})
+		.then((userRecord) => {
+			userId = userRecord.uid;
+		})
+		.catch(() => {
+			res.send({ data: "Error creating account." });
+		});
+
+	await db
+		.collection("assistants")
+		.doc(userId)
+		.set(userInformation)
+		.then(async () => {
+			allowedUsersSnap.forEach((doc) => {
+				doc.ref.delete();
+			});
+		})
+		.then(() => {
+			res.send({ data: "User created." });
+		})
+		.catch(() => {
+			res.send({ data: "Error adding user to database." });
+		});
+});
+
 exports.getClientPaymentMethods = onRequest((req, res) => {
 	cors(req, res, async () => {
 		res.set("Access-Control-Allow-Methods", "POST");
@@ -155,7 +217,6 @@ exports.getClientPaymentMethods = onRequest((req, res) => {
 		res.set("Access-Control-Max-Age", "3600");
 		const data = req.body.data;
 		const stripeId = data.id;
-		console.log(stripeId);
 		try {
 			const paymentMethods = await stripe.paymentMethods.list({
 				customer: stripeId,
@@ -209,23 +270,13 @@ exports.getAssistantsData = onCall(async (data, context) => {
 					)
 			)
 		).then((results) => results.flat());
-
-		const assistantsData = await Promise.all(
-			assistantIds.map((assistantId) =>
-				axios
-					.get(
-						`https://api.hubapi.com/crm/v3/objects/contacts/${assistantId}`,
-						{
-							headers,
-							params: {
-								properties: "phone, firstname, lastname, email",
-							},
-						}
-					)
-					.then((response) => response.data)
-			)
+		const assistantsRawData = await db
+			.collection("assistants")
+			.where("hs_object_id", "in", assistantIds)
+			.get();
+		const assistantsData = assistantsRawData.docs.map((doc) =>
+			transformAssistantData(doc)
 		);
-
 		return { assistants: assistantsData };
 	} catch (err) {
 		console.error(err);
