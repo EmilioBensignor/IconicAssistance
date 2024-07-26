@@ -3,14 +3,14 @@
 	<div class="heroSuite columnAlignCenter">
 		<h1 class="text-midnight ml-4">Assistant Actions</h1>
 	</div>
-	<div class="suiteComponents">
-		<h2 v-if="assistantData">{{ assistantData.firstname }} Tasks</h2>
+	<div class="suiteComponents mt-5">
+		<h2 class="text-center" v-if="assistantData">{{ assistantData.firstname }} Tasks</h2>
 		<v-skeleton-loader
-			class="w-75 mt-5"
+			class="w-75 mt-3"
 			v-if="!assistantData && loading"
 			type="card"
 		></v-skeleton-loader>
-		<div class="mt-5" v-if="assistantData && !loading">
+		<div class="mt-3 mb-5" v-if="assistantData && !loading">
 			<AssistantTaskTableComponent
 				:tasks="assistantData.tasks"
 				:assistantId="assistantData.id"

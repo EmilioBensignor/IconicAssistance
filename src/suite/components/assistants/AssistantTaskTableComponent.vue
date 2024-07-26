@@ -7,10 +7,10 @@
 				</button>
 			</div>
 			<div>
-				<div class="titles my-3">
+				<div class="titles mt-3 pb-3">
 					<p>ToDo</p>
 				</div>
-				<p v-if="todo.length === 0">There are no tasks</p>
+				<p class="mt-3" v-if="todo.length === 0">There are no tasks</p>
 				<ToDoComponent
 					v-else
 					:task="task"
@@ -20,10 +20,10 @@
 				/>
 			</div>
 			<div>
-				<div class="titles my-3">
+				<div class="titles mt-3 pb-3">
 					<p>Completed</p>
 				</div>
-				<p v-if="completed.length === 0">There are no tasks</p>
+				<p class="mt-3" v-if="completed.length === 0">There are no tasks</p>
 				<ToDoComponent
 					v-else
 					:task="task"
@@ -36,11 +36,11 @@
 		<v-dialog v-model="openDialog">
 			<v-card
 				class="bg-suiteBg align-self-center rounded-lg"
-				max-width="400"
+				max-width="100%"
 				title="New task"
 			>
-				<form class="column ga-3 px-5" @submit.prevent="createNewTask">
-					<div>
+				<form class="column ga-3 mt-3 px-5" @submit.prevent="createNewTask">
+					<div class="column ga-3">
 						<label for="name">Task</label>
 						<v-text-field
 							id="name"
@@ -48,23 +48,24 @@
 							v-model="newTask.name"
 						></v-text-field>
 					</div>
-					<div>
+					<div class="column ga-3">
 						<label for="due_date">Due date</label>
 						<v-date-picker
 							id="due_date"
 							:min="yesterday"
 							required
+							width="100%"
 							v-model="newTask.due_date"
 						></v-date-picker>
 					</div>
-					<div>
+					<div class="column ga-3">
 						<label for="observations">Observations</label>
 						<v-text-field
 							id="observations"
 							v-model="newTask.observations"
 						></v-text-field>
 					</div>
-					<SecondaryBtn text="Create" :loading="loading">
+					<SecondaryBtn class="align-self-end mb-5" text="Create" :loading="loading">
 					</SecondaryBtn>
 				</form>
 			</v-card>
@@ -169,6 +170,10 @@ export default {
 .taskBtn:hover {
 	background-color: white;
 	color: #373ae6;
+}
+
+.titles {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 .titles p {
