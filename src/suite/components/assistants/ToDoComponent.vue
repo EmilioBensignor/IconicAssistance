@@ -1,18 +1,26 @@
 <template>
-  <div class="toDoElement colum pb-3 pr-3">
+  <div class="toDoElement column pb-3 pr-3">
     <div class="rowCenter ga-3 text-midnight">
       <v-checkbox
         v-model="task.status"
         :label="task.name"
         @click.prevent="moveTask(task)"></v-checkbox>
     </div>
-    <div class="align-self-end">
-      <p class="w-100 text-end">{{ task.due_date.split("T")[0] }}</p>
+    <div class="rowCenter justify-space-between pl-3">
+      <div>
+        <p class="w-100 text-end">{{ formattedDueDate }}</p>
+      </div>
+      <div class="rowCenter ga-1">
+        <v-btn density="compact" icon="mdi-pencil" variant="text" color="radioactive" @click="openModal(task)"></v-btn>
+        <v-btn density="compact" icon="mdi-delete" variant="text" color="radioactive" @click="deleteTask(task)"></v-btn>
+      </div>
     </div>
+    
   </div>
 </template>
 
 <script>
+import { formatDate } from '@/suite/services/format.service';
   export default {
     props: {
       task: {
@@ -23,7 +31,20 @@
         type: Function,
         required: true,
       },
+      deleteTask: {
+        type: Function,
+        required: true,
+      },
+      openModal: {
+        type: Function,
+        required: true,
+      },
     },
+    computed: {
+    formattedDueDate() {
+      return this.task.due_date ? formatDate(this.task.due_date) : '';
+    },
+  }
   };
 </script>
 
@@ -50,3 +71,6 @@
     color: #373ae6;
   }
 </style>
+
+
+<!-- .split("T")[0].replaceAll('-','/') -->
