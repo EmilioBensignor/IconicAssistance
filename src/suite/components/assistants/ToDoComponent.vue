@@ -8,7 +8,7 @@
     </div>
     <div class="rowCenter justify-space-between pl-3">
       <div>
-        <p class="w-100 text-end">{{ formattedDueDate }}</p>
+        <p class="w-100 text-end">Due date: {{ formattedDueDate }}</p>
       </div>
       <div class="rowCenter ga-1">
         <v-btn density="compact" icon="mdi-pencil" variant="text" color="radioactive" @click="openModal(task)"></v-btn>
