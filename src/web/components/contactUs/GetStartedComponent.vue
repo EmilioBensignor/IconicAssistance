@@ -165,7 +165,7 @@
 
   @media only screen and (min-width: 1280px) {
     .started {
-      height: 20rem;
+      height: 21rem;
     }
   }
 
