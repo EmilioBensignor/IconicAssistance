@@ -2,7 +2,7 @@
   <HeaderSuiteComponent />
   <div class="bg-suiteBg">
     <div class="heroSuite columnAlignCenter">
-      <h1 class="text-midnight ml-4">Assistants</h1>
+      <h1 class="text-midnight ml-4">Executive Assistants</h1>
     </div>
     <div class="suiteComponents mt-5">
       <v-skeleton-loader
