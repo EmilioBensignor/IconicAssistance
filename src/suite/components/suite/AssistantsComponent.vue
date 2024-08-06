@@ -1,27 +1,34 @@
 <template>
 	<div class="column ga-3 my-5">
-		<p class="titleSuite text-start">Assistants (<span>{{ assistants.length }}</span>)</p>
+		<p class="titleSuite text-start">
+			Assistants (<span>{{ assistants.length }}</span
+			>)
+		</p>
 		<div class="rowCenter flex-wrap ga-5" v-if="assistants.length > 0">
-			<AssistantCardComponent v-for="(assistant, index) in assistants" :key="index" :assistant="assistant" />
+			<AssistantPreviewComponent
+				v-for="(assistant, index) in assistants"
+				:key="index"
+				:assistant="assistant"
+			/>
 		</div>
 		<p v-else class="text-start">You currently have no assistants</p>
 	</div>
 </template>
 
 <script>
-import AssistantCardComponent from "@/suite/components/assistants/AssistantCardComponent.vue"
+import AssistantPreviewComponent from "@/suite/components/assistants/AssistantPreviewComponent.vue";
 
 export default {
 	name: "AssistantsComponent",
 	components: {
-		AssistantCardComponent,
+		AssistantPreviewComponent,
 	},
 	props: {
-    assistants: {
-      type: Array,
-      required: true
-    },
-  }
+		assistants: {
+			type: Array,
+			required: true,
+		},
+	},
 };
 </script>
 
