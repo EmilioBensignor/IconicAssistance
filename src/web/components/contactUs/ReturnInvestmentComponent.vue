@@ -54,7 +54,7 @@
         <p class="font-weight-bold">ICONIC EA</p>
       </div>
       <div>
-        <p class="text-white">$11</p>
+        <p class="text-white">$11.00</p>
       </div>
       <div>
         <p class="text-white">$0.00</p>
@@ -63,7 +63,7 @@
         <p class="text-white">$0.00</p>
       </div>
       <div>
-        <p class="text-white">$11</p>
+        <p class="text-white">$11.00</p>
       </div>
       <div>
         <p class="text-white">160 Hrs</p>
