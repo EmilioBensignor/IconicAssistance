@@ -54,7 +54,7 @@
         <p class="font-weight-bold">ICONIC EA</p>
       </div>
       <div>
-        <p class="text-white">$9.55</p>
+        <p class="text-white">$11</p>
       </div>
       <div>
         <p class="text-white">$0.00</p>
@@ -63,13 +63,13 @@
         <p class="text-white">$0.00</p>
       </div>
       <div>
-        <p class="text-white">$9.55</p>
+        <p class="text-white">$11</p>
       </div>
       <div>
         <p class="text-white">160 Hrs</p>
       </div>
       <div class="lastDiv">
-        <p class="text-white font-weight-bold">$1,528.00</p>
+        <p class="text-white font-weight-bold">$1,760.00</p>
       </div>
       <img class="save w-100 shadow-2" src="@/web/assets/images/contactUs/70-Percent-Less-Remote-Payroll.png" alt="70 Percent Less Remote Payroll" />
     </div>
