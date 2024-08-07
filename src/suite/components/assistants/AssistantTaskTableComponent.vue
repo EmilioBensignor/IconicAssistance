@@ -2,7 +2,7 @@
 	<div class="bg-white rounded-xl elevation-3 pa-5 taskTable">
 		<div class="column">
 			<div class="align-self-end">
-				<button class="taskBtn py-3 px-5" @click="openModalCreate">
+				<button class="taskBtn elevation-2 py-3 px-5" @click="openModalCreate">
 					+ Create Task
 				</button>
 			</div>

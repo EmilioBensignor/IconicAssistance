@@ -1,5 +1,5 @@
 <template>
-	<div class="toDoElement column pb-3 pr-3">
+	<div class="toDoElement ga-2 column pb-3 pr-3">
 		<div class="rowCenter ga-3 text-midnight">
 			<v-checkbox
 				v-model="task.status"
@@ -7,11 +7,11 @@
 				@click.prevent="moveTask(task)"
 			></v-checkbox>
 		</div>
-		<div class="rowCenter justify-space-between pl-3">
-			<div>
-				<p class="w-100 text-end">Due date: {{ formattedDueDate }}</p>
+		<div class="column pl-3">
+			<div class="column ga-1">
+				<p class="w-auto">Due date: {{ formattedDueDate }}</p>
 				<p
-					class="w-100 text-end"
+					class="w-auto"
 					v-if="
 						formattedCompletedAt &&
 						formattedCompletedAt.length !== 0
@@ -20,7 +20,7 @@
 					Completed at: {{ formattedCompletedAt }}
 				</p>
 			</div>
-			<div class="rowCenter ga-1">
+			<div class="rowCenter align-self-end ga-1">
 				<v-btn
 					density="compact"
 					icon="mdi-pencil"

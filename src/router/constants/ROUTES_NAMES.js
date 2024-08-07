@@ -13,7 +13,7 @@ export default {
 	ADD_PAYMENT_METHOD_CONFIRMATION: "/suite/add-payment-method-confirmation",
 	RESET_PASSWORD: "/suite/reset-password",
 	RESET_PASSWORD_CONFIRMATION: "/suite/reset-password-confirmation",
-	ASSISTANT_ACTIONS: "/suite/assistant-actions",
+	ASSISTANT_TASKS: "/suite/assistant-tasks",
 	ASSISTANT_SUITE: "/assistant-suite",
 	ASSISTANT_REGISTER: "/assistant-register",
 };

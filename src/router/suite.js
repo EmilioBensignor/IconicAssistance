@@ -12,7 +12,7 @@ import AddPaymentMethodConfirmationView from "@/suite/views/AddPaymentMethodConf
 import ResetPasswordView from "@/suite/views/ResetPasswordView.vue";
 import ResetPasswordConfirmationView from "@/suite/views/ResetPasswordConfirmationView.vue";
 import AssistantSuiteView from "@/suite/views/assistant/AssistantSuiteView.vue";
-import AssistantActionsView from "@/suite/views/AssistantActionsView.vue";
+import AssistantTasksView from "@/suite/views/AssistantTasksView.vue";
 import requireAuthClient from "./guards/requireAuthClient";
 import requireAuthAssistant from "./guards/requireAuthAssistant";
 
@@ -114,9 +114,9 @@ export const suiteRoutes = [
 		},
 	},
 	{
-		path: `${routes.ASSISTANT_ACTIONS}/:id`,
-		name: "AssistantActions",
-		component: AssistantActionsView,
+		path: `${routes.ASSISTANT_TASKS}/:id`,
+		name: "AssistantTasks",
+		component: AssistantTasksView,
 		beforeEnter: requireAuthClient,
 		meta: {
 			title: "Iconic Asssitants Suite",

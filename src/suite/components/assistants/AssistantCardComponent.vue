@@ -1,53 +1,54 @@
 <template>
   <div class="column ga-10">
-    <div
-      class="card w-100 bg-white column ga-5 rounded-lg elevation-5 pa-5">
-      <div class="d-flex align-start align-self-start flex-wrap ga-3">
-        <div class="profile allCenter rounded-lg elevation-3 pa-2">
-          <img
-            width="75%"
-            src="@/suite/assets/images/Suite-Logo.png"
-            alt="Suite Logo" />
-        </div>
-        <div class="column ga-3">
-          <div class="cardTitle rowCenter ga-2">
-            <p class="w-auto">{{ assistant.firstname }}</p>
-            <p class="w-auto">{{ assistant.lastname }}</p>
-            <div class="assistantType rounded-lg px-1">
-              <p>
-                {{
-                  assistant.role
-                    .split(" ")
-                    .map((n) => n[0])
-                    .join("")
-                }}
-								<v-tooltip activator="parent" location="top">
-									{{assistant.role}}
-								</v-tooltip>
-              </p>
-            </div>
+    <div class="card w-100 bg-white column ga-5 rounded-lg elevation-5 pa-5">
+      <div class="column align-self-start ga-5">
+        <div class="d-flex flex-wrap ga-3">
+          <div class="profile allCenter rounded-lg elevation-3 pa-2">
+            <img
+              width="75%"
+              src="@/suite/assets/images/Suite-Logo.png"
+              alt="Suite Logo" />
           </div>
-          <div class="info rowCenter flex-wrap ga-2">
-            <p class="w-auto pSmall">Last rating:</p>
-            <div>
-              <v-rating
-                v-model="assistant.last_rating"
-                empty-icon="mdi-star-outline"
-                full-icon="mdi-star"
-                half-icon="mdi-star-half"
-                half-increments
-                readonly
-								density="compact"
-                color="radioactive"></v-rating>
+          <div class="column ga-2">
+            <div class="cardTitle rowCenter ga-2">
+              <p class="w-auto">{{ assistant.firstname }}</p>
+              <p class="w-auto">{{ assistant.lastname }}</p>
+              <div class="assistantType rounded-lg px-1">
+                <p>
+                  {{
+                    assistant.role
+                      .split(" ")
+                      .map((n) => n[0])
+                      .join("")
+                  }}
+                  <v-tooltip activator="parent" location="top">
+                    {{ assistant.role }}
+                  </v-tooltip>
+                </p>
+              </div>
             </div>
-            <p class="w-auto pSmall font-weight-bold">
-              {{ ratingMap[Math.round(parseInt(assistant.last_rating, 10))] }}
-            </p>
-            <button
-              @click="openDialog = true"
-              class="pSmall bg-radioactive rounded-lg elevation-3 py-1 px-2">
-              Rate my assistant
-            </button>
+            <div class="info rowCenter flex-wrap ga-2">
+              <p class="w-auto pSmall">Last rating:</p>
+              <div>
+                <v-rating
+                  v-model="assistant.last_rating"
+                  empty-icon="mdi-star-outline"
+                  full-icon="mdi-star"
+                  half-icon="mdi-star-half"
+                  half-increments
+                  readonly
+                  density="compact"
+                  color="radioactive"></v-rating>
+              </div>
+              <p class="w-auto pSmall font-weight-bold">
+                {{ ratingMap[Math.round(parseInt(assistant.last_rating, 10))] }}
+              </p>
+              <button
+                @click="openDialog = true"
+                class="pSmall bg-radioactive rounded-lg elevation-3 py-1 px-2">
+                Rate my assistant
+              </button>
+            </div>
           </div>
         </div>
         <div class="column ga-2">
@@ -109,7 +110,7 @@
           <v-toolbar-title>Rate your assistant</v-toolbar-title>
           <v-btn icon="mdi-close" @click="openDialog = false"></v-btn>
         </v-toolbar>
-        <div class="rowCenter">
+        <div class="rowCenter ml-1">
           <div class="allCenter">
             <img
               width="50%"
@@ -134,7 +135,7 @@
               half-icon="mdi-star-half"
               half-increments
               hover
-							density="compact"
+              density="compact"
               color="radioactive"></v-rating>
             <p class="w-auto font-weight-bold">
               {{ ratingMap[Math.round(parseInt(newRating.score, 10))] }}
@@ -158,20 +159,13 @@
               @click.prevent="submitReview"
               :loading="loading"
               color="radioactive"
-              class="text-none"
+              class="h-auto text-none rounded-lg px-5 py-3"
               >Submit Review</v-btn
             >
           </div>
         </form>
       </v-card>
     </v-dialog>
-    <div>
-      <router-link
-        class="secondaryButton"
-        :to="routes.ASSISTANT_ACTIONS + '/' + assistant.id">
-        Assistant Tasks
-      </router-link>
-    </div>
   </div>
 </template>
 
