@@ -1,5 +1,9 @@
 import { NextResponse } from "@vercel/edge";
 
+export const config = {
+	matcher: "/:path*",
+};
+
 export default function middleware(req) {
 	const { geo } = req;
 	const allowedContinents = ["NA", "SA", "EU"]; // North America, South America, Europe

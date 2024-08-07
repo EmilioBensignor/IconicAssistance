@@ -2,11 +2,5 @@
 	"rewrites": [
 		{ "source": "/robots.txt", "destination": "/robots.txt" },
 		{ "source": "/(.*)", "destination": "/index.html" }
-	],
-	"functions": {
-		"middleware/index.js": {
-			"runtime": "@vercel/edge@1.0.0",
-			"maxDuration": 30
-		}
-	}
+	]
 }
