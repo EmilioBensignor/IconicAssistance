@@ -17,7 +17,7 @@
 					store.assistants.data.assistants.length > 0
 				"
 			>
-				<v-list>
+				<v-list class="rowCenter pa-0">
 					<v-list-item
 						v-for="(assistant, index) in store.assistants.data
 							.assistants"

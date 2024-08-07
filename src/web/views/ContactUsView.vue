@@ -25,6 +25,7 @@ import StartDelegatingComponent from "@/web/components/contactUs/StartDelegating
 import GoogleReviewsComponent from "@/web/components/contactUs/GoogleReviewsComponent.vue";
 import ContactFAQComponent from "@/web/components/contactUs/ContactFAQComponent.vue";
 import FooterContactComponent from "@/web/components/contactUs/FooterContactComponent.vue";
+import RolePopUpComponent from "@/web/components/contactUs/RolePopUpComponent.vue";
 
 import "https://link.msgsndr.com/js/form_embed.js";
 
@@ -47,6 +48,7 @@ export default {
     GoogleReviewsComponent,
     ContactFAQComponent,
     FooterContactComponent,
+    RolePopUpComponent,
   },
   setup() {
     const route = useRoute();

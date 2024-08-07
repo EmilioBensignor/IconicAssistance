@@ -15,7 +15,7 @@
     <SkeletonSuiteComponent
       class="bg-suiteBg"
       v-if="store.assistants === null || store.invoices === null" />
-    <div class="suiteComponents" v-else>
+    <div class="suiteComponents column ga-10 mt-5" v-else>
       <SuiteActionsComponent :hasCCOnFile="userData.hasCCOnFile === 'true'" />
       <AssistantsComponent :assistants="store.assistants.data.assistants" />
       <NextInvoiceComponent

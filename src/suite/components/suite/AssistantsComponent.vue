@@ -1,5 +1,5 @@
 <template>
-	<div class="column ga-3 my-5">
+	<div class="column ga-3">
 		<p class="titleSuite text-start">
 			Assistants (<span>{{ assistants.length }}</span
 			>)
