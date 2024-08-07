@@ -10,6 +10,7 @@
   <GoogleReviewsComponent />
   <ContactFAQComponent />
   <FooterContactComponent />
+  <RolePopUpComponent />
 </template>
 
 <script>

@@ -16,6 +16,7 @@
   <StartDelegatingComponent />
   <GoogleReviewsComponent />
   <ContactFAQComponent />
+  <RolePopUpComponent />
 </template>
 
 <script>
