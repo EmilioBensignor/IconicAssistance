@@ -5,7 +5,7 @@
 	],
 	"functions": {
 		"middleware/_block_traffic.js": {
-			"runtime": "edge"
+			"runtime": "@vercel/edge@1.0.0"
 		}
 	}
 }
