@@ -1,6 +1,6 @@
 import { NextResponse } from "@vercel/edge";
 
-export function middleware(req) {
+export default function middleware(req) {
 	const { geo } = req;
 	const allowedContinents = ["NA", "SA", "EU"]; // North America, South America, Europe
 

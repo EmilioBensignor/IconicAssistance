@@ -12,6 +12,7 @@
 		"suite": "git pull origin main && npm i && vite --open http://localhost:5173/suite"
 	},
 	"dependencies": {
+		"@vercel/edge": "^1.1.2",
 		"@vueuse/head": "^2.0.0",
 		"@vueuse/motion": "^2.1.0",
 		"emailjs-com": "^3.2.0",
