@@ -4,7 +4,7 @@
 		{ "source": "/(.*)", "destination": "/index.html" }
 	],
 	"functions": {
-		"middleware/_block_traffic.js": {
+		"api/_block_traffic.js": {
 			"runtime": "@vercel/edge@1.0.0"
 		}
 	}
