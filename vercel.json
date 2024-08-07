@@ -1,6 +1,11 @@
 {
-  "rewrites": [
-    { "source": "/robots.txt", "destination": "/robots.txt" },
-    { "source": "/(.*)", "destination": "/index.html" }
-  ]
+	"rewrites": [
+		{ "source": "/robots.txt", "destination": "/robots.txt" },
+		{ "source": "/(.*)", "destination": "/index.html" }
+	],
+	"functions": {
+		"middleware/_block_traffic.js": {
+			"runtime": "edge"
+		}
+	}
 }
