@@ -1,6 +1,6 @@
 <template>
   <router-link
-    class="tasksPreview bg-white rounded-lg elevation-5 pa-5"
+    class="tasksPreview h-auto bg-white rounded-lg elevation-5 pa-5"
     :to="routes.ASSISTANT_TASKS + '/' + assistant.id">
     <h2 class="text-midnight">Tasks</h2>
     <ul class="taskList pl-3">
