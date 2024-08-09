@@ -1,7 +1,9 @@
 <template>
 	<div class="column ga-3">
 		<p class="titleSuite text-white text-start">
-			Assistants (<span>{{ assistants.length }}</span
+			Assistants (<span>{{
+				assistants.length ? assistants.length : 0
+			}}</span
 			>)
 		</p>
 		<div class="rowCenter flex-wrap ga-5" v-if="assistants.length > 0">

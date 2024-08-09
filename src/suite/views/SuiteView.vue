@@ -1,37 +1,38 @@
 <template>
-  <HeaderSuiteComponent />
-  <div class="bg-suiteBg">
-    <div class="heroSuite columnAlignCenter">
-      <v-skeleton-loader
-        class="w-75 bg-suiteBg px-3"
-        type="heading"
-        v-if="!userData || !userData.firstname"
-      ></v-skeleton-loader>
-      <h1 class="text-white ml-4" v-else>
-        Welcome,
-        <span>{{ userData.firstname }}</span
-        >!
-      </h1>
-    </div>
-    <SkeletonSuiteComponent
-      class="bg-suiteBg"
-      v-if="store.assistants === null || store.invoices === null"
-    />
-    <div class="suiteComponents column ga-10 mt-5" v-else>
-      <SuiteActionsComponent :hasCCOnFile="userData.hasCCOnFile === 'true'" />
-      <AssistantsComponent :assistants="store.assistants.data.assistants" />
-      <NextInvoiceComponent
-        v-if="
-          store.invoices.data.invoices[0] &&
-          store.invoices.data.invoices[0].properties
-        "
-        :nextInvoice="store.invoices.data.invoices[0]"
-        :userData="userData"
-        :formatCurrency="formatCurrency"
-        :formatDate="formatDate"
-      />
-    </div>
-  </div>
+	<HeaderSuiteComponent />
+	<div class="bg-suiteBg">
+		<div class="heroSuite columnAlignCenter">
+			<v-skeleton-loader
+				class="w-75 bg-suiteBg px-3"
+				type="heading"
+				v-if="!userData || !userData.firstname"
+			></v-skeleton-loader>
+			<h1 class="text-white ml-4" v-else>
+				Welcome,
+				<span>{{ userData.firstname }}</span
+				>!
+			</h1>
+		</div>
+		<SkeletonSuiteComponent
+			class="bg-suiteBg"
+			v-if="store.assistants === null || store.invoices === null"
+		/>
+		<div class="suiteComponents column ga-10 mt-5" v-else>
+			<SuiteActionsComponent
+				:hasCCOnFile="userData.hasCCOnFile === 'true'"
+			/>
+			<AssistantsComponent
+				:assistants="store.assistants.data.assistants"
+			/>
+			<NextInvoiceComponent
+				v-if="store.invoices !== null"
+				:nextInvoice="store.invoices.data.invoices[0]"
+				:userData="userData"
+				:formatCurrency="formatCurrency"
+				:formatDate="formatDate"
+			/>
+		</div>
+	</div>
 </template>
 
 <script>
@@ -45,23 +46,23 @@ import { formatCurrency, formatDate } from "../services/format.service";
 import { useAuthStore } from "@/suite/stores/auth.store";
 
 export default {
-  name: "SuiteView",
-  components: {
-    HeaderSuiteComponent,
-    SkeletonSuiteComponent,
-    SuiteActionsComponent,
-    AssistantsComponent,
-    NextInvoiceComponent,
-  },
-  data() {
-    return {
-      routes: ROUTES_NAMES,
-      store: useAuthStore(),
-    };
-  },
-  setup() {
-    formatCurrency(), formatDate();
-  },
+	name: "SuiteView",
+	components: {
+		HeaderSuiteComponent,
+		SkeletonSuiteComponent,
+		SuiteActionsComponent,
+		AssistantsComponent,
+		NextInvoiceComponent,
+	},
+	data() {
+		return {
+			routes: ROUTES_NAMES,
+			store: useAuthStore(),
+		};
+	},
+	setup() {
+		formatCurrency(), formatDate();
+	},
 };
 </script>
 
@@ -75,6 +76,6 @@ const userData = useDocument(doc(collection(db, "clients"), store.user.uid));
 
 <style scoped>
 p {
-  color: #120d40;
+	color: #120d40;
 }
 </style>

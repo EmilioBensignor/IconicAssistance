@@ -270,6 +270,9 @@ exports.getAssistantsData = onCall(async (data, context) => {
 					)
 			)
 		).then((results) => results.flat());
+		if (assistantIds.length === 0) {
+			return { assistants: [] };
+		}
 		const assistantsRawData = await db
 			.collection("assistants")
 			.where("hs_object_id", "in", assistantIds)
@@ -301,6 +304,9 @@ exports.getInvoicesData = onCall(async (data, context) => {
 		const invoiceIds = invoicesResponse.data.results.map(
 			(result) => result.id
 		);
+		if (!invoiceIds) {
+			return { invoices: { data: { invoices: [] } } };
+		}
 		const invoicesData = await Promise.all(
 			invoiceIds.map((invoice) =>
 				axios
