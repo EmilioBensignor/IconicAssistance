@@ -3,17 +3,17 @@
     <div class="suiteContent">
       <HeaderOutsideComponent />
       <div class="heroSuite columnAlignCenter">
-        <h1 class="text-midnight text-center">Reset Password Confirmation</h1>
+        <h1 class="text-white text-center">Reset Password Confirmation</h1>
       </div>
       <section class="w-100 mt-3">
         <div class="w-100 column ga-2">
-          <p class="w-100 text-midnight text-center">
+          <p class="w-100 text-lila text-center">
             An email was sent to
             <span class="font-weight-bold">{{ email ? email : "" }}</span>
             to reset his password.
           </p>
           <div>
-            <p class="text-midnight text-ceneter w-100">
+            <p class="text-lila text-ceneter w-100">
               Is the provided email incorrect?
               <router-link
                 class="modify text-radioactive"

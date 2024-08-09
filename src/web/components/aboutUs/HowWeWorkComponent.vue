@@ -1,5 +1,5 @@
 <template>
-  <section class="radioactiveWaves">
+  <section class="radioactiveWaves bg-grayBg">
     <div class="content">
       <div class="columnAlignCenter">
         <div class="howWeWork columnAlignCenter">

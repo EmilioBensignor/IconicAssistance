@@ -1,9 +1,9 @@
 <template>
-  <nav class="mb-15">
+  <nav class="navSuite mb-15">
     <v-app-bar elevation="0" app class="bg-suiteBg d-flex align-center py-1">
       <v-app-bar-nav-icon
         icon="mdi-menu"
-        color="radioactive"
+        color="lila"
         class="hamburger shadow-15"
         size="x-large"
         @click="showMenu = !showMenu">
@@ -11,8 +11,8 @@
       <v-toolbar-title>
         <router-link class="text-decoration-none" :to="routes.SUITE">
           <img
-            width="75%"
-            src="@/suite/assets/images/Suite-Logo.png"
+            width="6%"
+            src="@/suite/assets/images/White-Logo.png"
             alt="Suite Logo" />
         </router-link>
       </v-toolbar-title>
@@ -21,20 +21,20 @@
           <v-btn
             v-if="!userData || !userData.firstname"
             icon="mdi-account"
-            class="account bg-radioactive elevation-3 pa-1"
+            class="account elevation-3 pa-1"
             v-bind="props">
           </v-btn>
           <button
             v-else
-            class="account bg-radioactive rounded-circle elevation-3 pa-1"
+            class="account rounded-circle elevation-3 pa-1"
             v-bind="props">
             {{ getUserInitials(userData.firstname, userData.lastname) }}
           </button>
         </template>
-        <v-list class="mt-1 py-0">
+        <v-list class="acountList bg-lightViolet mt-1 py-0">
           <v-list-item v-for="(item, index) in accountMenu" :key="index">
             <router-link :to="item.path">
-              <v-list-item-title class="text-radioactive">
+              <v-list-item-title class="text-white">
                 {{ item.title }}
               </v-list-item-title>
             </router-link>
@@ -47,8 +47,8 @@
         <li v-for="item in suiteMenu" :key="item.title">
           <v-list-item :to="item.path">
             <div class="d-flex align-center">
-              <v-icon color="radioactive" :icon="`mdi-${item.icon}`"></v-icon>
-              <v-list-item-title class="pl-4 text-midnight">
+              <v-icon color="lila" :icon="`mdi-${item.icon}`"></v-icon>
+              <v-list-item-title class="pl-4 text-white">
                 {{ item.title }}
               </v-list-item-title>
             </div>
@@ -57,8 +57,8 @@
         <li>
           <v-list-item @click="dialog = true">
             <div class="d-flex align-center">
-              <v-icon color="radioactive" icon="mdi-logout"></v-icon>
-              <v-list-item-title class="pl-4 text-midnight">
+              <v-icon color="lila" icon="mdi-logout"></v-icon>
+              <v-list-item-title class="pl-4 text-white">
                 Log Out
               </v-list-item-title>
             </div>
@@ -166,6 +166,26 @@
   const userData = useDocument(doc(collection(db, "clients"), store.user.uid));
 </script>
 
+<style>
+.navSuite .v-navigation-drawer {
+  width: 55% !important;
+  max-width: 205px !important;
+}
+.navSuite .v-navigation-drawer__content {
+  max-width: 100%;
+}
+
+.navSuite .v-list-item:hover {
+  background: #313053 !important;
+  transition: all 0.3s;
+}
+
+.acountList .v-list-item:hover {
+  background: #8785BA !important;
+  transition: all 0.3s;
+}
+</style>
+
 <style scoped>
   .v-app-bar {
     position: relative;
@@ -181,6 +201,7 @@
     position: absolute;
     right: 4%;
     font-weight: 600;
+    border: 2px solid #8785BA;
     cursor: pointer;
   }
 

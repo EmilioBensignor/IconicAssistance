@@ -1,20 +1,21 @@
 <template>
   <div class="column ga-10">
-    <div class="card w-100 bg-white column ga-5 rounded-lg elevation-5 pa-5">
+    <div
+      class="card w-100 bg-lightViolet column ga-5 rounded-lg elevation-5 pa-5"
+    >
       <div class="column align-self-start ga-5">
         <div class="d-flex flex-wrap ga-3">
-          <div class="profile allCenter rounded-lg elevation-3 pa-2">
-            <img
-              width="75%"
-              src="@/suite/assets/images/Suite-Logo.png"
-              alt="Suite Logo" />
+          <div class="profile allCenter borderLila rounded-lg elevation-3 pa-2">
+            <p class="w-auto font-weight-bold text-white">
+              {{ getUserInitials(assistant.firstname, assistant.lastname) }}
+            </p>
           </div>
           <div class="column ga-2">
             <div class="cardTitle rowCenter ga-2">
-              <p class="w-auto">{{ assistant.firstname }}</p>
-              <p class="w-auto">{{ assistant.lastname }}</p>
-              <div class="assistantType rounded-lg px-1">
-                <p>
+              <p class="w-auto text-white">{{ assistant.firstname }}</p>
+              <p class="w-auto text-white">{{ assistant.lastname }}</p>
+              <div class="assistantType borderLila rounded-lg px-1">
+                <p class="text-white">
                   {{
                     assistant.role
                       .split(" ")
@@ -28,7 +29,7 @@
               </div>
             </div>
             <div class="info rowCenter flex-wrap ga-2">
-              <p class="w-auto pSmall">Last rating:</p>
+              <p class="w-auto text-white pSmall">Last rating:</p>
               <div>
                 <v-rating
                   v-model="assistant.last_rating"
@@ -38,95 +39,90 @@
                   half-increments
                   readonly
                   density="compact"
-                  color="radioactive"></v-rating>
+                  color="blueViolet"
+                ></v-rating>
               </div>
-              <p class="w-auto pSmall font-weight-bold">
-                {{ ratingMap[Math.round(parseInt(assistant.last_rating, 10))] }}
-              </p>
               <button
                 @click="openDialog = true"
-                class="pSmall bg-radioactive rounded-lg elevation-3 py-1 px-2">
+                class="rateBtn pSmall bg-btnViolet rounded-lg elevation-3 py-1 px-2"
+              >
                 Rate my assistant
               </button>
             </div>
           </div>
         </div>
-        <div class="column ga-2">
+        <div class="cardContent column ga-2">
           <div class="rowCenter ga-2">
             <span class="mdi mdi-circle text-green"></span>
-            <p class="w-auto">
+            <p class="w-auto text-white">
               Online <span class="pSmall">(since: 8:30AM)</span>
             </p>
           </div>
           <div class="rowCenter ga-2">
             <span class="mdi mdi-clock-time-four-outline"></span>
-            <p class="w-auto">
+            <p class="w-auto text-white">
               Current shift:
               <span class="pSmall">{{ assistant.shift }}</span>
             </p>
           </div>
           <div class="rowCenter ga-2">
             <span class="mdi mdi-check-circle-outline"></span>
-            <p class="w-auto">Current task: <span class="pSmall">???</span></p>
+            <p class="w-auto text-white">
+              Current task: <span class="pSmall">???</span>
+            </p>
           </div>
         </div>
       </div>
       <div class="cardBody column ga-3">
-        <p class="font-weight-bold">Assistant Info</p>
+        <p class="text-white font-weight-bold">Assistant Info</p>
         <div class="rowCenter flex-wrap ga-3">
           <div class="rowCenter ga-3">
-            <div class="bg-suiteBg rounded elevation-1 px-1">
-              <span class="mdi mdi-email-outline"></span>
+            <div class="bg-lightViolet borderLila rounded elevation-1 px-1">
+              <span class="text-btnViolet mdi mdi-email-outline"></span>
             </div>
             <div>
-              <p class="pSmall bold500">Primary Email</p>
-              <p class="w-auto pSmall">{{ assistant.email }}</p>
+              <p class="text-white pSmall bold500">Primary Email</p>
+              <p class="w-auto text-white pSmall">{{ assistant.email }}</p>
             </div>
           </div>
           <div class="rowCenter ga-3">
-            <div class="bg-suiteBg rounded elevation-1 px-1">
-              <span class="mdi mdi-email-outline"></span>
+            <div class="bg-lightViolet borderLila rounded elevation-1 px-1">
+              <span class="text-btnViolet mdi mdi-email-outline"></span>
             </div>
             <div>
-              <p class="pSmall bold500">Alt Email</p>
-              <p class="w-auto pSmall">{{ assistant.email }}</p>
+              <p class="text-white pSmall bold500">Alt Email</p>
+              <p class="w-auto text-white pSmall">{{ assistant.email }}</p>
             </div>
           </div>
           <div class="rowCenter ga-3">
-            <div class="bg-suiteBg rounded elevation-1 px-1">
-              <span class="mdi mdi-phone"></span>
+            <div class="bg-lightViolet borderLila rounded elevation-1 px-1">
+              <span class="text-btnViolet mdi mdi-phone"></span>
             </div>
             <div>
-              <p class="pSmall bold500">Phone</p>
-              <p class="w-auto pSmall">{{ assistant.phone }}</p>
+              <p class="text-white pSmall bold500">Phone</p>
+              <p class="w-auto text-white pSmall">{{ assistant.phone }}</p>
             </div>
           </div>
         </div>
       </div>
     </div>
     <v-dialog v-model="openDialog">
-      <v-card class="dialogCard bg-suiteBg column ga-3" max-width="100%">
+      <v-card class="dialogCard bg-suiteBg column ga-3" max-width="600px">
         <v-toolbar class="bg-suiteBg">
           <v-toolbar-title>Rate your assistant</v-toolbar-title>
           <v-btn icon="mdi-close" @click="openDialog = false"></v-btn>
         </v-toolbar>
-        <div class="rowCenter ml-1">
-          <div class="allCenter">
-            <img
-              width="50%"
-              src="@/suite/assets/images/Suite-Logo.png"
-              alt="Suite Logo" />
-          </div>
+        <div class="rowCenter ml-1 px-4">
           <div class="cardTitle rowCenter ga-2">
-            <p class="w-auto">{{ assistant.firstname }}</p>
-            <p class="w-auto">{{ assistant.lastname }}</p>
-            <div class="assistantType rounded-lg px-1">
-              <p class="w-auto">EA</p>
+            <p class="w-auto text-white">{{ assistant.firstname }}</p>
+            <p class="w-auto text-white">{{ assistant.lastname }}</p>
+            <div class="assistantType borderLila rounded-lg px-1">
+              <p class="w-auto text-white">EA</p>
             </div>
           </div>
         </div>
         <div class="px-5">
-          <p>Overall Rating</p>
+          <p class="text-white">Overall Rating</p>
           <div class="dialogStars rowCenter ga-2">
             <v-rating
               v-model="newRating.score"
@@ -136,10 +132,8 @@
               half-increments
               hover
               density="compact"
-              color="radioactive"></v-rating>
-            <p class="w-auto font-weight-bold">
-              {{ ratingMap[Math.round(parseInt(newRating.score, 10))] }}
-            </p>
+              color="blueViolet"
+            ></v-rating>
           </div>
         </div>
         <form class="column ga-2 px-5">
@@ -149,8 +143,9 @@
             class="rounded pa-2"
             placeholder="Feedback will be used to improve your assistant's performance."
             name="review"
-            id="review"></textarea>
-          <p class="w-auto pSmall">
+            id="review"
+          ></textarea>
+          <p class="w-auto text-lila pSmall">
             This review will be visible to the account leads only, not to the
             assistant.
           </p>
@@ -158,7 +153,7 @@
             <v-btn
               @click.prevent="submitReview"
               :loading="loading"
-              color="radioactive"
+              color="btnViolet"
               class="h-auto text-none rounded-lg px-5 py-3"
               >Submit Review</v-btn
             >
@@ -170,122 +165,147 @@
 </template>
 
 <script>
-  import ROUTES_NAMES from "@/router/constants/ROUTES_NAMES";
-  import SecondaryBtnComponent from "../buttons/SecondaryBtnComponent.vue";
-  import { doc, updateDoc } from "firebase/firestore";
-  import { db } from "@/suite/firebase/init";
-  import { useAuthStore } from "@/suite/stores/auth.store";
+import ROUTES_NAMES from "@/router/constants/ROUTES_NAMES";
+import SecondaryBtnComponent from "../buttons/SecondaryBtnComponent.vue";
+import { doc, updateDoc } from "firebase/firestore";
+import { db } from "@/suite/firebase/init";
+import { useAuthStore } from "@/suite/stores/auth.store";
 
-  export default {
-    name: "AssistantCardComponent",
-    props: {
-      assistant: {
-        type: Object,
-        required: true,
+export default {
+  name: "AssistantCardComponent",
+  props: {
+    assistant: {
+      type: Object,
+      required: true,
+    },
+  },
+  components: {
+    SecondaryBtnComponent,
+  },
+  data() {
+    return {
+      routes: ROUTES_NAMES,
+      openDialog: false,
+      ratingMap: {
+        0: "Terrible",
+        1: "Bad",
+        2: "Good",
+        3: "Great",
+        4: "Excellent",
+        5: "Perfect",
       },
-    },
-    components: {
-      SecondaryBtnComponent,
-    },
-    data() {
-      return {
-        routes: ROUTES_NAMES,
-        openDialog: false,
-        ratingMap: {
-          0: "Terrible",
-          1: "Bad",
-          2: "Good",
-          3: "Great",
-          4: "Excellent",
-          5: "Perfect",
-        },
-        store: useAuthStore(),
-        newRating: {
-          score: 0,
-          feedback: "",
-        },
-        loading: false,
-      };
-    },
-    methods: {
-      async submitReview() {
-        if (this.newRating.score === 0) return;
-        this.loading = true;
-        let newRatings;
-        this.newRating.rated_by = this.store.user.uid;
-        this.newRating.rated_at = new Date().toJSON();
-        if (this.assistant.ratings) {
-          newRatings = [...this.assistant.ratings, this.newRating];
-        } else {
-          newRatings = [this.newRating];
-        }
-        const ref = doc(db, "assistants", this.assistant.id);
-        await updateDoc(ref, {
-          ratings: newRatings,
-          last_rating: this.newRating.score,
+      store: useAuthStore(),
+      newRating: {
+        score: 0,
+        feedback: "",
+      },
+      loading: false,
+    };
+  },
+  methods: {
+    async submitReview() {
+      if (this.newRating.score === 0) return;
+      this.loading = true;
+      let newRatings;
+      this.newRating.rated_by = this.store.user.uid;
+      this.newRating.rated_at = new Date().toJSON();
+      if (this.assistant.ratings) {
+        newRatings = [...this.assistant.ratings, this.newRating];
+      } else {
+        newRatings = [this.newRating];
+      }
+      const ref = doc(db, "assistants", this.assistant.id);
+      await updateDoc(ref, {
+        ratings: newRatings,
+        last_rating: this.newRating.score,
+      })
+        .then(() => {
+          this.assistant.ratings = newRatings;
+          this.assistant.last_rating = this.newRating.score;
+          this.openDialog = false;
+          this.newRating = { score: 0, feedback: "" };
+          this.loading = false;
         })
-          .then(() => {
-            this.assistant.ratings = newRatings;
-            this.assistant.last_rating = this.newRating.score;
-            this.openDialog = false;
-            this.newRating = { score: 0, feedback: "" };
-            this.loading = false;
-          })
-          .catch((error) => {
-            console.log(error);
-            this.loading = false;
-          });
-      },
+        .catch((error) => {
+          console.log(error);
+          this.loading = false;
+        });
     },
-  };
+    getUserInitials(firstname, lastname) {
+      if (!firstname || !lastname) return "";
+      return (
+        firstname.charAt(0).toUpperCase() + lastname.charAt(0).toUpperCase()
+      );
+    },
+  },
+};
 </script>
 
 <style>
-  .v-dialog .dialogCard .v-toolbar__content {
-    justify-content: space-between;
-  }
+.v-dialog .dialogCard .v-toolbar__content {
+  justify-content: space-between;
+}
 
-  .v-dialog .dialogCard .v-toolbar-title__placeholder {
-    margin-left: 0.5rem;
-  }
+.v-dialog .dialogCard .v-toolbar-title__placeholder {
+  margin-left: 0.5rem;
+}
+
+.rateBtn,
+.dialogCard .v-btn {
+  font-family: "Poppins", sans-serif;
+}
 </style>
 
 <style scoped>
-  .card {
-    max-width: max-content;
-    text-decoration: none;
-  }
+.card {
+  max-width: max-content;
+  text-decoration: none;
+}
 
-  .profile {
-    width: 4rem;
-    height: 4rem;
-  }
+.profile {
+  width: 4rem;
+  height: 4rem;
+}
 
-  .cardTitle p {
-    font-weight: 600;
-  }
+.profile p {
+  font-size: 1.25rem;
+}
 
-  .assistantType {
-    border: 2px solid #373ae6;
-  }
+.cardTitle p {
+  font-weight: 600;
+}
 
-  .assistantType p {
-    font-size: 0.75rem;
-  }
+.borderLila {
+  border: 2px solid #8785ba;
+}
 
-  .pSmall {
-    font-size: 0.85rem;
-  }
+.assistantType p {
+  font-size: 0.75rem;
+}
 
-  .bold500 {
-    font-weight: 500;
-  }
+.pSmall {
+  font-size: 0.85rem;
+}
 
-  .dialogStars span {
-    font-size: 1.5rem;
-  }
+.bold500 {
+  font-weight: 500;
+}
 
-  textarea {
-    border: 2px solid #373ae6;
+.dialogStars span {
+  font-size: 1.5rem;
+}
+
+textarea {
+  border: 2px solid #373ae6;
+}
+
+.dialogCard {
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 1080px) {
+  .cardContent p {
+    font-size: 1.1rem;
   }
+}
 </style>

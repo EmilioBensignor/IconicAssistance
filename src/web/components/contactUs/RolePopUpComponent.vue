@@ -1,6 +1,6 @@
 <template>
-  <v-dialog class="popUpDialog bg-suiteBg" persistent v-model="dialog">
-    <div class="container w-100 h-100 bg-suiteBg px-10 py-5">
+  <v-dialog class="popUpDialog bg-grayBg" persistent v-model="dialog">
+    <div class="container w-100 h-100 bg-grayBg px-10 py-5">
       <div class="maxContent">
         <h2>Get Started</h2>
         <p class="popUpText my-5">

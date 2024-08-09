@@ -1,32 +1,61 @@
 <template>
-  <div class="justifyCenter bg-white h-100">
+  <div class="justifyCenter h-100">
     <div class="suiteContent">
       <HeaderOutsideComponent />
       <div class="heroSuite columnAlignCenter">
-        <h1 class="w-100 text-midnight text-center">Log In</h1>
+        <h1 class="w-100 text-white text-center">Log In</h1>
       </div>
-      <v-form class="w-100 columnAlignCenter ga-3 mt-5" v-model="valid" @submit.prevent="onSubmit()">
+      <v-form
+        class="w-100 loginForm columnAlignCenter ga-3 mt-5"
+        v-model="valid"
+        @submit.prevent="onSubmit()"
+      >
         <div class="w-75">
-          <label class="text-midnight" for="email">Email</label>
-          <v-text-field id="email" v-model="contactData.email" :rules="rules.emailRules" required></v-text-field>
+          <label class="text-lila" for="email">Email</label>
+          <v-text-field
+            id="email"
+            v-model="contactData.email"
+            :rules="rules.emailRules"
+            required
+          ></v-text-field>
         </div>
         <div class="w-75">
-          <label class="text-midnight" for="password">Password</label>
-          <v-text-field id="password" v-model="contactData.password" :rules="rules.passwordRules"
-            :type="!showPassword ? 'password' : 'text'" required>
+          <label class="text-lila" for="password">Password</label>
+          <v-text-field
+            id="password"
+            v-model="contactData.password"
+            :rules="rules.passwordRules"
+            :type="!showPassword ? 'password' : 'text'"
+            required
+          >
             <template v-slot:append>
-              <v-icon :icon="!showPassword ? 'mdi-eye-off-outline' : 'mdi-eye-outline'
-                " @click="togglePasswordVisibility"></v-icon>
+              <v-icon
+                color="white"
+                :icon="
+                  !showPassword ? 'mdi-eye-off-outline' : 'mdi-eye-outline'
+                "
+                @click="togglePasswordVisibility"
+              ></v-icon>
             </template>
           </v-text-field>
         </div>
         <div class="w-75 rowCenter flex-wrap ga-1">
-          <p class="w-auto text-midnight">Forgot&nbsp;password?</p>
-          <router-link class="reset text-radioactive" :to="routes.RESET_PASSWORD">Reset&nbsp;password</router-link>
+          <p class="w-auto text-lila">Forgot&nbsp;password?</p>
+          <router-link
+            class="reset text-radioactive"
+            :to="routes.RESET_PASSWORD"
+            >Reset&nbsp;password</router-link
+          >
         </div>
         <div class="w-75 rowCenter flex-wrap ga-3 justify-space-between mt-5">
-          <router-link class="reset text-radioactive" :to="routes.REGISTER">Client Signup</router-link>
-          <router-link class="reset text-radioactive" :to="routes.ASSISTANT_REGISTER">Assistant Registration</router-link>
+          <router-link class="reset text-radioactive" :to="routes.REGISTER"
+            >Client Signup</router-link
+          >
+          <router-link
+            class="reset text-radioactive"
+            :to="routes.ASSISTANT_REGISTER"
+            >Assistant Registration</router-link
+          >
         </div>
         <p v-if="error" class="w-75 text-red text-center mt-3">
           {{ firebaseErrors[error] ? firebaseErrors[error] : error }}
@@ -118,6 +147,15 @@ export default {
   },
 };
 </script>
+
+<style>
+.loginForm .v-text-field .v-field--no-label input,
+.loginForm .v-text-field .v-field--active input {
+  background-color: black;
+  color: white;
+  border-radius: 0.5rem;
+}
+</style>
 
 <style scoped>
 label {

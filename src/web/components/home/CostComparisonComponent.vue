@@ -1,5 +1,5 @@
 <template>
-  <section class="skyBlueWaves">
+  <section class="skyBlueWaves bg-grayBg">
     <div class="content">
       <div class="columnAlignCenter">
         <p v-motion="scrollBottom" class="subtitle mt-2">Cost Comparison</p>

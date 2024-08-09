@@ -1,5 +1,5 @@
 <template>
-  <section class="radioactiveWaves">
+  <section class="radioactiveWaves bg-grayBg">
     <div class="w-100 content empowerWrapper flexCenter ga-15 mt-5 mb-15">
       <div
         v-for="(item, index) in empower"

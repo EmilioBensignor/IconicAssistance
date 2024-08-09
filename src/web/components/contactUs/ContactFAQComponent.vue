@@ -1,5 +1,5 @@
 <template>
-  <section class="columnAlignCenter">
+  <section class="columnAlignCenter bg-grayBg">
     <div class="content w-100">
       <div class="w-100 columnAlignCenter">
         <h2 v-motion="scrollBottom" class="w-100 text-midnight mt-10 mb-2">

@@ -24,8 +24,8 @@ export default {
 .secondary {
   height: auto !important;
   border-radius: 100px;
-  background-color: #373ae6;
-  border: 1px solid #373ae6;
+  background-color: #8477FA;
+  border: 1px solid #8477FA;
   color: white;
   font-family: "Poppins", sans-serif;
   font-size: 1.1rem;
@@ -39,6 +39,6 @@ export default {
 
 .secondary:hover {
   background-color: white;
-  color: #373ae6 !important;
+  color: #8477FA !important;
 }
 </style>

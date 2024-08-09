@@ -1,37 +1,37 @@
 <template>
-  <div class="justifyCenter bg-white h-100">
+  <div class="justifyCenter h-100">
     <div class="suiteContent">
       <HeaderOutsideComponent />
       <div class="heroSuite columnAlignCenter">
-        <h1 class="w-100 text-midnight text-center">Register</h1>
+        <h1 class="w-100 text-white text-center">Register</h1>
       </div>
-      <v-form class="w-100 columnAlignCenter ga-3 mt-5" v-model="valid" @submit.prevent="onSubmit()">
+      <v-form class="w-100 registerForm columnAlignCenter ga-3 mt-5" v-model="valid" @submit.prevent="onSubmit()">
         <div class="w-75">
-          <label class="text-midnight" for="email">Email</label>
+          <label class="text-lila" for="email">Email</label>
           <v-text-field id="email" v-model="contactData.email" :rules="rules.emailRules" required></v-text-field>
         </div>
         <div class="w-75">
-          <label class="text-midnight" for="password">Password</label>
+          <label class="text-lila" for="password">Password</label>
           <v-text-field id="password" v-model="contactData.password" :rules="rules.passwordRules"
             :type="!showPassword ? 'password' : 'text'" required>
             <template v-slot:append>
-              <v-icon :icon="!showPassword ? 'mdi-eye-off-outline' : 'mdi-eye-outline'
+              <v-icon color="white" :icon="!showPassword ? 'mdi-eye-off-outline' : 'mdi-eye-outline'
                 " @click="togglePasswordVisibility"></v-icon>
             </template>
           </v-text-field>
         </div>
         <div class="w-75">
-          <label class="text-midnight" for="password2">Repeat Password</label>
+          <label class="text-lila" for="password2">Repeat Password</label>
           <v-text-field id="password2" v-model="contactData.password2" :rules="rules.password2Rules"
             :type="!showPassword ? 'password' : 'text'" required>
             <template v-slot:append>
-              <v-icon :icon="!showPassword ? 'mdi-eye-off-outline' : 'mdi-eye-outline'
+              <v-icon color="white" :icon="!showPassword ? 'mdi-eye-off-outline' : 'mdi-eye-outline'
                 " @click="togglePasswordVisibility"></v-icon>
             </template>
           </v-text-field>
         </div>
         <div class="w-75 rowCenter ga-1">
-          <p class="w-auto text-midnight">Already registered?</p>
+          <p class="w-auto text-lila">Already registered?</p>
           <router-link class="login text-radioactive" :to="routes.LOGIN">Log in</router-link>
         </div>
         <p class="text-center text-red mt-3" v-if="error">
@@ -134,6 +134,14 @@ export default {
   },
 };
 </script>
+
+<style>
+.registerForm .v-text-field .v-field--no-label input, .registerForm .v-text-field .v-field--active input {
+  background-color: black;
+  color: white;
+  border-radius: 0.5rem;
+}
+</style>
 
 <style scoped>
 label {

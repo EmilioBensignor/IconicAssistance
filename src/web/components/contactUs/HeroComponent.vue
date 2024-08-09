@@ -1,5 +1,5 @@
 <template>
-  <section class="heroContactUs">
+  <section class="heroContactUs bg-grayBg">
     <div class="content">
       <div class="columnAlignCenter">
         <div id="hero" class="heroPages columnAlignCenter ga-10 mt-15 py-15 px-3">

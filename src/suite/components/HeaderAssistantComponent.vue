@@ -52,7 +52,7 @@
 					<v-list-item @click="dialog = true">
 						<div class="d-flex align-center">
 							<v-icon
-								color="radioactive"
+								color="lila"
 								icon="mdi-logout"
 							></v-icon>
 							<v-list-item-title class="pl-4 text-midnight">

@@ -1,26 +1,60 @@
 <template>
   <HeaderSuiteComponent />
   <div class="heroSuite columnAlignCenter">
-    <h1 class="text-midnight ml-4">Invoices</h1>
+    <h1 class="text-white ml-4">Invoices</h1>
   </div>
   <div class="suiteComponents mt-5">
-    <v-skeleton-loader class="w-75 bg-suiteBg px-3" type="card" v-if="store.assistants === null"></v-skeleton-loader>
-    <div class="column ga-7" v-if="store.invoices !== null && store.invoices.data.invoices.length > 0">
-      <div v-for="(invoice, index) in store.invoices.data.invoices" :key="index">
+    <v-skeleton-loader
+      class="w-75 bg-suiteBg px-3"
+      type="card"
+      v-if="store.assistants === null"
+    ></v-skeleton-loader>
+    <div
+      class="column ga-7"
+      v-if="store.invoices !== null && store.invoices.data.invoices.length > 0"
+    >
+      <div
+        v-for="(invoice, index) in store.invoices.data.invoices"
+        :key="index"
+      >
         <div class="d-flex ml-5">
-          <p :class="new Date(invoice.properties.hs_due_date) > new Date() ? 'bg-radioactive text-white' : 'bg-suiteGray text-midnight'"
-            class="w-auto rounded-t-lg py-1 px-2">{{ new Date(invoice.properties.hs_due_date) > new Date() ? 'Next Invoice': 'Paid'}}</p>
+          <p
+            :class="
+              new Date(invoice.properties.hs_due_date) > new Date()
+                ? 'bg-radioactive text-white'
+                : 'bg-suiteGray text-midnight'
+            "
+            class="w-auto rounded-t-lg py-1 px-2"
+          >
+            {{
+              new Date(invoice.properties.hs_due_date) > new Date()
+                ? "Next Invoice"
+                : "Paid"
+            }}
+          </p>
         </div>
-        <div class="w-100 bg-white column ga-5 rounded-lg elevation-5 pa-5"
-          :class="new Date(invoice.properties.hs_due_date) > new Date() ? 'futureInvoice' : 'pastInvoice'">
+        <div
+          class="w-100 bg-white column ga-5 rounded-lg elevation-5 pa-5"
+          :class="
+            new Date(invoice.properties.hs_due_date) > new Date()
+              ? 'futureInvoice'
+              : 'pastInvoice'
+          "
+        >
           <div class="rowCenter">
-            <v-skeleton-loader v-if="!userData || !userData.firstname" type="text"></v-skeleton-loader>
+            <v-skeleton-loader
+              v-if="!userData || !userData.firstname"
+              type="text"
+            ></v-skeleton-loader>
             <p v-else class="cardLabel">{{ userData.firstname }}</p>
-            <p class="text-end">{{ formatDate(invoice.properties.hs_due_date) }}</p>
+            <p class="text-end">
+              {{ formatDate(invoice.properties.hs_due_date) }}
+            </p>
           </div>
           <div>
             <p class="cardLabel">Amount Billed:</p>
             <p>{{ formatCurrency(invoice.properties.hs_amount_billed) }}</p>
+            <p>{{ invoice.properties.invoice_status }}</p>
           </div>
           <!-- <div>
           <p class="cardLabel">Number:</p>
@@ -28,11 +62,13 @@
         </div> -->
         </div>
       </div>
-
     </div>
-    <p v-if="
-      store.invoices !== null && store.invoices.data.invoices.length === 0
-    " class="text-start">
+    <p
+      v-if="
+        store.invoices !== null && store.invoices.data.invoices.length === 0
+      "
+      class="text-start"
+    >
       You currently have no invoices
     </p>
   </div>
@@ -53,10 +89,9 @@ export default {
       store: useAuthStore(),
     };
   },
-  setup(){
-    formatCurrency(),
-    formatDate()
-  }
+  setup() {
+    formatCurrency(), formatDate();
+  },
 };
 </script>
 
@@ -67,7 +102,6 @@ import { db } from "../firebase/init";
 const store = useAuthStore();
 const userData = useDocument(doc(collection(db, "clients"), store.user.uid));
 </script>
-
 
 <style scoped>
 .futureInvoice {

@@ -2,7 +2,7 @@
   <HeaderSuiteComponent />
   <div class="bg-suiteBg">
     <div class="heroSuite columnAlignCenter">
-      <h1 class="text-midnight ml-4">Executive Assistants</h1>
+      <h1 class="text-white ml-4">Executive Assistants</h1>
     </div>
     <div class="suiteComponents mt-5">
       <v-skeleton-loader
@@ -17,7 +17,7 @@
           store.assistants.data.assistants.length > 0
         "
       >
-        <v-list class="w-auto rowCenter rounded-lg elevation-3 pa-0">
+        <v-list class="w-auto assistantList bg-lightViolet rowCenter rounded-lg elevation-3 pa-0">
           <v-list-item
             v-for="(assistant, index) in store.assistants.data.assistants"
             :key="index"
@@ -30,7 +30,6 @@
         </v-list>
         <div class="d-flex flex-wrap align-start ga-5">
           <AssistantCardComponent :assistant="selected" />
-          <TasksPreviewComponent :assistant="selected" />
         </div>
 
       </div>
@@ -90,6 +89,12 @@ export default {
   },
 };
 </script>
+
+<style>
+.assistantList .v-list-item {
+  font-family: "Poppins", sans-serif !important;
+}
+</style>
 
 <style scoped>
 .v-list {

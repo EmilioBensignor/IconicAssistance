@@ -1,19 +1,19 @@
 <template>
 	<HeaderSuiteComponent />
 	<div class="heroSuite columnAlignCenter">
-		<h1 class="text-midnight ml-4">Add Payment Method</h1>
+		<h1 class="text-white ml-4">Add Payment Method</h1>
 	</div>
 	<SpinnerComponent v-if="loading" />
-	<div v-show="!loading" class="columnAlignCenter mt-5">
+	<div v-show="!loading" class="paymentForm columnAlignCenter mt-5">
 		<div class="w-75 column ga-3">
-			<label for="firstName">First name</label>
+			<label class="text-white" for="firstName">First name</label>
 			<v-text-field id="firstName" v-model="firstName"></v-text-field>
 		</div>
 		<div class="w-75 column ga-3">
-			<label for="lastName">Last name</label>
+			<label class="text-white" for="lastName">Last name</label>
 			<v-text-field id="lastName" v-model="lastName"></v-text-field>
 		</div>
-		<div id="card-element" class="w-75 rounded-lg elevation-3 pa-5">
+		<div id="card-element" class="w-75 bg-lila rounded-lg elevation-3 pa-5">
 			<!-- Stripe Elements will insert the payment form here -->
 		</div>
 		<p class="w-75 text-red text-center mt-5" v-if="errorMsg">
@@ -137,6 +137,15 @@ export default {
 	},
 };
 </script>
+
+<style>
+.paymentForm .v-text-field .v-field--no-label input,
+.paymentForm .v-text-field .v-field--active input {
+  background-color: black;
+  color: white;
+  border-radius: 0.5rem;
+}
+</style>
 
 <style scoped>
 #checkout iframe {

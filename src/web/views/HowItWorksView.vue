@@ -46,7 +46,7 @@
     </div>
   </section>
   <!-- Step 2 -->
-  <section class="radioactiveWaves">
+  <section class="radioactiveWaves bg-grayBg">
     <div class="content">
       <div class="stepDesktop reversed columnAlignCenter">
         <div class="stepDesktopBody columnAlignCenter ga-1">
@@ -122,7 +122,7 @@
     </div>
   </section>
   <!-- Step 4 -->
-  <section class="skyRadioactiveWaves">
+  <section class="skyRadioactiveWaves bg-grayBg">
     <div class="content">
       <div class="stepDesktop reversed columnAlignCenter">
         <div class="stepDesktopBody columnAlignCenter ga-1">

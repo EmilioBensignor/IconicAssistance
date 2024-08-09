@@ -1,11 +1,11 @@
 <template>
 	<nav class="mb-15">
-		<v-app-bar elevation="0" app class="bg-white d-flex align-center py-1">
+		<v-app-bar elevation="0" app class="bg-suiteBg d-flex align-center py-1">
 			<v-toolbar-title>
 				<img
 						class="mt-2 ml-3"
-						width="75%"
-						src="@/suite/assets/images/Suite-Logo.png"
+						width="6%"
+						src="@/suite/assets/images/White-Logo.png"
 						alt="Suite Logo"
 					/>
 			</v-toolbar-title>

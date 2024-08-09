@@ -1,11 +1,11 @@
 <template>
   <HeaderPagesComponent />
-  <section class="columnAlignCenter">
+  <section class="columnAlignCenter bg-grayBg">
     <div class="heroPrivacyTerms flexCenter">
       <h1 class="text-midnight">Privacy Policy</h1>
     </div>
   </section>
-  <section class="heroPagesRadioactiveWave">
+  <section class="heroPagesRadioactiveWave bg-grayBg">
     <div class="content">
       <div class="columnAlignCenter ga-10">
         <div class="columnAlignCenter ga-5">

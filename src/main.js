@@ -32,7 +32,12 @@ const vuetify = createVuetify({
 					gray: "#6e7191",
 					chartGray: "#E4E4E4",
 					suiteGray: "#BCC1D1",
-					suiteBg: "#F4F5FB"
+					grayBg: "#F4F5FB",
+					suiteBg: "#191932",
+					lightViolet: "#313053",
+					lila: "#8785BA",
+					blueViolet: "#6273F6",
+					btnViolet:"#8477FA"
 				},
 			},
 		},

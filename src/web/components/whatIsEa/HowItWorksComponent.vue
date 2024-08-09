@@ -1,5 +1,5 @@
 <template>
-  <section class="radioactiveSkyWaves">
+  <section class="radioactiveSkyWaves bg-white">
     <div class="content">
       <div class="columnAlignCenter">
         <p v-motion="scrollBottom" class="subtitle">How It Works</p>

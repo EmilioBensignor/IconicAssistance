@@ -1,33 +1,33 @@
 <template>
 	<HeaderSuiteComponent />
 	<div class="heroSuite columnAlignCenter">
-		<h1 class="text-midnight ml-4">Account</h1>
+		<h1 class="text-white ml-4">Account</h1>
 	</div>
 	<SkeletonAccountComponent v-if="!userData" />
 	<div v-else class="suiteComponents column ga-3 mt-5">
 		<div class="pl-4 pr-1">
-			<p class="dataTitle">First Name</p>
-			<p class="dataInfo">{{ userData.firstname }}</p>
+			<p class="text-lila dataTitle">First Name</p>
+			<p class="text-white dataInfo">{{ userData.firstname }}</p>
 		</div>
 		<div class="pl-4 pr-1">
-			<p class="dataTitle">Last Name</p>
-			<p class="dataInfo">{{ userData.lastname }}</p>
+			<p class="text-lila dataTitle">Last Name</p>
+			<p class="text-white dataInfo">{{ userData.lastname }}</p>
 		</div>
 		<div class="pl-4 pr-1">
-			<p class="dataTitle">Email</p>
-			<p class="dataInfo">{{ userData.email }}</p>
+			<p class="text-lila dataTitle">Email</p>
+			<p class="text-white dataInfo">{{ userData.email }}</p>
 		</div>
 		<div class="pl-4 pr-1">
-			<p class="dataTitle">Phone Number</p>
-			<p class="dataInfo">{{ userData.phone }}</p>
+			<p class="text-lila dataTitle">Phone Number</p>
+			<p class="text-white dataInfo">{{ userData.phone }}</p>
 		</div>
 		<div class="pl-4 pr-1">
-			<p class="dataTitle">Company Name</p>
-			<p class="dataInfo">{{ userData.company }}</p>
+			<p class="text-lila dataTitle">Company Name</p>
+			<p class="text-white dataInfo">{{ userData.company }}</p>
 		</div>
 		<div class="pl-4 pr-1">
-			<p class="dataTitle">Company Size</p>
-			<p class="dataInfo">{{ userData.numemployees }} Employees</p>
+			<p class="text-lila dataTitle">Company Size</p>
+			<p class="text-white dataInfo">{{ userData.numemployees }} Employees</p>
 		</div>
 	</div>
 </template>

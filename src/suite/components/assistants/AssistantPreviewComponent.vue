@@ -1,13 +1,13 @@
 <template>
   <router-link
-    class="assistantPreview w-100 d-flex flex-wrap bg-white ga-5 rounded-lg elevation-5 pa-5"
+    class="assistantPreview w-100 d-flex flex-wrap bg-lightViolet ga-5 rounded-lg elevation-5 pa-5"
     :to="{ path: routes.ASSISTANTS, query: { id: assistant.id } }">
 		<div class="avatar allCenter rounded-circle elevation-3 pa-1">
-			<img width="75%" src="@/suite/assets/images/Suite-Logo.png" alt="Suite Logo">
+			<p class="w-auto font-weight-bold text-white">{{ getUserInitials(assistant.firstname, assistant.lastname) }}</p>
 		</div>
     <div class="previewBody rowCenter ga-2">
-      <p class="w-auto">{{ assistant.firstname }}</p>
-      <p class="w-auto">{{ assistant.lastname }}</p>
+      <p class="w-auto text-white">{{ assistant.firstname }}</p>
+      <p class="w-auto text-white">{{ assistant.lastname }}</p>
     </div>
   </router-link>
 </template>
@@ -27,6 +27,14 @@
         required: true,
       },
     },
+    methods: {
+      getUserInitials(firstname, lastname) {
+        if (!firstname || !lastname) return "";
+        return (
+          firstname.charAt(0).toUpperCase() + lastname.charAt(0).toUpperCase()
+        );
+      },
+    }
   };
 </script>
 
@@ -39,7 +47,12 @@
 	.avatar {
 		width: 3rem;
 		height: 3rem;
+    border: 2px solid #8785BA;
 	}
+
+  .avatar p {
+    font-size: 1.2rem;
+  }
 
 	.previewBody p {
 		font-weight: 600;
