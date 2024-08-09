@@ -16,10 +16,10 @@
 				store.invoices.data.invoices.length > 0
 			"
 		>
-			<p>Next invoice</p>
-			<div>
+			<p class="titleSuite text-lila">Next invoice</p>
+			<div class="invoice">
 				<div class="d-flex ml-5">
-					<p class="w-auto rounded-t-lg py-1 px-2 bg-white">
+					<p class="w-auto bg-lightViolet text-white rounded-t-lg py-1 px-2">
 						{{
 							new Date(next_invoice.properties.hs_due_date) >
 							new Date()
@@ -29,23 +29,23 @@
 					</p>
 				</div>
 				<div
-					class="w-100 bg-white column ga-5 rounded-lg elevation-5 pa-5"
+					class="w-100 bg-lightViolet column ga-5 rounded-lg elevation-5 pa-5"
 				>
 					<div class="rowCenter">
 						<v-skeleton-loader
 							v-if="!userData || !userData.firstname"
 							type="text"
 						></v-skeleton-loader>
-						<p v-else class="cardLabel">{{ userData.firstname }}</p>
-						<p class="text-end">
+						<p v-else class="cardLabel text-white">{{ userData.firstname }}</p>
+						<p class="text-white text-end">
 							{{
 								formatDate(next_invoice.properties.hs_due_date)
 							}}
 						</p>
 					</div>
 					<div>
-						<p class="cardLabel">Amount Billed:</p>
-						<p>
+						<p class="cardLabel text-lila">Amount Billed:</p>
+						<p class="text-white">
 							{{
 								formatCurrency(
 									next_invoice.properties.hs_amount_billed
@@ -56,8 +56,8 @@
 					</div>
 				</div>
 			</div>
-			<p>Paid invoices</p>
-			<div v-for="(invoice, index) in filtered_invoices" :key="index">
+			<p class="titleSuite text-lila">Paid invoices</p>
+			<div class="invoice" v-for="(invoice, index) in filtered_invoices" :key="index">
 				<div class="d-flex ml-5">
 					<p
 						class="w-auto rounded-t-lg py-1 px-2 bg-white"
@@ -70,7 +70,7 @@
 								: "Past due"
 						}}
 					</p>
-					<p class="w-auto rounded-t-lg py-1 px-2 bg-white" v-else>
+					<p class="w-auto bg-lightViolet rounded-t-lg py-1 px-2" v-else>
 						{{
 							invoice.properties.hs_invoice_status[0].toUpperCase() +
 							invoice.properties.hs_invoice_status.slice(1)
@@ -78,21 +78,21 @@
 					</p>
 				</div>
 				<div
-					class="w-100 bg-white column ga-5 rounded-lg elevation-5 pa-5"
+					class="w-100 bg-lightViolet column ga-5 rounded-lg elevation-5 pa-5"
 				>
 					<div class="rowCenter">
 						<v-skeleton-loader
 							v-if="!userData || !userData.firstname"
 							type="text"
 						></v-skeleton-loader>
-						<p v-else class="cardLabel">{{ userData.firstname }}</p>
-						<p class="text-end">
+						<p v-else class="cardLabel text-white">{{ userData.firstname }}</p>
+						<p class="text-end text-white">
 							{{ formatDate(invoice.properties.hs_due_date) }}
 						</p>
 					</div>
 					<div>
-						<p class="cardLabel">Amount Billed:</p>
-						<p>
+						<p class="cardLabel text-lila">Amount Billed:</p>
+						<p class="text-white">
 							{{
 								formatCurrency(
 									invoice.properties.hs_amount_billed
@@ -165,14 +165,8 @@ const userData = useDocument(doc(collection(db, "clients"), store.user.uid));
 </script>
 
 <style scoped>
-.futureInvoice {
+.invoice {
 	max-width: 300px;
-	border: 3px solid #373ae6;
-}
-
-.pastInvoice {
-	max-width: 300px;
-	border: 3px solid #8c909c;
 }
 
 .cardLabel {
