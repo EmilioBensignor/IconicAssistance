@@ -6,14 +6,16 @@
         color="lila"
         class="hamburger shadow-15"
         size="x-large"
-        @click="showMenu = !showMenu">
+        @click="showMenu = !showMenu"
+      >
       </v-app-bar-nav-icon>
       <v-toolbar-title>
         <router-link class="text-decoration-none" :to="routes.SUITE">
           <img
             width="6%"
             src="@/suite/assets/images/White-Logo.png"
-            alt="Suite Logo" />
+            alt="Suite Logo"
+          />
         </router-link>
       </v-toolbar-title>
       <v-menu>
@@ -22,12 +24,14 @@
             v-if="!userData || !userData.firstname"
             icon="mdi-account"
             class="account elevation-3 pa-1"
-            v-bind="props">
+            v-bind="props"
+          >
           </v-btn>
           <button
             v-else
             class="account rounded-circle elevation-3 pa-1"
-            v-bind="props">
+            v-bind="props"
+          >
             {{ getUserInitials(userData.firstname, userData.lastname) }}
           </button>
         </template>
@@ -70,13 +74,11 @@
       <v-card
         class="bg-suiteBg align-self-center ga-3 rounded-lg"
         max-width="400"
-        title="Do you want to log out?">
+        title="Do you want to log out?"
+      >
         <div class="d-flex justify-center ga-3 px-5">
           <v-btn text="Cancel" @click="dialog = false"></v-btn>
-          <v-btn
-            class="bg-btnViolet"
-            text="Log Out"
-            @click="onLogout"></v-btn>
+          <v-btn class="bg-btnViolet" text="Log Out" @click="onLogout"></v-btn>
         </div>
       </v-card>
     </v-dialog>
@@ -84,93 +86,98 @@
 </template>
 
 <script>
-  import routes from "@/router/constants/ROUTES_NAMES";
-  import { logout } from "@/suite/services/auth.service";
-  import { useAuthStore } from "@/suite/stores/auth.store";
+import routes from "@/router/constants/ROUTES_NAMES";
+import { logout } from "@/suite/services/auth.service";
+import { useAuthStore } from "@/suite/stores/auth.store";
 
-  export default {
-    name: "HeaderSuiteComponent",
-    data() {
-      return {
-        showMenu: false,
-        dialog: false,
-        routes: routes,
-        suiteMenu: [
-          {
-            path: routes.SUITE,
-            title: "Dashboard",
-            icon: "home",
-          },
-          {
-            path: routes.ASSISTANTS,
-            title: "Assistants",
-            icon: "account-group",
-          },
-          {
-            path: routes.INVOICES,
-            title: "Invoices",
-            icon: "receipt",
-          },
-        ],
-        accountMenu: [
-          {
-            path: routes.ACCOUNT,
-            title: "Account",
-          },
-          {
-            path: routes.PAYMENT_METHODS,
-            title: "Payment Methods",
-          },
-        ],
-      };
-    },
-    mounted() {
-      window.addEventListener("scroll", this.handleScroll);
-    },
-    beforeDestroy() {
-      window.removeEventListener("scroll", this.handleScroll);
-    },
-    methods: {
-      handleScroll() {
-        const scrollTop =
-          window.pageYOffset || document.documentElement.scrollTop;
-        const windowHeight = window.innerHeight;
+export default {
+  name: "HeaderSuiteComponent",
+  data() {
+    return {
+      showMenu: false,
+      dialog: false,
+      routes: routes,
+      suiteMenu: [
+        {
+          path: routes.SUITE,
+          title: "Dashboard",
+          icon: "home",
+        },
+        {
+          path: routes.ASSISTANTS,
+          title: "Assistants",
+          icon: "account-group",
+        },
+        {
+          path: routes.INVOICES,
+          title: "Invoices",
+          icon: "receipt",
+        },
+      ],
+      accountMenu: [
+        {
+          path: routes.ACCOUNT,
+          title: "Account",
+        },
+        {
+          path: routes.PAYMENT_METHODS,
+          title: "Payment Methods",
+        },
+      ],
+    };
+  },
+  mounted() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+      const windowHeight = window.innerHeight;
 
-        const threshold = windowHeight * 0.5;
+      const threshold = windowHeight * 0.5;
 
-        if (scrollTop >= threshold) {
-          this.isScrolled = true;
-        } else {
-          this.isScrolled = false;
-        }
-      },
-      onLogout() {
-        this.dialog = false;
-        logout();
-      },
-      getUserInitials(firstname, lastname) {
-        if (!firstname || !lastname) return "";
-        return (
-          firstname.charAt(0).toUpperCase() + lastname.charAt(0).toUpperCase()
-        );
-      },
+      if (scrollTop >= threshold) {
+        this.isScrolled = true;
+      } else {
+        this.isScrolled = false;
+      }
     },
-  };
+    onLogout() {
+      this.dialog = false;
+      logout();
+    },
+    getUserInitials(firstname, lastname) {
+      if (!firstname || !lastname) return "";
+      return (
+        firstname.charAt(0).toUpperCase() + lastname.charAt(0).toUpperCase()
+      );
+    },
+  },
+};
 </script>
 
 <script setup>
-  import { collection, doc } from "firebase/firestore";
-  import { useDocument } from "vuefire";
-  import { db } from "../firebase/init";
-  const store = useAuthStore();
-  const userData = useDocument(doc(collection(db, "clients"), store.user.uid));
+import { collection, doc } from "firebase/firestore";
+import { useDocument } from "vuefire";
+import { db } from "../firebase/init";
+const store = useAuthStore();
+const userData = useDocument(doc(collection(db, "clients"), store.user.uid));
 </script>
 
 <style>
+.navSuite .v-toolbar {
+  max-width: 1920px;
+}
+
 .navSuite .v-navigation-drawer {
   width: 55% !important;
   max-width: 205px !important;
 }
+
 .navSuite .v-navigation-drawer__content {
   max-width: 100%;
 }
@@ -181,54 +188,54 @@
 }
 
 .acountList .v-list-item:hover {
-  background: #8785BA !important;
+  background: #8785ba !important;
   transition: all 0.3s;
 }
 </style>
 
 <style scoped>
-  .v-app-bar {
-    position: relative;
-  }
+.v-app-bar {
+  position: relative;
+}
 
-  .hamburger {
-    display: block !important;
-  }
+.hamburger {
+  display: block !important;
+}
 
-  .account {
-    width: 3rem;
-    height: 3rem !important;
+.account {
+  width: 3rem;
+  height: 3rem !important;
+  position: absolute;
+  right: 4%;
+  font-weight: 600;
+  border: 2px solid #8785ba;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+.v-list-item:hover {
+  background: #f6f6f6;
+}
+
+.v-menu .v-list-item-title {
+  font-weight: 600;
+}
+
+.v-navigation-drawer .v-list-item-title {
+  font-weight: 500;
+}
+
+@media only screen and (min-width: 1080px) {
+  .v-toolbar-title {
     position: absolute;
-    right: 4%;
-    font-weight: 600;
-    border: 2px solid #8785BA;
+    left: 65px;
     cursor: pointer;
   }
-
-  a {
-    text-decoration: none;
+  .v-navigation-drawer {
+    top: 80px !important;
   }
-
-  .v-list-item:hover {
-    background: #f6f6f6;
-  }
-
-  .v-menu .v-list-item-title {
-    font-weight: 600;
-  }
-
-  .v-navigation-drawer .v-list-item-title {
-    font-weight: 500;
-  }
-
-  @media only screen and (min-width: 1080px) {
-    .v-toolbar-title {
-      position: absolute;
-      left: 65px;
-      cursor: pointer;
-    }
-    .v-navigation-drawer {
-      top: 80px !important;
-    }
-  }
+}
 </style>
