@@ -65,12 +65,12 @@
               <span class="pSmall">{{ assistant.shift }}</span>
             </p>
           </div>
-          <div class="rowCenter ga-2">
+          <!-- <div class="rowCenter ga-2">
             <span class="mdi mdi-check-circle-outline"></span>
             <p class="w-auto text-white">
               Current task: <span class="pSmall">???</span>
             </p>
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="cardBody column ga-3">
