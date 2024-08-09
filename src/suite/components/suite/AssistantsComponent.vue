@@ -13,7 +13,7 @@
 				:assistant="assistant"
 			/>
 		</div>
-		<p v-else class="text-start">You currently have no assistants</p>
+		<p v-else class="text-lila text-start">You currently have no assistants</p>
 	</div>
 </template>
 

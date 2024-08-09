@@ -28,7 +28,7 @@
 				</p>
 			</div>
 		</router-link>
-		<p v-else>NO HAY</p>
+		<p v-else class="text-lila">You currently have no invoices</p>
 	</div>
 </template>
 

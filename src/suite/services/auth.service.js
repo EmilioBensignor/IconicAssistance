@@ -81,6 +81,8 @@ async function logout() {
 	}
 	await signOut(auth);
 	store.user = {};
+	store.assistants = null
+	store.invoices = null
 	store.isAuthenticated = false;
 	router.push(ROUTES_NAMES.LOGIN);
 }

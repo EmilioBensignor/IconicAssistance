@@ -162,6 +162,10 @@
     color: white;
   }
 
+  .btnVioletBorder {
+    border: 1px solid #8477FA;
+  }
+
   .primaryButton:hover {
     background-color: transparent;
     color: white;
@@ -170,6 +174,11 @@
   .secondaryButton:hover {
     background-color: white;
     color: #373ae6;
+  }
+
+  .btnVioletBorder:hover {
+    background-color: white;
+    color: #8477FA;
   }
 
   /* BackGrounds */

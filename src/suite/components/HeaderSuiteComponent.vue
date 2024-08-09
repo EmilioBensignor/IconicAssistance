@@ -74,7 +74,7 @@
         <div class="d-flex justify-center ga-3 px-5">
           <v-btn text="Cancel" @click="dialog = false"></v-btn>
           <v-btn
-            class="bg-radioactive"
+            class="bg-btnViolet"
             text="Log Out"
             @click="onLogout"></v-btn>
         </div>
