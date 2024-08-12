@@ -8,7 +8,7 @@
   <MatchingProcessComponent />
   <StartDelegatingComponent />
   <GoogleReviewsComponent />
-  <ContactFAQComponent />
+  <FAQsComponent />
   <FooterContactComponent />
 </template>
 
@@ -23,7 +23,7 @@ import YourReturnComponent from "@/web/components/contactUs/YourReturnComponent.
 import MatchingProcessComponent from "@/web/components/contactUs/MatchingProcessComponent.vue";
 import StartDelegatingComponent from "@/web/components/contactUs/StartDelegatingComponent.vue";
 import GoogleReviewsComponent from "@/web/components/contactUs/GoogleReviewsComponent.vue";
-import ContactFAQComponent from "@/web/components/contactUs/ContactFAQComponent.vue";
+import FAQsComponent from "@/web/components/home/FAQsComponent.vue";
 import FooterContactComponent from "@/web/components/contactUs/FooterContactComponent.vue";
 
 import { computed } from "vue";
@@ -43,7 +43,7 @@ export default {
     MatchingProcessComponent,
     StartDelegatingComponent,
     GoogleReviewsComponent,
-    ContactFAQComponent,
+    FAQsComponent,
     FooterContactComponent,
   },
   setup() {

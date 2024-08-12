@@ -84,9 +84,7 @@
             </v-expansion-panel>
           </v-expansion-panels>
         </div>
-        <a href="#hero" class="secondaryButton elevation-5 my-10"
-          >Get Started</a
-        >
+        
       </div>
     </div>
   </section>
