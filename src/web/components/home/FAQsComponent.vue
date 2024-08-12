@@ -245,6 +245,7 @@ import { scrollBottom } from "@/motions.js";
   }
 
   .leftRight {
+    align-items: flex-start;
     flex-direction: row;
   }
 }
