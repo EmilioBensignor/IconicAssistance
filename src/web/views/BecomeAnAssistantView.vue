@@ -1,14 +1,14 @@
 <template>
   <HeaderContactComponent />
   <section class="bg-grayBg columnAlignCenter">
-    <div class="heroPages flexCenter">
+    <div class="heroPages flexCenter pb-15">
       <h1 v-motion="scrollBottom" class="text-midnight">
         Become an Iconic Assistant
       </h1>
     </div>
   </section>
-  <section class="bg-grayBg">
-    <div class="w-100 maxContent">
+  <section class="bg-grayBg pt-15 pb-15">
+    <div class="w-100 maxContent pb-5">
       <h2 class="text-start">Current Opportunities</h2>
       <div class="column align-start ga-5 py-5">
         <div
