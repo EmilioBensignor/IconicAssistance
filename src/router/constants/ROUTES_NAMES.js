@@ -1,5 +1,7 @@
 export default {
 	HOME: "/",
+	CONTACT_US: "/contact-us",
+	BECOME_AN_ASSISTANT: "/become-an-assistant",
 	SUITE: "/suite",
 	REGISTER: "/suite/register",
 	LOGIN: "/suite/login",

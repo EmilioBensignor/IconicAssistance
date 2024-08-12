@@ -5,10 +5,10 @@
 <style>
 .popUp {
   text-align: center;
-  background-color: white;
+  background-color: #373ae6;
   border: 1px solid #373ae6;
   border-radius: 20vw;
-  color: #373ae6;
+  color: white;
   font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
@@ -22,8 +22,8 @@
 }
 
 .popUp:hover {
-  background-color: #373ae6;
-  color: white;
+  background-color: white;
+  color: #373ae6;
   border: 1px solid #373ae6;
 }
 

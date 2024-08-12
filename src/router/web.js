@@ -11,6 +11,7 @@ import BlogView from "../web/views/BlogView.vue";
 import BlogPostView from "../web/views/BlogPostView.vue";
 import OurSolutionView from "../web/views/OurSolutionView.vue";
 import ContactUsView from "../web/views/ContactUsView.vue";
+import BecomeAnAssistantView from "../web/views/BecomeAnAssistantView.vue";
 import GetStartedView from "../web/views/GetStartedView.vue";
 import BookingView from "../web/views/BookingView.vue";
 import ThankYouView from "../web/views/ThankYouView.vue";
@@ -151,6 +152,15 @@ export const webRoutes = [
 		component: ContactUsView,
 		meta: {
 			title: "Contact Us - Iconic Assistants",
+			description: "Connect with Us – Let's Discuss Your Business Needs with Iconic Assistants.",
+		},
+	},
+	{
+		path: "/become-an-assistant",
+		name: "BecomeAnAssistant",
+		component: BecomeAnAssistantView,
+		meta: {
+			title: "Become an Assistant - Iconic Assistants",
 			description: "Connect with Us – Let's Discuss Your Business Needs with Iconic Assistants.",
 		},
 	},

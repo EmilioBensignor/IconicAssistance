@@ -20,7 +20,9 @@
               alt="Become an Executive Assistant" />
             <p class="w-auto text-center font-weight-bold">Hire an Assistant</p>
           </button>
-          <a
+          <button
+            id="showNext"
+            @click="showNext"
             class="allCenter ga-3 bg-white rounded-lg elevation-5 pa-3"
             href="https://gabrielafasanella.hiringroom.com/jobs">
             <img
@@ -30,7 +32,15 @@
             <p class="w-auto text-center font-weight-bold">
               Become an Assistant
             </p>
-          </a>
+          </button>
+        </div>
+        <div class="mt-10">
+          <router-link
+            id="next"
+            class="btnNext d-none bg-radioactive rounded-pill elevation-3 px-5 py-3"
+            :to="routes.BECOME_AN_ASSISTANT"
+            >Next</router-link
+          >
         </div>
       </div>
     </div>
@@ -38,11 +48,22 @@
 </template>
 
 <script>
+  import ROUTES_NAMES from "@/router/constants/ROUTES_NAMES";
+
   export default {
     data() {
       return {
         dialog: true,
+        routes: ROUTES_NAMES,
       };
+    },
+    methods: {
+      showNext() {
+        const showNext = document.getElementById("showNext");
+        showNext.classList.add("borderBtn");
+        const nextButton = document.getElementById("next");
+        nextButton.classList.remove("d-none");
+      },
     },
   };
 </script>
@@ -82,6 +103,21 @@
 
   .roles p {
     font-size: 0.875rem;
+  }
+
+  .borderBtn {
+    border: 2px solid #373ae6;
+  }
+
+  .btnNext {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: 1px solid #373ae6;
+  }
+  .btnNext:hover {
+    background-color: white !important;
+    color: #373ae6 !important;
   }
 
   @media only screen and (min-width: 400px) {
@@ -151,7 +187,7 @@
     }
   }
 
-  @media only screen and (min-width: 1080px){
+  @media only screen and (min-width: 1080px) {
     .maxContent {
       max-width: 650px;
       margin: 0 auto;

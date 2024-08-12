@@ -89,12 +89,6 @@
             </v-list-item>
           </v-list>
         </v-menu>
-        <v-btn
-          class="btnNav"
-          :color="isScrolled ? 'radioactive' : 'white'"
-          :to="'/contact-us'">
-          Contact Us
-        </v-btn>
       </div>
       <PopUp />
     </v-app-bar>
@@ -135,13 +129,6 @@
               <v-list-item-title class="pl-4 text-midnight">{{
                 item.title
               }}</v-list-item-title>
-            </v-list-item>
-          </li>
-          <li>
-            <v-list-item :to="'/contact-us'">
-              <v-list-item-title class="navTitles"
-                >Contact Us</v-list-item-title
-              >
             </v-list-item>
           </li>
         </ul>

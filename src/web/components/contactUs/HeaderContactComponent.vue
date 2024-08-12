@@ -71,11 +71,10 @@
             </v-list-item>
           </v-list>
         </v-menu>
-        <v-btn class="btnNav" color="radioactive" :to="'/contact-us'">
-          Contact Us
-        </v-btn>
       </div>
-      <a href="#hero" class="popUpContact elevation-5">Get Started</a>
+      <router-link :to="routes.CONTACT_US" class="popUpContact elevation-5"
+        >Get Started</router-link
+      >
     </v-app-bar>
     <v-navigation-drawer v-model="showMenu" app class="mt-2">
       <v-list class="pt-5" tag="ul">
@@ -116,13 +115,6 @@
               }}</v-list-item-title>
             </v-list-item>
           </li>
-          <li>
-            <v-list-item :to="'/contact-us'">
-              <v-list-item-title class="navTitles"
-                >Contact Us</v-list-item-title
-              >
-            </v-list-item>
-          </li>
         </ul>
       </v-list>
     </v-navigation-drawer>
@@ -131,6 +123,7 @@
 
 <script>
   import IconicLogo from "@/web/components/icons/IconicLogo.vue";
+  import ROUTES_NAMES from "@/router/constants/ROUTES_NAMES";
 
   export default {
     name: "HeaderTransparentComponent",
@@ -139,6 +132,7 @@
     },
     data() {
       return {
+        routes: ROUTES_NAMES,
         showMenu: false,
         isScrolled: false,
         aboutMenu: [
@@ -241,10 +235,10 @@
 
   .popUpContact {
     text-align: center;
-    background-color: white;
+    background-color: #373ae6;
     border: 1px solid #373ae6;
     border-radius: 20vw;
-    color: #373ae6;
+    color: white;
     font-family: "Poppins", sans-serif;
     font-size: 1.5rem;
     font-weight: 600;
@@ -258,8 +252,8 @@
   }
 
   .popUpContact:hover {
-    background-color: #373ae6;
-    color: white;
+    background-color: white;
+    color: #373ae6;
     border: 1px solid #373ae6;
   }
 
