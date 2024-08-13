@@ -29,7 +29,7 @@
               </div>
             </div>
             <div class="info rowCenter flex-wrap ga-2">
-              <p class="w-auto text-white pSmall">Last rating:</p>
+              <p class="w-auto text-white pSmall">Overall rating:</p>
               <div>
                 <v-rating
                   v-model="assistant.last_rating"
@@ -117,12 +117,22 @@
             <p class="w-auto text-white">{{ assistant.firstname }}</p>
             <p class="w-auto text-white">{{ assistant.lastname }}</p>
             <div class="assistantType borderLila rounded-lg px-1">
-              <p class="w-auto text-white">EA</p>
+              <p class="w-auto text-white">
+                {{
+                  assistant.role
+                    .split(" ")
+                    .map((n) => n[0])
+                    .join("")
+                }}
+                <v-tooltip activator="parent" location="top">
+                  {{ assistant.role }}
+                </v-tooltip>
+              </p>
             </div>
           </div>
         </div>
-        <div class="px-5">
-          <p class="text-white">Overall Rating</p>
+        <div class="rowCenter ga-3 px-5">
+          <p class="w-auto text-white">Rating</p>
           <div class="dialogStars rowCenter ga-2">
             <v-rating
               v-model="newRating.score"

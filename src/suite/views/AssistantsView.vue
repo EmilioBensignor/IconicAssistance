@@ -17,21 +17,29 @@
           store.assistants.data.assistants.length > 0
         "
       >
-        <v-list class="w-auto assistantList bg-lightViolet rowCenter rounded-lg elevation-3 pa-0">
-          <v-list-item
-            v-for="(assistant, index) in store.assistants.data.assistants"
-            :key="index"
-            :value="assistant.id"
-            :title="`${assistant.firstname} ${assistant.lastname}`"
-            @click="selectAssistant(assistant)"
-            :class="selected.id === assistant.id ? 'v-list-item--active' : ''"
+        <div class="addList column ga-5">
+          <a
+            class="w-auto add align-self-start bg-lightViolet rounded-lg elevation-3 px-5 py-3"
+            href="https://iconicassistants.na.chilipiper.com/book/me/discovery-meeting?type=expansion-call"
+            >+ Add More Assistants</a
           >
-          </v-list-item>
-        </v-list>
+          <v-list
+            class="w-auto assistantList bg-lightViolet rowCenter rounded-lg elevation-3 pa-0"
+          >
+            <v-list-item
+              v-for="(assistant, index) in store.assistants.data.assistants"
+              :key="index"
+              :value="assistant.id"
+              :title="`${assistant.firstname} ${assistant.lastname}`"
+              @click="selectAssistant(assistant)"
+              :class="selected.id === assistant.id ? 'v-list-item--active' : ''"
+            >
+            </v-list-item>
+          </v-list>
+        </div>
         <div class="d-flex flex-wrap align-start ga-5">
           <AssistantCardComponent :assistant="selected" />
         </div>
-
       </div>
       <p
         v-if="
@@ -99,5 +107,17 @@ export default {
 <style scoped>
 .v-list {
   max-width: max-content;
+}
+
+.add {
+  text-decoration: none;
+  border: 2px solid #8785BA;
+}
+
+@media only screen and (min-width: 1080px) {
+  .addList {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
 }
 </style>
