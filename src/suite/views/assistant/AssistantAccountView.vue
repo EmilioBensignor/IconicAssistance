@@ -1,5 +1,5 @@
 <template>
-	<HeaderSuiteComponent />
+	<HeaderAssistantComponent />
 	<div class="heroSuite columnAlignCenter">
 		<h1 class="text-white ml-4">Account</h1>
 	</div>
@@ -27,20 +27,22 @@
 		</div>
 		<div class="pl-4 pr-1">
 			<p class="text-lila dataTitle">Company Size</p>
-			<p class="text-white dataInfo">{{ userData.numemployees }} Employees</p>
+			<p class="text-white dataInfo">
+				{{ userData.numemployees }} Employees
+			</p>
 		</div>
 	</div>
 </template>
 
 <script>
-import HeaderSuiteComponent from "@/suite/components/HeaderSuiteComponent.vue";
+import HeaderAssistantComponent from "@/suite/components/HeaderAssistantComponent.vue";
 import SkeletonAccountComponent from "@/suite/components/skeleton/SkeletonAccountComponent.vue";
 import { useAuthStore } from "@/suite/stores/auth.store";
 
 export default {
 	name: "AccountView",
 	components: {
-		HeaderSuiteComponent,
+		HeaderAssistantComponent,
 		SkeletonAccountComponent,
 	},
 };
@@ -52,7 +54,6 @@ import { useDocument } from "vuefire";
 import { db } from "@/suite/firebase/init";
 const store = useAuthStore();
 const userData = useDocument(doc(collection(db, "assistants"), store.user.uid));
-console.log(userData);
 </script>
 
 <style scoped>

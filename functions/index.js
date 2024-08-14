@@ -20,6 +20,16 @@ function transformAssistantData(rawData) {
 	data.id = rawData.id;
 	return data;
 }
+function transformClientData(rawData) {
+	let data = {};
+	data.firstname = rawData.data()["firstname"];
+	data.lastname = rawData.data()["lastname"];
+	data.email = rawData.data()["email"];
+	data.phone = rawData.data()["phone"];
+	data.company = rawData.data()["company"];
+	data.id = rawData.id;
+	return data;
+}
 
 exports.createSetupIntent = onRequest({ cors: true }, async (req, res) => {
 	res.set("Access-Control-Allow-Origin", "*");
@@ -331,6 +341,57 @@ exports.getInvoicesData = onCall(async (data, context) => {
 		throw new HttpsError(
 			"unknown",
 			"An error occurred while fetching invoice data"
+		);
+	}
+});
+
+exports.getClientData = onCall(async (data, context) => {
+	const hubspotId = data.data.hubspotId;
+	const headers = {
+		Authorization: `Bearer ${process.env.VITE_HUBSPOT_PRIVATE_APP_KEY}`,
+	};
+
+	try {
+		const dealsResponse = await axios.get(
+			`https://api.hubapi.com/crm/v4/objects/contacts/${hubspotId}/associations/deals?properties=dealname,amount&associations=contacts`,
+			{ headers }
+		);
+		const dealIds = dealsResponse.data.results.map(
+			(result) => result.toObjectId
+		);
+
+		const clientIds = await Promise.all(
+			dealIds.map((deal) =>
+				axios
+					.get(
+						`https://api.hubapi.com/crm/v4/objects/deals/${deal}/associations/contacts`,
+						{ headers }
+					)
+					.then((response) =>
+						response.data.results
+							.filter(
+								(contact) => contact.toObjectId !== hubspotId
+							)
+							.map((contact) => contact.toObjectId)
+					)
+			)
+		).then((results) => results.flat());
+		if (clientIds.length === 0) {
+			return { client: [] };
+		}
+		const clientsRawData = await db
+			.collection("clients")
+			.where("hs_object_id", "in", clientIds)
+			.get();
+		const clientsData = clientsRawData.docs.map((doc) =>
+			transformClientData(doc)
+		);
+		return { clients: clientsData };
+	} catch (err) {
+		console.error(err);
+		throw new HttpsError(
+			"unknown",
+			"An error occurred while fetching assistant data"
 		);
 	}
 });
