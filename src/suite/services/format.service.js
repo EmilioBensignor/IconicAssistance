@@ -5,7 +5,7 @@ function formatDate(dateString) {
     day: "2-digit",
   };
   const date = new Date(dateString);
-  return date.toLocaleDateString("en-GB", options).replace(",", "");
+  return date.toLocaleDateString("en-US", options).replace(",", "");
 }
 function formatCurrency(amount) {
   return `$${parseFloat(amount).toLocaleString("en-US", {

@@ -16,6 +16,7 @@ export default {
 	RESET_PASSWORD: "/suite/reset-password",
 	RESET_PASSWORD_CONFIRMATION: "/suite/reset-password-confirmation",
 	ASSISTANT_TASKS: "/suite/assistant-tasks",
-	ASSISTANT_SUITE: "/assistant-suite",
 	ASSISTANT_REGISTER: "/assistant-register",
+	ASSISTANT_SUITE: "/assistant-suite",
+	ASSISTANT_ACCOUNT: "/assistant-suite/account",
 };

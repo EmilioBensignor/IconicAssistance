@@ -11,8 +11,9 @@ import AddPaymentMethodView from "@/suite/views/AddPaymentMethodView.vue";
 import AddPaymentMethodConfirmationView from "@/suite/views/AddPaymentMethodConfirmationView.vue";
 import ResetPasswordView from "@/suite/views/ResetPasswordView.vue";
 import ResetPasswordConfirmationView from "@/suite/views/ResetPasswordConfirmationView.vue";
-import AssistantSuiteView from "@/suite/views/assistant/AssistantSuiteView.vue";
 import AssistantTasksView from "@/suite/views/AssistantTasksView.vue";
+import AssistantSuiteView from "@/suite/views/assistant/AssistantSuiteView.vue";
+import AssistantAccountView from "@/suite/views/assistant/AssistantAccountView.vue";
 import requireAuthClient from "./guards/requireAuthClient";
 import requireAuthAssistant from "./guards/requireAuthAssistant";
 
@@ -124,6 +125,15 @@ export const suiteRoutes = [
 		},
 	},
 	{
+		path: routes.ASSISTANT_REGISTER,
+		name: "AssistantRegister",
+		component: AssistantRegisterView,
+		meta: {
+			title: "Iconic Asssitants Suite",
+			description: "Iconic Assistants Suite.",
+		},
+	},
+	{
 		path: routes.ASSISTANT_SUITE,
 		name: "AssistantSuite",
 		component: AssistantSuiteView,
@@ -134,9 +144,10 @@ export const suiteRoutes = [
 		},
 	},
 	{
-		path: routes.ASSISTANT_REGISTER,
-		name: "AssistantRegister",
-		component: AssistantRegisterView,
+		path: routes.ASSISTANT_ACCOUNT,
+		name: "AssistantAccount",
+		component: AssistantAccountView,
+		beforeEnter: requireAuthAssistant,
 		meta: {
 			title: "Iconic Asssitants Suite",
 			description: "Iconic Assistants Suite.",
