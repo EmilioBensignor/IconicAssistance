@@ -29,7 +29,7 @@
         class="secondaryButton bg-btnViolet btnVioletBorder elevation-4"
         href="https://iconicassistants.na.chilipiper.com/book/me/discovery-meeting?type=expansion-call"
       >
-        LEARN MORE
+        BOOK A CALL
       </a>
     </div>
   </div>
