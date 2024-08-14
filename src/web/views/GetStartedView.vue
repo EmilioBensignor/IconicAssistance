@@ -16,7 +16,6 @@
   <StartDelegatingComponent />
   <GoogleReviewsComponent />
   <ContactFAQComponent />
-  <RolePopUpComponent />
 </template>
 
 <script>
@@ -30,7 +29,6 @@ import MatchingProcessComponent from "@/web/components/contactUs/MatchingProcess
 import StartDelegatingComponent from "@/web/components/contactUs/StartDelegatingComponent.vue";
 import GoogleReviewsComponent from "@/web/components/contactUs/GoogleReviewsComponent.vue";
 import ContactFAQComponent from "@/web/components/contactUs/ContactFAQComponent.vue";
-import RolePopUpComponent from "@/web/components/contactUs/RolePopUpComponent.vue";
 import "https://link.msgsndr.com/js/form_embed.js";
 
 import { computed } from "vue";
@@ -50,7 +48,6 @@ export default {
     StartDelegatingComponent,
     GoogleReviewsComponent,
     ContactFAQComponent,
-    RolePopUpComponent,
   },
   setup() {
     const route = useRoute();

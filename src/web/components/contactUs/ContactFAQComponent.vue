@@ -1,11 +1,14 @@
 <template>
-  <section class="columnAlignCenter bg-grayBg">
+  <section class="columnAlignCenter bg-grayBg pb-15">
     <div class="content w-100">
       <div class="w-100 columnAlignCenter">
         <h2 v-motion="scrollBottom" class="w-100 text-midnight mt-10 mb-2">
           Frequently Asked Questions
         </h2>
-        <img class="w-75 line" src="@/web/assets/images/misc/sky-line-3-Virtual-Assistant.png" alt="Line Virtual Assistant" />
+        <img
+          class="w-75 line"
+          src="@/web/assets/images/misc/sky-line-3-Virtual-Assistant.png"
+          alt="Line Virtual Assistant" />
         <div class="faqContainer columnAlignCenter ga-5 mt-10">
           <v-expansion-panels v-motion="scrollBottom" class="faqWrapper">
             <v-expansion-panel class="elevation-4 rounded-lg">
@@ -84,88 +87,87 @@
             </v-expansion-panel>
           </v-expansion-panels>
         </div>
-        
       </div>
     </div>
   </section>
 </template>
 
 <script setup>
-import { scrollBottom } from "@/motions.js";
+  import { scrollBottom } from "@/motions.js";
 </script>
 
 <style scoped>
-.examples {
-  text-decoration: none;
-}
-
-.faqContainer {
-  width: 75%;
-}
-
-@media only screen and (min-width: 480px) {
-  .line {
-    width: 85% !important;
-  }
-}
-
-@media only screen and (min-width: 600px) {
-  .line {
-    width: 75% !important;
-  }
-}
-
-@media only screen and (min-width: 770px) {
-  .line {
-    width: 65% !important;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  .line {
-    width: 58% !important;
-  }
-}
-
-@media only screen and (min-width: 1080px) {
-  .line {
-    width: 53% !important;
-  }
-}
-
-@media only screen and (min-width: 1280px) {
-  .line {
-    width: 45% !important;
+  .examples {
+    text-decoration: none;
   }
 
   .faqContainer {
-    width: 65% !important;
-  }
-}
-
-@media only screen and (min-width: 1440px) {
-  .line {
-    width: 40% !important;
-  }
-}
-
-@media only screen and (min-width: 1600px) {
-  .line {
-    width: 38% !important;
+    width: 75%;
   }
 
-  .faqContainer {
-    width: 60% !important;
-  }
-}
-
-@media only screen and (min-width: 1750px) {
-  .line {
-    width: 37% !important;
+  @media only screen and (min-width: 480px) {
+    .line {
+      width: 85% !important;
+    }
   }
 
-  .faqContainer {
-    width: 50% !important;
+  @media only screen and (min-width: 600px) {
+    .line {
+      width: 75% !important;
+    }
   }
-}
+
+  @media only screen and (min-width: 770px) {
+    .line {
+      width: 65% !important;
+    }
+  }
+
+  @media only screen and (min-width: 992px) {
+    .line {
+      width: 58% !important;
+    }
+  }
+
+  @media only screen and (min-width: 1080px) {
+    .line {
+      width: 53% !important;
+    }
+  }
+
+  @media only screen and (min-width: 1280px) {
+    .line {
+      width: 45% !important;
+    }
+
+    .faqContainer {
+      width: 65% !important;
+    }
+  }
+
+  @media only screen and (min-width: 1440px) {
+    .line {
+      width: 40% !important;
+    }
+  }
+
+  @media only screen and (min-width: 1600px) {
+    .line {
+      width: 38% !important;
+    }
+
+    .faqContainer {
+      width: 60% !important;
+    }
+  }
+
+  @media only screen and (min-width: 1750px) {
+    .line {
+      width: 37% !important;
+    }
+
+    .faqContainer {
+      width: 50% !important;
+    }
+  }
 </style>
