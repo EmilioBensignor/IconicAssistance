@@ -46,7 +46,7 @@
           store.assistants !== null &&
           store.assistants.data.assistants.length === 0
         "
-        class="text-start"
+        class="text-lila text-start"
       >
         You currently have no assistants
       </p>

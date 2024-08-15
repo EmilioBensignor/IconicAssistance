@@ -1,5 +1,5 @@
 <template>
-  <div class="h-100 column justify-space-between">
+  <div class="h-100 column justify-space-between bg-grayBg">
     <section>
       <nav class="justifyCenter py-5">
         <IconicLogo class="align-self-center mt-1" color="blue" />
