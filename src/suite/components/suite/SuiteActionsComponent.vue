@@ -16,27 +16,13 @@
         >ADD PAYMENT METHOD</router-link
       >
     </div>
-    <div
-      class="action scale column justify-space-between ga-3 rounded-lg elevation-5 pa-5"
-    >
-      <p class="titleAction text-white text-start font-weight-bold">
-        Ready to scale?
-      </p>
-      <p class="w-auto pSmall text-lila text-start">
-        Book a call with the sales team
-      </p>
-      <a
-        class="secondaryButton bg-btnViolet btnVioletBorder elevation-4"
-        href="https://iconicassistants.na.chilipiper.com/book/me/discovery-meeting?type=expansion-call"
-      >
-        BOOK A CALL
-      </a>
-    </div>
+    <ScaleComponent />
   </div>
 </template>
 
 <script>
 import ROUTES_NAMES from "@/router/constants/ROUTES_NAMES";
+import ScaleComponent from "@/suite/components/suite/ScaleComponent.vue";
 
 export default {
   name: "SuiteActionsComponent",
@@ -45,6 +31,9 @@ export default {
       type: Boolean,
       required: true,
     },
+  },
+  components: {
+    ScaleComponent,
   },
   data() {
     return {
@@ -55,12 +44,8 @@ export default {
 </script>
 
 <style scoped>
-.scale {
-	border: 2px solid #313053;
-}
-
 .action {
-	width: 350px;
+  width: 350px;
 }
 
 .action p {

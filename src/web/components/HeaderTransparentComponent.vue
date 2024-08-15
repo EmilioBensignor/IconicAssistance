@@ -1,25 +1,29 @@
 <template>
-  <nav>
+  <nav class="navWeb">
     <v-app-bar
       elevation="0"
       app
       class="d-flex align-center py-1"
-      :class="isScrolled ? 'bg-white' : 'bg-transparent'">
+      :class="isScrolled ? 'bg-white' : 'bg-transparent'"
+    >
       <v-app-bar-nav-icon
         aria-label="Hamburger Menu"
         icon="mdi-menu"
         :color="isScrolled ? 'radioactive' : 'white'"
         class="hamburger shadow-15"
         size="x-large"
-        @click="showMenu = !showMenu"></v-app-bar-nav-icon>
+        @click="showMenu = !showMenu"
+      ></v-app-bar-nav-icon>
       <v-toolbar-title>
         <router-link
           aria-label="Iconic Assitants Home"
           class="text-decoration-none"
-          :to="'/'">
+          :to="'/'"
+        >
           <IconicLogo
             class="shadow-15 mt-1"
-            :color="isScrolled ? 'blue' : 'white'" />
+            :color="isScrolled ? 'blue' : 'white'"
+          />
         </router-link>
       </v-toolbar-title>
       <div class="menuDesktop">
@@ -36,7 +40,8 @@
             <v-list-item
               :to="item.path"
               v-for="(item, index) in aboutMenu"
-              :key="index">
+              :key="index"
+            >
               <v-list-item-title class="navTitles">{{
                 item.title
               }}</v-list-item-title>
@@ -56,7 +61,8 @@
             <v-list-item
               :to="item.path"
               v-for="(item, index) in learnMenu"
-              :key="index">
+              :key="index"
+            >
               <v-list-item-title class="navTitles">{{
                 item.title
               }}</v-list-item-title>
@@ -66,7 +72,8 @@
         <v-btn
           class="btnNav"
           :color="isScrolled ? 'radioactive' : 'white'"
-          :to="'/our-solution'">
+          :to="'/our-solution'"
+        >
           Our Solution
         </v-btn>
         <v-menu open-on-hover>
@@ -82,7 +89,8 @@
             <v-list-item
               :to="item.path"
               v-for="(item, index) in typesOfEasMenu"
-              :key="index">
+              :key="index"
+            >
               <v-list-item-title class="navTitles">{{
                 item.title
               }}</v-list-item-title>
@@ -138,98 +146,98 @@
 </template>
 
 <script>
-  import IconicLogo from "./icons/IconicLogo.vue";
-  import PopUp from "./header/PopUpComponent.vue";
+import IconicLogo from "./icons/IconicLogo.vue";
+import PopUp from "./header/PopUpComponent.vue";
 
-  export default {
-    name: "HeaderTransparentComponent",
-    components: {
-      IconicLogo,
-      PopUp,
-    },
-    data() {
-      return {
-        showMenu: false,
-        isScrolled: false,
-        aboutMenu: [
-          {
-            path: "/about-us",
-            title: "About Us",
-          },
-          {
-            path: "/how-it-works",
-            title: "How It Works",
-          },
-          {
-            path: "/how-we-hire",
-            title: "How We Hire",
-          },
-        ],
-        learnMenu: [
-          {
-            path: "/what-is-an-ea",
-            title: "What Is An EA",
-          },
-          {
-            path: "/before-you-start",
-            title: "Before You Start",
-          },
-          {
-            path: "/blog",
-            title: "Blog",
-          },
-          {
-            path: "/faq",
-            title: "FAQ",
-          },
-        ],
-        typesOfEasMenu: [
-          {
-            path: "/executive-assistant/executive-assistant",
-            title: "Executive Assistant",
-          },
-          {
-            path: "/executive-assistant/customer-support",
-            title: "Customer Support",
-          },
-          {
-            path: "/executive-assistant/marketing-assistant",
-            title: "Marketing Assistant",
-          },
-          {
-            path: "/executive-assistant/project-management",
-            title: "Project Management",
-          },
-        ],
-      };
-    },
-    mounted() {
-      window.addEventListener("scroll", this.handleScroll);
-    },
-    beforeDestroy() {
-      window.removeEventListener("scroll", this.handleScroll);
-    },
-    methods: {
-      handleScroll() {
-        const scrollTop =
-          window.pageYOffset || document.documentElement.scrollTop;
-        const windowHeight = window.innerHeight;
+export default {
+  name: "HeaderTransparentComponent",
+  components: {
+    IconicLogo,
+    PopUp,
+  },
+  data() {
+    return {
+      showMenu: false,
+      isScrolled: false,
+      aboutMenu: [
+        {
+          path: "/about-us",
+          title: "About Us",
+        },
+        {
+          path: "/how-it-works",
+          title: "How It Works",
+        },
+        {
+          path: "/how-we-hire",
+          title: "How We Hire",
+        },
+      ],
+      learnMenu: [
+        {
+          path: "/what-is-an-ea",
+          title: "What Is An EA",
+        },
+        {
+          path: "/before-you-start",
+          title: "Before You Start",
+        },
+        {
+          path: "/blog",
+          title: "Blog",
+        },
+        {
+          path: "/faq",
+          title: "FAQ",
+        },
+      ],
+      typesOfEasMenu: [
+        {
+          path: "/executive-assistant/executive-assistant",
+          title: "Executive Assistant",
+        },
+        {
+          path: "/executive-assistant/customer-support",
+          title: "Customer Support",
+        },
+        {
+          path: "/executive-assistant/marketing-assistant",
+          title: "Marketing Assistant",
+        },
+        {
+          path: "/executive-assistant/project-management",
+          title: "Project Management",
+        },
+      ],
+    };
+  },
+  mounted() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+      const windowHeight = window.innerHeight;
 
-        const threshold = windowHeight * 0.5;
+      const threshold = windowHeight * 0.5;
 
-        if (scrollTop >= threshold) {
-          this.isScrolled = true;
-        } else {
-          this.isScrolled = false;
-        }
-      },
+      if (scrollTop >= threshold) {
+        this.isScrolled = true;
+      } else {
+        this.isScrolled = false;
+      }
     },
-  };
+  },
+};
 </script>
 
 <style scoped>
-  .v-app-bar {
-    transition: background-color 0.3s ease;
-    backdrop-filter: blur(5px);
-  }
+.v-app-bar {
+  transition: background-color 0.3s ease;
+  backdrop-filter: blur(5px);
+}
 </style>

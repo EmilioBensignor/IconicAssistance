@@ -17,12 +17,7 @@
           store.assistants.data.assistants.length > 0
         "
       >
-        <div class="addList column ga-5">
-          <a
-            class="w-auto add align-self-start bg-lightViolet rounded-lg elevation-3 px-5 py-3"
-            href="https://iconicassistants.na.chilipiper.com/book/me/discovery-meeting?type=expansion-call"
-            >+ Add More Assistants</a
-          >
+        <div class="column ga-5">
           <v-list
             class="w-auto assistantList bg-lightViolet rowCenter rounded-lg elevation-3 pa-0"
           >
@@ -37,8 +32,11 @@
             </v-list-item>
           </v-list>
         </div>
-        <div class="d-flex flex-wrap align-start ga-5">
-          <AssistantCardComponent :assistant="selected" />
+        <div class="assistantScale column ga-10">
+          <div class="d-flex flex-wrap align-start ga-5">
+            <AssistantCardComponent :assistant="selected" />
+          </div>
+          <ScaleComponent />
         </div>
       </div>
       <p
@@ -58,14 +56,14 @@
 import { useAuthStore } from "@/suite/stores/auth.store";
 import HeaderSuiteComponent from "@/suite/components/HeaderSuiteComponent.vue";
 import AssistantCardComponent from "@/suite/components/assistants/AssistantCardComponent.vue";
-import TasksPreviewComponent from "@/suite/components/assistants/TasksPreviewComponent.vue";
+import ScaleComponent from "@/suite/components/suite/ScaleComponent.vue";
 
 export default {
   name: "AssistantsView",
   components: {
     HeaderSuiteComponent,
     AssistantCardComponent,
-    TasksPreviewComponent,
+    ScaleComponent,
   },
   data() {
     return {
@@ -111,13 +109,13 @@ export default {
 
 .add {
   text-decoration: none;
-  border: 2px solid #8785BA;
+  border: 2px solid #8785ba;
 }
 
 @media only screen and (min-width: 1080px) {
-  .addList {
-    flex-direction: row-reverse;
-    justify-content: space-between;
+  .assistantScale {
+    flex-direction: row;
+    align-items: flex-start;
   }
 }
 </style>

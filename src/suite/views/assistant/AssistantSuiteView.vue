@@ -11,7 +11,8 @@
         <span>{{ data.firstname }}</span
         >!
       </h1>
-      <div class="suiteComponents align-self-start mt-10">
+      <div class="suiteComponents column ga-5 align-self-start mt-10">
+        <p class="pMedium text-lila">Employer</p>
         <ClientCardComponent
           v-if="store && store.client"
           :client="store.client" />

@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav class="navWeb">
     <v-app-bar elevation="0" app class="bg-white d-flex align-center py-1">
       <v-app-bar-nav-icon
         aria-label="Hamburger Menu"
