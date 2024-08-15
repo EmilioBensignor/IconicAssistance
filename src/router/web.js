@@ -18,6 +18,7 @@ import ThankYouView from "../web/views/ThankYouView.vue";
 import ThankYouForBookingView from "../web/views/ThankYouForBookingView.vue";
 import PrivacyPolicyView from "../web/views/PrivacyPolicyView.vue";
 import TermsUseView from "../web/views/TermsUseView.vue";
+import TestingView from "../web/views/TestingView.vue";
 
 export const webRoutes = [
 	{
@@ -225,6 +226,15 @@ export const webRoutes = [
 		meta: {
 			title: "Terms of Use - Iconic Assistants",
 			description: "Terms of use - Iconic Assistants",
+		},
+	},
+	{
+		path: "/testing",
+		name: "Testing",
+		component: TestingView,
+		meta: {
+			title: "Test - Iconic Assistants",
+			description: "Test - Iconic Assistants",
 		},
 	},
 ];
