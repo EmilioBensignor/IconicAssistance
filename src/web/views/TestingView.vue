@@ -1,9 +1,6 @@
 <template>
   <div>
-    <div
-      class="meetings-iframe-container"
-      data-src="https://meetings.hubspot.com/german-grosso/discovery-call?embed=true"
-    ></div>
+    <div class="meetings-iframe-container" data-src="https://meetings.hubspot.com/iconic-assistants/discovery-call?embed=true"></div>
   </div>
 </template>
 
