@@ -1,12 +1,12 @@
 <template>
   <div class="h-100 column justify-space-between bg-grayBg">
-    <section>
+    <section class="h-75 justifyCenter">
       <nav class="justifyCenter py-5">
         <IconicLogo class="align-self-center mt-1" color="blue" />
       </nav>
       <div class="w-75 flexCenter mt-5">
-        <p>Thank you for submitting our form.</p>
-        <p>Our team will contact you soon.</p>
+        <p>Thank you for completing our form.</p>
+        <p>Our team will contact you shortly</p>
         <router-link class="secondaryButton elevation-5 mt-10" :to="routes.HOME">Return to Homepage</router-link>
       </div>
     </section>
@@ -22,7 +22,7 @@ import IconicLogo from "@/web/components/icons/IconicLogo.vue";
 import FooterRightsComponent from "../components/FooterRightsComponent.vue";
 
 export default {
-  name: "ThankYou",
+  name: "ThankYouForBooking",
   components: {
     IconicLogo,
     FooterRightsComponent,

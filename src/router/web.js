@@ -13,7 +13,7 @@ import OurSolutionView from "../web/views/OurSolutionView.vue";
 import ContactUsView from "../web/views/ContactUsView.vue";
 import BecomeAnAssistantView from "../web/views/BecomeAnAssistantView.vue";
 import GetStartedView from "../web/views/GetStartedView.vue";
-import BookingView from "../web/views/BookingView.vue";
+import DiscoveryCallView from "../web/views/DiscoveryCallView.vue";
 import ThankYouView from "../web/views/ThankYouView.vue";
 import ThankYouForBookingView from "../web/views/ThankYouForBookingView.vue";
 import PrivacyPolicyView from "../web/views/PrivacyPolicyView.vue";
@@ -175,9 +175,9 @@ export const webRoutes = [
 		},
 	},
 	{
-		path: "/booking",
-		name: "Booking",
-		component: BookingView,
+		path: "/discovery-call",
+		name: "DiscoveryCall",
+		component: DiscoveryCallView,
 		meta: {
 			title: "Book a discovery call",
 			description: "Find out how our service can save you time and money by delegating to an Executive Assistant.",

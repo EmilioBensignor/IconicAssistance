@@ -1,6 +1,6 @@
 <template>
   <div class="h-100 column justify-space-between bg-grayBg">
-    <section>
+    <section class="h-75 justifyCenter">
       <nav class="justifyCenter py-5">
         <IconicLogo class="align-self-center mt-1" color="blue" />
       </nav>
