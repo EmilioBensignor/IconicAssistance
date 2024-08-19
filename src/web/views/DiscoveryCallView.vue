@@ -1,7 +1,7 @@
 <template>
-  <div class="bg-grayBg">
+  <div class="h-100 column justify-space-between bg-grayBg">
     <div
-      class="meetings-iframe-container"
+      class="w-100 h-75 allCenter meetings-iframe-container"
       data-src="https://meetings.hubspot.com/iconic-assistants/discovery-call?embed=true"></div>
     <div class="columnAlignCenter">
       <FooterRightsComponent />
