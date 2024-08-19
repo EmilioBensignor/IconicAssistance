@@ -85,11 +85,11 @@ const createHubSpotForm = () => {
 								lead = event.data.data;
 							}
 						} else if (event.data.eventName === "onFormSubmitted") {
-							var redirectURL = "/booking"; // replace with the redirect URL
-							var queryString = new URLSearchParams(
-								lead
-							).toString();
-							window.location.href = `${redirectURL}?${queryString}`; // this is the query string
+							var redirectURL = "/testing"; // replace with the redirect URL
+							// var queryString = new URLSearchParams(
+							// 	lead
+							// ).toString();
+							window.location.href = `${redirectURL}`; // this is the query string
 						}
 					}
 				});
