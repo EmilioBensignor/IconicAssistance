@@ -1,10 +1,10 @@
 <template>
   <div class="booking column justify-end align-center ga-3 bg-grayBg">
-    <!-- <iframe
+    <iframe
       class="mt-2"
       :src="chiliPiperUrl"
       width="85%"
-      height="100%"></iframe> -->
+      height="100%"></iframe>
     <div class="columnAlignCenter">
       <FooterRightsComponent />
     </div>
