@@ -228,13 +228,13 @@ export const webRoutes = [
 			description: "Terms of use - Iconic Assistants",
 		},
 	},
-	// {
-	// 	path: "/testing",
-	// 	name: "Testing",
-	// 	component: TestingView,
-	// 	meta: {
-	// 		title: "Test - Iconic Assistants",
-	// 		description: "Test - Iconic Assistants",
-	// 	},
-	// },
+	{
+		path: "/testing",
+		name: "Testing",
+		component: TestingView,
+		meta: {
+			title: "Test - Iconic Assistants",
+			description: "Test - Iconic Assistants",
+		},
+	},
 ];

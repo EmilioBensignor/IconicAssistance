@@ -40,10 +40,6 @@
 </script>
 
 <style scoped>
-  .booking {
-    height: 100vh;
-  }
-
   .footerBelow p,
   .footerBelow a {
     font-size: 0.9rem;

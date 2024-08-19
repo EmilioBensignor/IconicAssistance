@@ -1,13 +1,38 @@
 <template>
+  <div class="h-100 column justify-space-between bg-grayBg">
+    <div
+      class="w-100 h-75 allCenter meetings-iframe-container"
+      data-src="https://meetings.hubspot.com/iconic-assistants/discovery-call?embed=true"></div>
+  </div>
+</template>
+
+<script>
+  import { onMounted } from "vue";
+
+  export default {
+    name: "Testing",
+    setup() {
+      onMounted(() => {
+        const script = document.createElement("script");
+        script.src =
+          "https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js";
+        script.async = true;
+        document.body.appendChild(script);
+      });
+    },
+  };
+</script>
+
+<!-- <template>
   <div class="booking column justify-end align-center ga-3 bg-grayBg">
-    <!-- <iframe class="mt-2" :src="chiliPiperUrl" width="85%" height="100%"></iframe> -->
+    <iframe class="mt-2" :src="chiliPiperUrl" width="85%" height="100%"></iframe>
     <div class="columnAlignCenter">
       <FooterRightsComponent />
     </div>
   </div>
-</template>
+</template> -->
 
-<script setup>
+<!-- <script setup>
   import { ref, onMounted } from "vue";
   import { useRouter } from "vue-router";
 
@@ -82,4 +107,4 @@
       console.error("Error loading ChiliPiper script:", error);
     }
   });
-</script>
+</script> -->
