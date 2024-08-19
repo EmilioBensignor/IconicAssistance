@@ -42,35 +42,35 @@
     try {
       await loadChiliPiperScript();
       // Captura y parsea los datos del formulario desde la URL
-      // const queryString = router.currentRoute.value.query;
-      // for (const key in queryString) {
-      //   formData.value[key] = queryString[key];
-      // }
+      const queryString = router.currentRoute.value.query;
+      for (const key in queryString) {
+        formData.value[key] = queryString[key];
+      }
       console.log("Form data from query:", formData.value);
 
-      // const email = encodeURIComponent(formData.value.email || "");
-      // const firstname = encodeURIComponent(formData.value.firstname || "");
-      // const lastname = encodeURIComponent(formData.value.lastname || "");
-      // const phone = encodeURIComponent(formData.value.phone || "");
+      const email = encodeURIComponent(formData.value.email || "");
+      const firstname = encodeURIComponent(formData.value.firstname || "");
+      const lastname = encodeURIComponent(formData.value.lastname || "");
+      const phone = encodeURIComponent(formData.value.phone || "");
 
-      // chiliPiperUrl.value = `https://iconicassistants.na.chilipiper.com/router/disco_call?email=${email}&firstname=${firstname}&lastname=${lastname}&phone=${phone}`;
+      chiliPiperUrl.value = `https://iconicassistants.na.chilipiper.com/router/disco_call?email=${email}&firstname=${firstname}&lastname=${lastname}&phone=${phone}`;
 
       // Verifica si los datos se están enviando correctamente a ChiliPiper
       if (window.ChiliPiper) {
-        // const leadValues = {
-        //   email: formData.value.email || "",
-        //   firstname: formData.value.firstname || "",
-        //   lastname: formData.value.lastname || "",
-        //   phone: formData.value.phone || "",
-        // };
+        const leadValues = {
+          email: formData.value.email || "",
+          firstname: formData.value.firstname || "",
+          lastname: formData.value.lastname || "",
+          phone: formData.value.phone || "",
+        };
 
         ChiliPiper.submit(
           "iconicassistants",
           "disco_call",
-          // {
-          //   map: true,
-          //   lead: leadValues,
-          // },
+          {
+            map: true,
+            lead: leadValues,
+          },
           (error, result) => {
             if (error) {
               console.error("Error al enviar datos a ChiliPiper:", error);

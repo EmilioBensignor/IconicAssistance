@@ -64,7 +64,7 @@ const createHubSpotForm = () => {
 		window.hbspt.forms.create({
 			region: "na1",
 			portalId: "46001660",
-			formId: "28e25091-2d69-4ccd-9cde-6a364ba72723",
+			formId: "d164c3b6-b2b5-4fc9-acdf-b0920ec87420",
 			target: "#form-container",
 			onFormSubmit: function ($form) {
 				let lead = {};
@@ -86,10 +86,10 @@ const createHubSpotForm = () => {
 							}
 						} else if (event.data.eventName === "onFormSubmitted") {
 							var redirectURL = "/testing"; // replace with the redirect URL
-							// var queryString = new URLSearchParams(
-							// 	lead
-							// ).toString();
-							window.location.href = `${redirectURL}`; // this is the query string
+							var queryString = new URLSearchParams(
+								lead
+							).toString();
+							window.location.href = `${redirectURL}?${queryString}`; // this is the query string
 						}
 					}
 				});
