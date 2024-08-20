@@ -63,7 +63,7 @@
             title: "Sales Assistant",
             type: "Freelance",
             ubication: "(LatAm)",
-            link: "https://gabrielafasanella.hiringroom.com/jobs/get_vacancy/66b67d4bc1250c447ac12af6",
+            link: "https://gabrielafasanella.hiringroom.com/jobs/get_vacancy/66c48fe602c659aa5024afff",
           },
         ],
       };

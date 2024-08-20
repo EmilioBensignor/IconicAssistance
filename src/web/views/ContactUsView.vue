@@ -92,7 +92,7 @@
                   lead = event.data.data;
                 }
               } else if (event.data.eventName === "onFormSubmitted") {
-                var redirectURL = "/testing"; // replace with the redirect URL
+                var redirectURL = "/discovery-call"; // replace with the redirect URL
                 var queryString = new URLSearchParams(lead).toString();
                 window.location.href = `${redirectURL}?${queryString}`; // this is the query string
               }
