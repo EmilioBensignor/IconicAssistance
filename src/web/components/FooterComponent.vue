@@ -16,7 +16,7 @@
             <router-link
               :to="'/contact-us'"
               class="primaryButton elevation-5 my-3"
-              >Contact Us!</router-link
+              >Get Started!</router-link
             >
             <div class="w-75 social d-flex justify-space-between mb-5">
               <a href="mailto:ivan.j@iconicassistants.com">
