@@ -4,9 +4,9 @@
     <div class="maxContent">
       <h2>Get Started</h2>
       <p class="popUpText my-5">
-        We’d like to spend a few minutes understanding your needs and answering
+        We'd like to spend a few minutes understanding your needs and answering
         any questions you may have about working with an Iconic Executive
-        Assistant. If it feels like a fit, we’ll hand-match you with a
+        Assistant. If it feels like a fit, we'll hand-match you with a
         thoroughly vetted, dedicated assistant within 5 to 7 days!
       </p>
       <p class="choose my-3">Choose a Role</p>
@@ -92,7 +92,7 @@
                   lead = event.data.data;
                 }
               } else if (event.data.eventName === "onFormSubmitted") {
-                var redirectURL = "/booking"; // replace with the redirect URL
+                var redirectURL = "/testing"; // replace with the redirect URL
                 var queryString = new URLSearchParams(lead).toString();
                 window.location.href = `${redirectURL}?${queryString}`; // this is the query string
               }
