@@ -50,7 +50,7 @@
 					</div>
 				</div>
 			</div>
-			<p v-if="!loading && cards.length === 0">No payment method</p>
+			<p class="text-lila" v-if="!loading && cards.length === 0">No payment method</p>
 		</div>
 		<v-dialog v-model="dialog">
 			<v-card
