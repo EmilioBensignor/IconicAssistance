@@ -218,8 +218,9 @@
 import ROUTES_NAMES from "@/router/constants/ROUTES_NAMES";
 import SecondaryBtnComponent from "../buttons/SecondaryBtnComponent.vue";
 import { doc, updateDoc } from "firebase/firestore";
-import { db } from "@/suite/firebase/init";
+import { db, functions } from "@/suite/firebase/init";
 import { useAuthStore } from "@/suite/stores/auth.store";
+import { httpsCallable } from "firebase/functions";
 
 export default {
 	name: "AssistantCardComponent",
@@ -276,12 +277,29 @@ export default {
 				ratings: newRatings,
 				rating_avg: ratingsAvg,
 			})
-				.then(() => {
+				.then(async () => {
 					this.assistant.ratings = newRatings;
 					this.assistant.rating_avg = ratingsAvg;
-					this.openDialog = false;
-					this.newRating = { score: 0, feedback: "" };
-					this.loading = false;
+
+					const saveReviewToHubspot = httpsCallable(
+						functions,
+						"saveReviewToHubspot"
+					);
+					await saveReviewToHubspot({
+						clientId: this.store.userData["hs_object_id"],
+						assistantId: this.assistant["hs_object_id"],
+						dealId: this.assistant["dealId"],
+						review: this.newRating,
+					})
+						.then((data) => {
+							console.log(data);
+							this.openDialog = false;
+							this.newRating = { score: 0, feedback: "" };
+							this.loading = false;
+						})
+						.catch((err) => {
+							console.log(err);
+						});
 				})
 				.catch((error) => {
 					console.log(error);

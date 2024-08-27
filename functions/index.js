@@ -256,40 +256,59 @@ exports.getAssistantsData = onCall(async (data, context) => {
 	};
 
 	try {
+		// Fetch all deals associated with the given hubspotId in a single API call
 		const dealsResponse = await axios.get(
 			`https://api.hubapi.com/crm/v4/objects/contacts/${hubspotId}/associations/deals?properties=dealname,amount&associations=contacts`,
 			{ headers }
 		);
-		const dealIds = dealsResponse.data.results.map(
-			(result) => result.toObjectId
+
+		const assistantDealMap = new Map();
+
+		// Process each deal and map assistants to deals in a single loop
+		await Promise.all(
+			dealsResponse.data.results.map(async (result) => {
+				const dealId = result.toObjectId;
+
+				// Fetch all contacts associated with the deal in a single API call
+				const contactsResponse = await axios.get(
+					`https://api.hubapi.com/crm/v4/objects/deals/${dealId}/associations/contacts`,
+					{ headers }
+				);
+
+				// Map assistants to their corresponding deal IDs
+				contactsResponse.data.results.forEach((contact) => {
+					if (contact.toObjectId !== hubspotId) {
+						const assistantId = Number(contact.toObjectId);
+						if (!assistantDealMap.has(assistantId)) {
+							assistantDealMap.set(assistantId, dealId);
+						}
+					}
+				});
+			})
 		);
 
-		const assistantIds = await Promise.all(
-			dealIds.map((deal) =>
-				axios
-					.get(
-						`https://api.hubapi.com/crm/v4/objects/deals/${deal}/associations/contacts`,
-						{ headers }
-					)
-					.then((response) =>
-						response.data.results
-							.filter(
-								(contact) => contact.toObjectId !== hubspotId
-							)
-							.map((contact) => contact.toObjectId)
-					)
-			)
-		).then((results) => results.flat());
+		// Extract assistant IDs
+		const assistantIds = Array.from(assistantDealMap.keys());
+
 		if (assistantIds.length === 0) {
 			return { assistants: [] };
 		}
+
+		// Fetch assistant data from Firestore in a single call
 		const assistantsRawData = await db
 			.collection("assistants")
 			.where("hs_object_id", "in", assistantIds)
 			.get();
-		const assistantsData = assistantsRawData.docs.map((doc) =>
-			transformAssistantData(doc)
-		);
+
+		// Map assistants to their data and associated deal IDs
+		const assistantsData = assistantsRawData.docs.map((doc) => {
+			const assistantData = transformAssistantData(doc);
+			assistantData.dealId = assistantDealMap.get(
+				doc.data().hs_object_id
+			);
+			return assistantData;
+		});
+
 		return { assistants: assistantsData };
 	} catch (err) {
 		console.error(err);
@@ -393,6 +412,70 @@ exports.getClientData = onCall(async (data, context) => {
 			"unknown",
 			"An error occurred while fetching assistant data"
 		);
+	}
+});
+
+exports.saveReviewToHubspot = onCall(async (data, context) => {
+	const clientId = data.data.clientId;
+	const assistantId = data.data.assistantId;
+	const review = data.data.review;
+	const dealId = data.data.dealId; // Deal ID passed as a parameter
+	const headers = {
+		Authorization: `Bearer ${process.env.VITE_HUBSPOT_PRIVATE_APP_KEY}`,
+	};
+
+	const formattedReview = `${review.score}/5\n${review.feedback}`;
+	try {
+		// Post a new ticket to HubSpot
+		const ticketData = {
+			properties: {
+				hs_ticket_priority: "HIGH", // Update this as needed
+				subject: `Review for Assistant ${assistantId} from Client ${clientId}`,
+				content: formattedReview,
+				hs_pipeline_stage: "1",
+				hs_pipeline: "0",
+			},
+			associations: [
+				{
+					to: { id: dealId },
+					types: [
+						{
+							associationCategory: "HUBSPOT_DEFINED",
+							associationTypeId: 28,
+						},
+					],
+				},
+				{
+					to: { id: assistantId },
+					types: [
+						{
+							associationCategory: "HUBSPOT_DEFINED",
+							associationTypeId: 16,
+						},
+					],
+				},
+				{
+					to: { id: clientId },
+					types: [
+						{
+							associationCategory: "HUBSPOT_DEFINED",
+							associationTypeId: 16,
+						},
+					],
+				},
+			],
+		};
+
+		const ticketResponse = await axios.post(
+			"https://api.hubapi.com/crm/v3/objects/tickets",
+			ticketData,
+			{ headers }
+		);
+
+		return { success: true, ticketId: ticketResponse.data.id };
+	} catch (error) {
+		console.error("Error saving review to HubSpot:", error.message);
+		throw new HttpsError("internal", "Failed to save review to HubSpot.");
 	}
 });
 

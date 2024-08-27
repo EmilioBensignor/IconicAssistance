@@ -10,6 +10,7 @@ export const useAuthStore = defineStore("auth", {
 	state: () => ({
 		isAuthenticated: false,
 		user: null,
+		userData: null,
 		isAuthLoading: true, // Initial loading state
 		assistants: null,
 		invoices: null,
@@ -26,6 +27,7 @@ export const useAuthStore = defineStore("auth", {
 						doc(collection(db, "clients"), this.user.uid)
 					);
 					if (userData.exists()) {
+						this.userData = userData.data();
 						const getAssistantsData = httpsCallable(
 							functions,
 							"getAssistantsData"
@@ -34,6 +36,8 @@ export const useAuthStore = defineStore("auth", {
 							hubspotId: userData.data()["hs_object_id"],
 						})
 							.then((data) => {
+								console.log(data);
+
 								this.assistants = data;
 							})
 							.catch((err) => {
