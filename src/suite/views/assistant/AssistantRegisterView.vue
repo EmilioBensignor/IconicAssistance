@@ -7,7 +7,7 @@
       </div>
       <div class="w-75 rowCenter flex-wrap ga-1 mt-3">
         <p class="w-auto text-lila">Are you a client?</p>
-        <router-link class="login text-radioactive" :to="routes.REGISTER">
+        <router-link class="login text-blueViolet" :to="routes.REGISTER">
           Client Signup
         </router-link>
         <p class="w-100 text-lila my-3">
@@ -71,7 +71,7 @@
         </div>
         <div class="w-75 rowCenter ga-1">
           <p class="w-auto text-lila">Already registered?</p>
-          <router-link class="login text-radioactive" :to="routes.LOGIN"
+          <router-link class="login text-blueViolet" :to="routes.LOGIN"
             >Log in</router-link
           >
         </div>

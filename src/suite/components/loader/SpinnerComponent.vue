@@ -6,8 +6,8 @@
 
 <style scoped>
 .loader {
-  border: 16px solid #f3f3f3;
-  border-top: 16px solid #373ae6;
+  border: 16px solid #313053;
+  border-top: 16px solid #8785BA;
   border-radius: 50%;
   width: 5rem;
   height: 5rem;

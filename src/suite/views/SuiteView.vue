@@ -3,7 +3,7 @@
 	<div class="bg-suiteBg">
 		<div class="heroSuite columnAlignCenter">
 			<v-skeleton-loader
-				class="w-75 bg-suiteBg px-3"
+				class="w-75 align-self-start bg-lightViolet ml-7"
 				type="heading"
 				v-if="!userData || !userData.firstname"
 			></v-skeleton-loader>
@@ -17,7 +17,7 @@
 			class="bg-suiteBg"
 			v-if="store.assistants === null || store.invoices === null"
 		/>
-		<div class="suiteComponents column ga-10 mt-5" v-else>
+		<div class="suiteComponents column ga-10 pb-5 my-5" v-else>
 			<SuiteActionsComponent
 				:hasCCOnFile="userData.hasCCOnFile === 'true'"
 			/>

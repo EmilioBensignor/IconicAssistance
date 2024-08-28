@@ -42,17 +42,17 @@
         <div class="w-75 rowCenter flex-wrap ga-1">
           <p class="w-auto text-lila">Forgot&nbsp;password?</p>
           <router-link
-            class="reset text-radioactive"
+            class="reset text-blueViolet"
             :to="routes.RESET_PASSWORD"
             >Reset&nbsp;password</router-link
           >
         </div>
         <div class="w-75 rowCenter flex-wrap ga-3 justify-space-between mt-5">
-          <router-link class="reset text-radioactive" :to="routes.REGISTER"
+          <router-link class="reset text-blueViolet" :to="routes.REGISTER"
             >Client Signup</router-link
           >
           <router-link
-            class="reset text-radioactive"
+            class="reset text-blueViolet"
             :to="routes.ASSISTANT_REGISTER"
             >Assistant Registration</router-link
           >

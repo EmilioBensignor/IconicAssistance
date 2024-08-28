@@ -4,9 +4,9 @@
     <div class="heroSuite columnAlignCenter">
       <h1 class="text-white ml-4">Executive Assistants</h1>
     </div>
-    <div class="suiteComponents mt-5">
+    <div class="suiteComponents my-5">
       <v-skeleton-loader
-        class="w-50 bg-suiteBg px-3"
+        class="w-50 bg-lightViolet"
         type="card"
         v-if="store.assistants === null"
       ></v-skeleton-loader>

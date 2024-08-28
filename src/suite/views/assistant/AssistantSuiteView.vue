@@ -3,7 +3,7 @@
   <div class="bg-suiteBg column">
     <div class="heroSuite columnAlignCenter">
       <v-skeleton-loader
-        class="w-75 bg-suiteBg px-3"
+        class="w-75 align-self-start bg-lightViolet px-3"
         type="heading"
         v-if="!data || !data.firstname"></v-skeleton-loader>
       <h1 class="text-white ml-4" v-else>
@@ -11,10 +11,11 @@
         <span>{{ data.firstname }}</span
         >!
       </h1>
-      <div class="suiteComponents column ga-5 align-self-start mt-10">
+      <div class="w-50 suiteComponents column ga-5 align-self-start mt-10">
         <p class="pMedium text-lila">Employer</p>
+        <v-skeleton-loader v-if="!store || !store.client" class="w-100 bg-lightViolet" type="card"></v-skeleton-loader>
         <ClientCardComponent
-          v-if="store && store.client"
+          v-else
           :client="store.client" />
       </div>
     </div>

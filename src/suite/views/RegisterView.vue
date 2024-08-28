@@ -32,7 +32,7 @@
         </div>
         <div class="w-75 rowCenter ga-1">
           <p class="w-auto text-lila">Already registered?</p>
-          <router-link class="login text-radioactive" :to="routes.LOGIN">Log in</router-link>
+          <router-link class="login text-blueViolet" :to="routes.LOGIN">Log in</router-link>
         </div>
         <p class="text-center text-red mt-3" v-if="error">
           {{ error }}

@@ -7,8 +7,8 @@
           class="d-flex align-center align-self-start ml-5 ma-3"
           :to="routes.LOGIN"
         >
-          <v-icon icon="mdi-keyboard-backspace" color="radioactive"></v-icon>
-          <p class="w-100 goBack text-radioactive ml-1">Go back to Login</p>
+          <v-icon icon="mdi-keyboard-backspace" color="blueViolet"></v-icon>
+          <p class="w-100 goBack text-blueViolet ml-1">Go back to Login</p>
         </router-link>
         <h1 class="text-white text-center my-3">Reset Password</h1>
       </div>

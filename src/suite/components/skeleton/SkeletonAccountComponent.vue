@@ -3,7 +3,7 @@
 		<v-skeleton-loader
 			v-for="item in skeletonLength"
 			:key="item"
-			class="w-75 bg-suiteBg"
+			class="w-75 align-self-start my-3 bg-lightViolet"
 			type="text"
 		></v-skeleton-loader>
 	</div>

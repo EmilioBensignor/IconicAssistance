@@ -7,7 +7,7 @@
 			a new one first and then delete the one that will no longer be used.
 		</p>
 		<v-skeleton-loader
-			class="w-75 border mt-5"
+			class="w-50 bg-lightViolet border mt-5"
 			type="image"
 			v-if="loading"
 		></v-skeleton-loader>
