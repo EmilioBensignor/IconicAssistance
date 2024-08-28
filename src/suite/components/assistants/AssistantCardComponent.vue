@@ -191,6 +191,7 @@
 					<textarea
 						v-model="newRating.feedback"
 						class="rounded pa-2 text-white"
+						rows="3"
 						placeholder="Feedback will be used to improve your assistant's performance."
 						name="review"
 						id="review"
@@ -372,7 +373,8 @@ export default {
 }
 
 textarea {
-	border: 2px solid #373ae6;
+	resize: none;
+	border: 2px solid #6273F6;
 }
 
 .dialogCard {

@@ -6,7 +6,7 @@
     </div>
     <div class="suiteComponents my-5">
       <v-skeleton-loader
-        class="w-50 bg-lightViolet"
+        class="w-75 bg-lightViolet"
         type="card"
         v-if="store.assistants === null"
       ></v-skeleton-loader>
