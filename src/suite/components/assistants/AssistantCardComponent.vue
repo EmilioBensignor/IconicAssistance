@@ -291,6 +291,8 @@ export default {
 						assistantId: this.assistant["hs_object_id"],
 						dealId: this.assistant["dealId"],
 						review: this.newRating,
+						assistantFullName: `${this.assistant.firstname} ${this.assistant.lastname}`,
+						clientFullName: `${this.store.userData.firstname} ${this.store.userData.lastname}`,
 					})
 						.then((data) => {
 							console.log(data);
@@ -374,7 +376,7 @@ export default {
 
 textarea {
 	resize: none;
-	border: 2px solid #6273F6;
+	border: 2px solid #6273f6;
 }
 
 .dialogCard {

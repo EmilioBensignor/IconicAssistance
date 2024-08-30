@@ -420,6 +420,8 @@ exports.saveReviewToHubspot = onCall(async (data, context) => {
 	const assistantId = data.data.assistantId;
 	const review = data.data.review;
 	const dealId = data.data.dealId; // Deal ID passed as a parameter
+	const clientFullName = data.data.clientFullName;
+	const assistantFullName = data.data.assistantFullName;
 	const headers = {
 		Authorization: `Bearer ${process.env.VITE_HUBSPOT_PRIVATE_APP_KEY}`,
 	};
@@ -430,7 +432,7 @@ exports.saveReviewToHubspot = onCall(async (data, context) => {
 		const ticketData = {
 			properties: {
 				hs_ticket_priority: "HIGH", // Update this as needed
-				subject: `Review for Assistant ${assistantId} from Client ${clientId}`,
+				subject: `Review for Assistant ${assistantFullName} from Client ${clientFullName}`,
 				content: formattedReview,
 				hs_pipeline_stage: "1",
 				hs_pipeline: "0",
