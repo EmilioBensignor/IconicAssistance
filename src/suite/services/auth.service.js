@@ -31,7 +31,8 @@ const userId = ref(null);
 async function signup(email, password, type = "client") {
 	let fnUrl;
 	if (type === "client") {
-		fnUrl = "https://signupclient-cgjqatnysa-uc.a.run.app";
+		// fnUrl = "https://signupclient-cgjqatnysa-uc.a.run.app";
+		fnUrl = "http://127.0.0.1:5001/iconic-5c03a/us-central1/signUpClient";
 	} else {
 		fnUrl = "https://signupassistant-cgjqatnysa-uc.a.run.app";
 	}
@@ -81,8 +82,8 @@ async function logout() {
 	}
 	await signOut(auth);
 	store.user = {};
-	store.assistants = null
-	store.invoices = null
+	store.assistants = null;
+	store.invoices = null;
 	store.isAuthenticated = false;
 	router.push(ROUTES_NAMES.LOGIN);
 }

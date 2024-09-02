@@ -31,6 +31,13 @@ function transformClientData(rawData) {
 	return data;
 }
 
+function generateReferralCode(user) {
+	const randomNum = Math.random() * 9000;
+	return `#${user.firstname[0].toUpperCase()}${user.lastname[0].toUpperCase()}${Math.floor(
+		1000 + randomNum
+	)}`;
+}
+
 exports.createSetupIntent = onRequest({ cors: true }, async (req, res) => {
 	res.set("Access-Control-Allow-Origin", "*");
 	let customerId;
@@ -145,6 +152,21 @@ exports.signUpClient = onRequest({ cors: true }, async (req, res) => {
 		res.send({ data: "Error: no stripe customer with that email" });
 	} else {
 		userInformation.stripeId = customerId.data[0].id;
+	}
+
+	// validar que no existe cliente con ese codigo, sino generar nuevo (while loop o do while)
+	while (true) {
+		const referral_code = generateReferralCode(userInformation);
+
+		const snap = await db
+			.collection("clients")
+			.where("referral_code", "==", referral_code)
+			.get();
+
+		if (snap.size === 0) {
+			userInformation.referral_code = referral_code;
+			break;
+		}
 	}
 
 	await db
