@@ -17,12 +17,14 @@
       >
     </div>
     <ScaleComponent />
+    <!-- <ReferralCodeComponent :referralCode="'#GA1234'" /> -->
   </div>
 </template>
 
 <script>
 import ROUTES_NAMES from "@/router/constants/ROUTES_NAMES";
 import ScaleComponent from "@/suite/components/suite/ScaleComponent.vue";
+import ReferralCodeComponent from "@/suite/components/suite/ReferralCodeComponent.vue";
 
 export default {
   name: "SuiteActionsComponent",
@@ -34,6 +36,7 @@ export default {
   },
   components: {
     ScaleComponent,
+    ReferralCodeComponent,
   },
   data() {
     return {
