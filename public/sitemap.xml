@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.iconicassistants.com/</loc>
-    <lastmod>2024-07-24</lastmod>
+    <lastmod>2024-08-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -37,26 +37,26 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.iconicassistants.com/types-of-eas</loc>
-    <lastmod>2024-07-24</lastmod>
+    <loc>https://www.iconicassistants.com/executive-assistant/:name</loc>
+    <lastmod>2024-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.iconicassistants.com/before-you-start</loc>
-    <lastmod>2024-07-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.iconicassistants.com/blog</loc>
     <lastmod>2024-07-24</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.iconicassistants.com/services</loc>
+    <loc>https://www.iconicassistants.com/blog-post/:slug</loc>
     <lastmod>2024-07-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicassistants.com/our-solution</loc>
+    <lastmod>2024-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -64,13 +64,25 @@
     <loc>https://www.iconicassistants.com/contact-us</loc>
     <lastmod>2024-07-24</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicassistants.com/become-an-assistant</loc>
+    <lastmod>2024-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.iconicassistants.com/get-started</loc>
     <lastmod>2024-07-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicassistants.com/discovery-call</loc>
+    <lastmod>2024-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.iconicassistants.com/privacy</loc>

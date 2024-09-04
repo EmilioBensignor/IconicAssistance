@@ -10,6 +10,7 @@ const routes = [
 		component: Error404View,
 		meta: {
 			title: "Error 404 - Iconic Assistants",
+			description: "Page not found on Iconic Assistants.",
 		},
 	},
 	{
@@ -24,26 +25,22 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-	document.title = `${to.meta.title}`;
-	const nearestWithTitle = to.matched
-		.slice()
-		.reverse()
-		.find((r) => r.meta && r.meta.title);
-	const nearestWithMeta = to.matched
-		.slice()
-		.reverse()
-		.find((r) => r.meta && r.meta.metaTags);
+	const nearestWithTitle = to.matched.slice().reverse().find(r => r.meta && r.meta.title);
+	const nearestWithMeta = to.matched.slice().reverse().find(r => r.meta && r.meta.description);
+
+	if (nearestWithTitle) {
+		document.title = nearestWithTitle.meta.title || 'Iconic Assistants';
+	}
 
 	if (nearestWithMeta) {
-		const metaDescription = nearestWithMeta.meta.metaTags.description;
 		const metaTag = document.querySelector('meta[name="description"]');
 		if (metaTag) {
-			metaTag.setAttribute("content", metaDescription);
-		}
-	} else if (nearestWithTitle) {
-		const metaTag = document.querySelector('meta[name="description"]');
-		if (metaTag) {
-			metaTag.removeAttribute("content");
+			metaTag.setAttribute('content', nearestWithMeta.meta.description);
+		} else {
+			const descriptionMeta = document.createElement('meta');
+			descriptionMeta.setAttribute('name', 'description');
+			descriptionMeta.setAttribute('content', nearestWithMeta.meta.description);
+			document.head.appendChild(descriptionMeta);
 		}
 	}
 

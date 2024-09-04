@@ -11,30 +11,30 @@
 </template>
 
 <script>
-  import HeaderPagesComponent from "@/web/components/HeaderPagesComponent.vue";
-  import FooterComponent from "@/web/components/FooterComponent.vue";
+import HeaderPagesComponent from "@/web/components/HeaderPagesComponent.vue";
+import FooterComponent from "@/web/components/FooterComponent.vue";
+import { useHead } from "@vueuse/head";
 
-  import { computed } from "vue";
-  import { useHead } from "@vueuse/head";
-  import { useRoute } from "vue-router";
-
-  export default {
-    name: "Error404",
-    components: {
-      HeaderPagesComponent,
-      FooterComponent,
-    },
-    setup() {
-      const route = useRoute();
-      useHead({
-        title: computed(() => route.meta.title),
-        meta: [
-          {
-            name: "description",
-            content: computed(() => route.meta.description),
-          },
-        ],
-      });
-    },
-  };
+export default {
+  name: "Error404",
+  components: {
+    HeaderPagesComponent,
+    FooterComponent,
+  },
+  setup() {
+    useHead({
+      title: "Error 404 - Iconic Assistants",
+      meta: [
+        {
+          name: "robots",
+          content: "noindex, nofollow",
+        },
+        {
+          name: "description",
+          content: "Page not found on Iconic Assistants.",
+        },
+      ],
+    });
+  },
+};
 </script>
