@@ -28,17 +28,26 @@ export default {
       required: true,
     },
   },
+  data(){
+    return {
+      sharing: false,
+    }
+  },
   methods: {
     async shareReferralCode() {
-      if (navigator.share) {
+      if (navigator.share && !this.sharing) {
         try {
+          this.sharing = true;
           await navigator.share({
             title: "Referral Code",
             text: `Use this referral code ${this.referralCode} to get a discount!`,
             // url: 'https://iconicassistants.na.chilipiper.com/book/me/discovery-meeting?type=expansion-call',
-          });
-          console.log("Successfully shared");
+          }).then(() => {
+            this.sharing = false;
+            console.log("Successfully shared");
+          })
         } catch (error) {
+          this.sharing = false;
           console.error("Error sharing", error);
         }
       } else {
