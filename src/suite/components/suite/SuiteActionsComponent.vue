@@ -17,7 +17,7 @@
 			>
 		</div>
 		<ScaleComponent />
-		<!-- <ReferralCodeComponent :referralCode="store.userData.referral_code" /> -->
+		<ReferralCodeComponent :referralCode="store.userData.referral_code" />
 	</div>
 </template>
 
