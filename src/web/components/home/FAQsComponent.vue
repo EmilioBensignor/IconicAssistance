@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-grayBg pt-15">
+  <section class="bg-grayBg py-15">
     <h2 v-motion="scrollBottom" class="text-midnight mb-5">
       Frequently Asked Questions
     </h2>
@@ -10,8 +10,7 @@
           <v-expansion-panels v-motion="scrollBottom" class="faqWrapper">
             <v-expansion-panel
               class="elevation-4"
-              title="How do I get started?"
-            >
+              title="How do I get started?">
               <v-expansion-panel-text>
                 <ol class="pl-3 columnAlignCenter ga-3">
                   <li>
@@ -50,20 +49,17 @@
             v-for="(item, index) in faqsLeft"
             v-motion="scrollBottom"
             :key="index"
-            class="faqWrapper"
-          >
+            class="faqWrapper">
             <v-expansion-panel
               class="elevation-4"
               :title="item.title"
-              :text="item.text"
-            >
+              :text="item.text">
             </v-expansion-panel>
           </v-expansion-panels>
           <v-expansion-panels v-motion="scrollBottom" class="faqWrapper">
             <v-expansion-panel
               class="elevation-4"
-              title="Do I need to pay any Taxes?"
-            >
+              title="Do I need to pay any Taxes?">
               <v-expansion-panel-text>
                 <ul class="pl-2 d-flex flex-column ga-3">
                   <li><b>The short answer:</b> No</li>
@@ -92,8 +88,7 @@
           <v-expansion-panels v-motion="scrollBottom" class="faqWrapper">
             <v-expansion-panel
               class="elevation-4"
-              title="Do I need a Executive Assistant"
-            >
+              title="Do I need a Executive Assistant">
               <v-expansion-panel-text>
                 <p>
                   Sometimes, managing the demands of work and life can become
@@ -139,8 +134,7 @@
           <v-expansion-panels v-motion="scrollBottom" class="faqWrapper">
             <v-expansion-panel
               class="elevation-4"
-              title="What tasks can I oursource to a EA?"
-            >
+              title="What tasks can I oursource to a EA?">
               <v-expansion-panel-text>
                 You can outsource almost anything to a Executive Assistant as
                 long as you’re clear with what, when and how you want things
@@ -156,129 +150,141 @@
             v-for="(item, index) in faqsRight"
             v-motion="scrollBottom"
             :key="index"
-            class="faqWrapper"
-          >
+            class="faqWrapper">
             <v-expansion-panel
               class="elevation-4"
               :title="item.title"
-              :text="item.text"
-            >
+              :text="item.text">
             </v-expansion-panel>
           </v-expansion-panels>
         </div>
       </div>
     </div>
-    <router-link
-      :to="routes.CONTACT_US"
-      href="#hero"
-      class="secondaryButton elevation-5 my-10"
-      >Get Started</router-link
-    >
+    <button
+      class="secondaryButton elevation-5 mt-5"
+      @click="handleAction(action, linkTo)">
+      Get Started
+    </button>
   </section>
 </template>
 
 <script>
-import ROUTES_NAMES from "@/router/constants/ROUTES_NAMES";
+  import ROUTES_NAMES from "@/router/constants/ROUTES_NAMES";
+  import { useButtonActions } from "@/web/composables/useButtonActions";
 
-export default {
-  data() {
-    return {
-      routes: ROUTES_NAMES,
-      faqsLeft: [
-        {
-          title: "How do I pay Iconic Assitants",
-          text: "You’ll pay your executive assistant through Iconic Assistants. You’ll pay us, a US-based company, and we will pay the Executive Assistant. For US-based clients, we accept Credit Cards and ACH payments and for international clients, we only accept Credit Cards (transactions fees may apply).",
-        },
-        {
-          title: "Do you offer a Guarantee?",
-          text: "Yes, we offer a Satisfaction Guarantee. If you’re not happy with your Executive Assistant by the end of the first 160 hours of work, we’ll replace your current assistant with a new EA at no additional cost to you.",
-        },
-        {
-          title: "Can I hire a Part-Time EA?",
-          text: "Yes, we can help you outsource part-time executive assistant for your business or specific campaigns. Our plans include either part-time (80 hours per month) or full-time (160 hours per month) EA's.",
-        },
-        {
-          title: "How can I sign up to be a EA?",
-          text: "To work as a executive assistant and be a member of Iconic Assistants, you’ll first need to complete our online application.",
-        },
-      ],
-      faqsRight: [
-        {
-          title: "How do I monitor my EA's work?",
-          text: "All our Executive Assistants are required to send you a periodic work report where they will list all the tasks that they’ve worked on and any issues they’ve encountered. We always encourage our clients to place trust in our Executive Assistants by measuring performance rather than a time tracking tool unless otherwise specified.",
-        },
-        {
-          title: "What about confidential information?",
-          text: "All Executive Assistants sign a confidentiality agreement, wherein they are not permitted to share or discuss work-related details to people other than their client and work team. Iconic Assistants cannot be held responsible for any unforeseen issues if you choose to share login details, credit card information, or other personal or business data.",
-        },
-        {
-          title: "Can I provide the work hours?",
-          text: "Yes, candidates will be informed of your business’s preferred work hours. Iconic Assistants are flexible and can work within the time your business requires.",
-        },
-        {
-          title: "How quickly can I be Up and Running?",
-          text: "From the first meeting, it takes approximately 10 to 20 business days to find, interview and qualify the right candidate for you and your business.",
-        },
-      ],
-    };
-  },
-};
+  export default {
+    props: {
+      action: {
+        type: String,
+        required: true,
+      },
+      linkTo: {
+        type: String,
+        required: false,
+      },
+      handleAction: {
+        type: Function,
+        required: true,
+      },
+    },
+    data() {
+      return {
+        routes: ROUTES_NAMES,
+        faqsLeft: [
+          {
+            title: "How do I pay Iconic Assitants",
+            text: "You’ll pay your executive assistant through Iconic Assistants. You’ll pay us, a US-based company, and we will pay the Executive Assistant. For US-based clients, we accept Credit Cards and ACH payments and for international clients, we only accept Credit Cards (transactions fees may apply).",
+          },
+          {
+            title: "Do you offer a Guarantee?",
+            text: "Yes, we offer a Satisfaction Guarantee. If you’re not happy with your Executive Assistant by the end of the first 160 hours of work, we’ll replace your current assistant with a new EA at no additional cost to you.",
+          },
+          {
+            title: "Can I hire a Part-Time EA?",
+            text: "Yes, we can help you outsource part-time executive assistant for your business or specific campaigns. Our plans include either part-time (80 hours per month) or full-time (160 hours per month) EA's.",
+          },
+          {
+            title: "How can I sign up to be a EA?",
+            text: "To work as a executive assistant and be a member of Iconic Assistants, you’ll first need to complete our online application.",
+          },
+        ],
+        faqsRight: [
+          {
+            title: "How do I monitor my EA's work?",
+            text: "All our Executive Assistants are required to send you a periodic work report where they will list all the tasks that they’ve worked on and any issues they’ve encountered. We always encourage our clients to place trust in our Executive Assistants by measuring performance rather than a time tracking tool unless otherwise specified.",
+          },
+          {
+            title: "What about confidential information?",
+            text: "All Executive Assistants sign a confidentiality agreement, wherein they are not permitted to share or discuss work-related details to people other than their client and work team. Iconic Assistants cannot be held responsible for any unforeseen issues if you choose to share login details, credit card information, or other personal or business data.",
+          },
+          {
+            title: "Can I provide the work hours?",
+            text: "Yes, candidates will be informed of your business’s preferred work hours. Iconic Assistants are flexible and can work within the time your business requires.",
+          },
+          {
+            title: "How quickly can I be Up and Running?",
+            text: "From the first meeting, it takes approximately 10 to 20 business days to find, interview and qualify the right candidate for you and your business.",
+          },
+        ],
+      };
+    },
+  };
 </script>
 
 <script setup>
-import { scrollBottom } from "@/motions.js";
+  import { scrollBottom } from "@/motions.js";
 </script>
 
 <style scoped>
-.faqHome {
-  width: 80%;
-}
-
-.FAQLink {
-  text-decoration: none;
-  color: #373ae6;
-  font-weight: 600;
-}
-
-.leftRight,
-.left,
-.right {
-  width: 100%;
-}
-
-/* Desktop */
-@media only screen and (min-width: 1080px) {
-  .faqHome {
-    width: 90%;
-  }
-
-  .leftRight {
-    align-items: flex-start;
-    flex-direction: row;
-  }
-}
-
-@media only screen and (min-width: 1280px) {
-  .faqHome {
-    width: 85%;
-  }
-}
-
-@media only screen and (min-width: 1600px) {
-  .faqHome {
-    margin-top: 1vw;
-  }
-}
-
-@media only screen and (min-width: 1600px) {
   .faqHome {
     width: 80%;
   }
-}
 
-@media only screen and (min-width: 1920px) {
-  .faqHome {
-    width: 75%;
+  .FAQLink {
+    text-decoration: none;
+    color: #373ae6;
+    font-weight: 600;
   }
-}
+
+  .leftRight,
+  .left,
+  .right {
+    width: 100%;
+  }
+
+  /* Desktop */
+  @media only screen and (min-width: 1080px) {
+    .faqHome {
+      width: 90%;
+    }
+
+    .leftRight {
+      align-items: flex-start;
+      flex-direction: row;
+    }
+  }
+
+  @media only screen and (min-width: 1280px) {
+    .faqHome {
+      width: 85%;
+    }
+  }
+
+  @media only screen and (min-width: 1600px) {
+    .faqHome {
+      margin-top: 1vw;
+    }
+  }
+
+  @media only screen and (min-width: 1600px) {
+    .faqHome {
+      width: 80%;
+    }
+  }
+
+  @media only screen and (min-width: 1920px) {
+    .faqHome {
+      width: 75%;
+    }
+  }
 </style>

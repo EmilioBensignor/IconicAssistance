@@ -36,7 +36,7 @@ export const useAuthStore = defineStore("auth", {
 							hubspotId: userData.data()["hs_object_id"],
 						})
 							.then((data) => {
-								console.log(data);
+								// console.log(data);
 
 								this.assistants = data;
 							})
