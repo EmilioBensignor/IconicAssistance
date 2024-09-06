@@ -168,14 +168,22 @@
         </div>
       </div>
     </div>
-    <a href="#hero" class="secondaryButton elevation-5 my-10">Get Started</a>
+    <router-link
+      :to="routes.CONTACT_US"
+      href="#hero"
+      class="secondaryButton elevation-5 my-10"
+      >Get Started</router-link
+    >
   </section>
 </template>
 
 <script>
+import ROUTES_NAMES from "@/router/constants/ROUTES_NAMES";
+
 export default {
   data() {
     return {
+      routes: ROUTES_NAMES,
       faqsLeft: [
         {
           title: "How do I pay Iconic Assitants",

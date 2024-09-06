@@ -44,16 +44,24 @@
             </div>
           </div>
         </div>
-        <a href="#hero" class="secondaryButton elevation-5 mt-5">Get Started</a>
+        <router-link
+          :to="routes.CONTACT_US"
+          href="#hero"
+          class="secondaryButton elevation-5 mt-5"
+          >Get Started</router-link
+        >
       </div>
     </div>
   </section>
 </template>
 
 <script>
+import ROUTES_NAMES from "@/router/constants/ROUTES_NAMES";
+
 export default {
   data() {
     return {
+      routes: ROUTES_NAMES,
       tasks: [
         {
           img: "contactUs/executive-support-virtual-assistant.png",
