@@ -33,7 +33,7 @@ function transformClientData(rawData) {
 
 function generateReferralCode(user) {
 	const randomNum = Math.random() * 9000;
-	return `${user.firstname.toUpperCase().replace(/ /g, "_")}${Math.floor(
+	return `${user.firstname.toUpperCase().split(" ").join("")}${Math.floor(
 		1000 + randomNum
 	)}`;
 }
